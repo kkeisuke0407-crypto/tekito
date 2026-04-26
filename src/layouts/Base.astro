@@ -26,6 +26,8 @@ const jsonLdArray = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={desc} />
+    {site.googleSiteVerification && <meta name="google-site-verification" content={site.googleSiteVerification} />}
+    {site.bingSiteVerification && <meta name="msvalidate.01" content={site.bingSiteVerification} />}
     {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={url} />}
     <meta property="og:type" content="website" />
     <meta property="og:title" content={fullTitle} />

@@ -7,6 +7,8 @@
   "locale": "en_US",
   "twitter": "",
   "defaultOgImage": "/og-default.svg",
+  "googleSiteVerification": "9oMB7wS67zmrW1eGpLcEKszYpQxv1Euxy5M1Bk9HiWA",
+  "bingSiteVerification": "",
   "navItems": [
     {"label": "Providers", "href": "/providers"},
     {"label": "Compare", "href": "/compare"},

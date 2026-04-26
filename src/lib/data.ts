@@ -15,6 +15,8 @@ export interface SiteMeta {
   locale: string;
   twitter: string;
   defaultOgImage: string;
+  googleSiteVerification?: string;
+  bingSiteVerification?: string;
   navItems: { label: string; href: string }[];
   footerLinks: { label: string; href: string }[];
 }
