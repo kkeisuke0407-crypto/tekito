@@ -1,8 +1,8 @@
-name: Weekly article draft
+name: Daily article draft
 
 on:
   schedule:
-    - cron: '13 4 * * 1'  # 04:13 UTC every Monday
+    - cron: '13 4 * * *'  # 04:13 UTC every day
   workflow_dispatch:
 
 permissions:
@@ -32,7 +32,7 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           if [[ -n "$(git status --porcelain data/blog/)" ]]; then
             git add data/blog/
-            git commit -m "chore(blog): weekly auto-drafted article $(date -u +%Y-%m-%d)"
+            git commit -m "chore(blog): daily auto-drafted article $(date -u +%Y-%m-%d)"
             git push
           else
             echo "No new article generated."
