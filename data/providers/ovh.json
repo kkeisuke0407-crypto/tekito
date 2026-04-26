@@ -1,0 +1,34 @@
+{
+  "slug": "ovh",
+  "name": "OVHcloud VPS",
+  "homepage": "https://www.ovhcloud.com/en/vps/",
+  "signupUrl": "https://www.ovhcloud.com/en/vps/?ref=REPLACE_OVH_REF",
+  "affiliateProgram": "OVHcloud Affiliate (Impact)",
+  "description": "OVHcloud is Europe's largest hosting provider with proprietary data centers in France, Canada, Germany, UK, Poland, Singapore, Australia and India. The VPS line is the budget tier above the Public Cloud Compute offer.",
+  "pros": [
+    "Anti-DDoS included on every plan",
+    "Cheapest unmetered traffic in the EU",
+    "Owns its data centers and fiber backbone",
+    "Strong Canadian and EU data sovereignty story"
+  ],
+  "cons": [
+    "Control panel UX trails competitors",
+    "Slower CPUs on entry plans",
+    "Support response times vary by region"
+  ],
+  "bestFor": ["EU residency", "Budget unmetered bandwidth", "Anti-DDoS-protected sites"],
+  "freeTier": false,
+  "paymentMethods": ["Credit card", "PayPal", "SEPA"],
+  "hqCountry": "FR",
+  "founded": 1999,
+  "regions": ["Gravelines", "Roubaix", "Strasbourg", "Frankfurt", "London", "Warsaw", "Beauharnois", "Hillsboro", "Vint Hill", "Singapore", "Sydney", "Mumbai"],
+  "plans": [
+    {"id": "vps-starter", "name": "VPS Starter", "vcpu": 1, "memoryGB": 2, "storageGB": 20, "storageType": "NVMe", "bandwidthTB": 0, "monthlyPrice": 4.20, "currency": "USD", "regions": ["all"], "category": "shared"},
+    {"id": "vps-value", "name": "VPS Value", "vcpu": 1, "memoryGB": 2, "storageGB": 40, "storageType": "NVMe", "bandwidthTB": 0, "monthlyPrice": 6.50, "currency": "USD", "regions": ["all"], "category": "shared"},
+    {"id": "vps-essential", "name": "VPS Essential", "vcpu": 2, "memoryGB": 4, "storageGB": 80, "storageType": "NVMe", "bandwidthTB": 0, "monthlyPrice": 11.50, "currency": "USD", "regions": ["all"], "category": "shared"},
+    {"id": "vps-comfort", "name": "VPS Comfort", "vcpu": 4, "memoryGB": 8, "storageGB": 160, "storageType": "NVMe", "bandwidthTB": 0, "monthlyPrice": 23.50, "currency": "USD", "regions": ["all"], "category": "shared"},
+    {"id": "vps-elite", "name": "VPS Elite", "vcpu": 8, "memoryGB": 16, "storageGB": 320, "storageType": "NVMe", "bandwidthTB": 0, "monthlyPrice": 41.50, "currency": "USD", "regions": ["all"], "category": "shared"}
+  ],
+  "lastUpdated": "2026-04-26T00:00:00Z",
+  "source": "manual"
+}

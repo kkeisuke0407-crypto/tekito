@@ -1,0 +1,38 @@
+name: Daily data refresh
+
+on:
+  schedule:
+    - cron: '17 3 * * *'  # 03:17 UTC daily (= 12:17 JST)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Fetch live pricing data
+        env:
+          DO_TOKEN: ${{ secrets.DO_TOKEN }}
+          HETZNER_TOKEN: ${{ secrets.HETZNER_TOKEN }}
+        run: npm run fetch:all
+      - name: Commit refreshed data (if changed)
+        run: |
+          git config user.name "tekito-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if [[ -n "$(git status --porcelain data/)" ]]; then
+            git add data/
+            git commit -m "chore(data): daily pricing refresh $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "No data changes."
+          fi

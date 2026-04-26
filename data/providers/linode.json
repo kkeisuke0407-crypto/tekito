@@ -1,0 +1,36 @@
+{
+  "slug": "linode",
+  "name": "Akamai Linode",
+  "homepage": "https://www.linode.com/",
+  "signupUrl": "https://www.linode.com/?promo=REPLACE_LINODE_REF",
+  "affiliateProgram": "Linode/Akamai (Impact, $100 credit)",
+  "description": "Linode (now Akamai Cloud Computing) is a developer-focused cloud provider acquired by Akamai in 2022. Offers Shared CPU, Dedicated CPU, High Memory and GPU plans across 25+ Akamai-backed regions.",
+  "pros": [
+    "Backed by Akamai's global network",
+    "Generous transfer caps starting at 1 TB",
+    "Dedicated CPU plans for predictable performance",
+    "Block Storage and Object Storage included"
+  ],
+  "cons": [
+    "Slower price drops than Vultr/Hetzner",
+    "Brand transition (Linode -> Akamai) creates docs confusion",
+    "Asia-Pacific footprint thinner than competitors"
+  ],
+  "bestFor": ["Production web apps", "Akamai CDN integration", "Dedicated CPU workloads"],
+  "freeTier": false,
+  "freeTrialUSD": 100,
+  "paymentMethods": ["Credit card", "PayPal", "Google Pay"],
+  "hqCountry": "US",
+  "founded": 2003,
+  "regions": ["Tokyo", "Osaka", "Singapore", "Mumbai", "Sydney", "Frankfurt", "Stockholm", "Milan", "London", "Amsterdam", "Paris", "Madrid", "Newark", "Atlanta", "Chicago", "Dallas", "Fremont", "Los Angeles", "Miami", "Seattle", "Toronto", "Sao Paulo"],
+  "plans": [
+    {"id": "g6-nanode-1", "name": "Nanode 1GB", "vcpu": 1, "memoryGB": 1, "storageGB": 25, "storageType": "SSD", "bandwidthTB": 1, "monthlyPrice": 5, "hourlyPrice": 0.0075, "currency": "USD", "regions": ["all"], "category": "shared"},
+    {"id": "g6-standard-1", "name": "Linode 2GB", "vcpu": 1, "memoryGB": 2, "storageGB": 50, "storageType": "SSD", "bandwidthTB": 2, "monthlyPrice": 12, "hourlyPrice": 0.018, "currency": "USD", "regions": ["all"], "category": "shared"},
+    {"id": "g6-standard-2", "name": "Linode 4GB", "vcpu": 2, "memoryGB": 4, "storageGB": 80, "storageType": "SSD", "bandwidthTB": 4, "monthlyPrice": 24, "hourlyPrice": 0.036, "currency": "USD", "regions": ["all"], "category": "shared"},
+    {"id": "g6-standard-4", "name": "Linode 8GB", "vcpu": 4, "memoryGB": 8, "storageGB": 160, "storageType": "SSD", "bandwidthTB": 5, "monthlyPrice": 48, "hourlyPrice": 0.072, "currency": "USD", "regions": ["all"], "category": "shared"},
+    {"id": "g6-dedicated-2", "name": "Dedicated 4GB", "vcpu": 2, "memoryGB": 4, "storageGB": 80, "storageType": "SSD", "bandwidthTB": 4, "monthlyPrice": 36, "hourlyPrice": 0.054, "currency": "USD", "regions": ["all"], "category": "dedicated"},
+    {"id": "g6-dedicated-4", "name": "Dedicated 8GB", "vcpu": 4, "memoryGB": 8, "storageGB": 160, "storageType": "SSD", "bandwidthTB": 5, "monthlyPrice": 72, "hourlyPrice": 0.108, "currency": "USD", "regions": ["all"], "category": "dedicated"}
+  ],
+  "lastUpdated": "2026-04-26T00:00:00Z",
+  "source": "manual"
+}

@@ -1,0 +1,14 @@
+---
+import Base from '@/layouts/Base.astro';
+import ProviderCard from '@/components/ProviderCard.astro';
+import { loadProviders } from '@/lib/data.ts';
+
+const providers = loadProviders();
+---
+<Base title="All Providers" description="All VPS and cloud hosting providers tracked on the site, sorted alphabetically.">
+  <h1>All Providers</h1>
+  <p class="lead">{providers.length} VPS and cloud hosting providers, tracked daily.</p>
+  <div class="grid cols-2">
+    {providers.map((p) => <ProviderCard provider={p} />)}
+  </div>
+</Base>

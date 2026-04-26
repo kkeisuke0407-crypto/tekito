@@ -1,0 +1,99 @@
+---
+import Base from '@/layouts/Base.astro';
+import PlanTable from '@/components/PlanTable.astro';
+import AffDisclosure from '@/components/AffDisclosure.astro';
+import { loadProviders, applyAffiliate, cheapestPlan, loadSite } from '@/lib/data.ts';
+
+export async function getStaticPaths() {
+  const providers = loadProviders();
+  const paths: { params: { pair: string }; props: any }[] = [];
+  for (const a of providers) {
+    for (const b of providers) {
+      if (a.slug === b.slug) continue;
+      paths.push({ params: { pair: `${a.slug}-vs-${b.slug}` }, props: { a, b } });
+    }
+  }
+  return paths;
+}
+
+const { a, b } = Astro.props;
+const site = loadSite();
+const ca = cheapestPlan(a);
+const cb = cheapestPlan(b);
+const winner = ca.monthlyPrice < cb.monthlyPrice ? a : b;
+const loser = winner.slug === a.slug ? b : a;
+const linkA = applyAffiliate(a.signupUrl, a.slug);
+const linkB = applyAffiliate(b.signupUrl, b.slug);
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: site.url },
+    { '@type': 'ListItem', position: 2, name: 'Compare', item: `${site.url}/compare` },
+    { '@type': 'ListItem', position: 3, name: `${a.name} vs ${b.name}` },
+  ],
+};
+---
+<Base
+  title={`${a.name} vs ${b.name}: VPS Comparison`}
+  description={`${a.name} vs ${b.name} side-by-side: pricing, plans, regions, pros and cons. Both updated daily.`}
+  jsonLd={breadcrumbLd}
+>
+  <p class="muted"><a href="/compare">&larr; All comparisons</a></p>
+  <h1>{a.name} vs {b.name}</h1>
+  <p class="lead">
+    Cheapest entry plan: <strong>{winner.name} at ${cheapestPlan(winner).monthlyPrice.toFixed(2)}/mo</strong>,
+    versus <strong>{loser.name} at ${cheapestPlan(loser).monthlyPrice.toFixed(2)}/mo</strong>.
+  </p>
+
+  <h2>Quick verdict</h2>
+  <table>
+    <thead><tr><th></th><th>{a.name}</th><th>{b.name}</th></tr></thead>
+    <tbody>
+      <tr><td>Cheapest plan</td><td>${ca.monthlyPrice.toFixed(2)}/mo</td><td>${cb.monthlyPrice.toFixed(2)}/mo</td></tr>
+      <tr><td>Entry RAM</td><td>{ca.memoryGB} GB</td><td>{cb.memoryGB} GB</td></tr>
+      <tr><td>Entry bandwidth</td><td>{ca.bandwidthTB > 0 ? `${ca.bandwidthTB} TB` : 'unmetered'}</td><td>{cb.bandwidthTB > 0 ? `${cb.bandwidthTB} TB` : 'unmetered'}</td></tr>
+      <tr><td>Regions</td><td>{a.regions.length}</td><td>{b.regions.length}</td></tr>
+      <tr><td>Free credit</td><td>{a.freeTrialUSD ? `$${a.freeTrialUSD}` : '-'}</td><td>{b.freeTrialUSD ? `$${b.freeTrialUSD}` : '-'}</td></tr>
+      <tr><td>HQ</td><td>{a.hqCountry}</td><td>{b.hqCountry}</td></tr>
+      <tr><td>Founded</td><td>{a.founded}</td><td>{b.founded}</td></tr>
+      <tr><td>Best for</td><td>{a.bestFor.join(', ')}</td><td>{b.bestFor.join(', ')}</td></tr>
+    </tbody>
+  </table>
+
+  <p>
+    <a class="cta" href={linkA} rel="sponsored nofollow noopener" target="_blank">Try {a.name}</a>
+    &nbsp;
+    <a class="cta" href={linkB} rel="sponsored nofollow noopener" target="_blank">Try {b.name}</a>
+  </p>
+
+  <h2>{a.name} plans</h2>
+  <PlanTable plans={a.plans} />
+
+  <h2>{b.name} plans</h2>
+  <PlanTable plans={b.plans} />
+
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>{a.name} pros</h3>
+      <ul>{a.pros.map((x: string) => <li>{x}</li>)}</ul>
+    </div>
+    <div class="pros">
+      <h3>{b.name} pros</h3>
+      <ul>{b.pros.map((x: string) => <li>{x}</li>)}</ul>
+    </div>
+  </div>
+
+  <div class="pros-cons">
+    <div class="cons">
+      <h3>{a.name} cons</h3>
+      <ul>{a.cons.map((x: string) => <li>{x}</li>)}</ul>
+    </div>
+    <div class="cons">
+      <h3>{b.name} cons</h3>
+      <ul>{b.cons.map((x: string) => <li>{x}</li>)}</ul>
+    </div>
+  </div>
+
+  <AffDisclosure />
+</Base>

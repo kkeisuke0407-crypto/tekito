@@ -1,0 +1,166 @@
+{
+  "slug": "vultr",
+  "name": "Vultr",
+  "homepage": "https://www.vultr.com/",
+  "signupUrl": "https://www.vultr.com/?ref=REPLACE_VULTR_REF",
+  "affiliateProgram": "Vultr Affiliate (direct)",
+  "description": "Vultr is a global cloud hosting provider with 30+ data center regions and a wide range of compute, storage, and bare metal plans. Pricing starts at $2.50/mo for IPv6-only nodes and $3.50/mo for the cheapest IPv4 plan.",
+  "pros": [
+    "Per-hour billing with no long-term commitment",
+    "30+ regions worldwide including Tokyo and Osaka",
+    "$2.50/mo IPv6-only entry plan undercuts most competitors",
+    "Public Plans API makes price tracking trivial"
+  ],
+  "cons": [
+    "Bandwidth allowances are smaller than Hetzner",
+    "Cheapest plan is IPv6 only",
+    "Egress fees apply once allowance is exceeded"
+  ],
+  "bestFor": [
+    "Hobby projects",
+    "Geographic redundancy",
+    "Hourly burst workloads"
+  ],
+  "freeTier": false,
+  "freeTrialUSD": 100,
+  "paymentMethods": [
+    "Credit card",
+    "PayPal",
+    "Crypto",
+    "Wire"
+  ],
+  "hqCountry": "US",
+  "founded": 2014,
+  "regions": [
+    "Tokyo",
+    "Osaka",
+    "Singapore",
+    "Seoul",
+    "Sydney",
+    "Frankfurt",
+    "London",
+    "Amsterdam",
+    "Paris",
+    "New York",
+    "Atlanta",
+    "Chicago",
+    "Dallas",
+    "Los Angeles",
+    "Seattle",
+    "Silicon Valley",
+    "Miami",
+    "Toronto",
+    "Mexico",
+    "Sao Paulo",
+    "Santiago",
+    "Mumbai",
+    "Bangalore",
+    "Delhi",
+    "Tel Aviv",
+    "Johannesburg",
+    "Stockholm",
+    "Madrid",
+    "Warsaw",
+    "Melbourne"
+  ],
+  "plans": [
+    {
+      "id": "vc2-1c-0.5gb",
+      "name": "Cloud Compute 1C 0.5GB",
+      "vcpu": 1,
+      "memoryGB": 0.5,
+      "storageGB": 10,
+      "storageType": "NVMe",
+      "bandwidthTB": 0.5,
+      "monthlyPrice": 2.5,
+      "hourlyPrice": 0.004,
+      "currency": "USD",
+      "regions": [
+        "all"
+      ],
+      "category": "shared"
+    },
+    {
+      "id": "vc2-1c-1gb",
+      "name": "Cloud Compute 1C 1GB",
+      "vcpu": 1,
+      "memoryGB": 1,
+      "storageGB": 25,
+      "storageType": "NVMe",
+      "bandwidthTB": 1,
+      "monthlyPrice": 6,
+      "hourlyPrice": 0.009,
+      "currency": "USD",
+      "regions": [
+        "all"
+      ],
+      "category": "shared"
+    },
+    {
+      "id": "vc2-1c-2gb",
+      "name": "Cloud Compute 1C 2GB",
+      "vcpu": 1,
+      "memoryGB": 2,
+      "storageGB": 55,
+      "storageType": "NVMe",
+      "bandwidthTB": 2,
+      "monthlyPrice": 12,
+      "hourlyPrice": 0.018,
+      "currency": "USD",
+      "regions": [
+        "all"
+      ],
+      "category": "shared"
+    },
+    {
+      "id": "vc2-2c-4gb",
+      "name": "Cloud Compute 2C 4GB",
+      "vcpu": 2,
+      "memoryGB": 4,
+      "storageGB": 80,
+      "storageType": "NVMe",
+      "bandwidthTB": 3,
+      "monthlyPrice": 24,
+      "hourlyPrice": 0.036,
+      "currency": "USD",
+      "regions": [
+        "all"
+      ],
+      "category": "shared"
+    },
+    {
+      "id": "vc2-4c-8gb",
+      "name": "Cloud Compute 4C 8GB",
+      "vcpu": 4,
+      "memoryGB": 8,
+      "storageGB": 160,
+      "storageType": "NVMe",
+      "bandwidthTB": 4,
+      "monthlyPrice": 48,
+      "hourlyPrice": 0.071,
+      "currency": "USD",
+      "regions": [
+        "all"
+      ],
+      "category": "shared"
+    },
+    {
+      "id": "vc2-6c-16gb",
+      "name": "Cloud Compute 6C 16GB",
+      "vcpu": 6,
+      "memoryGB": 16,
+      "storageGB": 320,
+      "storageType": "NVMe",
+      "bandwidthTB": 5,
+      "monthlyPrice": 96,
+      "hourlyPrice": 0.143,
+      "currency": "USD",
+      "regions": [
+        "all"
+      ],
+      "category": "shared"
+    }
+  ],
+  "lastUpdated": "2026-04-26T02:12:32.395Z",
+  "source": "manual"
+}

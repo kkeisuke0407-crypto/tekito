@@ -1,0 +1,38 @@
+---
+import type { Plan } from '@/lib/types.ts';
+
+interface Props {
+  plans: Plan[];
+  caption?: string;
+}
+
+const { plans, caption } = Astro.props as Props;
+const fmt = (n: number) => (Number.isInteger(n) ? `${n}` : n.toFixed(1));
+---
+<table>
+  {caption && <caption style="text-align:left; padding: 0.5rem 0; color: var(--fg-muted);">{caption}</caption>}
+  <thead>
+    <tr>
+      <th>Plan</th>
+      <th>vCPU</th>
+      <th>RAM</th>
+      <th>Storage</th>
+      <th>Bandwidth</th>
+      <th>Monthly</th>
+      <th>$/GB RAM</th>
+    </tr>
+  </thead>
+  <tbody>
+    {plans.map((p) => (
+      <tr>
+        <td>{p.name}</td>
+        <td>{p.vcpu}</td>
+        <td>{fmt(p.memoryGB)} GB</td>
+        <td>{p.storageGB} GB {p.storageType}</td>
+        <td>{p.bandwidthTB > 0 ? `${fmt(p.bandwidthTB)} TB` : 'unmetered'}</td>
+        <td><strong>${p.monthlyPrice.toFixed(2)}</strong></td>
+        <td>${(p.monthlyPrice / Math.max(0.5, p.memoryGB)).toFixed(2)}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>

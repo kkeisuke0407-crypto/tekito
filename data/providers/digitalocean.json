@@ -1,0 +1,36 @@
+{
+  "slug": "digitalocean",
+  "name": "DigitalOcean",
+  "homepage": "https://www.digitalocean.com/",
+  "signupUrl": "https://m.do.co/c/REPLACE_DO_REF",
+  "affiliateProgram": "DigitalOcean (Impact / direct $200 credit referral)",
+  "description": "DigitalOcean popularized cloud VPS hosting for developers with predictable pricing, clean UX and a deep ecosystem of tutorials. Droplets start at $4/mo and the platform also offers managed databases, Kubernetes, App Platform and Spaces object storage.",
+  "pros": [
+    "Best-in-class developer documentation and tutorials",
+    "Predictable flat pricing across all global regions",
+    "Mature managed services (DBaaS, K8s, App Platform)",
+    "$200 free credit for new sign-ups"
+  ],
+  "cons": [
+    "Slightly higher base prices than Vultr/Hetzner",
+    "Premium NVMe plans cost more than regular Droplets",
+    "No data center in mainland Japan (Singapore is closest in APAC)"
+  ],
+  "bestFor": ["Solo developers", "Indie SaaS", "Managed database workloads"],
+  "freeTier": false,
+  "freeTrialUSD": 200,
+  "paymentMethods": ["Credit card", "PayPal", "Google Pay"],
+  "hqCountry": "US",
+  "founded": 2011,
+  "regions": ["NYC1", "NYC3", "SFO2", "SFO3", "AMS3", "SGP1", "LON1", "FRA1", "TOR1", "BLR1", "SYD1"],
+  "plans": [
+    {"id": "s-1vcpu-512mb-10gb", "name": "Basic 1vCPU 0.5GB", "vcpu": 1, "memoryGB": 0.5, "storageGB": 10, "storageType": "SSD", "bandwidthTB": 0.5, "monthlyPrice": 4, "hourlyPrice": 0.006, "currency": "USD", "regions": ["all"], "category": "shared"},
+    {"id": "s-1vcpu-1gb", "name": "Basic 1vCPU 1GB", "vcpu": 1, "memoryGB": 1, "storageGB": 25, "storageType": "SSD", "bandwidthTB": 1, "monthlyPrice": 6, "hourlyPrice": 0.009, "currency": "USD", "regions": ["all"], "category": "shared"},
+    {"id": "s-1vcpu-2gb", "name": "Basic 1vCPU 2GB", "vcpu": 1, "memoryGB": 2, "storageGB": 50, "storageType": "SSD", "bandwidthTB": 2, "monthlyPrice": 12, "hourlyPrice": 0.018, "currency": "USD", "regions": ["all"], "category": "shared"},
+    {"id": "s-2vcpu-2gb", "name": "Basic 2vCPU 2GB", "vcpu": 2, "memoryGB": 2, "storageGB": 60, "storageType": "SSD", "bandwidthTB": 3, "monthlyPrice": 18, "hourlyPrice": 0.027, "currency": "USD", "regions": ["all"], "category": "shared"},
+    {"id": "s-2vcpu-4gb", "name": "Basic 2vCPU 4GB", "vcpu": 2, "memoryGB": 4, "storageGB": 80, "storageType": "SSD", "bandwidthTB": 4, "monthlyPrice": 24, "hourlyPrice": 0.036, "currency": "USD", "regions": ["all"], "category": "shared"},
+    {"id": "s-4vcpu-8gb", "name": "Basic 4vCPU 8GB", "vcpu": 4, "memoryGB": 8, "storageGB": 160, "storageType": "SSD", "bandwidthTB": 5, "monthlyPrice": 48, "hourlyPrice": 0.071, "currency": "USD", "regions": ["all"], "category": "shared"}
+  ],
+  "lastUpdated": "2026-04-26T00:00:00Z",
+  "source": "manual"
+}

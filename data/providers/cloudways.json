@@ -1,0 +1,35 @@
+{
+  "slug": "cloudways",
+  "name": "Cloudways",
+  "homepage": "https://www.cloudways.com/",
+  "signupUrl": "https://www.cloudways.com/en/?id=REPLACE_CLOUDWAYS_REF",
+  "affiliateProgram": "Cloudways Affiliate (PartnerStack, up to $125/sale)",
+  "description": "Cloudways is a managed cloud hosting layer on top of DigitalOcean, Vultr, Linode, AWS and Google Cloud. Targeted at WordPress, Magento, WooCommerce and Laravel users who want a managed control panel without leaving public cloud.",
+  "pros": [
+    "Managed WordPress on top of any of 5 IaaS providers",
+    "Free SSL, staging, automated backups",
+    "Object cache, Redis, ElasticSearch one-click",
+    "Highest-paying VPS affiliate in the agency space"
+  ],
+  "cons": [
+    "Markup over raw IaaS pricing",
+    "DO/Vultr nodes only, no Hetzner",
+    "Vendor lock-in via custom control panel"
+  ],
+  "bestFor": ["WordPress agencies", "WooCommerce stores", "Managed Laravel apps"],
+  "freeTier": false,
+  "freeTrialUSD": 0,
+  "paymentMethods": ["Credit card", "PayPal"],
+  "hqCountry": "MT",
+  "founded": 2011,
+  "regions": ["NYC", "SFO", "AMS", "FRA", "LON", "TOR", "SGP", "TYO", "BLR", "SYD"],
+  "plans": [
+    {"id": "do-1gb", "name": "DO Standard 1GB", "vcpu": 1, "memoryGB": 1, "storageGB": 25, "storageType": "SSD", "bandwidthTB": 1, "monthlyPrice": 14, "currency": "USD", "regions": ["all"], "category": "shared"},
+    {"id": "do-2gb", "name": "DO Standard 2GB", "vcpu": 1, "memoryGB": 2, "storageGB": 50, "storageType": "SSD", "bandwidthTB": 2, "monthlyPrice": 28, "currency": "USD", "regions": ["all"], "category": "shared"},
+    {"id": "vultr-hf-1gb", "name": "Vultr HF 1GB", "vcpu": 1, "memoryGB": 1, "storageGB": 32, "storageType": "NVMe", "bandwidthTB": 1, "monthlyPrice": 16, "currency": "USD", "regions": ["all"], "category": "highcpu"},
+    {"id": "vultr-hf-2gb", "name": "Vultr HF 2GB", "vcpu": 1, "memoryGB": 2, "storageGB": 64, "storageType": "NVMe", "bandwidthTB": 2, "monthlyPrice": 28, "currency": "USD", "regions": ["all"], "category": "highcpu"},
+    {"id": "do-4gb", "name": "DO Standard 4GB", "vcpu": 2, "memoryGB": 4, "storageGB": 80, "storageType": "SSD", "bandwidthTB": 4, "monthlyPrice": 50, "currency": "USD", "regions": ["all"], "category": "shared"}
+  ],
+  "lastUpdated": "2026-04-26T00:00:00Z",
+  "source": "manual"
+}

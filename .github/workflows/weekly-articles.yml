@@ -1,0 +1,39 @@
+name: Weekly article draft
+
+on:
+  schedule:
+    - cron: '13 4 * * 1'  # 04:13 UTC every Monday
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    if: ${{ vars.ENABLE_BLOG_AUTOMATION == 'true' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Generate one new article
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
+        run: npm run generate:articles
+      - name: Commit new post (if generated)
+        run: |
+          git config user.name "tekito-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if [[ -n "$(git status --porcelain data/blog/)" ]]; then
+            git add data/blog/
+            git commit -m "chore(blog): weekly auto-drafted article $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "No new article generated."
+          fi

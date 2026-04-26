@@ -1,0 +1,21 @@
+---
+import Base from '@/layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort((a, b) => b.data.published.localeCompare(a.data.published));
+---
+<Base title="Blog" description="Articles, comparisons and tutorials about VPS and cloud hosting.">
+  <h1>Blog</h1>
+  {posts.length === 0 ? (
+    <p class="muted">No articles yet. The automation pipeline publishes new posts weekly once an Anthropic API key is configured.</p>
+  ) : (
+    <ul>
+      {posts.map((post) => (
+        <li>
+          <a href={`/blog/${post.id}`}><strong>{post.data.title}</strong></a>
+          <span class="muted"> - {post.data.published}</span>
+        </li>
+      ))}
+    </ul>
+  )}
+</Base>
