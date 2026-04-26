@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
-const SITE = process.env.PUBLIC_SITE_URL ?? 'https://example.com';
+const SITE = process.env.PUBLIC_SITE_URL ?? 'https://vpscomparehub.com';
 
 export default defineConfig({
   site: SITE,
