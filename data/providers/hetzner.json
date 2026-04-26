@@ -17,21 +17,126 @@
     "No managed databases or app platform",
     "Support response slower than US peers"
   ],
-  "bestFor": ["Cost-sensitive workloads", "EU GDPR projects", "Self-managed Kubernetes"],
+  "bestFor": [
+    "Cost-sensitive workloads",
+    "EU GDPR projects",
+    "Self-managed Kubernetes"
+  ],
   "freeTier": false,
   "freeTrialUSD": 22,
-  "paymentMethods": ["Credit card", "PayPal", "SEPA"],
+  "paymentMethods": [
+    "Credit card",
+    "PayPal",
+    "SEPA"
+  ],
   "hqCountry": "DE",
   "founded": 1997,
-  "regions": ["Falkenstein", "Nuremberg", "Helsinki", "Ashburn", "Hillsboro", "Singapore"],
-  "plans": [
-    {"id": "cax11", "name": "CAX11 (Arm)", "vcpu": 2, "memoryGB": 4, "storageGB": 40, "storageType": "NVMe", "bandwidthTB": 20, "monthlyPrice": 4.15, "hourlyPrice": 0.007, "currency": "USD", "regions": ["all"], "category": "shared"},
-    {"id": "cax21", "name": "CAX21 (Arm)", "vcpu": 4, "memoryGB": 8, "storageGB": 80, "storageType": "NVMe", "bandwidthTB": 20, "monthlyPrice": 7.59, "hourlyPrice": 0.013, "currency": "USD", "regions": ["all"], "category": "shared"},
-    {"id": "cx22", "name": "CX22 (Intel)", "vcpu": 2, "memoryGB": 4, "storageGB": 40, "storageType": "NVMe", "bandwidthTB": 20, "monthlyPrice": 4.59, "hourlyPrice": 0.008, "currency": "USD", "regions": ["all"], "category": "shared"},
-    {"id": "cpx11", "name": "CPX11 (AMD)", "vcpu": 2, "memoryGB": 2, "storageGB": 40, "storageType": "NVMe", "bandwidthTB": 20, "monthlyPrice": 4.79, "hourlyPrice": 0.008, "currency": "USD", "regions": ["all"], "category": "shared"},
-    {"id": "cpx21", "name": "CPX21 (AMD)", "vcpu": 3, "memoryGB": 4, "storageGB": 80, "storageType": "NVMe", "bandwidthTB": 20, "monthlyPrice": 8.46, "hourlyPrice": 0.014, "currency": "USD", "regions": ["all"], "category": "shared"},
-    {"id": "cpx31", "name": "CPX31 (AMD)", "vcpu": 4, "memoryGB": 8, "storageGB": 160, "storageType": "NVMe", "bandwidthTB": 20, "monthlyPrice": 15.59, "hourlyPrice": 0.025, "currency": "USD", "regions": ["all"], "category": "shared"}
+  "regions": [
+    "Falkenstein",
+    "Nuremberg",
+    "Helsinki",
+    "Ashburn",
+    "Hillsboro",
+    "Singapore"
   ],
-  "lastUpdated": "2026-04-26T00:00:00Z",
+  "plans": [
+    {
+      "id": "cax11",
+      "name": "CAX11 (Arm)",
+      "vcpu": 2,
+      "memoryGB": 4,
+      "storageGB": 40,
+      "storageType": "NVMe",
+      "bandwidthTB": 20,
+      "monthlyPrice": 4.15,
+      "hourlyPrice": 0.007,
+      "currency": "USD",
+      "regions": [
+        "all"
+      ],
+      "category": "shared"
+    },
+    {
+      "id": "cax21",
+      "name": "CAX21 (Arm)",
+      "vcpu": 4,
+      "memoryGB": 8,
+      "storageGB": 80,
+      "storageType": "NVMe",
+      "bandwidthTB": 20,
+      "monthlyPrice": 7.59,
+      "hourlyPrice": 0.013,
+      "currency": "USD",
+      "regions": [
+        "all"
+      ],
+      "category": "shared"
+    },
+    {
+      "id": "cx22",
+      "name": "CX22 (Intel)",
+      "vcpu": 2,
+      "memoryGB": 4,
+      "storageGB": 40,
+      "storageType": "NVMe",
+      "bandwidthTB": 20,
+      "monthlyPrice": 4.59,
+      "hourlyPrice": 0.008,
+      "currency": "USD",
+      "regions": [
+        "all"
+      ],
+      "category": "shared"
+    },
+    {
+      "id": "cpx11",
+      "name": "CPX11 (AMD)",
+      "vcpu": 2,
+      "memoryGB": 2,
+      "storageGB": 40,
+      "storageType": "NVMe",
+      "bandwidthTB": 20,
+      "monthlyPrice": 4.79,
+      "hourlyPrice": 0.008,
+      "currency": "USD",
+      "regions": [
+        "all"
+      ],
+      "category": "shared"
+    },
+    {
+      "id": "cpx21",
+      "name": "CPX21 (AMD)",
+      "vcpu": 3,
+      "memoryGB": 4,
+      "storageGB": 80,
+      "storageType": "NVMe",
+      "bandwidthTB": 20,
+      "monthlyPrice": 8.46,
+      "hourlyPrice": 0.014,
+      "currency": "USD",
+      "regions": [
+        "all"
+      ],
+      "category": "shared"
+    },
+    {
+      "id": "cpx31",
+      "name": "CPX31 (AMD)",
+      "vcpu": 4,
+      "memoryGB": 8,
+      "storageGB": 160,
+      "storageType": "NVMe",
+      "bandwidthTB": 20,
+      "monthlyPrice": 15.59,
+      "hourlyPrice": 0.025,
+      "currency": "USD",
+      "regions": [
+        "all"
+      ],
+      "category": "shared"
+    }
+  ],
+  "lastUpdated": "2026-04-26T05:47:34.587Z",
   "source": "manual"
 }
