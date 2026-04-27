@@ -7,7 +7,7 @@ import { join } from 'node:path';
 import { ROOT } from './lib/io.ts';
 
 const BLOG_DIR = join(ROOT, 'data', 'blog');
-const MODEL = process.env.ANTHROPIC_MODEL ?? 'claude-haiku-4-5-20251001';
+const MODEL = process.env.ANTHROPIC_MODEL || 'claude-haiku-4-5-20251001';
 
 const TOPICS = [
   { slug: 'best-vps-under-5-usd', title: 'Best VPS Under $5/month in 2026' },
