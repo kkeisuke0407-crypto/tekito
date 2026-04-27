@@ -1,7 +1,7 @@
 ---
 slug: vultr-vs-digitalocean
 title: "Vultr vs DigitalOcean: Which Is Better in 2026?"
-published: "2026-04-27",
+published: "2026-04-27"
 model: claude-haiku-4-5-20251001
 ---
 # Vultr vs DigitalOcean: Which Is Better in 2026?

@@ -1,7 +1,7 @@
 ---
 slug: vps-with-ddos-protection
 title: "VPS Providers With Free Anti-DDoS in 2026"
-published: "2026-04-27",
+published: "2026-04-27"
 model: claude-haiku-4-5-20251001
 ---
 # VPS Providers With Free Anti-DDoS in 2026

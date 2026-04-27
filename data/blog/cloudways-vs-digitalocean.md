@@ -1,7 +1,7 @@
 ---
 slug: cloudways-vs-digitalocean
 title: "Cloudways vs DigitalOcean: Managed Hosting Compared"
-published: "2026-04-27",
+published: "2026-04-27"
 model: claude-haiku-4-5-20251001
 ---
 # Cloudways vs DigitalOcean: Managed Hosting Compared

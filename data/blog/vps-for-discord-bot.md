@@ -1,7 +1,7 @@
 ---
 slug: vps-for-discord-bot
 title: "Cheapest VPS for Running a Discord Bot 24/7"
-published: "2026-04-27",
+published: "2026-04-27"
 model: claude-haiku-4-5-20251001
 ---
 # Cheapest VPS for Running a Discord Bot 24/7

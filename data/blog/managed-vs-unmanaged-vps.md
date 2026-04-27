@@ -1,7 +1,7 @@
 ---
 slug: managed-vs-unmanaged-vps
 title: "Managed vs Unmanaged VPS: Which Should You Choose?"
-published: "2026-04-27",
+published: "2026-04-27"
 model: claude-haiku-4-5-20251001
 ---
 # Managed vs Unmanaged VPS: Which Should You Choose?

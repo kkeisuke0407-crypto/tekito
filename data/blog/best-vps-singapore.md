@@ -1,7 +1,7 @@
 ---
 slug: best-vps-singapore
 title: "Best VPS With a Singapore Data Center in 2026"
-published: "2026-04-27",
+published: "2026-04-27"
 model: claude-haiku-4-5-20251001
 ---
 # Best VPS With a Singapore Data Center in 2026

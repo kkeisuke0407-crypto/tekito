@@ -1,7 +1,7 @@
 ---
 slug: cheapest-tokyo-vps
 title: "Cheapest VPS With a Tokyo Data Center"
-published: "2026-04-27",
+published: "2026-04-27"
 model: claude-haiku-4-5-20251001
 ---
 # Cheapest VPS With a Tokyo Data Center

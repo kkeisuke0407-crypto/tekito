@@ -1,7 +1,7 @@
 ---
 slug: cheapest-vps-2gb-ram
 title: "Cheapest VPS With 2GB RAM in 2026"
-published: "2026-04-27",
+published: "2026-04-27"
 model: claude-haiku-4-5-20251001
 ---
 # Cheapest VPS With 2GB RAM in 2026

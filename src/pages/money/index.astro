@@ -1,0 +1,731 @@
+---
+const title = "借金の悩み、今日解決できます";
+const description = "債務整理・キャッシングの無料相談窓口。弁護士が直接対応。まず話を聞いてもらうだけでOK。";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue: #4F8EF7;
+      --blue-light: #EBF3FF;
+      --blue-dark: #2563EB;
+      --mint: #10B981;
+      --mint-dark: #059669;
+      --orange: #F97316;
+      --red: #EF4444;
+      --text: #1E293B;
+      --text-muted: #64748B;
+      --white: #FFFFFF;
+      --bg: #F0F7FF;
+      --radius: 16px;
+      --shadow: 0 4px 24px rgba(79,142,247,0.12);
+      --shadow-lg: 0 8px 40px rgba(79,142,247,0.18);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      background: linear-gradient(145deg, #1E3A8A 0%, #3B82F6 50%, #06B6D4 100%);
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px 40px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.08) 0%, transparent 60%),
+                  radial-gradient(ellipse at 80% 80%, rgba(6,182,212,0.15) 0%, transparent 50%);
+    }
+
+    .hero-badge {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 100px;
+      letter-spacing: 0.08em;
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    .hero-title {
+      color: white;
+      font-size: clamp(28px, 7vw, 44px);
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .hero-title span {
+      background: linear-gradient(90deg, #FDE68A, #FCA5A5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      color: rgba(255,255,255,0.85);
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 36px;
+      position: relative;
+    }
+
+    .hero-cards {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 12px;
+      padding: 14px 18px;
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 140px;
+    }
+
+    .hero-card .icon { font-size: 20px; }
+
+    .cta-primary {
+      display: block;
+      width: 100%;
+      max-width: 360px;
+      background: linear-gradient(135deg, #10B981, #059669);
+      color: white;
+      font-size: 18px;
+      font-weight: 900;
+      padding: 20px 24px;
+      border-radius: 100px;
+      text-decoration: none;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(16,185,129,0.4);
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+      letter-spacing: 0.02em;
+    }
+
+    .cta-primary:active { transform: scale(0.97); }
+
+    .cta-primary::after {
+      content: ' →';
+    }
+
+    .cta-note {
+      color: rgba(255,255,255,0.65);
+      font-size: 12px;
+      margin-top: 12px;
+      position: relative;
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255,255,255,0.5);
+      font-size: 11px;
+    }
+
+    .scroll-hint-arrow {
+      width: 20px;
+      height: 20px;
+      border-right: 2px solid rgba(255,255,255,0.4);
+      border-bottom: 2px solid rgba(255,255,255,0.4);
+      transform: rotate(45deg);
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: rotate(45deg) translateY(0); }
+      50% { transform: rotate(45deg) translateY(4px); }
+    }
+
+    /* ========== SECTION BASE ========== */
+    .section {
+      padding: 64px 20px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--blue);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: clamp(22px, 5vw, 30px);
+      font-weight: 900;
+      line-height: 1.4;
+      margin-bottom: 24px;
+      color: var(--text);
+    }
+
+    /* ========== PROBLEMS ========== */
+    .problems-bg {
+      background: white;
+    }
+
+    .problem-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .problem-item {
+      background: var(--bg);
+      border-radius: 12px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 15px;
+      font-weight: 500;
+      border-left: 4px solid var(--blue);
+      opacity: 0;
+      transform: translateX(-20px);
+      transition: opacity 0.4s, transform 0.4s;
+    }
+
+    .problem-item.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .problem-item .emoji { font-size: 24px; flex-shrink: 0; }
+
+    /* ========== SOLUTIONS ========== */
+    .solutions-bg {
+      background: var(--bg);
+    }
+
+    .solution-card {
+      background: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .solution-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .solution-card-header {
+      padding: 24px 24px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .solution-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+
+    .solution-icon.blue { background: var(--blue-light); }
+    .solution-icon.mint { background: #D1FAE5; }
+
+    .solution-type {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .solution-name {
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .solution-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .solution-body {
+      padding: 0 24px 24px;
+    }
+
+    .solution-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .tag {
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 100px;
+    }
+
+    .tag-blue { background: var(--blue-light); color: var(--blue-dark); }
+    .tag-mint { background: #D1FAE5; color: var(--mint-dark); }
+    .tag-orange { background: #FFF7ED; color: #C2410C; }
+
+    .reward-box {
+      background: linear-gradient(135deg, #F0F7FF, #EBF3FF);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .reward-label { font-size: 12px; color: var(--text-muted); font-weight: 500; }
+    .reward-amount { font-size: 22px; font-weight: 900; color: var(--blue-dark); }
+
+    .cta-card {
+      display: block;
+      width: 100%;
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      color: white;
+      font-size: 16px;
+      font-weight: 900;
+      padding: 16px;
+      border-radius: 12px;
+      text-decoration: none;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(79,142,247,0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+      letter-spacing: 0.02em;
+    }
+
+    .cta-card.mint {
+      background: linear-gradient(135deg, var(--mint), var(--mint-dark));
+      box-shadow: 0 4px 16px rgba(16,185,129,0.35);
+    }
+
+    .cta-card:active { transform: scale(0.97); }
+
+    /* ========== STEPS ========== */
+    .steps-bg { background: white; }
+
+    .step-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+    }
+
+    .step-list::before {
+      content: '';
+      position: absolute;
+      left: 22px;
+      top: 28px;
+      bottom: 28px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--blue-light), var(--blue-light));
+    }
+
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 16px 0;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.4s, transform 0.4s;
+    }
+
+    .step-item.visible { opacity: 1; transform: translateY(0); }
+
+    .step-num {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: white;
+      font-size: 16px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 2px 12px rgba(79,142,247,0.3);
+    }
+
+    .step-content { padding-top: 10px; }
+    .step-title { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+    .step-desc { font-size: 13px; color: var(--text-muted); line-height: 1.7; }
+
+    /* ========== TRUST ========== */
+    .trust-bg { background: var(--bg); }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .trust-item {
+      background: white;
+      border-radius: 14px;
+      padding: 20px 16px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      transform: scale(0.95);
+      transition: opacity 0.4s, transform 0.4s;
+    }
+
+    .trust-item.visible { opacity: 1; transform: scale(1); }
+    .trust-item .num { font-size: 28px; font-weight: 900; color: var(--blue); line-height: 1; margin-bottom: 6px; }
+    .trust-item .label { font-size: 12px; color: var(--text-muted); font-weight: 500; }
+
+    /* ========== FINAL CTA ========== */
+    .final-cta-bg {
+      background: linear-gradient(145deg, #1E3A8A, #3B82F6);
+      padding: 64px 20px;
+      text-align: center;
+    }
+
+    .final-cta-bg .section-title { color: white; }
+    .final-cta-bg .section-label { color: rgba(255,255,255,0.7); }
+
+    .final-cta-sub {
+      color: rgba(255,255,255,0.75);
+      font-size: 14px;
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+
+    .cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    /* ========== DISCLAIMER ========== */
+    .disclaimer {
+      background: #F8FAFC;
+      padding: 24px 20px;
+      text-align: center;
+    }
+
+    .disclaimer p {
+      font-size: 11px;
+      color: #94A3B8;
+      line-height: 1.8;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* ========== STICKY CTA ========== */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      padding: 12px 20px calc(12px + env(safe-area-inset-bottom));
+      box-shadow: 0 -4px 24px rgba(0,0,0,0.1);
+      z-index: 100;
+      display: flex;
+      gap: 10px;
+      transform: translateY(100%);
+      transition: transform 0.3s;
+    }
+
+    .sticky-cta.show { transform: translateY(0); }
+
+    .sticky-btn {
+      flex: 1;
+      padding: 14px 8px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 900;
+      text-decoration: none;
+      text-align: center;
+      color: white;
+      letter-spacing: 0.01em;
+    }
+
+    .sticky-btn.blue { background: linear-gradient(135deg, var(--blue), var(--blue-dark)); }
+    .sticky-btn.mint { background: linear-gradient(135deg, var(--mint), var(--mint-dark)); }
+
+    /* ========== FADE IN ========== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">💬 無料相談・今すぐ解決</div>
+    <h1 class="hero-title">
+      その借金、<br /><span>今日から楽になれます</span>
+    </h1>
+    <p class="hero-sub">
+      毎月の返済がつらい。誰にも言えない。<br />
+      そんな方のための、無料相談窓口があります。
+    </p>
+    <div class="hero-cards">
+      <div class="hero-card"><span class="icon">⚖️</span>弁護士が直接対応</div>
+      <div class="hero-card"><span class="icon">🔒</span>完全無料・秘密厳守</div>
+      <div class="hero-card"><span class="icon">📱</span>スマホから3分</div>
+    </div>
+    <a href="#solutions" class="cta-primary">まず無料で相談する</a>
+    <p class="cta-note">費用は一切かかりません。相談だけでもOK</p>
+    <div class="scroll-hint">
+      <span>詳しく見る</span>
+      <div class="scroll-hint-arrow"></div>
+    </div>
+  </section>
+
+  <!-- PROBLEMS -->
+  <div class="problems-bg">
+    <div class="section">
+      <p class="section-label fade-in">こんなお悩みはありませんか？</p>
+      <h2 class="section-title fade-in">あなたは今、<br />こんな状況ではないですか</h2>
+      <div class="problem-list">
+        <div class="problem-item"><span class="emoji">😔</span>毎月の返済でお金が残らない</div>
+        <div class="problem-item"><span class="emoji">📞</span>催促の電話が来ていて怖い</div>
+        <div class="problem-item"><span class="emoji">🌙</span>借金のことが頭から離れない</div>
+        <div class="problem-item"><span class="emoji">🏦</span>複数社に借りていて管理できない</div>
+        <div class="problem-item"><span class="emoji">💬</span>誰にも相談できずに一人で悩んでいる</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOLUTIONS -->
+  <div class="solutions-bg" id="solutions">
+    <div class="section">
+      <p class="section-label fade-in">解決策</p>
+      <h2 class="section-title fade-in">あなたに合った<br />解決方法があります</h2>
+
+      <!-- CARD 1: 債務整理 -->
+      <div class="solution-card">
+        <div class="solution-card-header">
+          <div class="solution-icon blue">⚖️</div>
+          <div>
+            <p class="solution-type">SOLUTION 01</p>
+            <p class="solution-name">債務整理で<br />借金を減らす</p>
+            <p class="solution-desc">弁護士に依頼することで、借金の減額・免除が可能なケースがあります。まず話を聞いてもらうだけでOK。</p>
+          </div>
+        </div>
+        <div class="solution-body">
+          <div class="solution-tags">
+            <span class="tag tag-blue">無料相談あり</span>
+            <span class="tag tag-blue">弁護士直接対応</span>
+            <span class="tag tag-orange">減額実績多数</span>
+          </div>
+          <a href="#contact-legal" class="cta-card">⚖️ 無料で弁護士に相談する</a>
+        </div>
+      </div>
+
+      <!-- CARD 2: キャッシング -->
+      <div class="solution-card">
+        <div class="solution-card-header">
+          <div class="solution-icon mint">💳</div>
+          <div>
+            <p class="solution-type">SOLUTION 02</p>
+            <p class="solution-name">今すぐ<br />お金を用意する</p>
+            <p class="solution-desc">急な出費や返済の穴埋めに。スマホから最短即日で借り入れできるサービスをご紹介します。</p>
+          </div>
+        </div>
+        <div class="solution-body">
+          <div class="solution-tags">
+            <span class="tag tag-mint">スマホ完結</span>
+            <span class="tag tag-mint">最短即日</span>
+            <span class="tag tag-mint">来店不要</span>
+          </div>
+          <a href="#contact-loan" class="cta-card mint">💳 キャッシングを確認する</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEPS -->
+  <div class="steps-bg">
+    <div class="section">
+      <p class="section-label fade-in">ご相談の流れ</p>
+      <h2 class="section-title fade-in">たった3ステップ、<br />スマホだけで完結</h2>
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <p class="step-title">フォームから申し込む</p>
+            <p class="step-desc">名前・電話番号だけでOK。3分で完了します。</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <p class="step-title">専門家が連絡をくれる</p>
+            <p class="step-desc">弁護士やスタッフが親身に話を聞いてくれます。費用の説明もこの時点で。</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <p class="step-title">解決策を一緒に考える</p>
+            <p class="step-desc">相談後、進めるかどうかはあなたが決めていいんです。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRUST -->
+  <div class="trust-bg">
+    <div class="section">
+      <p class="section-label fade-in">信頼と実績</p>
+      <h2 class="section-title fade-in">多くの方が<br />解決しています</h2>
+      <div class="trust-grid">
+        <div class="trust-item">
+          <p class="num">無料</p>
+          <p class="label">相談費用</p>
+        </div>
+        <div class="trust-item">
+          <p class="num">即日</p>
+          <p class="label">相談対応</p>
+        </div>
+        <div class="trust-item">
+          <p class="num">秘密</p>
+          <p class="label">厳守対応</p>
+        </div>
+        <div class="trust-item">
+          <p class="num">全国</p>
+          <p class="label">どこでもOK</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FINAL CTA -->
+  <div class="final-cta-bg" id="contact-legal">
+    <p class="section-label">今すぐ行動する</p>
+    <h2 class="section-title">一人で抱え込まないでください</h2>
+    <p class="final-cta-sub">
+      相談するだけで、気持ちが楽になります。<br />
+      費用は無料。秘密は守ります。
+    </p>
+    <div class="cta-group">
+      <a href="#" class="cta-primary" id="contact-legal">⚖️ 無料で弁護士に相談する</a>
+      <a href="#" class="cta-primary" style="background: linear-gradient(135deg, #10B981, #059669); box-shadow: 0 8px 32px rgba(16,185,129,0.4);" id="contact-loan">💳 キャッシングを確認する</a>
+    </div>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    <p>
+      ※本サイトはアフィリエイトリンクを含みます。紹介料を受け取る場合がありますが、お客様の費用は一切変わりません。<br />
+      各サービスのご利用は審査結果によります。必ず公式サイトの利用規約をご確認ください。
+    </p>
+  </div>
+
+  <!-- STICKY CTA -->
+  <div class="sticky-cta" id="stickyCta">
+    <a href="#contact-legal" class="sticky-btn blue">⚖️ 無料相談</a>
+    <a href="#contact-loan" class="sticky-btn mint">💳 キャッシング</a>
+  </div>
+
+  <script>
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, entry.target.dataset.delay || 0);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in, .problem-item, .solution-card, .step-item, .trust-item').forEach((el, i) => {
+      el.dataset.delay = (i % 4) * 80;
+      observer.observe(el);
+    });
+
+    // Sticky CTA
+    const stickyCta = document.getElementById('stickyCta');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > window.innerHeight * 0.6) {
+        stickyCta.classList.add('show');
+      } else {
+        stickyCta.classList.remove('show');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 ---
 slug: vps-for-wordpress
 title: "Best VPS for Self-Hosted WordPress in 2026"
-published: "2026-04-27",
+published: "2026-04-27"
 model: claude-haiku-4-5-20251001
 ---
 # Best VPS for Self-Hosted WordPress in 2026

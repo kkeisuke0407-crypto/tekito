@@ -1,7 +1,7 @@
 ---
 slug: eu-vps-gdpr
 title: "GDPR-Compliant EU VPS Hosting Options"
-published: "2026-04-27",
+published: "2026-04-27"
 model: claude-haiku-4-5-20251001
 ---
 # GDPR-Compliant EU VPS Hosting Options
