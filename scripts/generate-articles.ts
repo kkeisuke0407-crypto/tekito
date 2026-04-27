@@ -2,7 +2,7 @@
 // article. Skips silently if ANTHROPIC_API_KEY is missing so the cron stays
 // green even before the user provisions a key.
 import Anthropic from '@anthropic-ai/sdk';
-import { existsSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { ROOT } from './lib/io.ts';
 
@@ -70,6 +70,8 @@ async function main() {
     console.log('[articles] all topics covered, nothing to generate');
     return;
   }
+
+  if (!existsSync(BLOG_DIR)) mkdirSync(BLOG_DIR, { recursive: true });
 
   const client = new Anthropic({ apiKey: key });
   const r = await client.messages.create({
