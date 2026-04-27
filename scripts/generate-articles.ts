@@ -59,21 +59,7 @@ function pickTopic(): (typeof TOPICS)[number] | undefined {
   return TOPICS.find((t) => !existing.has(t.slug));
 }
 
-async function main() {
-  const key = process.env.ANTHROPIC_API_KEY;
-  if (!key) {
-    console.log('[articles] ANTHROPIC_API_KEY not set, skipping generation');
-    return;
-  }
-  const topic = pickTopic();
-  if (!topic) {
-    console.log('[articles] all topics covered, nothing to generate');
-    return;
-  }
-
-  if (!existsSync(BLOG_DIR)) mkdirSync(BLOG_DIR, { recursive: true });
-
-  const client = new Anthropic({ apiKey: key });
+async function generateOne(client: Anthropic, topic: (typeof TOPICS)[number]): Promise<void> {
   const r = await client.messages.create({
     model: MODEL,
     max_tokens: 4096,
@@ -106,6 +92,28 @@ async function main() {
 
   writeFileSync(join(BLOG_DIR, `${topic.slug}.md`), frontmatter + text + '\n', 'utf-8');
   console.log(`[articles] wrote ${topic.slug}.md (${text.length} chars)`);
+}
+
+async function main() {
+  const key = process.env.ANTHROPIC_API_KEY;
+  if (!key) {
+    console.log('[articles] ANTHROPIC_API_KEY not set, skipping generation');
+    return;
+  }
+
+  if (!existsSync(BLOG_DIR)) mkdirSync(BLOG_DIR, { recursive: true });
+
+  const count = parseInt(process.env.ARTICLES_PER_RUN ?? '1', 10);
+  const client = new Anthropic({ apiKey: key });
+
+  for (let i = 0; i < count; i++) {
+    const topic = pickTopic();
+    if (!topic) {
+      console.log('[articles] all topics covered, nothing to generate');
+      break;
+    }
+    await generateOne(client, topic);
+  }
 }
 
 main().catch((err) => {
