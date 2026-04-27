@@ -84,7 +84,7 @@ async function generateOne(client: Anthropic, topic: (typeof TOPICS)[number]): P
     '---',
     `slug: ${topic.slug}`,
     `title: "${topic.title}"`,
-    `published: ${new Date().toISOString().slice(0, 10)}`,
+    `published: "${new Date().toISOString().slice(0, 10)}",`,
     `model: ${MODEL}`,
     '---',
     '',

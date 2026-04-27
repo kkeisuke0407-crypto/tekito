@@ -1,7 +1,7 @@
 ---
 slug: best-vps-under-5-usd
 title: "Best VPS Under $5/month in 2026"
-published: 2026-04-27
+published: "2026-04-27"
 model: claude-haiku-4-5-20251001
 ---
 # Best VPS Under $5/month in 2026
