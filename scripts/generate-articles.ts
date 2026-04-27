@@ -62,7 +62,7 @@ function pickTopic(): (typeof TOPICS)[number] | undefined {
 async function generateOne(client: Anthropic, topic: (typeof TOPICS)[number]): Promise<void> {
   const r = await client.messages.create({
     model: MODEL,
-    max_tokens: 4096,
+    max_tokens: 2048,
     system:
       'You are a technical writer producing developer-focused VPS comparison articles. ' +
       'Write factually, cite specific specs and prices, avoid marketing fluff. ' +
@@ -70,7 +70,7 @@ async function generateOne(client: Anthropic, topic: (typeof TOPICS)[number]): P
     messages: [
       {
         role: 'user',
-        content: `Write a 1500-2000 word article titled "${topic.title}". Use markdown headings, comparison tables where useful, a short TL;DR at the top, and a "Bottom line" section at the bottom. Mention concrete plans by name and price (USD/month) where relevant. Do not invent providers - stick to: Vultr, DigitalOcean, Hetzner Cloud, Akamai Linode, OVHcloud, Cloudways. End with a one-line affiliate disclosure note.`,
+        content: `Write an 800-1000 word article titled "${topic.title}". Use markdown headings, a short TL;DR at the top, and a "Bottom line" section at the bottom. Mention concrete plans by name and price (USD/month) where relevant. Do not invent providers - stick to: Vultr, DigitalOcean, Hetzner Cloud, Akamai Linode, OVHcloud, Cloudways. End with a one-line affiliate disclosure note.`,
       },
     ],
   });
