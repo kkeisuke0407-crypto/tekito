@@ -1,0 +1,1120 @@
+---
+const title = "60秒であなたに合った解決法がわかる｜借金診断";
+const description = "個人情報入力ナシ・60秒・5問だけ。あなたの状況に合った解決策（債務整理・おまとめローン・キャッシング）を診断します。";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="robots" content="noindex" />
+  <!-- Google tag (gtag.js) -->
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2YLF06DC0E');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:    #FAF7F2;
+      --cream2:   #F3EDE4;
+      --brown:    #B88A5A;
+      --brown-d:  #8C6030;
+      --brown-l:  #F0E6D8;
+      --green:    #3D9970;
+      --green-d:  #2E7A57;
+      --green-l:  #E8F5EF;
+      --coral:    #D9524A;
+      --coral-d:  #B33D36;
+      --coral-l:  #FDE9E7;
+      --text:     #2B2B2B;
+      --text-mid: #4A4540;
+      --text-sub: #6F6A64;
+      --text-lt:  #9E9890;
+      --white:    #FFFFFF;
+      --border:   #E8E0D4;
+      --radius:   16px;
+      --radius-lg:24px;
+      --shadow:   0 4px 20px rgba(100,70,30,0.08);
+      --shadow-lg:0 12px 40px rgba(100,70,30,0.16);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      min-height: 100vh;
+      min-height: 100svh;
+    }
+
+    a { text-decoration: none; }
+
+    /* ステージ切替 */
+    .stage { display: none; min-height: 100vh; min-height: 100svh; }
+    .stage.active { display: flex; flex-direction: column; }
+
+    .wrap {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 0 20px;
+      width: 100%;
+    }
+
+    /* ===== STAGE: START ===== */
+    .start-stage {
+      background: linear-gradient(180deg, var(--cream) 0%, var(--cream2) 100%);
+      align-items: center;
+      justify-content: center;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .start-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--brown-l);
+      color: var(--brown-d);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 100px;
+      letter-spacing: 0.06em;
+      margin-bottom: 20px;
+    }
+
+    .start-title {
+      font-size: clamp(28px, 7.5vw, 38px);
+      font-weight: 900;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .start-title .accent {
+      color: var(--brown-d);
+      position: relative;
+    }
+
+    .start-title .accent::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0;
+      bottom: 2px;
+      height: 8px;
+      background: rgba(184,138,90,0.2);
+      z-index: -1;
+    }
+
+    .start-sub {
+      font-size: 14px;
+      color: var(--text-sub);
+      line-height: 1.9;
+      margin-bottom: 28px;
+    }
+
+    .start-features {
+      display: flex;
+      gap: 0;
+      margin: 0 auto 32px;
+      max-width: 360px;
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .start-feat {
+      flex: 1;
+      padding: 14px 4px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .start-feat:last-child { border-right: none; }
+
+    .start-feat-ic { font-size: 18px; margin-bottom: 4px; }
+    .start-feat-tx { font-size: 11px; font-weight: 700; color: var(--text-mid); }
+
+    .start-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--brown), var(--brown-d));
+      color: var(--white);
+      font-size: 17px;
+      font-weight: 900;
+      padding: 20px 40px;
+      border: none;
+      border-radius: 100px;
+      box-shadow: 0 8px 24px rgba(184,138,90,0.4);
+      cursor: pointer;
+      letter-spacing: 0.04em;
+      transition: transform 0.18s;
+      font-family: inherit;
+    }
+
+    .start-btn:active { transform: scale(0.97); }
+
+    .start-arrow {
+      animation: arrow-slide 1.4s ease-in-out infinite;
+    }
+
+    @keyframes arrow-slide {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(4px); }
+    }
+
+    .start-note {
+      font-size: 11px;
+      color: var(--text-lt);
+      margin-top: 14px;
+    }
+
+    .start-trust {
+      margin-top: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .start-trust-item {
+      font-size: 12px;
+      color: var(--text-sub);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .start-trust-item::before {
+      content: '✓';
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    /* ===== STAGE: QUESTION ===== */
+    .q-stage {
+      background: var(--cream);
+      padding: 24px 0 40px;
+    }
+
+    /* プログレスバー */
+    .progress-wrap {
+      padding: 0 20px;
+      margin-bottom: 24px;
+    }
+
+    .progress-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .progress-step {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--brown-d);
+      letter-spacing: 0.06em;
+    }
+
+    .progress-pct {
+      font-size: 11px;
+      color: var(--text-sub);
+      font-weight: 600;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 6px;
+      background: var(--cream2);
+      border-radius: 100px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--brown), var(--brown-d));
+      border-radius: 100px;
+      transition: width 0.4s ease;
+    }
+
+    .q-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 24px 20px 32px;
+    }
+
+    .q-title {
+      font-size: clamp(22px, 6vw, 28px);
+      font-weight: 900;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .q-sub {
+      font-size: 13px;
+      color: var(--text-sub);
+      text-align: center;
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    .q-options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 420px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .q-option {
+      background: var(--white);
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      text-align: left;
+      cursor: pointer;
+      font-family: inherit;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: all 0.2s;
+      box-shadow: var(--shadow);
+    }
+
+    .q-option:hover,
+    .q-option:active {
+      border-color: var(--brown);
+      background: var(--brown-l);
+      transform: translateY(-1px);
+    }
+
+    .q-option-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--brown-l);
+      color: var(--brown-d);
+      font-size: 13px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .q-option:hover .q-option-num,
+    .q-option:active .q-option-num {
+      background: var(--brown);
+      color: var(--white);
+    }
+
+    .q-option-text {
+      flex: 1;
+      line-height: 1.4;
+    }
+
+    .q-option-arrow {
+      color: var(--text-lt);
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .q-option:hover .q-option-arrow,
+    .q-option:active .q-option-arrow {
+      color: var(--brown-d);
+    }
+
+    .q-back {
+      margin-top: 28px;
+      text-align: center;
+    }
+
+    .q-back-btn {
+      background: none;
+      border: none;
+      color: var(--text-lt);
+      font-size: 12px;
+      cursor: pointer;
+      font-family: inherit;
+      padding: 8px 16px;
+    }
+
+    .q-back-btn:hover { color: var(--text-sub); }
+
+    /* ===== STAGE: RESULT ===== */
+    .result-stage { padding: 32px 0 60px; }
+
+    .result-banner {
+      text-align: center;
+      padding: 0 20px 24px;
+    }
+
+    .result-anim {
+      display: inline-block;
+      font-size: 36px;
+      animation: pop 0.6s ease-out;
+      margin-bottom: 8px;
+    }
+
+    @keyframes pop {
+      0%   { transform: scale(0); opacity: 0; }
+      60%  { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .result-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--brown-d);
+      letter-spacing: 0.16em;
+      margin-bottom: 6px;
+    }
+
+    .result-headline {
+      font-size: clamp(20px, 5.5vw, 26px);
+      font-weight: 900;
+      color: var(--text);
+      line-height: 1.5;
+      margin-bottom: 4px;
+    }
+
+    .result-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      margin: 0 20px;
+      animation: slide-up 0.5s ease-out 0.2s both;
+    }
+
+    @keyframes slide-up {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .result-hero {
+      padding: 32px 24px 24px;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .result-hero--law     { background: linear-gradient(135deg, var(--brown-d) 0%, var(--brown) 100%); }
+    .result-hero--omatome { background: linear-gradient(135deg, var(--green-d) 0%, var(--green) 100%); }
+    .result-hero--cash    { background: linear-gradient(135deg, var(--coral-d) 0%, var(--coral) 100%); }
+
+    .result-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(8px);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 100px;
+      letter-spacing: 0.06em;
+      margin-bottom: 14px;
+    }
+
+    .result-icon {
+      font-size: 44px;
+      margin-bottom: 8px;
+    }
+
+    .result-title {
+      font-size: 22px;
+      font-weight: 900;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .result-tagline {
+      font-size: 13px;
+      opacity: 0.92;
+      line-height: 1.7;
+    }
+
+    .result-body { padding: 24px 22px 28px; }
+
+    .result-section-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-sub);
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+    }
+
+    .result-points {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-bottom: 24px;
+    }
+
+    .result-point {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 1.7;
+    }
+
+    .result-point-ic {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--brown-l);
+      color: var(--brown-d);
+      font-size: 11px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .result-hero--omatome ~ .result-body .result-point-ic { background: var(--green-l); color: var(--green-d); }
+    .result-hero--cash    ~ .result-body .result-point-ic { background: var(--coral-l); color: var(--coral-d); }
+
+    .result-service-name {
+      background: var(--cream);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .result-service-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .result-service-info { flex: 1; }
+    .result-service-tag-mini {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--text-sub);
+      letter-spacing: 0.08em;
+      margin-bottom: 1px;
+    }
+    .result-service-title {
+      font-size: 14px;
+      font-weight: 900;
+      color: var(--text);
+    }
+
+    .result-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 900;
+      color: var(--white);
+      padding: 18px 24px;
+      border-radius: 100px;
+      letter-spacing: 0.02em;
+      transition: transform 0.18s;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .result-cta:active { transform: scale(0.97); }
+
+    .result-cta--law     { background: linear-gradient(135deg, var(--brown-d), var(--brown)); }
+    .result-cta--omatome { background: linear-gradient(135deg, var(--green-d), var(--green)); }
+    .result-cta--cash    { background: linear-gradient(135deg, var(--coral-d), var(--coral)); }
+
+    .result-note {
+      font-size: 11px;
+      color: var(--text-lt);
+      text-align: center;
+      margin-top: 14px;
+      line-height: 1.7;
+    }
+
+    .result-other {
+      margin: 32px 20px 0;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+    }
+
+    .result-other-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-sub);
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .result-other-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .result-other-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text-mid);
+    }
+
+    .result-other-ic {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .result-other-text { flex: 1; }
+    .result-other-text strong { display: block; font-weight: 900; color: var(--text); margin-bottom: 1px; }
+
+    .result-other-arrow { color: var(--text-lt); font-size: 16px; }
+
+    .result-restart {
+      text-align: center;
+      margin-top: 32px;
+    }
+
+    .result-restart-btn {
+      background: none;
+      border: none;
+      color: var(--text-lt);
+      font-size: 12px;
+      cursor: pointer;
+      font-family: inherit;
+      padding: 8px 16px;
+      text-decoration: underline;
+    }
+
+    .result-disclaimer {
+      font-size: 10px;
+      color: var(--text-lt);
+      text-align: center;
+      line-height: 1.7;
+      padding: 24px 20px 0;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== STAGE: START ===== -->
+<section class="stage start-stage active" id="stage-start">
+  <div class="wrap">
+    <div class="start-badge">🌿 個人情報入力ナシ・完全匿名</div>
+    <h1 class="start-title">
+      60秒で<br /><span class="accent">あなたに合った</span><br />解決法がわかる。
+    </h1>
+    <p class="start-sub">
+      借金の悩みには、解決法が3つあります。<br />
+      5つの質問に答えるだけで、<br />
+      あなたに最適な選択肢をご案内します。
+    </p>
+    <div class="start-features">
+      <div class="start-feat">
+        <div class="start-feat-ic">⏱️</div>
+        <div class="start-feat-tx">60秒</div>
+      </div>
+      <div class="start-feat">
+        <div class="start-feat-ic">🔒</div>
+        <div class="start-feat-tx">匿名OK</div>
+      </div>
+      <div class="start-feat">
+        <div class="start-feat-ic">¥</div>
+        <div class="start-feat-tx">完全無料</div>
+      </div>
+    </div>
+    <button class="start-btn" id="btn-start">
+      無料で診断スタート
+      <span class="start-arrow">›</span>
+    </button>
+    <p class="start-note">クレジットカード不要・登録不要</p>
+    <div class="start-trust">
+      <div class="start-trust-item">あなたに合う解決策がすぐわかる</div>
+      <div class="start-trust-item">3つの選択肢から最適なものを提案</div>
+      <div class="start-trust-item">電話番号・メアド入力は一切なし</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STAGE: Q1 借金総額 ===== -->
+<section class="stage q-stage" id="stage-q1">
+  <div class="progress-wrap">
+    <div class="progress-info">
+      <span class="progress-step">質問 1 / 5</span>
+      <span class="progress-pct">20%</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" style="width:20%"></div></div>
+  </div>
+  <div class="q-content">
+    <h2 class="q-title">借金の総額は<br />どれくらいですか？</h2>
+    <p class="q-sub">だいたいの金額でOKです</p>
+    <div class="q-options">
+      <button class="q-option" data-q="amount" data-v="low">
+        <span class="q-option-num">A</span>
+        <span class="q-option-text">50万円以下</span>
+        <span class="q-option-arrow">›</span>
+      </button>
+      <button class="q-option" data-q="amount" data-v="mid">
+        <span class="q-option-num">B</span>
+        <span class="q-option-text">50万円〜200万円</span>
+        <span class="q-option-arrow">›</span>
+      </button>
+      <button class="q-option" data-q="amount" data-v="high">
+        <span class="q-option-num">C</span>
+        <span class="q-option-text">200万円以上</span>
+        <span class="q-option-arrow">›</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STAGE: Q2 借入先の数 ===== -->
+<section class="stage q-stage" id="stage-q2">
+  <div class="progress-wrap">
+    <div class="progress-info">
+      <span class="progress-step">質問 2 / 5</span>
+      <span class="progress-pct">40%</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" style="width:40%"></div></div>
+  </div>
+  <div class="q-content">
+    <h2 class="q-title">何社から<br />借りていますか？</h2>
+    <p class="q-sub">クレジットカードのキャッシング枠も含めて</p>
+    <div class="q-options">
+      <button class="q-option" data-q="count" data-v="one">
+        <span class="q-option-num">A</span>
+        <span class="q-option-text">1社のみ</span>
+        <span class="q-option-arrow">›</span>
+      </button>
+      <button class="q-option" data-q="count" data-v="few">
+        <span class="q-option-num">B</span>
+        <span class="q-option-text">2〜3社</span>
+        <span class="q-option-arrow">›</span>
+      </button>
+      <button class="q-option" data-q="count" data-v="many">
+        <span class="q-option-num">C</span>
+        <span class="q-option-text">4社以上</span>
+        <span class="q-option-arrow">›</span>
+      </button>
+    </div>
+    <div class="q-back"><button class="q-back-btn" data-back="q1">← 戻る</button></div>
+  </div>
+</section>
+
+<!-- ===== STAGE: Q3 毎月の返済状況 ===== -->
+<section class="stage q-stage" id="stage-q3">
+  <div class="progress-wrap">
+    <div class="progress-info">
+      <span class="progress-step">質問 3 / 5</span>
+      <span class="progress-pct">60%</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" style="width:60%"></div></div>
+  </div>
+  <div class="q-content">
+    <h2 class="q-title">毎月の返済状況は<br />どうですか？</h2>
+    <p class="q-sub">正直に答えてください（一番大事な質問です）</p>
+    <div class="q-options">
+      <button class="q-option" data-q="payment" data-v="ok">
+        <span class="q-option-num">A</span>
+        <span class="q-option-text">余裕を持って返せている</span>
+        <span class="q-option-arrow">›</span>
+      </button>
+      <button class="q-option" data-q="payment" data-v="tight">
+        <span class="q-option-num">B</span>
+        <span class="q-option-text">ギリギリ返せている</span>
+        <span class="q-option-arrow">›</span>
+      </button>
+      <button class="q-option" data-q="payment" data-v="ng">
+        <span class="q-option-num">C</span>
+        <span class="q-option-text">払えない月が出てきている</span>
+        <span class="q-option-arrow">›</span>
+      </button>
+    </div>
+    <div class="q-back"><button class="q-back-btn" data-back="q2">← 戻る</button></div>
+  </div>
+</section>
+
+<!-- ===== STAGE: Q4 借入年数 ===== -->
+<section class="stage q-stage" id="stage-q4">
+  <div class="progress-wrap">
+    <div class="progress-info">
+      <span class="progress-step">質問 4 / 5</span>
+      <span class="progress-pct">80%</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" style="width:80%"></div></div>
+  </div>
+  <div class="q-content">
+    <h2 class="q-title">借入の年数は<br />どれくらいですか？</h2>
+    <p class="q-sub">最初に借りてから今までの期間</p>
+    <div class="q-options">
+      <button class="q-option" data-q="years" data-v="short">
+        <span class="q-option-num">A</span>
+        <span class="q-option-text">2年以内</span>
+        <span class="q-option-arrow">›</span>
+      </button>
+      <button class="q-option" data-q="years" data-v="mid">
+        <span class="q-option-num">B</span>
+        <span class="q-option-text">2〜5年</span>
+        <span class="q-option-arrow">›</span>
+      </button>
+      <button class="q-option" data-q="years" data-v="long">
+        <span class="q-option-num">C</span>
+        <span class="q-option-text">5年以上</span>
+        <span class="q-option-arrow">›</span>
+      </button>
+    </div>
+    <div class="q-back"><button class="q-back-btn" data-back="q3">← 戻る</button></div>
+  </div>
+</section>
+
+<!-- ===== STAGE: Q5 取り立て・延滞 ===== -->
+<section class="stage q-stage" id="stage-q5">
+  <div class="progress-wrap">
+    <div class="progress-info">
+      <span class="progress-step">質問 5 / 5</span>
+      <span class="progress-pct">100%</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+  </div>
+  <div class="q-content">
+    <h2 class="q-title">取り立て・延滞は<br />ありますか？</h2>
+    <p class="q-sub">最後の質問です</p>
+    <div class="q-options">
+      <button class="q-option" data-q="trouble" data-v="none">
+        <span class="q-option-num">A</span>
+        <span class="q-option-text">特にない</span>
+        <span class="q-option-arrow">›</span>
+      </button>
+      <button class="q-option" data-q="trouble" data-v="worry">
+        <span class="q-option-num">B</span>
+        <span class="q-option-text">心配ではある</span>
+        <span class="q-option-arrow">›</span>
+      </button>
+      <button class="q-option" data-q="trouble" data-v="yes">
+        <span class="q-option-num">C</span>
+        <span class="q-option-text">既にある（取り立て・延滞）</span>
+        <span class="q-option-arrow">›</span>
+      </button>
+    </div>
+    <div class="q-back"><button class="q-back-btn" data-back="q4">← 戻る</button></div>
+  </div>
+</section>
+
+<!-- ===== STAGE: RESULT ===== -->
+<section class="stage result-stage" id="stage-result">
+  <div class="result-banner">
+    <div class="result-anim">✨</div>
+    <p class="result-eyebrow">あなたへの診断結果</p>
+    <h2 class="result-headline">あなたに合うのは、これ。</h2>
+  </div>
+
+  <!-- 結果A: 債務整理（イストワール） -->
+  <div class="result-variant" id="result-law" style="display:none;">
+    <div class="result-card">
+      <div class="result-hero result-hero--law">
+        <span class="result-tag">SOLUTION A</span>
+        <div class="result-icon">⚖️</div>
+        <h3 class="result-title">債務整理で<br />根本から解決</h3>
+        <p class="result-tagline">あなたの状況なら、借金を減らす・なくす方向の解決が最適です</p>
+      </div>
+      <div class="result-body">
+        <p class="result-section-title">なぜこれ？</p>
+        <div class="result-points">
+          <div class="result-point"><span class="result-point-ic">1</span><span>毎月の返済が限界に近い・取り立ての心配がある状況</span></div>
+          <div class="result-point"><span class="result-point-ic">2</span><span>新たに借りる方向では悪循環になりやすい段階</span></div>
+          <div class="result-point"><span class="result-point-ic">3</span><span>弁護士に相談すれば、利息カット・返済額減額の可能性</span></div>
+        </div>
+
+        <p class="result-section-title">おすすめ</p>
+        <div class="result-service-name">
+          <div class="result-service-logo" style="background:var(--brown-l);">⚖️</div>
+          <div class="result-service-info">
+            <p class="result-service-tag-mini">弁護士事務所</p>
+            <p class="result-service-title">イストワール法律事務所</p>
+          </div>
+        </div>
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1V20+C1FMPU+4FR4+5YRHE" rel="nofollow" class="result-cta result-cta--law" data-cta="law">
+          無料で弁護士に相談する ›
+        </a>
+        <p class="result-note">相談無料・60〜90分・全国対応<br />相談だけでもOKです</p>
+      </div>
+    </div>
+
+    <div class="result-other">
+      <p class="result-other-title">他の選択肢も見る</p>
+      <div class="result-other-list">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1VU2+CO23PE+4WSG+5YJRM" rel="nofollow" class="result-other-item" data-cta="omatome-sub">
+          <div class="result-other-ic" style="background:var(--green-l);">🔁</div>
+          <div class="result-other-text"><strong>おまとめローン</strong><span>借金を一本化して整理</span></div>
+          <span class="result-other-arrow">›</span>
+        </a>
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1V20+C968T6+363I+5YJRM" rel="nofollow" class="result-other-item" data-cta="cash-sub">
+          <div class="result-other-ic" style="background:var(--coral-l);">💳</div>
+          <div class="result-other-text"><strong>キャッシング</strong><span>一時的に必要なら</span></div>
+          <span class="result-other-arrow">›</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 結果B: おまとめローン（デイリーキャッシング） -->
+  <div class="result-variant" id="result-omatome" style="display:none;">
+    <div class="result-card">
+      <div class="result-hero result-hero--omatome">
+        <span class="result-tag">SOLUTION B</span>
+        <div class="result-icon">🔁</div>
+        <h3 class="result-title">おまとめローンで<br />借金を一本化</h3>
+        <p class="result-tagline">複数社の返済を1つにまとめて、月の負担を軽くするのが最適です</p>
+      </div>
+      <div class="result-body">
+        <p class="result-section-title">なぜこれ？</p>
+        <div class="result-points">
+          <div class="result-point"><span class="result-point-ic">1</span><span>複数社からの借入で管理が大変・利息も重い状態</span></div>
+          <div class="result-point"><span class="result-point-ic">2</span><span>返済能力はあるが、月の支払いを下げたい段階</span></div>
+          <div class="result-point"><span class="result-point-ic">3</span><span>1本にまとめると金利・返済日・督促が整理される</span></div>
+        </div>
+
+        <p class="result-section-title">おすすめ</p>
+        <div class="result-service-name">
+          <div class="result-service-logo" style="background:var(--green-l);">🔁</div>
+          <div class="result-service-info">
+            <p class="result-service-tag-mini">おまとめローン</p>
+            <p class="result-service-title">デイリーキャッシング</p>
+          </div>
+        </div>
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1VU2+CO23PE+4WSG+5YJRM" rel="nofollow" class="result-cta result-cta--omatome" data-cta="omatome">
+          詳細を確認する ›
+        </a>
+        <p class="result-note">全国対応・24時間申込可・最短即日融資<br />フリーローン/おまとめ/不動産担保にも対応</p>
+      </div>
+    </div>
+
+    <div class="result-other">
+      <p class="result-other-title">他の選択肢も見る</p>
+      <div class="result-other-list">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1V20+C1FMPU+4FR4+5YRHE" rel="nofollow" class="result-other-item" data-cta="law-sub">
+          <div class="result-other-ic" style="background:var(--brown-l);">⚖️</div>
+          <div class="result-other-text"><strong>債務整理</strong><span>もっと根本的に減らしたいなら</span></div>
+          <span class="result-other-arrow">›</span>
+        </a>
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1V20+C968T6+363I+5YJRM" rel="nofollow" class="result-other-item" data-cta="cash-sub">
+          <div class="result-other-ic" style="background:var(--coral-l);">💳</div>
+          <div class="result-other-text"><strong>キャッシング</strong><span>一時的な資金が必要なら</span></div>
+          <span class="result-other-arrow">›</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 結果C: キャッシング（セントラル） -->
+  <div class="result-variant" id="result-cash" style="display:none;">
+    <div class="result-card">
+      <div class="result-hero result-hero--cash">
+        <span class="result-tag">SOLUTION C</span>
+        <div class="result-icon">💳</div>
+        <h3 class="result-title">キャッシングで<br />一時的に乗り切る</h3>
+        <p class="result-tagline">返済能力があり、今月だけ・短期的に必要というケースに最適です</p>
+      </div>
+      <div class="result-body">
+        <p class="result-section-title">なぜこれ？</p>
+        <div class="result-points">
+          <div class="result-point"><span class="result-point-ic">1</span><span>返済自体は問題なくできているが一時的な資金不足</span></div>
+          <div class="result-point"><span class="result-point-ic">2</span><span>初回30日間は金利0円で借りられるので負担少なめ</span></div>
+          <div class="result-point"><span class="result-point-ic">3</span><span>最短30分審査・スマホで完結・最短即日振込</span></div>
+        </div>
+
+        <p class="result-section-title">おすすめ</p>
+        <div class="result-service-name">
+          <div class="result-service-logo" style="background:var(--coral-l);">💳</div>
+          <div class="result-service-info">
+            <p class="result-service-tag-mini">キャッシング</p>
+            <p class="result-service-title">セントラルキャッシング</p>
+          </div>
+        </div>
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1V20+C968T6+363I+5YJRM" rel="nofollow" class="result-cta result-cta--cash" data-cta="cash">
+          詳細を確認する ›
+        </a>
+        <p class="result-note">初回30日間金利0円・最短即日融資<br />スマホ完結・来店不要</p>
+      </div>
+    </div>
+
+    <div class="result-other">
+      <p class="result-other-title">他の選択肢も見る</p>
+      <div class="result-other-list">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1VU2+CO23PE+4WSG+5YJRM" rel="nofollow" class="result-other-item" data-cta="omatome-sub">
+          <div class="result-other-ic" style="background:var(--green-l);">🔁</div>
+          <div class="result-other-text"><strong>おまとめローン</strong><span>複数社の借金を一本化</span></div>
+          <span class="result-other-arrow">›</span>
+        </a>
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1V20+C1FMPU+4FR4+5YRHE" rel="nofollow" class="result-other-item" data-cta="law-sub">
+          <div class="result-other-ic" style="background:var(--brown-l);">⚖️</div>
+          <div class="result-other-text"><strong>債務整理</strong><span>もっと根本的に解決するなら</span></div>
+          <span class="result-other-arrow">›</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="result-restart">
+    <button class="result-restart-btn" id="btn-restart">もう一度診断する</button>
+  </div>
+
+  <p class="result-disclaimer">
+    ※本診断は一般的な傾向に基づく目安です。実際の解決策は個別の状況により異なります。<br />
+    ※本サイトはアフィリエイトリンクを含みます。紹介料を受け取る場合がありますが、お客様の費用は変わりません。
+  </p>
+</section>
+
+<script is:inline>
+  // ステージ管理
+  const stages = ['start', 'q1', 'q2', 'q3', 'q4', 'q5', 'result'];
+  let answers = {};
+
+  function showStage(name) {
+    document.querySelectorAll('.stage').forEach(s => s.classList.remove('active'));
+    const target = document.getElementById('stage-' + name);
+    if (target) {
+      target.classList.add('active');
+      window.scrollTo(0, 0);
+      // GAイベント送信
+      if (window.gtag) {
+        gtag('event', 'shindan_step', { step: name });
+      }
+    }
+  }
+
+  document.getElementById('btn-start').addEventListener('click', () => {
+    showStage('q1');
+  });
+
+  // 質問の回答ハンドラ
+  document.querySelectorAll('.q-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const q = btn.dataset.q;
+      const v = btn.dataset.v;
+      answers[q] = v;
+
+      // GAイベント
+      if (window.gtag) {
+        gtag('event', 'shindan_answer', { question: q, value: v });
+      }
+
+      // 次のステージへ
+      const currentStage = btn.closest('.stage').id.replace('stage-', '');
+      const idx = stages.indexOf(currentStage);
+      const nextStage = stages[idx + 1];
+
+      if (nextStage === 'result') {
+        const result = calcResult(answers);
+        showResult(result);
+      } else {
+        showStage(nextStage);
+      }
+    });
+  });
+
+  // 戻るボタン
+  document.querySelectorAll('.q-back-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      showStage(btn.dataset.back);
+    });
+  });
+
+  // 診断ロジック
+  function calcResult(a) {
+    // 1. 「払えない」or「取り立て既にある」→ 債務整理
+    if (a.payment === 'ng' || a.trouble === 'yes') return 'law';
+
+    // 2. 借金200万以上 + 払えない/ギリギリ → 債務整理寄り
+    if (a.amount === 'high' && a.payment === 'tight' && a.count === 'many') return 'law';
+
+    // 3. 複数社（2社以上）+ ギリギリ → おまとめローン
+    if ((a.count === 'few' || a.count === 'many') && a.payment === 'tight') return 'omatome';
+
+    // 4. 1社・余裕あり → キャッシング（一時的）
+    if (a.count === 'one' && a.payment === 'ok') return 'cash';
+
+    // 5. 1社・ギリギリ → おまとめより前にまず一時的に乗り切る or 整理
+    if (a.count === 'one' && a.payment === 'tight') return 'cash';
+
+    // 6. 残りのケース → おまとめローン（中庸）
+    return 'omatome';
+  }
+
+  // 結果表示
+  function showResult(type) {
+    document.querySelectorAll('.result-variant').forEach(el => el.style.display = 'none');
+    const el = document.getElementById('result-' + type);
+    if (el) el.style.display = 'block';
+
+    if (window.gtag) {
+      gtag('event', 'shindan_result', { result: type });
+    }
+
+    showStage('result');
+  }
+
+  // 結果のCTAクリック計測
+  document.querySelectorAll('[data-cta]').forEach(el => {
+    el.addEventListener('click', () => {
+      if (window.gtag) {
+        gtag('event', 'shindan_cta_click', { cta: el.dataset.cta });
+      }
+    });
+  });
+
+  // やり直しボタン
+  document.getElementById('btn-restart').addEventListener('click', () => {
+    answers = {};
+    showStage('start');
+  });
+</script>
+</body>
+</html>
