@@ -69,6 +69,95 @@ const description = "返済が苦しい・複数社から借入・督促が止�
       body { padding: 24px 0; background: radial-gradient(circle at 20% 10%, #FFE2C0 0%, transparent 45%), radial-gradient(circle at 80% 90%, #FFD9C4 0%, transparent 45%), #F5EDE0; }
       .page-wrap { border-radius: 28px; overflow: hidden; box-shadow: 0 24px 60px rgba(196,110,60,0.18); }
     }
+    /* ── PC layout ── */
+    @media (min-width: 860px) {
+      body { padding: 32px 24px; }
+      .page-wrap { max-width: 900px; border-radius: 24px; }
+
+      /* Hero 2-col */
+      .hero { padding: 40px 40px 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
+      .hero-blob { width: 220px; height: 220px; top: -50px; right: -40px; }
+      .hero h1 { font-size: 42px; margin: 16px 0 10px; }
+      .hero-lead { font-size: 15px; margin-bottom: 22px; }
+      .hero-cta { font-size: 17px; padding: 16px; }
+      .hero-badge { font-size: 12px; }
+      .hero-note { font-size: 12px; }
+      .hero-stats { grid-template-columns: repeat(3,1fr); margin-top: 0; }
+      .hero-stat-n { font-size: 24px; }
+      .hero-stat-l { font-size: 11px; }
+      .hero-right { display: flex; flex-direction: column; gap: 16px; z-index: 1; position: relative; }
+
+      /* Sections */
+      .worry { padding: 32px 28px 16px; }
+      .worry-title { font-size: 20px; }
+      .worry-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+      .worry-item { font-size: 14px; }
+      .worry-footer { font-size: 14px; margin-top: 18px; }
+
+      /* Case study */
+      .case-study-mobile { display: none; }
+      .case-study { margin: 20px 28px 0; padding: 20px 24px; display: flex; align-items: center; gap: 32px; }
+      .case-study-note { margin-top: 0; flex: 1; font-size: 12px; }
+      .case-study-body { gap: 16px; }
+      .case-study-num { font-size: 28px; }
+      .case-study-num.before { font-size: 22px; }
+
+      /* Checklist */
+      .checklist-wrap { margin: 20px 28px 0; }
+      .checklist-title { font-size: 20px; margin-bottom: 16px; }
+      .checklist-items { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+      .checklist-item { font-size: 14px; }
+      .checklist-footer { font-size: 14px; }
+      .checklist-cta { font-size: 16px; padding: 16px; max-width: 400px; margin-left: auto; margin-right: auto; }
+
+      /* Sec heads */
+      .sec-head { padding: 32px 28px 12px; }
+      .sec-head h2 { font-size: 26px; }
+      .sec-head p { font-size: 13px; }
+
+      /* Ranking 3-col */
+      .ranking-list { padding: 16px 28px 12px; display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+      .firm-card { padding: 20px 18px 18px; }
+      .firm-emblem { width: 52px; height: 52px; font-size: 26px; }
+      .firm-name { font-size: 14px; }
+      .firm-cta { font-size: 13px; padding: 13px 8px; }
+
+      /* Compare */
+      .compare-wrap { padding: 8px 28px 4px; }
+      .ct-row-key { font-size: 12px; padding: 11px 12px; }
+      .ct-row-val { font-size: 12px; }
+      .ct-head-firm { padding: 10px 6px; }
+      .ct-firm-name { font-size: 11px; }
+
+      /* How-to */
+      .howto-wrap { padding: 8px 28px 8px; }
+      .howto-steps { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px 24px; }
+      .howto-step::after { display: none; }
+      .howto-body { padding-bottom: 0; }
+      .howto-num { width: 34px; height: 34px; font-size: 17px; }
+      .howto-body strong { font-size: 14px; }
+      .howto-body p { font-size: 13px; }
+
+      /* Criteria 2-col */
+      .criteria-wrap { padding: 8px 28px 8px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+      .criteria-body strong { font-size: 14px; }
+      .criteria-body p { font-size: 12px; }
+
+      /* FAQ */
+      .faq-list { padding: 8px 28px 24px; }
+      .faq-q-text { font-size: 14px; }
+      .faq-a-text { font-size: 13px; }
+
+      /* Final CTA */
+      .final-cta { margin: 8px 28px 20px; padding: 28px 28px; }
+      .final-cta h3 { font-size: 26px; }
+      .final-cta p { font-size: 13px; }
+      .final-cta-shindan-main { font-size: 20px; }
+
+      /* Footer */
+      .site-footer { padding: 24px 28px 36px; }
+      .footer-text { font-size: 11px; }
+    }
 
     /* AppBar */
     .appbar {
@@ -120,7 +209,9 @@ const description = "返済が苦しい・複数社から借入・督促が止�
     }
     .hero-h1-mark { background: linear-gradient(180deg, transparent 60%, #FFD480 60%); padding: 0 4px; }
     .hero-lead { margin: 6px 0 18px; font-size: 13px; color: var(--ink-soft); line-height: 1.7; position: relative; z-index: 1; }
-    .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 18px; position: relative; z-index: 1; }
+    .hero-left { position: relative; z-index: 1; }
+    .hero-right { display: none; }
+    .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 16px; }
     .hero-stat { background: #fff; border-radius: 14px; padding: 10px 6px; text-align: center; box-shadow: 0 4px 12px rgba(196,110,60,0.08); }
     .hero-stat-n { font-family: var(--zen); font-weight: 900; font-size: 20px; color: var(--primary); line-height: 1; }
     .hero-stat-l { font-size: 10px; color: var(--ink-soft); margin-top: 4px; }
@@ -351,11 +442,29 @@ const description = "返済が苦しい・複数社から借入・督促が止�
 
   <section class="hero">
     <div class="hero-blob"></div>
-    <div class="hero-badge"><span class="hero-badge-dot">★</span>2026年4月 最新版</div>
-    <h1>借金の悩み、<br/><span class="hero-h1-mark">3分で</span>スッキリ。</h1>
-    <p class="hero-lead">本当に頼れる債務整理の事務所を、<br/>現役FPと元相談員が<b style="color:var(--ink)">9項目</b>で徹底比較。</p>
-    <button class="hero-cta" onclick="document.getElementById('ranking').scrollIntoView({behavior:'smooth'})">おすすめ3選を見る ↓</button>
-    <div class="hero-note">※相談無料・匿名OK・全国対応</div>
+    <div class="hero-left">
+      <div class="hero-badge"><span class="hero-badge-dot">★</span>2026年4月 最新版</div>
+      <h1>借金の悩み、<br/><span class="hero-h1-mark">3分で</span>スッキリ。</h1>
+      <p class="hero-lead">本当に頼れる債務整理の事務所を、<br/>現役FPと元相談員が<b style="color:var(--ink)">9項目</b>で徹底比較。</p>
+      <button class="hero-cta" onclick="document.getElementById('ranking').scrollIntoView({behavior:'smooth'})">おすすめ3選を見る ↓</button>
+      <div class="hero-note">※相談無料・匿名OK・全国対応</div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hero-stat-n">50万+</div><div class="hero-stat-l">相談実績</div></div>
+        <div class="hero-stat"><div class="hero-stat-n">最短</div><div class="hero-stat-l">即日受任</div></div>
+        <div class="hero-stat"><div class="hero-stat-n">0円</div><div class="hero-stat-l">相談料</div></div>
+      </div>
+      <div class="case-study" style="margin:0;padding:16px 14px;">
+        <div class="case-study-kicker">📊 減額事例</div>
+        <div class="case-study-body">
+          <div><div class="case-study-label">相談前</div><div class="case-study-num before">470万</div></div>
+          <div class="case-study-arrow">→</div>
+          <div><div class="case-study-label">整理後</div><div class="case-study-num after">100万</div></div>
+        </div>
+        <p class="case-study-note" style="margin-top:8px">専門家への相談で返済総額が大幅に減額された実例です。</p>
+      </div>
+    </div>
   </section>
 
   <section class="worry">
@@ -369,8 +478,8 @@ const description = "返済が苦しい・複数社から借入・督促が止�
     <div class="worry-footer">↓ ぜんぶ債務整理で解決できます ↓</div>
   </section>
 
-  <!-- Case Study -->
-  <div class="case-study">
+  <!-- Case Study (mobile only; PC shows in hero-right) -->
+  <div class="case-study case-study-mobile">
     <div class="case-study-kicker">📊 CASE STUDY</div>
     <div class="case-study-body">
       <div>
