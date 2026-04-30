@@ -1,0 +1,24 @@
+{
+  "name": "VPS Compare",
+  "tagline": "Daily-updated VPS & cloud hosting comparison for developers",
+  "description": "Side-by-side comparison of VPS and cloud hosting providers (Vultr, DigitalOcean, Hetzner, Linode, OVH, Cloudways) with daily-refreshed pricing, specs and region availability. Built and maintained by automation.",
+  "url": "https://vpscomparehub.com",
+  "language": "en",
+  "locale": "en_US",
+  "twitter": "",
+  "defaultOgImage": "/og-default.svg",
+  "googleSiteVerification": "gmCtePZh9x5Df1HDsCcF9tEKQ7TmcUfK7DEW_cvqj5w",
+  "bingSiteVerification": "",
+  "navItems": [
+    {"label": "Providers", "href": "/providers"},
+    {"label": "Compare", "href": "/compare"},
+    {"label": "By Spec", "href": "/by-spec"},
+    {"label": "By Region", "href": "/by-region"},
+    {"label": "Blog", "href": "/blog"}
+  ],
+  "footerLinks": [
+    {"label": "About", "href": "/about"},
+    {"label": "Affiliate disclosure", "href": "/disclosure"},
+    {"label": "Privacy", "href": "/privacy"}
+  ]
+}

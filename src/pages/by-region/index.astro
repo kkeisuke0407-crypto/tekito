@@ -1,0 +1,29 @@
+---
+import Base from '@/layouts/Base.astro';
+import { loadProviders } from '@/lib/data.ts';
+
+const providers = loadProviders();
+const regionToProviders = new Map<string, string[]>();
+for (const p of providers) {
+  for (const r of p.regions) {
+    if (!regionToProviders.has(r)) regionToProviders.set(r, []);
+    regionToProviders.get(r)!.push(p.name);
+  }
+}
+const regions = [...regionToProviders.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+---
+<Base title="VPS By Region" description="VPS providers indexed by data center region.">
+  <h1>VPS Providers by Region</h1>
+  <p class="lead">{regions.length} unique regions across {providers.length} providers.</p>
+  <table>
+    <thead><tr><th>Region</th><th>Available providers</th></tr></thead>
+    <tbody>
+      {regions.map(([region, names]) => (
+        <tr>
+          <td><strong>{region}</strong></td>
+          <td>{names.join(', ')}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</Base>

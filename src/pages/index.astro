@@ -1,0 +1,75 @@
+---
+import Base from '@/layouts/Base.astro';
+import ProviderCard from '@/components/ProviderCard.astro';
+import AffDisclosure from '@/components/AffDisclosure.astro';
+import { loadProviders, loadSite, cheapestPlan } from '@/lib/data.ts';
+
+const providers = loadProviders();
+const site = loadSite();
+const lastUpdated = providers.reduce((max, p) => (p.lastUpdated > max ? p.lastUpdated : max), '');
+
+const ranked = [...providers].sort((a, b) => cheapestPlan(a).monthlyPrice - cheapestPlan(b).monthlyPrice);
+
+const itemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: site.tagline,
+  itemListElement: ranked.map((p, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: p.name,
+    url: `${site.url}/providers/${p.slug}`,
+  })),
+};
+---
+<Base title="VPS & Cloud Hosting Comparison" description={site.description} jsonLd={itemListLd}>
+  <h1>{site.tagline}</h1>
+  <p class="lead">{site.description}</p>
+  <p class="last-updated">Last refreshed: {lastUpdated.slice(0, 10)} - data updated daily by automated pipeline.</p>
+
+  <h2>Providers ranked by cheapest plan</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Provider</th>
+        <th>Cheapest plan</th>
+        <th>vCPU/RAM</th>
+        <th>$/mo</th>
+        <th>Regions</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {ranked.map((p, i) => {
+        const c = cheapestPlan(p);
+        return (
+          <tr>
+            <td>{i + 1}</td>
+            <td><a href={`/providers/${p.slug}`}><strong>{p.name}</strong></a></td>
+            <td>{c.name}</td>
+            <td>{c.vcpu}vCPU / {c.memoryGB}GB</td>
+            <td><strong>${c.monthlyPrice.toFixed(2)}</strong></td>
+            <td>{p.regions.length}</td>
+            <td><a href={`/providers/${p.slug}`}>Details</a></td>
+          </tr>
+        );
+      })}
+    </tbody>
+  </table>
+
+  <h2>All providers</h2>
+  <div class="grid cols-2">
+    {providers.map((p) => <ProviderCard provider={p} />)}
+  </div>
+
+  <h2>Quick paths</h2>
+  <ul>
+    <li><a href="/compare">Side-by-side comparisons</a></li>
+    <li><a href="/by-region">Find a VPS by region</a></li>
+    <li><a href="/by-spec">Find a VPS by spec</a></li>
+    <li><a href="/blog">Latest articles</a></li>
+  </ul>
+
+  <AffDisclosure />
+</Base>

@@ -1,0 +1,25 @@
+---
+import type { Provider } from '@/lib/types.ts';
+import { applyAffiliate, cheapestPlan } from '@/lib/data.ts';
+
+interface Props {
+  provider: Provider;
+}
+
+const { provider } = Astro.props as Props;
+const cheap = cheapestPlan(provider);
+const link = applyAffiliate(provider.signupUrl, provider.slug);
+---
+<div class="card">
+  <h3><a href={`/providers/${provider.slug}`}>{provider.name}</a></h3>
+  <p class="muted">{provider.description.split('.')[0]}.</p>
+  <p>
+    <span class="tag">From ${cheap.monthlyPrice.toFixed(2)}/mo</span>
+    <span class="tag">{provider.regions.length} regions</span>
+    {provider.freeTrialUSD && <span class="tag">${provider.freeTrialUSD} credit</span>}
+  </p>
+  <p>
+    <a class="cta small" href={link} rel="sponsored nofollow noopener" target="_blank">Visit {provider.name}</a>
+    <a href={`/providers/${provider.slug}`} style="margin-left: 0.75rem;">Details &rarr;</a>
+  </p>
+</div>

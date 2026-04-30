@@ -1,0 +1,142 @@
+{
+  "slug": "hetzner",
+  "name": "Hetzner Cloud",
+  "homepage": "https://www.hetzner.com/cloud",
+  "signupUrl": "https://hetzner.cloud/?ref=REPLACE_HETZNER_REF",
+  "affiliateProgram": "Hetzner Referral (€20 credit)",
+  "description": "Hetzner Cloud delivers Europe's cheapest production-grade VPS plans with generous bandwidth (20 TB on every shared plan) and AMD/Intel/Arm CPU options. Data centers in Germany, Finland, the US and Singapore.",
+  "pros": [
+    "20 TB monthly bandwidth on the smallest plan",
+    "Cheapest €/GB RAM in the industry",
+    "Arm64 (Ampere) plans up to 50% cheaper than x86",
+    "EU data residency by default"
+  ],
+  "cons": [
+    "Strict signup verification, sometimes rejects new users",
+    "Asia-Pacific only via Singapore",
+    "No managed databases or app platform",
+    "Support response slower than US peers"
+  ],
+  "bestFor": [
+    "Cost-sensitive workloads",
+    "EU GDPR projects",
+    "Self-managed Kubernetes"
+  ],
+  "freeTier": false,
+  "freeTrialUSD": 22,
+  "paymentMethods": [
+    "Credit card",
+    "PayPal",
+    "SEPA"
+  ],
+  "hqCountry": "DE",
+  "founded": 1997,
+  "regions": [
+    "Falkenstein",
+    "Nuremberg",
+    "Helsinki",
+    "Ashburn",
+    "Hillsboro",
+    "Singapore"
+  ],
+  "plans": [
+    {
+      "id": "cax11",
+      "name": "CAX11 (Arm)",
+      "vcpu": 2,
+      "memoryGB": 4,
+      "storageGB": 40,
+      "storageType": "NVMe",
+      "bandwidthTB": 20,
+      "monthlyPrice": 4.15,
+      "hourlyPrice": 0.007,
+      "currency": "USD",
+      "regions": [
+        "all"
+      ],
+      "category": "shared"
+    },
+    {
+      "id": "cax21",
+      "name": "CAX21 (Arm)",
+      "vcpu": 4,
+      "memoryGB": 8,
+      "storageGB": 80,
+      "storageType": "NVMe",
+      "bandwidthTB": 20,
+      "monthlyPrice": 7.59,
+      "hourlyPrice": 0.013,
+      "currency": "USD",
+      "regions": [
+        "all"
+      ],
+      "category": "shared"
+    },
+    {
+      "id": "cx22",
+      "name": "CX22 (Intel)",
+      "vcpu": 2,
+      "memoryGB": 4,
+      "storageGB": 40,
+      "storageType": "NVMe",
+      "bandwidthTB": 20,
+      "monthlyPrice": 4.59,
+      "hourlyPrice": 0.008,
+      "currency": "USD",
+      "regions": [
+        "all"
+      ],
+      "category": "shared"
+    },
+    {
+      "id": "cpx11",
+      "name": "CPX11 (AMD)",
+      "vcpu": 2,
+      "memoryGB": 2,
+      "storageGB": 40,
+      "storageType": "NVMe",
+      "bandwidthTB": 20,
+      "monthlyPrice": 4.79,
+      "hourlyPrice": 0.008,
+      "currency": "USD",
+      "regions": [
+        "all"
+      ],
+      "category": "shared"
+    },
+    {
+      "id": "cpx21",
+      "name": "CPX21 (AMD)",
+      "vcpu": 3,
+      "memoryGB": 4,
+      "storageGB": 80,
+      "storageType": "NVMe",
+      "bandwidthTB": 20,
+      "monthlyPrice": 8.46,
+      "hourlyPrice": 0.014,
+      "currency": "USD",
+      "regions": [
+        "all"
+      ],
+      "category": "shared"
+    },
+    {
+      "id": "cpx31",
+      "name": "CPX31 (AMD)",
+      "vcpu": 4,
+      "memoryGB": 8,
+      "storageGB": 160,
+      "storageType": "NVMe",
+      "bandwidthTB": 20,
+      "monthlyPrice": 15.59,
+      "hourlyPrice": 0.025,
+      "currency": "USD",
+      "regions": [
+        "all"
+      ],
+      "category": "shared"
+    }
+  ],
+  "lastUpdated": "2026-04-30T06:13:05.134Z",
+  "source": "manual"
+}

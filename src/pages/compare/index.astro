@@ -1,0 +1,23 @@
+---
+import Base from '@/layouts/Base.astro';
+import { loadProviders } from '@/lib/data.ts';
+
+const providers = loadProviders();
+---
+<Base title="Compare VPS Providers" description="Side-by-side comparisons between every VPS and cloud hosting provider tracked on the site.">
+  <h1>VPS Provider Comparisons</h1>
+  <p class="lead">Pick any two providers for a side-by-side breakdown of pricing, plans, regions and trade-offs.</p>
+
+  <div class="grid cols-2">
+    {providers.map((a) => (
+      <div class="card">
+        <h3>{a.name} vs ...</h3>
+        <ul>
+          {providers.filter((b) => b.slug !== a.slug).map((b) => (
+            <li><a href={`/compare/${a.slug}-vs-${b.slug}`}>{a.name} vs {b.name}</a></li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</Base>

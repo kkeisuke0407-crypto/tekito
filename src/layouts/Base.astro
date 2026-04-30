@@ -1,0 +1,82 @@
+---
+import '@/styles/global.css';
+import { loadSite } from '@/lib/data.ts';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  noindex?: boolean;
+}
+
+const site = loadSite();
+const { title, description, canonical, ogImage, jsonLd, noindex } = Astro.props as Props;
+const fullTitle = title ? `${title} | ${site.name}` : `${site.name} - ${site.tagline}`;
+const desc = description ?? site.description;
+const url = canonical ?? new URL(Astro.url.pathname, site.url).toString();
+const ogImg = new URL(ogImage ?? site.defaultOgImage, site.url).toString();
+const jsonLdArray = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+---
+<!doctype html>
+<html lang={site.language}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={desc} />
+    {site.googleSiteVerification && <meta name="google-site-verification" content={site.googleSiteVerification} />}
+    {site.bingSiteVerification && <meta name="msvalidate.01" content={site.bingSiteVerification} />}
+    {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={url} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:url" content={url} />
+    <meta property="og:image" content={ogImg} />
+    <meta property="og:locale" content={site.locale} />
+    <meta property="og:site_name" content={site.name} />
+    <meta name="twitter:card" content="summary_large_image" />
+    {site.twitter && <meta name="twitter:site" content={site.twitter} />}
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    {jsonLdArray.map((obj) => (
+      <script type="application/ld+json" set:html={JSON.stringify(obj)} />
+    ))}
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-18129603657"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18129603657');
+    </script>
+  </head>
+  <body>
+    <header class="site">
+      <div class="container">
+        <a href="/" class="brand">{site.name}</a>
+        <nav>
+          <ul>
+            {site.navItems.map((item) => (
+              <li><a href={item.href}>{item.label}</a></li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <slot />
+      </div>
+    </main>
+    <footer class="site">
+      <div class="container">
+        <ul>
+          {site.footerLinks.map((item) => (
+            <li><a href={item.href}>{item.label}</a></li>
+          ))}
+        </ul>
+        <p class="muted">© {new Date().getFullYear()} {site.name}. Pricing data refreshed daily; always verify on the provider site before purchasing.</p>
+      </div>
+    </footer>
+  </body>
+</html>

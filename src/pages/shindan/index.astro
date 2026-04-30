@@ -1,0 +1,854 @@
+---
+const title = "60秒であなたに合った解決法がわかる｜借金診断";
+const description = "個人情報入力ナシ・60秒・5問だけ。あなたの状況に合った解決策を診断します。";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="robots" content="noindex" />
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2YLF06DC0E');
+    gtag('config', 'AW-18129603657');
+  </script>
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-18129603657"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;700;900&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #F7F5F0;
+      --bg-elev:  #FFFFFF;
+      --bg-soft:  #EFEAE0;
+      --ink:      #14110E;
+      --ink-2:    #3A352E;
+      --ink-3:    #6B655B;
+      --ink-4:    #9C968B;
+      --line:     #E5DFD2;
+      --line-2:   #D8D1C2;
+      --teal:     #1F4E45;
+      --teal-2:   #2C6E61;
+      --teal-soft:#E6EFEA;
+      --olive:    #5B6B2C;
+      --olive-2:  #7A8C40;
+      --olive-soft:#EDEFDF;
+      --terra:    #B85838;
+      --terra-2:  #D26C48;
+      --terra-soft:#F6E6DD;
+      --gold:     #B87A20;
+      --gold-2:   #D49A35;
+      --gold-soft:#FDF3DC;
+      --accent:   var(--teal);
+      --accent-2: var(--teal-2);
+      --accent-soft: var(--teal-soft);
+      --radius:   18px;
+      --radius-sm:12px;
+      --radius-lg:28px;
+      --serif: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+      --sans:  "Inter Tight", "Noto Sans JP", system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      min-height: 100svh;
+      font-feature-settings: "palt";
+    }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: inherit; }
+
+    .app {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    @media (min-width: 720px) {
+      body {
+        background:
+          radial-gradient(circle at 20% 10%, #EFEAE0 0%, transparent 40%),
+          radial-gradient(circle at 80% 90%, #EFEAE0 0%, transparent 40%),
+          var(--bg);
+        padding: 32px 0;
+      }
+      .app {
+        max-width: 440px;
+        margin: 0 auto;
+        background: var(--bg);
+        border: 1px solid var(--line);
+        border-radius: 32px;
+        overflow: hidden;
+        box-shadow: 0 30px 80px rgba(20,17,14,0.08), 0 4px 16px rgba(20,17,14,0.04);
+        min-height: calc(100svh - 64px);
+      }
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 22px;
+      border-bottom: 1px solid var(--line);
+      background: var(--bg);
+      position: sticky; top: 0; z-index: 30;
+    }
+    .topbar-brand {
+      display: flex; align-items: center; gap: 8px;
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+    }
+    .topbar-brand-mark {
+      width: 22px; height: 22px;
+      border-radius: 6px;
+      background: var(--ink);
+      color: var(--bg);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 800; font-family: var(--sans);
+    }
+    .topbar-meta {
+      font-family: var(--sans);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      color: var(--ink-3);
+      text-transform: uppercase;
+    }
+
+    .stage { display: none; flex: 1; flex-direction: column; }
+    .stage.active { display: flex; }
+    .stage:not(.active) { display: none !important; }
+    .start { padding: 32px 24px 40px; }
+    .start.active { flex-direction: column; }
+    .start-eyebrow {
+      display: inline-flex;
+      align-items: center; gap: 8px;
+      font-size: 10px; font-weight: 600;
+      letter-spacing: 0.2em;
+      color: var(--ink-2);
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .start-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--ink-2); }
+    .start-title {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: clamp(34px, 9vw, 44px);
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 22px;
+    }
+    .start-title em {
+      font-style: normal;
+      background: linear-gradient(transparent 64%, var(--accent-soft) 64%);
+      padding: 0 2px;
+    }
+    .start-title .num { font-family: var(--sans); font-weight: 500; font-style: italic; }
+    .start-lede { font-size: 14px; line-height: 2; color: var(--ink-2); margin-bottom: 32px; max-width: 380px; }
+    .start-meta-row {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 36px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .start-meta-cell { padding: 16px 8px; text-align: center; border-right: 1px solid var(--line); }
+    .start-meta-cell:last-child { border-right: none; }
+    .start-meta-num { font-family: var(--serif); font-weight: 700; font-size: 22px; color: var(--ink); line-height: 1; margin-bottom: 6px; }
+    .start-meta-num small { font-family: var(--sans); font-weight: 500; font-size: 11px; margin-left: 2px; color: var(--ink-3); }
+    .start-meta-label { font-size: 10px; letter-spacing: 0.12em; color: var(--ink-3); text-transform: uppercase; }
+    .start-cta {
+      display: flex; align-items: center; justify-content: space-between;
+      width: 100%;
+      background: var(--ink); color: var(--bg);
+      padding: 22px 26px; border: none; border-radius: 999px;
+      font-size: 16px; font-weight: 700; cursor: pointer;
+      transition: transform .25s cubic-bezier(.2,.7,.2,1), background .2s;
+      margin-bottom: 14px;
+    }
+    .start-cta:hover { transform: translateY(-2px); background: var(--ink-2); }
+    .start-cta:active { transform: scale(0.98); }
+    .start-cta-arrow {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--bg); color: var(--ink);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--sans); font-weight: 600; font-size: 16px;
+      transition: transform .3s;
+    }
+    .start-cta:hover .start-cta-arrow { transform: translateX(4px); }
+    .start-cta-note { text-align: center; font-size: 11px; color: var(--ink-3); margin-bottom: 36px; }
+    .start-options { margin-top: 8px; border-top: 1px solid var(--line); padding-top: 28px; }
+    .start-options-label { font-size: 10px; letter-spacing: 0.18em; color: var(--ink-3); text-transform: uppercase; margin-bottom: 16px; }
+    .start-option-row { display: flex; align-items: flex-start; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+    .start-option-row:last-child { border-bottom: none; }
+    .start-option-num { font-family: var(--serif); font-style: italic; font-size: 12px; color: var(--ink-3); width: 24px; flex-shrink: 0; padding-top: 2px; }
+    .start-option-dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+    .start-option-dot.d1 { background: var(--teal); }
+    .start-option-dot.d2 { background: var(--olive); }
+    .start-option-dot.d3 { background: var(--terra); }
+    .start-option-dot.d4 { background: var(--gold); }
+    .start-option-text { flex: 1; }
+    .start-option-title { font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 2px; }
+    .start-option-desc { font-size: 11px; color: var(--ink-3); line-height: 1.6; }
+    .start-trust { margin-top: 32px; padding: 20px; background: var(--bg-soft); border-radius: var(--radius); display: flex; flex-direction: column; gap: 8px; }
+    .start-trust-item { font-size: 12px; color: var(--ink-2); display: flex; align-items: center; gap: 10px; line-height: 1.6; }
+    .start-trust-item::before { content: ''; width: 14px; height: 1px; background: var(--ink-2); flex-shrink: 0; }
+    .q-stage { padding: 0; }
+    .q-progress { padding: 24px 24px 0; display: flex; flex-direction: column; gap: 10px; }
+    .q-progress-row { display: flex; justify-content: space-between; align-items: baseline; }
+    .q-progress-step { font-family: var(--serif); font-weight: 700; font-size: 13px; color: var(--ink); letter-spacing: 0.02em; }
+    .q-progress-step .total { color: var(--ink-4); font-weight: 500; }
+    .q-progress-pct { font-family: var(--sans); font-size: 10px; letter-spacing: 0.18em; color: var(--ink-3); text-transform: uppercase; }
+    .q-progress-bar { height: 2px; background: var(--line); position: relative; overflow: hidden; }
+    .q-progress-fill { position: absolute; inset: 0 auto 0 0; background: var(--ink); transition: width .5s cubic-bezier(.2,.7,.2,1); }
+    .q-content { flex: 1; padding: 40px 24px 28px; display: flex; flex-direction: column; animation: q-in .35s cubic-bezier(.2,.7,.2,1); }
+    @keyframes q-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .q-num { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--ink-3); margin-bottom: 12px; }
+    .q-title { font-family: var(--serif); font-weight: 700; font-size: clamp(24px, 6.5vw, 30px); line-height: 1.45; letter-spacing: -0.005em; color: var(--ink); margin-bottom: 12px; }
+    .q-sub { font-size: 12px; color: var(--ink-3); line-height: 1.7; margin-bottom: 32px; }
+    .q-options { display: flex; flex-direction: column; gap: 10px; }
+    .q-option {
+      background: var(--bg-elev); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 18px 20px;
+      text-align: left; cursor: pointer;
+      display: flex; align-items: center; gap: 16px;
+      transition: all .2s; position: relative;
+    }
+    .q-option::after {
+      content: ''; position: absolute; inset: 0;
+      border-radius: var(--radius); pointer-events: none;
+      box-shadow: 0 0 0 0 var(--ink); transition: box-shadow .2s;
+    }
+    .q-option:hover { border-color: var(--ink); transform: translateY(-1px); }
+    .q-option:hover::after { box-shadow: 0 8px 24px rgba(20,17,14,0.08); }
+    .q-option-key { font-family: var(--serif); font-weight: 700; font-size: 13px; color: var(--ink-3); width: 22px; flex-shrink: 0; }
+    .q-option:hover .q-option-key { color: var(--ink); }
+    .q-option-text { flex: 1; font-size: 15px; font-weight: 600; color: var(--ink); line-height: 1.4; }
+    .q-option-arrow {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--bg); border: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--ink-3); font-size: 14px;
+      transition: all .2s; flex-shrink: 0;
+    }
+    .q-option:hover .q-option-arrow { background: var(--ink); border-color: var(--ink); color: var(--bg); transform: translateX(2px); }
+    .q-back { margin-top: 28px; text-align: left; }
+    .q-back-btn { background: none; border: none; color: var(--ink-3); font-size: 12px; cursor: pointer; padding: 8px 0; display: inline-flex; align-items: center; gap: 6px; }
+    .q-back-btn:hover { color: var(--ink); }
+    .r-stage { padding: 0 0 60px; }
+    .r-stage[data-tone="law"]     { --accent: var(--teal);  --accent-2: var(--teal-2);  --accent-soft: var(--teal-soft); }
+    .r-stage[data-tone="omatome"] { --accent: var(--olive); --accent-2: var(--olive-2); --accent-soft: var(--olive-soft); }
+    .r-stage[data-tone="cash"]    { --accent: var(--terra); --accent-2: var(--terra-2); --accent-soft: var(--terra-soft); }
+    .r-stage[data-tone="factor"]  { --accent: var(--gold);  --accent-2: var(--gold-2);  --accent-soft: var(--gold-soft); }
+    .r-banner { padding: 32px 24px 28px; border-bottom: 1px solid var(--line); animation: q-in .5s ease-out; }
+    .r-banner-eb { font-size: 10px; letter-spacing: 0.2em; color: var(--ink-3); text-transform: uppercase; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 16px; }
+    .r-banner-eb::before { content: ''; width: 24px; height: 1px; background: var(--accent); }
+    .r-banner-headline { font-family: var(--serif); font-weight: 700; font-size: clamp(26px, 7vw, 32px); line-height: 1.4; color: var(--ink); margin-bottom: 4px; }
+    .r-banner-headline em { font-style: normal; color: var(--accent); }
+    .r-hero { margin: 28px 20px 0; background: var(--bg-elev); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--line); animation: q-in .6s ease-out .1s both; }
+    .r-hero-top { padding: 32px 24px 28px; background: var(--accent); color: var(--bg-elev); position: relative; overflow: hidden; }
+    .r-hero-top::before { content: ''; position: absolute; right: -60px; top: -60px; width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,0.08); }
+    .r-hero-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 10px; letter-spacing: 0.2em; color: rgba(255,255,255,0.85); text-transform: uppercase; margin-bottom: 14px; position: relative; }
+    .r-hero-tag::before { content: ''; width: 18px; height: 1px; background: rgba(255,255,255,0.7); }
+    .r-hero-title { font-family: var(--serif); font-weight: 700; font-size: 24px; line-height: 1.45; letter-spacing: -0.005em; margin-bottom: 14px; position: relative; }
+    .r-hero-tagline { font-size: 13px; line-height: 1.85; color: rgba(255,255,255,0.92); position: relative; }
+    .r-hero-body { padding: 26px 24px; }
+    .r-hero-body-label { font-size: 10px; letter-spacing: 0.18em; color: var(--ink-3); text-transform: uppercase; margin-bottom: 14px; }
+    .r-points { display: flex; flex-direction: column; }
+    .r-point { display: flex; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line); align-items: flex-start; }
+    .r-point:last-child { border-bottom: none; padding-bottom: 0; }
+    .r-point:first-child { padding-top: 0; }
+    .r-point-num { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--accent); width: 22px; flex-shrink: 0; padding-top: 1px; }
+    .r-point-text { flex: 1; font-size: 13px; color: var(--ink-2); line-height: 1.85; }
+    .r-section { margin: 40px 24px 0; }
+    .r-section-eb { font-size: 10px; letter-spacing: 0.22em; color: var(--accent); text-transform: uppercase; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 12px; font-weight: 600; }
+    .r-section-eb::before { content: ''; width: 24px; height: 1px; background: var(--accent); }
+    .r-section-title { font-family: var(--serif); font-weight: 700; font-size: 20px; line-height: 1.5; color: var(--ink); margin-bottom: 20px; }
+    .r-stats { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--bg-elev); }
+    .r-stat { padding: 20px 8px; text-align: center; border-right: 1px solid var(--line); }
+    .r-stat:last-child { border-right: none; }
+    .r-stat-num { font-family: var(--serif); font-weight: 700; font-size: 22px; color: var(--accent); line-height: 1; margin-bottom: 6px; }
+    .r-stat-num small { font-family: var(--sans); font-weight: 500; font-size: 11px; color: var(--ink-3); margin-left: 1px; }
+    .r-stat-label { font-size: 10px; letter-spacing: 0.1em; color: var(--ink-3); text-transform: uppercase; }
+    .r-strength { background: var(--bg-elev); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+    .r-strength-item { display: flex; align-items: flex-start; gap: 16px; padding: 18px 20px; border-bottom: 1px solid var(--line); }
+    .r-strength-item:last-child { border-bottom: none; }
+    .r-strength-num { font-family: var(--serif); font-weight: 700; font-style: italic; font-size: 14px; color: var(--accent); width: 24px; flex-shrink: 0; padding-top: 2px; }
+    .r-strength-content { flex: 1; }
+    .r-strength-title { font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 5px; line-height: 1.5; }
+    .r-strength-desc { font-size: 12px; color: var(--ink-3); line-height: 1.85; }
+    .r-diff { padding: 24px; background: var(--accent-soft); border-radius: var(--radius); }
+    .r-diff-eb { font-size: 10px; letter-spacing: 0.2em; color: var(--accent); text-transform: uppercase; margin-bottom: 12px; font-weight: 600; }
+    .r-diff-title { font-family: var(--serif); font-weight: 700; font-size: 17px; line-height: 1.55; color: var(--ink); margin-bottom: 12px; }
+    .r-diff-desc { font-size: 13px; color: var(--ink-2); line-height: 1.95; }
+    .r-spec { background: var(--bg-elev); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 22px; }
+    .r-spec-row { display: flex; justify-content: space-between; align-items: baseline; padding: 12px 0; border-bottom: 1px dashed var(--line); font-size: 13px; gap: 12px; }
+    .r-spec-row:last-child { border-bottom: none; }
+    .r-spec-row:first-child { padding-top: 4px; }
+    .r-spec-key { color: var(--ink-3); font-size: 12px; letter-spacing: 0.04em; }
+    .r-spec-val { font-weight: 700; color: var(--ink); font-family: var(--serif); font-size: 14px; text-align: right; }
+    .r-steps { display: flex; flex-direction: column; background: var(--bg-elev); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+    .r-step { display: flex; gap: 18px; padding: 20px 22px; border-bottom: 1px solid var(--line); align-items: flex-start; }
+    .r-step:last-child { border-bottom: none; }
+    .r-step-num { font-family: var(--serif); font-weight: 700; font-size: 26px; line-height: 1; color: var(--accent); width: 36px; flex-shrink: 0; padding-top: 2px; }
+    .r-step-content { flex: 1; }
+    .r-step-title { font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+    .r-step-desc { font-size: 12px; color: var(--ink-3); line-height: 1.85; }
+    .r-faq-list { display: flex; flex-direction: column; border-top: 1px solid var(--line); }
+    .r-faq-item { border-bottom: 1px solid var(--line); }
+    .r-faq-q { width: 100%; background: none; border: none; padding: 18px 4px; display: flex; align-items: flex-start; gap: 14px; cursor: pointer; text-align: left; }
+    .r-faq-qi { font-family: var(--serif); font-style: italic; font-weight: 700; font-size: 14px; color: var(--accent); width: 20px; flex-shrink: 0; padding-top: 1px; }
+    .r-faq-qt { flex: 1; font-size: 14px; font-weight: 600; color: var(--ink); line-height: 1.55; }
+    .r-faq-ch { width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--line-2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all .25s; color: var(--ink-3); margin-top: -1px; }
+    .r-faq-ch::before { content: '+'; font-family: var(--sans); font-weight: 400; font-size: 16px; line-height: 1; }
+    .r-faq-item.open .r-faq-ch { background: var(--ink); border-color: var(--ink); color: var(--bg); transform: rotate(45deg); }
+    .r-faq-a { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+    .r-faq-item.open .r-faq-a { max-height: 600px; }
+    .r-faq-ai { padding: 0 4px 20px 34px; font-size: 13px; color: var(--ink-2); line-height: 1.95; }
+    .r-push { margin: 48px 20px 0; padding: 36px 28px; background: var(--ink); color: var(--bg); border-radius: var(--radius-lg); text-align: left; position: relative; overflow: hidden; }
+    .r-push::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 80% 20%, var(--accent) 0%, transparent 60%); opacity: 0.4; }
+    .r-push-eb { position: relative; font-size: 10px; letter-spacing: 0.2em; color: rgba(255,255,255,0.6); text-transform: uppercase; margin-bottom: 16px; display: inline-flex; align-items: center; gap: 8px; }
+    .r-push-eb::before { content: ''; width: 18px; height: 1px; background: rgba(255,255,255,0.4); }
+    .r-push-title { position: relative; font-family: var(--serif); font-weight: 700; font-size: 22px; line-height: 1.5; margin-bottom: 14px; }
+    .r-push-desc { position: relative; font-size: 13px; line-height: 1.95; color: rgba(255,255,255,0.78); margin-bottom: 28px; }
+    .r-cta { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; background: var(--bg); color: var(--ink); padding: 20px 24px; border-radius: 999px; font-size: 15px; font-weight: 700; transition: transform .2s; }
+    .r-cta:hover { transform: translateY(-2px); }
+    .r-cta-arrow { width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: var(--bg); display: flex; align-items: center; justify-content: center; font-size: 14px; transition: transform .3s; }
+    .r-cta:hover .r-cta-arrow { transform: translateX(4px); }
+    .r-push-note { position: relative; margin-top: 14px; font-size: 11px; color: rgba(255,255,255,0.55); text-align: center; }
+    .r-card-cta { margin: 24px 24px 28px; display: flex; align-items: center; justify-content: space-between; gap: 12px; background: var(--accent); color: var(--bg-elev); padding: 18px 22px; border-radius: 999px; font-size: 14px; font-weight: 700; transition: transform .2s; }
+    .r-card-cta:hover { transform: translateY(-2px); }
+    .r-card-cta-arrow { width: 26px; height: 26px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 12px; }
+    .r-other { margin: 48px 20px 0; }
+    .r-other-label { font-size: 10px; letter-spacing: 0.18em; color: var(--ink-3); text-transform: uppercase; margin-bottom: 14px; display: inline-flex; align-items: center; gap: 8px; font-weight: 600; }
+    .r-other-label::before { content: ''; width: 18px; height: 1px; background: var(--ink-3); }
+    .r-other-list { display: flex; flex-direction: column; gap: 10px; }
+    .r-other-item { background: var(--bg-elev); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; display: flex; align-items: center; gap: 14px; transition: all .2s; }
+    .r-other-item:hover { border-color: var(--ink); transform: translateY(-1px); }
+    .r-other-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .r-other-dot.law { background: var(--teal); }
+    .r-other-dot.omatome { background: var(--olive); }
+    .r-other-dot.cash { background: var(--terra); }
+    .r-other-dot.factor { background: var(--gold); }
+    .r-other-text { flex: 1; }
+    .r-other-title-tx { font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 2px; font-family: var(--serif); }
+    .r-other-desc-tx { font-size: 11px; color: var(--ink-3); line-height: 1.6; }
+    .r-other-arrow { color: var(--ink-3); font-size: 18px; flex-shrink: 0; }
+    .r-restart { text-align: center; margin-top: 40px; padding: 0 24px; }
+    .r-restart-btn { background: none; border: 1px solid var(--line-2); color: var(--ink-3); font-size: 12px; cursor: pointer; padding: 12px 20px; border-radius: 999px; font-family: inherit; transition: all .2s; }
+    .r-restart-btn:hover { border-color: var(--ink); color: var(--ink); }
+    .r-disclaimer { margin-top: 32px; padding: 0 24px; font-size: 10px; color: var(--ink-4); line-height: 1.85; text-align: center; }
+  </style>
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="topbar-brand">
+      <span class="topbar-brand-mark">借</span>
+      <span>借金診断</span>
+    </div>
+    <div class="topbar-meta">60秒・5問・匿名</div>
+  </header>
+
+  <section class="stage start active" id="stage-start">
+    <div class="start-eyebrow">DEBT DIAGNOSIS · 2026</div>
+    <h1 class="start-title"><span class="num">60</span>秒で、<br />あなたに合う<br /><em>解決法</em>がわかる。</h1>
+    <p class="start-lede">借金の悩みには、解決法が3つあります。<br />5つの質問に答えるだけで、<br />あなたに最適な選択肢をご案内します。</p>
+    <div class="start-meta-row">
+      <div class="start-meta-cell"><div class="start-meta-num">60<small>sec</small></div><div class="start-meta-label">最短</div></div>
+      <div class="start-meta-cell"><div class="start-meta-num">5<small>問</small></div><div class="start-meta-label">質問数</div></div>
+      <div class="start-meta-cell"><div class="start-meta-num">¥0</div><div class="start-meta-label">完全無料</div></div>
+    </div>
+    <button class="start-cta" id="btn-start"><span>無料で診断をはじめる</span><span class="start-cta-arrow">→</span></button>
+    <p class="start-cta-note">クレジットカード不要・登録不要・匿名OK</p>
+    <div class="start-options">
+      <div class="start-options-label">4 SOLUTIONS</div>
+      <div class="start-option-row"><span class="start-option-num">01</span><span class="start-option-dot d1"></span><div class="start-option-text"><div class="start-option-title">債務整理</div><div class="start-option-desc">借金を減らす・なくす方向。返済が苦しい方向け。</div></div></div>
+      <div class="start-option-row"><span class="start-option-num">02</span><span class="start-option-dot d2"></span><div class="start-option-text"><div class="start-option-title">おまとめローン</div><div class="start-option-desc">複数社の借金を1本化。月の返済額を圧縮。</div></div></div>
+      <div class="start-option-row"><span class="start-option-num">03</span><span class="start-option-dot d3"></span><div class="start-option-text"><div class="start-option-title">キャッシング</div><div class="start-option-desc">一時的に資金が必要な方向けの短期借入。</div></div></div>
+      <div class="start-option-row"><span class="start-option-num">04</span><span class="start-option-dot d4"></span><div class="start-option-text"><div class="start-option-title">ファクタリング</div><div class="start-option-desc">売掛金を最速2時間で現金化。事業者向け。</div></div></div>
+    </div>
+    <div class="start-trust">
+      <div class="start-trust-item">あなたに合う解決策がすぐわかる</div>
+      <div class="start-trust-item">3つの選択肢から最適なものを提案</div>
+      <div class="start-trust-item">電話番号・メールアドレス入力は一切なし</div>
+    </div>
+  </section>
+
+  <section class="stage q-stage" id="stage-q0">
+    <div class="q-progress"><div class="q-progress-row"><span class="q-progress-step">00<span class="total"> / 05</span></span><span class="q-progress-pct">0%</span></div><div class="q-progress-bar"><div class="q-progress-fill" style="width:0%"></div></div></div>
+    <div class="q-content">
+      <div class="q-num">Question 00</div>
+      <h2 class="q-title">あなたは<br />どちらですか？</h2>
+      <p class="q-sub">最初に確認させてください</p>
+      <div class="q-options">
+        <button class="q-option" data-q="type" data-v="personal"><span class="q-option-key">A</span><span class="q-option-text">個人として借入・返済の悩みがある</span><span class="q-option-arrow">→</span></button>
+        <button class="q-option" data-q="type" data-v="business"><span class="q-option-key">B</span><span class="q-option-text">事業者として売掛金を早く現金化したい</span><span class="q-option-arrow">→</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="stage q-stage" id="stage-q1">
+    <div class="q-progress"><div class="q-progress-row"><span class="q-progress-step">01<span class="total"> / 05</span></span><span class="q-progress-pct">20%</span></div><div class="q-progress-bar"><div class="q-progress-fill" style="width:20%"></div></div></div>
+    <div class="q-content">
+      <div class="q-num">Question 01</div>
+      <h2 class="q-title">借金の総額は<br />どれくらいですか？</h2>
+      <p class="q-sub">だいたいの金額でOKです</p>
+      <div class="q-options">
+        <button class="q-option" data-q="amount" data-v="low"><span class="q-option-key">A</span><span class="q-option-text">50万円以下</span><span class="q-option-arrow">→</span></button>
+        <button class="q-option" data-q="amount" data-v="mid"><span class="q-option-key">B</span><span class="q-option-text">50万円 〜 200万円</span><span class="q-option-arrow">→</span></button>
+        <button class="q-option" data-q="amount" data-v="high"><span class="q-option-key">C</span><span class="q-option-text">200万円以上</span><span class="q-option-arrow">→</span></button>
+      </div>
+      <div class="q-back"><button class="q-back-btn" data-back="q0">← 前の質問に戻る</button></div>
+    </div>
+  </section>
+
+  <section class="stage q-stage" id="stage-q2">
+    <div class="q-progress"><div class="q-progress-row"><span class="q-progress-step">02<span class="total"> / 05</span></span><span class="q-progress-pct">40%</span></div><div class="q-progress-bar"><div class="q-progress-fill" style="width:40%"></div></div></div>
+    <div class="q-content">
+      <div class="q-num">Question 02</div>
+      <h2 class="q-title">何社から<br />借りていますか？</h2>
+      <p class="q-sub">クレジットカードのキャッシング枠も含めて</p>
+      <div class="q-options">
+        <button class="q-option" data-q="count" data-v="one"><span class="q-option-key">A</span><span class="q-option-text">1社のみ</span><span class="q-option-arrow">→</span></button>
+        <button class="q-option" data-q="count" data-v="few"><span class="q-option-key">B</span><span class="q-option-text">2 〜 3社</span><span class="q-option-arrow">→</span></button>
+        <button class="q-option" data-q="count" data-v="many"><span class="q-option-key">C</span><span class="q-option-text">4社以上</span><span class="q-option-arrow">→</span></button>
+      </div>
+      <div class="q-back"><button class="q-back-btn" data-back="q1">← 前の質問に戻る</button></div>
+    </div>
+  </section>
+
+  <section class="stage q-stage" id="stage-q3">
+    <div class="q-progress"><div class="q-progress-row"><span class="q-progress-step">03<span class="total"> / 05</span></span><span class="q-progress-pct">60%</span></div><div class="q-progress-bar"><div class="q-progress-fill" style="width:60%"></div></div></div>
+    <div class="q-content">
+      <div class="q-num">Question 03</div>
+      <h2 class="q-title">毎月の返済状況は<br />どうですか？</h2>
+      <p class="q-sub">正直に答えてください（一番大事な質問です）</p>
+      <div class="q-options">
+        <button class="q-option" data-q="payment" data-v="ok"><span class="q-option-key">A</span><span class="q-option-text">余裕を持って返せている</span><span class="q-option-arrow">→</span></button>
+        <button class="q-option" data-q="payment" data-v="tight"><span class="q-option-key">B</span><span class="q-option-text">ギリギリ返せている</span><span class="q-option-arrow">→</span></button>
+        <button class="q-option" data-q="payment" data-v="ng"><span class="q-option-key">C</span><span class="q-option-text">払えない月が出てきている</span><span class="q-option-arrow">→</span></button>
+      </div>
+      <div class="q-back"><button class="q-back-btn" data-back="q2">← 前の質問に戻る</button></div>
+    </div>
+  </section>
+
+  <section class="stage q-stage" id="stage-q4">
+    <div class="q-progress"><div class="q-progress-row"><span class="q-progress-step">04<span class="total"> / 05</span></span><span class="q-progress-pct">80%</span></div><div class="q-progress-bar"><div class="q-progress-fill" style="width:80%"></div></div></div>
+    <div class="q-content">
+      <div class="q-num">Question 04</div>
+      <h2 class="q-title">借入の年数は<br />どれくらいですか？</h2>
+      <p class="q-sub">最初に借りてから今までの期間</p>
+      <div class="q-options">
+        <button class="q-option" data-q="years" data-v="short"><span class="q-option-key">A</span><span class="q-option-text">2年以内</span><span class="q-option-arrow">→</span></button>
+        <button class="q-option" data-q="years" data-v="mid"><span class="q-option-key">B</span><span class="q-option-text">2 〜 5年</span><span class="q-option-arrow">→</span></button>
+        <button class="q-option" data-q="years" data-v="long"><span class="q-option-key">C</span><span class="q-option-text">5年以上</span><span class="q-option-arrow">→</span></button>
+      </div>
+      <div class="q-back"><button class="q-back-btn" data-back="q3">← 前の質問に戻る</button></div>
+    </div>
+  </section>
+
+  <section class="stage q-stage" id="stage-q5">
+    <div class="q-progress"><div class="q-progress-row"><span class="q-progress-step">05<span class="total"> / 05</span></span><span class="q-progress-pct">100%</span></div><div class="q-progress-bar"><div class="q-progress-fill" style="width:100%"></div></div></div>
+    <div class="q-content">
+      <div class="q-num">Question 05</div>
+      <h2 class="q-title">取り立て・延滞は<br />ありますか？</h2>
+      <p class="q-sub">最後の質問です</p>
+      <div class="q-options">
+        <button class="q-option" data-q="trouble" data-v="none"><span class="q-option-key">A</span><span class="q-option-text">特にない</span><span class="q-option-arrow">→</span></button>
+        <button class="q-option" data-q="trouble" data-v="worry"><span class="q-option-key">B</span><span class="q-option-text">心配ではある</span><span class="q-option-arrow">→</span></button>
+        <button class="q-option" data-q="trouble" data-v="yes"><span class="q-option-key">C</span><span class="q-option-text">既にある（取り立て・延滞）</span><span class="q-option-arrow">→</span></button>
+      </div>
+      <div class="q-back"><button class="q-back-btn" data-back="q4">← 前の質問に戻る</button></div>
+    </div>
+  </section>
+
+  <section class="stage r-stage" id="stage-result-law" data-tone="law">
+    <div class="r-banner"><div class="r-banner-eb">YOUR DIAGNOSIS · SOLUTION A</div><h2 class="r-banner-headline">あなたに合うのは、<br /><em>債務整理</em>です。</h2></div>
+    <div class="r-hero">
+      <div class="r-hero-top"><div class="r-hero-tag">SOLUTION A</div><h3 class="r-hero-title">債務整理で<br />借金を減らす・なくす。</h3><p class="r-hero-tagline">あなたの状況なら、新たに借りるより「減らす方向」が最適。利息カット・返済額減額・場合によっては免除も可能です。</p></div>
+      <div class="r-hero-body">
+        <div class="r-hero-body-label">なぜあなたに合うのか</div>
+        <div class="r-points">
+          <div class="r-point"><span class="r-point-num">01</span><span class="r-point-text">毎月の返済がギリギリ、または払えない月が出てきている状況</span></div>
+          <div class="r-point"><span class="r-point-num">02</span><span class="r-point-text">新たに借りる方向では金利負担が積み上がり悪循環になります</span></div>
+          <div class="r-point"><span class="r-point-num">03</span><span class="r-point-text">弁護士に依頼すると即日で督促・取り立てがストップします</span></div>
+          <div class="r-point"><span class="r-point-num">04</span><span class="r-point-text">任意整理なら将来利息カット・分割払いに変更できる可能性</span></div>
+          <div class="r-point"><span class="r-point-num">05</span><span class="r-point-text">過払い金がある場合は逆にお金が戻ってくるケースも</span></div>
+        </div>
+      </div>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1V20+C1FMPU+4FR4+5YRHE" rel="nofollow" class="r-card-cta" data-cta="law-main"><span>無料で弁護士に相談する</span><span class="r-card-cta-arrow">→</span></a>
+    </div>
+    <div class="r-section">
+      <div class="r-stats">
+        <div class="r-stat"><div class="r-stat-num">10,000<small>件+</small></div><div class="r-stat-label">闇金解決実績</div></div>
+        <div class="r-stat"><div class="r-stat-num">60-90<small>分</small></div><div class="r-stat-label">無料相談</div></div>
+        <div class="r-stat"><div class="r-stat-num">全国</div><div class="r-stat-label">対応エリア</div></div>
+      </div>
+    </div>
+    <div class="r-section">
+      <div class="r-section-eb">SERVICE STRENGTH</div><h3 class="r-section-title">イストワール法律事務所の強み</h3>
+      <div class="r-strength">
+        <div class="r-strength-item"><div class="r-strength-num">01</div><div class="r-strength-content"><div class="r-strength-title">無理に自己破産を勧めない方針</div><div class="r-strength-desc">他の事務所が自己破産を勧めるケースでも、まずデメリットの少ない任意整理・過払い金請求から検討してくれる。</div></div></div>
+        <div class="r-strength-item"><div class="r-strength-num">02</div><div class="r-strength-content"><div class="r-strength-title">闇金・ヤミ金の解決に圧倒的実績</div><div class="r-strength-desc">闇金被害の解決件数1万件超。給与ファクタリングなど他事務所が断る案件も対応可能。</div></div></div>
+        <div class="r-strength-item"><div class="r-strength-num">03</div><div class="r-strength-content"><div class="r-strength-title">手持ち0円でも依頼OK</div><div class="r-strength-desc">費用は分割払い・後払いに対応。今お金がなくても相談・依頼を始められる。</div></div></div>
+        <div class="r-strength-item"><div class="r-strength-num">04</div><div class="r-strength-content"><div class="r-strength-title">弁護士が直接対応・全国OK</div><div class="r-strength-desc">電話・オンラインで全国対応。事務員ではなく弁護士が直接話を聞いてくれる。</div></div></div>
+        <div class="r-strength-item"><div class="r-strength-num">05</div><div class="r-strength-content"><div class="r-strength-title">秘密厳守・家族にバレずに進められる</div><div class="r-strength-desc">弁護士には守秘義務があり、本人の同意なく家族・職場に連絡することは一切なし。</div></div></div>
+      </div>
+    </div>
+    <div class="r-section"><div class="r-diff"><div class="r-diff-eb">他社との違い</div><h4 class="r-diff-title">「依頼者本位」が選ばれる理由</h4><p class="r-diff-desc">多くの法律事務所が「とりあえず自己破産」を勧める中、イストワールは依頼者の生活への影響を最優先。任意整理で済むなら任意整理で、過払い金で取り戻せるなら取り戻す——あなたにとって最もデメリットの少ない選択肢を一緒に考えてくれます。</p></div></div>
+    <div class="r-section">
+      <div class="r-section-eb">PRICE & TERMS</div><h3 class="r-section-title">料金・条件の目安</h3>
+      <div class="r-spec">
+        <div class="r-spec-row"><span class="r-spec-key">初回相談</span><span class="r-spec-val">無料（60〜90分）</span></div>
+        <div class="r-spec-row"><span class="r-spec-key">過払い金請求</span><span class="r-spec-val">成功報酬22%のみ</span></div>
+        <div class="r-spec-row"><span class="r-spec-key">任意整理ほか</span><span class="r-spec-val">相談後にお見積り</span></div>
+        <div class="r-spec-row"><span class="r-spec-key">支払い方法</span><span class="r-spec-val">分割・後払い可</span></div>
+        <div class="r-spec-row"><span class="r-spec-key">相談形式</span><span class="r-spec-val">電話・オンライン</span></div>
+      </div>
+    </div>
+    <div class="r-section">
+      <div class="r-section-eb">HOW IT WORKS</div><h3 class="r-section-title">かんたん3ステップ</h3>
+      <div class="r-steps">
+        <div class="r-step"><div class="r-step-num">01</div><div class="r-step-content"><div class="r-step-title">無料相談を申し込む</div><div class="r-step-desc">フォームに名前と連絡先のみ。3分で完了。</div></div></div>
+        <div class="r-step"><div class="r-step-num">02</div><div class="r-step-content"><div class="r-step-title">弁護士から連絡が来る</div><div class="r-step-desc">60〜90分じっくり話を聞いてもらえる。費用説明もこの段階で。</div></div></div>
+        <div class="r-step"><div class="r-step-num">03</div><div class="r-step-content"><div class="r-step-title">納得したら受任→督促ストップ</div><div class="r-step-desc">受任日に取り立てが止まる。あとは弁護士が交渉。</div></div></div>
+      </div>
+    </div>
+    <div class="r-section">
+      <div class="r-section-eb">FAQ</div><h3 class="r-section-title">よくある不安・疑問</h3>
+      <div class="r-faq-list">
+        <div class="r-faq-item"><button class="r-faq-q" data-faq><span class="r-faq-qi">Q.</span><span class="r-faq-qt">家族や職場にバレずに進められますか？</span><span class="r-faq-ch"></span></button><div class="r-faq-a"><p class="r-faq-ai">弁護士には守秘義務があり、ご本人の同意なく家族・職場に情報を伝えることは一切ありません。任意整理なら家族にバレずに進めるケースが多数です。</p></div></div>
+        <div class="r-faq-item"><button class="r-faq-q" data-faq><span class="r-faq-qi">Q.</span><span class="r-faq-qt">手持ちのお金がなくても依頼できますか？</span><span class="r-faq-ch"></span></button><div class="r-faq-a"><p class="r-faq-ai">はい、初回相談は完全無料。費用は分割払い・後払いに対応しているため、依頼時に手持ち0円でもスタートできます。</p></div></div>
+        <div class="r-faq-item"><button class="r-faq-q" data-faq><span class="r-faq-qi">Q.</span><span class="r-faq-qt">ブラックリストに載りますか？</span><span class="r-faq-ch"></span></button><div class="r-faq-a"><p class="r-faq-ai">債務整理を行うと、信用情報機関に一定期間（5〜10年）登録されます。期間経過後は元に戻ります。</p></div></div>
+        <div class="r-faq-item"><button class="r-faq-q" data-faq><span class="r-faq-qi">Q.</span><span class="r-faq-qt">闇金からも借りていますが対応できますか？</span><span class="r-faq-ch"></span></button><div class="r-faq-a"><p class="r-faq-ai">はい、イストワールは闇金・ヤミ金の解決に1万件超の実績があります。他の事務所で断られた方も対応可能です。</p></div></div>
+        <div class="r-faq-item"><button class="r-faq-q" data-faq><span class="r-faq-qi">Q.</span><span class="r-faq-qt">どれくらいで解決しますか？</span><span class="r-faq-ch"></span></button><div class="r-faq-a"><p class="r-faq-ai">受任日に督促・取り立ては即ストップ。任意整理なら3〜6ヶ月程度で和解に至るケースが多く、その後は減額された分割払いに移行します。</p></div></div>
+      </div>
+    </div>
+    <div class="r-push">
+      <div class="r-push-eb">FINAL STEP</div>
+      <h3 class="r-push-title">「相談だけ」でも、<br />状況は変わります。</h3>
+      <p class="r-push-desc">今のまま放置すると、利息で借金は雪だるま式に増えます。逆に、相談した人の多くが「もっと早く話せばよかった」と振り返ります。無料相談だけして「やっぱりやめる」もOK。まず話を聞くことから。</p>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1V20+C1FMPU+4FR4+5YRHE" rel="nofollow" class="r-cta" data-cta="law-push"><span>無料で弁護士に相談する</span><span class="r-cta-arrow">→</span></a>
+      <p class="r-push-note">相談無料・秘密厳守・60〜90分</p>
+    </div>
+    <div class="r-other">
+      <div class="r-other-label">OTHER OPTIONS</div>
+      <div class="r-other-list">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1VU2+CO23PE+4WSG+5YJRM" rel="nofollow" class="r-other-item" data-cta="omatome-sub"><span class="r-other-dot omatome"></span><div class="r-other-text"><div class="r-other-title-tx">おまとめローン</div><div class="r-other-desc-tx">複数社の借金を1本化したい方</div></div><span class="r-other-arrow">→</span></a>
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1V20+C968T6+363I+5YJRM" rel="nofollow" class="r-other-item" data-cta="cash-sub"><span class="r-other-dot cash"></span><div class="r-other-text"><div class="r-other-title-tx">キャッシング</div><div class="r-other-desc-tx">一時的に資金が必要な方</div></div><span class="r-other-arrow">→</span></a>
+      </div>
+    </div>
+    <div class="r-restart"><button class="r-restart-btn" data-restart>もう一度診断する ↻</button></div>
+    <div class="r-disclaimer">※掲載内容は一般的な目安です。個別の状況により結果は異なります。<br />正式な手続き内容・費用は、各事業者・法律事務所の無料相談で必ずご確認ください。</div>
+  </section>
+
+  <section class="stage r-stage" id="stage-result-omatome" data-tone="omatome">
+    <div class="r-banner"><div class="r-banner-eb">YOUR DIAGNOSIS · SOLUTION B</div><h2 class="r-banner-headline">あなたに合うのは、<br /><em>おまとめローン</em>です。</h2></div>
+    <div class="r-hero">
+      <div class="r-hero-top"><div class="r-hero-tag">SOLUTION B</div><h3 class="r-hero-title">おまとめローンで<br />借金を1本化。</h3><p class="r-hero-tagline">複数社の返済を1つにまとめて、月の負担と金利を一気に下げる。返済能力はあるあなたに最適です。</p></div>
+      <div class="r-hero-body">
+        <div class="r-hero-body-label">なぜあなたに合うのか</div>
+        <div class="r-points">
+          <div class="r-point"><span class="r-point-num">01</span><span class="r-point-text">複数社からの借入で管理が煩雑・利息も二重三重に発生</span></div>
+          <div class="r-point"><span class="r-point-num">02</span><span class="r-point-text">返済自体は続けられているので、債務整理よりまず1本化</span></div>
+          <div class="r-point"><span class="r-point-num">03</span><span class="r-point-text">金利が下がれば月の返済額が減り、生活が一気に楽になる</span></div>
+          <div class="r-point"><span class="r-point-num">04</span><span class="r-point-text">督促・返済日が1つに統一されてストレスが激減</span></div>
+          <div class="r-point"><span class="r-point-num">05</span><span class="r-point-text">信用情報に「事故」が記録されず将来への影響が少ない</span></div>
+        </div>
+      </div>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1VU2+CO23PE+4WSG+5YJRM" rel="nofollow" class="r-card-cta" data-cta="omatome-main"><span>おまとめローンを申し込む</span><span class="r-card-cta-arrow">→</span></a>
+    </div>
+    <div class="r-section">
+      <div class="r-stats">
+        <div class="r-stat"><div class="r-stat-num">8.5-14.5<small>%</small></div><div class="r-stat-label">おまとめ年率</div></div>
+        <div class="r-stat"><div class="r-stat-num">600<small>万</small></div><div class="r-stat-label">最大融資額</div></div>
+        <div class="r-stat"><div class="r-stat-num">最短30<small>分</small></div><div class="r-stat-label">審査時間</div></div>
+      </div>
+    </div>
+    <div class="r-section">
+      <div class="r-section-eb">SERVICE STRENGTH</div><h3 class="r-section-title">デイリーキャッシングの強み</h3>
+      <div class="r-strength">
+        <div class="r-strength-item"><div class="r-strength-num">01</div><div class="r-strength-content"><div class="r-strength-title">消費者金融より低い年率8.5〜14.5%</div><div class="r-strength-desc">大手消費者金融の上限18%と比べて、おまとめならぐっと低金利。月の利息負担が大きく減る。</div></div></div>
+        <div class="r-strength-item"><div class="r-strength-num">02</div><div class="r-strength-content"><div class="r-strength-title">独自審査で他社NGでも可能性大</div><div class="r-strength-desc">中小だからこその柔軟な独自審査基準。大手で断られた方の受け皿として実績多数。</div></div></div>
+        <div class="r-strength-item"><div class="r-strength-num">03</div><div class="r-strength-content"><div class="r-strength-title">担保・保証人なしでOK</div><div class="r-strength-desc">原則として担保や保証人を立てずに申し込めるため、家族に迷惑をかけずに利用できる。</div></div></div>
+        <div class="r-strength-item"><div class="r-strength-num">04</div><div class="r-strength-content"><div class="r-strength-title">最短30分審査・即日融資対応</div><div class="r-strength-desc">ネット申込は24時間OK。最短即日で融資実行までいけるため、急いでいる方にも対応可。</div></div></div>
+        <div class="r-strength-item"><div class="r-strength-num">05</div><div class="r-strength-content"><div class="r-strength-title">東京都知事登録の正規貸金業者</div><div class="r-strength-desc">日本貸金業協会にも加盟する正規業者。安心して使える事業者です。</div></div></div>
+      </div>
+    </div>
+    <div class="r-section"><div class="r-diff"><div class="r-diff-eb">他社との違い</div><h4 class="r-diff-title">「中小だから柔軟」が選ばれる理由</h4><p class="r-diff-desc">大手消費者金融は審査基準がスコア型で、一度落ちると同じ系列でも通らないケースが多数。デイリーキャッシングは独自の人による審査で、収入・勤続・他社借入など総合的に判断するため、大手NGだった方でも可能性があります。</p></div></div>
+    <div class="r-section">
+      <div class="r-section-eb">PRICE & TERMS</div><h3 class="r-section-title">商品スペック（おまとめローン）</h3>
+      <div class="r-spec">
+        <div class="r-spec-row"><span class="r-spec-key">実質年率</span><span class="r-spec-val">8.5 〜 14.5%</span></div>
+        <div class="r-spec-row"><span class="r-spec-key">融資限度額</span><span class="r-spec-val">50万 〜 600万円</span></div>
+        <div class="r-spec-row"><span class="r-spec-key">審査時間</span><span class="r-spec-val">最短30分</span></div>
+        <div class="r-spec-row"><span class="r-spec-key">融資スピード</span><span class="r-spec-val">最短即日</span></div>
+        <div class="r-spec-row"><span class="r-spec-key">担保・保証人</span><span class="r-spec-val">原則不要</span></div>
+        <div class="r-spec-row"><span class="r-spec-key">申込</span><span class="r-spec-val">ネット24時間OK</span></div>
+      </div>
+    </div>
+    <div class="r-section">
+      <div class="r-section-eb">HOW IT WORKS</div><h3 class="r-section-title">かんたん3ステップ</h3>
+      <div class="r-steps">
+        <div class="r-step"><div class="r-step-num">01</div><div class="r-step-content"><div class="r-step-title">ネットから申込（24時間OK）</div><div class="r-step-desc">必要事項を入力。スマホで完結します。</div></div></div>
+        <div class="r-step"><div class="r-step-num">02</div><div class="r-step-content"><div class="r-step-title">最短30分で審査結果</div><div class="r-step-desc">独自審査でスピーディに判定。</div></div></div>
+        <div class="r-step"><div class="r-step-num">03</div><div class="r-step-content"><div class="r-step-title">最短即日で振込→1本化完了</div><div class="r-step-desc">融資金で他社借入を一括返済。あとは1本のみの返済に。</div></div></div>
+      </div>
+    </div>
+    <div class="r-section">
+      <div class="r-section-eb">FAQ</div><h3 class="r-section-title">よくある不安・疑問</h3>
+      <div class="r-faq-list">
+        <div class="r-faq-item"><button class="r-faq-q" data-faq><span class="r-faq-qi">Q.</span><span class="r-faq-qt">大手で審査落ちしましたが、通る可能性ありますか？</span><span class="r-faq-ch"></span></button><div class="r-faq-a"><p class="r-faq-ai">デイリーキャッシングは独自の人による審査で、勤続・収入・現在の返済状況など総合判定するため、大手のスコア審査では拾えない方も通るケースがあります。</p></div></div>
+        <div class="r-faq-item"><button class="r-faq-q" data-faq><span class="r-faq-qi">Q.</span><span class="r-faq-qt">在籍確認はありますか？</span><span class="r-faq-ch"></span></button><div class="r-faq-a"><p class="r-faq-ai">在籍確認は実施されますが、社名を出さず個人名で電話するなど配慮があります。詳細は申込後に相談可能です。</p></div></div>
+        <div class="r-faq-item"><button class="r-faq-q" data-faq><span class="r-faq-qi">Q.</span><span class="r-faq-qt">本当に金利は下がりますか？</span><span class="r-faq-ch"></span></button><div class="r-faq-a"><p class="r-faq-ai">大手消費者金融の年率は18%が多い一方、おまとめは8.5〜14.5%です。複数社の高金利を1本化することで、毎月の利息負担が圧縮されるケースがほとんどです。</p></div></div>
+        <div class="r-faq-item"><button class="r-faq-q" data-faq><span class="r-faq-qi">Q.</span><span class="r-faq-qt">追加で借りることはできますか？</span><span class="r-faq-ch"></span></button><div class="r-faq-a"><p class="r-faq-ai">おまとめローンは「返済目的」のため、原則として追加借入はできません。完済に向けてしっかり返済していくための商品です。</p></div></div>
+      </div>
+    </div>
+    <div class="r-push">
+      <div class="r-push-eb">FINAL STEP</div>
+      <h3 class="r-push-title">月の返済を、<br />シンプルに、軽く。</h3>
+      <p class="r-push-desc">複数社・複数日付・複数金利。今の管理コストは、想像以上にあなたを消耗させています。1本化すれば、返済日も金額も1つに。スマホから24時間、3分で申し込み完了。</p>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1VU2+CO23PE+4WSG+5YJRM" rel="nofollow" class="r-cta" data-cta="omatome-push"><span>おまとめローンを申し込む</span><span class="r-cta-arrow">→</span></a>
+      <p class="r-push-note">最短30分審査・最短即日融資</p>
+    </div>
+    <div class="r-other">
+      <div class="r-other-label">OTHER OPTIONS</div>
+      <div class="r-other-list">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1V20+C1FMPU+4FR4+5YRHE" rel="nofollow" class="r-other-item" data-cta="law-sub"><span class="r-other-dot law"></span><div class="r-other-text"><div class="r-other-title-tx">債務整理</div><div class="r-other-desc-tx">返済が苦しくなってきた方</div></div><span class="r-other-arrow">→</span></a>
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1V20+C968T6+363I+5YJRM" rel="nofollow" class="r-other-item" data-cta="cash-sub"><span class="r-other-dot cash"></span><div class="r-other-text"><div class="r-other-title-tx">キャッシング</div><div class="r-other-desc-tx">一時的に資金が必要な方</div></div><span class="r-other-arrow">→</span></a>
+      </div>
+    </div>
+    <div class="r-restart"><button class="r-restart-btn" data-restart>もう一度診断する ↻</button></div>
+    <div class="r-disclaimer">※掲載内容は一般的な目安です。個別の状況により結果は異なります。<br />正式な金利・条件は、各貸金業者の公式情報で必ずご確認ください。</div>
+  </section>
+  <section class="stage r-stage" id="stage-result-cash" data-tone="cash">
+    <div class="r-banner"><div class="r-banner-eb">YOUR DIAGNOSIS · SOLUTION C</div><h2 class="r-banner-headline">あなたに合うのは、<br /><em>キャッシング</em>です。</h2></div>
+    <div class="r-hero">
+      <div class="r-hero-top"><div class="r-hero-tag">SOLUTION C</div><h3 class="r-hero-title">キャッシングで<br />一時的な資金を確保。</h3><p class="r-hero-tagline">短期で必要な資金を素早く手当て。返済余力があり借入も少額・短期のあなたに最適です。</p></div>
+      <div class="r-hero-body">
+        <div class="r-hero-body-label">なぜあなたに合うのか</div>
+        <div class="r-points">
+          <div class="r-point"><span class="r-point-num">01</span><span class="r-point-text">借入額が少なめ・返済も問題なくできている状況</span></div>
+          <div class="r-point"><span class="r-point-num">02</span><span class="r-point-text">短期で資金が必要なケースに合っている</span></div>
+          <div class="r-point"><span class="r-point-num">03</span><span class="r-point-text">最短即日・スマホ完結で審査・融資</span></div>
+          <div class="r-point"><span class="r-point-num">04</span><span class="r-point-text">無利息期間を使えば実質コストを抑えられる</span></div>
+          <div class="r-point"><span class="r-point-num">05</span><span class="r-point-text">早期完済すれば信用情報に良い記録が残る</span></div>
+        </div>
+      </div>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1V20+C968T6+363I+5YJRM" rel="nofollow" class="r-card-cta" data-cta="cash-main"><span>キャッシングを申し込む</span><span class="r-card-cta-arrow">→</span></a>
+    </div>
+    <div class="r-section">
+      <div class="r-stats">
+        <div class="r-stat"><div class="r-stat-num">最短即日</div><div class="r-stat-label">融資スピード</div></div>
+        <div class="r-stat"><div class="r-stat-num">3<small>分</small></div><div class="r-stat-label">申込時間</div></div>
+        <div class="r-stat"><div class="r-stat-num">24h</div><div class="r-stat-label">ネット申込</div></div>
+      </div>
+    </div>
+    <div class="r-section">
+      <div class="r-section-eb">SERVICE STRENGTH</div><h3 class="r-section-title">サービスの強み</h3>
+      <div class="r-strength">
+        <div class="r-strength-item"><div class="r-strength-num">01</div><div class="r-strength-content"><div class="r-strength-title">スマホ完結・最短即日融資</div><div class="r-strength-desc">ネットで申込→審査→融資まで完結。来店・郵送物のやり取り不要。</div></div></div>
+        <div class="r-strength-item"><div class="r-strength-num">02</div><div class="r-strength-content"><div class="r-strength-title">無利息期間を活用できる</div><div class="r-strength-desc">初回利用者向けの無利息サービスを使えば、短期返済なら実質ゼロコスト。</div></div></div>
+        <div class="r-strength-item"><div class="r-strength-num">03</div><div class="r-strength-content"><div class="r-strength-title">プライバシーに配慮</div><div class="r-strength-desc">郵送物なし・在籍確認の電話に配慮など、家族にバレない設計。</div></div></div>
+        <div class="r-strength-item"><div class="r-strength-num">04</div><div class="r-strength-content"><div class="r-strength-title">少額からの利用が可能</div><div class="r-strength-desc">1万円単位での借入も可能。必要な分だけ借りて、早く返すスタイルが取れる。</div></div></div>
+      </div>
+    </div>
+    <div class="r-section"><div class="r-diff"><div class="r-diff-eb">使い方のコツ</div><h4 class="r-diff-title">「短期・少額・早期完済」がベスト</h4><p class="r-diff-desc">キャッシングは便利な分、長期化すると金利負担が重くなります。「次の給料日までのつなぎ」「医療費・冠婚葬祭などの一時出費」など、明確に返済タイミングが見えている使い方が向いています。</p></div></div>
+    <div class="r-section">
+      <div class="r-section-eb">HOW IT WORKS</div><h3 class="r-section-title">かんたん3ステップ</h3>
+      <div class="r-steps">
+        <div class="r-step"><div class="r-step-num">01</div><div class="r-step-content"><div class="r-step-title">ネットから申込</div><div class="r-step-desc">スマホで3分。本人確認書類をアップロード。</div></div></div>
+        <div class="r-step"><div class="r-step-num">02</div><div class="r-step-content"><div class="r-step-title">スピード審査</div><div class="r-step-desc">最短数十分で結果通知。</div></div></div>
+        <div class="r-step"><div class="r-step-num">03</div><div class="r-step-content"><div class="r-step-title">最短即日で振込</div><div class="r-step-desc">指定口座にスピード入金。すぐに使えます。</div></div></div>
+      </div>
+    </div>
+    <div class="r-section">
+      <div class="r-section-eb">FAQ</div><h3 class="r-section-title">よくある不安・疑問</h3>
+      <div class="r-faq-list">
+        <div class="r-faq-item"><button class="r-faq-q" data-faq><span class="r-faq-qi">Q.</span><span class="r-faq-qt">本当に即日で借りられますか？</span><span class="r-faq-ch"></span></button><div class="r-faq-a"><p class="r-faq-ai">申込時間や審査結果次第ですが、平日午前中の申込であれば最短即日で振込まで可能なケースが多いです。</p></div></div>
+        <div class="r-faq-item"><button class="r-faq-q" data-faq><span class="r-faq-qi">Q.</span><span class="r-faq-qt">家族にバレずに借りられますか？</span><span class="r-faq-ch"></span></button><div class="r-faq-a"><p class="r-faq-ai">郵送物なし・WEB完結対応の事業者なら、家族にバレずに利用できる可能性が高いです。在籍確認も社名を出さず個人名で行うなどの配慮があります。</p></div></div>
+        <div class="r-faq-item"><button class="r-faq-q" data-faq><span class="r-faq-qi">Q.</span><span class="r-faq-qt">無利息期間って何？</span><span class="r-faq-ch"></span></button><div class="r-faq-a"><p class="r-faq-ai">初回利用者を対象に、一定期間（30日など）利息ゼロで借りられるサービスです。期間内に完済すれば実質的にコスト0で利用できます。</p></div></div>
+      </div>
+    </div>
+    <div class="r-push">
+      <div class="r-push-eb">FINAL STEP</div>
+      <h3 class="r-push-title">必要なときに、必要なだけ。<br />それが、賢い使い方。</h3>
+      <p class="r-push-desc">無利息期間を活用すれば、短期の借入はほぼ実質コストゼロ。給料日までの「つなぎ」として、計画的に使うのがコツです。スマホで3分、最短即日で振込。</p>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1V20+C968T6+363I+5YJRM" rel="nofollow" class="r-cta" data-cta="cash-push"><span>キャッシングを申し込む</span><span class="r-cta-arrow">→</span></a>
+      <p class="r-push-note">最短即日・スマホ完結・無利息期間あり</p>
+    </div>
+    <div class="r-other">
+      <div class="r-other-label">OTHER OPTIONS</div>
+      <div class="r-other-list">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1VU2+CO23PE+4WSG+5YJRM" rel="nofollow" class="r-other-item" data-cta="omatome-sub"><span class="r-other-dot omatome"></span><div class="r-other-text"><div class="r-other-title-tx">おまとめローン</div><div class="r-other-desc-tx">複数社の借金を1本化したい方</div></div><span class="r-other-arrow">→</span></a>
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1V20+C1FMPU+4FR4+5YRHE" rel="nofollow" class="r-other-item" data-cta="law-sub"><span class="r-other-dot law"></span><div class="r-other-text"><div class="r-other-title-tx">債務整理</div><div class="r-other-desc-tx">返済が苦しくなってきた方</div></div><span class="r-other-arrow">→</span></a>
+      </div>
+    </div>
+    <div class="r-restart"><button class="r-restart-btn" data-restart>もう一度診断する ↻</button></div>
+    <div class="r-disclaimer">※掲載内容は一般的な目安です。個別の状況により結果は異なります。<br />正式な金利・条件は、各貸金業者の公式情報で必ずご確認ください。</div>
+  </section>
+
+  <section class="stage r-stage" id="stage-result-factor" data-tone="factor">
+    <div class="r-banner"><div class="r-banner-eb">YOUR DIAGNOSIS · SOLUTION D</div><h2 class="r-banner-headline">あなたに合うのは、<br /><em>ファクタリング</em>です。</h2></div>
+    <div class="r-hero">
+      <div class="r-hero-top"><div class="r-hero-tag">SOLUTION D</div><h3 class="r-hero-title">売掛金を最速2時間で<br />現金化する。</h3><p class="r-hero-tagline">銀行融資や借入とは違い、自分の売掛金（請求書）を売って資金化。借金にならず、審査は入金実績ベースで柔軟です。</p></div>
+      <div class="r-hero-body">
+        <div class="r-hero-body-label">なぜあなたに合うのか</div>
+        <div class="r-points">
+          <div class="r-point"><span class="r-point-num">01</span><span class="r-point-text">売掛金（請求書）があれば、入金前に現金化できる</span></div>
+          <div class="r-point"><span class="r-point-num">02</span><span class="r-point-text">借入ではないため、信用情報に傷がつかない</span></div>
+          <div class="r-point"><span class="r-point-num">03</span><span class="r-point-text">銀行で断られた方・赤字・税金滞納でも利用可能なケースあり</span></div>
+          <div class="r-point"><span class="r-point-num">04</span><span class="r-point-text">完全オンライン・WEB完結で来店不要</span></div>
+          <div class="r-point"><span class="r-point-num">05</span><span class="r-point-text">最速2時間で入金。急いでいる事業者に最適</span></div>
+        </div>
+      </div>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1XE0+1HL2RM+4JGG+BWVTE" rel="nofollow" class="r-card-cta" data-cta="factor-main"><span>QuQuMoで無料見積もりをする</span><span class="r-card-cta-arrow">→</span></a>
+    </div>
+    <div class="r-section">
+      <div class="r-stats">
+        <div class="r-stat"><div class="r-stat-num">最速2<small>時間</small></div><div class="r-stat-label">入金スピード</div></div>
+        <div class="r-stat"><div class="r-stat-num">0<small>円</small></div><div class="r-stat-label">手数料以外の費用</div></div>
+        <div class="r-stat"><div class="r-stat-num">24h</div><div class="r-stat-label">WEB受付</div></div>
+      </div>
+    </div>
+    <div class="r-section">
+      <div class="r-section-eb">SERVICE STRENGTH</div><h3 class="r-section-title">QuQuMo onlineの強み</h3>
+      <div class="r-strength">
+        <div class="r-strength-item"><div class="r-strength-num">01</div><div class="r-strength-content"><div class="r-strength-title">WEB完結・最速2時間入金</div><div class="r-strength-desc">請求書をアップロードするだけ。来店・郵送不要で24時間申し込み可能。審査から振込まで最速2時間。</div></div></div>
+        <div class="r-strength-item"><div class="r-strength-num">02</div><div class="r-strength-content"><div class="r-strength-title">赤字・税金滞納でも相談可能</div><div class="r-strength-desc">審査は売掛先（取引先）の信用力が中心。経営状況が厳しくても利用できるケースが多い。</div></div></div>
+        <div class="r-strength-item"><div class="r-strength-num">03</div><div class="r-strength-content"><div class="r-strength-title">借入ではないため信用情報に影響なし</div><div class="r-strength-desc">ファクタリングは「売掛金の売買」。借金扱いにならないため、信用情報機関（CIC等）に記録されない。</div></div></div>
+        <div class="r-strength-item"><div class="r-strength-num">04</div><div class="r-strength-content"><div class="r-strength-title">個人事業主・フリーランスも利用可</div><div class="r-strength-desc">法人だけでなく、個人事業主・フリーランスも申し込み可能。請求書があれば対応できる。</div></div></div>
+        <div class="r-strength-item"><div class="r-strength-num">05</div><div class="r-strength-content"><div class="r-strength-title">資金繰り改善に直結する即効性</div><div class="r-strength-desc">銀行融資の審査に数週間かかる状況でも、QuQuMoなら最短当日に手元資金を確保できる。</div></div></div>
+      </div>
+    </div>
+    <div class="r-section"><div class="r-diff"><div class="r-diff-eb">借入との違い</div><h4 class="r-diff-title">「売掛金の売却」だから借金にならない</h4><p class="r-diff-desc">銀行融資や消費者金融は「お金を借りる」ため負債になります。一方ファクタリングは「自分が受け取るはずだったお金を先に受け取る」仕組み。バランスシートに負債が増えず、信用情報にも傷がつきません。資金繰り改善の手段として、近年急速に普及しています。</p></div></div>
+    <div class="r-section">
+      <div class="r-section-eb">PRICE & TERMS</div><h3 class="r-section-title">サービス概要</h3>
+      <div class="r-spec">
+        <div class="r-spec-row"><span class="r-spec-key">入金スピード</span><span class="r-spec-val">最速2時間</span></div>
+        <div class="r-spec-row"><span class="r-spec-key">申込方法</span><span class="r-spec-val">WEB完結（24時間）</span></div>
+        <div class="r-spec-row"><span class="r-spec-key">手数料</span><span class="r-spec-val">請求金額による（要見積）</span></div>
+        <div class="r-spec-row"><span class="r-spec-key">対象</span><span class="r-spec-val">個人事業主・法人</span></div>
+        <div class="r-spec-row"><span class="r-spec-key">必要書類</span><span class="r-spec-val">請求書・通帳コピー等</span></div>
+      </div>
+    </div>
+    <div class="r-section">
+      <div class="r-section-eb">HOW IT WORKS</div><h3 class="r-section-title">かんたん3ステップ</h3>
+      <div class="r-steps">
+        <div class="r-step"><div class="r-step-num">01</div><div class="r-step-content"><div class="r-step-title">WEBで無料見積もり申込</div><div class="r-step-desc">請求書をアップロードして申し込み。3分で完了。</div></div></div>
+        <div class="r-step"><div class="r-step-num">02</div><div class="r-step-content"><div class="r-step-title">審査・買取金額の提示</div><div class="r-step-desc">売掛先の信用力をもとに審査。最短30分で結果。</div></div></div>
+        <div class="r-step"><div class="r-step-num">03</div><div class="r-step-content"><div class="r-step-title">最速2時間で口座に入金</div><div class="r-step-desc">手数料を差し引いた金額が即日振込されます。</div></div></div>
+      </div>
+    </div>
+    <div class="r-section">
+      <div class="r-section-eb">FAQ</div><h3 class="r-section-title">よくある不安・疑問</h3>
+      <div class="r-faq-list">
+        <div class="r-faq-item"><button class="r-faq-q" data-faq><span class="r-faq-qi">Q.</span><span class="r-faq-qt">ファクタリングって怪しくないですか？</span><span class="r-faq-ch"></span></button><div class="r-faq-a"><p class="r-faq-ai">ファクタリングは金融庁も認める合法的なサービスです。近年は大手企業も資金繰り改善に活用しており、オンライン完結型は中小企業・フリーランスへの普及が急速に進んでいます。</p></div></div>
+        <div class="r-faq-item"><button class="r-faq-q" data-faq><span class="r-faq-qi">Q.</span><span class="r-faq-qt">手数料はどれくらいかかりますか？</span><span class="r-faq-ch"></span></button><div class="r-faq-a"><p class="r-faq-ai">売掛金の金額・売掛先の信用力・入金サイクルによって変わります。まず無料見積もりで確認するのが確実です。手数料以外の費用はかかりません。</p></div></div>
+        <div class="r-faq-item"><button class="r-faq-q" data-faq><span class="r-faq-qi">Q.</span><span class="r-faq-qt">取引先にバレますか？</span><span class="r-faq-ch"></span></button><div class="r-faq-a"><p class="r-faq-ai">QuQuMoは「2社間ファクタリング」のため、取引先（売掛先）への通知・確認は原則不要です。取引先に知られずに資金化できます。</p></div></div>
+        <div class="r-faq-item"><button class="r-faq-q" data-faq><span class="r-faq-qi">Q.</span><span class="r-faq-qt">個人事業主でも使えますか？</span><span class="r-faq-ch"></span></button><div class="r-faq-a"><p class="r-faq-ai">はい、個人事業主・フリーランスも対象です。法人格がなくても、取引先への請求書（売掛金）があれば申し込めます。</p></div></div>
+      </div>
+    </div>
+    <div class="r-push">
+      <div class="r-push-eb">FINAL STEP</div>
+      <h3 class="r-push-title">入金を待つより、<br />今すぐ手元に現金を。</h3>
+      <p class="r-push-desc">請求書を送ってから30日、60日と待つ間に資金が底をつく——その前に動けます。見積もりは無料。金額を見てから決めればOKです。最速2時間で資金繰りが変わります。</p>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1XE0+1HL2RM+4JGG+BWVTE" rel="nofollow" class="r-cta" data-cta="factor-push"><span>QuQuMoで無料見積もりをする</span><span class="r-cta-arrow">→</span></a>
+      <p class="r-push-note">WEB完結・最速2時間入金・手数料のみ</p>
+    </div>
+    <div class="r-other">
+      <div class="r-other-label">個人の方はこちら</div>
+      <div class="r-other-list">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1V20+C1FMPU+4FR4+5YRHE" rel="nofollow" class="r-other-item" data-cta="law-sub"><span class="r-other-dot law"></span><div class="r-other-text"><div class="r-other-title-tx">債務整理</div><div class="r-other-desc-tx">個人の借金を減らす・なくす方向</div></div><span class="r-other-arrow">→</span></a>
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1VU2+CO23PE+4WSG+5YJRM" rel="nofollow" class="r-other-item" data-cta="omatome-sub"><span class="r-other-dot omatome"></span><div class="r-other-text"><div class="r-other-title-tx">おまとめローン</div><div class="r-other-desc-tx">複数社の借金を1本化したい方</div></div><span class="r-other-arrow">→</span></a>
+      </div>
+    </div>
+    <div class="r-restart"><button class="r-restart-btn" data-restart>もう一度診断する ↻</button></div>
+    <div class="r-disclaimer">※ファクタリングの手数料・条件は事業者により異なります。必ず公式サイトでご確認ください。</div>
+  </section>
+
+</div>
+
+<script is:inline>
+  let answers = {};
+
+  function showStage(name) {
+    document.querySelectorAll('.stage').forEach(s => s.classList.remove('active'));
+    const target = document.getElementById('stage-' + name);
+    if (target) { target.classList.add('active'); window.scrollTo({ top: 0, behavior: 'instant' }); }
+  }
+
+  function decideResult(a) {
+    if (a.payment === 'ng' || a.trouble === 'yes' || (a.amount === 'high' && a.payment === 'tight')) return 'law';
+    if (a.count === 'many' || (a.count === 'few' && a.payment === 'tight')) return 'omatome';
+    if (a.amount === 'low' && a.payment === 'ok' && a.count !== 'many') return 'cash';
+    if (a.payment === 'tight' && a.amount !== 'low') return 'omatome';
+    return 'cash';
+  }
+
+  document.getElementById('btn-start').addEventListener('click', () => {
+    answers = {};
+    showStage('q0');
+    if (window.gtag) gtag('event', 'shindan_start');
+  });
+
+  document.querySelectorAll('.q-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const q = btn.dataset.q;
+      const v = btn.dataset.v;
+      answers[q] = v;
+      if (q === 'type') {
+        if (v === 'business') {
+          if (window.gtag) gtag('event', 'shindan_result', { result: 'factor' });
+          showStage('result-factor');
+        } else {
+          showStage('q1');
+        }
+        return;
+      }
+      const stageMap = { amount: 'q2', count: 'q3', payment: 'q4', years: 'q5' };
+      if (stageMap[q]) {
+        showStage(stageMap[q]);
+      } else {
+        const result = decideResult(answers);
+        if (window.gtag) gtag('event', 'shindan_result', { result });
+        showStage('result-' + result);
+      }
+    });
+  });
+
+  document.querySelectorAll('[data-back]').forEach(btn => {
+    btn.addEventListener('click', () => { showStage(btn.dataset.back); });
+  });
+
+  document.querySelectorAll('[data-cta]').forEach(el => {
+    el.addEventListener('click', () => {
+      if (window.gtag) gtag('event', 'shindan_cta_click', { cta: el.dataset.cta });
+    });
+  });
+
+  document.querySelectorAll('[data-restart]').forEach(btn => {
+    btn.addEventListener('click', () => { answers = {}; showStage('start'); });
+  });
+
+  document.querySelectorAll('[data-faq]').forEach(btn => {
+    btn.addEventListener('click', () => { btn.closest('.r-faq-item').classList.toggle('open'); });
+  });
+</script>
+</body>
+</html>

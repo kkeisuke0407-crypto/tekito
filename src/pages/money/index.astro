@@ -1,0 +1,759 @@
+---
+const title = "債務整理おすすめ3選｜借金スッキリnavi";
+const description = "返済が苦しい・複数社から借入・督促が止まらない。本当に頼れる債務整理事務所を9項目で徹底比較。相談無料・全国対応。";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-18129603657"></script>
+  <script is:inline>
+    function toggleFaq(id) {
+      var item = document.getElementById(id);
+      item.classList.toggle('open');
+    }
+    var _hlCol = null;
+    function hlCol(col) {
+      _hlCol = (_hlCol === col) ? null : col;
+      document.querySelectorAll('.ct-head-firm').forEach(function(el) {
+        el.classList.toggle('hl', String(el.dataset.col) === String(_hlCol));
+      });
+      document.querySelectorAll('.ct-row-val').forEach(function(el) {
+        el.classList.toggle('hl', String(el.dataset.col) === String(_hlCol));
+      });
+    }
+  </script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2YLF06DC0E');
+    gtag('config', 'AW-18129603657');
+    function gtagSendEvent(url) {
+      var callback = function () {
+        if (typeof url === 'string') { window.location = url; }
+      };
+      gtag('event', 'money_cta', {
+        'event_callback': callback,
+        'event_timeout': 2000,
+      });
+      return false;
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700;900&family=M+PLUS+Rounded+1c:wght@700;800;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #FF6B35; --primary-dark: #E04E18; --primary-soft: #FFE3D1;
+      --cream: #FFF8F0; --warm-white: #FFFDF9;
+      --ink: #2A1F1A; --ink-soft: #7A5A45;
+      --green: #2FB67E; --green-dark: #1F8F5F;
+      --yellow: #FFC247; --border: #F0E2D2; --pink: #FFE3EE;
+      --zen: "Zen Maru Gothic", sans-serif;
+      --round: "M PLUS Rounded 1c", sans-serif;
+      --sans: "Noto Sans JP", sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: #F5EDE0; color: var(--ink); -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: inherit; cursor: pointer; }
+    .page-wrap { max-width: 440px; margin: 0 auto; background: var(--warm-white); min-height: 100vh; position: relative; }
+    @media (min-width: 600px) {
+      body { padding: 24px 0; background: radial-gradient(circle at 20% 10%, #FFE2C0 0%, transparent 45%), radial-gradient(circle at 80% 90%, #FFD9C4 0%, transparent 45%), #F5EDE0; }
+      .page-wrap { border-radius: 28px; overflow: hidden; box-shadow: 0 24px 60px rgba(196,110,60,0.18); }
+    }
+    /* ── PC layout ── */
+    @media (min-width: 860px) {
+      body { padding: 32px 24px; }
+      .page-wrap { max-width: 900px; border-radius: 24px; }
+
+      /* Hero 2-col */
+      .hero { padding: 40px 40px 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
+      .hero-blob { width: 220px; height: 220px; top: -50px; right: -40px; }
+      .hero h1 { font-size: 42px; margin: 16px 0 10px; }
+      .hero-lead { font-size: 15px; margin-bottom: 22px; }
+      .hero-cta { font-size: 17px; padding: 16px; }
+      .hero-badge { font-size: 12px; }
+      .hero-note { font-size: 12px; }
+      .hero-stats { grid-template-columns: repeat(3,1fr); margin-top: 0; }
+      .hero-stat-n { font-size: 24px; }
+      .hero-stat-l { font-size: 11px; }
+      .hero-right { display: flex; flex-direction: column; gap: 16px; z-index: 1; position: relative; }
+
+      /* Sections */
+      .worry { padding: 32px 28px 16px; }
+      .worry-title { font-size: 20px; }
+      .worry-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+      .worry-item { font-size: 14px; }
+      .worry-footer { font-size: 14px; margin-top: 18px; }
+
+      /* Case study */
+      .case-study-mobile { display: none; }
+      .case-study { margin: 20px 28px 0; padding: 20px 24px; display: flex; align-items: center; gap: 32px; }
+      .case-study-note { margin-top: 0; flex: 1; font-size: 12px; }
+      .case-study-body { gap: 16px; }
+      .case-study-num { font-size: 28px; }
+      .case-study-num.before { font-size: 22px; }
+
+      /* Checklist */
+      .checklist-wrap { margin: 20px 28px 0; }
+      .checklist-title { font-size: 20px; margin-bottom: 16px; }
+      .checklist-items { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+      .checklist-item { font-size: 14px; }
+      .checklist-footer { font-size: 14px; }
+      .checklist-cta { font-size: 16px; padding: 16px; max-width: 400px; margin-left: auto; margin-right: auto; }
+
+      /* Sec heads */
+      .sec-head { padding: 32px 28px 12px; }
+      .sec-head h2 { font-size: 26px; }
+      .sec-head p { font-size: 13px; }
+
+      /* Ranking 3-col */
+      .ranking-list { padding: 16px 28px 12px; display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+      .firm-card { padding: 20px 18px 18px; }
+      .firm-emblem { width: 52px; height: 52px; font-size: 26px; }
+      .firm-name { font-size: 14px; }
+      .firm-cta { font-size: 13px; padding: 13px 8px; }
+
+      /* Compare */
+      .compare-wrap { padding: 8px 28px 4px; }
+      .ct-row-key { font-size: 12px; padding: 11px 12px; }
+      .ct-row-val { font-size: 12px; }
+      .ct-head-firm { padding: 10px 6px; }
+      .ct-firm-name { font-size: 11px; }
+
+      /* How-to */
+      .howto-wrap { padding: 8px 28px 8px; }
+      .howto-steps { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px 24px; }
+      .howto-step::after { display: none; }
+      .howto-body { padding-bottom: 0; }
+      .howto-num { width: 34px; height: 34px; font-size: 17px; }
+      .howto-body strong { font-size: 14px; }
+      .howto-body p { font-size: 13px; }
+
+      /* Criteria 2-col */
+      .criteria-wrap { padding: 8px 28px 8px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+      .criteria-body strong { font-size: 14px; }
+      .criteria-body p { font-size: 12px; }
+
+      /* FAQ */
+      .faq-list { padding: 8px 28px 24px; }
+      .faq-q-text { font-size: 14px; }
+      .faq-a-text { font-size: 13px; }
+
+      /* Final CTA */
+      .final-cta { margin: 8px 28px 20px; padding: 28px 28px; }
+      .final-cta h3 { font-size: 26px; }
+      .final-cta p { font-size: 13px; }
+      .final-cta-shindan-main { font-size: 20px; }
+
+      /* Footer */
+      .site-footer { padding: 24px 28px 36px; }
+      .footer-text { font-size: 11px; }
+    }
+
+    /* AppBar */
+    .appbar {
+      position: sticky; top: 0; z-index: 30;
+      background: rgba(255,253,249,0.92); backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      padding: 8px 14px; display: flex; align-items: center; gap: 10;
+    }
+    .appbar-logo {
+      width: 30px; height: 30px; border-radius: 9px;
+      background: linear-gradient(135deg, var(--primary), #FF9447);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-family: var(--zen); font-weight: 900; font-size: 17px;
+      box-shadow: 0 3px 8px rgba(255,107,53,0.35); flex-shrink: 0;
+    }
+    .appbar-name { font-family: var(--zen); font-weight: 900; font-size: 15px; color: var(--ink); letter-spacing: -0.01em; line-height: 1.05; }
+    .appbar-sub { font-size: 9px; color: var(--ink-soft); letter-spacing: 0.06em; }
+    .appbar-spacer { flex: 1; }
+
+    /* Hero */
+    .hero {
+      position: relative; overflow: hidden;
+      padding: 20px 18px 28px;
+      background: radial-gradient(160% 80% at 100% 0%, #FFCBA4 0%, transparent 55%),
+                  radial-gradient(120% 70% at 0% 100%, #FFD9C4 0%, transparent 60%),
+                  linear-gradient(180deg, #FFF6EC 0%, #FFEDDB 100%);
+    }
+    .hero-blob {
+      position: absolute; top: -30px; right: -30px; width: 140px; height: 140px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,180,71,0.45), transparent 70%);
+      filter: blur(8px); pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #fff; border-radius: 999px; padding: 5px 12px 5px 8px;
+      font-size: 11px; font-weight: 700; color: var(--primary-dark);
+      box-shadow: 0 4px 10px rgba(255,107,53,0.18); position: relative; z-index: 1;
+    }
+    .hero-badge-dot {
+      width: 18px; height: 18px; border-radius: 50%; background: var(--primary);
+      color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 11px;
+    }
+    .hero h1 {
+      margin: 12px 0 6px;
+      font-family: var(--zen); font-weight: 900; font-size: 30px; line-height: 1.2;
+      letter-spacing: -0.02em; color: var(--ink); position: relative; z-index: 1;
+    }
+    .hero-h1-mark { background: linear-gradient(180deg, transparent 60%, #FFD480 60%); padding: 0 4px; }
+    .hero-lead { margin: 6px 0 18px; font-size: 13px; color: var(--ink-soft); line-height: 1.7; position: relative; z-index: 1; }
+    .hero-left { position: relative; z-index: 1; }
+    .hero-right { display: none; }
+    .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 16px; }
+    .hero-stat { background: #fff; border-radius: 14px; padding: 10px 6px; text-align: center; box-shadow: 0 4px 12px rgba(196,110,60,0.08); }
+    .hero-stat-n { font-family: var(--zen); font-weight: 900; font-size: 20px; color: var(--primary); line-height: 1; }
+    .hero-stat-l { font-size: 10px; color: var(--ink-soft); margin-top: 4px; }
+    .hero-cta {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%; border: none;
+      background: linear-gradient(180deg, #FF8A4D, var(--primary));
+      color: #fff; font-family: var(--round); font-weight: 800; font-size: 16px;
+      padding: 14px; border-radius: 16px;
+      box-shadow: 0 8px 18px rgba(255,107,53,0.4), inset 0 1px 0 rgba(255,255,255,0.3);
+      position: relative; z-index: 1; cursor: pointer;
+    }
+    .hero-note { margin-top: 10px; font-size: 11px; color: var(--ink-soft); text-align: center; position: relative; z-index: 1; }
+
+    /* Worry Strip */
+    .worry { padding: 22px 16px 8px; background: var(--warm-white); }
+    .worry-title { text-align: center; margin-bottom: 14px; font-family: var(--zen); font-weight: 800; font-size: 18px; color: var(--ink); }
+    .worry-list { display: flex; flex-direction: column; gap: 8px; }
+    .worry-item {
+      display: flex; align-items: center; gap: 10;
+      background: var(--cream); border-radius: 12px; padding: 10px 14px;
+      border: 1px solid var(--border); font-size: 13px; color: var(--ink); font-weight: 500;
+    }
+    .worry-icon {
+      width: 22px; height: 22px; border-radius: 50%; background: #FFE3D1; color: var(--primary-dark);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 800; flex-shrink: 0;
+    }
+    .worry-footer { text-align: center; margin-top: 14px; font-size: 13px; font-weight: 700; color: var(--primary-dark); }
+
+    /* Section Header */
+    .sec-head { padding: 24px 18px 8px; text-align: center; }
+    .sec-kicker {
+      display: inline-block; font-family: var(--round); font-size: 11px; font-weight: 800;
+      letter-spacing: 0.18em; color: var(--primary); background: var(--primary-soft);
+      padding: 4px 12px; border-radius: 999px;
+    }
+    .sec-head h2 { margin: 10px 0 4px; font-family: var(--zen); font-weight: 900; font-size: 22px; color: var(--ink); line-height: 1.3; letter-spacing: -0.01em; }
+    .sec-head p { margin: 0; font-size: 12px; color: var(--ink-soft); }
+    /* Firm Card */
+    .ranking-list { padding: 14px 16px 8px; display: flex; flex-direction: column; gap: 18px; }
+    .firm-card {
+      position: relative; background: #fff; border-radius: 20px; padding: 18px 16px 16px;
+      border: 1px solid var(--border); box-shadow: 0 6px 16px rgba(196,110,60,0.08);
+      transition: all 0.25s cubic-bezier(.2,.8,.2,1);
+    }
+    .firm-card:hover { box-shadow: 0 14px 30px rgba(196,110,60,0.18); transform: translateY(-3px); }
+    .pick-badge {
+      position: absolute; top: -10px; left: 14px;
+      color: #fff; font-family: var(--zen); font-weight: 900;
+      font-size: 11px; padding: 4px 10px; border-radius: 999px; letter-spacing: 0.04em;
+    }
+    .firm-head { display: flex; gap: 12px; align-items: flex-start; }
+    .firm-emblem {
+      width: 56px; height: 56px; border-radius: 16px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-family: var(--zen); font-weight: 900; font-size: 28px;
+      inset: 0 1px 0 rgba(255,255,255,0.25);
+    }
+    .firm-type { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-bottom: 4px; }
+    .firm-name { font-family: var(--zen); font-weight: 800; font-size: 15px; line-height: 1.3; color: var(--ink); letter-spacing: -0.01em; }
+
+    .star { font-size: 12px; }
+    .firm-tagline {
+      margin-top: 12px; padding: 8px 12px; border-radius: 10px;
+      font-size: 12px; font-weight: 700; display: flex; align-items: center; gap: 6px;
+    }
+    .firm-specs { margin-top: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .firm-spec { background: #FBF5EE; border-radius: 10px; padding: 8px 10px; }
+    .firm-spec-label { font-size: 9px; color: var(--ink-soft); font-weight: 600; margin-bottom: 2px; }
+    .firm-spec-val { font-family: var(--round); font-weight: 800; font-size: 13px; line-height: 1.2; }
+    .firm-badges { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; }
+    .firm-badge {
+      font-size: 10px; font-weight: 700; color: var(--ink-soft); background: #F5EBDC;
+      padding: 3px 8px; border-radius: 999px; border: 1px solid var(--border);
+    }
+    .firm-pros { margin-top: 12px; display: flex; flex-direction: column; gap: 5px; }
+    .firm-pro { display: flex; gap: 6px; align-items: flex-start; font-size: 12px; color: var(--ink); line-height: 1.5; }
+    .firm-cta {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      margin-top: 14px; text-decoration: none;
+      background: linear-gradient(180deg, #FF8A4D, var(--primary));
+      color: #fff; font-family: var(--round); font-weight: 800; font-size: 14px;
+      padding: 14px 8px; border-radius: 14px;
+      box-shadow: 0 6px 16px rgba(255,107,53,0.45);
+      transition: transform 0.2s;
+    }
+    .firm-cta:hover { transform: translateY(-2px); }
+    .firm-cta-note { margin-top: 6px; text-align: center; font-size: 10px; color: var(--ink-soft); }
+    .firm-pick { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--border); font-size: 11px; color: var(--ink-soft); display: flex; align-items: center; gap: 6px; }
+    .firm-pick strong { font-weight: 700; color: var(--primary-dark); }
+    .firm-banner { margin-top: 14px; border-radius: 12px; overflow: hidden; line-height: 0; }
+    .firm-banner a img { width: 100%; height: auto; display: block; }
+    .firm-banner > img { position: absolute; width: 1px; height: 1px; }
+
+    /* Compare Table */
+    .compare-wrap { padding: 8px 12px 4px; }
+    .compare-table { background: #fff; border-radius: 16px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 6px 16px rgba(196,110,60,0.06); }
+    .ct-head { display: grid; grid-template-columns: 88px repeat(3, 1fr); background: linear-gradient(180deg, var(--primary-soft), #FFF1E2); border-bottom: 1px solid var(--border); }
+    .ct-head-label { padding: 10px 8px; font-size: 10px; color: var(--ink-soft); font-weight: 700; border-right: 1px solid var(--border); }
+    .ct-head-firm { padding: 8px 4px; text-align: center; cursor: pointer; border-right: 1px solid var(--border); transition: background 0.2s; }
+    .ct-head-firm:last-child { border-right: none; }
+    .ct-head-firm.hl { background: #fff; }
+    .ct-head-emblem { display: flex; justify-content: center; margin-bottom: 4px; }
+    .ct-emblem-sm { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; font-family: var(--zen); font-weight: 900; font-size: 14px; }
+    .ct-firm-name { font-family: var(--zen); font-weight: 800; font-size: 10px; color: var(--ink); line-height: 1.2; }
+    .ct-row { display: grid; grid-template-columns: 88px repeat(3, 1fr); border-bottom: 1px solid var(--border); }
+    .ct-row:last-child { border-bottom: none; }
+    .ct-row-key { padding: 10px 10px; font-size: 11px; font-weight: 700; color: var(--ink); border-right: 1px solid var(--border); display: flex; align-items: center; }
+    .ct-row-val { padding: 10px 6px; text-align: center; border-right: 1px solid var(--border); font-size: 11px; font-weight: 700; color: var(--ink); line-height: 1.3; display: flex; align-items: center; justify-content: center; }
+    .ct-row-val:last-child { border-right: none; }
+    .ct-row-val.hl { background: #FFF8EE; }
+    .ct-row.stripe { background: #FBF5EE; }
+    .ct-row.stripe .ct-row-key { background: #FBF5EE; }
+    .ct-row.stripe .ct-row-val:not(.hl) { background: #FBF5EE; }
+    .compare-note { text-align: center; font-size: 10px; color: var(--ink-soft); margin-top: 8px; }
+    .svg-check { display: inline-flex; }
+    .svg-cross { display: inline-flex; }
+
+    /* Reviews */
+    /* FAQ */
+    .faq-list { padding: 8px 16px 20px; display: flex; flex-direction: column; gap: 8px; }
+    .faq-item { background: #fff; border-radius: 14px; border: 1px solid var(--border); overflow: hidden; transition: box-shadow 0.2s; }
+    .faq-item.open { box-shadow: 0 8px 18px rgba(196,110,60,0.1); }
+    .faq-q { width: 100%; border: none; background: none; cursor: pointer; padding: 14px; text-align: left; display: flex; align-items: flex-start; gap: 10px; }
+    .faq-q-icon { width: 22px; height: 22px; border-radius: 50%; background: var(--primary); color: #fff; font-family: var(--zen); font-weight: 900; font-size: 13px; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .faq-q-text { flex: 1; font-size: 13px; font-weight: 700; color: var(--ink); line-height: 1.5; text-align: left; }
+    .faq-chevron { padding-top: 4px; transition: transform 0.2s; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
+    .faq-item.open .faq-a { max-height: 300px; }
+    .faq-a-inner { padding: 0 14px 14px 14px; display: flex; gap: 10px; align-items: flex-start; padding-top: 10px; border-top: 1px dashed var(--border); }
+    .faq-a-icon { width: 22px; height: 22px; border-radius: 50%; background: var(--green); color: #fff; font-family: var(--zen); font-weight: 900; font-size: 13px; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .faq-a-text { font-size: 12px; line-height: 1.7; color: var(--ink-soft); }
+
+    /* Case Study */
+    .case-study { margin: 16px 16px 0; padding: 16px; border-radius: 18px; background: linear-gradient(135deg,#FFF3EB,#FFE8D5); border: 1.5px solid #FFCBA4; }
+    .case-study-kicker { font-size: 10px; font-weight: 800; color: var(--primary); letter-spacing: 0.12em; margin-bottom: 8px; }
+    .case-study-body { display: flex; align-items: center; gap: 10px; }
+    .case-study-arrow { font-size: 22px; }
+    .case-study-num { font-family: var(--zen); font-weight: 900; font-size: 22px; line-height: 1; }
+    .case-study-num.before { color: var(--ink-soft); text-decoration: line-through; font-size: 17px; }
+    .case-study-num.after { color: var(--primary); }
+    .case-study-label { font-size: 10px; color: var(--ink-soft); margin-top: 2px; }
+    .case-study-note { margin-top: 10px; font-size: 11px; color: var(--ink-soft); line-height: 1.6; }
+
+    /* Checklist */
+    .checklist-wrap { margin: 16px 16px 0; }
+    .checklist-title { font-family: var(--zen); font-weight: 900; font-size: 17px; color: var(--ink); text-align: center; margin-bottom: 12px; line-height: 1.4; }
+    .checklist-title span { color: var(--primary); }
+    .checklist-items { display: flex; flex-direction: column; gap: 7px; }
+    .checklist-item { display: flex; align-items: flex-start; gap: 10px; background: #fff; border-radius: 12px; border: 1px solid var(--border); padding: 11px 14px; font-size: 13px; font-weight: 500; color: var(--ink); }
+    .checklist-item-check { width: 20px; height: 20px; border-radius: 50%; background: var(--primary-soft); border: 2px solid #FFCBA4; flex-shrink: 0; margin-top: 1px; }
+    .checklist-footer { text-align: center; margin-top: 14px; font-family: var(--zen); font-weight: 800; font-size: 13px; color: var(--primary-dark); line-height: 1.5; }
+    .checklist-cta {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      margin-top: 12px; text-decoration: none;
+      background: linear-gradient(180deg, #FF8A4D, var(--primary));
+      color: #fff; font-family: var(--round); font-weight: 800; font-size: 15px;
+      padding: 14px 8px; border-radius: 14px;
+      box-shadow: 0 6px 16px rgba(255,107,53,0.45);
+    }
+
+    /* How-to Flow */
+    .howto-wrap { padding: 8px 16px 8px; }
+    .howto-steps { display: flex; flex-direction: column; gap: 0; }
+    .howto-step { display: flex; gap: 12px; align-items: flex-start; position: relative; }
+    .howto-step:not(:last-child)::after { content: ''; position: absolute; left: 14px; top: 34px; width: 2px; height: calc(100% - 10px); background: linear-gradient(to bottom, #FFCBA4, var(--border)); }
+    .howto-num { width: 30px; height: 30px; border-radius: 50%; background: var(--primary); color: #fff; font-family: var(--zen); font-weight: 900; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 1; }
+    .howto-body { padding-bottom: 20px; }
+    .howto-body strong { font-size: 13px; font-weight: 800; color: var(--ink); display: block; margin-bottom: 2px; }
+    .howto-body p { font-size: 12px; color: var(--ink-soft); line-height: 1.6; margin: 0; }
+
+    /* Selection criteria */
+    .criteria-wrap { padding: 8px 16px 8px; display: flex; flex-direction: column; gap: 8px; }
+    .criteria-item { display: flex; align-items: flex-start; gap: 10px; background: #fff; border-radius: 12px; border: 1px solid var(--border); padding: 11px 14px; }
+    .criteria-num { width: 22px; height: 22px; border-radius: 50%; background: var(--primary); color: #fff; font-family: var(--zen); font-weight: 900; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .criteria-body strong { font-size: 13px; font-weight: 800; color: var(--ink); display: block; margin-bottom: 2px; }
+    .criteria-body p { font-size: 11px; color: var(--ink-soft); line-height: 1.6; margin: 0; }
+
+    /* Final CTA */
+    .final-cta {
+      margin: 8px 16px 16px; padding: 20px 16px; border-radius: 22px; color: #fff; position: relative; overflow: hidden;
+      background: radial-gradient(120% 100% at 100% 0%, #FFB07A 0%, transparent 60%), linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    }
+    .final-cta-deco { position: absolute; top: -20px; right: -20px; width: 100px; height: 100px; border-radius: 50%; background: rgba(255,255,255,0.1); }
+    .final-cta-kicker { font-family: var(--zen); font-weight: 900; font-size: 11px; color: #FFD89C; letter-spacing: 0.1em; margin-bottom: 4px; }
+    .final-cta h3 { font-family: var(--zen); font-weight: 900; font-size: 22px; line-height: 1.3; letter-spacing: -0.01em; }
+    .final-cta p { margin: 8px 0 14px; font-size: 12px; line-height: 1.6; opacity: 0.92; }
+    .final-cta-list { display: flex; flex-direction: column; gap: 10px; }
+    .final-cta-link {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 14px; border-radius: 12px; text-decoration: none;
+      background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.35);
+      backdrop-filter: blur(4px);
+    }
+    .final-cta-link-left { display: flex; align-items: center; gap: 8px; }
+    .final-cta-emblem { width: 28px; height: 28px; border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #fff; font-family: var(--zen); font-weight: 900; font-size: 13px; }
+    .final-cta-firm-name { color: #fff; font-weight: 700; font-size: 13px; }
+    .final-cta-btn { color: #fff; font-family: var(--round); font-weight: 800; font-size: 12px; background: rgba(255,255,255,0.25); padding: 4px 10px; border-radius: 999px; }
+    .final-cta-shindan { display: flex; flex-direction: column; align-items: center; gap: 6px; text-decoration: none; background: #fff; border-radius: 16px; padding: 18px 20px; transition: transform 0.2s; }
+    .final-cta-shindan:hover { transform: translateY(-2px); }
+    .final-cta-shindan-main { font-family: var(--round); font-weight: 900; font-size: 18px; color: var(--primary); }
+    .final-cta-shindan-sub { font-size: 11px; color: var(--ink-soft); }
+
+    /* Footer */
+    .site-footer { padding: 20px 18px 30px; background: #2A1F1A; color: #A89A88; }
+    .footer-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+    .footer-logo { width: 26px; height: 26px; border-radius: 8px; background: var(--primary); display: flex; align-items: center; justify-content: center; color: #fff; font-family: var(--zen); font-weight: 900; font-size: 14px; }
+    .footer-name { font-family: var(--zen); font-weight: 800; font-size: 14px; color: #fff; }
+    .footer-text { font-size: 10px; line-height: 1.7; margin-bottom: 12px; }
+    .footer-links { display: flex; gap: 16px; font-size: 10px; padding-top: 10px; border-top: 1px solid #3D2F26; }
+    .footer-copy { margin-top: 12px; font-size: 9px; opacity: 0.6; }
+
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <header class="appbar">
+    <div class="appbar-logo">整</div>
+    <div style="line-height:1.05">
+      <div class="appbar-name">借金スッキリnavi</div>
+      <div class="appbar-sub">DEBT RELIEF COMPARE 2026</div>
+    </div>
+    <div class="appbar-spacer"></div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-blob"></div>
+    <div class="hero-left">
+      <div class="hero-badge"><span class="hero-badge-dot">★</span>2026年4月 最新版</div>
+      <h1>借金の悩み、<br/><span class="hero-h1-mark">3分で</span>スッキリ。</h1>
+      <p class="hero-lead">本当に頼れる債務整理の事務所を、<br/>現役FPと元相談員が<b style="color:var(--ink)">9項目</b>で徹底比較。</p>
+      <button class="hero-cta" onclick="document.getElementById('ranking').scrollIntoView({behavior:'smooth'})">おすすめ3選を見る ↓</button>
+      <div class="hero-note">※相談無料・匿名OK・全国対応</div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hero-stat-n">50万+</div><div class="hero-stat-l">相談実績</div></div>
+        <div class="hero-stat"><div class="hero-stat-n">最短</div><div class="hero-stat-l">即日受任</div></div>
+        <div class="hero-stat"><div class="hero-stat-n">0円</div><div class="hero-stat-l">相談料</div></div>
+      </div>
+      <div class="case-study" style="margin:0;padding:16px 14px;">
+        <div class="case-study-kicker">📊 減額事例</div>
+        <div class="case-study-body">
+          <div><div class="case-study-label">相談前</div><div class="case-study-num before">470万</div></div>
+          <div class="case-study-arrow">→</div>
+          <div><div class="case-study-label">整理後</div><div class="case-study-num after">100万</div></div>
+        </div>
+        <p class="case-study-note" style="margin-top:8px">専門家への相談で返済総額が大幅に減額された実例です。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="worry">
+    <div class="worry-title">こんなお悩み、ありませんか？</div>
+    <div class="worry-list">
+      <div class="worry-item"><span class="worry-icon">?</span>リボ払いの残高が減らない…</div>
+      <div class="worry-item"><span class="worry-icon">?</span>複数社から借入していて返済キツい</div>
+      <div class="worry-item"><span class="worry-icon">?</span>家族にバレずに整理したい</div>
+      <div class="worry-item"><span class="worry-icon">?</span>督促の電話が止まらない</div>
+    </div>
+    <div class="worry-footer">↓ ぜんぶ債務整理で解決できます ↓</div>
+  </section>
+
+  <!-- Case Study (mobile only; PC shows in hero-right) -->
+  <div class="case-study case-study-mobile">
+    <div class="case-study-kicker">📊 CASE STUDY</div>
+    <div class="case-study-body">
+      <div>
+        <div class="case-study-label">相談前の返済総額</div>
+        <div class="case-study-num before">470万円</div>
+      </div>
+      <div class="case-study-arrow">→</div>
+      <div>
+        <div class="case-study-label">債務整理後</div>
+        <div class="case-study-num after">100万円</div>
+      </div>
+    </div>
+    <p class="case-study-note">借金相談によって返済額が大幅に減額された実例。複数社への借入・長期リボ払いでも、専門家への相談で状況が改善するケースが多数あります。</p>
+  </div>
+
+  <!-- Checklist -->
+  <div class="checklist-wrap">
+    <div class="checklist-title">あなたは<span>借金を減らせる</span>？<br/>チェックリスト</div>
+    <div class="checklist-items">
+      <div class="checklist-item"><div class="checklist-item-check"></div>3社以上から借り入れをしている</div>
+      <div class="checklist-item"><div class="checklist-item-check"></div>総額50万円以上の借金がある</div>
+      <div class="checklist-item"><div class="checklist-item-check"></div>借入・返済を5年以上繰り返している</div>
+      <div class="checklist-item"><div class="checklist-item-check"></div>リボ払いの残高がなかなか減らない</div>
+      <div class="checklist-item"><div class="checklist-item-check"></div>借金の督促の電話やハガキが届いている</div>
+      <div class="checklist-item"><div class="checklist-item-check"></div>返済するためのお金を他から借りている</div>
+    </div>
+    <p class="checklist-footer">1つでも当てはまる人は、今すぐ<br/>専門家へ「借金減額相談」をしましょう！</p>
+    <a href="#ranking" class="checklist-cta" onclick="document.getElementById('ranking').scrollIntoView({behavior:'smooth'});return false">おすすめ事務所3選を見る ↓</a>
+  </div>
+
+  <div class="sec-head" id="ranking">
+    <span class="sec-kicker">OUR TOP 3</span>
+    <h2>おすすめの債務整理 3選</h2>
+    <p>それぞれ得意分野が違うので、自分に合うところを選ぼう</p>
+  </div>
+  <div class="ranking-list">
+    <!-- さくら中央 -->
+    <div class="firm-card">
+      <div class="pick-badge" style="background:#E8487A;box-shadow:0 4px 10px #E8487A55">安心NO.1</div>
+      <div class="firm-head">
+        <div class="firm-emblem" style="background:linear-gradient(135deg,#FF8FB1,#E8487A);box-shadow:0 6px 14px #E8487A33">さ</div>
+        <div style="flex:1;min-width:0">
+          <span class="firm-type" style="color:#E8487A;background:#FFD7E2">弁護士法人</span>
+          <div class="firm-name">さくら中央法律事務所</div>
+        </div>
+      </div>
+      <div class="firm-tagline" style="background:#FFF1F5;color:#E8487A">✦ 女性専用窓口あり・丁寧な対応が評判</div>
+      <div class="firm-specs">
+        <div class="firm-spec"><div class="firm-spec-label">任意整理 / 1社</div><div class="firm-spec-val" style="color:#FF6B35">要相談</div></div>
+        <div class="firm-spec"><div class="firm-spec-label">対応スピード</div><div class="firm-spec-val" style="color:#2FB67E">最短即日着手</div></div>
+        <div class="firm-spec"><div class="firm-spec-label">対応エリア</div><div class="firm-spec-val" style="color:#4A90E2">首都圏中心・全国</div></div>
+        <div class="firm-spec"><div class="firm-spec-label">実績</div><div class="firm-spec-val" style="color:#A062D4">数万件超（2003年〜）</div></div>
+      </div>
+      <div class="firm-badges"><span class="firm-badge"># 女性専用窓口</span><span class="firm-badge"># 全国対応</span><span class="firm-badge"># 出張相談OK</span></div>
+      <div class="firm-pros">
+        <div class="firm-pro"><span style="color:#2FB67E;flex-shrink:0">✓</span><span>女性専用の相談窓口があり女性でも話しやすい環境</span></div>
+        <div class="firm-pro"><span style="color:#2FB67E;flex-shrink:0">✓</span><span>任意整理・個人再生・自己破産・過払い金すべて対応</span></div>
+      </div>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1WM4+182536+5T5G+5YJRM" rel="nofollow" class="firm-cta" onclick="return gtagSendEvent(this.href)">📞 無料相談はこちら（公式サイト）</a>
+      <div class="firm-cta-note">相談料0円・匿名OK・全国対応</div>
+      <div class="firm-banner">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1WM4+182536+5T5G+5YZ75" rel="nofollow"><img border="0" alt="" src="https://www28.a8.net/svt/bgt?aid=260429404074&wid=003&eno=01&mid=s00000027106001003000&mc=1"></a>
+        <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4B1WM4+182536+5T5G+5YZ75" alt="">
+      </div>
+      <div class="firm-pick"><strong>こんな人に◎</strong>初めての相談で不安な方・女性の方</div>
+    </div>
+
+    <!-- アース司法書士 -->
+    <div class="firm-card">
+      <div class="pick-badge" style="background:#2FB67E;box-shadow:0 4px 10px #2FB67E55">安さNO.1</div>
+      <div class="firm-head">
+        <div class="firm-emblem" style="background:linear-gradient(135deg,#6BD9A4,#2FB67E);box-shadow:0 6px 14px #2FB67E33">ア</div>
+        <div style="flex:1;min-width:0">
+          <span class="firm-type" style="color:#2FB67E;background:#C9F0DC">司法書士法人</span>
+          <div class="firm-name">アース司法書士事務所</div>
+        </div>
+      </div>
+      <div class="firm-tagline" style="background:#EEFBF4;color:#2FB67E">✦ 業界最安水準・減額報酬なしで明朗会計</div>
+      <div class="firm-specs">
+        <div class="firm-spec"><div class="firm-spec-label">任意整理 / 1社</div><div class="firm-spec-val" style="color:#FF6B35">39,600円〜</div></div>
+        <div class="firm-spec"><div class="firm-spec-label">対応スピード</div><div class="firm-spec-val" style="color:#2FB67E">最短当日受任</div></div>
+        <div class="firm-spec"><div class="firm-spec-label">対応エリア</div><div class="firm-spec-val" style="color:#4A90E2">全国対応</div></div>
+        <div class="firm-spec"><div class="firm-spec-label">実績</div><div class="firm-spec-val" style="color:#A062D4">解決3,500件超</div></div>
+      </div>
+      <div class="firm-badges"><span class="firm-badge"># 費用が安い</span><span class="firm-badge"># LINE相談OK</span><span class="firm-badge"># 全国対応</span></div>
+      <div class="firm-pros">
+        <div class="firm-pro"><span style="color:#2FB67E;flex-shrink:0">✓</span><span>任意整理1社39,600円〜で相場より大幅に安い</span></div>
+        <div class="firm-pro"><span style="color:#2FB67E;flex-shrink:0">✓</span><span>LINEだけで相談〜手続き完結も可能、来所不要</span></div>
+      </div>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1WM4+15ODWA+4LX2+5YRHE" rel="nofollow" class="firm-cta" onclick="return gtagSendEvent(this.href)">📞 無料相談はこちら（公式サイト）</a>
+      <div class="firm-cta-note">相談料0円・匿名OK・全国対応</div>
+      <div class="firm-banner">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1WM4+15ODWA+4LX2+609HT" rel="nofollow"><img border="0" alt="" src="https://www22.a8.net/svt/bgt?aid=260429404070&wid=002&eno=01&mid=s00000021503001009000&mc=1"></a>
+        <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4B1WM4+15ODWA+4LX2+609HT" alt="">
+      </div>
+      <div class="firm-pick"><strong>こんな人に◎</strong>費用を抑えたい方・任意整理を検討中の方</div>
+    </div>
+
+    <!-- イストワール -->
+    <div class="firm-card">
+      <div class="pick-badge" style="background:#FF6B35;box-shadow:0 4px 10px #FF6B3555">実績NO.1</div>
+      <div class="firm-head">
+        <div class="firm-emblem" style="background:linear-gradient(135deg,#FFB07A,#FF6B35);box-shadow:0 6px 14px #FF6B3533">イ</div>
+        <div style="flex:1;min-width:0">
+          <span class="firm-type" style="color:#FF6B35;background:#FFD9C4">弁護士法人</span>
+          <div class="firm-name">シン・イストワール法律事務所</div>
+        </div>
+      </div>
+      <div class="firm-tagline" style="background:#FFF3EB;color:#FF6B35">✦ 闇金対応・任意整理に圧倒的な強み</div>
+      <div class="firm-specs">
+        <div class="firm-spec"><div class="firm-spec-label">任意整理 / 1社</div><div class="firm-spec-val" style="color:#FF6B35">46,000円〜</div></div>
+        <div class="firm-spec"><div class="firm-spec-label">対応スピード</div><div class="firm-spec-val" style="color:#2FB67E">即日督促停止</div></div>
+        <div class="firm-spec"><div class="firm-spec-label">対応エリア</div><div class="firm-spec-val" style="color:#4A90E2">全国対応</div></div>
+        <div class="firm-spec"><div class="firm-spec-label">実績</div><div class="firm-spec-val" style="color:#A062D4">闇金解決1万件超</div></div>
+      </div>
+      <div class="firm-badges"><span class="firm-badge"># 闇金対応◎</span><span class="firm-badge"># 即日督促停止</span><span class="firm-badge"># 全国対応</span></div>
+      <div class="firm-pros">
+        <div class="firm-pro"><span style="color:#2FB67E;flex-shrink:0">✓</span><span>闇金・ヤミ金の解決実績1万件超で他社に断られた案件もOK</span></div>
+        <div class="firm-pro"><span style="color:#2FB67E;flex-shrink:0">✓</span><span>自己破産を安易に勧めず依頼者の希望に沿った解決策を提案</span></div>
+      </div>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1V20+C1FMPU+4FR4+5YRHE" rel="nofollow" class="firm-cta" onclick="return gtagSendEvent(this.href)">📞 無料相談はこちら（公式サイト）</a>
+      <div class="firm-cta-note">相談料0円・匿名OK・全国対応</div>
+      <div class="firm-banner">
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1V20+C1FMPU+4FR4+644DT" rel="nofollow"><img border="0" alt="" src="https://www25.a8.net/svt/bgt?aid=260427384728&wid=003&eno=01&mid=s00000020704001027000&mc=1"></a>
+        <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B1V20+C1FMPU+4FR4+644DT" alt="">
+      </div>
+      <div class="firm-pick"><strong>こんな人に◎</strong>闇金被害・複雑な借金問題を抱えている方</div>
+    </div>
+  </div>
+
+  <div class="sec-head" id="compare">
+    <span class="sec-kicker">COMPARE</span>
+    <h2>一目でわかる比較表</h2>
+    <p>気になる列をタップしてハイライト</p>
+  </div>
+  <div class="compare-wrap">
+    <div class="compare-table" id="compare-table">
+      <div class="ct-head">
+        <div class="ct-head-label">項目</div>
+        <div class="ct-head-firm" data-col="0" onclick="hlCol(0)">
+          <div class="ct-head-emblem"><div class="ct-emblem-sm" style="background:linear-gradient(135deg,#FF8FB1,#E8487A)">さ</div></div>
+          <div class="ct-firm-name">さくら中央</div>
+        </div>
+        <div class="ct-head-firm" data-col="1" onclick="hlCol(1)">
+          <div class="ct-head-emblem"><div class="ct-emblem-sm" style="background:linear-gradient(135deg,#6BD9A4,#2FB67E)">ア</div></div>
+          <div class="ct-firm-name">アース</div>
+        </div>
+        <div class="ct-head-firm" data-col="2" onclick="hlCol(2)">
+          <div class="ct-head-emblem"><div class="ct-emblem-sm" style="background:linear-gradient(135deg,#FFB07A,#FF6B35)">イ</div></div>
+          <div class="ct-firm-name">イストワール</div>
+        </div>
+      </div>
+      <!-- サービス ○× -->
+      <div class="ct-row"><div class="ct-row-key">任意整理</div><div class="ct-row-val" data-col="0">✅</div><div class="ct-row-val" data-col="1">✅</div><div class="ct-row-val" data-col="2">✅</div></div>
+      <div class="ct-row stripe"><div class="ct-row-key">個人再生</div><div class="ct-row-val" data-col="0">✅</div><div class="ct-row-val" data-col="1">❌</div><div class="ct-row-val" data-col="2">✅</div></div>
+      <div class="ct-row"><div class="ct-row-key">自己破産</div><div class="ct-row-val" data-col="0">✅</div><div class="ct-row-val" data-col="1">❌</div><div class="ct-row-val" data-col="2">✅</div></div>
+      <div class="ct-row stripe"><div class="ct-row-key">過払い金</div><div class="ct-row-val" data-col="0">✅</div><div class="ct-row-val" data-col="1">✅</div><div class="ct-row-val" data-col="2">✅</div></div>
+      <!-- 詳細行 -->
+      <div class="ct-row"><div class="ct-row-key">任意整理/1社</div><div class="ct-row-val" data-col="0">要相談</div><div class="ct-row-val" data-col="1">39,600円〜</div><div class="ct-row-val" data-col="2">46,000円〜</div></div>
+      <div class="ct-row stripe"><div class="ct-row-key">相談料</div><div class="ct-row-val" data-col="0">無料</div><div class="ct-row-val" data-col="1">無料（何度でも）</div><div class="ct-row-val" data-col="2">無料（初回）</div></div>
+      <div class="ct-row"><div class="ct-row-key">対応スピード</div><div class="ct-row-val" data-col="0">最短即日着手</div><div class="ct-row-val" data-col="1">最短当日受任</div><div class="ct-row-val" data-col="2">即日督促停止</div></div>
+      <div class="ct-row stripe"><div class="ct-row-key">サポート</div><div class="ct-row-val" data-col="0">電話 / メール / Web</div><div class="ct-row-val" data-col="1">電話 / LINE / メール</div><div class="ct-row-val" data-col="2">電話 / メール / 来所</div></div>
+    </div>
+    <div class="compare-note">※税込表記。料金は2026年4月時点の参考目安です。</div>
+  </div>
+  <!-- 手続きの流れ -->
+  <div class="sec-head" id="flow">
+    <span class="sec-kicker">FLOW</span>
+    <h2>借金減額相談の流れ</h2>
+    <p>依頼から督促停止まで最短即日</p>
+  </div>
+  <div class="howto-wrap">
+    <div class="howto-steps">
+      <div class="howto-step">
+        <div class="howto-num">1</div>
+        <div class="howto-body">
+          <strong>弁護士・司法書士に無料相談</strong>
+          <p>匿名・相談料0円でOK。電話・LINE・Webフォームから気軽に相談できます。</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <div class="howto-num">2</div>
+        <div class="howto-body">
+          <strong>受任通知→督促がすぐ止まる</strong>
+          <p>依頼後、事務所から各債権者へ受任通知が送られ、電話・ハガキの督促が止まります。</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <div class="howto-num">3</div>
+        <div class="howto-body">
+          <strong>債務額・方針が決まる</strong>
+          <p>専門家が状況を精査し、任意整理・個人再生・自己破産など最適な方針を提案します。</p>
+        </div>
+      </div>
+      <div class="howto-step">
+        <div class="howto-num">4</div>
+        <div class="howto-body">
+          <strong>手続きを進めて借金を整理</strong>
+          <p>指示に従うだけでOK。専門家が手続きを代行し、新しい返済計画で生活を立て直せます。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 事務所の選び方 -->
+  <div class="sec-head" id="howto-choose">
+    <span class="sec-kicker">HOW TO CHOOSE</span>
+    <h2>事務所の選び方 6つのポイント</h2>
+    <p>失敗しない相談先を見極めよう</p>
+  </div>
+  <div class="criteria-wrap">
+    <div class="criteria-item"><div class="criteria-num">1</div><div class="criteria-body"><strong>債務整理の実績が多いか</strong><p>相談件数・解決件数が多い事務所は経験値が高く、複雑なケースにも対応できます。</p></div></div>
+    <div class="criteria-item"><div class="criteria-num">2</div><div class="criteria-body"><strong>費用の明細が明確か</strong><p>着手金・成功報酬・実費が事前に提示されるか確認。不透明な料金体系には注意。</p></div></div>
+    <div class="criteria-item"><div class="criteria-num">3</div><div class="criteria-body"><strong>費用は相場前後で収まっているか</strong><p>任意整理1社あたり3〜5万円が目安。大幅に高い場合は複数事務所で比較を。</p></div></div>
+    <div class="criteria-item"><div class="criteria-num">4</div><div class="criteria-body"><strong>相談しやすい雰囲気か</strong><p>初回相談で丁寧にヒアリングしてくれるか、質問に対してわかりやすく答えてくれるかが重要。</p></div></div>
+    <div class="criteria-item"><div class="criteria-num">5</div><div class="criteria-body"><strong>直接事務所に行けるか</strong><p>出張・Web相談対応かどうかも確認。来所不要の事務所なら全国どこからでも依頼できます。</p></div></div>
+    <div class="criteria-item"><div class="criteria-num">6</div><div class="criteria-body"><strong>口コミ・評判が良いか</strong><p>Googleレビューや第三者サイトの評価も参考に。担当者との相性も重要なポイントです。</p></div></div>
+  </div>
+
+  <div class="sec-head" id="faq">
+    <span class="sec-kicker">FAQ</span>
+    <h2>よくある不安の解消 Q&A</h2>
+    <p>気になるところをタップ</p>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item open" id="faq0">
+      <button class="faq-q" onclick="toggleFaq('faq0')"><span class="faq-q-icon">Q</span><span class="faq-q-text">家族や会社に知られずに手続きできますか？</span><span class="faq-chevron">▼</span></button>
+      <div class="faq-a"><div class="faq-a-inner"><span class="faq-a-icon">A</span><p class="faq-a-text">基本的にバレずに進められます。任意整理なら家族・会社への通知はありません。郵便物の宛名や送付方法も配慮してくれる事務所がほとんどです。ただし自己破産は官報に掲載されます。</p></div></div>
+    </div>
+    <div class="faq-item" id="faq1">
+      <button class="faq-q" onclick="toggleFaq('faq1')"><span class="faq-q-icon">Q</span><span class="faq-q-text">債務整理にはどんな種類がありますか？</span><span class="faq-chevron">▼</span></button>
+      <div class="faq-a"><div class="faq-a-inner"><span class="faq-a-icon">A</span><p class="faq-a-text">主に「任意整理（利息カット・3〜5年返済）」「個人再生（最大1/10まで減額・財産残せる）」「自己破産（原則全額免除）」「過払い金請求（払いすぎた利息を取り戻す）」の4種類があります。状況によって最適な方法が異なるので、まず専門家に相談しましょう。</p></div></div>
+    </div>
+    <div class="faq-item" id="faq2">
+      <button class="faq-q" onclick="toggleFaq('faq2')"><span class="faq-q-icon">Q</span><span class="faq-q-text">弁護士・司法書士に依頼するメリットは？</span><span class="faq-chevron">▼</span></button>
+      <div class="faq-a"><div class="faq-a-inner"><span class="faq-a-icon">A</span><p class="faq-a-text">①依頼後すぐに督促が止まり精神的負担が激減、②最適な整理方法を案内してもらえる、③手続きを丸ごと代行してくれるので時間がない人でも安心、の3点が主なメリットです。</p></div></div>
+    </div>
+    <div class="faq-item" id="faq3">
+      <button class="faq-q" onclick="toggleFaq('faq3')"><span class="faq-q-icon">Q</span><span class="faq-q-text">相談だけして依頼しないのもアリ？</span><span class="faq-chevron">▼</span></button>
+      <div class="faq-a"><div class="faq-a-inner"><span class="faq-a-icon">A</span><p class="faq-a-text">もちろんOKです。3事務所とも相談料は無料で、話を聞いた上で「やめておく」も自由です。複数の事務所を比較してから決める方が多いです。</p></div></div>
+    </div>
+    <div class="faq-item" id="faq4">
+      <button class="faq-q" onclick="toggleFaq('faq4')"><span class="faq-q-icon">Q</span><span class="faq-q-text">弁護士と司法書士の違いは？</span><span class="faq-chevron">▼</span></button>
+      <div class="faq-a"><div class="faq-a-inner"><span class="faq-a-icon">A</span><p class="faq-a-text">司法書士は1社140万円以下の案件のみ対応可能。弁護士は金額制限なし＆訴訟対応もOKです。費用は司法書士の方が安い傾向がありますが、高額・複雑な案件は弁護士への依頼が安心です。</p></div></div>
+    </div>
+    <div class="faq-item" id="faq5">
+      <button class="faq-q" onclick="toggleFaq('faq5')"><span class="faq-q-icon">Q</span><span class="faq-q-text">ブラックリストに載るとどうなりますか？</span><span class="faq-chevron">▼</span></button>
+      <div class="faq-a"><div class="faq-a-inner"><span class="faq-a-icon">A</span><p class="faq-a-text">5〜7年ほど新規のローン・クレカ作成が難しくなります。ただし携帯の分割や賃貸契約、就職に直接の影響はありません。借金苦から抜け出す方がメリットは大きいと言えます。</p></div></div>
+    </div>
+    <div class="faq-item" id="faq6">
+      <button class="faq-q" onclick="toggleFaq('faq6')"><span class="faq-q-icon">Q</span><span class="faq-q-text">闇金からも助けてもらえますか？</span><span class="faq-chevron">▼</span></button>
+      <div class="faq-a"><div class="faq-a-inner"><span class="faq-a-icon">A</span><p class="faq-a-text">シン・イストワール法律事務所が闇金対応に強みを持ちます。闇金は出資法違反のため元金含め返済義務はありません。専門の弁護士に依頼することで最短即日で取り立てを止めることができます。</p></div></div>
+    </div>
+  </div>
+  <section class="final-cta">
+    <div class="final-cta-deco"></div>
+    <div class="final-cta-kicker">あなたに合う解決策は？</div>
+    <h3>他にも適切な<br/>解決方法があるかも。</h3>
+    <p>債務整理だけじゃない。<br/>キャッシング・おまとめ・ファクタリング…<br/>60秒の診断で、あなたに最適な方法がわかります。</p>
+    <a href="https://vpscomparehub.com/shindan/" class="final-cta-shindan" onclick="gtag&&gtag('event','money_to_shindan')">
+      <span class="final-cta-shindan-main">60秒で無料診断する →</span>
+      <span class="final-cta-shindan-sub">個人情報入力ナシ・匿名OK・5問だけ</span>
+    </a>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-head">
+      <div class="footer-logo">整</div>
+      <div class="footer-name">借金スッキリnavi</div>
+    </div>
+    <p class="footer-text">本サイトは債務整理に関する情報をまとめた比較サイトです。<br/>掲載情報は各事務所の公式情報を元に作成しています。</p>
+    <div class="footer-links"><a href="/money/operator/" style="color:#A89A88;text-decoration:none">運営者情報</a><a href="/money/operator/" style="color:#A89A88;text-decoration:none">プライバシーポリシー</a></div>
+    <div class="footer-copy">© 2026 借金スッキリnavi</div>
+  </footer>
+</div>
+</body>
+</html>

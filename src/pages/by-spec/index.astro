@@ -1,0 +1,80 @@
+---
+import Base from '@/layouts/Base.astro';
+import { loadProviders } from '@/lib/data.ts';
+
+const providers = loadProviders();
+
+const buckets = [
+  { name: 'Under $5/mo', match: (p: any) => p.monthlyPrice < 5 },
+  { name: '$5 - $10/mo', match: (p: any) => p.monthlyPrice >= 5 && p.monthlyPrice < 10 },
+  { name: '$10 - $25/mo', match: (p: any) => p.monthlyPrice >= 10 && p.monthlyPrice < 25 },
+  { name: '$25 - $50/mo', match: (p: any) => p.monthlyPrice >= 25 && p.monthlyPrice < 50 },
+  { name: '$50+/mo', match: (p: any) => p.monthlyPrice >= 50 },
+];
+
+const ramBuckets = [
+  { name: '1 GB or less', match: (p: any) => p.memoryGB <= 1 },
+  { name: '2 GB', match: (p: any) => p.memoryGB > 1 && p.memoryGB <= 2 },
+  { name: '4 GB', match: (p: any) => p.memoryGB > 2 && p.memoryGB <= 4 },
+  { name: '8 GB', match: (p: any) => p.memoryGB > 4 && p.memoryGB <= 8 },
+  { name: '16+ GB', match: (p: any) => p.memoryGB > 8 },
+];
+
+const allPlans = providers.flatMap((p) =>
+  p.plans.map((pl) => ({ ...pl, provider: p.name, slug: p.slug })),
+);
+---
+<Base title="VPS By Spec" description="VPS plans bucketed by price and RAM tier across all tracked providers.">
+  <h1>VPS Plans by Spec</h1>
+
+  <h2>By price</h2>
+  {buckets.map((bucket) => {
+    const matches = allPlans.filter((pl) => bucket.match(pl)).sort((a, b) => a.monthlyPrice - b.monthlyPrice);
+    if (!matches.length) return null;
+    return (
+      <>
+        <h3>{bucket.name} ({matches.length} plans)</h3>
+        <table>
+          <thead><tr><th>Provider</th><th>Plan</th><th>vCPU</th><th>RAM</th><th>Storage</th><th>$/mo</th></tr></thead>
+          <tbody>
+            {matches.slice(0, 25).map((pl) => (
+              <tr>
+                <td><a href={`/providers/${pl.slug}`}>{pl.provider}</a></td>
+                <td>{pl.name}</td>
+                <td>{pl.vcpu}</td>
+                <td>{pl.memoryGB} GB</td>
+                <td>{pl.storageGB} GB</td>
+                <td><strong>${pl.monthlyPrice.toFixed(2)}</strong></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </>
+    );
+  })}
+
+  <h2>By RAM tier</h2>
+  {ramBuckets.map((bucket) => {
+    const matches = allPlans.filter((pl) => bucket.match(pl)).sort((a, b) => a.monthlyPrice - b.monthlyPrice);
+    if (!matches.length) return null;
+    return (
+      <>
+        <h3>{bucket.name} ({matches.length} plans)</h3>
+        <table>
+          <thead><tr><th>Provider</th><th>Plan</th><th>vCPU</th><th>RAM</th><th>$/mo</th></tr></thead>
+          <tbody>
+            {matches.slice(0, 15).map((pl) => (
+              <tr>
+                <td><a href={`/providers/${pl.slug}`}>{pl.provider}</a></td>
+                <td>{pl.name}</td>
+                <td>{pl.vcpu}</td>
+                <td>{pl.memoryGB} GB</td>
+                <td><strong>${pl.monthlyPrice.toFixed(2)}</strong></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </>
+    );
+  })}
+</Base>

@@ -1,0 +1,50 @@
+name: Build & deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Build site
+        env:
+          PUBLIC_SITE_URL: ${{ vars.PUBLIC_SITE_URL || format('https://{0}.github.io', github.repository_owner) }}
+          PUBLIC_AFF_VULTR: ${{ secrets.PUBLIC_AFF_VULTR }}
+          PUBLIC_AFF_DIGITALOCEAN: ${{ secrets.PUBLIC_AFF_DIGITALOCEAN }}
+          PUBLIC_AFF_HETZNER: ${{ secrets.PUBLIC_AFF_HETZNER }}
+          PUBLIC_AFF_LINODE: ${{ secrets.PUBLIC_AFF_LINODE }}
+          PUBLIC_AFF_OVH: ${{ secrets.PUBLIC_AFF_OVH }}
+          PUBLIC_AFF_CLOUDWAYS: ${{ secrets.PUBLIC_AFF_CLOUDWAYS }}
+        run: npm run build
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

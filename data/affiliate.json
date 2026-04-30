@@ -1,0 +1,19 @@
+{
+  "_comment": "Replace REPLACE_* placeholders with real affiliate IDs after the relevant programs approve the site. Do NOT commit real IDs to a public repo if you can avoid it - prefer setting them as env vars (PUBLIC_AFF_<provider_slug>) which override the values below at build time.",
+  "tokens": {
+    "REPLACE_VULTR_REF": "",
+    "REPLACE_DO_REF": "",
+    "REPLACE_HETZNER_REF": "",
+    "REPLACE_LINODE_REF": "",
+    "REPLACE_OVH_REF": "",
+    "REPLACE_CLOUDWAYS_REF": ""
+  },
+  "envVarMap": {
+    "vultr": "PUBLIC_AFF_VULTR",
+    "digitalocean": "PUBLIC_AFF_DIGITALOCEAN",
+    "hetzner": "PUBLIC_AFF_HETZNER",
+    "linode": "PUBLIC_AFF_LINODE",
+    "ovh": "PUBLIC_AFF_OVH",
+    "cloudways": "PUBLIC_AFF_CLOUDWAYS"
+  }
+}
