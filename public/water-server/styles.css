@@ -356,8 +356,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .svc-image-link img {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  aspect-ratio: 6 / 5;
+  object-fit: contain;
+  background: #fff;
+  display: block;
+}
+.a8-pixel {
+  width: 1px;
+  height: 1px;
   display: block;
 }
 .svc-image-note {

@@ -3,11 +3,15 @@
  */
 
 const AFFILIATE_LINKS = {
-  oken:           "https://example.com/oken",
-  every_frecious: "https://example.com/every-frecious",
-  cosmo:          "https://example.com/cosmo-water",
+  oken:           "https://px.a8.net/svt/ejp?a8mat=4B1XE4+325A0A+1LOO+5Z6WY",
+  oken_banner:    "https://px.a8.net/svt/ejp?a8mat=4B1XE4+325A0A+1LOO+6NMJL",
+  every_frecious: "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3H144Q+2B8Y+15PEXE",
+  every_banner:   "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3H144Q+2B8Y+15XRUP",
+  cosmo:          "https://px.a8.net/svt/ejp?a8mat=4B3G6G+F173ZE+4K9C+NW4IA",
+  cosmo_banner:   "https://px.a8.net/svt/ejp?a8mat=4B3G6G+F173ZE+4K9C+NUMHT",
   crecla_putio:   "https://example.com/crecla-putio",
-  frecious:       "https://example.com/frecious",
+  frecious:       "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3TJ7U2+2B8Y+674EQ",
+  frecious_banner: "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3TJ7U2+2B8Y+6N741",
   urunon:         "https://example.com/urunon",
   humming:        "https://example.com/humming-water"
 };
