@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Humming Water comparison image</title>
+  <desc id="desc">Stylized filtered water server illustration with green accent.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#dcfce7"/><stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#15803d"/><stop offset="1" stop-color="#166534"/>
+    </linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#0c2d5a" flood-opacity=".15"/></filter>
+  </defs>
+  <rect width="960" height="540" rx="30" fill="url(#bg)"/>
+  <rect x="128" y="346" width="704" height="68" rx="20" fill="#bbf7d0"/>
+  <g filter="url(#s)">
+    <rect x="382" y="124" width="196" height="278" rx="38" fill="#ffffff"/>
+    <rect x="426" y="168" width="108" height="58" rx="18" fill="url(#accent)"/>
+    <circle cx="460" cy="197" r="13" fill="#86efac"/>
+    <circle cx="500" cy="197" r="13" fill="#bbf7d0"/>
+    <rect x="422" y="270" width="116" height="92" rx="24" fill="#f0fdf4"/>
+    <path d="M480 286 C504 314 520 338 520 358 C520 382 502 400 480 400 C458 400 440 382 440 358 C440 338 456 314 480 286Z" fill="#22c55e" opacity=".75"/>
+  </g>
+  <text x="480" y="82" text-anchor="middle" fill="#0c2d5a" font-family="Arial, sans-serif" font-size="28" font-weight="800">Filtered Water</text>
+  <text x="480" y="470" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="20" font-weight="700">Bottle-free daily use</text>
+</svg>

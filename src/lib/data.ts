@@ -1,8 +1,9 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import type { Provider } from './types.ts';
 
-const ROOT = new URL('../../', import.meta.url).pathname;
+const ROOT = fileURLToPath(new URL('../../', import.meta.url));
 const DATA_DIR = join(ROOT, 'data');
 const PROVIDERS_DIR = join(DATA_DIR, 'providers');
 

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Oken Water comparison image</title>
+  <desc id="desc">Stylized bottle water server illustration for Oken Water.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#e0f2fe"/><stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#1976d2"/><stop offset="1" stop-color="#0d47a1"/>
+    </linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#0c2d5a" flood-opacity=".18"/></filter>
+  </defs>
+  <rect width="960" height="540" rx="30" fill="url(#bg)"/>
+  <rect x="82" y="70" width="796" height="390" rx="30" fill="#ffffff" opacity=".72"/>
+  <g filter="url(#s)">
+    <rect x="382" y="108" width="196" height="326" rx="34" fill="#ffffff"/>
+    <rect x="418" y="150" width="124" height="72" rx="18" fill="url(#accent)"/>
+    <circle cx="458" cy="186" r="15" fill="#7dd3fc"/>
+    <circle cx="502" cy="186" r="15" fill="#bae6fd"/>
+    <path d="M480 256 C522 306 546 348 546 382 C546 422 516 450 480 450 C444 450 414 422 414 382 C414 348 438 306 480 256Z" fill="#38bdf8" opacity=".72"/>
+    <rect x="420" y="470" width="120" height="18" rx="9" fill="#cbd5e1"/>
+  </g>
+  <text x="480" y="78" text-anchor="middle" fill="#0c2d5a" font-family="Arial, sans-serif" font-size="28" font-weight="800">Bottle Water</text>
+  <text x="480" y="502" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="20" font-weight="700">Natural / RO water type</text>
+</svg>
