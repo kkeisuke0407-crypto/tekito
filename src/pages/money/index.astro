@@ -370,14 +370,14 @@ const description = "返済が苦しい・複数社から借入・督促が止�
     /* Compare Table */
     .compare-helper {
       margin: 0 16px 8px; padding: 9px 12px;
-      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px 10px;
       background: #FFF8EE; border: 1px solid var(--border); border-radius: 12px;
       font-size: 11px; color: var(--ink-soft);
     }
     .compare-hint { color: var(--primary-dark); font-weight: 800; }
     .compare-arrow { color: var(--primary-dark); font-weight: 900; letter-spacing: 0.08em; white-space: nowrap; }
     .compare-wrap { padding: 8px 12px 4px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-    .compare-table { min-width: 700px; background: #fff; border-radius: 16px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 6px 16px rgba(196,110,60,0.06); }
+    .compare-table { min-width: 820px; background: #fff; border-radius: 16px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 6px 16px rgba(196,110,60,0.06); }
     .ct-head { display: grid; grid-template-columns: 88px repeat(6, 1fr); background: linear-gradient(180deg, var(--primary-soft), #FFF1E2); border-bottom: 1px solid var(--border); }
     .ct-head-label { padding: 10px 8px; font-size: 10px; color: var(--ink-soft); font-weight: 700; border-right: 1px solid var(--border); }
     .ct-head-firm { padding: 8px 4px; text-align: center; cursor: pointer; border-right: 1px solid var(--border); transition: background 0.2s; }
@@ -556,7 +556,7 @@ const description = "返済が苦しい・複数社から借入・督促が止�
 
       .compare-helper { margin: 0 28px 10px; }
       .compare-wrap { padding: 8px 28px 4px; }
-      .compare-table { min-width: 760px; }
+      .compare-table { min-width: 860px; }
       .ct-row-key { font-size: 12px; padding: 11px 12px; }
       .ct-row-val { font-size: 12px; }
       .ct-head-firm { padding: 10px 6px; }
@@ -727,7 +727,7 @@ const description = "返済が苦しい・複数社から借入・督促が止�
       <div class="firm-tagline" style="background:#FFF1F5;color:#E8487A">✦ 女性専用窓口あり・費用説明が明確</div>
       <div class="firm-specs">
         <div class="firm-spec"><div class="firm-spec-label">任意整理 / 1社</div><div class="firm-spec-val" style="color:#FF6B35">45,000円〜</div></div>
-        <div class="firm-spec"><div class="firm-spec-label">対応</div><div class="firm-spec-val" style="color:#2FB67E">受任後に通知</div></div>
+        <div class="firm-spec"><div class="firm-spec-label">相談料</div><div class="firm-spec-val" style="color:#2FB67E">無料</div></div>
         <div class="firm-spec"><div class="firm-spec-label">対応エリア</div><div class="firm-spec-val" style="color:#4A90E2">首都圏中心</div></div>
         <div class="firm-spec"><div class="firm-spec-label">実績</div><div class="firm-spec-val" style="color:#A062D4">2003年開設</div></div>
       </div>
@@ -763,7 +763,7 @@ const description = "返済が苦しい・複数社から借入・督促が止�
       <div class="firm-tagline" style="background:#EEFBF4;color:#2FB67E">✦ 任意整理1社11,000円〜・減額報酬なし</div>
       <div class="firm-specs">
         <div class="firm-spec"><div class="firm-spec-label">任意整理 / 1社</div><div class="firm-spec-val" style="color:#FF6B35">11,000円〜</div></div>
-        <div class="firm-spec"><div class="firm-spec-label">対応</div><div class="firm-spec-val" style="color:#2FB67E">受任後に停止</div></div>
+        <div class="firm-spec"><div class="firm-spec-label">減額報酬</div><div class="firm-spec-val" style="color:#2FB67E">なし</div></div>
         <div class="firm-spec"><div class="firm-spec-label">対応エリア</div><div class="firm-spec-val" style="color:#4A90E2">全国対応</div></div>
         <div class="firm-spec"><div class="firm-spec-label">相談方法</div><div class="firm-spec-val" style="color:#A062D4">LINE対応</div></div>
       </div>
@@ -835,7 +835,7 @@ const description = "返済が苦しい・複数社から借入・督促が止�
       <div class="firm-tagline" style="background:#FFF2F8;color:#D95F9F">✦ 相談料無料・費用が明確な弁護士法人</div>
       <div class="firm-specs">
         <div class="firm-spec"><div class="firm-spec-label">任意整理 / 1社</div><div class="firm-spec-val" style="color:#FF6B35">49,500円〜</div></div>
-        <div class="firm-spec"><div class="firm-spec-label">対応</div><div class="firm-spec-val" style="color:#2FB67E">受任後に停止</div></div>
+        <div class="firm-spec"><div class="firm-spec-label">費用表示</div><div class="firm-spec-val" style="color:#2FB67E">公式掲載</div></div>
         <div class="firm-spec"><div class="firm-spec-label">対応エリア</div><div class="firm-spec-val" style="color:#4A90E2">全国対応</div></div>
         <div class="firm-spec"><div class="firm-spec-label">相談料</div><div class="firm-spec-val" style="color:#A062D4">無料</div></div>
       </div>
@@ -871,7 +871,7 @@ const description = "返済が苦しい・複数社から借入・督促が止�
       <div class="firm-tagline" style="background:#F1F6FF;color:#3D7DFF">✦ 相談は何度でも無料・土日祝電話対応</div>
       <div class="firm-specs">
         <div class="firm-spec"><div class="firm-spec-label">任意整理 / 1社</div><div class="firm-spec-val" style="color:#FF6B35">11,000円〜</div></div>
-        <div class="firm-spec"><div class="firm-spec-label">対応</div><div class="firm-spec-val" style="color:#2FB67E">受任後に通知</div></div>
+        <div class="firm-spec"><div class="firm-spec-label">電話相談</div><div class="firm-spec-val" style="color:#2FB67E">土日祝対応</div></div>
         <div class="firm-spec"><div class="firm-spec-label">対応エリア</div><div class="firm-spec-val" style="color:#4A90E2">全国対応</div></div>
         <div class="firm-spec"><div class="firm-spec-label">相談料</div><div class="firm-spec-val" style="color:#A062D4">何度でも無料</div></div>
       </div>
@@ -907,7 +907,7 @@ const description = "返済が苦しい・複数社から借入・督促が止�
       <div class="firm-tagline" style="background:#F1F7FF;color:#2F63B7">✦ 費用を抑えて司法書士に相談したい方向け</div>
       <div class="firm-specs">
         <div class="firm-spec"><div class="firm-spec-label">任意整理 / 1社</div><div class="firm-spec-val" style="color:#FF6B35">22,000円〜</div></div>
-        <div class="firm-spec"><div class="firm-spec-label">対応</div><div class="firm-spec-val" style="color:#2FB67E">相談後に案内</div></div>
+        <div class="firm-spec"><div class="firm-spec-label">着手金</div><div class="firm-spec-val" style="color:#2FB67E">無料</div></div>
         <div class="firm-spec"><div class="firm-spec-label">対応エリア</div><div class="firm-spec-val" style="color:#4A90E2">全国対応</div></div>
         <div class="firm-spec"><div class="firm-spec-label">相談料</div><div class="firm-spec-val" style="color:#A062D4">無料</div></div>
       </div>
@@ -935,10 +935,10 @@ const description = "返済が苦しい・複数社から借入・督促が止�
   <div class="sec-head" id="compare">
     <span class="sec-kicker">COMPARE</span>
     <h2>一目でわかる比較表</h2>
-    <p>費用・対応範囲・相談方法をまとめて確認</p>
+    <p>費用・手続き範囲・相談しやすさをまとめて確認</p>
   </div>
   <div class="compare-helper">
-    <span class="compare-hint">横にスクロールして6社を比較できます</span>
+    <span class="compare-hint">競合LPでよく比較される費用・区分・相談方法に絞りました</span>
     <span class="compare-arrow">左右 →</span>
   </div>
   <div class="compare-wrap">
@@ -970,24 +970,21 @@ const description = "返済が苦しい・複数社から借入・督促が止�
           <div class="ct-firm-name">はたの</div>
         </div>
       </div>
-      <!-- サービス ○× -->
-      <div class="ct-row"><div class="ct-row-key">任意整理</div><div class="ct-row-val" data-col="0">✅</div><div class="ct-row-val" data-col="1">✅</div><div class="ct-row-val" data-col="2">✅</div><div class="ct-row-val" data-col="3">✅</div><div class="ct-row-val" data-col="4">✅</div><div class="ct-row-val" data-col="5">✅</div></div>
-      <div class="ct-row stripe"><div class="ct-row-key">個人再生</div><div class="ct-row-val" data-col="0">✅</div><div class="ct-row-val" data-col="1">書類</div><div class="ct-row-val" data-col="2">✅</div><div class="ct-row-val" data-col="3">✅</div><div class="ct-row-val" data-col="4">✅</div><div class="ct-row-val" data-col="5">書類</div></div>
-      <div class="ct-row"><div class="ct-row-key">自己破産</div><div class="ct-row-val" data-col="0">✅</div><div class="ct-row-val" data-col="1">書類</div><div class="ct-row-val" data-col="2">✅</div><div class="ct-row-val" data-col="3">✅</div><div class="ct-row-val" data-col="4">✅</div><div class="ct-row-val" data-col="5">書類</div></div>
-      <div class="ct-row stripe"><div class="ct-row-key">過払い金</div><div class="ct-row-val" data-col="0">✅</div><div class="ct-row-val" data-col="1">✅</div><div class="ct-row-val" data-col="2">✅</div><div class="ct-row-val" data-col="3">✅</div><div class="ct-row-val" data-col="4">✅</div><div class="ct-row-val" data-col="5">✅</div></div>
-      <!-- 詳細行 -->
-      <div class="ct-row"><div class="ct-row-key">任意整理/1社</div><div class="ct-row-val" data-col="0">45,000円〜</div><div class="ct-row-val" data-col="1">11,000円〜</div><div class="ct-row-val" data-col="2">53,000円〜</div><div class="ct-row-val" data-col="3">49,500円〜</div><div class="ct-row-val" data-col="4">11,000円〜</div><div class="ct-row-val" data-col="5">22,000円〜</div></div>
-      <div class="ct-row stripe"><div class="ct-row-key">相談料</div><div class="ct-row-val" data-col="0">無料</div><div class="ct-row-val" data-col="1">無料</div><div class="ct-row-val" data-col="2">無料</div><div class="ct-row-val" data-col="3">無料</div><div class="ct-row-val" data-col="4">何度でも無料</div><div class="ct-row-val" data-col="5">無料</div></div>
-      <div class="ct-row"><div class="ct-row-key">対応</div><div class="ct-row-val" data-col="0">受任後通知</div><div class="ct-row-val" data-col="1">受任後停止</div><div class="ct-row-val" data-col="2">24h受付</div><div class="ct-row-val" data-col="3">受任後停止</div><div class="ct-row-val" data-col="4">受任後通知</div><div class="ct-row-val" data-col="5">相談後案内</div></div>
-      <div class="ct-row stripe"><div class="ct-row-key">サポート</div><div class="ct-row-val" data-col="0">電話 / Web / 来所</div><div class="ct-row-val" data-col="1">電話 / LINE / メール</div><div class="ct-row-val" data-col="2">電話 / Web / 来所</div><div class="ct-row-val" data-col="3">電話 / メール / Web</div><div class="ct-row-val" data-col="4">電話 / メール</div><div class="ct-row-val" data-col="5">電話 / Web / 出張</div></div>
+      <div class="ct-row"><div class="ct-row-key">事務所区分</div><div class="ct-row-val" data-col="0">法律事務所</div><div class="ct-row-val" data-col="1">司法書士</div><div class="ct-row-val" data-col="2">法律事務所</div><div class="ct-row-val" data-col="3">弁護士法人</div><div class="ct-row-val" data-col="4">弁護士法人</div><div class="ct-row-val" data-col="5">司法書士法人</div></div>
+      <div class="ct-row stripe"><div class="ct-row-key">任意整理費用</div><div class="ct-row-val" data-col="0">45,000円〜/社</div><div class="ct-row-val" data-col="1">11,000円〜/社</div><div class="ct-row-val" data-col="2">53,000円〜/社</div><div class="ct-row-val" data-col="3">49,500円〜/社</div><div class="ct-row-val" data-col="4">11,000円〜/社</div><div class="ct-row-val" data-col="5">22,000円〜/社</div></div>
+      <div class="ct-row"><div class="ct-row-key">相談料</div><div class="ct-row-val" data-col="0">無料</div><div class="ct-row-val" data-col="1">無料</div><div class="ct-row-val" data-col="2">無料</div><div class="ct-row-val" data-col="3">無料</div><div class="ct-row-val" data-col="4">何度でも無料</div><div class="ct-row-val" data-col="5">無料</div></div>
+      <div class="ct-row stripe"><div class="ct-row-key">対応手続き</div><div class="ct-row-val" data-col="0">任意/再生/破産/過払い</div><div class="ct-row-val" data-col="1">任意/過払い/書類作成</div><div class="ct-row-val" data-col="2">任意/再生/破産/ヤミ金</div><div class="ct-row-val" data-col="3">任意/再生/破産/過払い</div><div class="ct-row-val" data-col="4">任意/再生/破産/過払い</div><div class="ct-row-val" data-col="5">任意/過払い/書類作成</div></div>
+      <div class="ct-row"><div class="ct-row-key">相談方法</div><div class="ct-row-val" data-col="0">電話/Web/来所</div><div class="ct-row-val" data-col="1">電話/LINE/メール</div><div class="ct-row-val" data-col="2">電話/Web/来所</div><div class="ct-row-val" data-col="3">電話/メール/Web</div><div class="ct-row-val" data-col="4">電話/メール</div><div class="ct-row-val" data-col="5">電話/Web/出張</div></div>
+      <div class="ct-row stripe"><div class="ct-row-key">相談しやすさ</div><div class="ct-row-val" data-col="0">女性専用窓口</div><div class="ct-row-val" data-col="1">LINE相談OK</div><div class="ct-row-val" data-col="2">24時間365日受付</div><div class="ct-row-val" data-col="3">全国対応</div><div class="ct-row-val" data-col="4">土日祝電話対応</div><div class="ct-row-val" data-col="5">全国出張相談</div></div>
+      <div class="ct-row"><div class="ct-row-key">費用の特徴</div><div class="ct-row-val" data-col="0">分割相談可</div><div class="ct-row-val" data-col="1">減額報酬なし</div><div class="ct-row-val" data-col="2">総額確認推奨</div><div class="ct-row-val" data-col="3">税込費用掲載</div><div class="ct-row-val" data-col="4">相談何度でも無料</div><div class="ct-row-val" data-col="5">着手金無料</div></div>
     </div>
-    <div class="compare-note">※料金は2026年5月1日時点の公式情報ベースです。司法書士は債権額や手続き内容に制限があり、個人再生・自己破産は書類作成中心となる場合があります。</div>
+    <div class="compare-note">※料金は2026年5月1日時点の公式情報ベースです。「書類作成」は、司法書士が裁判所提出書類の作成をサポートする意味です。裁判所での代理や高額・複雑な案件は弁護士へ確認してください。</div>
   </div>
   <!-- 手続きの流れ -->
   <div class="sec-head" id="flow">
     <span class="sec-kicker">FLOW</span>
     <h2>借金減額相談の流れ</h2>
-    <p>受任通知で督促停止を目指します</p>
+    <p>依頼後は専門家から債権者へ通知します</p>
   </div>
   <div class="howto-wrap">
     <div class="howto-steps">
@@ -1001,8 +998,8 @@ const description = "返済が苦しい・複数社から借入・督促が止�
       <div class="howto-step">
         <div class="howto-num">2</div>
         <div class="howto-body">
-          <strong>受任通知→督促がすぐ止まる</strong>
-          <p>依頼後、事務所から各債権者へ受任通知が送られると、直接の督促が止まります。</p>
+          <strong>専門家から債権者へ通知</strong>
+          <p>依頼後、事務所から各債権者へ通知されると、本人への直接の督促が止まる場合があります。</p>
         </div>
       </div>
       <div class="howto-step">
