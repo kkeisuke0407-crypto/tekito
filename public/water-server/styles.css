@@ -162,12 +162,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: 100%; height: auto; display: block;
   border-radius: 14px;
 }
-.hero-media-note {
-  margin-top: .45rem;
-  color: rgba(255,255,255,.72);
-  font-size: .68rem;
-  line-height: 1.55;
-}
 
 /* ── PR Disclosure Bar ──────────────────────────── */
 .pr-bar {
@@ -271,6 +265,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   text-decoration: none; transition: background .15s; white-space: nowrap;
 }
 .compare-btn:hover { background: var(--teal-dk); text-decoration: none; color: #fff; }
+.compare-pending {
+  color: var(--muted);
+  font-weight: 800;
+}
 .ok  { color: var(--good); font-weight: 700; }
 .tri { color: var(--warn); font-weight: 700; }
 .chk { color: var(--warn); font-size: .72rem; }
@@ -354,6 +352,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   box-shadow: var(--shadow);
   text-decoration: none;
 }
+.svc-image-static {
+  cursor: default;
+}
+.svc-image-static:hover {
+  transform: none;
+  box-shadow: none;
+}
 .svc-image-link img {
   width: 100%;
   aspect-ratio: 6 / 5;
@@ -365,12 +370,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: 1px;
   height: 1px;
   display: block;
-}
-.svc-image-note {
-  font-size: .68rem;
-  color: var(--muted);
-  line-height: 1.5;
-  margin-bottom: .7rem;
 }
 .svc-tagline {
   font-size: .83rem; font-weight: 700; color: var(--muted);
