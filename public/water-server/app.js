@@ -7,10 +7,12 @@ const AFFILIATE_LINKS = {
   oken_banner:    "https://px.a8.net/svt/ejp?a8mat=4B1XE4+325A0A+1LOO+6NMJL",
   every_frecious: "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3H144Q+2B8Y+15PEXE",
   every_banner:   "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3H144Q+2B8Y+15XRUP",
-  cosmo:          "https://px.a8.net/svt/ejp?a8mat=4B3G6G+F173ZE+4K9C+NW4IA",
-  cosmo_banner:   "https://px.a8.net/svt/ejp?a8mat=4B3G6G+F173ZE+4K9C+NUMHT",
   frecious:       "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3TJ7U2+2B8Y+674EQ",
-  frecious_banner: "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3TJ7U2+2B8Y+6N741"
+  frecious_banner: "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3TJ7U2+2B8Y+6N741",
+  water_one:      "https://h.accesstrade.net/sp/cc?rk=0100pknn00orwp",
+  ocean:          "https://h.accesstrade.net/sp/cc?rk=0100o23g00orwp",
+  lohasui:        "https://example.com/lohasui",
+  premium_water:  "https://example.com/premium-water"
 };
 
 function track(eventName, params) {
