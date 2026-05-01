@@ -9,6 +9,7 @@ The repository now contains multiple案件:
 - Debt settlement / money trouble LP and article drafts
 
 案件ごとの目的、公開ルート、対象ASP/広告主、編集場所は **[PROJECTS.md](./PROJECTS.md)** にまとめています。
+今日決めた広告/案件方針は **[STRATEGY.md](./STRATEGY.md)** に残しています。
 
 See **[SETUP.md](./SETUP.md)** for the human-side registration steps (domain, affiliate programs, secrets) needed to take it live.
 
