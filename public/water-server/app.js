@@ -11,8 +11,8 @@ const AFFILIATE_LINKS = {
   frecious_banner: "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3TJ7U2+2B8Y+6N741",
   water_one:      "https://h.accesstrade.net/sp/cc?rk=0100pknn00orwp",
   ocean:          "https://h.accesstrade.net/sp/cc?rk=0100o23g00orwp",
-  lohasui:        "https://example.com/lohasui",
-  premium_water:  "https://example.com/premium-water"
+  lohasui:        "https://lohasui.jp/",
+  premium_water:  "https://premium-water.net/"
 };
 
 function track(eventName, params) {
