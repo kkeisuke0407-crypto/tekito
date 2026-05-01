@@ -145,7 +145,7 @@ const description = "返済が苦しい・複数社から借入・督促が止�
       .extra-offers { margin: 12px 28px 4px; padding: 18px 20px; }
       .extra-offers h3 { font-size: 22px; }
       .extra-offers p { font-size: 13px; }
-      .offer-grid { grid-template-columns: repeat(3,1fr); gap: 12px; }
+      .offer-grid { grid-template-columns: 1fr; gap: 12px; }
 
       /* FAQ */
       .faq-list { padding: 8px 28px 24px; }
@@ -307,22 +307,37 @@ const description = "返済が苦しい・複数社から借入・督促が止�
     .firm-cta-note { margin-top: 6px; text-align: center; font-size: 10px; color: var(--ink-soft); }
     .firm-pick { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--border); font-size: 11px; color: var(--ink-soft); display: flex; align-items: center; gap: 6px; }
     .firm-pick strong { font-weight: 700; color: var(--primary-dark); }
-    .firm-banner { margin-top: 14px; border-radius: 12px; overflow: hidden; line-height: 0; }
-    .firm-banner a img { width: 100%; height: auto; display: block; }
-    .firm-banner > img { position: absolute; width: 1px; height: 1px; }
-    .extra-offers { margin: 10px 16px 6px; background: #FFF7EE; border: 1px solid #FFDDBF; border-radius: 16px; padding: 14px 12px; }
-    .extra-offers h3 { font-family: var(--zen); font-size: 17px; margin-bottom: 6px; color: #B8572A; }
+    .firm-banner { margin-top: 12px; border-radius: 14px; overflow: hidden; }
+    .firm-banner a {
+      position: relative; display: grid; gap: 3px; min-height: 90px;
+      padding: 13px 14px; border: 1px solid #FFD2AA; border-radius: 14px;
+      background: linear-gradient(135deg, #FFF8EE 0%, #FFE2C8 58%, #FFD3B2 100%);
+      color: var(--ink); line-height: 1.45; box-shadow: inset 0 1px 0 rgba(255,255,255,0.75);
+      overflow: hidden;
+    }
+    .firm-banner a::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.55) 46%, transparent 62%);
+      pointer-events: none;
+    }
+    .firm-banner-kicker { position: relative; z-index: 1; font-size: 10px; font-weight: 800; color: var(--primary-dark); letter-spacing: 0.08em; }
+    .firm-banner-title { position: relative; z-index: 1; font-family: var(--zen); font-size: 15px; font-weight: 900; color: var(--ink); }
+    .firm-banner-copy { position: relative; z-index: 1; font-size: 11px; font-weight: 700; color: var(--ink-soft); }
+    .firm-banner-action { position: relative; z-index: 1; margin-top: 4px; justify-self: start; padding: 5px 9px; border-radius: 999px; background: #fff; color: var(--primary-dark); font-size: 11px; font-weight: 800; }
+    .extra-offers { margin: 10px 16px 6px; background: #F6FAFF; border: 1px solid #D8E9FF; border-radius: 16px; padding: 14px 12px; }
+    .extra-offers h3 { font-family: var(--zen); font-size: 17px; margin-bottom: 6px; color: #2F63B7; }
     .extra-offers p { font-size: 12px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 10px; }
     .offer-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
     .offer-item { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 10px; }
     .offer-title { font-size: 13px; font-weight: 700; margin-bottom: 8px; }
     .offer-btn { display: flex; justify-content: center; align-items: center; background: linear-gradient(180deg, #FF8A4D, var(--primary)); color: #fff; border-radius: 10px; padding: 10px; font-size: 13px; font-weight: 700; margin-top: 8px; text-decoration: none; }
+    .offer-btn.is-disabled { background: #EEF3F9; color: #5F6D7A; box-shadow: none; cursor: default; }
     .offer-note { margin-top: 8px; font-size: 10px; color: #8D7A67; text-align: center; }
 
     /* Compare Table */
     .compare-wrap { padding: 8px 12px 4px; }
     .compare-table { background: #fff; border-radius: 16px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 6px 16px rgba(196,110,60,0.06); }
-    .ct-head { display: grid; grid-template-columns: 88px repeat(5, 1fr); background: linear-gradient(180deg, var(--primary-soft), #FFF1E2); border-bottom: 1px solid var(--border); }
+    .ct-head { display: grid; grid-template-columns: 88px repeat(4, 1fr); background: linear-gradient(180deg, var(--primary-soft), #FFF1E2); border-bottom: 1px solid var(--border); }
     .ct-head-label { padding: 10px 8px; font-size: 10px; color: var(--ink-soft); font-weight: 700; border-right: 1px solid var(--border); }
     .ct-head-firm { padding: 8px 4px; text-align: center; cursor: pointer; border-right: 1px solid var(--border); transition: background 0.2s; }
     .ct-head-firm:last-child { border-right: none; }
@@ -330,7 +345,7 @@ const description = "返済が苦しい・複数社から借入・督促が止�
     .ct-head-emblem { display: flex; justify-content: center; margin-bottom: 4px; }
     .ct-emblem-sm { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; font-family: var(--zen); font-weight: 900; font-size: 14px; }
     .ct-firm-name { font-family: var(--zen); font-weight: 800; font-size: 10px; color: var(--ink); line-height: 1.2; }
-    .ct-row { display: grid; grid-template-columns: 88px repeat(5, 1fr); border-bottom: 1px solid var(--border); }
+    .ct-row { display: grid; grid-template-columns: 88px repeat(4, 1fr); border-bottom: 1px solid var(--border); }
     .ct-row:last-child { border-bottom: none; }
     .ct-row-key { padding: 10px 10px; font-size: 11px; font-weight: 700; color: var(--ink); border-right: 1px solid var(--border); display: flex; align-items: center; }
     .ct-row-val { padding: 10px 6px; text-align: center; border-right: 1px solid var(--border); font-size: 11px; font-weight: 700; color: var(--ink); line-height: 1.3; display: flex; align-items: center; justify-content: center; }
@@ -524,39 +539,43 @@ const description = "返済が苦しい・複数社から借入・督促が止�
 
   <div class="sec-head" id="ranking">
     <span class="sec-kicker">OUR TOP 3</span>
-    <h2>おすすめの債務整理 5選</h2>
+    <h2>おすすめの債務整理 3選</h2>
     <p>それぞれ得意分野が違うので、自分に合うところを選ぼう</p>
   </div>
   <div class="ranking-list">
-    <!-- ひばり法律事務所 -->
+    <!-- さくら中央 -->
     <div class="firm-card">
       <div class="pick-badge" style="background:#E8487A;box-shadow:0 4px 10px #E8487A55">安心NO.1</div>
       <div class="firm-head">
         <div class="firm-emblem" style="background:linear-gradient(135deg,#FF8FB1,#E8487A);box-shadow:0 6px 14px #E8487A33">さ</div>
         <div style="flex:1;min-width:0">
           <span class="firm-type" style="color:#E8487A;background:#FFD7E2">弁護士法人</span>
-          <div class="firm-name">弁護士法人ひばり法律事務所</div>
+          <div class="firm-name">さくら中央法律事務所</div>
         </div>
       </div>
-      <div class="firm-tagline" style="background:#FFF1F5;color:#E8487A">✦ 借金問題の解決実績が豊富・全国対応</div>
+      <div class="firm-tagline" style="background:#FFF1F5;color:#E8487A">✦ 女性専用窓口あり・丁寧な対応が評判</div>
       <div class="firm-specs">
-        <div class="firm-spec"><div class="firm-spec-label">任意整理 / 1社</div><div class="firm-spec-val" style="color:#FF6B35">要相談</div></div>
+        <div class="firm-spec"><div class="firm-spec-label">任意整理 / 1社</div><div class="firm-spec-val" style="color:#FF6B35">45,000円〜</div></div>
         <div class="firm-spec"><div class="firm-spec-label">対応スピード</div><div class="firm-spec-val" style="color:#2FB67E">最短即日着手</div></div>
         <div class="firm-spec"><div class="firm-spec-label">対応エリア</div><div class="firm-spec-val" style="color:#4A90E2">首都圏中心・全国</div></div>
         <div class="firm-spec"><div class="firm-spec-label">実績</div><div class="firm-spec-val" style="color:#A062D4">数万件超（2003年〜）</div></div>
       </div>
       <div class="firm-badges"><span class="firm-badge"># 女性専用窓口</span><span class="firm-badge"># 全国対応</span><span class="firm-badge"># 出張相談OK</span></div>
       <div class="firm-pros">
-        <div class="firm-pro"><span style="color:#2FB67E;flex-shrink:0">✓</span><span>債務整理の相談実績が豊富で、初めてでも相談しやすい</span></div>
-        <div class="firm-pro"><span style="color:#2FB67E;flex-shrink:0">✓</span><span>任意整理・個人再生・自己破産・過払い金に幅広く対応</span></div>
+        <div class="firm-pro"><span style="color:#2FB67E;flex-shrink:0">✓</span><span>女性専用の相談窓口があり女性でも話しやすい環境</span></div>
+        <div class="firm-pro"><span style="color:#2FB67E;flex-shrink:0">✓</span><span>任意整理・個人再生・自己破産・過払い金すべて対応</span></div>
       </div>
-      <a href="https://h.accesstrade.net/sp/cc?rk=0100l3sb00orwh" rel="nofollow" class="firm-cta" onclick="return gtagSendEvent(this.href)">📞 無料相談はこちら（公式サイト）</a>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1WM4+182536+5T5G+5YJRM" rel="nofollow sponsored" class="firm-cta" onclick="return gtagSendEvent(this.href)">📞 無料相談はこちら（公式サイト）</a>
       <div class="firm-cta-note">相談料0円・匿名OK・全国対応</div>
       <div class="firm-banner">
-        <a href="https://h.accesstrade.net/sp/cc?rk=0100l3sb00orwh" rel="nofollow"><img border="0" alt="" src="https://h.accesstrade.net/sp/rr?rk=0100l3sb00orwh"></a>
-        
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1WM4+182536+5T5G+5YJRM" rel="nofollow sponsored" onclick="return gtagSendEvent(this.href)">
+          <span class="firm-banner-kicker">OFFICIAL</span>
+          <span class="firm-banner-title">さくら中央法律事務所</span>
+          <span class="firm-banner-copy">女性専用窓口あり・匿名相談OK</span>
+          <span class="firm-banner-action">無料相談へ進む</span>
+        </a>
       </div>
-      <div class="firm-pick"><strong>こんな人に◎</strong>初めて債務整理を相談する方・実績重視の方</div>
+      <div class="firm-pick"><strong>こんな人に◎</strong>初めての相談で不安な方・女性の方</div>
     </div>
 
     <!-- アース司法書士 -->
@@ -571,75 +590,75 @@ const description = "返済が苦しい・複数社から借入・督促が止�
       </div>
       <div class="firm-tagline" style="background:#EEFBF4;color:#2FB67E">✦ 業界最安水準・減額報酬なしで明朗会計</div>
       <div class="firm-specs">
-        <div class="firm-spec"><div class="firm-spec-label">任意整理 / 1社</div><div class="firm-spec-val" style="color:#FF6B35">39,600円〜</div></div>
+        <div class="firm-spec"><div class="firm-spec-label">任意整理 / 1社</div><div class="firm-spec-val" style="color:#FF6B35">11,000円〜</div></div>
         <div class="firm-spec"><div class="firm-spec-label">対応スピード</div><div class="firm-spec-val" style="color:#2FB67E">最短当日受任</div></div>
         <div class="firm-spec"><div class="firm-spec-label">対応エリア</div><div class="firm-spec-val" style="color:#4A90E2">全国対応</div></div>
         <div class="firm-spec"><div class="firm-spec-label">実績</div><div class="firm-spec-val" style="color:#A062D4">解決3,500件超</div></div>
       </div>
       <div class="firm-badges"><span class="firm-badge"># 費用が安い</span><span class="firm-badge"># LINE相談OK</span><span class="firm-badge"># 全国対応</span></div>
       <div class="firm-pros">
-        <div class="firm-pro"><span style="color:#2FB67E;flex-shrink:0">✓</span><span>任意整理1社39,600円〜で相場より大幅に安い</span></div>
+        <div class="firm-pro"><span style="color:#2FB67E;flex-shrink:0">✓</span><span>任意整理1社11,000円〜で初期費用を抑えやすい</span></div>
         <div class="firm-pro"><span style="color:#2FB67E;flex-shrink:0">✓</span><span>LINEだけで相談〜手続き完結も可能、来所不要</span></div>
       </div>
-      <a href="https://h.accesstrade.net/sp/cc?rk=0100p36700orwh" rel="nofollow" class="firm-cta" onclick="return gtagSendEvent(this.href)">📞 無料相談はこちら（公式サイト）</a>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1WM4+15ODWA+4LX2+5YRHE" rel="nofollow sponsored" class="firm-cta" onclick="return gtagSendEvent(this.href)">📞 無料相談はこちら（公式サイト）</a>
       <div class="firm-cta-note">相談料0円・匿名OK・全国対応</div>
       <div class="firm-banner">
-        <a href="https://h.accesstrade.net/sp/cc?rk=0100p36700orwh" rel="nofollow"><img border="0" alt="" src="https://h.accesstrade.net/sp/rr?rk=0100p36700orwh"></a>
-        
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1WM4+15ODWA+4LX2+5YRHE" rel="nofollow sponsored" onclick="return gtagSendEvent(this.href)">
+          <span class="firm-banner-kicker">OFFICIAL</span>
+          <span class="firm-banner-title">アース司法書士事務所</span>
+          <span class="firm-banner-copy">LINE相談OK・減額報酬なし</span>
+          <span class="firm-banner-action">無料相談へ進む</span>
+        </a>
       </div>
       <div class="firm-pick"><strong>こんな人に◎</strong>費用を抑えたい方・任意整理を検討中の方</div>
     </div>
 
-    <!-- 東京ロータス -->
+    <!-- イストワール -->
     <div class="firm-card">
       <div class="pick-badge" style="background:#FF6B35;box-shadow:0 4px 10px #FF6B3555">実績NO.1</div>
       <div class="firm-head">
         <div class="firm-emblem" style="background:linear-gradient(135deg,#FFB07A,#FF6B35);box-shadow:0 6px 14px #FF6B3533">イ</div>
         <div style="flex:1;min-width:0">
           <span class="firm-type" style="color:#FF6B35;background:#FFD9C4">弁護士法人</span>
-          <div class="firm-name">弁護士法人東京ロータス法律事務所</div>
+          <div class="firm-name">シン・イストワール法律事務所</div>
         </div>
       </div>
-      <div class="firm-tagline" style="background:#FFF3EB;color:#FF6B35">✦ 全国対応で相談しやすい債務整理の定番事務所</div>
+      <div class="firm-tagline" style="background:#FFF3EB;color:#FF6B35">✦ 闇金対応・任意整理に圧倒的な強み</div>
       <div class="firm-specs">
-        <div class="firm-spec"><div class="firm-spec-label">任意整理 / 1社</div><div class="firm-spec-val" style="color:#FF6B35">46,000円〜</div></div>
+        <div class="firm-spec"><div class="firm-spec-label">任意整理 / 1社</div><div class="firm-spec-val" style="color:#FF6B35">53,000円〜</div></div>
         <div class="firm-spec"><div class="firm-spec-label">対応スピード</div><div class="firm-spec-val" style="color:#2FB67E">即日督促停止</div></div>
         <div class="firm-spec"><div class="firm-spec-label">対応エリア</div><div class="firm-spec-val" style="color:#4A90E2">全国対応</div></div>
         <div class="firm-spec"><div class="firm-spec-label">実績</div><div class="firm-spec-val" style="color:#A062D4">闇金解決1万件超</div></div>
       </div>
       <div class="firm-badges"><span class="firm-badge"># 闇金対応◎</span><span class="firm-badge"># 即日督促停止</span><span class="firm-badge"># 全国対応</span></div>
       <div class="firm-pros">
-        <div class="firm-pro"><span style="color:#2FB67E;flex-shrink:0">✓</span><span>全国対応で、借金問題の悩みを丁寧にヒアリング</span></div>
-        <div class="firm-pro"><span style="color:#2FB67E;flex-shrink:0">✓</span><span>任意整理・個人再生・自己破産など幅広い手続きに対応</span></div>
+        <div class="firm-pro"><span style="color:#2FB67E;flex-shrink:0">✓</span><span>闇金・ヤミ金の解決実績1万件超で他社に断られた案件もOK</span></div>
+        <div class="firm-pro"><span style="color:#2FB67E;flex-shrink:0">✓</span><span>自己破産を安易に勧めず依頼者の希望に沿った解決策を提案</span></div>
       </div>
-      <a href="https://h.accesstrade.net/sp/cc?rk=0100jqb600orwh" rel="nofollow" class="firm-cta" onclick="return gtagSendEvent(this.href)">📞 無料相談はこちら（公式サイト）</a>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1V20+C1FMPU+4FR4+5YRHE" rel="nofollow sponsored" class="firm-cta" onclick="return gtagSendEvent(this.href)">📞 無料相談はこちら（公式サイト）</a>
       <div class="firm-cta-note">相談料0円・匿名OK・全国対応</div>
       <div class="firm-banner">
-        <a href="https://h.accesstrade.net/sp/cc?rk=0100jqb600orwh" rel="nofollow"><img border="0" alt="" src="https://h.accesstrade.net/sp/rr?rk=0100jqb600orwh"></a>
-        
+        <a href="https://px.a8.net/svt/ejp?a8mat=4B1V20+C1FMPU+4FR4+5YRHE" rel="nofollow sponsored" onclick="return gtagSendEvent(this.href)">
+          <span class="firm-banner-kicker">OFFICIAL</span>
+          <span class="firm-banner-title">シン・イストワール法律事務所</span>
+          <span class="firm-banner-copy">闇金対応・督促停止も相談可能</span>
+          <span class="firm-banner-action">無料相談へ進む</span>
+        </a>
       </div>
-      <div class="firm-pick"><strong>こんな人に◎</strong>全国対応の弁護士にまず無料相談したい方</div>
+      <div class="firm-pick"><strong>こんな人に◎</strong>闇金被害・複雑な借金問題を抱えている方</div>
     </div>
   </div>
 
   <section class="extra-offers">
-    <h3>他の人気相談先もチェック</h3>
-    <p>比較検討したい方向けに、提携中の相談先を追加で掲載しています（広告）。気になる事務所があれば無料相談してみましょう。</p>
+    <h3>追加掲載予定の相談先</h3>
+    <p>はたの法務事務所は広告リンク準備中のため、現時点では比較表のみ掲載しています。</p>
     <div class="offer-grid">
       <div class="offer-item">
-        <div class="offer-title">弁護士法人ひばり法律事務所</div>
-        <a href="https://h.accesstrade.net/sp/cc?rk=0100l3sb00orwh" rel="nofollow" class="offer-btn" onclick="return gtagSendEvent(this.href)">無料相談へ進む</a>
-      </div>
-      <div class="offer-item">
-        <div class="offer-title">弁護士法人東京ロータス法律事務所</div>
-        <a href="https://h.accesstrade.net/sp/cc?rk=0100jqb600orwh" rel="nofollow" class="offer-btn" onclick="return gtagSendEvent(this.href)">無料相談へ進む</a>
-      </div>
-      <div class="offer-item">
-        <div class="offer-title">アース司法書士事務所</div>
-        <a href="https://h.accesstrade.net/sp/cc?rk=0100p36700orwh" rel="nofollow" class="offer-btn" onclick="return gtagSendEvent(this.href)">無料相談へ進む</a>
+        <div class="offer-title">司法書士法人はたの法務事務所</div>
+        <div class="offer-btn is-disabled">広告リンク準備中</div>
       </div>
     </div>
-    <div class="offer-note">※当ページには広告リンクを含みます。リンク先の条件や費用は必ず公式サイトでご確認ください。</div>
+    <div class="offer-note">※当ページには広告リンクを含みます。各条件や費用は必ず公式サイトでご確認ください。</div>
   </section>
 
   <div class="sec-head" id="compare">
@@ -653,7 +672,7 @@ const description = "返済が苦しい・複数社から借入・督促が止�
         <div class="ct-head-label">項目</div>
         <div class="ct-head-firm" data-col="0" onclick="hlCol(0)">
           <div class="ct-head-emblem"><div class="ct-emblem-sm" style="background:linear-gradient(135deg,#FF8FB1,#E8487A)">さ</div></div>
-          <div class="ct-firm-name">ひばり</div>
+          <div class="ct-firm-name">さくら中央</div>
         </div>
         <div class="ct-head-firm" data-col="1" onclick="hlCol(1)">
           <div class="ct-head-emblem"><div class="ct-emblem-sm" style="background:linear-gradient(135deg,#6BD9A4,#2FB67E)">ア</div></div>
@@ -661,29 +680,25 @@ const description = "返済が苦しい・複数社から借入・督促が止�
         </div>
         <div class="ct-head-firm" data-col="2" onclick="hlCol(2)">
           <div class="ct-head-emblem"><div class="ct-emblem-sm" style="background:linear-gradient(135deg,#FFB07A,#FF6B35)">イ</div></div>
-          <div class="ct-firm-name">ロータス</div>
+          <div class="ct-firm-name">イストワール</div>
         </div>
         <div class="ct-head-firm" data-col="3" onclick="hlCol(3)">
           <div class="ct-head-emblem"><div class="ct-emblem-sm" style="background:linear-gradient(135deg,#70A8FF,#3D7DFF)">は</div></div>
           <div class="ct-firm-name">はたの</div>
         </div>
-        <div class="ct-head-firm" data-col="4" onclick="hlCol(4)">
-          <div class="ct-head-emblem"><div class="ct-emblem-sm" style="background:linear-gradient(135deg,#B685FF,#8E5BE8)">べ</div></div>
-          <div class="ct-firm-name">ベリベス</div>
-        </div>
       </div>
       <!-- サービス ○× -->
-      <div class="ct-row"><div class="ct-row-key">任意整理</div><div class="ct-row-val" data-col="0">✅</div><div class="ct-row-val" data-col="1">✅</div><div class="ct-row-val" data-col="2">✅</div><div class="ct-row-val" data-col="3">✅</div><div class="ct-row-val" data-col="4">✅</div></div>
-      <div class="ct-row stripe"><div class="ct-row-key">個人再生</div><div class="ct-row-val" data-col="0">✅</div><div class="ct-row-val" data-col="1">❌</div><div class="ct-row-val" data-col="2">✅</div><div class="ct-row-val" data-col="3">✅</div><div class="ct-row-val" data-col="4">✅</div></div>
-      <div class="ct-row"><div class="ct-row-key">自己破産</div><div class="ct-row-val" data-col="0">✅</div><div class="ct-row-val" data-col="1">❌</div><div class="ct-row-val" data-col="2">✅</div><div class="ct-row-val" data-col="3">✅</div><div class="ct-row-val" data-col="4">✅</div></div>
-      <div class="ct-row stripe"><div class="ct-row-key">過払い金</div><div class="ct-row-val" data-col="0">✅</div><div class="ct-row-val" data-col="1">✅</div><div class="ct-row-val" data-col="2">✅</div><div class="ct-row-val" data-col="3">✅</div><div class="ct-row-val" data-col="4">✅</div></div>
+      <div class="ct-row"><div class="ct-row-key">任意整理</div><div class="ct-row-val" data-col="0">✅</div><div class="ct-row-val" data-col="1">✅</div><div class="ct-row-val" data-col="2">✅</div><div class="ct-row-val" data-col="3">✅</div></div>
+      <div class="ct-row stripe"><div class="ct-row-key">個人再生</div><div class="ct-row-val" data-col="0">✅</div><div class="ct-row-val" data-col="1">❌</div><div class="ct-row-val" data-col="2">✅</div><div class="ct-row-val" data-col="3">✅</div></div>
+      <div class="ct-row"><div class="ct-row-key">自己破産</div><div class="ct-row-val" data-col="0">✅</div><div class="ct-row-val" data-col="1">❌</div><div class="ct-row-val" data-col="2">✅</div><div class="ct-row-val" data-col="3">✅</div></div>
+      <div class="ct-row stripe"><div class="ct-row-key">過払い金</div><div class="ct-row-val" data-col="0">✅</div><div class="ct-row-val" data-col="1">✅</div><div class="ct-row-val" data-col="2">✅</div><div class="ct-row-val" data-col="3">✅</div></div>
       <!-- 詳細行 -->
-      <div class="ct-row"><div class="ct-row-key">任意整理/1社</div><div class="ct-row-val" data-col="0">要相談</div><div class="ct-row-val" data-col="1">39,600円〜</div><div class="ct-row-val" data-col="2">46,000円〜</div><div class="ct-row-val" data-col="3">22,000円〜</div><div class="ct-row-val" data-col="4">要相談</div></div>
-      <div class="ct-row stripe"><div class="ct-row-key">相談料</div><div class="ct-row-val" data-col="0">無料</div><div class="ct-row-val" data-col="1">無料（何度でも）</div><div class="ct-row-val" data-col="2">無料（初回）</div><div class="ct-row-val" data-col="3">無料</div><div class="ct-row-val" data-col="4">無料</div></div>
-      <div class="ct-row"><div class="ct-row-key">対応スピード</div><div class="ct-row-val" data-col="0">最短即日着手</div><div class="ct-row-val" data-col="1">最短当日受任</div><div class="ct-row-val" data-col="2">即日督促停止</div><div class="ct-row-val" data-col="3">最短即日</div><div class="ct-row-val" data-col="4">最短即日</div></div>
-      <div class="ct-row stripe"><div class="ct-row-key">サポート</div><div class="ct-row-val" data-col="0">電話 / メール / Web</div><div class="ct-row-val" data-col="1">電話 / LINE / メール</div><div class="ct-row-val" data-col="2">電話 / メール / 来所</div><div class="ct-row-val" data-col="3">電話 / メール / LINE</div><div class="ct-row-val" data-col="4">電話 / 電話相談</div></div>
+      <div class="ct-row"><div class="ct-row-key">任意整理/1社</div><div class="ct-row-val" data-col="0">45,000円〜</div><div class="ct-row-val" data-col="1">11,000円〜</div><div class="ct-row-val" data-col="2">53,000円〜</div><div class="ct-row-val" data-col="3">22,000円〜</div></div>
+      <div class="ct-row stripe"><div class="ct-row-key">相談料</div><div class="ct-row-val" data-col="0">無料</div><div class="ct-row-val" data-col="1">無料</div><div class="ct-row-val" data-col="2">無料</div><div class="ct-row-val" data-col="3">無料</div></div>
+      <div class="ct-row"><div class="ct-row-key">対応スピード</div><div class="ct-row-val" data-col="0">最短即日着手</div><div class="ct-row-val" data-col="1">最短当日受任</div><div class="ct-row-val" data-col="2">即日督促停止</div><div class="ct-row-val" data-col="3">相談後に案内</div></div>
+      <div class="ct-row stripe"><div class="ct-row-key">サポート</div><div class="ct-row-val" data-col="0">電話 / メール / Web</div><div class="ct-row-val" data-col="1">電話 / LINE / メール</div><div class="ct-row-val" data-col="2">電話 / メール / 来所</div><div class="ct-row-val" data-col="3">電話 / Web / 出張</div></div>
     </div>
-    <div class="compare-note">※税込表記。料金は2026年4月時点の参考目安です。</div>
+    <div class="compare-note">※税込・税別が混在するため、正確な条件は各公式サイトでご確認ください。料金は2026年5月時点の参考目安です。</div>
   </div>
   <!-- 手続きの流れ -->
   <div class="sec-head" id="flow">
@@ -771,7 +786,7 @@ const description = "返済が苦しい・複数社から借入・督促が止�
     </div>
     <div class="faq-item" id="faq6">
       <button class="faq-q" onclick="toggleFaq('faq6')"><span class="faq-q-icon">Q</span><span class="faq-q-text">闇金からも助けてもらえますか？</span><span class="faq-chevron">▼</span></button>
-      <div class="faq-a"><div class="faq-a-inner"><span class="faq-a-icon">A</span><p class="faq-a-text">弁護士法人東京ロータス法律事務所が闇金対応に強みを持ちます。闇金は出資法違反のため元金含め返済義務はありません。専門の弁護士に依頼することで最短即日で取り立てを止めることができます。</p></div></div>
+      <div class="faq-a"><div class="faq-a-inner"><span class="faq-a-icon">A</span><p class="faq-a-text">シン・イストワール法律事務所が闇金対応に強みを持ちます。闇金は出資法違反のため元金含め返済義務はありません。専門の弁護士に依頼することで最短即日で取り立てを止めることができます。</p></div></div>
     </div>
   </div>
   <section class="final-cta">
