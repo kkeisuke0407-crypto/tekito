@@ -1,0 +1,974 @@
+---
+const PAGE_TITLE = "浄水型・宅配水ウォーターサーバー比較｜水代見直しナビ";
+const PAGE_DESC  = "浄水型・宅配水・天然水ウォーターサーバーを、月額料金、ボトル交換、置き場所、最低利用期間、解約条件で比較。生活スタイルに合う水まわりの選び方を整理します。";
+const CANONICAL  = "https://vpscomparehub.com/water-server/";
+const OGP_IMAGE  = "https://vpscomparehub.com/og-default.svg";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "浄水型と宅配水は何が違いますか？",
+      "acceptedAnswer": { "@type": "Answer",
+        "text": "浄水型は水道水を本体内でろ過して使うタイプ、宅配水はボトルやパックで届く水を使うタイプです。料金、交換の手間、置き場所が異なります。" }
+    },
+    {
+      "@type": "Question",
+      "name": "一人暮らしでもウォーターサーバーは必要ですか？",
+      "acceptedAnswer": { "@type": "Answer",
+        "text": "使用量や置き場所によります。ペットボトルをよく買う人、重い買い物を減らしたい人は比較する価値があります。" }
+    },
+    {
+      "@type": "Question",
+      "name": "解約金はありますか？",
+      "acceptedAnswer": { "@type": "Answer",
+        "text": "最低利用期間や解約金はサービスごとに異なります。申し込み前に公式サイトで最新条件を確認してください。" }
+    },
+    {
+      "@type": "Question",
+      "name": "このページは広告ですか？",
+      "acceptedAnswer": { "@type": "Answer",
+        "text": "このページには広告・アフィリエイトリンクを含みます。掲載順は報酬額だけでなく、サービス内容、比較しやすさ、確認すべき条件をもとに構成しています。" }
+    }
+  ]
+};
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{PAGE_TITLE}</title>
+  <meta name="description" content={PAGE_DESC} />
+  <link rel="canonical" href={CANONICAL} />
+
+  <!-- OGP -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content={PAGE_TITLE} />
+  <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:url"         content={CANONICAL} />
+  <meta property="og:image"       content={OGP_IMAGE} />
+  <meta property="og:locale"      content="ja_JP" />
+  <meta property="og:site_name"   content="水代見直しナビ" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="/water-server/styles.css" />
+
+  <!-- Google Ads / GA4 -->
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-18129603657"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-18129603657');
+  </script>
+</head>
+<body>
+
+<!-- ══ HEADER ══════════════════════════════════════════════════ -->
+<header class="ws-header">
+  <div class="ws-header-inner">
+    <a href="/water-server/" class="ws-logo">
+      <div class="ws-logo-icon">💧</div>
+      水代見直しナビ
+    </a>
+    <nav class="ws-nav">
+      <a href="#compare"    data-scroll-to="#compare">比較表</a>
+      <a href="#recommend"  data-scroll-to="#recommend">条件別</a>
+      <a href="#cards"      data-scroll-to="#cards">詳細</a>
+      <a href="#faq"        data-scroll-to="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ══ HERO ════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="ws-container hero-inner">
+    <div class="hero-copy">
+      <div class="hero-badge">2026年4月 更新</div>
+      <h1>ウォーターサーバー比較<br/>料金・解約条件まで確認</h1>
+      <p class="hero-sub">
+        浄水型・宅配水・天然水サーバーを、月額料金、交換のラクさ、
+        置き場所、契約条件で比較。家族構成や使い方に合うサービスを選べます。
+      </p>
+      <div class="hero-ctas">
+        <a href="#compare" class="btn-primary" data-scroll-to="#compare"
+           data-track="hero_compare">
+          料金・条件で比較する
+        </a>
+        <a href="#solo" class="btn-ghost" data-scroll-to="#solo"
+           data-track="hero_solo">
+          一人暮らし向けを見る
+        </a>
+        <a href="#family" class="btn-ghost" data-scroll-to="#family"
+           data-track="hero_family">
+          家族向けを見る
+        </a>
+      </div>
+    </div>
+    <div class="hero-media" aria-label="ウォーターサーバー比較のイメージ">
+      <div class="hero-media-card">
+        <img
+          src="/water-server/images/hero-water-server-photo.png"
+          alt="明るい室内でウォーターサーバーを利用する家族のイメージ"
+          width="1576"
+          height="998"
+          decoding="async"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#f8fafc"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ══ PR DISCLOSURE ═══════════════════════════════════════════ -->
+<div style="background:#f8fafc;padding-bottom:.5rem">
+  <p class="pr-bar">
+    【PR・広告表記】このページにはアフィリエイトリンクを含みます。
+    掲載順は報酬額だけでなく、サービス内容・比較しやすさ・確認すべき条件をもとに構成しています。
+    料金・契約条件は変更になる場合があるため、申し込み前に必ず公式サイトでご確認ください。
+  </p>
+</div>
+
+<!-- ══ 3秒でわかる選び方 ═══════════════════════════════════════ -->
+<section class="ws-section section-white" id="guide">
+  <div class="ws-container">
+    <div class="section-head">
+      <span class="kicker">TYPE GUIDE</span>
+      <h2>3秒でわかる、タイプ別の選び方</h2>
+      <p>まずウォーターサーバーのタイプを整理しましょう</p>
+    </div>
+    <div class="quick-grid">
+      <div class="quick-card">
+        <div class="quick-icon">🔩</div>
+        <h3>浄水型</h3>
+        <p>水道直結またはタンク給水で、本体内のフィルターでろ過。ボトル交換の手間がなく、水の買い置きも不要。設置スペースや月額コストの構造が宅配水と異なります。</p>
+        <div class="tags">
+          <span class="qtag">ボトル交換なし</span>
+          <span class="qtag">水道水使用</span>
+          <span class="qtag">フィルター交換あり</span>
+        </div>
+      </div>
+      <div class="quick-card">
+        <div class="quick-icon">🚚</div>
+        <h3>宅配水（天然水含む）</h3>
+        <p>ボトルやパックで水が届くタイプ。天然水・RO水など水の種類を選べます。使う量によって月額が変動するため、使用量の見積もりが重要です。</p>
+        <div class="tags">
+          <span class="qtag">ボトル交換あり</span>
+          <span class="qtag">水の種類を選べる</span>
+          <span class="qtag">使用量で料金変動</span>
+        </div>
+      </div>
+      <div class="quick-card">
+        <div class="quick-icon">📐</div>
+        <h3>卓上・小型タイプ</h3>
+        <p>床置きが難しい一人暮らしや狭いキッチン向け。浄水型・宅配水どちらにも卓上対応モデルがあります。設置可否は公式サイトの仕様で確認してください。</p>
+        <div class="tags">
+          <span class="qtag">卓上設置</span>
+          <span class="qtag">スペース節約</span>
+          <span class="qtag">一人暮らし向き</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 比較表 ══════════════════════════════════════════════════ -->
+<div class="divider"></div>
+<section class="ws-section" id="compare">
+  <div class="ws-container">
+    <div class="section-head">
+      <span class="kicker">COMPARE</span>
+      <h2>7サービス 一覧比較表</h2>
+      <p>横スクロールで全項目を確認できます。料金・期間は必ず公式サイトでご確認ください。</p>
+    </div>
+    <div class="compare-scroll">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>比較項目</th>
+            <th>
+              <div class="th-pri">最優先</div>
+              <span class="th-name">オーケン<br/>ウォーター</span>
+              <span class="th-type">宅配水・天然水/RO水</span>
+            </th>
+            <th>
+              <span class="th-name">every<br/>frecious</span>
+              <span class="th-type">浄水型</span>
+            </th>
+            <th>
+              <span class="th-name">フレシャス</span>
+              <span class="th-type">天然水宅配</span>
+            </th>
+            <th>
+              <span class="th-name">ウォーター<br/>ワン</span>
+              <span class="th-type">天然水宅配</span>
+            </th>
+            <th>
+              <span class="th-name">OCEAN</span>
+              <span class="th-type">水道直結型</span>
+            </th>
+            <th>
+              <span class="th-name">LOHASUI</span>
+              <span class="th-type">天然水/浄水型</span>
+            </th>
+            <th>
+              <span class="th-name">プレミアム<br/>ウォーター</span>
+              <span class="th-type">天然水宅配</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>タイプ</td>
+            <td>宅配水<br/>天然水/RO水</td>
+            <td>浄水型</td>
+            <td>天然水宅配</td>
+            <td>天然水宅配</td>
+            <td>水道直結型</td>
+            <td style="font-size:.75rem">天然水/浄水型<br/>（プランで選択）</td>
+            <td>天然水宅配</td>
+          </tr>
+          <tr>
+            <td>ボトル交換</td>
+            <td>あり</td>
+            <td class="ok">なし</td>
+            <td>あり</td>
+            <td>あり（ワンウェイ）</td>
+            <td class="ok">なし</td>
+            <td style="font-size:.75rem">天然水：あり<br/>浄水型：なし</td>
+            <td>あり</td>
+          </tr>
+          <tr>
+            <td>一人暮らし向き</td>
+            <td>○</td>
+            <td class="ok">◎</td>
+            <td>○</td>
+            <td>○</td>
+            <td>○</td>
+            <td class="ok">◎</td>
+            <td>○</td>
+          </tr>
+          <tr>
+            <td>家族向き</td>
+            <td class="ok">◎</td>
+            <td>○</td>
+            <td class="ok">◎</td>
+            <td class="ok">◎</td>
+            <td class="ok">◎</td>
+            <td>○</td>
+            <td class="ok">◎</td>
+          </tr>
+          <tr>
+            <td>月額目安</td>
+            <td style="font-size:.75rem">天然水3,800円〜<br/>RO水2,648円〜</td>
+            <td style="font-size:.75rem">lite 2,750円<br/>tall 3,300円〜</td>
+            <td style="font-size:.75rem">スラット1箱3,254円〜<br/>（3箱以上でレンタル無料）</td>
+            <td style="font-size:.75rem">約4,500〜5,000円<br/>（2本・富士山天然水）</td>
+            <td style="font-size:.75rem">4,378円（定額）<br/>水道代別</td>
+            <td style="font-size:.75rem">BASIC 3,696円〜<br/>Luxe 2,705円〜</td>
+            <td style="font-size:.75rem">3,866〜3,974円〜<br/>（水代のみ）</td>
+          </tr>
+          <tr>
+            <td>最低利用期間</td>
+            <td class="chk" style="font-size:.75rem">2〜5年<br/>（プランで異なる）</td>
+            <td class="chk">3年</td>
+            <td class="chk" style="font-size:.75rem">2年 or 3年<br/>（機種で異なる）</td>
+            <td class="chk" style="font-size:.75rem">2〜3年<br/>（プランで異なる）</td>
+            <td class="chk">3年</td>
+            <td class="chk">3年</td>
+            <td class="chk" style="font-size:.75rem">3〜5年<br/>（プランで異なる）</td>
+          </tr>
+          <tr>
+            <td>解約金目安</td>
+            <td style="font-size:.75rem">16,500円<br/>（規定期間前）</td>
+            <td style="font-size:.75rem">〜40,000円<br/>（段階的）</td>
+            <td style="font-size:.75rem">0〜16,500円<br/>（時期で異なる）</td>
+            <td style="font-size:.75rem">13,200〜20,900円<br/>（機種で異なる）</td>
+            <td style="font-size:.75rem">0〜33,000円<br/>（段階的）</td>
+            <td style="font-size:.75rem">9,900円</td>
+            <td style="font-size:.75rem">15,000〜50,000円<br/>（プランで異なる）</td>
+          </tr>
+          <tr>
+            <td>公式サイト</td>
+            <td class="cta-cell"><a class="compare-btn" href="#" data-affiliate="oken"           data-track="compare_oken"          rel="nofollow sponsored">確認する</a></td>
+            <td class="cta-cell"><a class="compare-btn" href="#" data-affiliate="every_frecious"  data-track="compare_every"         rel="nofollow sponsored">確認する</a></td>
+            <td class="cta-cell"><a class="compare-btn" href="#" data-affiliate="frecious"        data-track="compare_frecious"      rel="nofollow sponsored">確認する</a></td>
+            <td class="cta-cell"><a class="compare-btn" href="#" data-affiliate="water_one"       data-track="compare_water_one"     rel="nofollow sponsored">確認する</a></td>
+            <td class="cta-cell"><a class="compare-btn" href="#" data-affiliate="ocean"           data-track="compare_ocean"         rel="nofollow sponsored">確認する</a></td>
+            <td class="cta-cell"><a class="compare-btn" href="#" data-affiliate="lohasui"         data-track="compare_lohasui"       rel="nofollow sponsored">確認する</a></td>
+            <td class="cta-cell"><a class="compare-btn" href="#" data-affiliate="premium_water"   data-track="compare_premium_water" rel="nofollow sponsored">確認する</a></td>
+          </tr>
+          <tr>
+            <td>卓上/床置き</td>
+            <td>両対応</td>
+            <td style="font-size:.75rem">mini→卓上<br/>tall→床置き</td>
+            <td>床置きのみ</td>
+            <td>両対応</td>
+            <td>両対応</td>
+            <td style="font-size:.75rem">BASIC→両対応<br/>Luxe→卓上のみ</td>
+            <td style="font-size:.75rem">両対応<br/>（機種による）</td>
+          </tr>
+          <tr>
+            <td>初期費用</td>
+            <td class="ok">0円</td>
+            <td class="ok">0円</td>
+            <td class="ok">0円</td>
+            <td class="ok">0円</td>
+            <td class="ok">0円</td>
+            <td style="font-size:.75rem">事務手数料<br/>3,300円</td>
+            <td class="ok">0円</td>
+          </tr>
+          <tr>
+            <td>送料</td>
+            <td class="ok">無料</td>
+            <td class="ok">無料</td>
+            <td class="ok">無料</td>
+            <td style="font-size:.75rem">エリアにより<br/>異なる</td>
+            <td style="font-size:.75rem">工事対応<br/>エリア内</td>
+            <td class="chk">公式で確認</td>
+            <td class="ok">無料</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="compare-note">※ 料金・契約条件は変更される場合があります。必ず公式サイトの利用条件をご確認ください。◎/○/△はあくまで利用シーンの傾向を示すものです。</p>
+  </div>
+</section>
+
+<!-- ══ 条件別おすすめ ══════════════════════════════════════════ -->
+<div class="divider"></div>
+<section class="ws-section section-white" id="recommend">
+  <div class="ws-container">
+    <div class="section-head">
+      <span class="kicker">BY CONDITION</span>
+      <h2>条件別おすすめの組み合わせ</h2>
+      <p>生活スタイルや重視するポイントで絞り込めます</p>
+    </div>
+    <div class="cond-list">
+
+      <div class="cond-item">
+        <div class="cond-icon">💰</div>
+        <div class="cond-body">
+          <strong>月額コストの見通しを立てたい人</strong>
+          <div class="cond-tags">
+            <span class="ctag">オーケンウォーター</span>
+            <span class="ctag">LOHASUI</span>
+            <span class="ctag">プレミアムウォーター</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cond-item">
+        <div class="cond-icon">🔧</div>
+        <div class="cond-body">
+          <strong>浄水型でボトル交換の手間を省きたい人</strong>
+          <div class="cond-tags">
+            <span class="ctag">every frecious</span>
+            <span class="ctag">OCEAN</span>
+            <span class="ctag">LOHASUI（Luxe）</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cond-item" id="family">
+        <div class="cond-icon">👨‍👩‍👧</div>
+        <div class="cond-body">
+          <strong>家族で使いたい人</strong>
+          <div class="cond-tags">
+            <span class="ctag">オーケンウォーター</span>
+            <span class="ctag">ウォーターワン</span>
+            <span class="ctag">プレミアムウォーター</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cond-item">
+        <div class="cond-icon">🏔️</div>
+        <div class="cond-body">
+          <strong>天然水・宅配水にこだわりたい人</strong>
+          <div class="cond-tags">
+            <span class="ctag">ウォーターワン</span>
+            <span class="ctag">フレシャス</span>
+            <span class="ctag">プレミアムウォーター</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cond-item" id="solo">
+        <div class="cond-icon">🏠</div>
+        <div class="cond-body">
+          <strong>一人暮らしで置き場所を取りたくない人</strong>
+          <div class="cond-tags">
+            <span class="ctag">every frecious</span>
+            <span class="ctag">LOHASUI</span>
+            <span class="ctag">OCEAN</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ サービス詳細カード ═══════════════════════════════════════ -->
+<div class="divider"></div>
+<section class="ws-section" id="cards">
+  <div class="ws-container">
+    <div class="section-head">
+      <span class="kicker">SERVICE DETAIL</span>
+      <h2>各サービスの詳細</h2>
+      <p>料金・契約条件は公式サイトで最新情報をご確認ください</p>
+    </div>
+    <div class="service-cards">
+
+      <!-- 1. オーケンウォーター -->
+      <div class="service-card featured" id="oken">
+        <div class="card-head">
+          <div class="svc-emblem" style="background:linear-gradient(135deg,#1976d2,#0d47a1)">オ</div>
+          <div class="card-meta">
+            <span class="svc-type type-n">宅配水・天然水/RO水</span>
+            <div class="svc-name">オーケンウォーター</div>
+          </div>
+          <span class="svc-priority">最優先</span>
+        </div>
+        <div class="card-body">
+          <a href="#" class="svc-image-link" data-affiliate="oken_banner" data-track="card_image_oken" rel="nofollow sponsored" aria-label="オーケンウォーターの公式サイトを確認する">
+            <img src="https://www21.a8.net/svt/bgt?aid=260430412185&wid=004&eno=01&mid=s00000007476001118000&mc=1" alt="オーケンウォーターの公式広告バナー" loading="lazy" width="300" height="250" />
+          </a>
+          <img class="a8-pixel" src="https://www12.a8.net/0.gif?a8mat=4B1XE4+325A0A+1LOO+6NMJL" alt="" width="1" height="1" loading="lazy" />
+          <p class="svc-tagline">天然水とRO水を選べる宅配水タイプ。サーバーレンタル料・送料0円で月額コストが把握しやすい</p>
+          <div class="svc-specs">
+            <div class="svc-spec"><div class="svc-spec-lbl">タイプ</div><div class="svc-spec-val">宅配水・天然水/RO水</div></div>
+            <div class="svc-spec"><div class="svc-spec-lbl">ボトル交換</div><div class="svc-spec-val">あり</div></div>
+            <div class="svc-spec"><div class="svc-spec-lbl">月額目安</div><div class="svc-spec-val">天然水3,520円〜<br/>RO水2,360円〜</div></div>
+            <div class="svc-spec"><div class="svc-spec-lbl">解約手数料</div><div class="svc-spec-val">16,500円（規定期間前）</div></div>
+          </div>
+          <div class="svc-points">
+            <div class="svc-point"><span class="svc-point-ck">✓</span><span>天然水・RO水を選べる。水の好みや用途で切り替えやすい</span></div>
+            <div class="svc-point"><span class="svc-point-ck">✓</span><span>サーバーレンタル料・送料・設置工事費0円（公式確認ベース）</span></div>
+            <div class="svc-point"><span class="svc-point-ck">✓</span><span>配送周期の調整が可能。最低利用期間・解約条件は公式で確認</span></div>
+          </div>
+          <a href="#" class="svc-cta" data-affiliate="oken" data-track="card_oken" rel="nofollow sponsored">
+            公式サイトで料金・条件を確認する →
+          </a>
+          <p class="svc-cta-note">※ 料金・最低利用期間・解約金は公式サイトで最新情報をご確認ください</p>
+          <p class="svc-for"><strong>こんな方に：</strong>天然水・RO水を選びたい方・月額コストの内訳が明確なサービスを選びたい方</p>
+        </div>
+      </div>
+
+      <!-- 2. every frecious -->
+      <div class="service-card" id="every">
+        <div class="card-head">
+          <div class="svc-emblem" style="background:linear-gradient(135deg,#0891b2,#0e7490)">e</div>
+          <div class="card-meta">
+            <span class="svc-type type-j">浄水型</span>
+            <div class="svc-name">every frecious</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <a href="#" class="svc-image-link" data-affiliate="every_banner" data-track="card_image_every" rel="nofollow sponsored" aria-label="every freciousの公式サイトを確認する">
+            <img src="https://www26.a8.net/svt/bgt?aid=260430412210&wid=004&eno=01&mid=s00000010789007044000&mc=1" alt="every freciousの公式広告バナー" loading="lazy" width="600" height="500" />
+          </a>
+          <img class="a8-pixel" src="https://www11.a8.net/0.gif?a8mat=4B1XE4+3H144Q+2B8Y+15XRUP" alt="" width="1" height="1" loading="lazy" />
+          <p class="svc-tagline">浄水型・初期費用0円・カートリッジ交換込みの月額定額制。一人暮らしから家族まで対応</p>
+          <div class="svc-specs">
+            <div class="svc-spec"><div class="svc-spec-lbl">タイプ</div><div class="svc-spec-val">浄水型</div></div>
+            <div class="svc-spec"><div class="svc-spec-lbl">ボトル交換</div><div class="svc-spec-val" style="color:#16a34a">なし</div></div>
+            <div class="svc-spec"><div class="svc-spec-lbl">月額目安</div><div class="svc-spec-val">lite 2,750円<br/>tall/mini 3,300円〜</div></div>
+            <div class="svc-spec"><div class="svc-spec-lbl">解約金</div><div class="svc-spec-val">3年未満 40,000円</div></div>
+          </div>
+          <div class="svc-points">
+            <div class="svc-point"><span class="svc-point-ck">✓</span><span>初期費用・カートリッジ代・送料込みの月額定額制（公式確認ベース）</span></div>
+            <div class="svc-point"><span class="svc-point-ck">✓</span><span>浄水フィルター方式でボトルの保管・交換が不要</span></div>
+            <div class="svc-point"><span class="svc-point-ck">✓</span><span>liteは卓上対応。3年未満解約は40,000円の解約金に注意</span></div>
+          </div>
+          <a href="#" class="svc-cta" data-affiliate="every_frecious" data-track="card_every" rel="nofollow sponsored">
+            公式サイトで詳細を確認する →
+          </a>
+          <p class="svc-cta-note">※ 料金・最低利用期間・解約金は公式サイトで最新情報をご確認ください</p>
+          <p class="svc-for"><strong>こんな方に：</strong>浄水型でボトル交換の手間を省きたい方・設置スペースを抑えたい方</p>
+        </div>
+      </div>
+
+      <!-- 3. フレシャス -->
+      <div class="service-card" id="frecious">
+        <div class="card-head">
+          <div class="svc-emblem" style="background:linear-gradient(135deg,#b45309,#92400e)">フ</div>
+          <div class="card-meta">
+            <span class="svc-type type-t">天然水宅配</span>
+            <div class="svc-name">フレシャス</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <a href="#" class="svc-image-link" data-affiliate="frecious_banner" data-track="card_image_frecious" rel="nofollow sponsored" aria-label="フレシャスの公式サイトを確認する">
+            <img src="https://www21.a8.net/svt/bgt?aid=260430412231&wid=004&eno=01&mid=s00000010789001116000&mc=1" alt="フレシャスの公式広告バナー" loading="lazy" width="300" height="250" />
+          </a>
+          <img class="a8-pixel" src="https://www15.a8.net/0.gif?a8mat=4B1XE4+3TJ7U2+2B8Y+6N741" alt="" width="1" height="1" loading="lazy" />
+          <p class="svc-tagline">天然水宅配。送料0円・使用量に応じたレンタル料免除あり。スラット（下置き）が人気</p>
+          <div class="svc-specs">
+            <div class="svc-spec"><div class="svc-spec-lbl">タイプ</div><div class="svc-spec-val">天然水宅配</div></div>
+            <div class="svc-spec"><div class="svc-spec-lbl">ボトル交換</div><div class="svc-spec-val">あり</div></div>
+            <div class="svc-spec"><div class="svc-spec-lbl">月額目安</div><div class="svc-spec-val">スラット1箱3,254円〜<br/>（3箱以上でレンタル無料）</div></div>
+            <div class="svc-spec"><div class="svc-spec-lbl">解約金</div><div class="svc-spec-val">1年未満16,500円<br/>1〜2年 9,900円<br/>2年以上 0円</div></div>
+          </div>
+          <div class="svc-points">
+            <div class="svc-point"><span class="svc-point-ck">✓</span><span>送料0円。月の使用量が多いほどレンタル料が免除される仕組み（公式確認ベース）</span></div>
+            <div class="svc-point"><span class="svc-point-ck">✓</span><span>解約金は解約時期で段階的に変わる（2年以上なら0円）。最低利用期間は3年</span></div>
+            <div class="svc-point"><span class="svc-point-ck">✓</span><span>スラットは下置き型で足元交換。デュオは小パック（7.2L×4）で扱いやすい</span></div>
+          </div>
+          <a href="#" class="svc-cta" data-affiliate="frecious" data-track="card_frecious" rel="nofollow sponsored">
+            公式サイトで詳細を確認する →
+          </a>
+          <p class="svc-cta-note">※ 料金・最低利用期間・解約金は公式サイトで最新情報をご確認ください</p>
+          <p class="svc-for"><strong>こんな方に：</strong>天然水にこだわりたい方・デザインや使い勝手を重視する方</p>
+        </div>
+      </div>
+
+      <!-- 4. ウォーターワン -->
+      <div class="service-card" id="water-one">
+        <div class="card-head">
+          <div class="svc-emblem" style="background:linear-gradient(135deg,#0369a1,#075985)">ワ</div>
+          <div class="card-meta">
+            <span class="svc-type type-n">天然水宅配</span>
+            <div class="svc-name">ウォーターワン</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <a href="#" class="svc-image-link" data-affiliate="water_one" data-track="card_image_water_one" rel="nofollow sponsored" aria-label="ウォーターワンの公式サイトを確認する">
+            <img src="https://waterone.jp/mix/lp/w/fuebpceki83919k/assets/images/sec8-mv.png" alt="ウォーターワンのサーバーイメージ" loading="lazy" width="960" height="540" />
+          </a>
+          <p class="svc-tagline">富士山天然水のワンウェイ宅配。ボトル返却不要で手間が少ない。卓上・床置き両対応</p>
+          <div class="svc-specs">
+            <div class="svc-spec"><div class="svc-spec-lbl">タイプ</div><div class="svc-spec-val">天然水宅配（ワンウェイ）</div></div>
+            <div class="svc-spec"><div class="svc-spec-lbl">ボトル交換</div><div class="svc-spec-val">あり（使い捨て型）</div></div>
+            <div class="svc-spec"><div class="svc-spec-lbl">月額目安</div><div class="svc-spec-val">約4,500〜5,000円<br/>（2本・富士山天然水）</div></div>
+            <div class="svc-spec"><div class="svc-spec-lbl">解約金</div><div class="svc-spec-val">13,200〜20,900円<br/>（機種・期間で異なる）</div></div>
+          </div>
+          <div class="svc-points">
+            <div class="svc-point"><span class="svc-point-ck">✓</span><span>ワンウェイ型でボトル返却の手間なし。空ボトルの保管スペース不要</span></div>
+            <div class="svc-point"><span class="svc-point-ck">✓</span><span>初期費用0円。卓上・床置き両対応で設置場所を選びやすい（公式確認ベース）</span></div>
+            <div class="svc-point"><span class="svc-point-ck">✓</span><span>最低利用期間2〜3年。解約金・条件は公式サイトで最新情報を確認</span></div>
+          </div>
+          <a href="#" class="svc-cta" data-affiliate="water_one" data-track="card_water_one" rel="nofollow sponsored">
+            公式サイトで詳細を確認する →
+          </a>
+          <p class="svc-cta-note">※ 料金・最低利用期間・解約金は公式サイトで最新情報をご確認ください</p>
+          <p class="svc-for"><strong>こんな方に：</strong>天然水にこだわりたい方・ボトル返却の手間を省きたい方</p>
+        </div>
+      </div>
+
+      <!-- 5. OCEAN -->
+      <div class="service-card" id="ocean">
+        <div class="card-head">
+          <div class="svc-emblem" style="background:linear-gradient(135deg,#0891b2,#0e7490)">O</div>
+          <div class="card-meta">
+            <span class="svc-type type-j">水道直結型</span>
+            <div class="svc-name">OCEAN</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <a href="#" class="svc-image-link" data-affiliate="ocean_banner" data-track="card_image_ocean" rel="nofollow sponsored" referrerpolicy="no-referrer-when-downgrade" aria-label="OCEANの公式サイトを確認する">
+            <img src="https://h.accesstrade.net/sp/rr?rk=0100o23o00orwp" alt="水道直結型ウォーターサーバー「OCEAN」オーシャン" loading="lazy" width="300" height="250" />
+          </a>
+          <p class="svc-tagline">水道直結型でボトル交換不要。月額定額制で使用量を気にせず使えるシンプルな料金体系</p>
+          <div class="svc-specs">
+            <div class="svc-spec"><div class="svc-spec-lbl">タイプ</div><div class="svc-spec-val">水道直結型</div></div>
+            <div class="svc-spec"><div class="svc-spec-lbl">ボトル交換</div><div class="svc-spec-val" style="color:#16a34a">なし</div></div>
+            <div class="svc-spec"><div class="svc-spec-lbl">月額目安</div><div class="svc-spec-val">4,378円（定額）<br/>＋水道代</div></div>
+            <div class="svc-spec"><div class="svc-spec-lbl">解約金</div><div class="svc-spec-val">0〜33,000円<br/>（利用期間で段階的）</div></div>
+          </div>
+          <div class="svc-points">
+            <div class="svc-point"><span class="svc-point-ck">✓</span><span>水道直結型でボトル保管・交換の手間なし。使う量を気にしなくてよい</span></div>
+            <div class="svc-point"><span class="svc-point-ck">✓</span><span>初期費用0円。サーバーレンタル料・メンテナンス込み（公式確認ベース）</span></div>
+            <div class="svc-point"><span class="svc-point-ck">✓</span><span>最低利用期間3年。解約金は利用期間が長いほど下がる（36か月以上で0円）</span></div>
+          </div>
+          <a href="#" class="svc-cta" data-affiliate="ocean" data-track="card_ocean" rel="nofollow sponsored">
+            公式サイトで詳細を確認する →
+          </a>
+          <p class="svc-cta-note">※ 料金・最低利用期間・解約金は公式サイトで最新情報をご確認ください</p>
+          <p class="svc-for"><strong>こんな方に：</strong>ボトル交換なしで使いたい方・毎月の料金を定額で把握したい方</p>
+        </div>
+      </div>
+
+      <!-- 6. LOHASUI -->
+      <div class="service-card" id="lohasui">
+        <div class="card-head">
+          <div class="svc-emblem" style="background:linear-gradient(135deg,#15803d,#166534)">L</div>
+          <div class="card-meta">
+            <span class="svc-type type-n">天然水/浄水型</span>
+            <div class="svc-name">LOHASUI</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <a href="#" class="svc-image-link" data-affiliate="lohasui" data-track="card_image_lohasui" rel="nofollow" aria-label="LOHASUIの公式サイトを確認する">
+            <img src="https://storage.googleapis.com/d05fac45-404f-4ef3-bf6d-1eef885d4523/img/common/img_lohasui_evo.png?v=1773903489" alt="LOHASUI evoのサーバーイメージ" loading="lazy" width="960" height="540" />
+          </a>
+          <p class="svc-tagline">天然水宅配（evo/BASIC）と浄水型（Luxe）を選べる。一人暮らしにも家族にも対応するラインナップ</p>
+          <div class="svc-specs">
+            <div class="svc-spec"><div class="svc-spec-lbl">タイプ</div><div class="svc-spec-val">天然水宅配 or 浄水型<br/>（プランで選択）</div></div>
+            <div class="svc-spec"><div class="svc-spec-lbl">ボトル交換</div><div class="svc-spec-val">天然水：あり<br/>浄水型：なし</div></div>
+            <div class="svc-spec"><div class="svc-spec-lbl">月額目安</div><div class="svc-spec-val">BASIC 3,696円〜<br/>Luxe 2,705円〜</div></div>
+            <div class="svc-spec"><div class="svc-spec-lbl">解約金</div><div class="svc-spec-val">9,900円（3年未満）<br/>事務手数料3,300円</div></div>
+          </div>
+          <div class="svc-points">
+            <div class="svc-point"><span class="svc-point-ck">✓</span><span>天然水と浄水型を選べる。ライフスタイルに合わせて選択可能</span></div>
+            <div class="svc-point"><span class="svc-point-ck">✓</span><span>Luxeは卓上設置のみ対応。BASICは卓上・床置き両対応（公式確認ベース）</span></div>
+            <div class="svc-point"><span class="svc-point-ck">✓</span><span>初期費用3,300円（事務手数料）。解約金・最低利用期間は公式で最新確認推奨</span></div>
+          </div>
+          <a href="#" class="svc-cta" data-affiliate="lohasui" data-track="card_lohasui" rel="nofollow sponsored">
+            公式サイトで詳細を確認する →
+          </a>
+          <p class="svc-cta-note">※ 料金・最低利用期間・解約金は公式サイトで最新情報をご確認ください</p>
+          <p class="svc-for"><strong>こんな方に：</strong>天然水か浄水型か迷っている方・コンパクトなサーバーを探している方</p>
+        </div>
+      </div>
+
+      <!-- 7. プレミアムウォーター -->
+      <div class="service-card" id="premium-water">
+        <div class="card-head">
+          <div class="svc-emblem" style="background:linear-gradient(135deg,#7c3aed,#5b21b6)">プ</div>
+          <div class="card-meta">
+            <span class="svc-type type-n">天然水宅配</span>
+            <div class="svc-name">プレミアムウォーター</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <a href="#" class="svc-image-link" data-affiliate="premium_water" data-track="card_image_premium_water" rel="nofollow" aria-label="プレミアムウォーターの公式サイトを確認する">
+            <img src="https://premium-water.net/page/wp-content/themes/premium-water/assets/img/page/home/server/ranking_famfit2.png" alt="プレミアムウォーターfamfitのサーバーイメージ" loading="lazy" width="960" height="540" />
+          </a>
+          <p class="svc-tagline">全国7か所の天然水を選べる宅配サービス。送料無料・初期費用0円で家族利用にも対応</p>
+          <div class="svc-specs">
+            <div class="svc-spec"><div class="svc-spec-lbl">タイプ</div><div class="svc-spec-val">天然水宅配</div></div>
+            <div class="svc-spec"><div class="svc-spec-lbl">ボトル交換</div><div class="svc-spec-val">あり</div></div>
+            <div class="svc-spec"><div class="svc-spec-lbl">月額目安</div><div class="svc-spec-val">3,866〜3,974円〜<br/>（水代のみ）</div></div>
+            <div class="svc-spec"><div class="svc-spec-lbl">解約金</div><div class="svc-spec-val">15,000〜50,000円<br/>（プラン・期間で異なる）</div></div>
+          </div>
+          <div class="svc-points">
+            <div class="svc-point"><span class="svc-point-ck">✓</span><span>初期費用0円・送料無料（公式確認ベース）。全国7か所の天然水から産地を選べる</span></div>
+            <div class="svc-point"><span class="svc-point-ck">✓</span><span>卓上・床置き両対応。家族の水使用量に合わせてプランを選択可能</span></div>
+            <div class="svc-point"><span class="svc-point-ck">✓</span><span>最低利用期間3〜5年。解約金がプランで大きく異なるため公式で事前確認を</span></div>
+          </div>
+          <a href="#" class="svc-cta" data-affiliate="premium_water" data-track="card_premium_water" rel="nofollow sponsored">
+            公式サイトで詳細を確認する →
+          </a>
+          <p class="svc-cta-note">※ 料金・最低利用期間・解約金は公式サイトで最新情報をご確認ください</p>
+          <p class="svc-for"><strong>こんな方に：</strong>産地にこだわった天然水を選びたい方・家族でたっぷり使いたい方</p>
+        </div>
+      </div>
+
+    </div><!-- /service-cards -->
+  </div>
+</section>
+
+<!-- ══ 月額料金で失敗しない見方 ════════════════════════════════ -->
+<div class="divider"></div>
+<section class="ws-section section-white" id="fee-guide">
+  <div class="ws-container">
+    <div class="section-head">
+      <span class="kicker">FEE GUIDE</span>
+      <h2>月額料金で失敗しない4つの見方</h2>
+      <p>申し込み前に確認しておきたいポイントを整理しました</p>
+    </div>
+    <div class="fee-grid">
+      <div class="fee-card">
+        <div class="fee-num">1</div>
+        <strong>月額の内訳を確認する</strong>
+        <p>本体レンタル料・水代・メンテナンス料など、表示されている金額に何が含まれるかを公式サイトで確認しましょう。</p>
+      </div>
+      <div class="fee-card">
+        <div class="fee-num">2</div>
+        <strong>使用量で変動するか確認する</strong>
+        <p>宅配水タイプは使う量で費用が変わります。月にどのくらい使うか見積もった上で、試算してみましょう。</p>
+      </div>
+      <div class="fee-card">
+        <div class="fee-num">3</div>
+        <strong>最低利用期間を確認する</strong>
+        <p>多くのサービスに最低利用期間があります。期間内に解約すると解約金が発生するケースがあるため、事前に確認を。</p>
+      </div>
+      <div class="fee-card">
+        <div class="fee-num">4</div>
+        <strong>キャンペーン終了後の料金を確認する</strong>
+        <p>初期キャンペーン期間が終わった後の通常料金も確認しておきましょう。長期利用時のトータルコストで比較するのが重要です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 契約前チェックリスト ══════════════════════════════════════ -->
+<div class="divider"></div>
+<section class="ws-section" id="checklist">
+  <div class="ws-container">
+    <div class="section-head">
+      <span class="kicker">CHECKLIST</span>
+      <h2>契約前チェックリスト</h2>
+      <p>申し込みボタンを押す前に確認しておきましょう</p>
+    </div>
+    <div class="checklist-grid">
+      <div class="check-item"><div class="check-box"></div><span class="check-label">月額料金の内訳（本体・水代・メンテナンス）を公式サイトで確認した</span></div>
+      <div class="check-item"><div class="check-box"></div><span class="check-label">最低利用期間を確認した</span></div>
+      <div class="check-item"><div class="check-box"></div><span class="check-label">解約金・違約金の有無と金額を確認した</span></div>
+      <div class="check-item"><div class="check-box"></div><span class="check-label">設置スペース（床置き or 卓上）が自宅に合うか確認した</span></div>
+      <div class="check-item"><div class="check-box"></div><span class="check-label">水のタイプ（浄水型 / 宅配水 / 天然水）が用途に合っているか確認した</span></div>
+      <div class="check-item"><div class="check-box"></div><span class="check-label">フィルター交換・メンテナンスの頻度と費用を確認した</span></div>
+    </div>
+    <p class="checklist-note">※ チェックボックスは視覚的な確認用です。実際の申し込みは公式サイトからどうぞ。</p>
+  </div>
+</section>
+
+<!-- ══ 解約金一覧 ══════════════════════════════════════════════ -->
+<div class="divider"></div>
+<section class="ws-section section-white" id="cancellation">
+  <div class="ws-container">
+    <div class="section-head">
+      <span class="kicker">CANCELLATION</span>
+      <h2>契約前に見る解約金・引取手数料の目安</h2>
+      <p>公式確認ベースの参考値です。申し込み前に必ず最新の公式情報をご確認ください。</p>
+    </div>
+    <div class="compare-scroll">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th style="min-width:110px">サービス</th>
+            <th>タイプ</th>
+            <th>最低利用期間</th>
+            <th>解約金・引取手数料の目安</th>
+            <th>備考</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>オーケンウォーター</td>
+            <td>天然水/RO水宅配</td>
+            <td class="chk" style="font-size:.8rem">天然水基本：2年<br/>天然水おトク：3年<br/>RO水おトク：5年</td>
+            <td style="font-size:.8rem">16,500円（規定期間前）<br/>サーバー交換：5,500円</td>
+            <td style="font-size:.75rem">プランで期間が異なる。公式で最新確認推奨</td>
+          </tr>
+          <tr>
+            <td>every frecious</td>
+            <td>浄水型</td>
+            <td class="chk">3年</td>
+            <td style="font-size:.8rem">〜40,000円＋引取3,300円<br/>（段階的。公式確認推奨）</td>
+            <td style="font-size:.75rem">情報源により段階的な金額との差異あり。契約書を必ず確認</td>
+          </tr>
+          <tr>
+            <td>フレシャス</td>
+            <td>天然水宅配</td>
+            <td class="chk">3年</td>
+            <td style="font-size:.8rem">1年未満：16,500円<br/>1〜2年未満：9,900円<br/>2年以上：0円<br/>＋引取手数料：3,300円</td>
+            <td style="font-size:.75rem">解約時期により金額が段階的に変わる。公式で最新確認推奨</td>
+          </tr>
+          <tr>
+            <td>ウォーターワン</td>
+            <td>天然水宅配</td>
+            <td class="chk" style="font-size:.8rem">2〜3年<br/>（機種で異なる）</td>
+            <td style="font-size:.8rem">13,200〜20,900円<br/>（機種・期間で異なる）</td>
+            <td style="font-size:.75rem">機種によって期間・金額が異なる。公式で最新確認推奨</td>
+          </tr>
+          <tr>
+            <td>OCEAN</td>
+            <td>水道直結型</td>
+            <td class="chk">3年</td>
+            <td style="font-size:.8rem">12か月未満：33,000円<br/>12〜24か月未満：22,000円<br/>24〜36か月未満：11,000円<br/>36か月以上：0円</td>
+            <td style="font-size:.75rem">利用期間が長いほど解約金が下がる。公式で最新確認推奨</td>
+          </tr>
+          <tr>
+            <td>LOHASUI</td>
+            <td>天然水/浄水型</td>
+            <td class="chk">3年</td>
+            <td style="font-size:.8rem">9,900円（3年未満）<br/>＋事務手数料3,300円</td>
+            <td style="font-size:.75rem">公式で最新確認推奨</td>
+          </tr>
+          <tr>
+            <td>プレミアムウォーター</td>
+            <td>天然水宅配</td>
+            <td class="chk" style="font-size:.8rem">3〜5年<br/>（プランで異なる）</td>
+            <td style="font-size:.8rem">15,000〜50,000円<br/>（プラン・期間で異なる）</td>
+            <td style="font-size:.75rem">プランで金額が大きく異なる。公式で最新確認推奨</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="compare-note">※ 上記は公式情報をもとにした参考値です。金額・条件は変更になる場合があります。申し込み前に必ず各社公式サイトの最新情報をご確認ください。</p>
+  </div>
+</section>
+
+<!-- ══ 選ばない方がいい人 ════════════════════════════════════════ -->
+<div class="divider"></div>
+<section class="ws-section" id="not-for">
+  <div class="ws-container">
+    <div class="section-head">
+      <span class="kicker">NOT FOR YOU?</span>
+      <h2>こんな方には向かないかもしれません</h2>
+      <p>「自分に合うか」を判断するために、向かないケースも整理しました</p>
+    </div>
+    <div class="quick-grid">
+      <div class="quick-card" style="border-left:3px solid #f59e0b">
+        <div class="quick-icon" style="background:#fef3c7;color:#b45309">🚫</div>
+        <h3>浄水型を選ばない方がいい人</h3>
+        <ul style="margin-top:.5rem;display:flex;flex-direction:column;gap:.4rem">
+          <li style="font-size:.83rem;color:#475569;display:flex;gap:.4rem"><span style="color:#f59e0b;flex-shrink:0">▸</span><span>水道水ではなく天然水・ミネラルウォーターを飲みたい人</span></li>
+          <li style="font-size:.83rem;color:#475569;display:flex;gap:.4rem"><span style="color:#f59e0b;flex-shrink:0">▸</span><span>停電・災害時の備蓄水も兼ねたい人（ボトル在庫がない）</span></li>
+          <li style="font-size:.83rem;color:#475569;display:flex;gap:.4rem"><span style="color:#f59e0b;flex-shrink:0">▸</span><span>水道直結工事や配管接続が難しい住居の人（タンク式は除く）</span></li>
+        </ul>
+      </div>
+      <div class="quick-card" style="border-left:3px solid #f59e0b">
+        <div class="quick-icon" style="background:#fef3c7;color:#b45309">🚫</div>
+        <h3>宅配水を選ばない方がいい人</h3>
+        <ul style="margin-top:.5rem;display:flex;flex-direction:column;gap:.4rem">
+          <li style="font-size:.83rem;color:#475569;display:flex;gap:.4rem"><span style="color:#f59e0b;flex-shrink:0">▸</span><span>ボトル交換（重い・場所が必要）が負担になりそうな人</span></li>
+          <li style="font-size:.83rem;color:#475569;display:flex;gap:.4rem"><span style="color:#f59e0b;flex-shrink:0">▸</span><span>空ボトルや在庫の保管スペースを確保できない人</span></li>
+          <li style="font-size:.83rem;color:#475569;display:flex;gap:.4rem"><span style="color:#f59e0b;flex-shrink:0">▸</span><span>使用量が読めず、月額が変動するのが気になる人</span></li>
+        </ul>
+      </div>
+      <div class="quick-card" style="border-left:3px solid #f59e0b">
+        <div class="quick-icon" style="background:#fef3c7;color:#b45309">🚫</div>
+        <h3>ウォーターサーバー全般を見直した方がいい人</h3>
+        <ul style="margin-top:.5rem;display:flex;flex-direction:column;gap:.4rem">
+          <li style="font-size:.83rem;color:#475569;display:flex;gap:.4rem"><span style="color:#f59e0b;flex-shrink:0">▸</span><span>最低利用期間・解約金を考えると短期間で退会する可能性がある人</span></li>
+          <li style="font-size:.83rem;color:#475569;display:flex;gap:.4rem"><span style="color:#f59e0b;flex-shrink:0">▸</span><span>設置スペース（床置き・卓上含め）が確保できない人</span></li>
+          <li style="font-size:.83rem;color:#475569;display:flex;gap:.4rem"><span style="color:#f59e0b;flex-shrink:0">▸</span><span>水の使用量が少なく、ペットボトル購入の方がコスト面で有利な人</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══════════════════════════════════════════════════════ -->
+<div class="divider"></div>
+<section class="ws-section section-white" id="faq">
+  <div class="ws-container">
+    <div class="section-head">
+      <span class="kicker">FAQ</span>
+      <h2>よくある質問</h2>
+      <p>気になる項目をタップして確認できます</p>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item open">
+        <button class="faq-q">
+          <span class="faq-q-badge">Q</span>
+          <span class="faq-q-text">浄水型と宅配水は何が違いますか？</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <span class="faq-a-badge">A</span>
+            <p class="faq-a-text">浄水型は水道水を本体内でろ過して使うタイプ、宅配水はボトルやパックで届く水を使うタイプです。料金の仕組み、交換の手間、置き場所が異なります。どちらが向いているかは生活スタイルや設置環境によります。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="faq-q-badge">Q</span>
+          <span class="faq-q-text">一人暮らしでもウォーターサーバーは必要ですか？</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <span class="faq-a-badge">A</span>
+            <p class="faq-a-text">使用量や置き場所によります。ペットボトルをよく購入している方や、重い買い物を減らしたい方は比較する価値があります。卓上対応の小型モデルであれば、一人暮らしのスペースでも設置しやすい場合があります。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="faq-q-badge">Q</span>
+          <span class="faq-q-text">解約金はありますか？</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <span class="faq-a-badge">A</span>
+            <p class="faq-a-text">最低利用期間や解約金はサービスごとに異なります。申し込み前に公式サイトで最新条件を確認してください。このページでは具体的な金額は断定しておらず、公式情報を都度確認することを推奨しています。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="faq-q-badge">Q</span>
+          <span class="faq-q-text">このページは広告ですか？</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <span class="faq-a-badge">A</span>
+            <p class="faq-a-text">このページには広告・アフィリエイトリンクを含みます。掲載順は報酬額だけでなく、サービス内容、比較しやすさ、確認すべき条件をもとに構成しています。</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ 掲載基準・更新日・広告表記 ══════════════════════════════ -->
+<div class="divider"></div>
+<section class="ws-section" id="about">
+  <div class="ws-container">
+    <div class="page-meta">
+      <p><strong>掲載基準・広告表記</strong></p>
+      <p>
+        当ページは、浄水型・宅配水・天然水ウォーターサーバーを料金・契約条件・利用シーンで比較する目的で作成しています。
+        掲載しているサービスはアフィリエイトプログラムに参加しており、リンク経由で申し込みが発生した場合に報酬を受け取る場合があります。
+        掲載順・紹介内容は報酬額だけでなく、比較情報としての分かりやすさ・確認すべき条件の明示度をもとに構成しています。
+      </p>
+      <p>
+        <strong>料金・契約条件について：</strong>各サービスの料金・最低利用期間・解約金は変更になる場合があります。
+        このページでは具体的な金額を断定せず、公式サイトでの確認を促す構成にしています。
+        申し込み前に必ず各社の公式サイトで最新情報をご確認ください。
+      </p>
+      <p>
+        <strong>健康・安全性について：</strong>当ページでは水の健康効果・安全性についての断定表現は使用していません。
+        体調・健康状態に関わる判断が必要な場合は、各サービスの公式情報や専門家の指示をご確認ください。
+      </p>
+      <p style="margin-bottom:0">
+        <strong>最終更新：</strong>2026年4月　
+        <strong>運営：</strong>水代見直しナビ（vpscomparehub.com）
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════════ -->
+<footer class="ws-footer">
+  <div class="ws-footer-inner">
+    <div class="ws-footer-logo">
+      <div class="ws-footer-logo-icon">💧</div>
+      <span class="ws-footer-name">水代見直しナビ</span>
+    </div>
+    <p class="ws-footer-text">
+      浄水型・宅配水・天然水ウォーターサーバーを、料金・手間・置き場所・契約条件で比較する情報サイトです。<br/>
+      掲載情報は各サービスの公式情報をもとに構成しています。料金・条件は変更になる場合があるため、申し込み前に公式サイトでご確認ください。
+    </p>
+    <div class="ws-footer-links">
+      <a href="/water-server/operator/">運営者情報</a>
+      <a href="/water-server/operator/">プライバシーポリシー</a>
+    </div>
+    <p class="ws-footer-copy">© 2026 水代見直しナビ</p>
+  </div>
+</footer>
+
+<!-- Page JS -->
+<script src="/water-server/app.js" defer></script>
+
+</body>
+</html>

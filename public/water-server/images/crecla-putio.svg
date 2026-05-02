@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Crecla putio comparison image</title>
+  <desc id="desc">Stylized tabletop filtered water server illustration.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ede9fe"/><stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#5b21b6"/>
+    </linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#0c2d5a" flood-opacity=".15"/></filter>
+  </defs>
+  <rect width="960" height="540" rx="30" fill="url(#bg)"/>
+  <rect x="130" y="344" width="700" height="64" rx="20" fill="#ddd6fe"/>
+  <g filter="url(#s)">
+    <rect x="374" y="142" width="212" height="230" rx="36" fill="#ffffff"/>
+    <rect x="420" y="184" width="120" height="54" rx="18" fill="url(#accent)"/>
+    <circle cx="460" cy="211" r="13" fill="#c4b5fd"/>
+    <circle cx="500" cy="211" r="13" fill="#ddd6fe"/>
+    <rect x="426" y="276" width="108" height="64" rx="20" fill="#f5f3ff"/>
+    <path d="M480 289 C500 312 512 330 512 344 C512 363 498 378 480 378 C462 378 448 363 448 344 C448 330 460 312 480 289Z" fill="#8b5cf6" opacity=".75"/>
+  </g>
+  <text x="480" y="82" text-anchor="middle" fill="#0c2d5a" font-family="Arial, sans-serif" font-size="28" font-weight="800">Tabletop Filtered</text>
+  <text x="480" y="468" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="20" font-weight="700">Compact kitchen fit</text>
+</svg>

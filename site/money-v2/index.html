@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="返済日、督促、生活費不足の状態を30秒で確認。追加借入を検討する前に、相談優先か条件比較かを整理します。">
+  <meta name="theme-color" content="#145647">
+  <link rel="canonical" href="https://vpscomparehub.com/money/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="返済日・督促・生活費の30秒チェック">
+  <meta property="og:description" content="追加で借りる前に、相談優先か条件比較かを30秒で整理。個人情報入力なしで確認できます。">
+  <meta property="og:image" content="https://vpscomparehub.com/money/hero-ai-finance.png">
+  <title>返済日・督促・生活費の30秒チェック</title>
+  <link rel="preload" href="./hero-ai-finance.png" as="image">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "家族や会社に知られずに相談できますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "相談先や手続きで扱いは異なります。最初に連絡方法、郵送物、勤務先への連絡の有無を確認してください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "今すぐ必要なら借りる方が早いですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "一時的な不足で返済見込みがある場合は、条件比較が選択肢になります。滞納や複数社返済がある場合は、相談を優先した方が安全です。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "債務整理は必ず借金が減りますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "結果は状況や手続きにより異なります。減額や解決を保証するものではないため、専門家の説明を確認してください。"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="返済状況チェックの先頭へ">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>返済状況チェック</span>
+    </a>
+    <nav class="nav" aria-label="ページ内メニュー">
+      <a href="#diagnosis">診断</a>
+      <a href="#routes">分岐</a>
+      <a href="#faq">不安</a>
+      <a class="nav-cta" href="#diagnosis" data-track="nav_start">30秒チェック</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="ad-label">広告・PR｜アフィリエイトリンクを含みます</p>
+        <div class="hero-badges" aria-label="診断の特徴">
+          <span>個人情報入力なし</span>
+          <span>最短30秒</span>
+          <span>状況別に案内</span>
+        </div>
+        <h1 id="hero-title">
+          <span class="headline-pair"><span>返済日</span><span>督促</span><span>生活費</span></span>
+          <span class="headline-action"><span>借りる前に</span><span>30秒チェック。</span></span>
+        </h1>
+        <p class="lead">焦って申し込む前に、滞納・複数社・一時不足のどれに近いかを確認。今の状態に合わせて、相談優先か条件比較かを切り分けます。</p>
+        <div class="intent-panel" id="intent-panel" hidden>
+          <span id="intent-label"></span>
+          <p id="intent-text"></p>
+        </div>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#diagnosis" data-track="hero_start">30秒チェックを始める</a>
+          <a class="button ghost" href="#routes" data-track="hero_routes">状況別ルートを見る</a>
+        </div>
+
+        <div class="lp-metrics" aria-label="診断で確認できること">
+          <div>
+            <strong>滞納・督促</strong>
+            <span>相談優先の目安</span>
+          </div>
+          <div>
+            <strong>一時不足</strong>
+            <span>借入条件の確認</span>
+          </div>
+          <div>
+            <strong>複数社返済</strong>
+            <span>返済整理の入口</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="diagnosis-module" id="diagnosis" aria-labelledby="quiz-title">
+        <div class="module-ribbon">今の状態に合わせて案内</div>
+        <div class="module-head">
+          <div>
+            <p class="eyebrow">30秒チェック</p>
+            <h2 id="quiz-title">近い状態を選択</h2>
+          </div>
+          <button class="text-button" type="button" id="reset-quiz">リセット</button>
+        </div>
+        <div class="quiz-progress" aria-hidden="true">
+          <span id="progress-bar"></span>
+        </div>
+        <p class="step-label" id="step-label">Q1 / 6</p>
+
+        <div class="quiz-card" id="quiz-card">
+          <h3 id="question-title"></h3>
+          <p id="question-help"></p>
+          <div class="choices" id="choices"></div>
+        </div>
+
+        <div class="result-panel" id="result-panel" hidden>
+          <p class="result-kicker" id="result-kicker"></p>
+          <h3 id="result-title"></h3>
+          <p id="result-summary"></p>
+          <div class="result-split">
+            <div>
+              <h4>確認</h4>
+              <ul id="result-checks"></ul>
+            </div>
+            <div>
+              <h4>次の選択肢</h4>
+              <ul id="result-actions"></ul>
+            </div>
+          </div>
+          <div class="result-actions" id="result-ctas"></div>
+          <p class="fineprint" id="result-note"></p>
+        </div>
+
+        <div class="module-foot" aria-label="診断の注意事項">
+          <span>個人情報入力なし</span>
+          <span>結果は目安</span>
+          <span>PRリンクあり</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="problem-band" aria-labelledby="problem-title">
+      <div class="problem-copy">
+        <p class="eyebrow">最初にここだけ</p>
+        <h2 id="problem-title">追加で申し込む前に、該当する不安を分ける</h2>
+      </div>
+      <div class="problem-grid">
+        <article>
+          <span>返済日</span>
+          <h3>今日・明日の支払いが足りない</h3>
+          <p>一時的な不足か、来月以降も不足する状態かを確認します。</p>
+        </article>
+        <article>
+          <span>督促</span>
+          <h3>電話や通知が来ていて怖い</h3>
+          <p>借入比較より、相談先を優先した方がいい状態かを見ます。</p>
+        </article>
+        <article>
+          <span>複数社</span>
+          <h3>返済先が増えて整理できない</h3>
+          <p>借入先、毎月返済額、滞納の有無を分けて判断します。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="visual-band" aria-label="診断イメージ">
+      <img src="./hero-ai-finance.png" alt="スマートフォンのチェック画面と書類を配置した返済状況チェックのイメージ" loading="lazy">
+      <div class="visual-copy">
+        <p class="eyebrow">最初に整理</p>
+        <h2>追加で借りる前に、いまの状態を分けてください</h2>
+        <p>返済日前の一時的な不足なのか、すでに滞納や督促があるのかで、見るべき選択肢は変わります。30秒チェックでは、先に相談を見た方がいい状態と、条件比較に進める状態を分けます。</p>
+        <div class="step-strip">
+          <span>1. 状況を選ぶ</span>
+          <span>2. リスクを確認</span>
+          <span>3. 次の選択肢へ</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="route-band" id="routes" aria-labelledby="routes-title">
+      <div class="section-head">
+        <p class="eyebrow">状況別ルート</p>
+        <h2 id="routes-title">同じ「お金が足りない」でも、先に見るものは違います</h2>
+      </div>
+      <div class="route-grid">
+        <article class="route-card urgent">
+          <span class="tag">相談優先</span>
+          <h3>滞納・督促・複数社</h3>
+          <p>返済のために追加で借りる前に、返済計画や債務整理の相談先を確認する状態です。</p>
+        </article>
+        <article class="route-card watch">
+          <span class="tag">整理して判断</span>
+          <h3>来月以降も不安</h3>
+          <p>支払い順、遅延リスク、来月以降の返済額を整理してから、相談か比較かを決めます。</p>
+        </article>
+        <article class="route-card cash">
+          <span class="tag">条件比較</span>
+          <h3>一時的な不足</h3>
+          <p>滞納がなく返済見込みがある場合は、金利、返済日、遅延時の扱いを確認して比較します。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="conversion-band" aria-labelledby="conversion-title">
+      <div>
+        <p class="eyebrow">迷っているなら</p>
+        <h2 id="conversion-title">まずは診断結果だけ確認してください</h2>
+        <p>個人情報の入力なしで、あなたの状態に近いルートを表示します。結果を見てから、相談先や比較ページへ進むか判断できます。</p>
+      </div>
+      <a class="button primary" href="#diagnosis" data-track="mid_start">30秒チェックへ進む</a>
+    </section>
+
+    <section class="proof-band" aria-labelledby="proof-title">
+      <div class="section-head">
+        <p class="eyebrow">このページでできること</p>
+        <h2 id="proof-title">不安な順番を、判断できる順番に変える</h2>
+      </div>
+      <div class="proof-list">
+        <div>
+          <strong>個人情報なし</strong>
+          <p>診断だけなら、氏名、電話番号、メールアドレスの入力はありません。</p>
+        </div>
+        <div>
+          <strong>状態別に表示</strong>
+          <p>滞納、複数社、一時不足など、選択内容に合わせて結果を出します。</p>
+        </div>
+        <div>
+          <strong>借入前に確認</strong>
+          <p>返済見込みが弱い状態では、借入比較より相談先の確認を優先します。</p>
+        </div>
+        <div>
+          <strong>次に進める</strong>
+          <p>相談先の確認、借入条件の比較など、結果に応じた入口へ進めます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="today-band" aria-labelledby="today-title">
+      <div class="section-head">
+        <p class="eyebrow">今日やること</p>
+        <h2 id="today-title">焦っている時ほど、順番だけ決めてください</h2>
+      </div>
+      <div class="today-flow">
+        <div>
+          <span>01</span>
+          <strong>返済日と遅延の有無を確認</strong>
+          <p>今日必要なのか、すでに遅れているのかで案内先が変わります。</p>
+        </div>
+        <div>
+          <span>02</span>
+          <strong>来月以降も返せるか確認</strong>
+          <p>今月だけ足りないのか、毎月足りないのかを分けて考えます。</p>
+        </div>
+        <div>
+          <span>03</span>
+          <strong>相談か比較かを選ぶ</strong>
+          <p>滞納・督促・複数社なら相談を優先。一時不足なら条件を確認します。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="avoid-band" aria-labelledby="avoid-title">
+      <div class="section-head">
+        <p class="eyebrow">焦っている時ほど</p>
+        <h2 id="avoid-title">先に止める行動を明確にする</h2>
+      </div>
+      <div class="avoid-rows">
+        <div>
+          <span>01</span>
+          <strong>督促を放置し続ける</strong>
+          <p>連絡を避け続けるほど、選べる対応が狭くなることがあります。</p>
+        </div>
+        <div>
+          <span>02</span>
+          <strong>借入で借入を返す</strong>
+          <p>返済見込みが弱い状態では、負担が膨らむ可能性があります。</p>
+        </div>
+        <div>
+          <span>03</span>
+          <strong>条件不明な相手に申し込む</strong>
+          <p>登録番号、金利、返済方式、遅延時の扱いを必ず確認してください。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-band" id="faq" aria-labelledby="faq-title">
+      <div class="section-head">
+        <p class="eyebrow">不安の処理</p>
+        <h2 id="faq-title">クリック前に迷いやすい点</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>家族や会社に知られずに相談できますか？</summary>
+          <p>相談先や手続きで扱いは異なります。最初に連絡方法、郵送物、勤務先への連絡の有無を確認してください。</p>
+        </details>
+        <details>
+          <summary>今すぐ必要なら借りる方が早いですか？</summary>
+          <p>一時的な不足で返済見込みがある場合は、条件比較が選択肢になります。滞納や複数社返済がある場合は、相談を優先した方が安全です。</p>
+        </details>
+        <details>
+          <summary>債務整理は必ず借金が減りますか？</summary>
+          <p>結果は状況や手続きにより異なります。減額や解決を保証するものではないため、専門家の説明を確認してください。</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <div class="mobile-sticky">
+    <a class="button primary" href="#diagnosis" data-track="sticky_start">30秒チェック</a>
+  </div>
+
+  <footer class="footer">
+    <p>広告・PR｜本ページにはアフィリエイトリンクが含まれます。</p>
+    <p>掲載情報は一般的な案内であり、借入、契約、債務整理の結果を保証するものではありません。最終判断は公式情報や専門家の説明をご確認ください。</p>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>

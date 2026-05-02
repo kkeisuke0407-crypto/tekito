@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Urunon comparison image</title>
+  <desc id="desc">Stylized Fuji natural water delivery server illustration.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#dbeafe"/><stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0369a1"/><stop offset="1" stop-color="#075985"/>
+    </linearGradient>
+    <filter id="s"><feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#0c2d5a" flood-opacity=".16"/></filter>
+  </defs>
+  <rect width="960" height="540" rx="30" fill="url(#bg)"/>
+  <path d="M180 342 L330 150 L480 342 Z" fill="#bfdbfe"/>
+  <path d="M330 150 L418 342 L480 342 Z" fill="#93c5fd"/>
+  <g filter="url(#s)">
+    <rect x="556" y="120" width="170" height="318" rx="34" fill="#ffffff"/>
+    <rect x="590" y="166" width="102" height="58" rx="18" fill="url(#accent)"/>
+    <rect x="588" y="282" width="106" height="108" rx="28" fill="#eff6ff"/>
+    <path d="M641 299 C666 328 682 354 682 375 C682 401 663 420 641 420 C619 420 600 401 600 375 C600 354 616 328 641 299Z" fill="#38bdf8" opacity=".75"/>
+  </g>
+  <text x="480" y="78" text-anchor="middle" fill="#0c2d5a" font-family="Arial, sans-serif" font-size="28" font-weight="800">Fuji Natural Water</text>
+  <text x="480" y="492" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="20" font-weight="700">Delivery water type</text>
+</svg>
