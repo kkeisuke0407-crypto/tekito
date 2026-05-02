@@ -32,10 +32,20 @@ document.addEventListener("DOMContentLoaded", function () {
   // ── CTA click tracking ─────────────────────────────────────────
   document.querySelectorAll("[data-track]").forEach(function (el) {
     el.addEventListener("click", function () {
-      track("water_cta_click", {
-        track_name:    el.getAttribute("data-track"),
-        affiliate_key: el.getAttribute("data-affiliate") || ""
-      });
+      var affiliateKey = el.getAttribute("data-affiliate") || "";
+      var params = {
+        track_name: el.getAttribute("data-track") || "",
+        affiliate_key: affiliateKey,
+        link_url: el.getAttribute("href") || "",
+        transport_type: "beacon"
+      };
+
+      if (affiliateKey) {
+        track("water_affiliate_click", params);
+        track("water_cta_click", params);
+      } else {
+        track("water_engagement_click", params);
+      }
     });
   });
 
