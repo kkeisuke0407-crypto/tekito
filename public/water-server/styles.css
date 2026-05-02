@@ -193,6 +193,81 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .section-head p { font-size: .86rem; color: var(--muted); }
 
+/* ── Intent Guide ──────────────────────────────── */
+.intent-section { padding-bottom: 2.2rem; }
+.intent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: .85rem;
+}
+.intent-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background: linear-gradient(180deg, #fff 0%, #f8fafc 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color .15s, box-shadow .15s, transform .15s;
+}
+.intent-card:hover {
+  border-color: var(--teal);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: var(--text);
+}
+.intent-label {
+  align-self: flex-start;
+  font-size: .68rem;
+  font-weight: 800;
+  color: var(--teal-dk);
+  background: var(--teal-lt);
+  border: 1px solid #99f6e4;
+  border-radius: 999px;
+  padding: 2px 8px;
+  margin-bottom: .55rem;
+}
+.intent-card strong {
+  display: block;
+  color: var(--navy);
+  font-size: .95rem;
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: .35rem;
+}
+.intent-card p {
+  color: var(--muted);
+  font-size: .79rem;
+  line-height: 1.6;
+  margin-bottom: .8rem;
+}
+.intent-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .28rem;
+  margin-top: auto;
+}
+.intent-services span {
+  font-size: .68rem;
+  font-weight: 700;
+  color: var(--navy-mid);
+  background: var(--water);
+  border: 1px solid var(--blue-lt);
+  border-radius: 999px;
+  padding: 2px 7px;
+}
+.intent-note {
+  margin-top: .85rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.6;
+}
+
 /* ── Quick Guide (3秒) ──────────────────────────── */
 .quick-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;

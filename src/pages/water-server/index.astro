@@ -145,6 +145,60 @@ const faqJsonLd = {
   </p>
 </div>
 
+<!-- ══ 迷ったときの入口 ═══════════════════════════════════════ -->
+<section class="ws-section section-white intent-section" id="intent">
+  <div class="ws-container">
+    <div class="section-head">
+      <span class="kicker">START HERE</span>
+      <h2>迷ったら、まず近い使い方から選ぶ</h2>
+      <p>比較に入る前に、よくある目的別の入口を整理しました。</p>
+    </div>
+    <div class="intent-grid">
+      <a class="intent-card" href="#solo" data-scroll-to="#solo" data-track="intent_solo">
+        <span class="intent-label">一人暮らし・賃貸</span>
+        <strong>省スペースで置きたい</strong>
+        <p>卓上対応やボトル交換なしを優先。月額の見通しと置き場所を先に確認します。</p>
+        <div class="intent-services">
+          <span>every frecious</span>
+          <span>LOHASUI</span>
+          <span>OCEAN</span>
+        </div>
+      </a>
+      <a class="intent-card" href="#family" data-scroll-to="#family" data-track="intent_family">
+        <span class="intent-label">家族で使う</span>
+        <strong>使用量と水代を見たい</strong>
+        <p>水の消費量が多い家庭向けに、宅配水の使いやすさと契約条件を見比べます。</p>
+        <div class="intent-services">
+          <span>オーケン</span>
+          <span>ウォーターワン</span>
+          <span>プレミアム</span>
+        </div>
+      </a>
+      <a class="intent-card" href="#no-bottle" data-scroll-to="#no-bottle" data-track="intent_no_bottle">
+        <span class="intent-label">ボトル交換なし</span>
+        <strong>重い水を持ちたくない</strong>
+        <p>浄水型を中心に、タンク給水か水道直結か、設置条件まで確認します。</p>
+        <div class="intent-services">
+          <span>every frecious</span>
+          <span>OCEAN</span>
+          <span>LOHASUI Luxe</span>
+        </div>
+      </a>
+      <a class="intent-card" href="#natural-water" data-scroll-to="#natural-water" data-track="intent_natural_water">
+        <span class="intent-label">天然水・宅配水</span>
+        <strong>水の種類で選びたい</strong>
+        <p>天然水やRO水など、水の種類と配送・保管のしやすさを確認します。</p>
+        <div class="intent-services">
+          <span>ウォーターワン</span>
+          <span>フレシャス</span>
+          <span>プレミアム</span>
+        </div>
+      </a>
+    </div>
+    <p class="intent-note">迷った場合は、料金だけでなく最低利用期間・解約金まで見てから公式サイトへ進むのがおすすめです。</p>
+  </div>
+</section>
+
 <!-- ══ 3秒でわかる選び方 ═══════════════════════════════════════ -->
 <section class="ws-section section-white" id="guide">
   <div class="ws-container">
@@ -362,7 +416,7 @@ const faqJsonLd = {
     </div>
     <div class="cond-list">
 
-      <div class="cond-item">
+      <div class="cond-item" id="cost">
         <div class="cond-icon">💰</div>
         <div class="cond-body">
           <strong>月額コストの見通しを立てたい人</strong>
@@ -374,7 +428,7 @@ const faqJsonLd = {
         </div>
       </div>
 
-      <div class="cond-item">
+      <div class="cond-item" id="no-bottle">
         <div class="cond-icon">🔧</div>
         <div class="cond-body">
           <strong>浄水型でボトル交換の手間を省きたい人</strong>
@@ -398,7 +452,7 @@ const faqJsonLd = {
         </div>
       </div>
 
-      <div class="cond-item">
+      <div class="cond-item" id="natural-water">
         <div class="cond-icon">🏔️</div>
         <div class="cond-body">
           <strong>天然水・宅配水にこだわりたい人</strong>
