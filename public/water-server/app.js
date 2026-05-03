@@ -31,16 +31,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ── CTA click tracking ─────────────────────────────────────────
   document.querySelectorAll("[data-track]").forEach(function (el) {
-    el.addEventListener("click", function () {
+    el.addEventListener("click", function (event) {
       var affiliateKey = el.getAttribute("data-affiliate") || "";
+      var destination = el.getAttribute("href") || "";
       var params = {
         track_name: el.getAttribute("data-track") || "",
         affiliate_key: affiliateKey,
-        link_url: el.getAttribute("href") || "",
+        link_url: destination,
         transport_type: "beacon"
       };
 
       if (affiliateKey) {
+        var isPrimaryClick = !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey && event.button === 0;
+        var isOutboundLink = el.tagName === "A" && destination && destination !== "#";
+
+        if (isPrimaryClick && isOutboundLink) {
+          event.preventDefault();
+          var didNavigate = false;
+          var navigate = function () {
+            if (didNavigate) return;
+            didNavigate = true;
+            window.location.href = destination;
+          };
+
+          track("water_affiliate_click", {
+            ...params,
+            event_callback: navigate,
+            event_timeout: 800
+          });
+          track("water_cta_click", params);
+          window.setTimeout(navigate, 800);
+          return;
+        }
+
         track("water_affiliate_click", params);
         track("water_cta_click", params);
       } else {
