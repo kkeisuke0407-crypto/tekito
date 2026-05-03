@@ -57,10 +57,10 @@ document.addEventListener("DOMContentLoaded", function () {
           track("water_affiliate_click", {
             ...params,
             event_callback: navigate,
-            event_timeout: 800
+            event_timeout: 2000
           });
           track("water_cta_click", params);
-          window.setTimeout(navigate, 800);
+          window.setTimeout(navigate, 2000);
           return;
         }
 
