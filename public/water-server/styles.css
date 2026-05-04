@@ -165,16 +165,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* ── PR Disclosure Bar ──────────────────────────── */
 .pr-bar {
-  max-width: calc(var(--max) - 2.5rem);
-  margin: .75rem auto 0;
-  padding: .55rem 1rem;
-  background: var(--bg-muted); border: 1px solid var(--border);
-  border-left: 3px solid var(--teal);
-  border-radius: 4px;
-  font-size: .78rem; color: var(--muted); line-height: 1.55;
+  max-width: var(--max);
+  margin: .3rem auto 0;
+  padding: .15rem 1.25rem;
+  font-size: .67rem; color: #b0bac6; line-height: 1.5;
+  text-align: center;
 }
 @media (min-width: 860px) {
-  .pr-bar { margin: .75rem auto 0; }
+  .pr-bar { padding: .15rem 2rem; }
 }
 
 /* ── Section common ─────────────────────────────── */
@@ -554,11 +552,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* ── Page Meta / Disclosure ─────────────────────── */
 .page-meta {
-  background: var(--bg-muted); border: 1px solid var(--border);
-  border-radius: var(--radius); padding: 1.05rem 1.2rem;
-  font-size: .79rem; color: var(--muted); line-height: 1.75;
+  font-size: .7rem; color: #b0bac6; line-height: 1.7;
 }
-.page-meta strong { color: var(--text); font-weight: 700; }
+.page-meta strong { color: #b0bac6; font-weight: 600; }
 
 /* ── Footer ─────────────────────────────────────── */
 .ws-footer {
