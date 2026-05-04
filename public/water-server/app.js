@@ -59,4 +59,55 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // ── Compare table filter chips ─────────────────────────────────
+  document.querySelectorAll(".filter-chip").forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      document.querySelectorAll(".filter-chip").forEach(function (c) {
+        c.classList.remove("active");
+      });
+      chip.classList.add("active");
+      var filter = chip.getAttribute("data-filter");
+      document.querySelectorAll("col[data-col-type]").forEach(function (col) {
+        col.style.visibility = (filter === "all" || col.getAttribute("data-col-type") === filter)
+          ? "" : "collapse";
+      });
+      track("compare_filter", { filter_type: filter });
+    });
+  });
+
+  // ── Sticky CTA bar ────────────────────────────────────────────
+  var bar = document.createElement("div");
+  bar.className = "sticky-cta-bar";
+  bar.innerHTML =
+    '<span class="sticky-label">🏆 編集部おすすめ：オーケンウォーター</span>' +
+    '<a href="#" class="sticky-btn" data-affiliate="oken" data-track="sticky_oken" rel="nofollow sponsored">公式で条件を確認</a>' +
+    '<button class="sticky-close" aria-label="閉じる">✕</button>';
+  document.body.appendChild(bar);
+
+  var stickyBtn = bar.querySelector("[data-affiliate]");
+  var stickyKey = stickyBtn.getAttribute("data-affiliate");
+  if (AFFILIATE_LINKS[stickyKey]) stickyBtn.setAttribute("href", AFFILIATE_LINKS[stickyKey]);
+  stickyBtn.addEventListener("click", function () {
+    track("water_cta_click", { track_name: "sticky_oken", affiliate_key: "oken" });
+  });
+
+  var dismissed = false;
+  bar.querySelector(".sticky-close").addEventListener("click", function () {
+    dismissed = true;
+    bar.classList.remove("visible");
+  });
+
+  var heroEl = document.querySelector(".hero");
+  var faqEl  = document.getElementById("faq");
+  window.addEventListener("scroll", function () {
+    if (dismissed) return;
+    var heroBottom = heroEl ? heroEl.getBoundingClientRect().bottom : 300;
+    var faqTop     = faqEl  ? faqEl.getBoundingClientRect().top    : window.innerHeight + 1;
+    if (heroBottom < 0 && faqTop > window.innerHeight) {
+      bar.classList.add("visible");
+    } else {
+      bar.classList.remove("visible");
+    }
+  }, { passive: true });
+
 });
