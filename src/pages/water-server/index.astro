@@ -89,6 +89,8 @@ const faqJsonLd = {
       <a href="#recommend"  data-scroll-to="#recommend">条件別</a>
       <a href="#cards"      data-scroll-to="#cards">詳細</a>
       <a href="#faq"        data-scroll-to="#faq">FAQ</a>
+      <a href="/water-server/solo/">一人暮らし</a>
+      <a href="/water-server/family/">家族向け</a>
     </nav>
   </div>
 </header>
@@ -97,8 +99,13 @@ const faqJsonLd = {
 <section class="hero">
   <div class="ws-container hero-inner">
     <div class="hero-copy">
-      <div class="hero-badge">2026年4月 更新</div>
+      <div class="hero-badge">2026年5月 更新</div>
       <h1>ウォーターサーバー比較<br/>料金・解約条件まで確認</h1>
+      <div class="hero-trust-badges">
+        <span class="hero-trust-badge">✓ 5サービス・9項目で比較</span>
+        <span class="hero-trust-badge">✓ 公式情報をもとに作成</span>
+        <span class="hero-trust-badge">✓ 2026年5月 最新確認</span>
+      </div>
       <p class="hero-sub">
         浄水型・宅配水・天然水サーバーを、月額料金、交換のラクさ、
         置き場所、契約条件で比較。家族構成や使い方に合うサービスを選べます。
@@ -144,6 +151,18 @@ const faqJsonLd = {
     掲載順は報酬額だけでなく、サービス内容・比較しやすさ・確認すべき条件をもとに構成しています。
     料金・契約条件は変更になる場合があるため、申し込み前に必ず公式サイトでご確認ください。
   </p>
+</div>
+
+<!-- ══ Editorial card ════════════════════════════════════════ -->
+<div style="background:#f8fafc;padding-bottom:.75rem">
+  <div class="editorial-card">
+    <div class="ed-meta">
+      <span class="ed-icon">✏️</span>
+      <span class="ed-name">水代見直しナビ 編集部</span>
+      <span class="ed-date">最終確認：2026年5月</span>
+    </div>
+    <p>掲載5サービスは公式サイトの料金・契約条件をもとに整理しています。アフィリエイト報酬の有無にかかわらず、契約条件の透明性と実際の使いやすさを基準に掲載順を決めています。料金・キャンペーンは頻繁に変わるため、申し込み前に必ず公式サイトでご確認ください。</p>
+  </div>
 </div>
 
 <!-- ══ 迷ったときの入口 ═══════════════════════════════════════ -->
@@ -251,8 +270,22 @@ const faqJsonLd = {
       <h2>5サービス 一覧比較表</h2>
       <p>横スクロールで全項目を確認できます。料金・期間は必ず公式サイトでご確認ください。</p>
     </div>
+    <div class="compare-filters">
+      <button class="filter-chip active" data-filter="all">すべて表示</button>
+      <button class="filter-chip" data-filter="宅配水">宅配水のみ</button>
+      <button class="filter-chip" data-filter="浄水型">浄水型のみ</button>
+      <button class="filter-chip" data-filter="直結型">水道直結のみ</button>
+    </div>
     <div class="compare-scroll">
       <table class="compare-table">
+        <colgroup>
+          <col>
+          <col data-col-type="宅配水" data-col-id="oken">
+          <col data-col-type="浄水型" data-col-id="every">
+          <col data-col-type="宅配水" data-col-id="frecious">
+          <col data-col-type="宅配水" data-col-id="water_one">
+          <col data-col-type="直結型" data-col-id="ocean">
+        </colgroup>
         <thead>
           <tr>
             <th>比較項目</th>
@@ -343,6 +376,14 @@ const faqJsonLd = {
             <td class="cta-cell"><a class="compare-btn" href="#" data-affiliate="frecious"        data-track="compare_frecious"      rel="nofollow sponsored">確認する</a></td>
             <td class="cta-cell"><a class="compare-btn" href="#" data-affiliate="water_one"       data-track="compare_water_one"     rel="nofollow sponsored">確認する</a></td>
             <td class="cta-cell"><a class="compare-btn" href="#" data-affiliate="ocean"           data-track="compare_ocean"         rel="nofollow sponsored">確認する</a></td>
+          </tr>
+          <tr>
+            <td>スタート<br/>特典</td>
+            <td style="font-size:.72rem">特典あり<br/><a href="#" data-affiliate="oken" data-track="campaign_oken" rel="nofollow sponsored" style="color:#1d4ed8">公式で確認</a></td>
+            <td style="font-size:.72rem">特典あり<br/><a href="#" data-affiliate="every_frecious" data-track="campaign_every" rel="nofollow sponsored" style="color:#1d4ed8">公式で確認</a></td>
+            <td style="font-size:.72rem">特典あり<br/><a href="#" data-affiliate="frecious" data-track="campaign_frecious" rel="nofollow sponsored" style="color:#1d4ed8">公式で確認</a></td>
+            <td style="font-size:.72rem">特典あり<br/><a href="#" data-affiliate="water_one" data-track="campaign_water_one" rel="nofollow sponsored" style="color:#1d4ed8">公式で確認</a></td>
+            <td style="font-size:.72rem">特典あり<br/><a href="#" data-affiliate="ocean" data-track="campaign_ocean" rel="nofollow sponsored" style="color:#1d4ed8">公式で確認</a></td>
           </tr>
           <tr>
             <td>卓上/床置き</td>
@@ -788,6 +829,41 @@ const faqJsonLd = {
           <li style="font-size:.83rem;color:#475569;display:flex;gap:.4rem"><span style="color:#f59e0b;flex-shrink:0">▸</span><span>水の使用量が少なく、ペットボトル購入の方がコスト面で有利な人</span></li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 目的別ページへのリンク ══════════════════════════════════ -->
+<div class="divider"></div>
+<section class="ws-section section-white">
+  <div class="ws-container">
+    <div class="section-head">
+      <span class="kicker">BY CONDITION</span>
+      <h2>目的別に絞り込んで比較する</h2>
+      <p>生活スタイルに合わせて絞り込んだページでも比較できます</p>
+    </div>
+    <div class="quick-grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+      <a href="/water-server/solo/" style="text-decoration:none">
+        <div class="quick-card" style="cursor:pointer">
+          <div class="quick-icon">🏠</div>
+          <h3>一人暮らし向け</h3>
+          <p style="font-size:.82rem;color:#64748b">卓上設置・月額コスト・解約条件で一人暮らし向きを比較</p>
+        </div>
+      </a>
+      <a href="/water-server/family/" style="text-decoration:none">
+        <div class="quick-card" style="cursor:pointer">
+          <div class="quick-icon">👨‍👩‍👧</div>
+          <h3>家族向け</h3>
+          <p style="font-size:.82rem;color:#64748b">使用量・ボトル交換のラクさで家族利用向きを比較</p>
+        </div>
+      </a>
+      <a href="/water-server/jousui/" style="text-decoration:none">
+        <div class="quick-card" style="cursor:pointer">
+          <div class="quick-icon">🔩</div>
+          <h3>浄水型に絞って比較</h3>
+          <p style="font-size:.82rem;color:#64748b">ボトル交換なし・定額制の浄水型サービスを比較</p>
+        </div>
+      </a>
     </div>
   </div>
 </section>
