@@ -606,3 +606,31 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .service-cards { display: grid; grid-template-columns: 1fr 1fr; }
   .fee-grid { grid-template-columns: repeat(4, 1fr); }
 }
+
+/* ── Campaign badge ─────────────────────────────── */
+.campaign-badge {
+  background: #fff7ed; border: 1px solid #fed7aa;
+  border-left: 3px solid #f97316;
+  border-radius: 0 6px 6px 0;
+  padding: .45rem .75rem; margin-bottom: .45rem;
+  font-size: .77rem; font-weight: 700; color: #9a3412; line-height: 1.4;
+}
+.campaign-badge .cb-note {
+  font-size: .68rem; font-weight: 400; color: #c2410c; display: block; margin-top: .15rem;
+}
+
+/* ── Plan table inside card ─────────────────────── */
+.plan-table {
+  width: 100%; border-collapse: collapse;
+  font-size: .75rem; margin: .85rem 0;
+}
+.plan-table th {
+  background: var(--navy); color: #fff;
+  padding: .35rem .5rem; text-align: left; font-weight: 700; font-size: .7rem;
+}
+.plan-table td {
+  padding: .35rem .5rem; border-bottom: 1px solid var(--border);
+  color: var(--text); vertical-align: top; line-height: 1.4;
+}
+.plan-table tr:last-child td { border-bottom: none; }
+.plan-table .td-price { font-weight: 800; color: var(--navy); }
