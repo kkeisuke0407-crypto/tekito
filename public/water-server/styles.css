@@ -608,7 +608,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ── Campaign badge ─────────────────────────────── */
+.campaign-badges {
+  display: flex; flex-direction: column; gap: .35rem; margin-bottom: .65rem;
+}
 .campaign-badge {
+  display: block;
   background: #fff7ed; border: 1px solid #fed7aa;
   border-left: 3px solid #f97316;
   border-radius: 0 6px 6px 0;
