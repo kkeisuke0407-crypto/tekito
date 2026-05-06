@@ -111,8 +111,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var bar = document.createElement("div");
   bar.className = "sticky-cta-bar";
   bar.innerHTML =
-    '<span class="sticky-label">🏆 編集部おすすめ：オーケンウォーター</span>' +
-    '<a href="#" class="sticky-btn" data-affiliate="oken" data-track="sticky_oken" rel="nofollow sponsored">公式で条件を確認</a>' +
+    '<span class="sticky-label">料金重視なら：オーケンウォーター</span>' +
+    '<a href="#" class="sticky-btn" data-affiliate="oken" data-track="sticky_oken_cost" rel="nofollow sponsored">RO水の料金・条件を確認</a>' +
     '<button class="sticky-close" aria-label="閉じる">✕</button>';
   document.body.appendChild(bar);
 
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
       event.preventDefault();
       var didNavigate = false;
       var navigate = function () { if (!didNavigate) { didNavigate = true; window.location.href = destination; } };
-      track("water_affiliate_click", { track_name: "sticky_oken", affiliate_key: "oken", link_url: destination, event_callback: navigate, event_timeout: 2000 });
+      track("water_affiliate_click", { track_name: "sticky_oken_cost", affiliate_key: "oken", link_url: destination, event_callback: navigate, event_timeout: 2000 });
       window.setTimeout(navigate, 2000);
     }
   });

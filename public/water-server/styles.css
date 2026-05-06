@@ -964,6 +964,74 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .ws-footer-links a:hover { color: rgba(255,255,255,.88); text-decoration: none; }
 .ws-footer-copy { margin-top: .65rem; font-size: .7rem; opacity: .45; }
 
+/* ── Sticky CTA ─────────────────────────────────── */
+.sticky-cta-bar {
+  position: fixed;
+  left: .75rem;
+  right: .75rem;
+  bottom: max(.75rem, env(safe-area-inset-bottom));
+  z-index: 120;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: .55rem;
+  align-items: center;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: .75rem .85rem;
+  border: 1px solid #99f6e4;
+  border-radius: 10px;
+  background: rgba(255,255,255,.97);
+  box-shadow: 0 10px 30px rgba(12,45,90,.18);
+  transform: translateY(calc(100% + 1.25rem));
+  opacity: 0;
+  pointer-events: none;
+  transition: transform .25s ease, opacity .25s ease;
+}
+.sticky-cta-bar.visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.sticky-label {
+  color: var(--navy);
+  font-size: .78rem;
+  font-weight: 900;
+  line-height: 1.35;
+}
+.sticky-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  border-radius: 7px;
+  background: var(--teal);
+  color: #fff;
+  font-size: .78rem;
+  font-weight: 900;
+  padding: .5rem .75rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.sticky-btn:hover {
+  background: var(--teal-dk);
+  color: #fff;
+  text-decoration: none;
+}
+.sticky-close {
+  position: absolute;
+  top: -.55rem;
+  right: -.45rem;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--muted);
+  font-size: .74rem;
+  font-weight: 900;
+  box-shadow: var(--shadow);
+}
+
 /* ── Utilities ──────────────────────────────────── */
 .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 
