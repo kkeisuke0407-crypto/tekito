@@ -378,6 +378,79 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ── Compare Table ──────────────────────────────── */
+.monthly-pick {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.monthly-pick-head {
+  display: grid;
+  gap: .25rem;
+  margin-bottom: .8rem;
+}
+.monthly-pick-head strong {
+  color: var(--navy);
+  font-size: .92rem;
+  font-weight: 900;
+}
+.monthly-pick-head p {
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.55;
+}
+.monthly-pick-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .65rem;
+}
+.monthly-pick-grid a {
+  display: grid;
+  gap: .18rem;
+  min-height: 100%;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: .85rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color .15s, box-shadow .15s, transform .15s;
+}
+.monthly-pick-grid a:hover {
+  border-color: var(--teal);
+  box-shadow: var(--shadow);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+.monthly-label {
+  justify-self: flex-start;
+  color: var(--teal-dk);
+  background: var(--teal-lt);
+  border-radius: 999px;
+  font-size: .66rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  margin-bottom: .15rem;
+}
+.monthly-pick-grid strong {
+  color: var(--navy);
+  font-size: .88rem;
+  font-weight: 900;
+}
+.monthly-pick-grid em {
+  color: var(--accent);
+  font-size: 1.05rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1.2;
+}
+.monthly-pick-grid small {
+  color: var(--muted);
+  font-size: .72rem;
+  line-height: 1.55;
+}
 .compare-scroll {
   overflow-x: auto; -webkit-overflow-scrolling: touch;
   margin: 0 -1.25rem; padding: 0 1.25rem;
@@ -725,6 +798,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .pr-bar { margin-left: 2rem; margin-right: 2rem; max-width: calc(var(--max) - 4rem); }
   .price-quick-grid { grid-template-columns: repeat(3, 1fr); }
   .price-caution { grid-template-columns: 1fr auto; }
+  .monthly-pick { padding: 1.15rem; }
+  .monthly-pick-head { grid-template-columns: 1fr 1.35fr; align-items: end; }
+  .monthly-pick-grid { grid-template-columns: repeat(3, 1fr); }
   .compare-scroll { margin: 0; padding: 0; }
   .cond-list { display: grid; grid-template-columns: 1fr 1fr; }
   .service-cards { display: grid; grid-template-columns: 1fr 1fr; }
