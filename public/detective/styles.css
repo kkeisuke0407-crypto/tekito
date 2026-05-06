@@ -407,6 +407,39 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   border-top: 1px solid var(--border);
   background: var(--bg);
 }
+.plan-type-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+.plan-type-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+.plan-type-item {
+  padding: 1rem 1rem .85rem;
+  border-right: 1px solid var(--border);
+  font-size: .78rem; color: var(--muted);
+  line-height: 1.6;
+}
+.plan-type-item:last-child { border-right: none; }
+.plan-type-item--highlight {
+  background: linear-gradient(160deg, #f0fdf4, #fff);
+}
+.plan-type-name {
+  font-size: .72rem; font-weight: 800;
+  color: var(--navy); margin-bottom: .2rem;
+  letter-spacing: .02em;
+}
+.plan-type-price {
+  font-size: .82rem; font-weight: 700;
+  color: var(--red); margin-bottom: .4rem;
+}
+.plan-type-item--highlight .plan-type-name { color: #166534; }
+.plan-type-item--highlight .plan-type-price { color: #16a34a; }
 .who-card {
   background: #fff;
   border: 1px solid var(--border);
@@ -502,6 +535,23 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin-bottom: .6rem;
   color: var(--navy);
 }
+.ranking-badges {
+  display: flex; flex-wrap: wrap; gap: .3rem;
+  margin-bottom: .65rem;
+}
+.ranking-badge-tag {
+  font-size: .63rem; font-weight: 700;
+  background: rgba(13,27,46,.05);
+  border: 1px solid rgba(13,27,46,.1);
+  border-radius: 4px;
+  padding: .12rem .4rem;
+  color: var(--navy-mid);
+}
+.ranking-badge-tag.good {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+  color: #166534;
+}
 .ranking-features { display: flex; flex-direction: column; gap: .35rem; margin-bottom: .75rem; }
 .ranking-feature {
   display: flex; align-items: flex-start; gap: .4rem;
@@ -555,9 +605,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .matching-cta-body { flex: 1; }
 .matching-cta-label {
+  display: inline-flex; align-items: center; gap: .35rem;
   font-size: .72rem; font-weight: 800; color: var(--gold-lt);
   margin-bottom: .4rem;
 }
+.matching-cta-label svg { width: 14px; height: 14px; flex-shrink: 0; }
 .matching-cta-body h3 { font-size: 1.05rem; font-weight: 900; margin-bottom: .4rem; }
 .matching-cta-body p { font-size: .82rem; color: rgba(255,255,255,.6); }
 .matching-cta-btn {
@@ -781,6 +833,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .points-grid > *:last-child { grid-column: 1 / -1; }
 
   .quiz-grid { grid-template-columns: 1fr; }
+
+  .plan-type-grid { grid-template-columns: 1fr; }
+  .plan-type-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .plan-type-item:last-child { border-bottom: none; }
 
   .cost-who-grid { grid-template-columns: 1fr; }
 
