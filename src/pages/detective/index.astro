@@ -1,0 +1,652 @@
+---
+const PAGE_TITLE = "探偵費用を比較｜浮気の証拠ナビ｜探偵比較・無料相談サイト";
+const PAGE_DESC  = "探偵事務所の費用・実績・調査報告書の質を無料で比較。浮気調査・素行調査・証拠収集のご依頼前に、複数の探偵事務所の料金体系・追加費用・対応エリアを確認しましょう。";
+const CANONICAL  = "https://vpscomparehub.com/detective/";
+const OGP_IMAGE  = "https://vpscomparehub.com/og-default.svg";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "探偵費用はどのくらいかかりますか？",
+      "acceptedAnswer": { "@type": "Answer",
+        "text": "調査内容・日数・調査員の人数・難易度によって大きく異なります。1日の調査で10〜15万円前後、数日間で30〜50万円前後が目安ですが、依頼前に必ず複数社で見積もりを取ることをおすすめします。" }
+    },
+    {
+      "@type": "Question",
+      "name": "匿名で相談できますか？",
+      "acceptedAnswer": { "@type": "Answer",
+        "text": "はい、多くの探偵事務所では匿名・ニックネームでの相談が可能です。個人情報の入力は依頼確定後になるケースが多いため、まずは気軽にご相談ください。" }
+    },
+    {
+      "@type": "Question",
+      "name": "相談したら必ず契約しないといけませんか？",
+      "acceptedAnswer": { "@type": "Answer",
+        "text": "いいえ、相談・見積もりだけで終わっても問題ありません。複数社の見積もりを比べてから決断することをおすすめします。" }
+    },
+    {
+      "@type": "Question",
+      "name": "証拠は裁判で使えますか？",
+      "acceptedAnswer": { "@type": "Answer",
+        "text": "調査報告書の品質・形式によって裁判での利用可否が変わります。依頼前に「裁判利用を想定した報告書を作成できるか」を確認することが重要です。" }
+    },
+    {
+      "@type": "Question",
+      "name": "このページは広告ですか？",
+      "acceptedAnswer": { "@type": "Answer",
+        "text": "このページには広告・アフィリエイトリンクを含みます。掲載順は報酬額だけでなく、料金の透明性・実績・調査報告書の質・対応エリアをもとに構成しています。" }
+    }
+  ]
+};
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{PAGE_TITLE}</title>
+  <meta name="description" content={PAGE_DESC} />
+  <link rel="canonical" href={CANONICAL} />
+
+  <!-- OGP -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content={PAGE_TITLE} />
+  <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:url"         content={CANONICAL} />
+  <meta property="og:image"       content={OGP_IMAGE} />
+  <meta property="og:locale"      content="ja_JP" />
+  <meta property="og:site_name"   content="浮気の証拠ナビ" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="/detective/styles.css" />
+
+  <!-- Google Ads / GA4 -->
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2YLF06DC0E');
+    gtag('config', 'AW-18129603657');
+  </script>
+</head>
+<body>
+
+<!-- ══ HEADER ══════════════════════════════════════════════════ -->
+<header class="dt-header">
+  <div class="dt-header-inner">
+    <a href="/detective/" class="dt-logo">
+      <div class="dt-logo-icon">🔍</div>
+      <div class="dt-logo-wrap">
+        <span>浮気の証拠ナビ</span>
+        <span class="dt-logo-sub">探偵比較・無料相談サイト</span>
+      </div>
+    </a>
+    <nav class="dt-nav">
+      <a href="#ranking"  data-scroll-to="#ranking">ランキング</a>
+      <a href="#cost"     data-scroll-to="#cost">費用目安</a>
+      <a href="#flow"     data-scroll-to="#flow">ご利用の流れ</a>
+      <a href="#faq"      data-scroll-to="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ══ HERO ════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="dt-container hero-inner">
+    <div class="hero-copy">
+      <div class="hero-badge">探偵事務所を比較して失敗しない探偵選びをサポート</div>
+      <h1>浮気の証拠、<br/>自分で集める前に<br/>探偵費用を<em>比較</em>してください</h1>
+      <p class="hero-sub-copy">
+        探偵費用は依頼先で大きく変わります。<br/>
+        同じ調査でも、数十万円の差が出ることがあります。
+      </p>
+      <div class="hero-badges">
+        <div class="hero-badge-item">
+          <span class="badge-icon">🕵️</span>
+          <span>匿名OK</span>
+        </div>
+        <div class="hero-badge-item">
+          <span class="badge-icon">💬</span>
+          <span>相談無料</span>
+        </div>
+        <div class="hero-badge-item">
+          <span class="badge-icon">🗾</span>
+          <span>全面対応</span>
+        </div>
+        <div class="hero-badge-item">
+          <span class="badge-icon">📋</span>
+          <span>見積もり比較</span>
+        </div>
+      </div>
+      <a href="#" class="hero-cta" data-affiliate="matching" data-track="hero_matching" rel="nofollow sponsored">
+        <span class="cta-free-badge">無料</span>
+        今すぐ探偵を比較する
+        <span class="hero-cta-arrow">›</span>
+      </a>
+    </div>
+    <div class="hero-media">
+      <div class="hero-media-card">
+        <div class="hero-media-placeholder">
+          <div class="placeholder-icon">🔍</div>
+          <div class="placeholder-title">調査報告書</div>
+          <div class="placeholder-sub">証拠として使える報告書を<br/>作成できる事務所を選ぶことが重要です</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#f5f6f8"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ══ PR DISCLOSURE ═══════════════════════════════════════════ -->
+<p class="pr-bar">PR｜当ページはアフィリエイトリンクを含みます</p>
+
+<!-- ══ WARNING SECTION ══════════════════════════════════════════ -->
+<section class="dt-section warning-section">
+  <div class="dt-container">
+    <div class="warning-label">⚠️ 探偵選びで失敗すると</div>
+    <div class="warning-inner">
+      <div class="warning-left">
+        <h2>証拠も<em>お金も</em><br/>失います</h2>
+        <p class="warning-lead">浮気調査は、安ければいいわけではありません。</p>
+      </div>
+      <div class="risk-grid">
+        <div class="risk-card">
+          <div class="risk-icon">📷</div>
+          <strong>証拠として弱い<br/>写真しか撮れない</strong>
+        </div>
+        <div class="risk-card">
+          <div class="risk-icon">💰</div>
+          <strong>追加料金で<br/>高額になる</strong>
+        </div>
+        <div class="risk-card">
+          <div class="risk-icon">📅</div>
+          <strong>調査日を外して<br/>費用だけかかる</strong>
+        </div>
+        <div class="risk-card">
+          <div class="risk-icon">📄</div>
+          <strong>報告書が<br/>裁判で使いにくい</strong>
+        </div>
+        <div class="risk-card">
+          <div class="risk-icon">❓</div>
+          <strong>料金体系が<br/>不明確</strong>
+        </div>
+      </div>
+    </div>
+    <p class="warning-footer">だから、1社だけで決めるのは危険です。</p>
+  </div>
+</section>
+
+<!-- ══ 5 POINTS ══════════════════════════════════════════════════ -->
+<div class="divider"></div>
+<section class="dt-section section-white">
+  <div class="dt-container">
+    <div class="section-head">
+      <span class="kicker">CHECK POINTS</span>
+      <h2>探偵を選ぶ前に見るべき<br/><strong style="color:var(--red)">5つのポイント</strong></h2>
+    </div>
+    <div class="points-grid">
+      <div class="point-card">
+        <div class="point-num">01</div>
+        <div class="point-icon">💴</div>
+        <h3>料金体系</h3>
+        <p>時間制・パック制・成功報酬制を確認</p>
+      </div>
+      <div class="point-card">
+        <div class="point-num">02</div>
+        <div class="point-icon">➕</div>
+        <h3>追加費用</h3>
+        <p>車両費・深夜料金・延長料金の有無</p>
+      </div>
+      <div class="point-card">
+        <div class="point-num">03</div>
+        <div class="point-icon">📄</div>
+        <h3>調査報告書</h3>
+        <p>親告や慰謝料請求で使える内容か</p>
+      </div>
+      <div class="point-card">
+        <div class="point-num">04</div>
+        <div class="point-icon">🏆</div>
+        <h3>実績</h3>
+        <p>不倫・浮気調査の経験が多いか</p>
+      </div>
+      <div class="point-card">
+        <div class="point-num">05</div>
+        <div class="point-icon">🗾</div>
+        <h3>対応エリア</h3>
+        <p>対象者の行動範囲に対応できるか</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ QUIZ / MATCHING ══════════════════════════════════════════ -->
+<section class="quiz-section" id="matching">
+  <div class="dt-container">
+    <div class="section-head" style="margin-bottom:1.5rem">
+      <span class="kicker kicker-white">FREE MATCHING</span>
+      <h2>あなたに合う探偵を<strong style="color:var(--gold-lt)">無料</strong>で比較できます</h2>
+    </div>
+    <div class="quiz-grid">
+      <div class="quiz-card">
+        <span class="quiz-q-label">Q1 調査したい内容は？</span>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q1" /> 配偶者の浮気</label>
+          <label class="quiz-option"><input type="radio" name="q1" /> 婚約者の浮気</label>
+          <label class="quiz-option"><input type="radio" name="q1" /> 不倫相手の特定</label>
+          <label class="quiz-option"><input type="radio" name="q1" /> 証拠収集</label>
+        </div>
+      </div>
+      <div class="quiz-card">
+        <span class="quiz-q-label">Q2 証拠はありますか？</span>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2" /> LINEだけある</label>
+          <label class="quiz-option"><input type="radio" name="q2" /> 写真がある</label>
+          <label class="quiz-option"><input type="radio" name="q2" /> 怪しいだけ</label>
+          <label class="quiz-option"><input type="radio" name="q2" /> すでに自白している</label>
+        </div>
+      </div>
+      <div class="quiz-card">
+        <span class="quiz-q-label">Q3 予算感は？</span>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q3" /> 10万円以内</label>
+          <label class="quiz-option"><input type="radio" name="q3" /> 30万円以内</label>
+          <label class="quiz-option"><input type="radio" name="q3" /> 50万円以内</label>
+          <label class="quiz-option"><input type="radio" name="q3" /> まだ決めていない</label>
+        </div>
+      </div>
+      <div class="quiz-cta-card">
+        <span class="quiz-cta-free">完全無料</span>
+        <h3>無料で<br/>比較してみる</h3>
+        <p class="quiz-cta-sub">最適な探偵事務所をご案内します</p>
+        <a href="#" class="quiz-cta-btn" data-affiliate="matching" data-track="quiz_matching" rel="nofollow sponsored">
+          無料で比較する ›
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ COST + WHO ════════════════════════════════════════════════ -->
+<div class="divider"></div>
+<section class="dt-section section-white" id="cost">
+  <div class="dt-container">
+    <div class="cost-who-grid">
+      <div>
+        <div class="section-head" style="text-align:left;margin-bottom:1rem">
+          <span class="kicker">COST GUIDE</span>
+          <h2>探偵費用の目安</h2>
+        </div>
+        <div class="cost-card">
+          <div class="cost-card-head">調査日数別・費用の参考範囲</div>
+          <table class="cost-table">
+            <tbody>
+              <tr>
+                <td>1日だけの調査</td>
+                <td class="cost-range">10〜15万円前後</td>
+              </tr>
+              <tr>
+                <td>数日間の調査</td>
+                <td class="cost-range">30〜50万円前後</td>
+              </tr>
+              <tr>
+                <td>長期・難航する調査</td>
+                <td class="cost-range">100万円以上に<br/>なることも</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="cost-note">費用は調査員の人数・時間・難易度で変わります。だからこそ、事前の比較が重要です。</p>
+        </div>
+      </div>
+      <div>
+        <div class="section-head" style="text-align:left;margin-bottom:1rem">
+          <span class="kicker">WHO SHOULD CONSULT</span>
+          <h2>こんな方は、探偵に<br/>相談する価値があります</h2>
+        </div>
+        <div class="who-card">
+          <div class="who-card-head">探偵相談に向いている状況</div>
+          <div class="who-list">
+            <div class="who-item">
+              <div class="who-check">✓</div>
+              <span>会う曜日や時間帯がだいたい分かる</span>
+            </div>
+            <div class="who-item">
+              <div class="who-check">✓</div>
+              <span>相手の勤務先や行動範囲が分かる</span>
+            </div>
+            <div class="who-item">
+              <div class="who-check">✓</div>
+              <span>LINEやレシートなど怪しい証拠がある</span>
+            </div>
+            <div class="who-item">
+              <div class="who-check">✓</div>
+              <span>慰謝料請求や離婚を考えている</span>
+            </div>
+            <div class="who-item">
+              <div class="who-check">✓</div>
+              <span>自分で尾行して失敗したくない</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ RANKING ══════════════════════════════════════════════════ -->
+<div class="divider"></div>
+<section class="dt-section ranking-section" id="ranking">
+  <div class="dt-container">
+    <div class="ranking-header">
+      <span class="kicker">RANKING</span>
+      <h2>🏆 おすすめ探偵事務所ランキング</h2>
+      <p class="ranking-header-sub">各社の見積もりを比較して、あなたに最適な探偵を選べます</p>
+    </div>
+
+    <div class="ranking-cards">
+
+      <!-- No.1 ガルエージェンシー -->
+      <div class="ranking-card rank-1">
+        <div class="rank-badge">
+          <div class="rank-num">1</div>
+          <div>
+            <div style="font-size:.72rem;font-weight:800;color:#92400e">No.1</div>
+            <div class="rank-label">総合評価</div>
+          </div>
+          <div class="rank-stars">★★★★☆</div>
+        </div>
+        <div class="ranking-card-body">
+          <div class="ranking-name">総合探偵社<br/>ガルエージェンシー</div>
+          <div class="ranking-features">
+            <div class="ranking-feature">浮気調査に深い実績</div>
+            <div class="ranking-feature">相談無料・見積もり明確</div>
+            <div class="ranking-feature">全国124拠点で即日対応</div>
+          </div>
+          <div class="ranking-price-row">
+            <div class="ranking-price-label">料金目安</div>
+            <div class="ranking-price">1時間／8,800円〜</div>
+          </div>
+          <p class="ranking-for">向いている人：初めて探偵に相談する方</p>
+          <a href="#" class="ranking-cta" data-affiliate="gal" data-track="ranking_gal" rel="nofollow sponsored">
+            無料相談する
+          </a>
+        </div>
+      </div>
+
+      <!-- No.2 原一探偵事務所 -->
+      <div class="ranking-card rank-2">
+        <div class="rank-badge">
+          <div class="rank-num">2</div>
+          <div>
+            <div style="font-size:.72rem;font-weight:800;color:#64748b">No.2</div>
+            <div class="rank-label">総合評価</div>
+          </div>
+          <div class="rank-stars">★★★★☆</div>
+        </div>
+        <div class="ranking-card-body">
+          <div class="ranking-name">原一探偵事務所</div>
+          <div class="ranking-features">
+            <div class="ranking-feature">創業50年以上の実績</div>
+            <div class="ranking-feature">裁判で使える報告書に強い</div>
+            <div class="ranking-feature">全国対応・即日対応</div>
+          </div>
+          <div class="ranking-price-row">
+            <div class="ranking-price-label">料金目安</div>
+            <div class="ranking-price">1時間／9,900円〜</div>
+          </div>
+          <p class="ranking-for">向いている人：証拠をしっかり取りたい方</p>
+          <a href="#" class="ranking-cta" data-affiliate="haraichi" data-track="ranking_haraichi" rel="nofollow sponsored">
+            無料相談する
+          </a>
+        </div>
+      </div>
+
+      <!-- No.3 HAL探偵社 -->
+      <div class="ranking-card rank-3">
+        <div class="rank-badge">
+          <div class="rank-num">3</div>
+          <div>
+            <div style="font-size:.72rem;font-weight:800;color:#92400e">No.3</div>
+            <div class="rank-label">総合評価</div>
+          </div>
+          <div class="rank-stars">★★★☆☆</div>
+        </div>
+        <div class="ranking-card-body">
+          <div class="ranking-name">HAL探偵社</div>
+          <div class="ranking-features">
+            <div class="ranking-feature">業界最安値格の料金</div>
+            <div class="ranking-feature">成功報酬プランあり</div>
+            <div class="ranking-feature">LINEで無料相談OK</div>
+          </div>
+          <div class="ranking-price-row">
+            <div class="ranking-price-label">料金目安</div>
+            <div class="ranking-price">1時間／7,000円〜</div>
+          </div>
+          <p class="ranking-for">向いている人：費用を抑えたい方</p>
+          <a href="#" class="ranking-cta" data-affiliate="hal" data-track="ranking_hal" rel="nofollow sponsored">
+            無料相談する
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <p class="ranking-note">※料金は税込の目安です。調査内容や地域により異なります。</p>
+
+    <!-- マッチングサービス -->
+    <div class="matching-cta-box">
+      <div class="matching-cta-body">
+        <div class="matching-cta-label">📌 迷ったらまずここから</div>
+        <h3>複数の探偵事務所を<br/>無料で一括比較できます</h3>
+        <p>条件に合った探偵事務所を複数ご提案。まずは無料相談から始められます。</p>
+      </div>
+      <a href="#" class="matching-cta-btn" data-affiliate="matching" data-track="ranking_matching" rel="nofollow sponsored">
+        無料で一括比較する ›
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FLOW ══════════════════════════════════════════════════════ -->
+<div class="divider"></div>
+<section class="dt-section section-white" id="flow">
+  <div class="dt-container">
+    <div class="section-head">
+      <span class="kicker">HOW TO USE</span>
+      <h2>ご利用の流れ</h2>
+    </div>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="flow-num">1</div>
+        <h3>無料診断・相談</h3>
+        <p>簡単な質問に答えるだけ</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">2</div>
+        <h3>探偵事務所の比較</h3>
+        <p>あなたに合う探偵を選定</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">3</div>
+        <h3>見積もり・相談</h3>
+        <p>複数社の見積もりを比較</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">4</div>
+        <h3>検討・ご契約</h3>
+        <p>納得してから依頼できる</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">5</div>
+        <h3>調査開始・報告</h3>
+        <p>証拠を掴んで解決へ</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══════════════════════════════════════════════════════ -->
+<div class="divider"></div>
+<section class="dt-section section-white" id="faq">
+  <div class="dt-container">
+    <div class="section-head">
+      <span class="kicker">FAQ</span>
+      <h2>よくある質問</h2>
+      <p>気になる項目をタップして確認できます</p>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item open">
+        <button class="faq-q">
+          <span class="faq-q-badge">Q</span>
+          <span class="faq-q-text">本当に無料で利用できますか？</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <span class="faq-a-badge">A</span>
+            <p class="faq-a-text">はい、探偵事務所のご紹介からすべて無料です。費用は一切かかりません。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="faq-q-badge">Q</span>
+          <span class="faq-q-text">相談したら必ず契約しないといけませんか？</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <span class="faq-a-badge">A</span>
+            <p class="faq-a-text">いいえ、相談しただけで契約する必要はありません。見積もりを見てから決めていただけます。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="faq-q-badge">Q</span>
+          <span class="faq-q-text">匿名でも相談できますか？</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <span class="faq-a-badge">A</span>
+            <p class="faq-a-text">はい、匿名・ニックネームでのご相談が可能です。個人情報の入力は不要です。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="faq-q-badge">Q</span>
+          <span class="faq-q-text">どのくらいで探偵を紹介してもらえますか？</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <span class="faq-a-badge">A</span>
+            <p class="faq-a-text">最短で当日中にご紹介可能です。お急ぎの方はその旨をお伝えください。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="faq-q-badge">Q</span>
+          <span class="faq-q-text">地方でも対応していますか？</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <span class="faq-a-badge">A</span>
+            <p class="faq-a-text">はい、全国の優良探偵事務所と提携しているため、全国どこでもご紹介可能です。</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ 掲載基準 ══════════════════════════════════════════════════ -->
+<div class="divider"></div>
+<section class="dt-section">
+  <div class="dt-container">
+    <div class="page-meta">
+      <p><strong>掲載基準・広告表記</strong></p>
+      <p>
+        当ページは、探偵事務所の料金・実績・調査報告書の質・対応エリアを比較する目的で作成しています。
+        掲載しているサービスはアフィリエイトプログラムに参加しており、リンク経由で申し込みが発生した場合に報酬を受け取る場合があります。
+        掲載順・紹介内容は報酬額だけでなく、料金の透明性・実績・調査報告書の品質・対応エリアの広さをもとに構成しています。
+      </p>
+      <p>
+        <strong>料金について：</strong>各探偵事務所の料金は調査内容・地域・難易度によって異なります。
+        このページに記載の金額は参考目安であり、申し込み前に必ず各社に直接お見積もりをご確認ください。
+      </p>
+      <p style="margin-bottom:0">
+        <strong>最終更新：</strong>2026年5月
+        <strong>運営：</strong>浮気の証拠ナビ（vpscomparehub.com）
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER CTA ════════════════════════════════════════════════ -->
+<section class="footer-cta">
+  <div class="dt-container">
+    <h2>証拠が取れるかどうかは、<br/>最初の探偵選びで決まります</h2>
+    <p>焦って1社に決める前に、料金・調査力・報告書の質を比較してください。</p>
+    <div class="footer-cta-badges">
+      <span class="footer-cta-badge">🕵️ 匿名相談OK</span>
+      <span class="footer-cta-badge">📋 最短当日対応</span>
+      <span class="footer-cta-badge">💬 相談無料</span>
+      <span class="footer-cta-badge">📊 見積もり比較</span>
+      <span class="footer-cta-badge">🗾 全国対応</span>
+    </div>
+    <a href="#" class="footer-cta-btn" data-affiliate="matching" data-track="footer_matching" rel="nofollow sponsored">
+      今すぐ探偵を比較する ›
+    </a>
+    <p class="footer-cta-note">しつこい営業は一切ありません。安心してご利用ください。</p>
+  </div>
+</section>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════════ -->
+<footer class="dt-footer">
+  <div class="dt-footer-inner">
+    <div class="dt-footer-logo">
+      <div class="dt-footer-logo-icon">🔍</div>
+      <span>浮気の証拠ナビ</span>
+    </div>
+    <p class="dt-footer-text">
+      探偵事務所を費用・実績・調査報告書の質・対応エリアで比較する情報サイトです。<br/>
+      掲載情報は各サービスの公式情報をもとに構成しています。料金・条件は変更になる場合があるため、申し込み前に公式サイトでご確認ください。
+    </p>
+    <div class="dt-footer-links">
+      <a href="/detective/operator/">運営者情報</a>
+      <a href="/detective/operator/">プライバシーポリシー</a>
+    </div>
+    <p class="dt-footer-copy">© 2026 浮気の証拠ナビ</p>
+  </div>
+</footer>
+
+<!-- Page JS -->
+<script src="/detective/app.js" defer></script>
+
+</body>
+</html>
