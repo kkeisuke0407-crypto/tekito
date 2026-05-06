@@ -166,21 +166,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .hero-media-card {
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0,0,0,.4);
+  box-shadow: 0 10px 40px rgba(0,0,0,.5);
   border: 1px solid rgba(255,255,255,.08);
+  background: #0d1b2e;
+  line-height: 0;
 }
-.hero-media-placeholder {
-  background: linear-gradient(135deg, #1a2f4a, #0d1b2e);
-  aspect-ratio: 4/3;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 1rem; padding: 2rem; text-align: center;
-}
-.hero-media-placeholder .placeholder-icon { font-size: 3rem; opacity: .6; }
-.hero-media-placeholder .placeholder-title {
-  font-size: 1.3rem; font-weight: 900; color: var(--gold-lt);
-}
-.hero-media-placeholder .placeholder-sub {
-  font-size: .8rem; color: rgba(255,255,255,.5);
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 .hero-wave {
   position: absolute; bottom: -1px; left: 0; right: 0; height: 60px;
