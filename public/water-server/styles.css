@@ -522,6 +522,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   border-color: #bfdbfe;
   background: linear-gradient(180deg, #eff6ff 0%, #ffffff 68%);
 }
+.cond-item-solo {
+  border-color: #ddd6fe;
+  background: linear-gradient(180deg, #f5f3ff 0%, #ffffff 68%);
+}
 .cond-icon {
   width: 36px; height: 36px; border-radius: 8px;
   background: var(--water); color: var(--blue);
