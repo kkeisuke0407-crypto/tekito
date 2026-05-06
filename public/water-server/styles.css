@@ -945,6 +945,85 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   height: 1px;
   display: block;
 }
+.svc-cost-summary {
+  margin: .85rem 0;
+  padding: .9rem;
+  border-radius: var(--radius);
+  border: 1px solid #99f6e4;
+  background: linear-gradient(135deg, #ecfeff 0%, #ffffff 70%);
+}
+.svc-cost-summary-head {
+  margin-bottom: .7rem;
+}
+.svc-cost-summary-head span {
+  display: inline-flex;
+  color: var(--teal-dk);
+  background: var(--teal-lt);
+  border-radius: 999px;
+  font-size: .66rem;
+  font-weight: 900;
+  padding: 2px 8px;
+  margin-bottom: .38rem;
+}
+.svc-cost-summary-head strong {
+  display: block;
+  color: var(--navy);
+  font-size: .88rem;
+  font-weight: 900;
+  line-height: 1.45;
+}
+.svc-cost-summary-grid {
+  display: grid;
+  gap: .45rem;
+  margin-bottom: .7rem;
+}
+.svc-cost-summary-grid div {
+  padding: .62rem .7rem;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+.svc-cost-summary-grid small {
+  display: block;
+  color: var(--muted);
+  font-size: .64rem;
+  font-weight: 800;
+  margin-bottom: .12rem;
+}
+.svc-cost-summary-grid b {
+  display: block;
+  color: var(--navy);
+  font-size: .85rem;
+  font-weight: 900;
+  line-height: 1.3;
+}
+.svc-cost-summary-grid em {
+  display: block;
+  margin-top: .14rem;
+  color: var(--muted);
+  font-size: .66rem;
+  font-style: normal;
+  line-height: 1.35;
+}
+.svc-cost-summary a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: .58rem .85rem;
+  border-radius: 7px;
+  background: var(--teal);
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgba(13,148,136,.22);
+}
+.svc-cost-summary a:hover {
+  background: var(--teal-dk);
+  color: #fff;
+  text-decoration: none;
+}
 .svc-tagline {
   font-size: .83rem; font-weight: 700; color: var(--muted);
   padding: .48rem .7rem; background: var(--bg);
@@ -1206,6 +1285,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .monthly-pick-grid { grid-template-columns: repeat(3, 1fr); }
   .compare-scroll { margin: 0; padding: 0; }
   .cond-list { display: grid; grid-template-columns: 1fr 1fr; }
+  .svc-cost-summary-grid { grid-template-columns: repeat(3, 1fr); }
   .service-cards { display: grid; grid-template-columns: 1fr 1fr; }
   .fee-grid { grid-template-columns: repeat(4, 1fr); }
 }
