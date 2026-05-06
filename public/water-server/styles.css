@@ -191,6 +191,93 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .section-head p { font-size: .86rem; color: var(--muted); }
 
+/* ── Price Quick View ─────────────────────────── */
+.price-quick-section { background: var(--bg); padding-top: 2.2rem; }
+.price-quick-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .85rem;
+}
+.price-quick-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+.price-quick-card-primary {
+  border-color: #99f6e4;
+  box-shadow: 0 4px 18px rgba(13,148,136,.12);
+}
+.price-quick-label {
+  display: inline-flex;
+  color: var(--teal-dk);
+  background: var(--teal-lt);
+  border-radius: 999px;
+  font-size: .68rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  margin-bottom: .5rem;
+}
+.price-quick-card strong {
+  display: block;
+  color: var(--navy);
+  font-size: clamp(1.45rem, 5vw, 2rem);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.1;
+  margin-bottom: .45rem;
+}
+.price-quick-card p {
+  color: var(--muted);
+  font-size: .8rem;
+  line-height: 1.65;
+  margin-bottom: .75rem;
+}
+.price-quick-card a,
+.price-caution a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  color: var(--teal-dk);
+  font-size: .78rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+.price-quick-card a::after,
+.price-caution a::after {
+  content: "›";
+  margin-left: .35rem;
+  font-size: 1rem;
+  line-height: 1;
+}
+.price-quick-card a:hover,
+.price-caution a:hover { color: var(--navy); text-decoration: none; }
+.price-caution {
+  display: grid;
+  gap: .6rem;
+  align-items: center;
+  margin-top: .85rem;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-left: 3px solid var(--warn);
+  border-radius: var(--radius);
+  padding: .85rem 1rem;
+}
+.price-caution strong {
+  display: block;
+  color: #9a3412;
+  font-size: .86rem;
+  font-weight: 900;
+  margin-bottom: .15rem;
+}
+.price-caution p {
+  color: #7c2d12;
+  font-size: .78rem;
+  line-height: 1.55;
+}
+
 /* ── Intent Guide ──────────────────────────────── */
 .intent-section { padding-bottom: 2.2rem; }
 .intent-grid {
@@ -601,6 +688,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .hero-media { margin: 0 0 0 auto; }
   .ws-section { padding: 3.25rem 2rem; }
   .pr-bar { margin-left: 2rem; margin-right: 2rem; max-width: calc(var(--max) - 4rem); }
+  .price-quick-grid { grid-template-columns: repeat(3, 1fr); }
+  .price-caution { grid-template-columns: 1fr auto; }
   .compare-scroll { margin: 0; padding: 0; }
   .cond-list { display: grid; grid-template-columns: 1fr 1fr; }
   .service-cards { display: grid; grid-template-columns: 1fr 1fr; }
