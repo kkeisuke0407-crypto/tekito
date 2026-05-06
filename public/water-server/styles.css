@@ -352,6 +352,73 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: .78rem;
   line-height: 1.55;
 }
+.price-decision {
+  display: grid;
+  gap: .85rem;
+  margin-top: .85rem;
+  padding: 1rem;
+  border-radius: var(--radius);
+  border: 1px solid #99f6e4;
+  background: linear-gradient(135deg, #ecfeff 0%, #ffffff 68%);
+  box-shadow: var(--shadow);
+}
+.price-decision-copy span {
+  display: inline-flex;
+  color: var(--teal-dk);
+  background: var(--teal-lt);
+  border-radius: 999px;
+  font-size: .68rem;
+  font-weight: 900;
+  padding: 2px 8px;
+  margin-bottom: .45rem;
+}
+.price-decision-copy strong {
+  display: block;
+  color: var(--navy);
+  font-size: .98rem;
+  font-weight: 900;
+  line-height: 1.45;
+  margin-bottom: .3rem;
+}
+.price-decision-copy p {
+  color: var(--muted);
+  font-size: .8rem;
+  line-height: 1.65;
+}
+.price-decision-actions {
+  display: grid;
+  gap: .45rem;
+}
+.price-decision-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: .55rem .85rem;
+  border-radius: 7px;
+  font-size: .8rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+.price-decision-primary {
+  background: var(--teal);
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(13,148,136,.22);
+}
+.price-decision-primary:hover {
+  background: var(--teal-dk);
+  color: #fff;
+  text-decoration: none;
+}
+.price-decision-secondary {
+  color: var(--teal-dk);
+  border: 1px solid #99f6e4;
+  background: #fff;
+}
+.price-decision-secondary:hover {
+  color: var(--navy);
+  text-decoration: none;
+}
 .choice-shortcut {
   margin-top: 1rem;
   background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
@@ -1107,6 +1174,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .pr-bar { margin-left: 2rem; margin-right: 2rem; max-width: calc(var(--max) - 4rem); }
   .price-quick-grid { grid-template-columns: repeat(3, 1fr); }
   .price-caution { grid-template-columns: 1fr auto; }
+  .price-decision { grid-template-columns: 1fr auto; align-items: center; }
+  .price-decision-actions { min-width: 220px; }
   .choice-shortcut { padding: 1.15rem; }
   .choice-shortcut-head {
     grid-template-columns: auto 1fr;
