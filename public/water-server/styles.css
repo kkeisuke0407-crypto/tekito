@@ -116,10 +116,61 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-weight: 900; line-height: 1.25;
   letter-spacing: 0; margin-bottom: .9rem;
 }
+.hero-trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .35rem;
+  max-width: 520px;
+  margin: -.2rem auto 1rem;
+}
+.hero-trust-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(255,255,255,.1);
+  color: rgba(255,255,255,.9);
+  font-size: .68rem;
+  font-weight: 700;
+  line-height: 1.35;
+  white-space: nowrap;
+}
 .hero-sub {
   font-size: .95rem; line-height: 1.8;
   color: rgba(255,255,255,.85);
-  max-width: 520px; margin: 0 auto 1.75rem;
+  max-width: 520px; margin: 0 auto 1.1rem;
+}
+.hero-price-points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .45rem;
+  max-width: 520px;
+  margin: 0 auto 1.15rem;
+}
+.hero-price-point {
+  min-width: 0;
+  padding: .55rem .45rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(255,255,255,.12);
+}
+.hero-price-point b {
+  display: block;
+  color: #fff;
+  font-size: .92rem;
+  font-weight: 900;
+  line-height: 1.2;
+}
+.hero-price-point small {
+  display: block;
+  margin-top: .12rem;
+  color: rgba(255,255,255,.78);
+  font-size: .66rem;
+  font-weight: 700;
+  line-height: 1.25;
 }
 .hero-ctas {
   display: flex; flex-direction: column; gap: .55rem;
@@ -1048,6 +1099,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .hero-inner { grid-template-columns: minmax(0, 1fr) minmax(300px, .85fr); }
   .hero-copy { margin: 0; }
   .hero-sub { margin-left: 0; margin-right: 0; }
+  .hero-trust-badges { justify-content: flex-start; margin-left: 0; margin-right: 0; }
+  .hero-price-points { margin-left: 0; margin-right: 0; }
   .hero-ctas { justify-content: flex-start; }
   .hero-media { margin: 0 0 0 auto; }
   .ws-section { padding: 3.25rem 2rem; }
