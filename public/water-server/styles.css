@@ -445,6 +445,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   border-radius: var(--radius); padding: .95rem 1.1rem;
   box-shadow: var(--shadow);
 }
+.cond-item-focus {
+  border-color: #bfdbfe;
+  background: linear-gradient(180deg, #eff6ff 0%, #ffffff 68%);
+}
 .cond-icon {
   width: 36px; height: 36px; border-radius: 8px;
   background: var(--water); color: var(--blue);
@@ -455,11 +459,42 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: block; font-size: .88rem; font-weight: 800;
   color: var(--navy); margin-bottom: .25rem;
 }
+.cond-copy {
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.65;
+  margin-bottom: .55rem;
+}
 .cond-tags { display: flex; flex-wrap: wrap; gap: .28rem; }
 .ctag {
   font-size: .72rem; font-weight: 700;
   background: var(--teal-lt); color: var(--teal-dk);
   border: 1px solid #99f6e4; padding: 2px 8px; border-radius: 999px;
+}
+.cond-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-top: .65rem;
+}
+.cond-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  color: var(--teal-dk);
+  background: #fff;
+  border: 1px solid #99f6e4;
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 800;
+  padding: 0 .75rem;
+  text-decoration: none;
+}
+.cond-actions a:hover {
+  color: #fff;
+  background: var(--teal);
+  text-decoration: none;
 }
 
 /* ── Service Cards ──────────────────────────────── */
