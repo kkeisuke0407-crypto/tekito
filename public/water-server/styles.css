@@ -301,6 +301,93 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: .78rem;
   line-height: 1.55;
 }
+.choice-shortcut {
+  margin-top: 1rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+.choice-shortcut-head {
+  display: grid;
+  gap: .2rem;
+  margin-bottom: .85rem;
+}
+.choice-shortcut-head span {
+  color: var(--teal-dk);
+  font-size: .72rem;
+  font-weight: 900;
+}
+.choice-shortcut-head strong {
+  color: var(--navy);
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.35;
+}
+.choice-shortcut-grid {
+  display: grid;
+  gap: .75rem;
+}
+.choice-card {
+  display: grid;
+  gap: .45rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--white);
+  padding: .9rem;
+}
+.choice-card-primary { border-color: #99f6e4; }
+.choice-label {
+  justify-self: start;
+  color: var(--teal-dk);
+  background: var(--teal-lt);
+  border-radius: 999px;
+  font-size: .68rem;
+  font-weight: 800;
+  padding: 2px 8px;
+}
+.choice-card h3 {
+  color: var(--navy);
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.3;
+}
+.choice-card p {
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.6;
+}
+.choice-card a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  border-radius: 7px;
+  background: var(--teal);
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 800;
+  text-decoration: none;
+  padding: .55rem .85rem;
+}
+.choice-card a:hover {
+  background: var(--teal-dk);
+  color: #fff;
+  text-decoration: none;
+}
+.choice-card a::after {
+  content: "›";
+  margin-left: .35rem;
+  font-size: 1rem;
+  line-height: 1;
+}
+.choice-note {
+  margin-top: .75rem;
+  color: var(--muted);
+  font-size: .74rem;
+  line-height: 1.55;
+}
 
 /* ── Intent Guide ──────────────────────────────── */
 .intent-section { padding-bottom: 2.2rem; }
@@ -826,6 +913,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .pr-bar { margin-left: 2rem; margin-right: 2rem; max-width: calc(var(--max) - 4rem); }
   .price-quick-grid { grid-template-columns: repeat(3, 1fr); }
   .price-caution { grid-template-columns: 1fr auto; }
+  .choice-shortcut { padding: 1.15rem; }
+  .choice-shortcut-head {
+    grid-template-columns: auto 1fr;
+    align-items: baseline;
+    column-gap: .75rem;
+  }
+  .choice-shortcut-grid { grid-template-columns: repeat(2, 1fr); }
   .monthly-pick { padding: 1.15rem; }
   .monthly-pick-head { grid-template-columns: 1fr 1.35fr; align-items: end; }
   .monthly-pick-grid { grid-template-columns: repeat(3, 1fr); }
