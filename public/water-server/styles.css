@@ -388,6 +388,79 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: .74rem;
   line-height: 1.55;
 }
+.precheck-panel {
+  margin-top: .85rem;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--teal);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+.precheck-head {
+  display: grid;
+  gap: .18rem;
+  margin-bottom: .75rem;
+}
+.precheck-head span {
+  color: var(--teal-dk);
+  font-size: .7rem;
+  font-weight: 900;
+}
+.precheck-head strong {
+  color: var(--navy);
+  font-size: .95rem;
+  font-weight: 900;
+  line-height: 1.35;
+}
+.precheck-list {
+  display: grid;
+  gap: .48rem;
+}
+.precheck-list li {
+  display: grid;
+  gap: .15rem;
+  padding-bottom: .48rem;
+  border-bottom: 1px dashed var(--border);
+}
+.precheck-list li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.precheck-list b {
+  color: var(--navy);
+  font-size: .8rem;
+}
+.precheck-list span {
+  color: var(--muted);
+  font-size: .76rem;
+  line-height: 1.55;
+}
+.precheck-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .5rem;
+  margin-top: .85rem;
+}
+.precheck-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--white);
+  color: var(--teal-dk);
+  font-size: .76rem;
+  font-weight: 800;
+  text-decoration: none;
+  padding: .48rem .65rem;
+}
+.precheck-actions a:hover {
+  border-color: #99f6e4;
+  background: var(--teal-lt);
+  color: var(--navy);
+  text-decoration: none;
+}
 
 /* ── Intent Guide ──────────────────────────────── */
 .intent-section { padding-bottom: 2.2rem; }
@@ -920,6 +993,24 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     column-gap: .75rem;
   }
   .choice-shortcut-grid { grid-template-columns: repeat(2, 1fr); }
+  .precheck-list {
+    grid-template-columns: repeat(5, 1fr);
+    align-items: start;
+  }
+  .precheck-list li {
+    border-bottom: 0;
+    border-right: 1px dashed var(--border);
+    padding: 0 .6rem 0 0;
+  }
+  .precheck-list li:last-child {
+    border-right: 0;
+    padding-right: 0;
+  }
+  .precheck-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .precheck-actions a { min-width: 124px; }
   .monthly-pick { padding: 1.15rem; }
   .monthly-pick-head { grid-template-columns: 1fr 1.35fr; align-items: end; }
   .monthly-pick-grid { grid-template-columns: repeat(3, 1fr); }
