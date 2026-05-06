@@ -69,7 +69,7 @@ const faqJsonLd = {
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;900&display=swap" rel="stylesheet" />
 
   <!-- Page CSS -->
-  <link rel="stylesheet" href="/water-server/styles.css?v=20260506-oken-cost-card" />
+  <link rel="stylesheet" href="/water-server/styles.css?v=20260506-compare-focus" />
 
   <!-- Google Ads / GA4 -->
   <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
@@ -393,7 +393,7 @@ const faqJsonLd = {
       <button class="filter-chip" data-filter="直結型">水道直結のみ</button>
     </div>
     <div class="compare-scroll">
-      <table class="compare-table">
+      <table class="compare-table compare-table-cost-focus">
         <colgroup>
           <col>
           <col data-col-type="宅配水" data-col-id="oken">
@@ -409,6 +409,7 @@ const faqJsonLd = {
               <div class="th-pri">料金重視</div>
               <span class="th-name">オーケン<br/>ウォーター</span>
               <span class="th-type">宅配水・天然水/RO水</span>
+              <span class="th-focus-note">RO水2,696円〜</span>
             </th>
             <th>
               <span class="th-name">every<br/>frecious</span>
@@ -463,7 +464,11 @@ const faqJsonLd = {
           </tr>
           <tr>
             <td>月額目安</td>
-            <td style="font-size:.75rem">天然水4,082円〜<br/>RO水2,696円〜<br/><span style="font-size:.65rem;color:var(--muted)">12L×2本/回</span></td>
+            <td class="compare-cost-cell">
+              <span class="compare-cost-main">RO水2,696円〜</span>
+              <span class="compare-cost-sub">天然水4,082円〜</span>
+              <span class="compare-cost-note">12L×2本/回の参考値</span>
+            </td>
             <td style="font-size:.75rem">lite 2,750円<br/>tall 3,300円〜</td>
             <td style="font-size:.75rem">スラット1箱3,254円〜<br/>（3箱以上でレンタル無料）</td>
             <td style="font-size:.75rem">約4,500〜5,000円<br/>（2本・富士山天然水）</td>
@@ -487,7 +492,7 @@ const faqJsonLd = {
           </tr>
           <tr>
             <td>公式サイト</td>
-            <td class="cta-cell"><a class="compare-btn" href="#" data-affiliate="oken"           data-track="compare_oken"          rel="nofollow sponsored">料金を確認</a></td>
+            <td class="cta-cell"><a class="compare-btn compare-btn-primary" href="#" data-affiliate="oken" data-track="compare_oken_cost_focus" rel="nofollow sponsored">RO水の料金を確認</a></td>
             <td class="cta-cell"><a class="compare-btn" href="#" data-affiliate="every_frecious"  data-track="compare_every"         rel="nofollow sponsored">定額を確認</a></td>
             <td class="cta-cell"><a class="compare-btn" href="#" data-affiliate="frecious"        data-track="compare_frecious"      rel="nofollow sponsored">天然水を確認</a></td>
             <td class="cta-cell"><a class="compare-btn" href="#" data-affiliate="water_one"       data-track="compare_water_one"     rel="nofollow sponsored">条件を確認</a></td>
