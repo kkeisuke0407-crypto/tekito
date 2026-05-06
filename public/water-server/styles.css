@@ -254,6 +254,30 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .price-quick-card a:hover,
 .price-caution a:hover { color: var(--navy); text-decoration: none; }
+.price-actions {
+  display: grid;
+  gap: .45rem;
+  margin-top: .3rem;
+}
+.price-quick-card .price-direct {
+  width: 100%;
+  min-height: 40px;
+  padding: .55rem .85rem;
+  border-radius: 7px;
+  background: var(--teal);
+  color: #fff;
+  font-size: .8rem;
+  box-shadow: 0 3px 10px rgba(13,148,136,.22);
+}
+.price-quick-card .price-direct:hover {
+  background: var(--teal-dk);
+  color: #fff;
+}
+.price-quick-card .price-detail {
+  color: var(--muted);
+  min-height: 28px;
+}
+.price-quick-card .price-detail:hover { color: var(--navy); }
 .price-caution {
   display: grid;
   gap: .6rem;
