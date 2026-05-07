@@ -1,45 +1,9 @@
 ---
-const PAGE_TITLE = "探偵費用を比較｜浮気の証拠ナビ｜探偵比較・無料相談サイト";
-const PAGE_DESC  = "探偵事務所の費用・実績・調査報告書の質を無料で比較。浮気調査・素行調査・証拠収集のご依頼前に、複数の探偵事務所の料金体系・追加費用・対応エリアを確認しましょう。";
-const CANONICAL  = "https://vpscomparehub.com/detective/";
-const OGP_IMAGE  = "https://vpscomparehub.com/og-default.svg";
-
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "探偵費用はどのくらいかかりますか？",
-      "acceptedAnswer": { "@type": "Answer",
-        "text": "調査内容・日数・調査員の人数・難易度によって大きく異なります。1日の調査で10〜15万円前後、数日間で30〜50万円前後が目安ですが、依頼前に必ず複数社で見積もりを取ることをおすすめします。" }
-    },
-    {
-      "@type": "Question",
-      "name": "匿名で相談できますか？",
-      "acceptedAnswer": { "@type": "Answer",
-        "text": "はい、多くの探偵事務所では匿名・ニックネームでの相談が可能です。個人情報の入力は依頼確定後になるケースが多いため、まずは気軽にご相談ください。" }
-    },
-    {
-      "@type": "Question",
-      "name": "相談したら必ず契約しないといけませんか？",
-      "acceptedAnswer": { "@type": "Answer",
-        "text": "いいえ、相談・見積もりだけで終わっても問題ありません。複数社の見積もりを比べてから決断することをおすすめします。" }
-    },
-    {
-      "@type": "Question",
-      "name": "証拠は裁判で使えますか？",
-      "acceptedAnswer": { "@type": "Answer",
-        "text": "調査報告書の品質・形式によって裁判での利用可否が変わります。依頼前に「裁判利用を想定した報告書を作成できるか」を確認することが重要です。" }
-    },
-    {
-      "@type": "Question",
-      "name": "このページは広告ですか？",
-      "acceptedAnswer": { "@type": "Answer",
-        "text": "このページには広告・アフィリエイトリンクを含みます。掲載順は報酬額だけでなく、料金の透明性・実績・調査報告書の質・対応エリアをもとに構成しています。" }
-    }
-  ]
-};
+const PAGE_TITLE = "弁護士の中の人 公式サイト｜動く前に知ってほしいこと";
+const PAGE_DESC  = "Instagram「弁護士の中の人（@lawyer.nakanohito）」の公式サイト。不倫・浮気で動く前に知ってほしいこと、信頼できる探偵の選び方をお伝えします。";
+const CANONICAL  = "https://lawyer-nakanohito.com/";
+const OGP_IMAGE  = "https://lawyer-nakanohito.com/og-default.jpg";
+const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -57,16 +21,13 @@ const faqJsonLd = {
   <meta property="og:url"         content={CANONICAL} />
   <meta property="og:image"       content={OGP_IMAGE} />
   <meta property="og:locale"      content="ja_JP" />
-  <meta property="og:site_name"   content="浮気の証拠ナビ" />
+  <meta property="og:site_name"   content="弁護士の中の人" />
   <meta name="twitter:card"       content="summary_large_image" />
-
-  <!-- FAQ Structured Data -->
-  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;900&family=Noto+Serif+JP:wght@700;900&display=swap" rel="stylesheet" />
 
   <!-- Page CSS -->
   <link rel="stylesheet" href="/detective/styles.css" />
@@ -88,19 +49,17 @@ const faqJsonLd = {
   <div class="dt-header-inner">
     <a href="/detective/" class="dt-logo">
       <div class="dt-logo-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       </div>
       <div class="dt-logo-wrap">
-        <span>浮気の証拠ナビ</span>
-        <span class="dt-logo-sub">探偵比較・無料相談サイト</span>
+        <span>弁護士の中の人</span>
+        <span class="dt-logo-sub">公式サイト</span>
       </div>
     </a>
-    <nav class="dt-nav">
-      <a href="#ranking"  data-scroll-to="#ranking">ランキング</a>
-      <a href="#cost"     data-scroll-to="#cost">費用目安</a>
-      <a href="#flow"     data-scroll-to="#flow">ご利用の流れ</a>
-      <a href="#faq"      data-scroll-to="#faq">FAQ</a>
-    </nav>
+    <a href={INSTAGRAM_URL} class="dt-header-insta" target="_blank" rel="noopener" data-track="header_instagram">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+      <span>@lawyer.nakanohito</span>
+    </a>
   </div>
 </header>
 
@@ -108,46 +67,55 @@ const faqJsonLd = {
 <section class="hero">
   <div class="dt-container hero-inner">
     <div class="hero-copy">
-      <div class="hero-badge">探偵事務所を比較して失敗しない探偵選びをサポート</div>
-      <h1>浮気の証拠、<br/>自分で集める前に<br/>探偵費用を<em>比較</em>してください</h1>
+      <div class="hero-badge">Instagram「弁護士の中の人」公式サイト</div>
+      <h1>気づいた今、<br/>何から動くかで<br/><em>結果が変わります</em></h1>
       <p class="hero-sub-copy">
-        探偵費用の相場は<strong>30〜90万円</strong>と幅があります。<br/>
-        同じ調査でも依頼先で数十万円の差が出るため、比較が重要です。
+        Instagramでは伝えきれなかった<br/>
+        「動く前に知ってほしいこと」をここに残しました。
       </p>
       <div class="hero-badges">
         <div class="hero-badge-item">
           <span class="badge-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
-          <span>匿名OK</span>
+          <span>守秘義務</span>
         </div>
         <div class="hero-badge-item">
           <span class="badge-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
-          <span>相談無料</span>
+          <span>無料相談</span>
         </div>
         <div class="hero-badge-item">
           <span class="badge-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
           <span>全国対応</span>
         </div>
         <div class="hero-badge-item">
-          <span class="badge-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg></span>
-          <span>見積もり比較</span>
+          <span class="badge-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+          <span>最短当日</span>
         </div>
       </div>
-      <a href="#" class="hero-cta" data-affiliate="matching" data-track="hero_matching" rel="nofollow sponsored">
+      <a href="#checklist" class="hero-cta" data-scroll-to="#checklist" data-track="hero_checklist">
         <span class="cta-free-badge">無料</span>
-        今すぐ探偵を比較する
+        まず動く前のチェックを
         <span class="hero-cta-arrow">›</span>
       </a>
     </div>
     <div class="hero-media">
       <div class="hero-media-card">
-        <img
-          src="/detective/images/hero.png"
-          alt="探偵事務所に相談する女性のイメージ"
-          class="hero-img"
-          width="600"
-          height="700"
-          decoding="async"
-        />
+        <div class="hero-quote-card">
+          <div class="hero-quote-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2H4c-1.25 0-2 .75-2 2v6c0 1.25.75 2 2 2h2c0 4-1 5-3 5v3zm12 0c3 0 7-1 7-8V5c0-1.25-.75-2-2-2h-4c-1.25 0-2 .75-2 2v6c0 1.25.75 2 2 2h2c0 4-1 5-3 5v3z"/></svg>
+          </div>
+          <p class="hero-quote-text">
+            「もっと早く<br/>動いていれば」
+          </p>
+          <p class="hero-quote-sub">
+            ——これが、<br/>
+            相談に来る方の<br/>
+            ほとんどが言う言葉です。
+          </p>
+          <div class="hero-quote-author">
+            <span class="hero-quote-author-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+            弁護士事務所スタッフ
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -159,216 +127,153 @@ const faqJsonLd = {
 </section>
 
 <!-- ══ PR DISCLOSURE ═══════════════════════════════════════════ -->
-<p class="pr-bar">PR｜当ページはアフィリエイトリンクを含みます</p>
+<p class="pr-bar">PR｜当ページは一部にアフィリエイトリンクを含みます</p>
 
-<!-- ══ WARNING SECTION ══════════════════════════════════════════ -->
-<section class="dt-section warning-section">
+<!-- ══ INSTA WELCOME SECTION ═══════════════════════════════════ -->
+<section class="dt-section insta-welcome-section">
   <div class="dt-container">
-    <div class="warning-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> 探偵選びで失敗すると</div>
-    <div class="warning-inner">
-      <div class="warning-left">
-        <h2>証拠も<em>お金も</em><br/>失います</h2>
-        <p class="warning-lead">浮気調査は、安ければいいわけではありません。</p>
+    <div class="insta-welcome-inner">
+      <div class="insta-welcome-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
       </div>
-      <div class="risk-grid">
-        <div class="risk-card">
-          <div class="risk-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
-          <strong>証拠として弱い<br/>写真しか撮れない</strong>
-        </div>
-        <div class="risk-card">
-          <div class="risk-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-          <strong>追加料金で<br/>高額になる</strong>
-        </div>
-        <div class="risk-card">
-          <div class="risk-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-          <strong>調査日を外して<br/>費用だけかかる</strong>
-        </div>
-        <div class="risk-card">
-          <div class="risk-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-          <strong>報告書が<br/>裁判で使いにくい</strong>
-        </div>
-        <div class="risk-card">
-          <div class="risk-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
-          <strong>料金体系が<br/>不明確</strong>
-        </div>
-      </div>
-    </div>
-    <p class="warning-footer">だから、1社だけで決めるのは危険です。</p>
-  </div>
-</section>
-
-<!-- ══ 5 POINTS ══════════════════════════════════════════════════ -->
-<div class="divider"></div>
-<section class="dt-section section-white">
-  <div class="dt-container">
-    <div class="section-head">
-      <span class="kicker">CHECK POINTS</span>
-      <h2>探偵を選ぶ前に見るべき<br/><strong style="color:var(--red)">5つのポイント</strong></h2>
-    </div>
-    <div class="points-grid">
-      <div class="point-card">
-        <div class="point-num">01</div>
-        <div class="point-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
-        <h3>料金体系</h3>
-        <p>時間制・パック制・成功報酬制を確認</p>
-      </div>
-      <div class="point-card">
-        <div class="point-num">02</div>
-        <div class="point-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
-        <h3>追加費用</h3>
-        <p>車両費・深夜料金・延長料金の有無</p>
-      </div>
-      <div class="point-card">
-        <div class="point-num">03</div>
-        <div class="point-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-        <h3>調査報告書</h3>
-        <p>親告や慰謝料請求で使える内容か</p>
-      </div>
-      <div class="point-card">
-        <div class="point-num">04</div>
-        <div class="point-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
-        <h3>実績</h3>
-        <p>不倫・浮気調査の経験が多いか</p>
-      </div>
-      <div class="point-card">
-        <div class="point-num">05</div>
-        <div class="point-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <h3>対応エリア</h3>
-        <p>対象者の行動範囲に対応できるか</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ QUIZ / MATCHING ══════════════════════════════════════════ -->
-<section class="quiz-section" id="matching">
-  <div class="dt-container">
-    <div class="section-head" style="margin-bottom:1.5rem">
-      <span class="kicker kicker-white">FREE MATCHING</span>
-      <h2>あなたに合う探偵を<strong style="color:var(--gold-lt)">無料</strong>で比較できます</h2>
-    </div>
-    <div class="quiz-grid">
-      <div class="quiz-card">
-        <span class="quiz-q-label">Q1 調査したい内容は？</span>
-        <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q1" /> 配偶者の浮気</label>
-          <label class="quiz-option"><input type="radio" name="q1" /> 婚約者の浮気</label>
-          <label class="quiz-option"><input type="radio" name="q1" /> 不倫相手の特定</label>
-          <label class="quiz-option"><input type="radio" name="q1" /> 証拠収集</label>
-        </div>
-      </div>
-      <div class="quiz-card">
-        <span class="quiz-q-label">Q2 証拠はありますか？</span>
-        <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q2" /> LINEだけある</label>
-          <label class="quiz-option"><input type="radio" name="q2" /> 写真がある</label>
-          <label class="quiz-option"><input type="radio" name="q2" /> 怪しいだけ</label>
-          <label class="quiz-option"><input type="radio" name="q2" /> すでに自白している</label>
-        </div>
-      </div>
-      <div class="quiz-card">
-        <span class="quiz-q-label">Q3 予算感は？</span>
-        <div class="quiz-options">
-          <label class="quiz-option"><input type="radio" name="q3" /> 10万円以内</label>
-          <label class="quiz-option"><input type="radio" name="q3" /> 30万円以内</label>
-          <label class="quiz-option"><input type="radio" name="q3" /> 50万円以内</label>
-          <label class="quiz-option"><input type="radio" name="q3" /> まだ決めていない</label>
-        </div>
-      </div>
-      <div class="quiz-cta-card">
-        <span class="quiz-cta-free">完全無料</span>
-        <h3>無料で<br/>比較してみる</h3>
-        <p class="quiz-cta-sub">最適な探偵事務所をご案内します</p>
-        <a href="#" class="quiz-cta-btn" data-affiliate="matching" data-track="quiz_matching" rel="nofollow sponsored">
-          無料で比較する ›
+      <div class="insta-welcome-body">
+        <p class="insta-welcome-label">Instagramからお越しの方へ</p>
+        <h2>動く前のことは、<br/>Instagramでお伝えしてきました。</h2>
+        <p class="insta-welcome-text">
+          動いた後のことは、ここに残しました。<br/>
+          証拠を集める段階で、ほとんどの人が立ち止まります。<br/>
+          自分でできること、できないこと——順番に整理していきましょう。
+        </p>
+        <a href={INSTAGRAM_URL} class="insta-welcome-link" target="_blank" rel="noopener" data-track="welcome_instagram">
+          @lawyer.nakanohito を見る ›
         </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ COST + WHO ════════════════════════════════════════════════ -->
+<!-- ══ WARNING SECTION ══════════════════════════════════════════ -->
+<section class="dt-section warning-section">
+  <div class="dt-container">
+    <div class="warning-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> 順番を間違えると</div>
+    <div class="warning-inner">
+      <div class="warning-left">
+        <h2>証拠も<em>慰謝料も</em><br/>失います</h2>
+        <p class="warning-lead">気づいた瞬間が、一番証拠が残っている瞬間です。</p>
+      </div>
+      <div class="risk-grid">
+        <div class="risk-card">
+          <div class="risk-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></div>
+          <strong>感情で<br/>問い詰める</strong>
+        </div>
+        <div class="risk-card">
+          <div class="risk-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-2 14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L5 6"/></svg></div>
+          <strong>LINE履歴を<br/>消される</strong>
+        </div>
+        <div class="risk-card">
+          <div class="risk-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+          <strong>言い訳の<br/>準備をされる</strong>
+        </div>
+        <div class="risk-card">
+          <div class="risk-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <strong>慰謝料が<br/>大幅に減る</strong>
+        </div>
+        <div class="risk-card">
+          <div class="risk-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <strong>時効を<br/>迎える(3年)</strong>
+        </div>
+      </div>
+    </div>
+    <p class="warning-footer">だから「動く前」が一番大事なんです。</p>
+  </div>
+</section>
+
+<!-- ══ CHECKLIST SECTION ═══════════════════════════════════════ -->
+<div class="divider"></div>
+<section class="dt-section section-white" id="checklist">
+  <div class="dt-container">
+    <div class="section-head">
+      <span class="kicker">CHECK BEFORE ACTION</span>
+      <h2>動く前の<br/><strong style="color:var(--red)">7つのチェック</strong></h2>
+      <p>当てはまる項目が多いほど、すぐ動くべき状態です。</p>
+    </div>
+    <div class="checklist-grid">
+      <div class="checklist-item">
+        <div class="checklist-num">01</div>
+        <p>スマホを<strong>家でだけ</strong>伏せて置くようになった</p>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-num">02</div>
+        <p>急に<strong>現金払い</strong>が増えた・お金の動きが不自然</p>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-num">03</div>
+        <p>あなたの予定を<strong>毎日確認</strong>してくる</p>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-num">04</div>
+        <p>「早く帰れる」と伝えると<strong>機嫌が変わる</strong></p>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-num">05</div>
+        <p>身に覚えのない<strong>レシート</strong>や匂いがする</p>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-num">06</div>
+        <p>帰宅後すぐに<strong>お風呂</strong>に入るようになった</p>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-num">07</div>
+        <p>スマホの<strong>予測変換</strong>に知らない名前が出る</p>
+      </div>
+    </div>
+    <div class="checklist-result">
+      <div class="checklist-result-line">
+        <strong>3つ以上当てはまった方へ</strong>
+      </div>
+      <p class="checklist-result-text">
+        感情で問い詰める前に、まず証拠を集める段階です。<br/>
+        ただし、自分で集める証拠には限界があります。<br/>
+        違法な方法で集めると、逆に不利になることも。
+      </p>
+      <a href="#ranking" class="checklist-cta-btn" data-scroll-to="#ranking" data-track="checklist_to_ranking">
+        信頼できる探偵の選び方を見る ›
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ COST SECTION ════════════════════════════════════════════ -->
 <div class="divider"></div>
 <section class="dt-section section-white" id="cost">
   <div class="dt-container">
-    <div class="cost-who-grid">
-      <div>
-        <div class="section-head" style="text-align:left;margin-bottom:1rem">
-          <span class="kicker">COST GUIDE</span>
-          <h2>探偵費用の目安</h2>
-        </div>
-        <div class="cost-card">
-          <div class="cost-card-head">調査日数別・費用の参考範囲</div>
-          <table class="cost-table">
-            <tbody>
-              <tr>
-                <td>1日だけの調査</td>
-                <td class="cost-range">10〜15万円前後</td>
-              </tr>
-              <tr>
-                <td>数日間の調査</td>
-                <td class="cost-range">30〜50万円前後</td>
-              </tr>
-              <tr>
-                <td>長期・難航する調査</td>
-                <td class="cost-range">100万円以上に<br/>なることも</td>
-              </tr>
-            </tbody>
-          </table>
-          <p class="cost-note">総額相場の目安は30〜90万円（平均約40万円）。依頼先や調査内容で大きく変わります。</p>
-        </div>
-        <div class="plan-type-card">
-          <div class="cost-card-head">料金プランの種類</div>
-          <div class="plan-type-grid">
-            <div class="plan-type-item">
-              <div class="plan-type-name">時間制</div>
-              <div class="plan-type-price">1h 7,000〜15,000円</div>
-              <p>調査時間に応じて課金。短期・確認調査向き。</p>
-            </div>
-            <div class="plan-type-item">
-              <div class="plan-type-name">パック制</div>
-              <div class="plan-type-price">20h〜 35万円前後〜</div>
-              <p>まとめて時間を購入。長期調査でお得になる場合あり。</p>
-            </div>
-            <div class="plan-type-item plan-type-item--highlight">
-              <div class="plan-type-name">成功報酬制</div>
-              <div class="plan-type-price">証拠取得時のみ課金</div>
-              <p>証拠が取れなかった場合は費用ゼロ。リスクを抑えたい方向き。</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="section-head" style="text-align:left;margin-bottom:1rem">
-          <span class="kicker">WHO SHOULD CONSULT</span>
-          <h2>こんな方は、探偵に<br/>相談する価値があります</h2>
-        </div>
-        <div class="who-card">
-          <div class="who-card-head">探偵相談に向いている状況</div>
-          <div class="who-list">
-            <div class="who-item">
-              <div class="who-check">✓</div>
-              <span>会う曜日や時間帯がだいたい分かる</span>
-            </div>
-            <div class="who-item">
-              <div class="who-check">✓</div>
-              <span>相手の勤務先や行動範囲が分かる</span>
-            </div>
-            <div class="who-item">
-              <div class="who-check">✓</div>
-              <span>LINEやレシートなど怪しい証拠がある</span>
-            </div>
-            <div class="who-item">
-              <div class="who-check">✓</div>
-              <span>慰謝料請求や離婚を考えている</span>
-            </div>
-            <div class="who-item">
-              <div class="who-check">✓</div>
-              <span>自分で尾行して失敗したくない</span>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="section-head">
+      <span class="kicker">COST GUIDE</span>
+      <h2>探偵費用のリアル</h2>
+      <p>「いくらかかるか分からない」を解消します。</p>
+    </div>
+    <div class="cost-card" style="max-width:680px;margin:0 auto">
+      <div class="cost-card-head">調査内容別・費用の参考範囲</div>
+      <table class="cost-table">
+        <tbody>
+          <tr>
+            <td>1日だけの調査</td>
+            <td class="cost-range">10〜15万円前後</td>
+          </tr>
+          <tr>
+            <td>数日間の調査</td>
+            <td class="cost-range">30〜50万円前後</td>
+          </tr>
+          <tr>
+            <td>長期・難航する調査</td>
+            <td class="cost-range">100万円以上に<br/>なることも</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="cost-note">
+        費用は「調査員の人数 × 稼働時間」でほぼ決まります。<br/>
+        <strong>事前に「いつ・どこで会っているか」を絞り込むだけで、費用は大幅に下がります。</strong>
+      </p>
     </div>
   </div>
 </section>
@@ -378,9 +283,9 @@ const faqJsonLd = {
 <section class="dt-section ranking-section" id="ranking">
   <div class="dt-container">
     <div class="ranking-header">
-      <span class="kicker kicker-white">RANKING</span>
-      <h2><span class="heading-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></span> おすすめ探偵事務所ランキング</h2>
-      <p class="ranking-header-sub">各社の見積もりを比較して、あなたに最適な探偵を選べます</p>
+      <span class="kicker kicker-white">RECOMMENDED</span>
+      <h2><span class="heading-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></span> 信頼できる探偵 3社</h2>
+      <p class="ranking-header-sub">弁護士事務所スタッフ目線で、現場で信頼されている事務所を厳選しました</p>
     </div>
 
     <div class="ranking-cards">
@@ -404,15 +309,15 @@ const faqJsonLd = {
             <span class="ranking-badge-tag good">弁護士紹介あり</span>
           </div>
           <div class="ranking-features">
-            <div class="ranking-feature">浮気調査に深い実績</div>
+            <div class="ranking-feature">浮気調査で40年以上の実績</div>
             <div class="ranking-feature">相談無料・見積もり明確</div>
-            <div class="ranking-feature">裁判用報告書・DVD作成対応</div>
+            <div class="ranking-feature">裁判で使える報告書を作成</div>
           </div>
           <div class="ranking-price-row">
             <div class="ranking-price-label">料金目安</div>
             <div class="ranking-price">1時間／8,800円〜（税込）</div>
           </div>
-          <p class="ranking-for">向いている人：全国対応・初めて相談する方</p>
+          <p class="ranking-for">迷ったらここ。全国対応で初心者にも安心。</p>
           <a href="#" class="ranking-cta" data-affiliate="gal" data-track="ranking_gal" rel="nofollow sponsored">
             無料相談する
           </a>
@@ -434,19 +339,19 @@ const faqJsonLd = {
           <div class="ranking-badges">
             <span class="ranking-badge-tag good">探偵業届出あり</span>
             <span class="ranking-badge-tag">創業47年以上</span>
-            <span class="ranking-badge-tag good">警察OB顧問在籍</span>
+            <span class="ranking-badge-tag good">警察OB顧問</span>
             <span class="ranking-badge-tag">全国18拠点</span>
           </div>
           <div class="ranking-features">
-            <div class="ranking-feature">調査進捗をリアルタイム報告</div>
+            <div class="ranking-feature">調査の進捗をリアルタイム報告</div>
             <div class="ranking-feature">裁判で使える証拠取得に強い</div>
-            <div class="ranking-feature">夫婦カウンセラー在籍</div>
+            <div class="ranking-feature">夫婦カウンセラーも在籍</div>
           </div>
           <div class="ranking-price-row">
             <div class="ranking-price-label">トライアルプラン</div>
             <div class="ranking-price">55,000円〜（税込）</div>
           </div>
-          <p class="ranking-for">向いている人：証拠の質・慰謝料請求を重視する方</p>
+          <p class="ranking-for">慰謝料請求も視野に入っている方に。</p>
           <a href="#" class="ranking-cta" data-affiliate="haraichi" data-track="ranking_haraichi" rel="nofollow sponsored">
             無料相談する
           </a>
@@ -466,21 +371,21 @@ const faqJsonLd = {
         <div class="ranking-card-body">
           <div class="ranking-name">HAL探偵社</div>
           <div class="ranking-badges">
-            <span class="ranking-badge-tag good">成功報酬：不成立0円</span>
+            <span class="ranking-badge-tag good">不成立0円</span>
             <span class="ranking-badge-tag">成功率97.3%</span>
             <span class="ranking-badge-tag">全国26拠点</span>
-            <span class="ranking-badge-tag good">後払い対応</span>
+            <span class="ranking-badge-tag good">後払いOK</span>
           </div>
           <div class="ranking-features">
-            <div class="ranking-feature">成功報酬プランで費用リスクなし</div>
-            <div class="ranking-feature">追加料金一切なし・後払いOK</div>
-            <div class="ranking-feature">LINEで24時間無料相談</div>
+            <div class="ranking-feature">成功報酬制で費用リスクなし</div>
+            <div class="ranking-feature">追加料金一切なし</div>
+            <div class="ranking-feature">LINEで24時間無料相談OK</div>
           </div>
           <div class="ranking-price-row">
             <div class="ranking-price-label">料金目安</div>
             <div class="ranking-price">1時間／7,000円〜（税込）</div>
           </div>
-          <p class="ranking-for">向いている人：費用を抑えたい・成功報酬で安心したい方</p>
+          <p class="ranking-for">費用を抑えたい・失敗が怖い方に。</p>
           <a href="#" class="ranking-cta" data-affiliate="hal" data-track="ranking_hal" rel="nofollow sponsored">
             無料相談する
           </a>
@@ -488,56 +393,18 @@ const faqJsonLd = {
       </div>
 
     </div>
-    <p class="ranking-note">※料金は税込の目安です。調査内容や地域により異なります。</p>
+    <p class="ranking-note">※料金は税込の目安です。詳細は各社に確認してください。</p>
 
     <!-- マッチングサービス -->
     <div class="matching-cta-box">
       <div class="matching-cta-body">
-        <div class="matching-cta-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22V12M12 12l-4-4M12 12l4-4"/><circle cx="12" cy="5" r="3"/></svg> 迷ったらまずここから</div>
-        <h3>複数の探偵事務所を<br/>無料で一括比較できます</h3>
-        <p>条件に合った探偵事務所を複数ご提案。まずは無料相談から始められます。</p>
+        <div class="matching-cta-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22V12M12 12l-4-4M12 12l4-4"/><circle cx="12" cy="5" r="3"/></svg> どこに頼めばいいか迷ったら</div>
+        <h3>あなたの状況に合う探偵を<br/>無料で一括比較できます</h3>
+        <p>条件・地域に合った事務所を複数提案。1社ずつ問い合わせる手間なく比較できます。</p>
       </div>
       <a href="#" class="matching-cta-btn" data-affiliate="matching" data-track="ranking_matching" rel="nofollow sponsored">
         無料で一括比較する ›
       </a>
-    </div>
-  </div>
-</section>
-
-<!-- ══ FLOW ══════════════════════════════════════════════════════ -->
-<div class="divider"></div>
-<section class="dt-section section-white" id="flow">
-  <div class="dt-container">
-    <div class="section-head">
-      <span class="kicker">HOW TO USE</span>
-      <h2>ご利用の流れ</h2>
-    </div>
-    <div class="flow-steps">
-      <div class="flow-step">
-        <div class="flow-num">1</div>
-        <h3>無料診断・相談</h3>
-        <p>簡単な質問に答えるだけ</p>
-      </div>
-      <div class="flow-step">
-        <div class="flow-num">2</div>
-        <h3>探偵事務所の比較</h3>
-        <p>あなたに合う探偵を選定</p>
-      </div>
-      <div class="flow-step">
-        <div class="flow-num">3</div>
-        <h3>見積もり・相談</h3>
-        <p>複数社の見積もりを比較</p>
-      </div>
-      <div class="flow-step">
-        <div class="flow-num">4</div>
-        <h3>検討・ご契約</h3>
-        <p>納得してから依頼できる</p>
-      </div>
-      <div class="flow-step">
-        <div class="flow-num">5</div>
-        <h3>調査開始・報告</h3>
-        <p>証拠を掴んで解決へ</p>
-      </div>
     </div>
   </div>
 </section>
@@ -548,21 +415,20 @@ const faqJsonLd = {
   <div class="dt-container">
     <div class="section-head">
       <span class="kicker">FAQ</span>
-      <h2>よくある質問</h2>
-      <p>気になる項目をタップして確認できます</p>
+      <h2>よく聞かれる質問</h2>
     </div>
     <div class="faq-list">
 
       <div class="faq-item open">
         <button class="faq-q">
           <span class="faq-q-badge">Q</span>
-          <span class="faq-q-text">本当に無料で利用できますか？</span>
+          <span class="faq-q-text">本当に無料で相談できますか？</span>
           <span class="faq-chevron">▼</span>
         </button>
         <div class="faq-a">
           <div class="faq-a-inner">
             <span class="faq-a-badge">A</span>
-            <p class="faq-a-text">はい、探偵事務所のご紹介からすべて無料です。費用は一切かかりません。</p>
+            <p class="faq-a-text">はい、ご紹介した3社すべて初回相談は無料です。見積もりだけ取って契約しないことも可能です。</p>
           </div>
         </div>
       </div>
@@ -570,13 +436,13 @@ const faqJsonLd = {
       <div class="faq-item">
         <button class="faq-q">
           <span class="faq-q-badge">Q</span>
-          <span class="faq-q-text">相談したら必ず契約しないといけませんか？</span>
+          <span class="faq-q-text">家族や職場にバレませんか？</span>
           <span class="faq-chevron">▼</span>
         </button>
         <div class="faq-a">
           <div class="faq-a-inner">
             <span class="faq-a-badge">A</span>
-            <p class="faq-a-text">いいえ、相談しただけで契約する必要はありません。見積もりを見てから決めていただけます。</p>
+            <p class="faq-a-text">探偵業法により、探偵事務所には守秘義務があります。匿名相談も可能です。連絡方法（電話・LINE・メール）も指定できます。</p>
           </div>
         </div>
       </div>
@@ -584,13 +450,13 @@ const faqJsonLd = {
       <div class="faq-item">
         <button class="faq-q">
           <span class="faq-q-badge">Q</span>
-          <span class="faq-q-text">匿名でも相談できますか？</span>
+          <span class="faq-q-text">証拠を取った後、慰謝料請求もできますか？</span>
           <span class="faq-chevron">▼</span>
         </button>
         <div class="faq-a">
           <div class="faq-a-inner">
             <span class="faq-a-badge">A</span>
-            <p class="faq-a-text">はい、匿名・ニックネームでのご相談が可能です。個人情報の入力は不要です。</p>
+            <p class="faq-a-text">紹介した探偵社は、慰謝料請求に強い弁護士の紹介も行っています。証拠取得から請求までワンストップで進められます。</p>
           </div>
         </div>
       </div>
@@ -598,82 +464,17 @@ const faqJsonLd = {
       <div class="faq-item">
         <button class="faq-q">
           <span class="faq-q-badge">Q</span>
-          <span class="faq-q-text">どのくらいで探偵を紹介してもらえますか？</span>
+          <span class="faq-q-text">まだ証拠が何もないのですが、相談していいですか？</span>
           <span class="faq-chevron">▼</span>
         </button>
         <div class="faq-a">
           <div class="faq-a-inner">
             <span class="faq-a-badge">A</span>
-            <p class="faq-a-text">最短で当日中にご紹介可能です。お急ぎの方はその旨をお伝えください。</p>
+            <p class="faq-a-text">むしろ、証拠がない段階で相談する方が良いです。「いつ・どこで会っているか」の絞り込みからプロが手伝ってくれるため、調査時間が短縮できて費用も抑えられます。</p>
           </div>
         </div>
       </div>
 
-      <div class="faq-item">
-        <button class="faq-q">
-          <span class="faq-q-badge">Q</span>
-          <span class="faq-q-text">地方でも対応していますか？</span>
-          <span class="faq-chevron">▼</span>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            <span class="faq-a-badge">A</span>
-            <p class="faq-a-text">はい、全国の優良探偵事務所と提携しているため、全国どこでもご紹介可能です。</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q">
-          <span class="faq-q-badge">Q</span>
-          <span class="faq-q-text">証拠が取れなかった場合、費用はかかりますか？</span>
-          <span class="faq-chevron">▼</span>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            <span class="faq-a-badge">A</span>
-            <p class="faq-a-text">成功報酬制プランを提供している事務所では、証拠取得できなかった場合に費用が発生しないケースがあります。ただし着手金が必要な場合もあるため、契約前に必ず条件を確認してください。HAL探偵社など成功報酬に対応した事務所もご紹介しています。</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q">
-          <span class="faq-q-badge">Q</span>
-          <span class="faq-q-text">依頼したことは絶対に秘密にしてもらえますか？</span>
-          <span class="faq-chevron">▼</span>
-        </button>
-        <div class="faq-a">
-          <div class="faq-a-inner">
-            <span class="faq-a-badge">A</span>
-            <p class="faq-a-text">探偵業法に基づき、探偵事務所には守秘義務があります。ご依頼の内容や個人情報が第三者に漏れることはありません。ご家族・職場など周囲に知られる心配なくご相談いただけます。</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ══ 掲載基準 ══════════════════════════════════════════════════ -->
-<div class="divider"></div>
-<section class="dt-section">
-  <div class="dt-container">
-    <div class="page-meta">
-      <p><strong>掲載基準・広告表記</strong></p>
-      <p>
-        当ページは、探偵事務所の料金・実績・調査報告書の質・対応エリアを比較する目的で作成しています。
-        掲載しているサービスはアフィリエイトプログラムに参加しており、リンク経由で申し込みが発生した場合に報酬を受け取る場合があります。
-        掲載順・紹介内容は報酬額だけでなく、料金の透明性・実績・調査報告書の品質・対応エリアの広さをもとに構成しています。
-      </p>
-      <p>
-        <strong>料金について：</strong>各探偵事務所の料金は調査内容・地域・難易度によって異なります。
-        このページに記載の金額は参考目安であり、申し込み前に必ず各社に直接お見積もりをご確認ください。
-      </p>
-      <p style="margin-bottom:0">
-        <strong>最終更新：</strong>2026年5月
-        <strong>運営：</strong>浮気の証拠ナビ（vpscomparehub.com）
-      </p>
     </div>
   </div>
 </section>
@@ -681,19 +482,18 @@ const faqJsonLd = {
 <!-- ══ FOOTER CTA ════════════════════════════════════════════════ -->
 <section class="footer-cta">
   <div class="dt-container">
-    <h2>証拠が取れるかどうかは、<br/>最初の探偵選びで決まります</h2>
-    <p>焦って1社に決める前に、料金・調査力・報告書の質を比較してください。</p>
+    <h2>動き出すのが早いほど、<br/>有利になります。</h2>
+    <p>「迷ってる」の段階が、一番相談しやすいタイミングです。</p>
     <div class="footer-cta-badges">
-      <span class="footer-cta-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> 匿名相談OK</span>
-      <span class="footer-cta-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg> 最短当日対応</span>
+      <span class="footer-cta-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> 守秘義務</span>
+      <span class="footer-cta-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg> 最短当日</span>
       <span class="footer-cta-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 相談無料</span>
-      <span class="footer-cta-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg> 見積もり比較</span>
       <span class="footer-cta-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> 全国対応</span>
     </div>
     <a href="#" class="footer-cta-btn" data-affiliate="matching" data-track="footer_matching" rel="nofollow sponsored">
-      今すぐ探偵を比較する ›
+      無料で一括比較する ›
     </a>
-    <p class="footer-cta-note">しつこい営業は一切ありません。安心してご利用ください。</p>
+    <p class="footer-cta-note">しつこい営業はありません。比較するだけでも大丈夫です。</p>
   </div>
 </section>
 
@@ -702,19 +502,20 @@ const faqJsonLd = {
   <div class="dt-footer-inner">
     <div class="dt-footer-logo">
       <div class="dt-footer-logo-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       </div>
-      <span>浮気の証拠ナビ</span>
+      <span>弁護士の中の人</span>
     </div>
     <p class="dt-footer-text">
-      探偵事務所を費用・実績・調査報告書の質・対応エリアで比較する情報サイトです。<br/>
-      掲載情報は各サービスの公式情報をもとに構成しています。料金・条件は変更になる場合があるため、申し込み前に公式サイトでご確認ください。
+      Instagram「弁護士の中の人（@lawyer.nakanohito）」の公式サイト。<br/>
+      不倫・浮気で動く前に知ってほしいことを発信しています。
     </p>
     <div class="dt-footer-links">
+      <a href={INSTAGRAM_URL} target="_blank" rel="noopener">Instagram</a>
+      <a href="/detective/privacy/">プライバシーポリシー</a>
       <a href="/detective/operator/">運営者情報</a>
-      <a href="/detective/operator/">プライバシーポリシー</a>
     </div>
-    <p class="dt-footer-copy">© 2026 浮気の証拠ナビ</p>
+    <p class="dt-footer-copy">© 2026 弁護士の中の人</p>
   </div>
 </footer>
 

@@ -1,0 +1,171 @@
+---
+const title = "運営者情報｜弁護士の中の人";
+const SITE_URL = "https://lawyer-nakanohito.com";
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f5f6f8; color: #1a1e2a;
+      font-size: 15px; line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 680px; margin: 0 auto; min-height: 100vh; }
+
+    /* Header */
+    .topbar {
+      background: #0d1b2e;
+      padding: 14px 20px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .topbar-icon {
+      width: 26px; height: 26px; border-radius: 7px;
+      background: linear-gradient(135deg, #c9922a, #e07b30);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; flex-shrink: 0;
+    }
+    .topbar-icon svg { width: 14px; height: 14px; display: block; }
+    .topbar-name { font-weight: 900; font-size: 14px; color: #fff; }
+    .topbar-back {
+      margin-left: auto; font-size: 12px;
+      color: rgba(255,255,255,.55); text-decoration: none;
+    }
+    .topbar-back:hover { color: #fff; text-decoration: underline; }
+
+    /* Content */
+    .content { padding: 2rem 1.5rem 3rem; }
+    .page-title {
+      font-size: 1.4rem; font-weight: 900;
+      letter-spacing: -.02em;
+      margin-bottom: 2rem;
+      padding-bottom: .75rem;
+      border-bottom: 2px solid #0d1b2e;
+    }
+
+    .section { margin-bottom: 2rem; }
+    .section-title {
+      font-size: .78rem; font-weight: 800;
+      letter-spacing: .1em;
+      color: #64748b;
+      margin-bottom: .75rem;
+      text-transform: uppercase;
+    }
+    .info-table { width: 100%; border-collapse: collapse; }
+    .info-table tr { border-bottom: 1px solid #e2e8f0; }
+    .info-table th {
+      width: 140px; padding: .75rem 0;
+      font-size: .82rem; font-weight: 700;
+      color: #64748b; text-align: left;
+      vertical-align: top;
+    }
+    .info-table td {
+      padding: .75rem 0 .75rem 1rem;
+      font-size: .88rem; color: #1a1e2a;
+    }
+
+    /* Nav links */
+    .nav-list { display: flex; flex-direction: column; gap: .5rem; }
+    .nav-link {
+      display: inline-flex; align-items: center; gap: .35rem;
+      font-size: .88rem; font-weight: 600;
+      color: #1d4ed8; text-decoration: none;
+    }
+    .nav-link:hover { text-decoration: underline; }
+
+    /* Footer */
+    .page-footer {
+      background: #0d1b2e; color: rgba(255,255,255,.5);
+      text-align: center; padding: 1.5rem;
+      font-size: .75rem;
+    }
+    .page-footer a { color: rgba(255,255,255,.5); }
+    .page-footer a:hover { color: #fff; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="topbar-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    </div>
+    <span class="topbar-name">弁護士の中の人</span>
+    <a href="/detective/" class="topbar-back">← トップへ戻る</a>
+  </div>
+
+  <div class="content">
+    <h1 class="page-title">運営者情報</h1>
+
+    <div class="section">
+      <p class="section-title">基本情報</p>
+      <table class="info-table">
+        <tbody>
+          <tr>
+            <th>サイト名</th>
+            <td>弁護士の中の人</td>
+          </tr>
+          <tr>
+            <th>URL</th>
+            <td>{SITE_URL}</td>
+          </tr>
+          <tr>
+            <th>Instagram</th>
+            <td>@lawyer.nakanohito</td>
+          </tr>
+          <tr>
+            <th>運営目的</th>
+            <td>不倫・浮気問題に関する情報提供および探偵事務所の紹介</td>
+          </tr>
+          <tr>
+            <th>収益モデル</th>
+            <td>アフィリエイトプログラムによる広告収入（A8.net 等）</td>
+          </tr>
+          <tr>
+            <th>最終更新</th>
+            <td>2026年5月</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <p class="section-title">掲載基準・広告表記</p>
+      <p style="font-size:.88rem;line-height:1.8;color:#475569">
+        当サイトに掲載している探偵事務所は、アフィリエイトプログラムに参加しており、リンク経由で申し込みが発生した場合に報酬を受け取ることがあります。<br/>
+        掲載順・紹介内容は報酬額だけでなく、料金の透明性・実績・調査報告書の品質・対応エリアの広さをもとに構成しています。<br/>
+        料金は調査内容・地域・難易度によって異なります。記載の金額は参考目安であり、申し込み前に必ず各社に直接お見積もりをご確認ください。
+      </p>
+    </div>
+
+    <div class="section">
+      <p class="section-title">関連ページ</p>
+      <div class="nav-list">
+        <a href="/detective/privacy/" class="nav-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          プライバシーポリシー
+        </a>
+        <a href="/detective/" class="nav-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          トップページへ戻る
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <p>© 2026 弁護士の中の人</p>
+  </div>
+
+</div>
+</body>
+</html>
