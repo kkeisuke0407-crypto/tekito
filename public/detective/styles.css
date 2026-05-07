@@ -1065,6 +1065,172 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   text-decoration: none;
 }
 
+/* ── Industry Stat Box ───────────────────────── */
+.industry-stat-box {
+  background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+  border-radius: 14px;
+  padding: 1.75rem 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-md);
+}
+.industry-stat-num {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--gold-lt);
+  line-height: 1;
+  letter-spacing: -.03em;
+}
+.industry-stat-num span {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--gold-lt);
+}
+.industry-stat-label {
+  font-size: .92rem;
+  font-weight: 700;
+  color: rgba(255,255,255,.85);
+  margin-top: .5rem;
+}
+.industry-stat-source {
+  font-size: .72rem;
+  color: rgba(255,255,255,.45);
+  margin-top: .35rem;
+}
+
+/* ── Risk Cards ──────────────────────────────── */
+.risk-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--red-lt);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  font-size: .88rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+.risk-card strong { color: var(--red); }
+
+/* ── Criteria List ───────────────────────────── */
+.criteria-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.criteria-item {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--shadow);
+}
+.criteria-num {
+  flex-shrink: 0;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+  color: var(--gold-lt);
+  font-size: .8rem; font-weight: 900;
+  display: flex; align-items: center; justify-content: center;
+  letter-spacing: .02em;
+  border: 2px solid var(--gold);
+}
+.criteria-body { flex: 1; }
+.criteria-body strong {
+  display: block;
+  font-size: .92rem; font-weight: 800;
+  color: var(--navy);
+  margin-bottom: .35rem;
+}
+.criteria-body p {
+  font-size: .85rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ── Ranking Comment ─────────────────────────── */
+.ranking-comment {
+  background: linear-gradient(135deg, #fffbf0, #fff8e6);
+  border: 1px solid #e8d5a0;
+  border-left: 4px solid var(--gold);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-top: 1.25rem;
+}
+.ranking-comment-label {
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+}
+.ranking-comment p {
+  font-size: .85rem;
+  line-height: 1.75;
+  color: #4a3c1a;
+}
+
+/* ── Comparison Table ────────────────────────── */
+.compare-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+}
+.compare-tbl {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 480px;
+  background: #fff;
+}
+.compare-tbl thead tr {
+  background: var(--navy);
+}
+.compare-th {
+  padding: .85rem 1rem;
+  font-size: .82rem; font-weight: 800;
+  color: #fff;
+  text-align: center;
+}
+.compare-th-label {
+  padding: .85rem 1rem;
+  background: var(--navy-mid);
+  width: 120px;
+}
+.rank-col-1 { background: linear-gradient(135deg, var(--gold), #b8821e); }
+.rank-col-2 { background: linear-gradient(135deg, #6b7280, #4b5563); }
+.rank-col-3 { background: linear-gradient(135deg, #92744a, #6b5535); }
+.compare-tbl tbody tr { border-bottom: 1px solid var(--border); }
+.compare-tbl tbody tr:last-child { border-bottom: none; }
+.compare-tbl tbody tr:nth-child(even) { background: #fafbfc; }
+.compare-label {
+  padding: .75rem 1rem;
+  font-size: .82rem; font-weight: 700;
+  color: var(--muted);
+  background: #f8f9fb;
+  border-right: 1px solid var(--border);
+  white-space: nowrap;
+}
+.compare-tbl tbody td:not(.compare-label) {
+  padding: .75rem 1rem;
+  font-size: .85rem;
+  text-align: center;
+  color: var(--text);
+  vertical-align: middle;
+}
+.compare-good {
+  padding: .75rem 1rem;
+  font-size: .85rem;
+  text-align: center;
+  color: var(--good);
+  font-weight: 700;
+}
+
 /* ── Responsive Adjustments ──────────────────── */
 @media (max-width: 768px) {
   .hero-quote-card { padding: 1.5rem 1.25rem; }
@@ -1075,4 +1241,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .checklist-grid { grid-template-columns: 1fr; }
   .dt-header-insta span { display: none; }
   .dt-header-insta { padding: .4rem; border-radius: 50%; }
+  .industry-stat-num { font-size: 2.4rem; }
+  .criteria-item { flex-direction: column; gap: .75rem; padding: 1rem; }
+  .criteria-num { width: 36px; height: 36px; }
+  .compare-th-label { width: 90px; }
+  .compare-label { font-size: .76rem; white-space: normal; }
 }

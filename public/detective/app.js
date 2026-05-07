@@ -3,9 +3,9 @@
  */
 
 const AFFILIATE_LINKS = {
-  gal:          "https://example.com/gal-agency",          // 総合探偵社ガルエージェンシー
-  haraichi:     "https://example.com/haraichi",            // 原一探偵事務所
   hal:          "https://example.com/hal-detective",       // HAL探偵社
+  haraichi:     "https://example.com/haraichi",            // 原一探偵事務所
+  kurol:        "https://example.com/kurol-detective",     // 総合探偵社クロル
   matching:     "https://example.com/detective-matching",  // 探偵マッチングサービス
 };
 
