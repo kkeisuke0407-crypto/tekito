@@ -98,11 +98,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     radial-gradient(circle at 10% 80%, rgba(192,57,43,.06) 0%, transparent 45%);
 }
 .hero-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
+  display: block;
   position: relative; z-index: 1;
+  max-width: 720px;
 }
 .hero-copy { text-align: left; }
 .hero-badge {
