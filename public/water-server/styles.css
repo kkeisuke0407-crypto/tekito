@@ -24,7 +24,7 @@
   --radius:     8px;
   --shadow:     0 2px 8px rgba(12,45,90,.08);
   --shadow-md:  0 4px 16px rgba(12,45,90,.12);
-  --max:        900px;
+  --max:        1120px;
   --font: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
@@ -1296,17 +1296,36 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 @media (min-width: 860px) {
+  body { font-size: 16px; }
+  .ws-container { padding-left: 2rem; padding-right: 2rem; }
+  .ws-header-inner { padding-left: 2rem; padding-right: 2rem; }
+  .ws-nav { gap: .2rem; }
+  .ws-nav a { font-size: .8rem; padding: .32rem .6rem; }
   .hero { padding: 4.5rem 2rem 6rem; text-align: left; }
-  .hero-inner { grid-template-columns: minmax(0, 1fr) minmax(300px, .85fr); }
-  .hero-copy { margin: 0; }
+  .hero-inner {
+    grid-template-columns: minmax(0, 1.05fr) minmax(380px, .95fr);
+    gap: 2.4rem;
+  }
+  .hero-copy { max-width: 620px; margin: 0; }
+  .hero h1 { font-size: clamp(2.35rem, 4vw, 3.25rem); }
   .hero-sub { margin-left: 0; margin-right: 0; }
   .hero-trust-badges { justify-content: flex-start; margin-left: 0; margin-right: 0; }
   .hero-price-points { margin-left: 0; margin-right: 0; }
   .hero-ctas { justify-content: flex-start; }
-  .hero-media { margin: 0 0 0 auto; }
+  .hero-media { max-width: 520px; margin: 0 0 0 auto; }
   .ws-section { padding: 3.25rem 2rem; }
   .pr-bar { margin-left: 2rem; margin-right: 2rem; max-width: calc(var(--max) - 4rem); }
+  .section-head {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.1rem;
+  }
+  .section-head h2 { font-size: clamp(1.55rem, 2.5vw, 2rem); }
+  .section-head p { font-size: .94rem; line-height: 1.75; }
   .price-quick-grid { grid-template-columns: repeat(3, 1fr); }
+  .price-quick-card { padding: 1.2rem; }
+  .price-quick-card p { font-size: .84rem; }
   .price-caution { grid-template-columns: 1fr auto; }
   .price-decision { grid-template-columns: 1fr auto; align-items: center; }
   .price-decision-actions { min-width: 220px; }
@@ -1335,14 +1354,69 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     justify-content: flex-end;
   }
   .precheck-actions a { min-width: 124px; }
-  .monthly-pick { padding: 1.15rem; }
+  .monthly-pick { padding: 1.25rem; }
   .monthly-pick-head { grid-template-columns: 1fr 1.35fr; align-items: end; }
   .monthly-pick-grid { grid-template-columns: repeat(3, 1fr); }
+  .monthly-pick-grid a { padding: 1rem; }
+  .monthly-pick-grid strong { font-size: .95rem; }
+  .monthly-pick-grid em { font-size: 1.16rem; }
+  .monthly-pick-grid small { font-size: .76rem; }
   .compare-scroll { margin: 0; padding: 0; }
+  .compare-table {
+    min-width: 1040px;
+    font-size: .86rem;
+  }
+  .compare-table thead th {
+    padding: .75rem .58rem;
+    font-size: .8rem;
+  }
+  .compare-table thead th:first-child {
+    min-width: 118px;
+    padding-left: .9rem;
+  }
+  .th-name { font-size: .9rem; }
+  .th-type { font-size: .68rem; }
+  .compare-table tbody td {
+    padding: .62rem .56rem;
+    line-height: 1.45;
+  }
+  .compare-table tbody td:first-child {
+    padding-left: .9rem;
+    font-size: .82rem;
+  }
+  .compare-cost-main { font-size: .9rem; }
+  .compare-btn {
+    padding: .42rem .7rem;
+    font-size: .74rem;
+  }
   .cond-list { display: grid; grid-template-columns: 1fr 1fr; }
+  .cond-item { padding: 1.1rem 1.2rem; }
+  .cond-body strong { font-size: .95rem; }
+  .cond-copy { font-size: .82rem; }
   .svc-cost-summary-grid { grid-template-columns: repeat(3, 1fr); }
   .service-cards { display: grid; grid-template-columns: 1fr 1fr; }
+  .card-head { padding: 1.15rem 1.35rem .95rem; }
+  .card-body { padding: 1.05rem 1.35rem 1.2rem; }
+  .svc-image-link {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .fee-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (min-width: 1180px) {
+  .hero { padding-top: 5rem; }
+  .ws-section { padding-top: 3.6rem; padding-bottom: 3.6rem; }
+  .price-quick-card,
+  .monthly-pick,
+  .choice-shortcut,
+  .precheck-panel,
+  .service-card,
+  .fee-card,
+  .quick-card {
+    box-shadow: 0 4px 18px rgba(12,45,90,.08);
+  }
 }
 
 /* ── Campaign badge ─────────────────────────────── */
