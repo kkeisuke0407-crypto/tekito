@@ -504,6 +504,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: box-shadow .2s;
+  position: relative;
 }
 .ranking-card:hover { box-shadow: var(--shadow-md); }
 .ranking-card.rank-1 { border-color: var(--gold); border-width: 2px; }
@@ -526,7 +527,49 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .rank-2 .rank-num { background: linear-gradient(135deg, #94a3b8, #64748b); }
 .rank-3 .rank-num { background: linear-gradient(135deg, #cd7f32, #a0522d); }
 .rank-label { font-size: .72rem; color: var(--muted); }
-.rank-stars { margin-left: auto; color: #f59e0b; font-size: .8rem; letter-spacing: -.05em; }
+
+/* PR badge */
+.card-pr-badge {
+  position: absolute; top: .5rem; right: .6rem;
+  font-size: .62rem; font-weight: 800;
+  color: var(--muted);
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
+  padding: .1rem .4rem;
+  border-radius: 4px;
+  letter-spacing: .05em;
+}
+
+/* Eval bars */
+.eval-bars {
+  display: flex; flex-direction: column; gap: .45rem;
+  margin: .85rem 0;
+  padding: .85rem 1rem;
+  background: var(--bg);
+  border-radius: 8px;
+}
+.eval-bar-row {
+  display: flex; align-items: center; gap: .6rem;
+}
+.eval-bar-label {
+  font-size: .72rem; font-weight: 700;
+  color: var(--muted);
+  width: 72px; flex-shrink: 0;
+  white-space: nowrap;
+}
+.eval-bar-track {
+  flex: 1;
+  height: 6px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.eval-bar-fill {
+  height: 100%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--navy-mid), var(--gold));
+}
+
 .ranking-card-body { padding: 1rem; }
 .ranking-name {
   font-size: 1.05rem; font-weight: 900;
