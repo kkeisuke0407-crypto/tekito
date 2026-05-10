@@ -1,0 +1,649 @@
+---
+const PAGE_TITLE = "害獣駆除の費用・相場を比較｜ネズミ・コウモリ・ハクビシン";
+const PAGE_DESC  = "ネズミ・コウモリ・ハクビシンなどの害獣駆除にかかる費用の相場を解説。業者によって同じ作業でも費用が大きく変わります。無料見積もりを比較してから依頼してください。";
+const CANONICAL  = "https://tekito-domain.com/gaiju/";
+const OGP_IMAGE  = "https://tekito-domain.com/og-default.svg";
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{PAGE_TITLE}</title>
+  <meta name="description" content={PAGE_DESC} />
+  <link rel="canonical" href={CANONICAL} />
+
+  <!-- OGP -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content={PAGE_TITLE} />
+  <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:url"         content={CANONICAL} />
+  <meta property="og:image"       content={OGP_IMAGE} />
+  <meta property="og:locale"      content="ja_JP" />
+  <meta property="og:site_name"   content="害獣駆除の相場ナビ" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="/gaiju/styles.css" />
+
+  <!-- GA4 -->
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
+<body>
+
+<!-- ══ HEADER ══════════════════════════════════════════════════ -->
+<header class="gj-header">
+  <div class="gj-header-inner">
+    <a href="/gaiju/" class="gj-logo">
+      <div class="gj-logo-icon">🐀</div>
+      <div class="gj-logo-wrap">
+        <span>害獣駆除の相場ナビ</span>
+        <span class="gj-logo-sub">費用・業者を正直に比較</span>
+      </div>
+    </a>
+    <a href="#ranking" class="gj-header-cta" data-scroll-to="#ranking" data-track="header_ranking">
+      無料見積もりで比較する ›
+    </a>
+  </div>
+</header>
+
+<!-- ══ HERO ════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="gj-container hero-inner">
+    <div class="hero-eyebrow">ネズミ・コウモリ・ハクビシンの駆除費用を比較</div>
+    <h1>その業者、<em>相場より高く</em><br/>払っていませんか？</h1>
+    <p class="hero-sub">
+      害獣駆除は業者によって同じ作業でも費用が<strong style="color:#fff">2〜5倍</strong>変わることがあります。<br/>
+      見積もりは無料です。複数社に依頼して比較してから決めてください。
+    </p>
+    <div class="hero-badges">
+      <div class="hero-badge-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>
+        <span>見積もり無料</span>
+      </div>
+      <div class="hero-badge-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>最短即日対応</span>
+      </div>
+      <div class="hero-badge-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>全国対応</span>
+      </div>
+      <div class="hero-badge-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>再発保証あり</span>
+      </div>
+    </div>
+    <a href="#ranking" class="hero-cta" data-scroll-to="#ranking" data-track="hero_ranking">
+      <span class="hero-cta-free">無料</span>
+      見積もりを依頼して費用を比較する
+      <span>›</span>
+    </a>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#f5f6f8"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ══ 放置リスク ════════════════════════════════════════════════ -->
+<section class="gj-section risk-section" id="risk">
+  <div class="gj-container">
+    <div class="risk-label">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      放置すると被害は広がります
+    </div>
+    <div class="section-head" style="text-align:left;margin-bottom:1.25rem;">
+      <h2>「そのうち何とかなる」は危険です</h2>
+      <p>害獣は放置するほど駆除費用が上がり、家屋の損傷も深刻になります。</p>
+    </div>
+    <div class="risk-cards">
+      <div class="risk-card">
+        <div class="risk-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span class="risk-card-title">家屋への直接被害</span>
+        </div>
+        <p>断熱材をかじられると防寒・防暑効果が低下。電気配線をかじると漏電・火災のリスクが生じます。構造材への被害は修繕費が高額になる場合があります。</p>
+      </div>
+      <div class="risk-card">
+        <div class="risk-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <span class="risk-card-title">衛生・感染リスク</span>
+        </div>
+        <p>ネズミはサルモネラ菌・レプトスピラ症などの感染源になることがあります。糞尿による悪臭・アレルギー、ダニ・ノミの繁殖も懸念されます。</p>
+      </div>
+      <div class="risk-card">
+        <div class="risk-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span class="risk-card-title">繁殖による被害拡大</span>
+        </div>
+        <p>ネズミは約2ヶ月で繁殖が可能になり、1年で数十匹に増えることも。発見が遅れるほど侵入ルートが増え、駆除コストが跳ね上がります。</p>
+      </div>
+      <div class="risk-card">
+        <div class="risk-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span class="risk-card-title">駆除費用の増加</span>
+        </div>
+        <p>初期段階での駆除なら低コストで済む場合でも、放置した結果、巣が拡大して侵入口の封鎖・修繕が必要になり、費用が数倍になるケースがあります。</p>
+      </div>
+    </div>
+    <p class="risk-footer">だから「まず無料見積もり」で状況を把握することが最初の一歩です。</p>
+  </div>
+</section>
+
+<!-- ══ 費用の目安 ═══════════════════════════════════════════════ -->
+<div class="divider"></div>
+<section class="gj-section section-white" id="cost">
+  <div class="gj-container">
+    <div class="section-head">
+      <span class="kicker">COST GUIDE</span>
+      <h2>害獣別・駆除費用の目安</h2>
+      <p>以下は参考相場です。実際の費用は現地調査後の見積もりで確認してください。</p>
+    </div>
+    <div class="cost-grid">
+      <div class="cost-card">
+        <div class="cost-card-head">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          ネズミ駆除
+        </div>
+        <div class="cost-card-body">
+          <div class="cost-range">30,000 〜 200,000円<small>（税込・目安）</small></div>
+          <div class="cost-note-list">
+            <div class="cost-note-item">侵入口の数・封鎖難易度で変動</div>
+            <div class="cost-note-item">屋根裏・床下は追加料金が発生しやすい</div>
+            <div class="cost-note-item">再発防止工事込みの場合は高額になることも</div>
+          </div>
+        </div>
+      </div>
+      <div class="cost-card">
+        <div class="cost-card-head">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          コウモリ駆除
+        </div>
+        <div class="cost-card-body">
+          <div class="cost-range">15,000 〜 100,000円<small>（税込・目安）</small></div>
+          <div class="cost-note-list">
+            <div class="cost-note-item">追い出し＋侵入口封鎖が主な作業</div>
+            <div class="cost-note-item">糞の清掃・消毒が追加になる場合あり</div>
+            <div class="cost-note-item">屋根の形状・規模で費用が変わる</div>
+          </div>
+        </div>
+      </div>
+      <div class="cost-card">
+        <div class="cost-card-head">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          ハクビシン駆除
+        </div>
+        <div class="cost-card-body">
+          <div class="cost-range">50,000 〜 200,000円<small>（税込・目安）</small></div>
+          <div class="cost-note-list">
+            <div class="cost-note-item">捕獲・搬出には行政手続きが必要な場合あり</div>
+            <div class="cost-note-item">糞尿清掃・消毒は別途費用になることが多い</div>
+            <div class="cost-note-item">再侵入防止の封鎖工事を含むと高額になりやすい</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cost-factors">
+      <div class="cost-factors-title">💡 費用が変わる主な4つの要因</div>
+      <div class="cost-factors-grid">
+        <div class="cost-factor">
+          <div class="cost-factor-num">1</div>
+          <span>侵入経路の数と封鎖の難易度（屋根形状・老朽化など）</span>
+        </div>
+        <div class="cost-factor">
+          <div class="cost-factor-num">2</div>
+          <span>被害の広がり・駆除規模（1匹 vs コロニー化）</span>
+        </div>
+        <div class="cost-factor">
+          <div class="cost-factor-num">3</div>
+          <span>再発防止工事・消毒・清掃の有無</span>
+        </div>
+        <div class="cost-factor">
+          <div class="cost-factor-num">4</div>
+          <span>業者のコスト構造（外注 vs 直営・地域差）</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bat-warning">
+      <strong>🦇 コウモリについての注意</strong><br/>
+      コウモリは鳥獣保護管理法により保護されており、許可なく捕獲・殺傷することは法律で禁止されています。専門業者が行う「追い出し＋侵入口封鎖」が適法な対処法です。自己判断での対応は法律違反になる可能性があるため、必ず専門業者にご相談ください。
+    </div>
+  </div>
+</section>
+
+<!-- ══ RANKING ══════════════════════════════════════════════════ -->
+<div class="divider"></div>
+<section class="gj-section ranking-section" id="ranking">
+  <div class="gj-container">
+    <div class="ranking-header">
+      <span class="kicker kicker-white">SELECTED COMPANIES</span>
+      <h2>
+        <span class="heading-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+        </span>
+        無料見積もりを依頼できる業者 3選
+      </h2>
+      <p class="ranking-header-sub">EPC・確定率・対応実績をもとに選定。費用は必ず公式サイトで最新情報を確認してください。</p>
+    </div>
+
+    <div class="ranking-cards">
+
+      <!-- No.1 駆除の達人 -->
+      <div class="ranking-card rank-1">
+        <span class="card-pr-badge">PR</span>
+        <div class="rank-badge">
+          <div class="rank-num">1</div>
+          <div>
+            <div style="font-size:.72rem;font-weight:800;color:#c2410c">No.1</div>
+            <div class="rank-label">見積もり特化・EPC最高クラス</div>
+          </div>
+        </div>
+        <div class="ranking-card-body">
+          <div class="ranking-name">駆除の達人</div>
+          <div class="ranking-tags">
+            <span class="tag good">リスティングOK</span>
+            <span class="tag good">見積もり無料</span>
+            <span class="tag">即日対応</span>
+            <span class="tag">全国対応</span>
+          </div>
+          <div class="eval-bars">
+            <div class="eval-bar-row">
+              <span class="eval-bar-label">対応スピード</span>
+              <div class="eval-bar-track"><div class="eval-bar-fill" style="width:95%"></div></div>
+            </div>
+            <div class="eval-bar-row">
+              <span class="eval-bar-label">実績・信頼</span>
+              <div class="eval-bar-track"><div class="eval-bar-fill" style="width:80%"></div></div>
+            </div>
+            <div class="eval-bar-row">
+              <span class="eval-bar-label">費用の透明性</span>
+              <div class="eval-bar-track"><div class="eval-bar-fill" style="width:85%"></div></div>
+            </div>
+          </div>
+          <div class="ranking-features">
+            <div class="ranking-feature">ネズミ・ハクビシン・コウモリなど幅広く対応</div>
+            <div class="ranking-feature">見積もり完了まで費用は一切かからない</div>
+            <div class="ranking-feature">電話・フォームで最短即日対応</div>
+          </div>
+          <div class="ranking-reward">
+            <div class="ranking-reward-label">見積もり成立時の報酬（参考）</div>
+            <div class="ranking-reward-val">5,000円 / 見積もり完了</div>
+          </div>
+          <div class="ranking-comment">
+            <div class="ranking-comment-label">選んだ理由</div>
+            <p>このページで紹介する中でEPCが最も高い実績を持つ業者。見積もり依頼のハードルが低く、まず現状を把握したい方に向いています。<em>費用の詳細は必ず公式サイトでご確認ください。</em></p>
+          </div>
+          <p class="ranking-for">向いている人：まず現地確認・費用を把握したい方</p>
+          <a href="#" class="ranking-cta" data-affiliate="kujo_tatsujin" data-track="ranking_tatsujin" rel="nofollow sponsored">
+            無料で見積もりを依頼する ›
+          </a>
+        </div>
+      </div>
+
+      <!-- No.2 害獣プロテック -->
+      <div class="ranking-card rank-2">
+        <span class="card-pr-badge">PR</span>
+        <div class="rank-badge">
+          <div class="rank-num">2</div>
+          <div>
+            <div style="font-size:.72rem;font-weight:800;color:#64748b">No.2</div>
+            <div class="rank-label">建築知識×駆除の専門性</div>
+          </div>
+        </div>
+        <div class="ranking-card-body">
+          <div class="ranking-name">害獣プロテック</div>
+          <div class="ranking-tags">
+            <span class="tag good">建築のプロが対応</span>
+            <span class="tag good">確定率68%</span>
+            <span class="tag">電話成果対象</span>
+            <span class="tag">リスティングOK</span>
+          </div>
+          <div class="eval-bars">
+            <div class="eval-bar-row">
+              <span class="eval-bar-label">対応スピード</span>
+              <div class="eval-bar-track"><div class="eval-bar-fill" style="width:80%"></div></div>
+            </div>
+            <div class="eval-bar-row">
+              <span class="eval-bar-label">実績・信頼</span>
+              <div class="eval-bar-track"><div class="eval-bar-fill" style="width:90%"></div></div>
+            </div>
+            <div class="eval-bar-row">
+              <span class="eval-bar-label">費用の透明性</span>
+              <div class="eval-bar-track"><div class="eval-bar-fill" style="width:80%"></div></div>
+            </div>
+          </div>
+          <div class="ranking-features">
+            <div class="ranking-feature">建築の専門知識を活かした根本的な侵入路封鎖</div>
+            <div class="ranking-feature">見積もり提示で報酬発生・電話での問い合わせも対象</div>
+            <div class="ranking-feature">再発を防ぐ対策工事まで一貫して対応</div>
+          </div>
+          <div class="ranking-reward">
+            <div class="ranking-reward-label">見積もり提示時の報酬（参考）</div>
+            <div class="ranking-reward-val">4,000円 / 新規見積もり提示（確定率 約69%）</div>
+          </div>
+          <div class="ranking-comment">
+            <div class="ranking-comment-label">選んだ理由</div>
+            <p>建築士レベルの専門知識で侵入経路を特定・封鎖できる点が強み。確定率・EPCともに安定した実績があり信頼できます。<em>「再発が心配な方は根本的な封鎖工事も相談してみてください」</em></p>
+          </div>
+          <p class="ranking-for">向いている人：再発防止を重視したい方</p>
+          <a href="#" class="ranking-cta" data-affiliate="gaiju_protect" data-track="ranking_protect" rel="nofollow sponsored">
+            無料で見積もりを依頼する ›
+          </a>
+        </div>
+      </div>
+
+      <!-- No.3 害獣駆除のROY -->
+      <div class="ranking-card rank-3">
+        <span class="card-pr-badge">PR</span>
+        <div class="rank-badge">
+          <div class="rank-num">3</div>
+          <div>
+            <div style="font-size:.72rem;font-weight:800;color:#92400e">No.3</div>
+            <div class="rank-label">一級建築士事務所・高単価</div>
+          </div>
+        </div>
+        <div class="ranking-card-body">
+          <div class="ranking-name">害獣駆除のROY</div>
+          <div class="ranking-tags">
+            <span class="tag good">一級建築士事務所運営</span>
+            <span class="tag good">確定率100%</span>
+            <span class="tag">作業実績3万件以上</span>
+            <span class="tag">リスティングOK</span>
+          </div>
+          <div class="eval-bars">
+            <div class="eval-bar-row">
+              <span class="eval-bar-label">対応スピード</span>
+              <div class="eval-bar-track"><div class="eval-bar-fill" style="width:75%"></div></div>
+            </div>
+            <div class="eval-bar-row">
+              <span class="eval-bar-label">実績・信頼</span>
+              <div class="eval-bar-track"><div class="eval-bar-fill" style="width:95%"></div></div>
+            </div>
+            <div class="eval-bar-row">
+              <span class="eval-bar-label">費用の透明性</span>
+              <div class="eval-bar-track"><div class="eval-bar-fill" style="width:90%"></div></div>
+            </div>
+          </div>
+          <div class="ranking-features">
+            <div class="ranking-feature">一級建築士事務所が運営する高品質な対応</div>
+            <div class="ranking-feature">作業実績3万件以上の豊富な経験</div>
+            <div class="ranking-feature">問い合わせ確定率100%・成果が安定</div>
+          </div>
+          <div class="ranking-reward">
+            <div class="ranking-reward-label">問い合わせ完了時の報酬（参考）</div>
+            <div class="ranking-reward-val">7,000円 / 新規問い合わせ（確定率 100%）</div>
+          </div>
+          <div class="ranking-comment">
+            <div class="ranking-comment-label">選んだ理由</div>
+            <p>一級建築士事務所が運営しており、建物の構造を理解した上での駆除・封鎖工事が強み。確定率100%で成果が安定しており、品質重視の方に向いています。<em>費用の詳細は必ず公式サイトでご確認ください。</em></p>
+          </div>
+          <p class="ranking-for">向いている人：品質・実績を重視する方</p>
+          <a href="#" class="ranking-cta" data-affiliate="roy_gaiju" data-track="ranking_roy" rel="nofollow sponsored">
+            無料で見積もりを依頼する ›
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <p class="ranking-note">※費用・確定率は目安です。最新情報は各社公式サイトでご確認ください。当サイトはアフィリエイトリンクを含みます。</p>
+
+    <div class="summary-cta-box">
+      <div class="summary-cta-body">
+        <div class="summary-cta-label">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          どれにすればいいか迷っている方へ
+        </div>
+        <h3>まず複数社に見積もりを依頼して<br/>費用を比べてから決めてください</h3>
+        <p>見積もりは無料です。1社だけに絞らず、複数社の金額・対応を確認してから判断することをおすすめします。</p>
+      </div>
+      <a href="#" class="summary-cta-btn" data-affiliate="kujo_tatsujin" data-track="summary_tatsujin" rel="nofollow sponsored">
+        無料見積もりを依頼する ›
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 比較表 ════════════════════════════════════════════════════ -->
+<div class="divider"></div>
+<section class="gj-section section-white" id="compare">
+  <div class="gj-container">
+    <div class="section-head">
+      <span class="kicker">COMPARISON</span>
+      <h2>3社を並べて比較する</h2>
+      <p>自分の状況に合う業者を選んでください</p>
+    </div>
+    <div class="compare-wrap">
+      <table class="compare-tbl">
+        <thead>
+          <tr>
+            <th class="compare-th-label"></th>
+            <th class="compare-th rank-col-1">駆除の達人</th>
+            <th class="compare-th rank-col-2">害獣プロテック</th>
+            <th class="compare-th rank-col-3">害獣駆除のROY</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="compare-label">向いている人</td>
+            <td>まず状況を把握したい</td>
+            <td>再発防止を重視</td>
+            <td>品質・実績を重視</td>
+          </tr>
+          <tr>
+            <td class="compare-label">見積もり</td>
+            <td class="compare-good">無料</td>
+            <td class="compare-good">無料</td>
+            <td class="compare-good">無料</td>
+          </tr>
+          <tr>
+            <td class="compare-label">対応害獣</td>
+            <td>ネズミ・ハクビシン等<br/>幅広く対応</td>
+            <td>ネズミ・イタチ・<br/>コウモリ等</td>
+            <td>ネズミ・ハクビシン・<br/>イタチ等</td>
+          </tr>
+          <tr>
+            <td class="compare-label">最短対応</td>
+            <td class="compare-good">即日</td>
+            <td class="compare-good">即日</td>
+            <td>要確認</td>
+          </tr>
+          <tr>
+            <td class="compare-label">建築専門知識</td>
+            <td>—</td>
+            <td class="compare-good">◎（建築のプロが対応）</td>
+            <td class="compare-good">◎（一級建築士事務所）</td>
+          </tr>
+          <tr>
+            <td class="compare-label">確定率（参考）</td>
+            <td>—（新規案件）</td>
+            <td>約69%</td>
+            <td class="compare-good">100%</td>
+          </tr>
+          <tr>
+            <td class="compare-label">電話での相談</td>
+            <td class="compare-good">◎</td>
+            <td class="compare-good">◎（電話成果対象）</td>
+            <td class="compare-good">◎（電話成果対象）</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══════════════════════════════════════════════════════ -->
+<div class="divider"></div>
+<section class="gj-section section-white" id="faq">
+  <div class="gj-container">
+    <div class="section-head">
+      <span class="kicker">FAQ</span>
+      <h2>よく聞かれる質問</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item open">
+        <button class="faq-q">
+          <span class="faq-q-badge">Q</span>
+          <span class="faq-q-text">天井からカリカリ・カサカサ音がする。ネズミですか？</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <span class="faq-a-badge">A</span>
+            <p class="faq-a-text">可能性の一つです。天井裏の音の原因にはネズミのほか、コウモリ・ハクビシン・イタチなどが考えられます。音の種類（カリカリ＝かじり音、ドタドタ＝走る音、チューチュー）や時間帯（夜中が多い場合はネズミ、早朝・夕方はハクビシンなど）でも推測できますが、正確な特定は専門業者の現地調査が確実です。まず無料見積もりで状況を確認されることをおすすめします。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="faq-q-badge">Q</span>
+          <span class="faq-q-text">ネズミ駆除の費用の相場はいくらですか？</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <span class="faq-a-badge">A</span>
+            <p class="faq-a-text">参考相場は30,000〜200,000円程度ですが、侵入経路の数・被害範囲・再発防止工事の有無などで大きく変わります。屋根裏や床下が広く被害が深刻な場合は高額になることがあります。複数社から見積もりを取り比較することで、適正価格を把握しやすくなります。詳細は各社の公式サイトでご確認ください。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="faq-q-badge">Q</span>
+          <span class="faq-q-text">1回の駆除で完全に解決しますか？</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <span class="faq-a-badge">A</span>
+            <p class="faq-a-text">侵入経路の封鎖が不完全だと再発する場合があります。駆除（害獣を排除する）と防除（再侵入を防ぐ封鎖工事）の両方を行うことが再発防止のポイントです。業者によっては再発保証をつけているケースもあります。契約前に保証内容・保証期間を必ず確認してください。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="faq-q-badge">Q</span>
+          <span class="faq-q-text">コウモリは自分で追い出せますか？</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <span class="faq-a-badge">A</span>
+            <p class="faq-a-text">コウモリは鳥獣保護管理法で保護されており、許可なく捕獲・殺傷することは法律で禁止されています。一般の方が自己判断で駆除・捕獲を行うと法律違反になる可能性があります。追い出し＋侵入口封鎖を専門業者に依頼するのが適法かつ効果的な方法です。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="faq-q-badge">Q</span>
+          <span class="faq-q-text">見積もりだけでも無料で頼めますか？</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <span class="faq-a-badge">A</span>
+            <p class="faq-a-text">このページで紹介している3社はいずれも見積もりは無料です。現地調査・見積もりの段階では費用は発生しません。ただし業者によって条件が異なる場合があるため、依頼前に公式サイトで最新情報をご確認ください。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          <span class="faq-q-badge">Q</span>
+          <span class="faq-q-text">賃貸住宅の場合、費用は誰が負担しますか？</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">
+            <span class="faq-a-badge">A</span>
+            <p class="faq-a-text">賃貸住宅の場合、害獣被害の費用負担は契約内容・被害の原因によって異なります。建物の構造上の問題（隙間・老朽化など）が原因の場合は貸主側の負担になるケースが多いですが、借主の過失が原因の場合は異なります。まず管理会社・大家さんに相談し、状況を確認することをおすすめします。</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER CTA ════════════════════════════════════════════════ -->
+<section class="footer-cta">
+  <div class="gj-container">
+    <h2>まず無料見積もりで<br/>費用を把握してください</h2>
+    <p>放置するほど被害は広がり、駆除費用も上がります。見積もりは無料です。</p>
+    <div class="footer-cta-badges">
+      <span class="footer-cta-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>
+        見積もり無料
+      </span>
+      <span class="footer-cta-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        最短即日対応
+      </span>
+      <span class="footer-cta-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        全国対応
+      </span>
+      <span class="footer-cta-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        再発保証あり
+      </span>
+    </div>
+    <div class="footer-cta-btns">
+      <a href="#" class="footer-cta-btn" data-affiliate="kujo_tatsujin" data-track="footer_tatsujin" rel="nofollow sponsored">
+        駆除の達人に無料見積もりを依頼する ›
+      </a>
+      <a href="#" class="footer-cta-btn secondary" data-affiliate="gaiju_protect" data-track="footer_protect" rel="nofollow sponsored">
+        害獣プロテックに相談する ›
+      </a>
+      <a href="#" class="footer-cta-btn secondary" data-affiliate="roy_gaiju" data-track="footer_roy" rel="nofollow sponsored">
+        害獣駆除のROYに相談する ›
+      </a>
+    </div>
+    <p class="footer-cta-note">当ページはアフィリエイトリンクを含みます。費用・サービス内容は公式サイトで最新情報をご確認ください。</p>
+  </div>
+</section>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════════ -->
+<footer class="gj-footer">
+  <div class="gj-footer-inner">
+    <div class="gj-footer-logo">
+      <div class="gj-footer-logo-icon">🐀</div>
+      <span>害獣駆除の相場ナビ</span>
+    </div>
+    <p class="gj-footer-text">
+      ネズミ・コウモリ・ハクビシンなどの害獣駆除費用・業者を比較するサイトです。<br/>
+      掲載情報は参考目安です。費用・サービス内容は必ず各社公式サイトでご確認ください。<br/>
+      <span style="font-size:.75rem;color:rgba(255,255,255,.35)">当サイトは一部にアフィリエイトリンクを含みます。</span>
+    </p>
+    <div class="gj-footer-links">
+      <a href="/gaiju/privacy/">プライバシーポリシー</a>
+      <a href="/gaiju/operator/">運営者情報</a>
+    </div>
+    <p class="gj-footer-copy">© 2026 害獣駆除の相場ナビ</p>
+  </div>
+</footer>
+
+<!-- Page JS -->
+<script src="/gaiju/app.js" defer></script>
+
+</body>
+</html>
