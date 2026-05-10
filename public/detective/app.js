@@ -3,7 +3,8 @@
  */
 
 const AFFILIATE_LINKS = {
-  hal:          "https://example.com/hal-detective",       // HAL探偵社
+  una:          "https://example.com/una-detective",       // うな探偵社
+  // hal:       "https://example.com/hal-detective",       // HAL探偵社（控え）
   haraichi:     "https://example.com/haraichi",            // 原一探偵事務所
   kurol:        "https://example.com/kurol-detective",     // 総合探偵社クロル
   matching:     "https://example.com/detective-matching",  // 探偵マッチングサービス
