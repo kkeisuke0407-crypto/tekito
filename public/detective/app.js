@@ -3,11 +3,11 @@
  */
 
 const AFFILIATE_LINKS = {
-  una:          "https://example.com/una-detective",       // うな探偵社
-  // hal:       "https://example.com/hal-detective",       // HAL探偵社（控え）
-  haraichi:     "https://example.com/haraichi",            // 原一探偵事務所
-  kurol:        "https://example.com/kurol-detective",     // 総合探偵社クロル
-  matching:     "https://example.com/detective-matching",  // 探偵マッチングサービス
+  una:          "https://h.accesstrade.net/sp/cc?rk=0100q30l00orzx",        // うな探偵社
+  // hal:       "https://example.com/hal-detective",                       // HAL探偵社（控え）
+  haraichi:     "https://h.accesstrade.net/sp/cc?rk=0100ken700orzx",      // 原一探偵事務所
+  kurol:        "https://h.accesstrade.net/sp/cc?rk=0100paqn00orzx",      // 総合探偵社クロル
+  matching:     "https://h.accesstrade.net/sp/cc?rk=0100q1y600orzx",      // 探偵の窓口
 };
 
 function track(eventName, params) {
