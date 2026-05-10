@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var bar = document.createElement("div");
   bar.className = "sticky-cta-bar";
   bar.innerHTML =
-    '<span class="sticky-label">EPC最高クラス：駆除の達人に無料見積もり</span>' +
+    '<span class="sticky-label">天井の音・害獣被害は放置厳禁。まず無料で状況確認する</span>' +
     '<a href="#" class="sticky-btn" data-affiliate="kujo_tatsujin" data-track="sticky_tatsujin" rel="nofollow sponsored">無料で見積もりを依頼する</a>' +
     '<button class="sticky-close" aria-label="閉じる">✕</button>';
   document.body.appendChild(bar);
