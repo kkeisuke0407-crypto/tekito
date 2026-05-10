@@ -5,7 +5,6 @@
 const AFFILIATE_LINKS = {
   kujo_tatsujin: "https://example.com/kujo-tatsujin",   // 駆除の達人
   gaiju_protect: "https://example.com/gaiju-protect",   // 害獣プロテック
-  roy_gaiju:     "https://example.com/roy-gaiju",       // 害獣駆除のROY
 };
 
 function track(eventName, params) {
