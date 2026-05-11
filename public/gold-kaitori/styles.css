@@ -203,6 +203,13 @@ button {
   align-items: center;
 }
 
+.cta-microcopy {
+  color: rgba(255,255,255,.78);
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -306,6 +313,37 @@ button {
 .reassurance-grid p {
   color: var(--muted);
   font-size: 14px;
+}
+
+.conversion-bridge {
+  background: #10251f;
+  color: #fff;
+  padding: 28px 0;
+}
+
+.bridge-box {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 22px;
+  align-items: center;
+}
+
+.bridge-box .section-kicker {
+  color: #f2c45c;
+}
+
+.bridge-box h2 {
+  font-size: clamp(24px, 2.4vw, 32px);
+  margin-top: 4px;
+}
+
+.bridge-box p {
+  color: rgba(255,255,255,.76);
+  margin-top: 8px;
+}
+
+.bridge-box .btn {
+  min-width: 240px;
 }
 
 .hero-panel {
@@ -1367,6 +1405,7 @@ h2 {
   .decision-layout,
   .proof-layout,
   .prep-layout,
+  .bridge-box,
   .ready-box {
     grid-template-columns: 1fr;
   }

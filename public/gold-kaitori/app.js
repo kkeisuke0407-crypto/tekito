@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
   sticky.className = "sticky-cta";
   sticky.innerHTML =
     '<span>売るか迷うなら査定額だけ確認</span>' +
-    '<a class="btn btn-primary" href="' + AFFILIATE_LINKS.manekiya + '" data-affiliate="manekiya" data-track="sticky_manekiya" rel="nofollow sponsored">無料査定を相談</a>' +
+    '<a class="btn btn-primary" href="' + AFFILIATE_LINKS.manekiya + '" data-affiliate="manekiya" data-track="sticky_manekiya" rel="nofollow sponsored">無料査定予約へ</a>' +
     '<button class="sticky-close" type="button" aria-label="閉じる">x</button>';
   document.body.appendChild(sticky);
 
