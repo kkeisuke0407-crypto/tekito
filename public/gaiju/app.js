@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
   bar.className = "sticky-cta-bar";
   bar.innerHTML =
     '<span class="sticky-label">天井の音・害獣被害は放置厳禁。まず無料で状況確認する</span>' +
-    '<a href="#" class="sticky-btn" data-affiliate="kujo_tatsujin" data-track="sticky_tatsujin" rel="nofollow sponsored">無料で見積もりを依頼する</a>' +
+    '<a href="#" class="sticky-btn" data-affiliate="gaiju_protect" data-track="sticky_protect" rel="nofollow sponsored">無料で見積もりを依頼する</a>' +
     '<button class="sticky-close" aria-label="閉じる">✕</button>';
   document.body.appendChild(bar);
 
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
       event.preventDefault();
       var done = false;
       var go = function () { if (!done) { done = true; window.location.href = destination; } };
-      track("gaiju_affiliate_click", { track_name: "sticky_tatsujin", affiliate_key: "kujo_tatsujin", link_url: destination, event_callback: go, event_timeout: 2000 });
+      track("gaiju_affiliate_click", { track_name: "sticky_protect", affiliate_key: "gaiju_protect", link_url: destination, event_callback: go, event_timeout: 2000 });
       window.setTimeout(go, 2000);
     }
   });
