@@ -88,8 +88,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const sticky = document.createElement("div");
   sticky.className = "sticky-cta";
   sticky.innerHTML =
-    '<span>K18・プラチナの無料査定を確認</span>' +
-    '<a class="btn btn-primary" href="' + AFFILIATE_LINKS.manekiya + '" data-affiliate="manekiya" data-track="sticky_manekiya" rel="nofollow sponsored">まねきや公式へ</a>' +
+    '<span>売るか迷うなら査定額だけ確認</span>' +
+    '<a class="btn btn-primary" href="' + AFFILIATE_LINKS.manekiya + '" data-affiliate="manekiya" data-track="sticky_manekiya" rel="nofollow sponsored">無料査定を相談</a>' +
     '<button class="sticky-close" type="button" aria-label="閉じる">x</button>';
   document.body.appendChild(sticky);
 

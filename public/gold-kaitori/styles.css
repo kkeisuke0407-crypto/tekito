@@ -333,6 +333,36 @@ button {
   padding: 72px 0;
 }
 
+.consult-section {
+  background: #fff;
+}
+
+.consult-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.consult-grid article {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  min-height: 180px;
+}
+
+.consult-grid strong {
+  display: block;
+  color: var(--green-deep);
+  font-size: 18px;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.consult-grid p {
+  color: var(--muted);
+}
+
 .intent-strip {
   background: #fff;
 }
@@ -535,6 +565,39 @@ h2 {
   margin-top: 4px;
 }
 
+.winner-box {
+  border: 1px solid #ead19b;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #fff9e8, #fff);
+  padding: 15px;
+  margin: -4px 0 16px;
+}
+
+.winner-box span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 3px 8px;
+  border-radius: 5px;
+  background: #f2c45c;
+  color: #3a2709;
+  font-size: 12px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.winner-box strong {
+  display: block;
+  font-size: 18px;
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+
+.winner-box p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .fact-grid {
   display: grid;
   gap: 10px;
@@ -569,6 +632,51 @@ h2 {
   margin-top: 9px;
   font-size: 12px;
   text-align: center;
+}
+
+.decision-section {
+  background: #fffaf0;
+}
+
+.decision-layout {
+  display: grid;
+  grid-template-columns: .82fr 1.18fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.decision-layout p {
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+.decision-cards {
+  display: grid;
+  gap: 12px;
+}
+
+.decision-cards article {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: 0 10px 28px rgba(48, 34, 15, .07);
+}
+
+.decision-cards h3 {
+  font-size: 20px;
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+
+.decision-cards p {
+  margin: 0;
+}
+
+.decision-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 26px;
 }
 
 .flow-section {
@@ -970,7 +1078,8 @@ h2 {
   .intent-grid,
   .price-layout,
   .rank-list,
-  .check-layout {
+  .check-layout,
+  .decision-layout {
     grid-template-columns: 1fr;
   }
 
@@ -991,7 +1100,8 @@ h2 {
     grid-template-columns: 1fr 1fr;
   }
 
-  .flow-grid {
+  .flow-grid,
+  .consult-grid {
     grid-template-columns: 1fr;
   }
 }
