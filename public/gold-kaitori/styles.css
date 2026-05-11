@@ -167,7 +167,6 @@ button {
   max-width: 690px;
 }
 
-.ad-label,
 .eyebrow,
 .section-kicker,
 .panel-label {
@@ -175,16 +174,6 @@ button {
   font-size: 12px;
   font-weight: 900;
   text-transform: uppercase;
-}
-
-.ad-label {
-  display: inline-block;
-  padding: 5px 9px;
-  color: #fdeebf;
-  border: 1px solid rgba(245, 215, 139, .35);
-  background: rgba(0,0,0,.26);
-  border-radius: 5px;
-  margin-bottom: 14px;
 }
 
 .eyebrow {
@@ -338,16 +327,6 @@ button {
   display: block;
   font-size: 14px;
   line-height: 1.45;
-}
-
-.disclosure {
-  background: #fff4d7;
-  color: #735018;
-  border-top: 1px solid #eed48d;
-  border-bottom: 1px solid #eed48d;
-  font-size: 13px;
-  font-weight: 700;
-  padding: 10px 0;
 }
 
 .section {
@@ -533,6 +512,21 @@ h2 {
 .rank-head h3 {
   font-size: 28px;
   line-height: 1.2;
+}
+
+.pr-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 22px;
+  padding: 2px 7px;
+  border-radius: 5px;
+  background: #fff4d7;
+  border: 1px solid #ead19b;
+  color: #735018;
+  font-size: 12px;
+  font-weight: 900;
+  vertical-align: middle;
 }
 
 .rank-head p {
@@ -756,12 +750,6 @@ h2 {
 .cta-box {
   text-align: center;
   max-width: 850px;
-}
-
-.cta-box .ad-label {
-  color: #735018;
-  background: rgba(255,255,255,.72);
-  border-color: #ead19b;
 }
 
 .cta-box p {
