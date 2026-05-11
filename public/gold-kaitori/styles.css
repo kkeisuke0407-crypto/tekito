@@ -409,6 +409,61 @@ button {
   color: var(--muted);
 }
 
+.proof-section {
+  background: #f8f4eb;
+}
+
+.proof-layout {
+  display: grid;
+  grid-template-columns: .82fr 1.18fr;
+  gap: 34px;
+  align-items: center;
+}
+
+.proof-layout > div:first-child p {
+  color: var(--muted);
+  margin: 14px 0 22px;
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.proof-grid article {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  min-height: 220px;
+  box-shadow: 0 12px 30px rgba(48, 34, 15, .07);
+}
+
+.proof-grid span {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f2c45c;
+  color: #3a2709;
+  font-size: 12px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.proof-grid h3 {
+  font-size: 19px;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.proof-grid p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .intent-strip {
   background: #fff;
 }
@@ -1216,6 +1271,7 @@ h2 {
   .rank-list,
   .check-layout,
   .decision-layout,
+  .proof-layout,
   .ready-box {
     grid-template-columns: 1fr;
   }
@@ -1239,6 +1295,7 @@ h2 {
 
   .flow-grid,
   .consult-grid,
+  .proof-grid,
   .reassurance-grid {
     grid-template-columns: 1fr;
   }
