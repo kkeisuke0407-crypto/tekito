@@ -1,0 +1,353 @@
+---
+const PAGE_TITLE = "K18・プラチナの買取価格を確認｜金買取査定ナビ";
+const PAGE_DESC = "K18、18金ネックレス、プラチナ、金貨を売る前に確認。買取価格の見方、手数料、店頭・出張・宅配査定の違いを比較し、無料査定できる買取店を紹介します。";
+const CANONICAL = "https://vpscomparehub.com/gold-kaitori/";
+const OGP_IMAGE = "https://vpscomparehub.com/gold-kaitori/images/hero-gold-appraisal.png";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "K18やプラチナの買取価格はどう決まりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "主に品位、重量、当日の相場、状態、付属品、手数料、査定方法によって変わります。掲載内容は参考情報であり、実際の買取価格を保証するものではありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "査定だけでも利用できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "多くの買取店では査定だけの相談が可能です。売却前に、査定料、出張料、キャンセル時費用、返送料などを公式サイトで確認してください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "壊れた指輪や片方だけのピアスも査定できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "金やプラチナとして価値が付く場合があります。刻印が見えにくい品物や古いアクセサリーも、状態だけで判断せず無料査定で確認するのがおすすめです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "このページは買取店の公式サイトですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。当サイトは買取店の公式サイトではありません。このページには広告・アフィリエイトリンクを含み、掲載順位や紹介内容には広告報酬が影響する場合があります。"
+      }
+    }
+  ]
+};
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{PAGE_TITLE}</title>
+  <meta name="description" content={PAGE_DESC} />
+  <link rel="canonical" href={CANONICAL} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={PAGE_TITLE} />
+  <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:url" content={CANONICAL} />
+  <meta property="og:image" content={OGP_IMAGE} />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content="金買取査定ナビ" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/gold-kaitori/styles.css?v=20260511-1" />
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2YLF06DC0E');
+    gtag('config', 'AW-18129603657');
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/gold-kaitori/" class="brand" aria-label="金買取査定ナビ">
+        <span class="brand-mark">Au</span>
+        <span class="brand-text">金買取査定ナビ</span>
+      </a>
+      <nav class="nav" aria-label="ページ内ナビゲーション">
+        <a href="#compare" data-scroll-to="#compare">比較</a>
+        <a href="#items" data-scroll-to="#items">品目別</a>
+        <a href="#check" data-scroll-to="#check">注意点</a>
+        <a href="#faq" data-scroll-to="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <img src="/gold-kaitori/images/hero-gold-appraisal.png" alt="" width="1536" height="864" decoding="async" fetchpriority="high" />
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="ad-label">PR｜当サイトは買取店の公式サイトではありません</p>
+          <p class="eyebrow">K18・プラチナ・金貨の価格確認から無料査定へ</p>
+          <h1>K18・プラチナ、<br />いくらで売れる？</h1>
+          <p class="hero-lead">
+            金やプラチナの買取価格は、品位・重さ・当日の相場・手数料で変わります。
+            まずは売りたい品物を選び、公式サイトで無料査定の条件を確認しましょう。
+          </p>
+          <div class="hero-actions" aria-label="主要アクション">
+            <a href="#" class="btn btn-primary" data-affiliate="manekiya" data-track="hero_manekiya" rel="nofollow sponsored">無料で買取価格を確認</a>
+            <a href="#compare" class="btn btn-secondary" data-scroll-to="#compare" data-track="hero_compare">2社を比較する</a>
+          </div>
+          <ul class="hero-points" aria-label="確認できること">
+            <li>査定料の有無</li>
+            <li>店頭・出張・宅配</li>
+            <li>壊れた金製品も相談</li>
+          </ul>
+        </div>
+        <aside class="hero-panel" aria-label="査定前チェック">
+          <span class="panel-label">最初に確認</span>
+          <h2>手元の品物はどれですか？</h2>
+          <div class="quick-grid">
+            <a href="#k18" data-scroll-to="#k18">K18・18金</a>
+            <a href="#platinum" data-scroll-to="#platinum">プラチナ</a>
+            <a href="#coin" data-scroll-to="#coin">金貨・K24</a>
+            <a href="#jewelry" data-scroll-to="#jewelry">指輪・ネックレス</a>
+          </div>
+          <p>品目ごとの注意点を確認してから査定へ進むと、手数料やキャンセル条件を見落としにくくなります。</p>
+        </aside>
+      </div>
+    </section>
+
+    <div class="disclosure">
+      <div class="container">
+        本ページは広告・アフィリエイトリンクを含みます。掲載順位・紹介内容には広告報酬が影響する場合があります。各社の最新条件は公式サイトでご確認ください。
+      </div>
+    </div>
+
+    <section class="section intent-strip">
+      <div class="container intent-grid">
+        <div>
+          <span class="section-kicker">PRICE SEARCH</span>
+          <h2>価格を調べている今、見るべきなのは「相場」だけではありません</h2>
+        </div>
+        <div class="intent-list">
+          <div>
+            <strong>品位</strong>
+            <span>K18、K24、Pt850、Pt900など</span>
+          </div>
+          <div>
+            <strong>重量</strong>
+            <span>グラム数と石・装飾部分の扱い</span>
+          </div>
+          <div>
+            <strong>費用</strong>
+            <span>査定料、出張料、キャンセル時費用</span>
+          </div>
+          <div>
+            <strong>方法</strong>
+            <span>店頭、出張、宅配の向き不向き</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compare-section" id="compare">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">COMPARISON</span>
+          <h2>無料査定できる貴金属買取店を比較</h2>
+          <p>編集部が、対応品目、査定方法、申込しやすさ、公式情報の確認しやすさをもとに比較しています。</p>
+        </div>
+
+        <div class="rank-list">
+          <article class="rank-card rank-primary">
+            <div class="rank-head">
+              <span class="rank-badge">1位</span>
+              <div>
+                <h3>まねきや</h3>
+                <p>K18・プラチナ・金貨を、まず無料査定で確認したい方へ</p>
+              </div>
+            </div>
+            <dl class="fact-grid">
+              <div><dt>査定方法</dt><dd>店頭・出張・宅配</dd></div>
+              <div><dt>対象</dt><dd>金、K18、プラチナ、金貨、ブランド品など</dd></div>
+              <div><dt>使いやすさ</dt><dd>WEB査定予約から相談しやすい</dd></div>
+              <div><dt>確認したいこと</dt><dd>手数料、キャンセル条件、対応エリア</dd></div>
+            </dl>
+            <div class="card-action">
+              <a href="#" class="btn btn-primary btn-wide" data-affiliate="manekiya" data-track="compare_manekiya" rel="nofollow sponsored">まねきや公式で無料査定を確認</a>
+              <p>査定額は品物の状態・重量・相場・査定日で変動します。</p>
+            </div>
+          </article>
+
+          <article class="rank-card">
+            <div class="rank-head">
+              <span class="rank-badge rank-muted">2位</span>
+              <div>
+                <h3>おたからや</h3>
+                <p>知名度や店舗網も見ながら比較したい方へ</p>
+              </div>
+            </div>
+            <dl class="fact-grid">
+              <div><dt>査定方法</dt><dd>公式サイトで確認</dd></div>
+              <div><dt>対象</dt><dd>金、貴金属、ブランド品など</dd></div>
+              <div><dt>使いやすさ</dt><dd>全国展開の知名度がある</dd></div>
+              <div><dt>確認したいこと</dt><dd>申込条件、通電条件、店舗条件</dd></div>
+            </dl>
+            <div class="card-action">
+              <a href="#" class="btn btn-outline btn-wide" data-affiliate="otakaraya" data-track="compare_otakaraya" rel="nofollow sponsored">おたからや公式も確認</a>
+              <p>2社を比較すると、売却前に納得しやすくなります。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section item-section" id="items">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">BY ITEM</span>
+          <h2>品目別に、査定前の見落としを確認</h2>
+          <p>検索されやすい品目ごとに、査定で見られるポイントをまとめました。</p>
+        </div>
+        <div class="item-grid">
+          <article class="item-card" id="k18">
+            <span>K18 / 18金</span>
+            <h3>K18の買取価格を知りたい方</h3>
+            <p>K18は金の含有率が目安になります。ネックレスやリングは重さに加えて、石やデザインの扱いも確認しましょう。</p>
+            <a href="#" data-affiliate="manekiya" data-track="item_k18" rel="nofollow sponsored">K18の無料査定を確認</a>
+          </article>
+          <article class="item-card" id="platinum">
+            <span>Pt850 / Pt900</span>
+            <h3>プラチナの相場を確認したい方</h3>
+            <p>プラチナは品位の刻印と重量が重要です。古い指輪やチェーンも、刻印が読めるかを見てから相談できます。</p>
+            <a href="#" data-affiliate="manekiya" data-track="item_platinum" rel="nofollow sponsored">プラチナの無料査定を確認</a>
+          </article>
+          <article class="item-card" id="coin">
+            <span>K24 / 金貨</span>
+            <h3>金貨・インゴットを売る前に</h3>
+            <p>高額品は査定方法、持ち運び、本人確認、キャンセル条件を事前に確認。出張や店頭の使い分けも大切です。</p>
+            <a href="#" data-affiliate="manekiya" data-track="item_coin" rel="nofollow sponsored">金貨の無料査定を確認</a>
+          </article>
+          <article class="item-card" id="jewelry">
+            <span>壊れた金製品</span>
+            <h3>片方ピアス・切れたネックレスも相談</h3>
+            <p>状態が悪くても、金やプラチナとして価値が付く場合があります。自分で処分する前に査定で確認しましょう。</p>
+            <a href="#" data-affiliate="manekiya" data-track="item_jewelry" rel="nofollow sponsored">壊れた金製品を相談</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section method-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">HOW TO SELL</span>
+          <h2>店頭・出張・宅配、どれを選ぶ？</h2>
+        </div>
+        <div class="method-table" role="table" aria-label="買取方法の比較">
+          <div class="method-row method-head" role="row">
+            <div role="columnheader">方法</div>
+            <div role="columnheader">向いている人</div>
+            <div role="columnheader">確認ポイント</div>
+          </div>
+          <div class="method-row" role="row">
+            <div role="cell"><strong>店頭買取</strong></div>
+            <div role="cell">近くに店舗があり、その場で相談したい</div>
+            <div role="cell">営業時間、予約要否、本人確認書類</div>
+          </div>
+          <div class="method-row" role="row">
+            <div role="cell"><strong>出張買取</strong></div>
+            <div role="cell">点数が多い、高額品を持ち歩きたくない</div>
+            <div role="cell">対応エリア、出張料、キャンセル条件</div>
+          </div>
+          <div class="method-row" role="row">
+            <div role="cell"><strong>宅配買取</strong></div>
+            <div role="cell">店舗に行く時間が取りにくい</div>
+            <div role="cell">送料、返送料、入金タイミング</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section check-section" id="check">
+      <div class="container check-layout">
+        <div>
+          <span class="section-kicker">BEFORE APPRAISAL</span>
+          <h2>査定前に確認しておくこと</h2>
+          <p>
+            訪問買取や高額品の売却では、金額だけで急がず、条件を書面や公式サイトで確認してから進めると安心です。
+          </p>
+        </div>
+        <ul class="check-list">
+          <li>査定料・出張料・キャンセル時費用の有無</li>
+          <li>売却後の入金方法と入金タイミング</li>
+          <li>本人確認書類が必要になること</li>
+          <li>キャンペーンの適用条件と終了時期</li>
+          <li>訪問買取では契約書面やクーリングオフ対象になる場合があること</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="container cta-box">
+        <p class="ad-label">PR｜公式条件はリンク先で確認</p>
+        <h2>売るか迷っている段階でも、まずは査定額の目安を確認</h2>
+        <p>買取価格は毎日変動します。K18、プラチナ、金貨、壊れたアクセサリーなど、手元の品物に近い条件で無料査定を確認してください。</p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary" data-affiliate="manekiya" data-track="bottom_manekiya" rel="nofollow sponsored">まねきやで無料査定を確認</a>
+          <a href="#" class="btn btn-secondary" data-affiliate="otakaraya" data-track="bottom_otakaraya" rel="nofollow sponsored">おたからやも比較</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">FAQ</span>
+          <h2>よくある質問</h2>
+        </div>
+        <div class="faq-list">
+          <article class="faq-item open">
+            <button class="faq-q" type="button">壊れた指輪や片方だけのピアスも売れますか？</button>
+            <div class="faq-a">金やプラチナとして価値が付く場合があります。状態だけで判断せず、無料査定で確認するのがおすすめです。</div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-q" type="button">査定したら必ず売らないといけませんか？</button>
+            <div class="faq-a">売却前に、査定だけで終われるか、キャンセル時費用があるかを公式サイトや査定時に確認してください。</div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-q" type="button">金の買取価格は毎日変わりますか？</button>
+            <div class="faq-a">金やプラチナの相場は日々変動します。検索で見た価格と実際の査定額が異なる場合があります。</div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-q" type="button">このページは公式サイトですか？</button>
+            <div class="faq-a">いいえ。当サイトは買取店の公式サイトではありません。広告・アフィリエイトリンクを含みます。最新条件は各公式サイトでご確認ください。</div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>金買取査定ナビ</p>
+      <nav>
+        <a href="/privacy/">プライバシーポリシー</a>
+        <a href="/disclosure/">広告掲載について</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="/gold-kaitori/app.js?v=20260511-1" defer></script>
+</body>
+</html>
