@@ -923,6 +923,43 @@ h2 {
   color: var(--soft-ink);
 }
 
+.policy-body a {
+  color: var(--green);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.policy-table {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.policy-table div {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  border-top: 1px solid var(--line);
+}
+
+.policy-table div:first-child {
+  border-top: 0;
+}
+
+.policy-table dt,
+.policy-table dd {
+  margin: 0;
+  padding: 16px 18px;
+}
+
+.policy-table dt {
+  background: #faf6ef;
+  font-weight: 900;
+}
+
+.policy-table dd {
+  color: var(--soft-ink);
+}
+
 .policy-date {
   margin-top: 34px;
   font-weight: 700;
@@ -1063,5 +1100,17 @@ h2 {
 
   .footer-inner nav {
     justify-content: center;
+  }
+
+  .policy-table div {
+    grid-template-columns: 1fr;
+  }
+
+  .policy-table dt {
+    padding-bottom: 6px;
+  }
+
+  .policy-table dd {
+    padding-top: 6px;
   }
 }
