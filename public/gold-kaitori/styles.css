@@ -346,6 +346,60 @@ button {
   min-width: 240px;
 }
 
+.push-section {
+  background: #fff;
+}
+
+.push-layout {
+  display: grid;
+  grid-template-columns: .76fr 1.24fr;
+  gap: 34px;
+  align-items: center;
+}
+
+.push-layout p {
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+.push-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.push-steps article {
+  min-height: 210px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+
+.push-steps span {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--green-deep);
+  color: #fff;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.push-steps strong {
+  display: block;
+  font-size: 18px;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.push-steps p {
+  margin: 0;
+  font-size: 14px;
+}
+
 .hero-panel {
   background: rgba(255, 250, 240, .95);
   color: var(--ink);
@@ -668,6 +722,49 @@ h2 {
   border-radius: 7px;
   background: #fff7df;
   border: 1px solid #ead19b;
+  font-weight: 700;
+}
+
+.estimate-section {
+  background: #fff;
+}
+
+.estimate-layout {
+  display: grid;
+  grid-template-columns: .82fr 1.18fr;
+  gap: 34px;
+  align-items: center;
+}
+
+.estimate-layout p {
+  color: var(--muted);
+  margin: 12px 0 22px;
+}
+
+.estimate-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.estimate-card div {
+  min-height: 128px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+
+.estimate-card strong {
+  display: block;
+  color: var(--green-deep);
+  font-size: 18px;
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+
+.estimate-card span {
+  color: var(--muted);
   font-weight: 700;
 }
 
@@ -1406,6 +1503,8 @@ h2 {
   .proof-layout,
   .prep-layout,
   .bridge-box,
+  .push-layout,
+  .estimate-layout,
   .ready-box {
     grid-template-columns: 1fr;
   }
@@ -1431,6 +1530,7 @@ h2 {
   .consult-grid,
   .proof-grid,
   .route-grid,
+  .push-steps,
   .reassurance-grid {
     grid-template-columns: 1fr;
   }
@@ -1493,6 +1593,7 @@ h2 {
   .intent-list,
   .item-grid,
   .prep-grid,
+  .estimate-card,
   .last-check-grid {
     grid-template-columns: 1fr;
   }
