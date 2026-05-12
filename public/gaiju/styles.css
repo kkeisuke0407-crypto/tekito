@@ -533,10 +533,110 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .gj-logo-sub { display: none; }
   .gj-header-cta { font-size: .72rem; padding: .35rem .65rem; }
   .cost-range { font-size: .95rem; }
+  /* ヒーローCTAがはみ出ないよう全幅化 */
+  .hero-cta { display: flex; width: 100%; justify-content: center; font-size: .9rem; padding: .85rem 1rem; }
+  /* summary CTAボタンのwhite-space解除 */
+  .summary-cta-btn { white-space: normal; text-align: center; }
 }
 @media (min-width: 1024px) {
   .risk-cards { grid-template-columns: repeat(4, 1fr); }
   .gj-section { padding: 5rem 0; }
   .hero { padding: 4.5rem 1.25rem 7rem; }
   .faq-list { gap: 1rem; }
+}
+
+/* ══ Animations ═════════════════════════════════════════════ */
+
+/* ── Scroll fade-up ─────────────────────────────── */
+.anim-up {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.anim-up.shown {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── CTA pulse ring ─────────────────────────────── */
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0 rgba(212,83,10,.5); }
+  65%  { box-shadow: 0 0 0 12px rgba(212,83,10,0); }
+  100% { box-shadow: 0 0 0 0 rgba(212,83,10,0); }
+}
+.hero-cta,
+.ranking-cta,
+.footer-cta-btn:not(.secondary),
+.summary-cta-btn {
+  position: relative;
+  overflow: hidden;
+}
+.hero-cta::after,
+.ranking-cta::after,
+.footer-cta-btn:not(.secondary)::after,
+.summary-cta-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  animation: pulse-ring 2.6s ease-out infinite;
+  pointer-events: none;
+}
+
+/* ── Button shimmer on hover ────────────────────── */
+@keyframes shimmer-slide {
+  0%   { left: -60%; }
+  100% { left: 130%; }
+}
+.hero-cta:hover::before,
+.ranking-cta:hover::before,
+.footer-cta-btn:not(.secondary):hover::before,
+.summary-cta-btn:hover::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  left: -60%; width: 40%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent);
+  transform: skewX(-15deg);
+  animation: shimmer-slide .55s ease forwards;
+  pointer-events: none;
+}
+
+/* ── Ranking card entrance ──────────────────────── */
+@keyframes card-rise {
+  from { opacity: 0; transform: translateY(28px) scale(.98); }
+  to   { opacity: 1; transform: none; }
+}
+.ranking-card.anim-up.shown {
+  animation: card-rise .55s cubic-bezier(.22,.68,0,1.2) forwards;
+}
+
+/* ── Risk card border glow on hover ─────────────── */
+.risk-card {
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.risk-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(220,38,38,.1);
+  border-left-color: var(--red);
+}
+
+/* ── FAQ hover ──────────────────────────────────── */
+.faq-item {
+  transition: box-shadow .2s ease;
+}
+.faq-item:hover {
+  box-shadow: 0 3px 12px rgba(13,27,46,.08);
+}
+
+/* ── Ripple ─────────────────────────────────────── */
+@keyframes ripple-expand {
+  to { transform: scale(1); opacity: 0; }
+}
+
+/* ── Reduce motion ──────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .anim-up { opacity: 1; transform: none; transition: none; }
+  .hero-cta::after, .ranking-cta::after,
+  .footer-cta-btn:not(.secondary)::after, .summary-cta-btn::after { animation: none; }
 }
