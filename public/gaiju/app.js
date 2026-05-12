@@ -104,6 +104,86 @@ document.addEventListener("DOMContentLoaded", function () {
     bar.classList.remove("visible");
   });
 
+  // ── Scroll fade-up animations ─────────────────────────────
+  var animTargets = [
+    ".section-head",
+    ".risk-card",
+    ".cost-card",
+    ".cost-factors",
+    ".bat-warning",
+    ".ranking-card",
+    ".summary-cta-box",
+    ".compare-wrap",
+    ".faq-item",
+  ];
+  var allAnimEls = [];
+  animTargets.forEach(function (sel) {
+    document.querySelectorAll(sel).forEach(function (el) {
+      allAnimEls.push(el);
+    });
+  });
+
+  // Stagger siblings inside card groups
+  [".risk-cards", ".cost-grid", ".ranking-cards", ".faq-list"].forEach(function (cls) {
+    var container = document.querySelector(cls);
+    if (!container) return;
+    Array.prototype.forEach.call(container.children, function (child, i) {
+      child.style.transitionDelay = (i * 0.08) + "s";
+    });
+  });
+
+  allAnimEls.forEach(function (el) { el.classList.add("anim-up"); });
+
+  if ("IntersectionObserver" in window) {
+    var scrollObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("shown");
+          scrollObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: "0px 0px -32px 0px" });
+    allAnimEls.forEach(function (el) { scrollObs.observe(el); });
+
+    // ── Eval bar animated fill ────────────────────────────────
+    document.querySelectorAll(".eval-bars").forEach(function (barsEl) {
+      var fills = barsEl.querySelectorAll(".eval-bar-fill");
+      fills.forEach(function (fill) {
+        fill.setAttribute("data-w", fill.style.width);
+        fill.style.width = "0";
+        fill.style.transition = "none";
+      });
+      var barObs = new IntersectionObserver(function (entries) {
+        if (!entries[0].isIntersecting) return;
+        fills.forEach(function (fill, i) {
+          setTimeout(function () {
+            fill.style.transition = "width .8s cubic-bezier(.22,.68,0,1.1)";
+            fill.style.width = fill.getAttribute("data-w");
+          }, i * 140 + 160);
+        });
+        barObs.disconnect();
+      }, { threshold: 0.5 });
+      barObs.observe(barsEl);
+    });
+  }
+
+  // ── Button ripple on click ────────────────────────────────
+  document.querySelectorAll(".ranking-cta, .hero-cta, .footer-cta-btn, .summary-cta-btn").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      var ripple = document.createElement("span");
+      var rect = btn.getBoundingClientRect();
+      var size = Math.max(rect.width, rect.height) * 1.5;
+      ripple.style.cssText =
+        "position:absolute;border-radius:50%;background:rgba(255,255,255,.3);" +
+        "pointer-events:none;transform:scale(0);animation:ripple-expand .55s ease forwards;" +
+        "width:" + size + "px;height:" + size + "px;" +
+        "left:" + (e.clientX - rect.left - size / 2) + "px;" +
+        "top:" + (e.clientY - rect.top - size / 2) + "px;";
+      btn.appendChild(ripple);
+      setTimeout(function () { ripple.remove(); }, 600);
+    });
+  });
+
   var heroEl = document.querySelector(".hero");
   var faqEl  = document.getElementById("faq");
   window.addEventListener("scroll", function () {
