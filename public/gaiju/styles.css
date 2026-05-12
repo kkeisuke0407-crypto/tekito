@@ -558,11 +558,44 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transform: translateY(0);
 }
 
-/* ── CTA pulse ring ─────────────────────────────── */
-@keyframes pulse-ring {
-  0%   { box-shadow: 0 0 0 0 rgba(212,83,10,.5); }
-  65%  { box-shadow: 0 0 0 12px rgba(212,83,10,0); }
-  100% { box-shadow: 0 0 0 0 rgba(212,83,10,0); }
+/* ── CTA glow pulse (box-shadow on element itself) ── */
+/* ::after + box-shadow は親のoverflow:hiddenにクリップされるため使わない */
+@keyframes ranking-cta-glow {
+  0%, 100% { box-shadow: 0 3px 14px rgba(212,83,10,.35); }
+  50%       { box-shadow: 0 3px 24px rgba(212,83,10,.75), 0 0 0 4px rgba(212,83,10,.12); }
+}
+.ranking-cta {
+  animation: ranking-cta-glow 2.5s ease-in-out infinite;
+  transition: transform .15s;
+}
+.ranking-cta:hover { box-shadow: 0 5px 22px rgba(212,83,10,.6) !important; }
+
+@keyframes hero-cta-glow {
+  0%, 100% { box-shadow: 0 4px 20px rgba(212,83,10,.45); }
+  50%       { box-shadow: 0 4px 36px rgba(212,83,10,.8), 0 0 48px rgba(212,83,10,.2); }
+}
+.hero-cta {
+  animation: hero-cta-glow 2.5s ease-in-out infinite;
+  transition: transform .15s;
+}
+.hero-cta:hover { transform: translateY(-2px); }
+
+@keyframes btn-glow {
+  0%, 100% { box-shadow: 0 4px 20px rgba(212,83,10,.4); }
+  50%       { box-shadow: 0 4px 32px rgba(212,83,10,.75), 0 0 40px rgba(212,83,10,.18); }
+}
+.footer-cta-btn:not(.secondary),
+.summary-cta-btn {
+  animation: btn-glow 2.5s ease-in-out infinite;
+  transition: transform .15s;
+}
+.footer-cta-btn:not(.secondary):hover,
+.summary-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(212,83,10,.6) !important; }
+
+/* ── Button shimmer on hover ────────────────────── */
+@keyframes shimmer-slide {
+  0%   { left: -70%; opacity: 1; }
+  100% { left: 130%; opacity: 1; }
 }
 .hero-cta,
 .ranking-cta,
@@ -571,34 +604,17 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   position: relative;
   overflow: hidden;
 }
-.hero-cta::after,
-.ranking-cta::after,
-.footer-cta-btn:not(.secondary)::after,
-.summary-cta-btn::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  animation: pulse-ring 2.6s ease-out infinite;
-  pointer-events: none;
-}
-
-/* ── Button shimmer on hover ────────────────────── */
-@keyframes shimmer-slide {
-  0%   { left: -60%; }
-  100% { left: 130%; }
-}
-.hero-cta:hover::before,
-.ranking-cta:hover::before,
-.footer-cta-btn:not(.secondary):hover::before,
-.summary-cta-btn:hover::before {
+.hero-cta:hover::after,
+.ranking-cta:hover::after,
+.footer-cta-btn:not(.secondary):hover::after,
+.summary-cta-btn:hover::after {
   content: '';
   position: absolute;
   top: 0; bottom: 0;
-  left: -60%; width: 40%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent);
-  transform: skewX(-15deg);
-  animation: shimmer-slide .55s ease forwards;
+  left: -70%; width: 45%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.28), transparent);
+  transform: skewX(-12deg);
+  animation: shimmer-slide .5s ease forwards;
   pointer-events: none;
 }
 
@@ -611,7 +627,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   animation: card-rise .55s cubic-bezier(.22,.68,0,1.2) forwards;
 }
 
-/* ── Risk card border glow on hover ─────────────── */
+/* ── Risk card hover ────────────────────────────── */
 .risk-card {
   transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
@@ -622,12 +638,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ── FAQ hover ──────────────────────────────────── */
-.faq-item {
-  transition: box-shadow .2s ease;
-}
-.faq-item:hover {
-  box-shadow: 0 3px 12px rgba(13,27,46,.08);
-}
+.faq-item { transition: box-shadow .2s ease; }
+.faq-item:hover { box-shadow: 0 3px 12px rgba(13,27,46,.08); }
 
 /* ── Ripple ─────────────────────────────────────── */
 @keyframes ripple-expand {
@@ -637,6 +649,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ── Reduce motion ──────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   .anim-up { opacity: 1; transform: none; transition: none; }
-  .hero-cta::after, .ranking-cta::after,
-  .footer-cta-btn:not(.secondary)::after, .summary-cta-btn::after { animation: none; }
+  .ranking-cta, .hero-cta,
+  .footer-cta-btn:not(.secondary), .summary-cta-btn { animation: none; }
 }
