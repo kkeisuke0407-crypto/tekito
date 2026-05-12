@@ -10,9 +10,12 @@ const AFFILIATE_LINKS = {
   frecious:       "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3TJ7U2+2B8Y+674EQ",
   frecious_banner: "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3TJ7U2+2B8Y+6N741",
   water_one:      "https://h.accesstrade.net/sp/cc?rk=0100pknn00orwp",
+  water_one_banner: "https://h.accesstrade.net/sp/cc?rk=0100pknr00orwp",
   ocean:          "https://h.accesstrade.net/sp/cc?rk=0100o23g00orwp",
   ocean_banner:   "https://h.accesstrade.net/sp/cc?rk=0100o23o00orwp"
 };
+
+document.documentElement.classList.add("js-ready");
 
 function track(eventName, params) {
   try {
@@ -22,6 +25,31 @@ function track(eventName, params) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+
+  // ── Reveal animation ──────────────────────────────────────────
+  var revealEls = document.querySelectorAll(
+    ".reveal-up, .monthly-answer, .monthly-answer-card, .choice-shortcut, .choice-card, .precheck-panel, .intent-card, .quick-card, .service-card, .fee-card, .compare-table-wrap, .faq-item"
+  );
+  if ("IntersectionObserver" in window) {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -45px 0px" });
+
+    revealEls.forEach(function (el, index) {
+      el.classList.add("reveal-up");
+      el.style.transitionDelay = Math.min(index % 4, 3) * 70 + "ms";
+      revealObserver.observe(el);
+    });
+  } else {
+    revealEls.forEach(function (el) {
+      el.classList.add("reveal-up", "is-visible");
+    });
+  }
 
   // ── Inject affiliate links ──────────────────────────────────────
   document.querySelectorAll("[data-affiliate]").forEach(function (el) {
@@ -111,8 +139,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var bar = document.createElement("div");
   bar.className = "sticky-cta-bar";
   bar.innerHTML =
-    '<span class="sticky-label">料金重視なら：オーケンウォーター</span>' +
-    '<a href="#" class="sticky-btn" data-affiliate="oken" data-track="sticky_oken_cost" rel="nofollow sponsored">RO水の料金・条件を確認</a>' +
+    '<span class="sticky-label">月いくら？迷ったら公式条件へ</span>' +
+    '<a href="' + AFFILIATE_LINKS.oken + '" class="sticky-btn btn-attention" data-affiliate="oken" data-track="sticky_oken_cost" rel="nofollow sponsored">月額条件を見る</a>' +
     '<button class="sticky-close" aria-label="閉じる">✕</button>';
   document.body.appendChild(bar);
 
