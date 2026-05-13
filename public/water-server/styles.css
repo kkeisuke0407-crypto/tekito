@@ -1388,6 +1388,52 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   text-decoration: none;
 }
 
+/* ── Purpose page summaries ─────────────────────── */
+.purpose-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .95rem;
+  margin-top: 1.25rem;
+}
+.purpose-summary-card {
+  background: linear-gradient(180deg, #fff, #f8fafc);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--teal);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  padding: 1rem 1.1rem;
+}
+.purpose-summary-card.warning { border-left-color: var(--accent); }
+.purpose-summary-card strong {
+  display: block;
+  color: var(--navy);
+  font-size: .98rem;
+  margin-bottom: .35rem;
+}
+.purpose-summary-card p {
+  color: var(--muted);
+  font-size: .86rem;
+  line-height: 1.75;
+  margin: 0;
+}
+.ranking-lead {
+  max-width: 760px;
+  margin: -0.35rem auto 1.35rem;
+  padding: .85rem 1rem;
+  background: #ecfeff;
+  border: 1px solid #a5f3fc;
+  border-radius: 12px;
+  color: #155e75;
+  font-size: .9rem;
+  font-weight: 700;
+  text-align: center;
+}
+@media (max-width: 720px) {
+  .purpose-summary { grid-template-columns: 1fr; }
+  .purpose-summary-card { padding: .9rem .95rem; }
+  .ranking-lead { text-align: left; font-size: .84rem; }
+}
+
 /* ── Service Cards ──────────────────────────────── */
 .service-cards { display: flex; flex-direction: column; gap: 1.25rem; }
 .service-card {
@@ -1404,7 +1450,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   box-shadow: 0 10px 30px rgba(13,148,136,.16);
 }
 .service-card.featured::before {
-  content: "料金重視の最初の確認先";
+  content: "おすすめ";
   position: absolute;
   top: 0;
   right: 0;
@@ -1826,6 +1872,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .hero-ctas { flex-direction: row; flex-wrap: wrap; justify-content: center; max-width: none; }
   .btn-primary, .btn-ghost { width: auto; }
   .svc-specs { grid-template-columns: repeat(4, 1fr); }
+}
+.service-card.featured[data-feature-label]::before {
+  content: attr(data-feature-label);
 }
 
 @media (min-width: 860px) {
