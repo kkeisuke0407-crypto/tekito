@@ -68,6 +68,44 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // ── js-loaded flag (enables fade-up CSS) ─────────────
+  document.body.classList.add('js-loaded');
+
+  // ── Scroll fade-in ────────────────────────────────────
+  var fadeEls = document.querySelectorAll('.fade-up');
+  if (fadeEls.length && 'IntersectionObserver' in window) {
+    var fadeIO = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          fadeIO.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    fadeEls.forEach(function(el) { fadeIO.observe(el); });
+  }
+
+  // ── Eval bar animation ────────────────────────────────
+  document.querySelectorAll('.eval-bar-fill').forEach(function(fill) {
+    var target = fill.style.width || '0%';
+    fill.setAttribute('data-bar-target', target);
+    fill.style.width = '0';
+    var card = fill.closest('.ranking-card');
+    if (!card || !('IntersectionObserver' in window)) return;
+    var barIO = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          setTimeout(function() {
+            fill.style.transition = 'width .85s cubic-bezier(.4,0,.2,1)';
+            fill.style.width = fill.getAttribute('data-bar-target');
+          }, 300);
+          barIO.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    barIO.observe(card);
+  });
+
   // ── FAQ accordion ──────────────────────────────────────────────
   document.querySelectorAll(".faq-item").forEach(function (item) {
     var btn = item.querySelector(".faq-q");

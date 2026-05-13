@@ -1361,3 +1361,73 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .reassurance-grid { grid-template-columns: 1fr; }
   .situation-list { grid-template-columns: 1fr; }
 }
+
+/* ══ ANIMATION SYSTEM ════════════════════════════════
+   CTAパルス・スクロールフェードイン・評価バーアニメ
+   ══════════════════════════════════════════════════ */
+
+@keyframes pulseRed {
+  0%,100% { box-shadow: 0 4px 20px rgba(192,57,43,.40); }
+  50%      { box-shadow: 0 6px 34px rgba(192,57,43,.68), 0 0 0 8px rgba(192,57,43,.10); }
+}
+@keyframes pulseRedSm {
+  0%,100% { box-shadow: 0 4px 16px rgba(192,57,43,.35); }
+  50%      { box-shadow: 0 6px 28px rgba(192,57,43,.62), 0 0 0 6px rgba(192,57,43,.10); }
+}
+@keyframes pulseNavy {
+  0%,100% { box-shadow: 0 4px 14px rgba(13,27,46,.25); }
+  50%      { box-shadow: 0 6px 26px rgba(13,27,46,.48), 0 0 0 6px rgba(13,27,46,.10); }
+}
+@keyframes rank1Glow {
+  0%,100% { box-shadow: 0 2px 10px rgba(10,20,40,.10); }
+  50%      { box-shadow: 0 6px 32px rgba(201,146,42,.42), 0 0 0 4px rgba(201,146,42,.14); }
+}
+
+/* CTA pulse */
+.hero-cta                  { animation: pulseRed   2.5s ease-in-out infinite; }
+.hero-cta:hover            { animation: none; }
+.matching-cta-btn          { animation: pulseRedSm 2.5s ease-in-out infinite; }
+.matching-cta-btn:hover    { animation: none; }
+.rank-1 .ranking-cta       { animation: pulseRed   2.5s ease-in-out infinite; }
+.rank-1 .ranking-cta:hover { animation: none; opacity: .9; }
+.checklist-cta-btn         { animation: pulseNavy  2.5s ease-in-out infinite; }
+.checklist-cta-btn:hover   { animation: none; }
+
+/* Rank-1 card glow */
+.ranking-card.rank-1       { animation: rank1Glow  2.8s ease-in-out infinite; }
+.ranking-card.rank-1:hover { animation: none; box-shadow: var(--shadow-md); }
+
+/* Scroll fade-in (.js-loaded で有効化、JS無効時は普通に見える) */
+.js-loaded .fade-up {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .55s ease, transform .55s ease;
+}
+.js-loaded .fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays */
+.js-loaded .ranking-cards    .fade-up:nth-child(2) { transition-delay: .12s; }
+.js-loaded .ranking-cards    .fade-up:nth-child(3) { transition-delay: .24s; }
+.js-loaded .reassurance-grid .fade-up:nth-child(2) { transition-delay: .10s; }
+.js-loaded .reassurance-grid .fade-up:nth-child(3) { transition-delay: .20s; }
+.js-loaded .checklist-grid   .fade-up:nth-child(2) { transition-delay: .07s; }
+.js-loaded .checklist-grid   .fade-up:nth-child(3) { transition-delay: .14s; }
+.js-loaded .checklist-grid   .fade-up:nth-child(4) { transition-delay: .21s; }
+.js-loaded .checklist-grid   .fade-up:nth-child(5) { transition-delay: .28s; }
+.js-loaded .checklist-grid   .fade-up:nth-child(6) { transition-delay: .35s; }
+.js-loaded .checklist-grid   .fade-up:nth-child(7) { transition-delay: .42s; }
+.js-loaded .criteria-list    .fade-up:nth-child(2) { transition-delay: .07s; }
+.js-loaded .criteria-list    .fade-up:nth-child(3) { transition-delay: .14s; }
+.js-loaded .criteria-list    .fade-up:nth-child(4) { transition-delay: .21s; }
+.js-loaded .criteria-list    .fade-up:nth-child(5) { transition-delay: .28s; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-cta, .matching-cta-btn, .rank-1 .ranking-cta,
+  .checklist-cta-btn, .ranking-card.rank-1 { animation: none !important; }
+  .js-loaded .fade-up { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .eval-bar-fill { transition: none !important; }
+}
