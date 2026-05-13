@@ -1,0 +1,1120 @@
+---
+const PAGE_TITLE = "ウォーターサーバー総合ランキング｜料金・水代・キャンペーン比較";
+const PAGE_DESC = "ウォーターサーバーを料金、水代、ボトル交換、最低利用期間、解約条件で比較。公式キャンペーン確認まで迷わず進めるランキング型LPです。";
+const CANONICAL = "https://vpscomparehub.com/water-server/lp1";
+const OGP_IMAGE = "https://vpscomparehub.com/og-default.svg";
+
+const services = [
+  {
+    rank: 1,
+    id: "oken",
+    name: "オーケンウォーター",
+    short: "O-KEN WATER",
+    badge: "料金重視",
+    catch: "水代を抑えて始めたいなら、まず確認したい宅配水",
+    score: "4.8",
+    monthly: "RO水 2,696円〜",
+    monthlyNote: "12L×2本/回の参考値",
+    serverFee: "レンタル料0円目安",
+    type: "宅配水 / RO水・天然水",
+    style: "卓上 / 床置き",
+    order: "定期配送",
+    maintenance: "日常のお手入れ",
+    fit: "毎月の水代を抑えたい人",
+    points: [
+      "RO水の料金目安が低く、価格検索ユーザーと相性が良い",
+      "天然水プランも選べるため、安さと水の種類を比較しやすい",
+      "初期費用・送料・レンタル料の条件を公式でまとめて確認できる",
+      "契約期間と解約条件まで見てから判断したい人に向く"
+    ],
+    campaign: "キャンペーン・最低利用期間・注文回数を公式で確認",
+    cta: "RO水の料金を公式で確認する",
+    affiliate: "oken",
+    link: "https://px.a8.net/svt/ejp?a8mat=4B1XE4+325A0A+1LOO+5Z6WY",
+    bannerAffiliate: "oken_banner",
+    bannerLink: "https://px.a8.net/svt/ejp?a8mat=4B1XE4+325A0A+1LOO+6NMJL",
+    bannerSrc: "https://www21.a8.net/svt/bgt?aid=260430412185&wid=004&eno=01&mid=s00000007476001118000&mc=1",
+    bannerAlt: "オーケンウォーターの公式広告バナー"
+  },
+  {
+    rank: 2,
+    id: "every",
+    name: "every frecious",
+    short: "エブリィフレシャス",
+    badge: "浄水型",
+    catch: "水をたくさん使う家庭は、定額制で読みやすい",
+    score: "4.7",
+    monthly: "2,750円〜/月",
+    monthlyNote: "浄水型の定額目安",
+    serverFee: "月額に含む",
+    type: "浄水型",
+    style: "卓上 / 床置き",
+    order: "水道水を注ぐ",
+    maintenance: "カートリッジ交換",
+    fit: "ボトル交換を避けたい人",
+    points: [
+      "ボトル注文が不要で、使う量が増えても月額を読みやすい",
+      "卓上タイプを選べるため、一人暮らしや省スペースにも合わせやすい",
+      "水の受け取りや空ボトル処理の手間を減らせる",
+      "3年契約などの条件は必ず公式で確認したい"
+    ],
+    campaign: "定額料金・機種・解約金の最新条件を公式で確認",
+    cta: "定額プランを公式で確認する",
+    affiliate: "every_frecious",
+    link: "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3H144Q+2B8Y+15PEXE",
+    bannerAffiliate: "every_banner",
+    bannerLink: "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3H144Q+2B8Y+15XRUP",
+    bannerSrc: "https://www26.a8.net/svt/bgt?aid=260430412210&wid=004&eno=01&mid=s00000010789007044000&mc=1",
+    bannerAlt: "every freciousの公式広告バナー"
+  },
+  {
+    rank: 3,
+    id: "cosmo",
+    name: "コスモウォーター",
+    short: "CosmoWater",
+    badge: "天然水",
+    catch: "下置きボトルで、交換のしやすさまで見たい人向け",
+    score: "4.5",
+    monthly: "天然水プラン",
+    monthlyNote: "ボトル本数で変動",
+    serverFee: "無料目安",
+    type: "天然水宅配",
+    style: "床置き",
+    order: "定期配送",
+    maintenance: "日常のお手入れ",
+    fit: "ボトル交換の負担を減らしたい人",
+    points: [
+      "ボトルを足元にセットするタイプで交換時の持ち上げ負担を減らしやすい",
+      "天然水宅配型を選びたい人の比較候補に入れやすい",
+      "配送周期やスキップ条件を確認して、余りすぎを防ぎたい",
+      "月額は水の注文本数で変わるため、公式条件の確認が重要"
+    ],
+    campaign: "配送周期・初回条件・乗り換え特典を公式で確認",
+    cta: "天然水の条件を公式で確認する",
+    affiliate: "cosmo",
+    link: "https://px.a8.net/svt/ejp?a8mat=4B3G6G+F173ZE+4K9C+NW4IA",
+    bannerAffiliate: "cosmo",
+    bannerLink: "https://px.a8.net/svt/ejp?a8mat=4B3G6G+F173ZE+4K9C+NW4IA",
+    bannerSrc: "https://www27.a8.net/svt/bgt?aid=260501416909&wid=004&eno=01&mid=s00000021288004006000&mc=1",
+    bannerAlt: "コスモウォーターの公式広告バナー"
+  },
+  {
+    rank: 4,
+    id: "frecious",
+    name: "フレシャス",
+    short: "FRECIOUS",
+    badge: "デザイン",
+    catch: "水の味・インテリア性も妥協したくないなら候補",
+    score: "4.4",
+    monthly: "天然水プラン",
+    monthlyNote: "機種・箱数で変動",
+    serverFee: "条件で変動",
+    type: "天然水宅配",
+    style: "床置き中心",
+    order: "定期配送",
+    maintenance: "日常のお手入れ",
+    fit: "デザインと天然水を重視する人",
+    points: [
+      "デザイン性を重視する人が比較しやすい天然水サーバー",
+      "機種や配送箱数で月額が変わるため、見た目だけで選ばない",
+      "レンタル料無料条件も含めて総額を確認したい",
+      "天然水の種類やサーバー機能まで見たい人向け"
+    ],
+    campaign: "機種別料金・水代・キャンペーンを公式で確認",
+    cta: "フレシャスの公式条件を見る",
+    affiliate: "frecious",
+    link: "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3TJ7U2+2B8Y+674EQ",
+    bannerAffiliate: "frecious_banner",
+    bannerLink: "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3TJ7U2+2B8Y+6N741",
+    bannerSrc: "https://www21.a8.net/svt/bgt?aid=260430412231&wid=004&eno=01&mid=s00000010789001116000&mc=1",
+    bannerAlt: "フレシャスの公式広告バナー"
+  },
+  {
+    rank: 5,
+    id: "water-one",
+    name: "ウォーターワン",
+    short: "Water One",
+    badge: "天然水",
+    catch: "天然水の採水地や配送条件まで見比べたい人へ",
+    score: "4.2",
+    monthly: "約4,500円〜",
+    monthlyNote: "2本利用時の参考目安",
+    serverFee: "無料目安",
+    type: "天然水宅配",
+    style: "卓上 / 床置き",
+    order: "定期配送",
+    maintenance: "日常のお手入れ",
+    fit: "天然水の種類を比較したい人",
+    points: [
+      "複数の天然水から選びたい人の比較候補",
+      "卓上と床置きを生活スペースに合わせて検討しやすい",
+      "地域や配送条件で総額が変わるため、公式確認が大事",
+      "天然水重視で、料金だけでは決めたくない人向け"
+    ],
+    campaign: "水の種類・配送条件・キャンペーンを公式で確認",
+    cta: "ウォーターワンの条件を見る",
+    affiliate: "water_one",
+    link: "https://h.accesstrade.net/sp/cc?rk=0100pknn00orwp",
+    bannerAffiliate: "water_one_banner",
+    bannerLink: "https://h.accesstrade.net/sp/cc?rk=0100pknr00orwp",
+    bannerSrc: "https://h.accesstrade.net/sp/rr?rk=0100pknr00orwp",
+    bannerAlt: "ウォーターワンの公式広告バナー"
+  }
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ウォーターサーバーは月いくら見ればいいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "月額料金だけでなく、水代、サーバーレンタル料、送料、最低利用期間、解約金をセットで確認してください。浄水型は定額、宅配水は注文本数で変わるため、使う量に合わせて比較するのがおすすめです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "安いウォーターサーバーはどれですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "使用量によって変わります。水代重視なら宅配水のRO水、たくさん使うなら浄水型の定額制が候補になります。契約前に公式サイトで最新条件を確認してください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "このページには広告が含まれますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。このページには広告・アフィリエイトリンクが含まれます。掲載順は料金、比較しやすさ、申し込み前に確認すべき条件などをもとに独自に構成しています。"
+      }
+    }
+  ]
+};
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{PAGE_TITLE}</title>
+  <meta name="description" content={PAGE_DESC} />
+  <link rel="canonical" href={CANONICAL} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={PAGE_TITLE} />
+  <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:url" content={CANONICAL} />
+  <meta property="og:image" content={OGP_IMAGE} />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content="水代見直しナビ" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/water-server/styles.css?v=20260513-lp1" />
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2YLF06DC0E');
+    gtag('config', 'AW-18129603657');
+  </script>
+  <style>
+    :root {
+      --lp-teal: #10aeb9;
+      --lp-teal-dark: #087783;
+      --lp-blue: #0f5f9e;
+      --lp-pink: #ff4f87;
+      --lp-yellow: #ffe766;
+      --lp-cream: #fff8dc;
+      --lp-line: #cceff3;
+      --lp-ink: #16333d;
+      --lp-muted: #5e7280;
+      --lp-bg: #effcff;
+      --lp-shadow: 0 18px 50px rgba(5, 96, 116, .16);
+    }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--lp-ink);
+      background: linear-gradient(180deg, #e8fbff 0, #fff 480px, #f5fcff 100%);
+    }
+
+    .lp1 a { color: inherit; }
+    .lp1 img { max-width: 100%; height: auto; display: block; }
+    .lp1-top {
+      background: #071115;
+      color: #fff;
+      font-size: .78rem;
+    }
+    .lp1-top-inner,
+    .lp1-nav-inner,
+    .lp1-wrap {
+      width: min(1120px, calc(100% - 28px));
+      margin: 0 auto;
+    }
+    .lp1-top-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      padding: .65rem 0;
+    }
+    .lp1-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 900;
+      letter-spacing: .02em;
+      font-size: 1.1rem;
+    }
+    .lp1-logo-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 50% 50% 45% 45%;
+      background: linear-gradient(135deg, #6ee7f2, #10aeb9);
+      box-shadow: inset 0 -5px 0 rgba(0, 0, 0, .12);
+    }
+    .lp1-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(16, 174, 185, .96);
+      border-bottom: 3px solid rgba(255, 255, 255, .65);
+      backdrop-filter: blur(10px);
+    }
+    .lp1-nav-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      text-align: center;
+    }
+    .lp1-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 900;
+      padding: .95rem .4rem;
+      border-left: 1px solid rgba(255,255,255,.45);
+    }
+    .lp1-nav a:last-child { border-right: 1px solid rgba(255,255,255,.45); }
+
+    .lp1-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(235, 254, 255, .98) 0%, rgba(236, 254, 255, .9) 44%, rgba(236,254,255,.24) 68%, rgba(236,254,255,.05) 100%),
+        url("/water-server/images/hero-water-server-photo.png") right center / cover no-repeat;
+      border-bottom: 1px solid var(--lp-line);
+    }
+    .lp1-hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 18px;
+      background: repeating-linear-gradient(90deg, rgba(16,174,185,.45) 0 2px, transparent 2px 7px);
+      opacity: .55;
+    }
+    .lp1-hero-inner {
+      width: min(1120px, calc(100% - 28px));
+      margin: 0 auto;
+      min-height: 470px;
+      display: grid;
+      align-items: center;
+      padding: 3.2rem 0 4.25rem;
+    }
+    .lp1-hero-card {
+      width: min(560px, 100%);
+      background: rgba(255,255,255,.92);
+      border: 4px solid rgba(255,255,255,.95);
+      border-radius: 18px;
+      box-shadow: var(--lp-shadow);
+      padding: 2rem;
+      position: relative;
+      animation: lpPop .55s ease-out both;
+    }
+    .lp1-edition {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      background: var(--lp-pink);
+      color: #fff;
+      font-weight: 900;
+      border-radius: 999px;
+      padding: .45rem 1.2rem;
+      box-shadow: 0 6px 0 rgba(199, 27, 82, .22);
+      margin-bottom: .95rem;
+    }
+    .lp1-hero h1 {
+      margin: 0;
+      color: var(--lp-ink);
+      font-size: clamp(1.4rem, 2.1vw, 1.9rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+      font-weight: 900;
+    }
+    .lp1-hero h1 span {
+      color: var(--lp-ink);
+      display: block;
+      margin-bottom: .25rem;
+    }
+    .lp1-hero h1 strong {
+      color: var(--lp-teal);
+      display: block;
+      font-size: clamp(2.45rem, 4vw, 3.35rem);
+      line-height: 1.06;
+    }
+    .lp1-hero h1 strong em {
+      display: block;
+      font-style: normal;
+      white-space: nowrap;
+    }
+    .lp1-hero-lead {
+      margin: 1rem 0 1.2rem;
+      color: #314a55;
+      font-weight: 700;
+      line-height: 1.85;
+    }
+    .lp1-hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .65rem;
+      margin-bottom: 1.2rem;
+    }
+    .lp1-hero-point {
+      background: #f0fdff;
+      border: 1px solid var(--lp-line);
+      border-radius: 12px;
+      padding: .7rem .55rem;
+      text-align: center;
+      font-weight: 900;
+      color: var(--lp-teal-dark);
+    }
+    .lp1-hero-point small {
+      display: block;
+      color: var(--lp-muted);
+      font-size: .72rem;
+      margin-top: .12rem;
+    }
+    .lp1-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .7rem;
+      align-items: center;
+    }
+    .lp1-main-cta,
+    .lp1-sub-cta,
+    .lp1-mini-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 900;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .lp1-main-cta {
+      min-height: 52px;
+      padding: .9rem 1.5rem;
+      color: #fff;
+      background: linear-gradient(180deg, #ff6a95, #f23978);
+      box-shadow: 0 8px 0 #c7235d, 0 18px 28px rgba(242,57,120,.22);
+      animation: lpPulse 2.4s ease-in-out infinite;
+    }
+    .lp1-sub-cta {
+      min-height: 48px;
+      padding: .78rem 1.1rem;
+      color: var(--lp-teal-dark);
+      background: #fff;
+      border: 2px solid var(--lp-teal);
+    }
+    .lp1-main-cta:hover,
+    .lp1-sub-cta:hover,
+    .lp1-mini-cta:hover { transform: translateY(-2px); text-decoration: none; }
+    body.lp1 .sticky-cta-bar { display: none !important; }
+
+    .lp1-wrap {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 1.25rem;
+      padding: 2rem 0 4rem;
+      align-items: start;
+    }
+    .lp1-sidebar {
+      position: sticky;
+      top: 68px;
+      display: grid;
+      gap: 1rem;
+    }
+    .lp1-side-box {
+      background: #fff;
+      border: 2px solid var(--lp-line);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 12px 26px rgba(7, 119, 131, .08);
+    }
+    .lp1-side-title {
+      background: var(--lp-teal);
+      color: #fff;
+      font-weight: 900;
+      text-align: center;
+      padding: .7rem;
+    }
+    .lp1-side-link {
+      display: flex;
+      align-items: center;
+      gap: .55rem;
+      padding: .8rem .85rem;
+      text-decoration: none;
+      border-top: 1px dashed #c8dbe1;
+      color: var(--lp-teal-dark);
+      font-weight: 800;
+      line-height: 1.45;
+    }
+    .lp1-side-badge {
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #fff5c2;
+      color: #b36b00;
+      font-size: .8rem;
+      font-weight: 900;
+    }
+    .lp1-brand a {
+      justify-content: center;
+      color: var(--lp-muted);
+      min-height: 48px;
+      font-size: .88rem;
+      text-align: center;
+    }
+
+    .lp1-main {
+      min-width: 0;
+      display: grid;
+      gap: 1.45rem;
+    }
+    .lp1-section-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .65rem;
+      background: linear-gradient(90deg, var(--lp-teal), #58d6df);
+      color: #fff;
+      border-radius: 14px 14px 0 0;
+      padding: .95rem;
+      margin: 0;
+      font-weight: 900;
+      font-size: clamp(1.15rem, 2.4vw, 1.75rem);
+      text-align: center;
+    }
+    .lp1-update {
+      display: flex;
+      justify-content: center;
+      gap: .6rem;
+      flex-wrap: wrap;
+      padding: .85rem;
+      color: var(--lp-muted);
+      font-size: .9rem;
+      background: #fff;
+      border: 1px solid var(--lp-line);
+      border-top: 0;
+    }
+    .lp1-compare {
+      background: #fff;
+      border: 2px solid var(--lp-line);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--lp-shadow);
+    }
+    .lp1-compare-scroll {
+      overflow-x: auto;
+    }
+    .lp1-compare table {
+      width: 100%;
+      min-width: 760px;
+      border-collapse: collapse;
+      text-align: center;
+      font-size: .92rem;
+    }
+    .lp1-compare th,
+    .lp1-compare td {
+      border: 1px solid #d8eef2;
+      padding: .75rem .65rem;
+      vertical-align: middle;
+    }
+    .lp1-compare thead th {
+      background: #e7fbff;
+      color: var(--lp-teal-dark);
+      font-weight: 900;
+    }
+    .lp1-compare th:first-child,
+    .lp1-compare td:first-child {
+      background: var(--lp-teal);
+      color: #fff;
+      font-weight: 900;
+      width: 140px;
+      position: sticky;
+      left: 0;
+      z-index: 2;
+    }
+    .lp1-rank-medal {
+      display: inline-grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      margin: -.25rem auto .4rem;
+      color: #563500;
+      background: linear-gradient(135deg, #ffe484, #ffb82f);
+      clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+      font-weight: 900;
+      font-size: .88rem;
+    }
+    .lp1-name {
+      display: block;
+      color: var(--lp-blue);
+      font-size: 1rem;
+      font-weight: 900;
+      text-decoration: underline;
+    }
+    .lp1-price {
+      color: #f04d25;
+      font-size: 1.15rem;
+      font-weight: 900;
+    }
+    .lp1-mini-cta {
+      padding: .58rem .85rem;
+      color: #fff;
+      background: var(--lp-pink);
+      box-shadow: 0 4px 0 #c7235d;
+      font-size: .84rem;
+    }
+    .lp1-winner {
+      background: #fffceb !important;
+      box-shadow: inset 0 0 0 3px rgba(255, 211, 64, .75);
+    }
+
+    .lp1-ranking-list {
+      display: grid;
+      gap: 1.2rem;
+    }
+    .lp1-card {
+      background: #fff;
+      border: 2px solid var(--lp-line);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--lp-shadow);
+    }
+    .lp1-card-head {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: .85rem;
+      align-items: center;
+      background: linear-gradient(90deg, var(--lp-teal), #55d4dc);
+      color: #fff;
+      padding: .85rem 1rem;
+    }
+    .lp1-card-rank {
+      display: grid;
+      place-items: center;
+      width: 64px;
+      height: 64px;
+      color: #563500;
+      background: linear-gradient(135deg, #ffe484, #ffb82f);
+      clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+      font-weight: 900;
+      line-height: 1.1;
+      text-align: center;
+    }
+    .lp1-card-rank small { display: block; font-size: .67rem; }
+    .lp1-card-title h3 {
+      margin: 0;
+      font-size: clamp(1.18rem, 2.4vw, 1.75rem);
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+    .lp1-card-title p {
+      margin: .25rem 0 0;
+      color: rgba(255,255,255,.92);
+      font-weight: 700;
+    }
+    .lp1-score {
+      display: grid;
+      place-items: center;
+      background: #fff;
+      color: var(--lp-teal-dark);
+      border-radius: 999px;
+      min-width: 82px;
+      padding: .5rem .75rem;
+      font-weight: 900;
+    }
+    .lp1-card-body {
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: minmax(230px, 300px) minmax(0, 1fr);
+      gap: 1rem;
+    }
+    .lp1-card-media {
+      display: grid;
+      gap: .7rem;
+      align-content: start;
+    }
+    .lp1-banner {
+      background: #eefbfe;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--lp-line);
+    }
+    .lp1-banner img {
+      width: 100%;
+      aspect-ratio: 6 / 5;
+      object-fit: contain;
+      background: #fff;
+    }
+    .lp1-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .45rem;
+    }
+    .lp1-pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: .35rem .65rem;
+      background: #e9fbff;
+      color: var(--lp-teal-dark);
+      border: 1px solid #bfeaf0;
+      font-size: .78rem;
+      font-weight: 900;
+    }
+    .lp1-spec {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: .9rem;
+    }
+    .lp1-spec th,
+    .lp1-spec td {
+      border: 1px solid #d8eef2;
+      padding: .58rem .7rem;
+      text-align: left;
+    }
+    .lp1-spec th {
+      width: 118px;
+      background: #dff8fb;
+      color: var(--lp-teal-dark);
+      font-weight: 900;
+    }
+    .lp1-point-list {
+      margin: .9rem 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: .55rem;
+    }
+    .lp1-point-list li {
+      position: relative;
+      padding-left: 1.45rem;
+      line-height: 1.65;
+      font-weight: 700;
+    }
+    .lp1-point-list li::before {
+      content: "";
+      width: .68rem;
+      height: .68rem;
+      position: absolute;
+      left: 0;
+      top: .58rem;
+      border-radius: 50%;
+      background: var(--lp-teal);
+      box-shadow: 0 0 0 4px #e6fbff;
+    }
+    .lp1-campaign {
+      background: linear-gradient(90deg, #fff5c2, #fffbe8);
+      border: 2px solid #ffe28a;
+      border-radius: 12px;
+      padding: .85rem;
+      margin: .8rem 0 1rem;
+      font-weight: 900;
+      color: #735100;
+    }
+    .lp1-card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      align-items: center;
+    }
+    .lp1-card-actions .lp1-main-cta {
+      flex: 1 1 280px;
+      min-height: 56px;
+    }
+    .lp1-card-actions .lp1-sub-cta {
+      flex: 0 1 160px;
+    }
+    .lp1-note {
+      font-size: .76rem;
+      color: var(--lp-muted);
+      line-height: 1.7;
+      margin: .8rem 0 0;
+    }
+
+    .lp1-search {
+      background: #fff;
+      border: 2px solid var(--lp-line);
+      border-radius: 16px;
+      padding: 1rem;
+      box-shadow: 0 12px 32px rgba(7, 119, 131, .08);
+    }
+    .lp1-chip-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: .65rem;
+      margin-top: .85rem;
+    }
+    .lp1-chip-grid a {
+      display: grid;
+      place-items: center;
+      min-height: 56px;
+      padding: .55rem;
+      border-radius: 12px;
+      background: #effcff;
+      border: 1px solid var(--lp-line);
+      text-decoration: none;
+      color: var(--lp-teal-dark);
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .lp1-faq {
+      background: #fff;
+      border: 2px solid var(--lp-line);
+      border-radius: 16px;
+      box-shadow: 0 12px 32px rgba(7, 119, 131, .08);
+      overflow: hidden;
+    }
+    .lp1-faq h2 {
+      margin: 0;
+      padding: 1rem;
+      color: #fff;
+      background: var(--lp-teal);
+      text-align: center;
+      font-size: 1.35rem;
+    }
+    .lp1-faq-item {
+      padding: 1rem 1.2rem;
+      border-top: 1px solid #e2f3f6;
+    }
+    .lp1-faq-item strong {
+      display: block;
+      color: var(--lp-teal-dark);
+      margin-bottom: .35rem;
+      font-size: 1.02rem;
+    }
+    .lp1-faq-item p {
+      margin: 0;
+      line-height: 1.8;
+      color: #405763;
+    }
+
+    .lp1-final {
+      text-align: center;
+      background: linear-gradient(135deg, #0e9fab, #0f5f9e);
+      color: #fff;
+      border-radius: 20px;
+      padding: 2rem 1rem;
+      box-shadow: var(--lp-shadow);
+    }
+    .lp1-final h2 {
+      margin: 0 0 .7rem;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      letter-spacing: 0;
+    }
+    .lp1-final p { margin: 0 auto 1rem; max-width: 720px; line-height: 1.8; color: rgba(255,255,255,.92); }
+    .lp1-final .lp1-main-cta { background: #fff; color: #e02d68; box-shadow: 0 7px 0 rgba(0,0,0,.18); }
+
+    .lp1-disclosure {
+      font-size: .76rem;
+      color: var(--lp-muted);
+      line-height: 1.8;
+      padding: 1rem 0 4rem;
+      width: min(1120px, calc(100% - 28px));
+      margin: 0 auto;
+    }
+
+    @keyframes lpPop {
+      from { opacity: 0; transform: translateY(18px) scale(.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes lpPulse {
+      0%, 100% { box-shadow: 0 8px 0 #c7235d, 0 18px 28px rgba(242,57,120,.22); }
+      50% { box-shadow: 0 8px 0 #c7235d, 0 22px 36px rgba(242,57,120,.34); }
+    }
+
+    @media (max-width: 920px) {
+      .lp1-wrap { grid-template-columns: 1fr; }
+      .lp1-sidebar { position: static; order: 2; }
+      .lp1-main { order: 1; }
+      .lp1-side-box { display: none; }
+      .lp1-card-body { grid-template-columns: 1fr; }
+      .lp1-card-media { max-width: 340px; }
+      .lp1-chip-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .lp1-top-inner { align-items: flex-start; flex-direction: column; gap: .35rem; }
+      .lp1-nav-inner { grid-template-columns: repeat(2, 1fr); }
+      .lp1-nav a { padding: .7rem .25rem; font-size: .84rem; }
+      .lp1-hero {
+        background:
+          linear-gradient(180deg, rgba(238,254,255,.98), rgba(238,254,255,.84)),
+          url("/water-server/images/hero-water-server-photo.png") 62% center / cover no-repeat;
+      }
+      .lp1-hero-inner { min-height: auto; padding: 2.1rem 0 3.5rem; }
+      .lp1-hero-card { padding: 1.15rem; border-radius: 14px; }
+      .lp1-hero h1 { font-size: 1.35rem; }
+      .lp1-hero h1 strong { font-size: 2.15rem; }
+      .lp1-hero-points { grid-template-columns: 1fr; }
+      .lp1-cta-row { display: grid; grid-template-columns: 1fr; }
+      .lp1-main-cta, .lp1-sub-cta { width: 100%; }
+      .lp1-section-title {
+        flex-wrap: wrap;
+        line-height: 1.35;
+        font-size: 1.02rem;
+        padding: .85rem .55rem;
+      }
+      .lp1-card-head { grid-template-columns: auto 1fr; }
+      .lp1-score { grid-column: 1 / -1; justify-self: start; }
+      .lp1-card-rank { width: 54px; height: 54px; }
+      .lp1-card-body { padding: .85rem; }
+      .lp1-chip-grid { grid-template-columns: 1fr; }
+      .lp1-disclosure { padding-bottom: 6rem; }
+    }
+  </style>
+</head>
+<body class="lp1">
+  <header class="lp1-top">
+    <div class="lp1-top-inner">
+      <a class="lp1-logo" href="/water-server/lp1">
+        <span class="lp1-logo-mark" aria-hidden="true"></span>
+        <span>水代見直しナビ</span>
+      </a>
+      <span>※本ページにはPR・アフィリエイトリンクが含まれます</span>
+    </div>
+  </header>
+
+  <nav class="lp1-nav" aria-label="ページ内メニュー">
+    <div class="lp1-nav-inner">
+      <a href="#quick" data-scroll-to="#quick">早見表</a>
+      <a href="#ranking" data-scroll-to="#ranking">ランキング</a>
+      <a href="#search" data-scroll-to="#search">目的別</a>
+      <a href="#faq" data-scroll-to="#faq">基礎情報</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="lp1-hero">
+      <div class="lp1-hero-inner">
+        <div class="lp1-hero-card">
+          <span class="lp1-edition">2026年5月最新版</span>
+          <h1><span>ウォーターサーバー</span><strong><em>総合評価</em><em>ランキング</em></strong></h1>
+          <p class="lp1-hero-lead">
+            「安いのはどれ？」「月いくら？」「契約して損しない？」を、申し込み前に一気に確認。
+            料金・水代・契約条件まで見て、最初に公式で確認すべき候補を絞れます。
+          </p>
+          <div class="lp1-hero-points">
+            <div class="lp1-hero-point">料金重視<small>水代・月額で比較</small></div>
+            <div class="lp1-hero-point">条件重視<small>解約金まで確認</small></div>
+            <div class="lp1-hero-point">目的別<small>一人暮らし・家族</small></div>
+          </div>
+          <div class="lp1-cta-row">
+            <a class="lp1-main-cta" href="https://px.a8.net/svt/ejp?a8mat=4B1XE4+325A0A+1LOO+5Z6WY" data-affiliate="oken" data-track="lp1_hero_oken" rel="nofollow sponsored">1位の料金条件を確認する</a>
+            <a class="lp1-sub-cta" href="#quick" data-scroll-to="#quick" data-track="lp1_hero_compare">比較表から見る</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="lp1-wrap">
+      <aside class="lp1-sidebar" aria-label="サイドメニュー">
+        <div class="lp1-side-box">
+          <div class="lp1-side-title">目的別ランキング</div>
+          <a class="lp1-side-link" href="#quick" data-scroll-to="#quick"><span class="lp1-side-badge">総</span>総合評価ランキング</a>
+          <a class="lp1-side-link" href="#low-cost" data-scroll-to="#low-cost"><span class="lp1-side-badge">安</span>価格が安い候補</a>
+          <a class="lp1-side-link" href="#jousui" data-scroll-to="#jousui"><span class="lp1-side-badge">浄</span>浄水型サーバー</a>
+          <a class="lp1-side-link" href="#solo" data-scroll-to="#solo"><span class="lp1-side-badge">単</span>一人暮らし向け</a>
+          <a class="lp1-side-link" href="#faq" data-scroll-to="#faq"><span class="lp1-side-badge">基</span>基礎情報</a>
+        </div>
+        <div class="lp1-side-box lp1-brand">
+          <div class="lp1-side-title">人気ブランド一覧</div>
+          {services.map((service) => (
+            <a class="lp1-side-link" href={`#${service.id}`} data-scroll-to={`#${service.id}`}>{service.name}</a>
+          ))}
+          <a class="lp1-side-link" href="#search" data-scroll-to="#search">OCEAN</a>
+        </div>
+      </aside>
+
+      <div class="lp1-main">
+        <section class="lp1-compare reveal-up" id="quick">
+          <h2 class="lp1-section-title">まずはここだけ見ればOK 早見比較表</h2>
+          <div class="lp1-update">
+            <span>更新日：2026年5月13日</span>
+            <span>料金・キャンペーンは公式サイトで最新確認</span>
+          </div>
+          <div class="lp1-compare-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>比較項目</th>
+                  {services.slice(0, 4).map((service) => (
+                    <th class={service.rank === 1 ? "lp1-winner" : ""}>
+                      <span class="lp1-rank-medal">第{service.rank}位</span>
+                      <a class="lp1-name" href={`#${service.id}`} data-scroll-to={`#${service.id}`}>{service.name}</a>
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>月額目安</td>
+                  {services.slice(0, 4).map((service) => (
+                    <td class={service.rank === 1 ? "lp1-winner" : ""}>
+                      <span class="lp1-price">{service.monthly}</span><br />
+                      <small>{service.monthlyNote}</small>
+                    </td>
+                  ))}
+                </tr>
+                <tr>
+                  <td>タイプ</td>
+                  {services.slice(0, 4).map((service) => <td>{service.type}</td>)}
+                </tr>
+                <tr>
+                  <td>サーバー</td>
+                  {services.slice(0, 4).map((service) => <td>{service.style}</td>)}
+                </tr>
+                <tr>
+                  <td>おすすめ</td>
+                  {services.slice(0, 4).map((service) => <td>{service.fit}</td>)}
+                </tr>
+                <tr>
+                  <td>公式確認</td>
+                  {services.slice(0, 4).map((service) => (
+                    <td>
+                      <a class="lp1-mini-cta" href={service.link} data-affiliate={service.affiliate} data-track={`lp1_table_${service.id}`} rel="nofollow sponsored">詳しく見る</a>
+                    </td>
+                  ))}
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="lp1-search reveal-up" id="search">
+          <h2 class="lp1-section-title">迷っている条件から選ぶ</h2>
+          <div class="lp1-chip-grid">
+            <a href="#oken" id="low-cost" data-scroll-to="#oken">月額・水代を抑えたい</a>
+            <a href="#every" id="jousui" data-scroll-to="#every">ボトル交換なしが良い</a>
+            <a href="#cosmo" data-scroll-to="#cosmo">天然水を選びたい</a>
+            <a href="#frecious" data-scroll-to="#frecious">デザインも重視</a>
+            <a href="#water-one" data-scroll-to="#water-one">卓上も見たい</a>
+            <a href="#quick" id="solo" data-scroll-to="#quick">一人暮らし向け</a>
+            <a href="#faq" data-scroll-to="#faq">解約金を確認</a>
+            <a href="#ranking" data-scroll-to="#ranking">ランキングを見る</a>
+          </div>
+        </section>
+
+        <section id="ranking" class="lp1-ranking-list">
+          <h2 class="lp1-section-title">2026年5月 最新ランキング</h2>
+          {services.map((service) => (
+            <article class="lp1-card service-card" id={service.id}>
+              <header class="lp1-card-head">
+                <div class="lp1-card-rank"><small>第</small>{service.rank}位</div>
+                <div class="lp1-card-title">
+                  <h3>{service.name}</h3>
+                  <p>{service.catch}</p>
+                </div>
+                <div class="lp1-score">評価 {service.score}</div>
+              </header>
+              <div class="lp1-card-body">
+                <div class="lp1-card-media">
+                  <a class="lp1-banner" href={service.bannerLink} data-affiliate={service.bannerAffiliate} data-track={`lp1_banner_${service.id}`} rel="nofollow sponsored" referrerpolicy="no-referrer-when-downgrade">
+                    <img src={service.bannerSrc} alt={service.bannerAlt} loading="lazy" width="300" height="250" />
+                  </a>
+                  <div class="lp1-badge-row">
+                    <span class="lp1-pill">{service.badge}</span>
+                    <span class="lp1-pill">{service.type}</span>
+                    <span class="lp1-pill">{service.style}</span>
+                  </div>
+                </div>
+                <div>
+                  <table class="lp1-spec">
+                    <tbody>
+                      <tr><th>月額目安</th><td><strong class="lp1-price">{service.monthly}</strong><br /><small>{service.monthlyNote}</small></td></tr>
+                      <tr><th>サーバー料</th><td>{service.serverFee}</td></tr>
+                      <tr><th>タイプ</th><td>{service.type}</td></tr>
+                      <tr><th>注文方法</th><td>{service.order}</td></tr>
+                      <tr><th>メンテナンス</th><td>{service.maintenance}</td></tr>
+                    </tbody>
+                  </table>
+                  <ul class="lp1-point-list">
+                    {service.points.map((point) => <li>{point}</li>)}
+                  </ul>
+                  <div class="lp1-campaign">{service.campaign}</div>
+                  <div class="lp1-card-actions">
+                    <a class="lp1-main-cta" href={service.link} data-affiliate={service.affiliate} data-track={`lp1_card_${service.id}`} rel="nofollow sponsored">{service.cta}</a>
+                    <a class="lp1-sub-cta" href="#quick" data-scroll-to="#quick" data-track={`lp1_back_table_${service.id}`}>比較表へ戻る</a>
+                  </div>
+                  <p class="lp1-note">※ 料金・キャンペーン・最低利用期間・解約金は変更される場合があります。申し込み前に必ず公式サイトの最新情報をご確認ください。</p>
+                </div>
+              </div>
+            </article>
+          ))}
+        </section>
+
+        <section class="lp1-faq reveal-up" id="faq">
+          <h2>申し込み前によくある確認ポイント</h2>
+          <div class="lp1-faq-item">
+            <strong>Q. 月額料金だけで選んでいい？</strong>
+            <p>月額だけでは不十分です。水代、送料、サーバーレンタル料、注文ノルマ、最低利用期間、解約金まで見て総額で判断してください。</p>
+          </div>
+          <div class="lp1-faq-item">
+            <strong>Q. 水代を抑えたいならどのタイプ？</strong>
+            <p>水代重視ならRO水の宅配水、使用量が多いなら浄水型の定額制が候補です。少量利用か多量利用かで最適なタイプが変わります。</p>
+          </div>
+          <div class="lp1-faq-item">
+            <strong>Q. 広告で見たキャンペーンは信じていい？</strong>
+            <p>キャンペーンは期間や条件が変わります。このページでは公式サイトへの確認導線を置いているので、申し込み直前に最新条件を確認してください。</p>
+          </div>
+          <div class="lp1-faq-item">
+            <strong>Q. まずどこから見ればいい？</strong>
+            <p>価格検索で来た場合は、1位のオーケンウォーターと2位のevery freciousを先に比較すると、宅配水と浄水型の違いがすぐ見えます。</p>
+          </div>
+        </section>
+
+        <section class="lp1-final reveal-up">
+          <h2>料金で迷うなら、まず1位の公式条件から確認</h2>
+          <p>
+            ウォーターサーバーは、安く見えても注文回数や解約条件で総額が変わります。
+            公式条件を確認してから申し込むだけで、あとからの見落としを減らせます。
+          </p>
+          <a class="lp1-main-cta" href="https://px.a8.net/svt/ejp?a8mat=4B1XE4+325A0A+1LOO+5Z6WY" data-affiliate="oken" data-track="lp1_final_oken" rel="nofollow sponsored">オーケンウォーターの公式条件を見る</a>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="lp1-disclosure">
+    <p>
+      掲載情報は公式サイト等の公開情報をもとに作成していますが、料金・キャンペーン・契約条件は変更される場合があります。
+      申し込み前に必ず各社公式サイトで最新情報をご確認ください。
+      当ページは広告・アフィリエイトリンクを含み、リンク経由で申し込みが発生した場合に報酬を受け取ることがあります。
+    </p>
+    <p><a href="/water-server/operator/">運営者情報</a> / <a href="/water-server/">通常版比較ページ</a></p>
+  </footer>
+
+  <script src="/water-server/app.js?v=20260513-lp1" defer></script>
+</body>
+</html>
