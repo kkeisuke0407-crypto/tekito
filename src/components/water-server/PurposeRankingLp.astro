@@ -1,0 +1,278 @@
+---
+import { purposePageNav } from "../../data/waterServerPurposeLp";
+
+const { page } = Astro.props;
+const topThree = page.services.slice(0, 3);
+const today = new Date();
+const dateLabel = `${today.getFullYear()}年${today.getMonth() + 1}月最新`;
+
+const usageRows = [
+  ["1人", "0.6〜1.2L/日", "12Lで約10〜20日", "月1〜3本目安"],
+  ["2人", "1.2〜2.4L/日", "12Lで約5〜10日", "月2〜5本目安"],
+  ["4人家族", "2.4〜4.8L/日", "12Lで約2.5〜5日", "月5〜10本目安"]
+];
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{page.title}</title>
+  <meta name="description" content={page.description} />
+  <link rel="canonical" href={page.canonical} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={page.title} />
+  <meta property="og:description" content={page.description} />
+  <meta property="og:url" content={page.canonical} />
+  <meta property="og:site_name" content="水代見直しナビ" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/water-server/styles.css?v=20260513-lp3-purpose" />
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2YLF06DC0E');
+    gtag('config', 'AW-18129603657');
+  </script>
+</head>
+<body class="lp3-purpose-page">
+  <header class="ws-header">
+    <div class="ws-header-inner">
+      <a class="ws-logo" href="/water-server/lp1/">
+        <span class="ws-logo-icon">水</span>
+        <span>水代見直しナビ</span>
+      </a>
+      <nav class="ws-nav" aria-label="目的別ナビゲーション">
+        {purposePageNav.map((item) => (
+          <a href={item.href}>{item.label}</a>
+        ))}
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="lp3-hero">
+      <div class="ws-container lp3-hero-inner">
+        <div class="lp3-hero-copy reveal-up">
+          <p class="lp3-kicker">{dateLabel}・PR</p>
+          <h1>{page.heroTitle}</h1>
+          <p>{page.heroLead}</p>
+          <div class="lp3-hero-actions">
+            <a class="lp3-primary-cta" href="#ranking">ランキングを見る</a>
+            <a class="lp3-secondary-cta" href="#top3">TOP3を比較</a>
+          </div>
+        </div>
+        <aside class="lp3-hero-panel reveal-up" aria-label="おすすめTOP3">
+          <span class="lp3-panel-label">{page.topLabel}</span>
+          <strong>まず見るべきTOP3</strong>
+          <ol>
+            {topThree.map((service) => (
+              <li>
+                <span>{service.rank}</span>
+                <b>{service.name}</b>
+                <small>{service.monthly}</small>
+              </li>
+            ))}
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <div class="lp3-pr-note">※本ページにはPR・アフィリエイトリンクが含まれます。料金・キャンペーンは変更される場合があるため、申し込み前に公式サイトで最新条件をご確認ください。</div>
+
+    <section id="top3" class="lp3-section">
+      <div class="ws-container">
+        <div class="lp3-section-title reveal-up">
+          <span>{page.topLabel}</span>
+          <h2>{page.topTitle}</h2>
+          <p>{page.sectionLead}</p>
+        </div>
+
+        <div class="lp3-tabs reveal-up" aria-label="目的別ランキング">
+          {purposePageNav.map((item) => (
+            <a class={item.href === `/water-server/lp1/${page.slug}` ? "is-active" : ""} href={item.href}>{item.label}</a>
+          ))}
+        </div>
+
+        <div class="lp3-top3-table-wrap reveal-up">
+          <table class="lp3-top3-table">
+            <thead>
+              <tr>
+                <th>比較項目</th>
+                {topThree.map((service) => (
+                  <th>
+                    <span class="lp3-rank-chip">No.{service.rank}</span>
+                    <img class="lp3-mini-banner" src={service.bannerSrc} alt={service.bannerAlt} loading="lazy" referrerpolicy="no-referrer-when-downgrade" />
+                    <strong>{service.name}</strong>
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>月額目安</th>
+                {topThree.map((service) => <td><b>{service.monthly}</b><small>{service.monthlyNote}</small></td>)}
+              </tr>
+              <tr>
+                <th>種類</th>
+                {topThree.map((service) => <td>{service.type}<small>{service.waterType}</small></td>)}
+              </tr>
+              <tr>
+                <th>温水/冷水</th>
+                {topThree.map((service) => <td>{service.hot}<small>冷水 {service.cold}</small></td>)}
+              </tr>
+              <tr>
+                <th>ボトル</th>
+                {topThree.map((service) => <td>{service.bottle}<small>{service.bottleLife}</small></td>)}
+              </tr>
+              <tr>
+                <th>注目ポイント</th>
+                {topThree.map((service) => <td>{service.catch}</td>)}
+              </tr>
+              <tr>
+                <th>公式確認</th>
+                {topThree.map((service) => (
+                  <td>
+                    <a class="lp3-table-cta" href={service.link} data-affiliate={service.affiliate} data-track={`lp3_${page.slug}_top3_${service.id}`} rel="nofollow sponsored">
+                      公式サイト
+                    </a>
+                  </td>
+                ))}
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="lp3-checklist reveal-up">
+          {page.checklist.map((item) => (
+            <div><span>CHECK</span><p>{item}</p></div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="ranking" class="lp3-section lp3-ranking-section">
+      <div class="ws-container">
+        <div class="lp3-section-title reveal-up">
+          <span>{dateLabel}</span>
+          <h2>人気ランキングBEST{page.services.length}</h2>
+          <p>この目的で選ぶなら、以下の順で公式条件を確認してください。</p>
+        </div>
+
+        <div class="lp3-ranking-list">
+          {page.services.map((service) => (
+            <article class="lp3-rank-card reveal-up" id={service.id}>
+              <header class="lp3-rank-header">
+                <div class="lp3-rank-number">No.{service.rank}</div>
+                <div>
+                  <p>{service.badge}</p>
+                  <h3>{service.name}</h3>
+                  <span>総合評価 {service.score} PT</span>
+                </div>
+              </header>
+              <div class="lp3-rank-main">
+                <a class="lp3-rank-visual" href={service.link} data-affiliate={service.affiliate} data-track={`lp3_${page.slug}_banner_${service.id}`} rel="nofollow sponsored">
+                  <img src={service.bannerSrc} alt={service.bannerAlt} loading="lazy" referrerpolicy="no-referrer-when-downgrade" />
+                </a>
+                <div class="lp3-rank-content">
+                  <h4>{service.catch}</h4>
+                  <div class="lp3-spec-grid">
+                    <dl><dt>月額料金</dt><dd>{service.monthly}<small>{service.monthlyNote}</small></dd></dl>
+                    <dl><dt>サーバー代</dt><dd>{service.serverFee}</dd></dl>
+                    <dl><dt>温水</dt><dd>{service.hot}</dd></dl>
+                    <dl><dt>冷水</dt><dd>{service.cold}</dd></dl>
+                    <dl><dt>水の種類</dt><dd>{service.waterType}</dd></dl>
+                    <dl><dt>ボトル</dt><dd>{service.bottle}</dd></dl>
+                  </div>
+                  <div class="lp3-tag-row">
+                    {service.tags.map((tag) => <span>{tag}</span>)}
+                  </div>
+                  <ul class="lp3-point-list">
+                    {service.points.map((point) => <li>{point}</li>)}
+                  </ul>
+                  <div class="lp3-campaign-box">
+                    <b>最新キャンペーン確認</b>
+                    <p>{service.campaign}</p>
+                  </div>
+                  <div class="lp3-card-actions">
+                    <a class="lp3-detail-cta" href="#top3">比較表に戻る</a>
+                    <a class="lp3-official-cta" href={service.link} data-affiliate={service.affiliate} data-track={`lp3_${page.slug}_official_${service.id}`} rel="nofollow sponsored">
+                      公式サイトはこちら
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="lp3-section">
+      <div class="ws-container">
+        <div class="lp3-section-title reveal-up">
+          <span>水量の目安</span>
+          <h2>ボトル1本はどれくらい持つ？</h2>
+          <p>12Lボトルを基準にした大まかな目安です。料理やお茶にも使う家庭は消費量が増えます。</p>
+        </div>
+        <div class="lp3-usage-table-wrap reveal-up">
+          <table class="lp3-usage-table">
+            <thead>
+              <tr><th>人数</th><th>1日の使用量</th><th>12Lボトル1本</th><th>月の本数目安</th></tr>
+            </thead>
+            <tbody>
+              {usageRows.map((row) => (
+                <tr>{row.map((cell) => <td>{cell}</td>)}</tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="lp3-section lp3-guide-section">
+      <div class="ws-container">
+        <div class="lp3-section-title reveal-up">
+          <span>選び方ガイド</span>
+          <h2>{page.guideTitle}</h2>
+        </div>
+        <div class="lp3-guide-grid">
+          {page.guide.map((item, index) => (
+            <article class="lp3-guide-card reveal-up">
+              <span>{index + 1}</span>
+              <p>{item}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="lp3-section lp3-related-section">
+      <div class="ws-container">
+        <div class="lp3-section-title reveal-up">
+          <span>目的別ランキング</span>
+          <h2>ほかの条件でも比較する</h2>
+        </div>
+        <div class="lp3-related-links">
+          {purposePageNav.map((item) => (
+            <a class={item.href === `/water-server/lp1/${page.slug}` ? "is-current" : ""} href={item.href}>{item.label}</a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="ws-container">
+      <p>© 水代見直しナビ</p>
+      <p>本ページは広告を含みます。掲載情報は調査時点の内容をもとに作成しており、最新条件は各公式サイトをご確認ください。</p>
+    </div>
+  </footer>
+
+  <script src="/water-server/app.js?v=20260513-lp3-purpose" defer></script>
+</body>
+</html>
