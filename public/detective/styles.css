@@ -893,7 +893,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     flex-direction: column; text-align: center;
     gap: 1.25rem;
   }
-  .matching-cta-btn { width: 100%; justify-content: center; }
+  .matching-cta-btn {
+    width: 100%; justify-content: center;
+    white-space: normal; text-align: center;
+    font-size: .85rem; padding: .8rem 1.25rem;
+  }
 
   .faq-list { grid-template-columns: 1fr; }
 
