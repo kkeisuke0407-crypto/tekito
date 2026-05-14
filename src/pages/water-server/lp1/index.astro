@@ -11,7 +11,7 @@ const services = [
     name: "オーケンウォーター",
     short: "O-KEN WATER",
     badge: "料金重視",
-    catch: "水代を抑えて始めたいなら、まず確認したい宅配水",
+    catch: "水代を抑えつつ、天然水とRO水を選びたい人の第一候補",
     score: "4.8",
     monthly: "RO水 2,696円〜",
     monthlyNote: "12L×2本/回・おトクプラン目安",
@@ -28,9 +28,9 @@ const services = [
     fit: "毎月の水代を抑えたい人",
     points: [
       "RO水の料金目安が低く、価格検索ユーザーと相性が良い",
-      "天然水プランも選べるため、安さと水の種類を比較しやすい",
-      "初期費用・送料・レンタル料の条件を公式でまとめて確認できる",
-      "契約期間と解約条件まで見てから判断したい人に向く"
+      "富士山・大分日田・京都丹波など、天然水の選択肢も比較できる",
+      "下置きタイプのサーバーもあり、ボトル交換の負担を抑えやすい",
+      "LINEで注文や配送間隔の変更ができるため、余りすぎ対策もしやすい"
     ],
     campaign: "2026年5月14日確認：新規申込で初回天然水2本またはプラスプレミアム2本＋丹波産コシヒカリ2kg。乗り換えはJCBギフト券10,000円分。",
     cta: "RO水の料金を公式で確認する",
@@ -47,7 +47,7 @@ const services = [
     name: "every frecious",
     short: "エブリィフレシャス",
     badge: "浄水型",
-    catch: "水をたくさん使う家庭は、定額制で読みやすい",
+    catch: "水をたくさん使う家庭は、定額制で月額を読みやすい",
     score: "4.7",
     monthly: "2,750円〜/月",
     monthlyNote: "lite税込・水道代別",
@@ -64,11 +64,12 @@ const services = [
     fit: "ボトル交換を避けたい人",
     points: [
       "ボトル注文が不要で、使う量が増えても月額を読みやすい",
-      "卓上タイプを選べるため、一人暮らしや省スペースにも合わせやすい",
+      "tall・mini・tall+cafe・liteなど、置き場所や使い方で選びやすい",
+      "冷水・温水だけでなく、常温水など温度帯を使い分けたい人にも合う",
       "水の受け取りや空ボトル処理の手間を減らせる",
       "3年契約などの条件は必ず公式で確認したい"
     ],
-    campaign: "2026年5月14日確認：WEB限定で初月レンタル料無料＋Amazonギフト券3,300円分。乗り換えは最大16,500円キャッシュバック。",
+    campaign: "2026年5月11日〜5月17日：WEB限定で初月レンタル料無料＋Amazonギフト券3,300円分。乗り換えは解約金最大16,500円キャッシュバック、解約金なしならAmazonギフト券5,000円分。tall+cafeはUCCドリップポッド15杯分の初回特典付き。各キャンペーンは併用不可。",
     cta: "定額プランを公式で確認する",
     affiliate: "every_frecious",
     link: "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3H144Q+2B8Y+15PEXE",
@@ -191,7 +192,10 @@ const serviceMap = Object.fromEntries(services.map((service) => [service.id, ser
 
 const splitCampaign = (campaign: string) => {
   const [checkedRaw, bodyRaw = ""] = campaign.split("：");
-  const checked = checkedRaw?.includes("確認") ? checkedRaw : "公式で確認";
+  const hasPrefix = campaign.includes("：");
+  const checked = hasPrefix && (checkedRaw?.includes("確認") || /\d{4}年/.test(checkedRaw || ""))
+    ? checkedRaw
+    : "公式で確認";
   const body = bodyRaw || campaign;
   const items = body
     .split("。")
@@ -213,7 +217,7 @@ const campaignQuick: Record<string, { primary: string; secondary: string }> = {
   },
   every: {
     primary: "初月無料 + Amazon3,300円",
-    secondary: "乗換 最大16,500円"
+    secondary: "乗換 最大16,500円 or 5,000円"
   },
   ocean: {
     primary: "月額4,378円目安",
