@@ -42,7 +42,7 @@ const usageRows = [
 <body class="lp3-purpose-page">
   <header class="ws-header">
     <div class="ws-header-inner">
-      <a class="ws-logo" href="/water-server/lp1/">
+      <a class="ws-logo" href="/water-server/lp1">
         <span class="ws-logo-icon">水</span>
         <span>水代見直しナビ</span>
       </a>
@@ -64,6 +64,7 @@ const usageRows = [
           <div class="lp3-hero-actions">
             <a class="lp3-primary-cta" href="#ranking">ランキングを見る</a>
             <a class="lp3-secondary-cta" href="#top3">TOP3を比較</a>
+            <a class="lp3-secondary-cta" href="/water-server/lp1">総合TOPへ戻る</a>
           </div>
         </div>
         <aside class="lp3-hero-panel reveal-up" aria-label="おすすめTOP3">
@@ -116,6 +117,15 @@ const usageRows = [
               <tr>
                 <th>月額目安</th>
                 {topThree.map((service) => <td><b>{service.monthly}</b><small>{service.monthlyNote}</small></td>)}
+              </tr>
+              <tr>
+                <th>費用内訳</th>
+                {topThree.map((service) => (
+                  <td>
+                    {service.serverFee}
+                    <small>初期費用 {service.initialFee} / {service.shipping}</small>
+                  </td>
+                ))}
               </tr>
               <tr>
                 <th>種類</th>
@@ -183,6 +193,9 @@ const usageRows = [
                   <div class="lp3-spec-grid">
                     <dl><dt>月額料金</dt><dd>{service.monthly}<small>{service.monthlyNote}</small></dd></dl>
                     <dl><dt>サーバー代</dt><dd>{service.serverFee}</dd></dl>
+                    <dl><dt>初期費用</dt><dd>{service.initialFee}</dd></dl>
+                    <dl><dt>配送/補充</dt><dd>{service.shipping}</dd></dl>
+                    <dl><dt>契約条件</dt><dd>{service.contract}</dd></dl>
                     <dl><dt>温水</dt><dd>{service.hot}</dd></dl>
                     <dl><dt>冷水</dt><dd>{service.cold}</dd></dl>
                     <dl><dt>水の種類</dt><dd>{service.waterType}</dd></dl>
@@ -258,6 +271,7 @@ const usageRows = [
           <h2>ほかの条件でも比較する</h2>
         </div>
         <div class="lp3-related-links">
+          <a href="/water-server/lp1">総合TOP</a>
           {purposePageNav.map((item) => (
             <a class={item.href === `/water-server/lp1/${page.slug}` ? "is-current" : ""} href={item.href}>{item.label}</a>
           ))}

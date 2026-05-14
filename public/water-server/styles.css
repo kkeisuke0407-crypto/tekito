@@ -2569,7 +2569,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .lp3-related-links {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: .65rem;
 }
 .lp3-related-links a {

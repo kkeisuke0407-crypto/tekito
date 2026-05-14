@@ -166,12 +166,12 @@ export const waterServerServices = {
     badge: "水道直結",
     type: "水道直結型",
     waterType: "水道水浄水",
-    monthly: "定額型",
-    monthlyNote: "設置条件は公式確認",
-    serverFee: "月額制",
-    initialFee: "公式で確認",
+    monthly: "4,378円/月目安",
+    monthlyNote: "税込・水道代別 / 定額制",
+    serverFee: "月額4,378円目安",
+    initialFee: "0円目安",
     shipping: "ボトル配送なし",
-    contract: "公式で確認",
+    contract: "設置条件により確認",
     hot: "公式で確認",
     cold: "公式で確認",
     bottle: "ボトル不要",
@@ -179,10 +179,11 @@ export const waterServerServices = {
     payment: "公式で確認",
     score: "4.3",
     catch: "給水もボトル交換も減らしたい家庭・オフィス向け。",
-    campaign: "設置可否・工事条件・キャンペーンは公式で確認。",
+    campaign: "月額4,378円目安。設置可否・工事条件・最新特典は公式で確認。",
     points: [
-      "水道直結型なので、補充やボトル保管の手間を減らしやすい",
-      "水を多く使う家庭ほど検討価値がある",
+      "水道直結型なので、補充・ボトル保管・受け取りの手間を減らしやすい",
+      "水を多く使ってもボトル代が増えにくく、月額の見通しを立てやすい",
+      "家族利用や料理利用が多い家庭ほど、宅配水との比較価値が高い",
       "賃貸や水栓形状によって設置可否の確認が必要"
     ],
     tags: ["水道直結", "ボトル不要", "多量利用", "家族向け", "法人にも"],
@@ -223,7 +224,7 @@ export const purposePages = {
       "宅配水は注文ノルマ・休止手数料を確認",
       "浄水型は水を多く使うほど有利になりやすい"
     ],
-    services: pick(["oken", "every", "waterOne", "cosmo", "frecious"]),
+    services: pick(["oken", "every", "ocean", "waterOne", "frecious"]),
     guideTitle: "安いサーバーを選ぶ時の見方",
     guide: [
       "1人ならボトルが余る可能性があるため、配送スキップや卓上型も確認。",
@@ -247,7 +248,7 @@ export const purposePages = {
       "水道水補充型か水道直結型かを確認",
       "設置場所とカートリッジ交換条件を見る"
     ],
-    services: pick(["every", "ocean", "oken", "cosmo", "frecious"]),
+    services: pick(["every", "ocean", "oken", "frecious", "waterOne"]),
     guideTitle: "浄水型が向いている人",
     guide: [
       "飲み水だけでなく、料理・コーヒー・お茶にも使いたい人。",
@@ -271,7 +272,7 @@ export const purposePages = {
       "月24Lを使い切れるかを先に見る",
       "配送スキップ・休止条件を確認"
     ],
-    services: pick(["every", "frecious", "oken", "waterOne", "cosmo"]),
+    services: pick(["every", "frecious", "oken", "waterOne", "ocean"]),
     guideTitle: "一人暮らしで失敗しやすいポイント",
     guide: [
       "飲用中心だと12Lボトル1本で10〜20日持つため、月2本が多い場合があります。",
@@ -295,7 +296,7 @@ export const purposePages = {
       "料理・お茶にも使うなら定額型を比較",
       "重いボトル交換の負担も確認"
     ],
-    services: pick(["every", "oken", "ocean", "cosmo", "waterOne"]),
+    services: pick(["every", "oken", "ocean", "waterOne", "frecious"]),
     guideTitle: "家族で使う時の水量目安",
     guide: [
       "12Lボトル1本は、4人家族だと約2.5〜5日が目安です。",
