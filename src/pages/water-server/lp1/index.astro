@@ -189,6 +189,52 @@ const services = [
 
 const serviceMap = Object.fromEntries(services.map((service) => [service.id, service]));
 
+const splitCampaign = (campaign: string) => {
+  const [checkedRaw, bodyRaw = ""] = campaign.split("：");
+  const checked = checkedRaw?.includes("確認") ? checkedRaw : "公式で確認";
+  const body = bodyRaw || campaign;
+  const items = body
+    .split("。")
+    .map((item) => item.trim())
+    .filter(Boolean);
+
+  return {
+    checked,
+    primary: items[0] || body,
+    details: items.slice(1),
+    items
+  };
+};
+
+const campaignQuick: Record<string, { primary: string; secondary: string }> = {
+  oken: {
+    primary: "初回水2本 or 米2kg",
+    secondary: "乗換 JCB1万円"
+  },
+  every: {
+    primary: "初月無料 + Amazon3,300円",
+    secondary: "乗換 最大16,500円"
+  },
+  ocean: {
+    primary: "月額4,378円目安",
+    secondary: "特典は申込画面で確認"
+  },
+  frecious: {
+    primary: "初回天然水1箱無料",
+    secondary: "乗換 最大16,500円"
+  },
+  "water-one": {
+    primary: "新規申込キャンペーン表示",
+    secondary: "レンタル料永年無料など"
+  }
+};
+
+const campaignLabel = (text: string, index: number) => {
+  if (text.includes("乗り換え") || text.includes("他社") || text.includes("解約金")) return "乗換";
+  if (text.includes("確認") || text.includes("要確認") || text.includes("条件")) return "注意";
+  return index === 0 ? "特典" : "補足";
+};
+
 const purposeRankings = [
   {
     id: "purpose-cost",
@@ -834,10 +880,35 @@ const faqJsonLd = {
       box-shadow: inset 0 0 0 3px rgba(255, 211, 64, .75);
     }
     .lp1-campaign-cell {
-      color: #704e00;
-      font-weight: 900;
-      line-height: 1.55;
+      min-width: 190px;
+      color: #3f2f00;
+      line-height: 1.45;
       background: #fffdf0;
+    }
+    .lp1-campaign-date {
+      display: inline-flex;
+      margin-bottom: .35rem;
+      padding: .16rem .45rem;
+      border-radius: 999px;
+      color: #855700;
+      background: #fff1b8;
+      border: 1px solid #f7d76f;
+      font-size: .68rem;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    .lp1-campaign-main {
+      display: block;
+      color: #1f2937;
+      font-size: .82rem;
+      font-weight: 900;
+    }
+    .lp1-campaign-sub {
+      display: block;
+      margin-top: .28rem;
+      color: #5b6675;
+      font-size: .72rem;
+      font-weight: 800;
     }
 
     .lp1-usage {
@@ -1046,13 +1117,72 @@ const faqJsonLd = {
       box-shadow: 0 0 0 4px #e6fbff;
     }
     .lp1-campaign {
-      background: linear-gradient(90deg, #fff5c2, #fffbe8);
-      border: 2px solid #ffe28a;
+      background: linear-gradient(135deg, #fff8d8, #fffef7);
+      border: 2px solid #ffd66e;
       border-radius: 12px;
-      padding: .85rem;
+      padding: .85rem .9rem;
       margin: .8rem 0 1rem;
+      color: #3f2f00;
+    }
+    .lp1-campaign-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .7rem;
+      padding-bottom: .55rem;
+      border-bottom: 1px solid rgba(216, 154, 0, .22);
+    }
+    .lp1-campaign-head b {
+      color: #7a4f00;
+      font-size: .9rem;
       font-weight: 900;
-      color: #735100;
+    }
+    .lp1-campaign-head span {
+      flex: 0 0 auto;
+      border-radius: 999px;
+      padding: .18rem .55rem;
+      color: #7a4f00;
+      background: #fff2bd;
+      border: 1px solid #f4d06b;
+      font-size: .72rem;
+      font-weight: 900;
+    }
+    .lp1-campaign-list {
+      display: grid;
+      gap: .5rem;
+      margin: .65rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .lp1-campaign-list li {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: .55rem;
+      align-items: start;
+      line-height: 1.55;
+      font-weight: 800;
+    }
+    .lp1-campaign-label {
+      display: inline-flex;
+      justify-content: center;
+      border-radius: 8px;
+      padding: .18rem .35rem;
+      color: #fff;
+      background: #f59e0b;
+      font-size: .7rem;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    .lp1-campaign-list span:last-child {
+      color: #273444;
+      font-size: .88rem;
+    }
+    .lp1-campaign-more {
+      margin: .45rem 0 0;
+      color: #64748b;
+      font-size: .76rem;
+      font-weight: 800;
+      line-height: 1.6;
     }
     .lp1-card-actions {
       display: flex;
@@ -1403,6 +1533,18 @@ const faqJsonLd = {
       .lp1-score { grid-column: 1 / -1; justify-self: start; }
       .lp1-card-rank { width: 54px; height: 54px; }
       .lp1-card-body { padding: .85rem; }
+      .lp1-campaign-head {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: .35rem;
+      }
+      .lp1-campaign-list li {
+        grid-template-columns: 1fr;
+        gap: .3rem;
+      }
+      .lp1-campaign-label {
+        justify-self: start;
+      }
       .lp1-chip-grid { grid-template-columns: 1fr; }
       .lp1-purpose-intro { text-align: left; font-size: .93rem; }
       .lp1-purpose-nav { grid-template-columns: 1fr; }
@@ -1553,7 +1695,20 @@ const faqJsonLd = {
                 </tr>
                 <tr>
                   <td>最新キャンペーン</td>
-                  {services.map((service) => <td class="lp1-campaign-cell">{service.campaign}</td>)}
+                  {services.map((service) => {
+                    const campaign = splitCampaign(service.campaign);
+                    const quick = campaignQuick[service.id] || {
+                      primary: campaign.primary,
+                      secondary: campaign.details[0] || ""
+                    };
+                    return (
+                      <td class="lp1-campaign-cell">
+                        <span class="lp1-campaign-date">{campaign.checked}</span>
+                        <strong class="lp1-campaign-main">{quick.primary}</strong>
+                        {quick.secondary && <span class="lp1-campaign-sub">{quick.secondary}</span>}
+                      </td>
+                    );
+                  })}
                 </tr>
                 <tr>
                   <td>タイプ</td>
@@ -1689,7 +1844,27 @@ const faqJsonLd = {
                   <ul class="lp1-point-list">
                     {service.points.map((point) => <li>{point}</li>)}
                   </ul>
-                  <div class="lp1-campaign">{service.campaign}</div>
+                  <div class="lp1-campaign">
+                    <div class="lp1-campaign-head">
+                      <b>キャンペーン確認</b>
+                      <span>{splitCampaign(service.campaign).checked}</span>
+                    </div>
+                    <ul class="lp1-campaign-list">
+                      <li>
+                        <span class="lp1-campaign-label">{campaignLabel(splitCampaign(service.campaign).primary, 0)}</span>
+                        <span>{splitCampaign(service.campaign).primary}</span>
+                      </li>
+                      {splitCampaign(service.campaign).details[0] && (
+                        <li>
+                          <span class="lp1-campaign-label">{campaignLabel(splitCampaign(service.campaign).details[0], 1)}</span>
+                          <span>{splitCampaign(service.campaign).details[0]}</span>
+                        </li>
+                      )}
+                    </ul>
+                    {splitCampaign(service.campaign).details.length > 1 && (
+                      <p class="lp1-campaign-more">{splitCampaign(service.campaign).details.slice(1).join("。")}。</p>
+                    )}
+                  </div>
                   <div class="lp1-card-actions">
                     <a class="lp1-main-cta" href={service.link} data-affiliate={service.affiliate} data-track={`lp1_card_${service.id}`} rel="nofollow sponsored">{service.cta}</a>
                     <a class="lp1-sub-cta" href="#quick" data-scroll-to="#quick" data-track={`lp1_back_table_${service.id}`}>比較表へ戻る</a>

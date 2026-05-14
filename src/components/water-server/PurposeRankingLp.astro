@@ -11,6 +11,28 @@ const usageRows = [
   ["2人", "1.2〜2.4L/日", "12Lで約5〜10日", "月2〜5本目安"],
   ["4人家族", "2.4〜4.8L/日", "12Lで約2.5〜5日", "月5〜10本目安"]
 ];
+
+const splitCampaign = (campaign: string) => {
+  const [checkedRaw, bodyRaw = ""] = campaign.split("：");
+  const checked = checkedRaw?.includes("確認") ? checkedRaw : "公式で確認";
+  const body = bodyRaw || campaign;
+  const items = body
+    .split("。")
+    .map((item) => item.trim())
+    .filter(Boolean);
+
+  return {
+    checked,
+    primary: items[0] || body,
+    details: items.slice(1)
+  };
+};
+
+const campaignLabel = (text: string, index: number) => {
+  if (text.includes("乗り換え") || text.includes("他社") || text.includes("解約金")) return "乗換";
+  if (text.includes("確認") || text.includes("要確認") || text.includes("条件")) return "注意";
+  return index === 0 ? "特典" : "補足";
+};
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -208,8 +230,25 @@ const usageRows = [
                     {service.points.map((point) => <li>{point}</li>)}
                   </ul>
                   <div class="lp3-campaign-box">
-                    <b>最新キャンペーン確認</b>
-                    <p>{service.campaign}</p>
+                    <div class="lp3-campaign-head">
+                      <b>キャンペーン確認</b>
+                      <span>{splitCampaign(service.campaign).checked}</span>
+                    </div>
+                    <ul class="lp3-campaign-list">
+                      <li>
+                        <span>{campaignLabel(splitCampaign(service.campaign).primary, 0)}</span>
+                        <b>{splitCampaign(service.campaign).primary}</b>
+                      </li>
+                      {splitCampaign(service.campaign).details[0] && (
+                        <li>
+                          <span>{campaignLabel(splitCampaign(service.campaign).details[0], 1)}</span>
+                          <b>{splitCampaign(service.campaign).details[0]}</b>
+                        </li>
+                      )}
+                    </ul>
+                    {splitCampaign(service.campaign).details.length > 1 && (
+                      <p>{splitCampaign(service.campaign).details.slice(1).join("。")}。</p>
+                    )}
                   </div>
                   <div class="lp3-card-actions">
                     <a class="lp3-detail-cta" href="#top3">比較表に戻る</a>
