@@ -1,8 +1,6 @@
 name: Daily article draft
 
 on:
-  schedule:
-    - cron: '13 4 * * *'  # 04:13 UTC every day
   workflow_dispatch:
 
 permissions:
