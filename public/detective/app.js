@@ -71,6 +71,30 @@ document.addEventListener("DOMContentLoaded", function () {
   // ── js-loaded flag (enables fade-up CSS) ─────────────
   document.body.classList.add('js-loaded');
 
+  // ── Sticky CTA bar ────────────────────────────────────
+  var stickyCta = document.getElementById('sticky-cta');
+  var stickyClose = document.getElementById('sticky-close');
+  var heroEl = document.querySelector('.hero');
+  var stickyDismissed = false;
+
+  if (stickyCta && heroEl && 'IntersectionObserver' in window) {
+    var stickyIO = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (!stickyDismissed) {
+          stickyCta.classList.toggle('visible', !entry.isIntersecting);
+        }
+      });
+    }, { threshold: 0.1 });
+    stickyIO.observe(heroEl);
+  }
+
+  if (stickyClose) {
+    stickyClose.addEventListener('click', function() {
+      stickyDismissed = true;
+      stickyCta.classList.remove('visible');
+    });
+  }
+
   // ── Scroll fade-in ────────────────────────────────────
   var fadeEls = document.querySelectorAll('.fade-up');
   if (fadeEls.length && 'IntersectionObserver' in window) {
