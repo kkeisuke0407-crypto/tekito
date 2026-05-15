@@ -233,6 +233,36 @@ const campaignQuick: Record<string, { primary: string; secondary: string }> = {
   }
 };
 
+const topPickCards = [
+  {
+    service: serviceMap.oken,
+    label: "料金重視",
+    title: "水代を抑えるなら",
+    verdict: "まずはオーケンウォーター",
+    note: "月額の目安を先に把握したい人が、最初に確認しやすい宅配水候補です。",
+    points: ["12L×2本の料金目安を確認", "水代を抑えたい人向け"],
+    track: "lp1_top_pick_oken"
+  },
+  {
+    service: serviceMap.every,
+    label: "期限あり",
+    title: "5/17までの特典を見るなら",
+    verdict: "every frecious",
+    note: "ボトル交換なしの浄水型。期限付き特典は、終了前に条件だけでも確認したい候補です。",
+    points: ["ボトル交換なし", "5/17まで実質2ヶ月分無料"],
+    track: "lp1_top_pick_every"
+  },
+  {
+    service: serviceMap.ocean,
+    label: "多量利用",
+    title: "ボトル管理を減らすなら",
+    verdict: "OCEAN",
+    note: "水道直結型なので、家族利用や料理利用が多い家庭は確認する価値があります。",
+    points: ["ボトル注文なし", "水を多く使う家庭向け"],
+    track: "lp1_top_pick_ocean"
+  }
+];
+
 const diagnosisCards = [
   {
     label: "料金",
@@ -532,7 +562,7 @@ const faqJsonLd = {
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/water-server/styles.css?v=20260513-lp1-index" />
+  <link rel="stylesheet" href="/water-server/styles.css?v=20260515-lp1-clean" />
   <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
@@ -573,7 +603,7 @@ const faqJsonLd = {
     .lp1-top-inner,
     .lp1-nav-inner,
     .lp1-wrap {
-      width: min(1120px, calc(100% - 28px));
+      width: min(1240px, calc(100% - 28px));
       margin: 0 auto;
     }
     .lp1-top-inner {
@@ -641,18 +671,18 @@ const faqJsonLd = {
     .lp1-hero-inner {
       width: min(1120px, calc(100% - 28px));
       margin: 0 auto;
-      min-height: 470px;
+      min-height: 500px;
       display: grid;
       align-items: center;
       padding: 3.2rem 0 4.25rem;
     }
     .lp1-hero-card {
-      width: min(560px, 100%);
+      width: min(600px, 100%);
       background: rgba(255,255,255,.92);
       border: 4px solid rgba(255,255,255,.95);
       border-radius: 18px;
       box-shadow: var(--lp-shadow);
-      padding: 2rem;
+      padding: 2rem 2.1rem;
       position: relative;
       animation: lpPop .55s ease-out both;
     }
@@ -721,10 +751,10 @@ const faqJsonLd = {
     }
     .lp1-deadline-alert {
       display: grid;
-      grid-template-columns: auto 1fr auto;
+      grid-template-columns: auto minmax(0, 1fr);
       align-items: center;
       gap: .75rem;
-      margin: 0 0 1.15rem;
+      margin: 0 0 1rem;
       padding: .9rem;
       border: 3px solid #ff3d2e;
       border-radius: 16px;
@@ -787,6 +817,11 @@ const faqJsonLd = {
       font-weight: 900;
       text-decoration: none;
     }
+    .lp1-deadline-alert .lp1-countdown {
+      grid-column: 1 / -1;
+      width: fit-content;
+      justify-self: start;
+    }
     .lp1-deadline-alert.is-expired {
       animation: none;
       border-color: #cbd5e1;
@@ -799,74 +834,6 @@ const faqJsonLd = {
     }
     .lp1-deadline-alert.is-expired strong {
       color: #334155;
-    }
-    .lp1-campaign-visual {
-      margin: .2rem 0 1.15rem;
-      padding: 1rem;
-      border-radius: 18px;
-      color: #fff;
-      background:
-        radial-gradient(circle at 88% 10%, rgba(255,255,255,.32), transparent 24%),
-        linear-gradient(135deg, #0f9bab 0%, #10b981 48%, #f97316 100%);
-      box-shadow: 0 18px 34px rgba(15, 155, 171, .2);
-      position: relative;
-      overflow: hidden;
-    }
-    .lp1-campaign-visual::before {
-      content: "WEB限定";
-      position: absolute;
-      right: -38px;
-      top: 18px;
-      width: 160px;
-      padding: .28rem 0;
-      background: #e11d48;
-      color: #fff;
-      text-align: center;
-      font-size: .72rem;
-      font-weight: 900;
-      transform: rotate(35deg);
-      box-shadow: 0 5px 14px rgba(0,0,0,.18);
-    }
-    .lp1-campaign-visual-kicker {
-      display: inline-flex;
-      padding: .22rem .58rem;
-      border-radius: 999px;
-      background: rgba(255,255,255,.18);
-      border: 1px solid rgba(255,255,255,.5);
-      font-size: .72rem;
-      font-weight: 900;
-      letter-spacing: 0;
-    }
-    .lp1-campaign-visual strong {
-      display: block;
-      margin-top: .45rem;
-      font-size: clamp(1.35rem, 3.2vw, 2.2rem);
-      line-height: 1.1;
-      letter-spacing: 0;
-      text-shadow: 0 2px 0 rgba(0,0,0,.12);
-    }
-    .lp1-campaign-visual strong em {
-      color: #fff176;
-      font-style: normal;
-    }
-    .lp1-campaign-visual-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: .55rem;
-      margin-top: .85rem;
-    }
-    .lp1-campaign-visual-grid span {
-      display: grid;
-      place-items: center;
-      min-height: 54px;
-      padding: .45rem;
-      border-radius: 12px;
-      background: rgba(255,255,255,.18);
-      border: 1px solid rgba(255,255,255,.42);
-      text-align: center;
-      font-size: .82rem;
-      font-weight: 900;
-      line-height: 1.35;
     }
     .lp1-fit-finder {
       background: #fff;
@@ -996,7 +963,7 @@ const faqJsonLd = {
 
     .lp1-wrap {
       display: grid;
-      grid-template-columns: 220px minmax(0, 1fr);
+      grid-template-columns: 190px minmax(0, 1fr);
       gap: 1.25rem;
       padding: 2rem 0 4rem;
       align-items: start;
@@ -1057,6 +1024,125 @@ const faqJsonLd = {
       display: grid;
       gap: 1.45rem;
     }
+    .lp1-top-picks {
+      background: #fff;
+      border: 2px solid var(--lp-line);
+      border-radius: 18px;
+      box-shadow: var(--lp-shadow);
+      overflow: hidden;
+    }
+    .lp1-top-picks-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: .95rem 1rem;
+      color: #fff;
+      background: linear-gradient(90deg, #0f9bab, #0f5f9e);
+    }
+    .lp1-top-picks-head h2 {
+      margin: 0;
+      font-size: clamp(1.12rem, 2.3vw, 1.55rem);
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+    .lp1-top-picks-head span {
+      display: inline-flex;
+      flex: 0 0 auto;
+      border-radius: 999px;
+      padding: .32rem .7rem;
+      color: #704e00;
+      background: #fff5c2;
+      font-size: .78rem;
+      font-weight: 900;
+    }
+    .lp1-top-picks-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .85rem;
+      padding: 1rem;
+      background: linear-gradient(180deg, #f5fdff, #fff);
+    }
+    .lp1-top-pick {
+      display: grid;
+      gap: .62rem;
+      min-height: 100%;
+      padding: 1rem;
+      border-radius: 15px;
+      border: 1px solid #cceff4;
+      background: #fff;
+      box-shadow: 0 10px 22px rgba(7,119,131,.08);
+    }
+    .lp1-top-pick.is-urgent {
+      border-color: #ff9da7;
+      box-shadow: 0 14px 28px rgba(225, 29, 72, .12);
+      background: linear-gradient(180deg, #fff, #fff7f4);
+    }
+    .lp1-top-pick-label {
+      display: inline-flex;
+      width: fit-content;
+      border-radius: 999px;
+      padding: .26rem .62rem;
+      color: #fff;
+      background: var(--lp-teal);
+      font-size: .78rem;
+      font-weight: 900;
+    }
+    .lp1-top-pick.is-urgent .lp1-top-pick-label {
+      background: #e11d48;
+    }
+    .lp1-top-pick h3 {
+      margin: 0;
+      color: var(--lp-muted);
+      font-size: .9rem;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+    .lp1-top-pick strong {
+      color: var(--lp-ink);
+      font-size: 1.28rem;
+      font-weight: 900;
+      line-height: 1.3;
+    }
+    .lp1-top-pick p {
+      margin: 0;
+      color: #405763;
+      font-size: .9rem;
+      font-weight: 700;
+      line-height: 1.7;
+    }
+    .lp1-top-pick ul {
+      display: grid;
+      gap: .35rem;
+      margin: .1rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .lp1-top-pick li {
+      position: relative;
+      padding-left: 1.2rem;
+      color: #23414c;
+      font-size: .84rem;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+    .lp1-top-pick li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .55rem;
+      width: .52rem;
+      height: .52rem;
+      border-radius: 50%;
+      background: var(--lp-teal);
+    }
+    .lp1-top-pick .lp1-main-cta {
+      margin-top: auto;
+      width: 100%;
+      min-height: 48px;
+      padding: .75rem 1rem;
+      font-size: .9rem;
+    }
     .lp1-section-title {
       display: flex;
       align-items: center;
@@ -1095,15 +1181,15 @@ const faqJsonLd = {
     }
     .lp1-compare table {
       width: 100%;
-      min-width: 1180px;
+      min-width: 1040px;
       border-collapse: collapse;
       text-align: center;
-      font-size: .92rem;
+      font-size: .86rem;
     }
     .lp1-compare th,
     .lp1-compare td {
       border: 1px solid #d8eef2;
-      padding: .75rem .65rem;
+      padding: .65rem .55rem;
       vertical-align: middle;
     }
     .lp1-compare thead th {
@@ -1116,7 +1202,7 @@ const faqJsonLd = {
       background: var(--lp-teal);
       color: #fff;
       font-weight: 900;
-      width: 140px;
+      width: 118px;
       position: sticky;
       left: 0;
       z-index: 2;
@@ -1817,6 +1903,12 @@ const faqJsonLd = {
       .lp1-sidebar { position: static; order: 2; }
       .lp1-main { order: 1; }
       .lp1-side-box { display: none; }
+      .lp1-top-picks-grid { grid-template-columns: 1fr; }
+      .lp1-top-picks-head {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: .5rem;
+      }
       .lp1-usage-grid { grid-template-columns: 1fr; }
       .lp1-card-body { grid-template-columns: 1fr; }
       .lp1-card-media { max-width: 340px; }
@@ -1851,9 +1943,6 @@ const faqJsonLd = {
       .lp1-countdown,
       .lp1-alert-cta {
         width: 100%;
-      }
-      .lp1-campaign-visual-grid {
-        grid-template-columns: 1fr;
       }
       .lp1-cta-row { display: grid; grid-template-columns: 1fr; }
       .lp1-main-cta, .lp1-sub-cta { width: 100%; }
@@ -1928,8 +2017,8 @@ const faqJsonLd = {
     <div class="lp1-nav-inner">
       <a href="#fit" data-scroll-to="#fit">診断</a>
       <a href="#quick" data-scroll-to="#quick">早見表</a>
-      <a href="#usage" data-scroll-to="#usage">水量目安</a>
       <a href="#ranking" data-scroll-to="#ranking">ランキング</a>
+      <a href="#usage" data-scroll-to="#usage">水量目安</a>
       <a href="#search" data-scroll-to="#search">目的別</a>
       <a href="#faq" data-scroll-to="#faq">基礎情報</a>
     </div>
@@ -1956,15 +2045,6 @@ const faqJsonLd = {
             <span class="lp1-countdown">終了まで<b data-countdown-deadline="2026-05-17T23:59:59+09:00">計算中</b></span>
             <a class="lp1-alert-cta" href="https://px.a8.net/svt/ejp?a8mat=4B1XE4+3H144Q+2B8Y+15PEXE" data-affiliate="every_frecious" data-track="lp1_hero_every_deadline" rel="nofollow sponsored">期限前に公式特典を見る</a>
           </div>
-          <div class="lp1-campaign-visual" aria-label="every frecious キャンペーン速報">
-            <span class="lp1-campaign-visual-kicker">キャンペーン速報</span>
-            <strong>5/17(日)まで <em>実質2ヶ月分無料</em></strong>
-            <div class="lp1-campaign-visual-grid">
-              <span>お届け月<br />レンタル料無料</span>
-              <span>Amazonギフト券<br />3,300円分</span>
-              <span>乗り換え特典も<br />公式で確認</span>
-            </div>
-          </div>
           <div class="lp1-cta-row">
             <a class="lp1-main-cta" href="https://px.a8.net/svt/ejp?a8mat=4B1XE4+325A0A+1LOO+5Z6WY" data-affiliate="oken" data-track="lp1_hero_oken" rel="nofollow sponsored">1位の料金条件を確認する</a>
             <a class="lp1-sub-cta" href="#quick" data-scroll-to="#quick" data-track="lp1_hero_compare">比較表から見る</a>
@@ -1976,24 +2056,41 @@ const faqJsonLd = {
     <div class="lp1-wrap">
       <aside class="lp1-sidebar" aria-label="サイドメニュー">
         <div class="lp1-side-box">
-          <div class="lp1-side-title">目的別ページ</div>
+          <div class="lp1-side-title">まず見る順</div>
           <a class="lp1-side-link" href="#quick" data-scroll-to="#quick"><span class="lp1-side-badge">総</span>総合評価ランキング</a>
+          <a class="lp1-side-link" href="#ranking" data-scroll-to="#ranking"><span class="lp1-side-badge">公</span>公式条件を見る</a>
           <a class="lp1-side-link" href="#usage" data-scroll-to="#usage"><span class="lp1-side-badge">量</span>水量・ボトル目安</a>
           <a class="lp1-side-link" href="/water-server/lp1/price"><span class="lp1-side-badge">安</span>料金重視</a>
           <a class="lp1-side-link" href="/water-server/lp1/jousui"><span class="lp1-side-badge">浄</span>浄水型・定額</a>
           <a class="lp1-side-link" href="/water-server/lp1/solo"><span class="lp1-side-badge">単</span>一人暮らし向け</a>
           <a class="lp1-side-link" href="/water-server/lp1/family"><span class="lp1-side-badge">家</span>家族向け</a>
-          <a class="lp1-side-link" href="#faq" data-scroll-to="#faq"><span class="lp1-side-badge">基</span>基礎情報</a>
-        </div>
-        <div class="lp1-side-box lp1-brand">
-          <div class="lp1-side-title">人気ブランド一覧</div>
-          {services.map((service) => (
-            <a class="lp1-side-link" href={`#${service.id}`} data-scroll-to={`#${service.id}`}>{service.name}</a>
-          ))}
         </div>
       </aside>
 
       <div class="lp1-main">
+        <section class="lp1-top-picks reveal-up" aria-label="最初に確認する3つの候補">
+          <div class="lp1-top-picks-head">
+            <h2>迷ったらこの3つから確認</h2>
+            <span>迷った人向け</span>
+          </div>
+          <div class="lp1-top-picks-grid">
+            {topPickCards.map((pick) => (
+              <article class={`lp1-top-pick ${pick.service.id === "every" ? "is-urgent" : ""}`}>
+                <span class="lp1-top-pick-label">{pick.label}</span>
+                <h3>{pick.title}</h3>
+                <strong>{pick.verdict}</strong>
+                <p>{pick.note}</p>
+                <ul>
+                  {pick.points.map((point) => <li>{point}</li>)}
+                </ul>
+                <a class="lp1-main-cta" href={pick.service.link} data-affiliate={pick.service.affiliate} data-track={pick.track} rel="nofollow sponsored">
+                  公式条件を確認する
+                </a>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section class="lp1-fit-finder reveal-up" id="fit">
           <div class="lp1-fit-head">
             <h2>30秒で候補を絞る 条件診断</h2>
