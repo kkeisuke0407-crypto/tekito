@@ -69,7 +69,7 @@ const services = [
       "水の受け取りや空ボトル処理の手間を減らせる",
       "3年契約などの条件は必ず公式で確認したい"
     ],
-    campaign: "2026年5月11日〜5月17日：WEB限定で初月レンタル料無料＋Amazonギフト券3,300円分。乗り換えは解約金最大16,500円キャッシュバック、解約金なしならAmazonギフト券5,000円分。抽選特典あり。各キャンペーンは併用不可。",
+    campaign: "2026年5月11日〜5月17日：WEB限定でレンタル料が実質2ヶ月分無料。内訳はお届け月のレンタル料無料＋Amazonギフト券3,300円分。乗り換えは解約金最大16,500円キャッシュバック、解約金なしならAmazonギフト券5,000円分。抽選特典あり。各キャンペーンは併用不可。",
     cta: "定額プランを公式で確認する",
     affiliate: "every_frecious",
     link: "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3H144Q+2B8Y+15PEXE",
@@ -216,8 +216,8 @@ const campaignQuick: Record<string, { primary: string; secondary: string }> = {
     secondary: "乗換 JCB1万円"
   },
   every: {
-    primary: "初月無料 + Amazon3,300円",
-    secondary: "乗換 最大16,500円 or 5,000円"
+    primary: "5/17まで 実質2ヶ月無料",
+    secondary: "終了前に公式条件を確認"
   },
   ocean: {
     primary: "月額4,378円目安",
@@ -684,6 +684,91 @@ const faqJsonLd = {
       font-size: .72rem;
       margin-top: .12rem;
     }
+    .lp1-deadline-alert {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: .75rem;
+      margin: 0 0 1.15rem;
+      padding: .9rem;
+      border: 3px solid #ff3d2e;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #fff1f0 0%, #fff8da 100%);
+      box-shadow: 0 14px 28px rgba(255, 61, 46, .18);
+      animation: lp1-alert-pulse 1.7s ease-in-out infinite;
+    }
+    .lp1-alert-kicker {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 92px;
+      padding: .42rem .68rem;
+      border-radius: 999px;
+      color: #fff;
+      background: #e11d48;
+      box-shadow: 0 4px 0 #9f1239;
+      font-size: .9rem;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    .lp1-deadline-alert strong {
+      color: #86121b;
+      font-size: 1.05rem;
+      line-height: 1.35;
+    }
+    .lp1-countdown {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-width: 118px;
+      padding: .52rem .7rem;
+      border-radius: 12px;
+      color: #fff;
+      background: #111827;
+      font-size: .72rem;
+      font-weight: 900;
+      line-height: 1.25;
+      text-align: center;
+    }
+    .lp1-countdown b {
+      display: block;
+      margin-top: .1rem;
+      color: #facc15;
+      font-size: 1.05rem;
+      letter-spacing: 0;
+    }
+    .lp1-alert-cta {
+      grid-column: 1 / -1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      padding: .65rem 1rem;
+      border-radius: 999px;
+      color: #fff;
+      background: linear-gradient(135deg, #fb4f14, #e11d48);
+      box-shadow: 0 5px 0 #991b1b;
+      font-weight: 900;
+      text-decoration: none;
+    }
+    .lp1-deadline-alert.is-expired {
+      animation: none;
+      border-color: #cbd5e1;
+      background: #f8fafc;
+      box-shadow: none;
+    }
+    .lp1-deadline-alert.is-expired .lp1-alert-kicker {
+      background: #475569;
+      box-shadow: none;
+    }
+    .lp1-deadline-alert.is-expired strong {
+      color: #334155;
+    }
+    @keyframes lp1-alert-pulse {
+      0%, 100% { transform: translateY(0); box-shadow: 0 14px 28px rgba(255, 61, 46, .18); }
+      50% { transform: translateY(-2px); box-shadow: 0 20px 34px rgba(255, 61, 46, .28); }
+    }
     .lp1-cta-row {
       display: flex;
       flex-wrap: wrap;
@@ -888,6 +973,22 @@ const faqJsonLd = {
       color: #3f2f00;
       line-height: 1.45;
       background: #fffdf0;
+    }
+    .lp1-campaign-cell.is-urgent {
+      background: linear-gradient(135deg, #fff1f0, #fff7cc);
+      box-shadow: inset 0 0 0 3px rgba(225, 29, 72, .5);
+    }
+    .lp1-campaign-cell.is-urgent::before {
+      content: "期間限定";
+      display: inline-flex;
+      margin-bottom: .28rem;
+      padding: .14rem .42rem;
+      border-radius: 999px;
+      color: #fff;
+      background: #e11d48;
+      font-size: .68rem;
+      font-weight: 900;
+      white-space: nowrap;
     }
     .lp1-campaign-date {
       display: inline-flex;
@@ -1128,6 +1229,23 @@ const faqJsonLd = {
       margin: .8rem 0 1rem;
       color: #3f2f00;
     }
+    .lp1-campaign.is-urgent {
+      background: linear-gradient(135deg, #fff1f0, #fff8cf);
+      border-color: #ff3d2e;
+      box-shadow: 0 14px 30px rgba(225, 29, 72, .16);
+    }
+    .lp1-campaign.is-urgent::before {
+      content: "5/17(日)まで";
+      display: inline-flex;
+      margin-bottom: .62rem;
+      padding: .26rem .7rem;
+      border-radius: 999px;
+      color: #fff;
+      background: #e11d48;
+      box-shadow: 0 3px 0 #9f1239;
+      font-size: .78rem;
+      font-weight: 900;
+    }
     .lp1-campaign-head {
       display: flex;
       align-items: center;
@@ -1187,6 +1305,17 @@ const faqJsonLd = {
       font-size: .76rem;
       font-weight: 800;
       line-height: 1.6;
+    }
+    .lp1-urgent-note {
+      margin: .65rem 0 0;
+      padding: .62rem .72rem;
+      border-radius: 10px;
+      color: #8a1f11;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      font-size: .82rem;
+      font-weight: 900;
+      line-height: 1.5;
     }
     .lp1-card-actions {
       display: flex;
@@ -1525,6 +1654,15 @@ const faqJsonLd = {
       .lp1-hero h1 { font-size: 1.35rem; }
       .lp1-hero h1 strong { font-size: 2.15rem; }
       .lp1-hero-points { grid-template-columns: 1fr; }
+      .lp1-deadline-alert {
+        grid-template-columns: 1fr;
+        gap: .65rem;
+      }
+      .lp1-alert-kicker,
+      .lp1-countdown,
+      .lp1-alert-cta {
+        width: 100%;
+      }
       .lp1-cta-row { display: grid; grid-template-columns: 1fr; }
       .lp1-main-cta, .lp1-sub-cta { width: 100%; }
       .lp1-section-title {
@@ -1617,6 +1755,12 @@ const faqJsonLd = {
             <div class="lp1-hero-point">条件重視<small>解約金まで確認</small></div>
             <div class="lp1-hero-point">目的別<small>一人暮らし・家族</small></div>
           </div>
+          <div class="lp1-deadline-alert" data-campaign-alert>
+            <span class="lp1-alert-kicker">5/17(日)まで</span>
+            <strong>every freciousのWEB限定特典は終了間近。実質2ヶ月分無料の条件を先に確認。</strong>
+            <span class="lp1-countdown">終了まで<b data-countdown-deadline="2026-05-17T23:59:59+09:00">計算中</b></span>
+            <a class="lp1-alert-cta" href="https://px.a8.net/svt/ejp?a8mat=4B1XE4+3H144Q+2B8Y+15PEXE" data-affiliate="every_frecious" data-track="lp1_hero_every_deadline" rel="nofollow sponsored">期限前に公式特典を見る</a>
+          </div>
           <div class="lp1-cta-row">
             <a class="lp1-main-cta" href="https://px.a8.net/svt/ejp?a8mat=4B1XE4+325A0A+1LOO+5Z6WY" data-affiliate="oken" data-track="lp1_hero_oken" rel="nofollow sponsored">1位の料金条件を確認する</a>
             <a class="lp1-sub-cta" href="#quick" data-scroll-to="#quick" data-track="lp1_hero_compare">比較表から見る</a>
@@ -1649,8 +1793,8 @@ const faqJsonLd = {
         <section class="lp1-compare reveal-up" id="quick">
           <h2 class="lp1-section-title">まずはここだけ見ればOK 早見比較表</h2>
           <div class="lp1-update">
-            <span>更新日：2026年5月14日</span>
-            <span>キャンペーン確認日：2026年5月14日</span>
+            <span>更新日：2026年5月15日</span>
+            <span>キャンペーン確認日：2026年5月15日</span>
           </div>
           <div class="lp1-compare-scroll">
             <table>
@@ -1706,7 +1850,7 @@ const faqJsonLd = {
                       secondary: campaign.details[0] || ""
                     };
                     return (
-                      <td class="lp1-campaign-cell">
+                      <td class={`lp1-campaign-cell ${service.id === "every" ? "is-urgent" : ""}`}>
                         <span class="lp1-campaign-date">{campaign.checked}</span>
                         <strong class="lp1-campaign-main">{quick.primary}</strong>
                         {quick.secondary && <span class="lp1-campaign-sub">{quick.secondary}</span>}
@@ -1848,7 +1992,7 @@ const faqJsonLd = {
                   <ul class="lp1-point-list">
                     {service.points.map((point) => <li>{point}</li>)}
                   </ul>
-                  <div class="lp1-campaign">
+                  <div class={`lp1-campaign ${service.id === "every" ? "is-urgent" : ""}`}>
                     <div class="lp1-campaign-head">
                       <b>キャンペーン確認</b>
                       <span>{splitCampaign(service.campaign).checked}</span>
@@ -1867,6 +2011,11 @@ const faqJsonLd = {
                     </ul>
                     {splitCampaign(service.campaign).details.length > 1 && (
                       <p class="lp1-campaign-more">{splitCampaign(service.campaign).details.slice(1).join("。")}。</p>
+                    )}
+                    {service.id === "every" && (
+                      <p class="lp1-urgent-note">
+                        5/17(日)で終了予定。終了後は特典内容が変わる可能性があるため、気になる場合は今の条件を公式で確認してください。
+                      </p>
                     )}
                   </div>
                   <div class="lp1-card-actions">
@@ -1929,6 +2078,30 @@ const faqJsonLd = {
     <p><a href="/water-server/operator/">運営者情報</a> / <a href="/water-server/">通常版比較ページ</a></p>
   </footer>
 
+  <script>
+    (() => {
+      const deadline = new Date("2026-05-17T23:59:59+09:00").getTime();
+      const output = document.querySelector("[data-countdown-deadline]");
+      const alertBox = document.querySelector("[data-campaign-alert]");
+      if (!output || !alertBox) return;
+
+      const render = () => {
+        const diff = deadline - Date.now();
+        if (diff <= 0) {
+          output.textContent = "終了・最新条件を確認";
+          alertBox.classList.add("is-expired");
+          return;
+        }
+        const days = Math.floor(diff / 86400000);
+        const hours = Math.floor((diff % 86400000) / 3600000);
+        const minutes = Math.floor((diff % 3600000) / 60000);
+        output.textContent = days > 0 ? `残り${days}日${hours}時間` : `残り${hours}時間${minutes}分`;
+      };
+
+      render();
+      window.setInterval(render, 60000);
+    })();
+  </script>
   <script src="/water-server/app.js?v=20260513-lp1" defer></script>
 </body>
 </html>
