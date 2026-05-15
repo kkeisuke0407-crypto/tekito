@@ -1580,6 +1580,107 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .section-cta-inline.red:hover { animation: none; }
 
+/* ── Micro copy under CTAs ───────────────────────── */
+.cta-micro {
+  font-size: .72rem; color: rgba(255,255,255,.5);
+  margin-top: .55rem; text-align: center;
+  letter-spacing: .02em;
+}
+.ranking-cta-micro {
+  font-size: .68rem; color: var(--muted);
+  text-align: center; margin-top: .4rem;
+  letter-spacing: .02em;
+}
+
+/* ── Future paths section ────────────────────────── */
+.future-section { background: #fff; }
+.future-paths {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+.future-path {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+.future-path-icon {
+  width: 52px; height: 52px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: .78rem; font-weight: 900; color: #fff;
+  letter-spacing: .04em;
+}
+.future-icon-repair  { background: linear-gradient(135deg, #16a34a, #15803d); }
+.future-icon-divorce { background: linear-gradient(135deg, var(--red), #b91c1c); }
+.future-icon-truth   { background: linear-gradient(135deg, var(--navy), var(--navy-mid)); }
+.future-path h3 {
+  font-size: .95rem; font-weight: 800;
+  color: var(--navy); margin-bottom: .6rem;
+}
+.future-path p {
+  font-size: .82rem; color: var(--muted); line-height: 1.8;
+}
+.future-cta-note {
+  text-align: center;
+  background: linear-gradient(135deg, #f8f9fb, #f0f2f7);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem 2rem;
+}
+.future-cta-note p {
+  font-size: .9rem; color: var(--text);
+  margin-bottom: 1.1rem; line-height: 1.7;
+}
+.future-cta-note p strong { color: var(--navy); }
+
+/* ── Case examples section ───────────────────────── */
+.cases-section { background: #fff; }
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.case-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem 1.25rem;
+  box-shadow: var(--shadow);
+  display: flex; flex-direction: column; gap: .75rem;
+}
+.case-tag {
+  display: inline-block;
+  font-size: .68rem; font-weight: 800;
+  padding: .2rem .6rem; border-radius: 4px;
+  letter-spacing: .04em;
+}
+.case-tag-red   { background: #fff1f2; color: var(--red); border: 1px solid #fecaca; }
+.case-tag-green { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+.case-tag-blue  { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
+.case-profile {
+  font-size: .78rem; font-weight: 700;
+  color: var(--muted);
+}
+.case-quote {
+  font-size: .82rem; color: var(--text);
+  line-height: 1.85;
+  border-left: 3px solid var(--gold);
+  padding-left: .85rem;
+  margin: 0;
+  font-style: normal;
+}
+.case-result {
+  font-size: .78rem; font-weight: 700;
+  color: var(--navy);
+  padding-top: .5rem;
+  border-top: 1px solid var(--border);
+}
+
 /* ── Responsive for new sections ─────────────────── */
 @media (max-width: 768px) {
   .empathy-checklist { grid-template-columns: 1fr; }
@@ -1589,6 +1690,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .solution-cta-box { padding: 1.25rem 1rem; }
   .relief-items { grid-template-columns: 1fr; }
   .relief-cta-box { padding: 1.25rem 1rem; }
+  .future-paths { grid-template-columns: 1fr; }
+  .future-cta-note { padding: 1.25rem 1rem; }
+  .cases-grid { grid-template-columns: 1fr; }
 }
 
 /* ══ ANIMATION SYSTEM ════════════════════════════════
