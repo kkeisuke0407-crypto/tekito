@@ -233,6 +233,41 @@ const campaignQuick: Record<string, { primary: string; secondary: string }> = {
   }
 };
 
+const diagnosisCards = [
+  {
+    label: "料金",
+    title: "月額をとにかく抑えたい",
+    result: "オーケンウォーターを先に確認",
+    note: "12L×2本の水代目安と、定額型のevery freciousを並べて判断。",
+    href: "#oken",
+    track: "lp1_diagnosis_cost"
+  },
+  {
+    label: "浄水",
+    title: "ボトル交換をなくしたい",
+    result: "every frecious / OCEANを比較",
+    note: "水を多く使う家庭は、宅配水より定額・直結型が合う場合あり。",
+    href: "/water-server/lp1/jousui",
+    track: "lp1_diagnosis_jousui"
+  },
+  {
+    label: "単身",
+    title: "一人暮らしで余らせたくない",
+    result: "配送スキップと卓上型を確認",
+    note: "12Lボトルは1人だと長持ちしやすいので、注文間隔が重要。",
+    href: "/water-server/lp1/solo",
+    track: "lp1_diagnosis_solo"
+  },
+  {
+    label: "家族",
+    title: "家族で水をたくさん使う",
+    result: "定額型・直結型も候補",
+    note: "4人家族は水量が増えやすく、ボトル代だけで決めない方が安全。",
+    href: "/water-server/lp1/family",
+    track: "lp1_diagnosis_family"
+  }
+];
+
 const campaignLabel = (text: string, index: number) => {
   if (text.includes("乗り換え") || text.includes("他社") || text.includes("解約金")) return "乗換";
   if (text.includes("確認") || text.includes("要確認") || text.includes("条件")) return "注意";
@@ -575,7 +610,7 @@ const faqJsonLd = {
     }
     .lp1-nav-inner {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       text-align: center;
     }
     .lp1-nav a {
@@ -764,6 +799,159 @@ const faqJsonLd = {
     }
     .lp1-deadline-alert.is-expired strong {
       color: #334155;
+    }
+    .lp1-campaign-visual {
+      margin: .2rem 0 1.15rem;
+      padding: 1rem;
+      border-radius: 18px;
+      color: #fff;
+      background:
+        radial-gradient(circle at 88% 10%, rgba(255,255,255,.32), transparent 24%),
+        linear-gradient(135deg, #0f9bab 0%, #10b981 48%, #f97316 100%);
+      box-shadow: 0 18px 34px rgba(15, 155, 171, .2);
+      position: relative;
+      overflow: hidden;
+    }
+    .lp1-campaign-visual::before {
+      content: "WEB限定";
+      position: absolute;
+      right: -38px;
+      top: 18px;
+      width: 160px;
+      padding: .28rem 0;
+      background: #e11d48;
+      color: #fff;
+      text-align: center;
+      font-size: .72rem;
+      font-weight: 900;
+      transform: rotate(35deg);
+      box-shadow: 0 5px 14px rgba(0,0,0,.18);
+    }
+    .lp1-campaign-visual-kicker {
+      display: inline-flex;
+      padding: .22rem .58rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,.18);
+      border: 1px solid rgba(255,255,255,.5);
+      font-size: .72rem;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+    .lp1-campaign-visual strong {
+      display: block;
+      margin-top: .45rem;
+      font-size: clamp(1.35rem, 3.2vw, 2.2rem);
+      line-height: 1.1;
+      letter-spacing: 0;
+      text-shadow: 0 2px 0 rgba(0,0,0,.12);
+    }
+    .lp1-campaign-visual strong em {
+      color: #fff176;
+      font-style: normal;
+    }
+    .lp1-campaign-visual-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .55rem;
+      margin-top: .85rem;
+    }
+    .lp1-campaign-visual-grid span {
+      display: grid;
+      place-items: center;
+      min-height: 54px;
+      padding: .45rem;
+      border-radius: 12px;
+      background: rgba(255,255,255,.18);
+      border: 1px solid rgba(255,255,255,.42);
+      text-align: center;
+      font-size: .82rem;
+      font-weight: 900;
+      line-height: 1.35;
+    }
+    .lp1-fit-finder {
+      background: #fff;
+      border: 2px solid var(--lp-line);
+      border-radius: 16px;
+      box-shadow: var(--lp-shadow);
+      margin-bottom: 1.2rem;
+      overflow: hidden;
+    }
+    .lp1-fit-head {
+      padding: 1rem 1.1rem;
+      color: #fff;
+      background: linear-gradient(90deg, #0f9bab, #52d0d9);
+    }
+    .lp1-fit-head h2 {
+      margin: 0;
+      font-size: clamp(1.1rem, 2.5vw, 1.65rem);
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+    .lp1-fit-head p {
+      margin: .35rem 0 0;
+      color: rgba(255,255,255,.92);
+      font-weight: 800;
+      line-height: 1.65;
+    }
+    .lp1-fit-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: .8rem;
+      padding: 1rem;
+      background: linear-gradient(180deg, #f3fdff, #fff);
+    }
+    .lp1-fit-card {
+      display: grid;
+      align-content: start;
+      gap: .48rem;
+      min-height: 210px;
+      padding: .9rem;
+      border-radius: 14px;
+      border: 1px solid #cceff4;
+      background: #fff;
+      text-decoration: none;
+      box-shadow: 0 10px 22px rgba(7,119,131,.08);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .lp1-fit-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 28px rgba(7,119,131,.14);
+      text-decoration: none;
+    }
+    .lp1-fit-label {
+      display: inline-grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--lp-teal), #12c7d8);
+      font-weight: 900;
+    }
+    .lp1-fit-card h3 {
+      margin: 0;
+      color: var(--lp-ink);
+      font-size: 1.02rem;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+    .lp1-fit-result {
+      color: #e11d48;
+      font-weight: 900;
+      line-height: 1.45;
+    }
+    .lp1-fit-note {
+      margin: 0;
+      color: #48606b;
+      font-size: .84rem;
+      font-weight: 700;
+      line-height: 1.65;
+    }
+    .lp1-fit-link {
+      margin-top: auto;
+      color: var(--lp-blue);
+      font-size: .86rem;
+      font-weight: 900;
     }
     @keyframes lp1-alert-pulse {
       0%, 100% { transform: translateY(0); box-shadow: 0 14px 28px rgba(255, 61, 46, .18); }
@@ -1633,6 +1821,7 @@ const faqJsonLd = {
       .lp1-card-body { grid-template-columns: 1fr; }
       .lp1-card-media { max-width: 340px; }
       .lp1-chip-grid { grid-template-columns: repeat(2, 1fr); }
+      .lp1-fit-grid { grid-template-columns: repeat(2, 1fr); }
       .lp1-purpose-nav { grid-template-columns: repeat(2, 1fr); }
       .lp1-purpose-item { grid-template-columns: 56px minmax(0, 1fr); }
       .lp1-purpose-cta {
@@ -1663,6 +1852,9 @@ const faqJsonLd = {
       .lp1-alert-cta {
         width: 100%;
       }
+      .lp1-campaign-visual-grid {
+        grid-template-columns: 1fr;
+      }
       .lp1-cta-row { display: grid; grid-template-columns: 1fr; }
       .lp1-main-cta, .lp1-sub-cta { width: 100%; }
       .lp1-section-title {
@@ -1688,6 +1880,8 @@ const faqJsonLd = {
         justify-self: start;
       }
       .lp1-chip-grid { grid-template-columns: 1fr; }
+      .lp1-fit-grid { grid-template-columns: 1fr; }
+      .lp1-fit-card { min-height: auto; }
       .lp1-purpose-intro { text-align: left; font-size: .93rem; }
       .lp1-purpose-nav { grid-template-columns: 1fr; }
       .lp1-purpose-head { grid-template-columns: 1fr; padding: .9rem .85rem .65rem 1rem; }
@@ -1732,6 +1926,7 @@ const faqJsonLd = {
 
   <nav class="lp1-nav" aria-label="ページ内メニュー">
     <div class="lp1-nav-inner">
+      <a href="#fit" data-scroll-to="#fit">診断</a>
       <a href="#quick" data-scroll-to="#quick">早見表</a>
       <a href="#usage" data-scroll-to="#usage">水量目安</a>
       <a href="#ranking" data-scroll-to="#ranking">ランキング</a>
@@ -1760,6 +1955,15 @@ const faqJsonLd = {
             <strong>every freciousのWEB限定特典は終了間近。実質2ヶ月分無料の条件を先に確認。</strong>
             <span class="lp1-countdown">終了まで<b data-countdown-deadline="2026-05-17T23:59:59+09:00">計算中</b></span>
             <a class="lp1-alert-cta" href="https://px.a8.net/svt/ejp?a8mat=4B1XE4+3H144Q+2B8Y+15PEXE" data-affiliate="every_frecious" data-track="lp1_hero_every_deadline" rel="nofollow sponsored">期限前に公式特典を見る</a>
+          </div>
+          <div class="lp1-campaign-visual" aria-label="every frecious キャンペーン速報">
+            <span class="lp1-campaign-visual-kicker">キャンペーン速報</span>
+            <strong>5/17(日)まで <em>実質2ヶ月分無料</em></strong>
+            <div class="lp1-campaign-visual-grid">
+              <span>お届け月<br />レンタル料無料</span>
+              <span>Amazonギフト券<br />3,300円分</span>
+              <span>乗り換え特典も<br />公式で確認</span>
+            </div>
           </div>
           <div class="lp1-cta-row">
             <a class="lp1-main-cta" href="https://px.a8.net/svt/ejp?a8mat=4B1XE4+325A0A+1LOO+5Z6WY" data-affiliate="oken" data-track="lp1_hero_oken" rel="nofollow sponsored">1位の料金条件を確認する</a>
@@ -1790,6 +1994,29 @@ const faqJsonLd = {
       </aside>
 
       <div class="lp1-main">
+        <section class="lp1-fit-finder reveal-up" id="fit">
+          <div class="lp1-fit-head">
+            <h2>30秒で候補を絞る 条件診断</h2>
+            <p>先に目的を選ぶと、比較表の見る場所がはっきりします。</p>
+          </div>
+          <div class="lp1-fit-grid">
+            {diagnosisCards.map((card) => (
+              <a
+                class="lp1-fit-card"
+                href={card.href}
+                data-scroll-to={card.href.startsWith("#") ? card.href : undefined}
+                data-track={card.track}
+              >
+                <span class="lp1-fit-label">{card.label}</span>
+                <h3>{card.title}</h3>
+                <strong class="lp1-fit-result">{card.result}</strong>
+                <p class="lp1-fit-note">{card.note}</p>
+                <span class="lp1-fit-link">この条件で見る</span>
+              </a>
+            ))}
+          </div>
+        </section>
+
         <section class="lp1-compare reveal-up" id="quick">
           <h2 class="lp1-section-title">まずはここだけ見ればOK 早見比較表</h2>
           <div class="lp1-update">
