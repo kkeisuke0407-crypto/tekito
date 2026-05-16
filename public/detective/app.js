@@ -53,10 +53,10 @@ document.addEventListener("DOMContentLoaded", function () {
           track("detective_affiliate_click", {
             ...params,
             event_callback: navigate,
-            event_timeout: 2000
+            event_timeout: 300
           });
           track("detective_cta_click", params);
-          window.setTimeout(navigate, 2000);
+          window.setTimeout(navigate, 300);
           return;
         }
 
