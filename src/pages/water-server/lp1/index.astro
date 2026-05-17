@@ -205,9 +205,9 @@ const services = [
         alt: "フレシャス 公式広告バナー 300×250"
       },
       {
-        label: "250×250",
-        href: "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3TJ7U2+2B8Y+6F9M9",
-        src: "https://www25.a8.net/svt/bgt?aid=260430412231&wid=004&eno=01&mid=s00000010789001079000&mc=1",
+        label: "300×250",
+        href: "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3TJ7U2+2B8Y+6TMLD",
+        src: "https://www28.a8.net/svt/bgt?aid=260430412231&wid=004&eno=01&mid=s00000010789001146000&mc=1",
         alt: "フレシャス 公式広告バナー 天然水"
       }
     ]
@@ -1488,7 +1488,7 @@ const faqJsonLd = {
     .lp1-card-body {
       padding: 1rem;
       display: grid;
-      grid-template-columns: minmax(230px, 300px) minmax(0, 1fr);
+      grid-template-columns: minmax(320px, 370px) minmax(0, 1fr);
       gap: 1rem;
     }
     .lp1-card-media {
@@ -1498,38 +1498,38 @@ const faqJsonLd = {
     }
     .lp1-gallery {
       display: grid;
-      padding: .5rem;
+      width: min(370px, 100%);
+      margin-inline: auto;
+      padding: .35rem;
       border: 1px solid var(--lp-line);
       border-radius: 14px;
       background: linear-gradient(180deg, #f2fcff, #fff);
     }
     .lp1-gallery-frame {
-      display: grid;
-      grid-template-columns: 34px minmax(0, 1fr) 34px;
-      gap: .4rem;
-      align-items: center;
-    }
-    .lp1-gallery-frame.is-single {
-      grid-template-columns: minmax(0, 1fr);
+      position: relative;
+      width: min(350px, 100%);
+      margin-inline: auto;
     }
     .lp1-gallery-track {
       display: grid;
       grid-auto-flow: column;
       grid-auto-columns: 100%;
-      gap: .65rem;
+      gap: 0;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
-      scrollbar-width: thin;
+      scrollbar-width: none;
       scroll-behavior: smooth;
       border-radius: 12px;
+    }
+    .lp1-gallery-track::-webkit-scrollbar {
+      display: none;
     }
     .lp1-gallery-item {
       position: relative;
       display: grid;
       place-items: center;
-      width: 350px;
-      height: 250px;
-      max-width: 100%;
+      width: 100%;
+      aspect-ratio: 6 / 5;
       justify-self: center;
       border: 1px solid #d7edf2;
       border-radius: 12px;
@@ -1542,26 +1542,39 @@ const faqJsonLd = {
       display: block;
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
       background: #fff;
     }
     .lp1-gallery-btn {
       display: grid;
       place-items: center;
-      width: 34px;
-      height: 54px;
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      width: 24px;
+      height: 34px;
       border: 0;
       border-radius: 999px;
       color: #fff;
-      background: linear-gradient(135deg, var(--lp-blue), var(--lp-teal));
-      box-shadow: 0 4px 0 rgba(11, 79, 143, .38);
-      font-size: 1.45rem;
+      background: rgba(10, 91, 149, .54);
+      box-shadow: 0 6px 14px rgba(8, 62, 104, .2);
+      backdrop-filter: blur(3px);
+      transform: translateY(-50%);
+      font-size: 1rem;
       font-weight: 900;
       cursor: pointer;
     }
+    .lp1-gallery-btn:hover {
+      background: rgba(10, 91, 149, .82);
+    }
+    .lp1-gallery-btn[data-gallery-prev] {
+      left: .3rem;
+    }
+    .lp1-gallery-btn[data-gallery-next] {
+      right: .3rem;
+    }
     .lp1-gallery-btn:active {
-      transform: translateY(2px);
-      box-shadow: 0 2px 0 rgba(11, 79, 143, .38);
+      transform: translateY(-50%) scale(.96);
     }
     .lp1-badge-row {
       display: flex;
@@ -2036,7 +2049,7 @@ const faqJsonLd = {
       }
       .lp1-usage-grid { grid-template-columns: 1fr; }
       .lp1-card-body { grid-template-columns: 1fr; }
-      .lp1-card-media { max-width: 340px; }
+      .lp1-card-media { max-width: 370px; }
       .lp1-chip-grid { grid-template-columns: repeat(2, 1fr); }
       .lp1-fit-grid { grid-template-columns: repeat(2, 1fr); }
       .lp1-purpose-nav { grid-template-columns: repeat(2, 1fr); }
