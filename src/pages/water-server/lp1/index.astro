@@ -159,18 +159,6 @@ const services = [
         href: "https://h.accesstrade.net/sp/cc?rk=0100o23o00orwp",
         src: "https://h.accesstrade.net/sp/rr?rk=0100o23o00orwp",
         alt: "OCEAN 公式広告バナー 300×250"
-      },
-      {
-        label: "336×280",
-        href: "https://h.accesstrade.net/sp/cc?rk=0100o23r00orwp",
-        src: "https://h.accesstrade.net/sp/rr?rk=0100o23r00orwp",
-        alt: "OCEAN 公式広告バナー 336×280"
-      },
-      {
-        label: "250×250",
-        href: "https://h.accesstrade.net/sp/cc?rk=0100o23n00orwp",
-        src: "https://h.accesstrade.net/sp/rr?rk=0100o23n00orwp",
-        alt: "OCEAN 公式広告バナー 250×250"
       }
     ]
   },
@@ -221,12 +209,6 @@ const services = [
         href: "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3TJ7U2+2B8Y+6F9M9",
         src: "https://www25.a8.net/svt/bgt?aid=260430412231&wid=004&eno=01&mid=s00000010789001079000&mc=1",
         alt: "フレシャス 公式広告バナー 天然水"
-      },
-      {
-        label: "728×90",
-        href: "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3TJ7U2+2B8Y+6MROH",
-        src: "https://www28.a8.net/svt/bgt?aid=260430412231&wid=004&eno=01&mid=s00000010789001114000&mc=1",
-        alt: "フレシャス 公式広告バナー 横長"
       }
     ]
   },
@@ -271,18 +253,6 @@ const services = [
         href: "https://h.accesstrade.net/sp/cc?rk=0100pknr00orwp",
         src: "https://h.accesstrade.net/sp/rr?rk=0100pknr00orwp",
         alt: "ウォーターワン 公式広告バナー 300×250"
-      },
-      {
-        label: "200×200",
-        href: "https://h.accesstrade.net/sp/cc?rk=0100pknp00orwp",
-        src: "https://h.accesstrade.net/sp/rr?rk=0100pknp00orwp",
-        alt: "ウォーターワン 公式広告バナー 200×200"
-      },
-      {
-        label: "468×60",
-        href: "https://h.accesstrade.net/sp/cc?rk=0100pknt00orwp",
-        src: "https://h.accesstrade.net/sp/rr?rk=0100pknt00orwp",
-        alt: "ウォーターワン 公式広告バナー 横長"
       }
     ]
   }
@@ -1528,31 +1498,19 @@ const faqJsonLd = {
     }
     .lp1-gallery {
       display: grid;
-      gap: .5rem;
-      padding: .65rem;
+      padding: .5rem;
       border: 1px solid var(--lp-line);
       border-radius: 14px;
       background: linear-gradient(180deg, #f2fcff, #fff);
     }
-    .lp1-gallery-head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: .6rem;
-      color: var(--lp-teal-dark);
-      font-size: .82rem;
-      font-weight: 900;
-    }
-    .lp1-gallery-head small {
-      color: var(--lp-muted);
-      font-size: .7rem;
-      font-weight: 800;
-    }
     .lp1-gallery-frame {
       display: grid;
       grid-template-columns: 34px minmax(0, 1fr) 34px;
-      gap: .45rem;
+      gap: .4rem;
       align-items: center;
+    }
+    .lp1-gallery-frame.is-single {
+      grid-template-columns: minmax(0, 1fr);
     }
     .lp1-gallery-track {
       display: grid;
@@ -1569,31 +1527,22 @@ const faqJsonLd = {
       position: relative;
       display: grid;
       place-items: center;
-      min-height: 238px;
-      padding: .45rem;
+      width: 350px;
+      height: 250px;
+      max-width: 100%;
+      justify-self: center;
       border: 1px solid #d7edf2;
       border-radius: 12px;
       background: #fff;
+      overflow: hidden;
       scroll-snap-align: start;
       text-decoration: none;
-    }
-    .lp1-gallery-item span {
-      position: absolute;
-      left: .6rem;
-      top: .55rem;
-      z-index: 1;
-      padding: .18rem .5rem;
-      border-radius: 999px;
-      color: #fff;
-      background: rgba(15, 95, 158, .9);
-      font-size: .68rem;
-      font-weight: 900;
     }
     .lp1-gallery-item img {
       display: block;
       width: 100%;
-      max-height: 230px;
-      object-fit: contain;
+      height: 100%;
+      object-fit: fill;
       background: #fff;
     }
     .lp1-gallery-btn {
@@ -2468,12 +2417,10 @@ const faqJsonLd = {
               <div class="lp1-card-body">
                 <div class="lp1-card-media">
                   <div class="lp1-gallery" data-gallery>
-                    <div class="lp1-gallery-head">
-                      <span>公式バナー画像</span>
-                      <small>左右ボタンで切替</small>
-                    </div>
-                    <div class="lp1-gallery-frame">
-                      <button class="lp1-gallery-btn" type="button" data-gallery-prev aria-label={`${service.name}の前の画像を見る`}>‹</button>
+                    <div class:list={["lp1-gallery-frame", { "is-single": service.gallery.length === 1 }]}>
+                      {service.gallery.length > 1 && (
+                        <button class="lp1-gallery-btn" type="button" data-gallery-prev aria-label={`${service.name}の前の画像を見る`}>‹</button>
+                      )}
                       <div class="lp1-gallery-track" tabindex="0">
                         {service.gallery.map((image, index) => (
                           <a
@@ -2484,12 +2431,13 @@ const faqJsonLd = {
                             rel="nofollow sponsored"
                             referrerpolicy="no-referrer-when-downgrade"
                           >
-                            <span>{image.label}</span>
-                            <img src={image.src} alt={image.alt} loading="lazy" width="300" height="250" />
+                            <img src={image.src} alt={image.alt} loading="lazy" width="350" height="250" />
                           </a>
                         ))}
                       </div>
-                      <button class="lp1-gallery-btn" type="button" data-gallery-next aria-label={`${service.name}の次の画像を見る`}>›</button>
+                      {service.gallery.length > 1 && (
+                        <button class="lp1-gallery-btn" type="button" data-gallery-next aria-label={`${service.name}の次の画像を見る`}>›</button>
+                      )}
                     </div>
                   </div>
                   <div class="lp1-badge-row">
