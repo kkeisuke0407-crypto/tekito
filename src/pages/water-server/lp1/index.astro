@@ -89,7 +89,7 @@ const services = [
       "水の受け取りや空ボトル処理の手間を減らせる",
       "3年契約などの条件は必ず公式で確認したい"
     ],
-    campaign: "2026年5月11日〜5月17日：WEB限定でレンタル料が実質2ヶ月分無料。内訳はお届け月のレンタル料無料＋Amazonギフト券3,300円分。乗り換えは解約金最大16,500円キャッシュバック、解約金なしならAmazonギフト券5,000円分。抽選特典あり。各キャンペーンは併用不可。",
+    campaign: "2026年5月18日〜5月24日：WEB限定でレンタル料が実質2ヶ月分無料。内訳はお届け月のレンタル料無料＋Amazonギフト券3,300円分。抽選で象印マホービン ホットプレート「やきやき」またはevery freciousオリジナルグッズが当たる可能性あり。他特典との併用不可。",
     cta: "定額プランを公式で確認する",
     affiliate: "every_frecious",
     link: "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3H144Q+2B8Y+15PEXE",
@@ -286,8 +286,8 @@ const campaignQuick: Record<string, { primary: string; secondary: string }> = {
     secondary: "乗換 JCB1万円"
   },
   every: {
-    primary: "5/17まで 実質2ヶ月無料",
-    secondary: "終了前に公式条件を確認"
+    primary: "5/24まで 実質2ヶ月無料",
+    secondary: "Amazonギフト券3,300円分"
   },
   ocean: {
     primary: "月額4,378円目安",
@@ -315,11 +315,11 @@ const topPickCards = [
   },
   {
     service: serviceMap.every,
-    label: "期限あり",
-    title: "5/17までの特典を見るなら",
+    label: "浄水型",
+    title: "定額でたっぷり使うなら",
     verdict: "every frecious",
-    note: "ボトル交換なしの浄水型。期限付き特典は、終了前に条件だけでも確認したい候補です。",
-    points: ["ボトル交換なし", "5/17まで実質2ヶ月分無料"],
+    note: "ボトル交換なしの浄水型。水を多く使う家庭は、月額の読みやすさと公式特典を確認したい候補です。",
+    points: ["ボトル交換なし", "定額制で使いやすい"],
     track: "lp1_top_pick_every"
   },
   {
@@ -1647,7 +1647,7 @@ const faqJsonLd = {
       box-shadow: 0 14px 30px rgba(225, 29, 72, .16);
     }
     .lp1-campaign.is-urgent::before {
-      content: "5/17(日)まで";
+      content: "5/24(日)まで";
       display: inline-flex;
       margin-bottom: .62rem;
       padding: .26rem .7rem;
@@ -2177,12 +2177,6 @@ const faqJsonLd = {
             <div class="lp1-hero-point">条件重視<small>解約金まで確認</small></div>
             <div class="lp1-hero-point">目的別<small>一人暮らし・家族</small></div>
           </div>
-          <div class="lp1-deadline-alert" data-campaign-alert>
-            <span class="lp1-alert-kicker">5/17(日)まで</span>
-            <strong>every freciousのWEB限定特典は終了間近。実質2ヶ月分無料の条件を先に確認。</strong>
-            <span class="lp1-countdown">終了まで<b data-countdown-deadline="2026-05-17T23:59:59+09:00">計算中</b></span>
-            <a class="lp1-alert-cta" href="https://px.a8.net/svt/ejp?a8mat=4B1XE4+3H144Q+2B8Y+15PEXE" data-affiliate="every_frecious" data-track="lp1_hero_every_deadline" rel="nofollow sponsored">期限前に公式特典を見る</a>
-          </div>
           <div class="lp1-cta-row">
             <a class="lp1-main-cta" href="https://px.a8.net/svt/ejp?a8mat=4B1XE4+325A0A+1LOO+5Z6WY" data-affiliate="oken" data-track="lp1_hero_oken" rel="nofollow sponsored">1位の料金条件を確認する</a>
             <a class="lp1-sub-cta" href="#quick" data-scroll-to="#quick" data-track="lp1_hero_compare">比較表から見る</a>
@@ -2213,7 +2207,7 @@ const faqJsonLd = {
           </div>
           <div class="lp1-top-picks-grid">
             {topPickCards.map((pick) => (
-              <article class={`lp1-top-pick ${pick.service.id === "every" ? "is-urgent" : ""}`}>
+              <article class="lp1-top-pick">
                 <span class="lp1-top-pick-label">{pick.label}</span>
                 <h3>{pick.title}</h3>
                 <strong>{pick.verdict}</strong>
@@ -2255,8 +2249,8 @@ const faqJsonLd = {
         <section class="lp1-compare reveal-up" id="quick">
           <h2 class="lp1-section-title">まずはここだけ見ればOK 早見比較表</h2>
           <div class="lp1-update">
-            <span>更新日：2026年5月15日</span>
-            <span>キャンペーン確認日：2026年5月15日</span>
+            <span>更新日：2026年5月18日</span>
+            <span>キャンペーン確認日：2026年5月18日</span>
           </div>
           <div class="lp1-compare-scroll">
             <table>
@@ -2497,7 +2491,7 @@ const faqJsonLd = {
                     )}
                     {service.id === "every" && (
                       <p class="lp1-urgent-note">
-                        5/17(日)で終了予定。終了後は特典内容が変わる可能性があるため、気になる場合は今の条件を公式で確認してください。
+                        5/24(日)までの公式表示を確認済み。終了後は特典内容が変わる可能性があるため、申し込み前に最新条件を公式で確認してください。
                       </p>
                     )}
                   </div>
@@ -2562,29 +2556,6 @@ const faqJsonLd = {
   </footer>
 
   <script>
-    (() => {
-      const deadline = new Date("2026-05-17T23:59:59+09:00").getTime();
-      const output = document.querySelector("[data-countdown-deadline]");
-      const alertBox = document.querySelector("[data-campaign-alert]");
-      if (!output || !alertBox) return;
-
-      const render = () => {
-        const diff = deadline - Date.now();
-        if (diff <= 0) {
-          output.textContent = "終了・最新条件を確認";
-          alertBox.classList.add("is-expired");
-          return;
-        }
-        const days = Math.floor(diff / 86400000);
-        const hours = Math.floor((diff % 86400000) / 3600000);
-        const minutes = Math.floor((diff % 3600000) / 60000);
-        output.textContent = days > 0 ? `残り${days}日${hours}時間` : `残り${hours}時間${minutes}分`;
-      };
-
-      render();
-      window.setInterval(render, 60000);
-    })();
-
     (() => {
       document.querySelectorAll("[data-gallery]").forEach((gallery) => {
         const track = gallery.querySelector(".lp1-gallery-track");
