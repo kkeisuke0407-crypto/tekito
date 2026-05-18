@@ -1764,3 +1764,75 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .js-loaded .fade-up { opacity: 1 !important; transform: none !important; transition: none !important; }
   .eval-bar-fill { transition: none !important; }
 }
+
+/* ── Self-check box（イチロク） ───────────────────── */
+.self-check-box {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-top: 1.25rem;
+}
+.self-check-label {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  margin-bottom: 1rem;
+}
+.self-check-label svg { width: 14px; height: 14px; flex-shrink: 0; }
+.self-check-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: .5rem;
+}
+.self-check-desc {
+  font-size: .88rem;
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: .75rem;
+}
+.self-check-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem .6rem;
+}
+.self-check-features li {
+  font-size: .8rem;
+  color: var(--muted);
+  padding-left: 1em;
+  position: relative;
+}
+.self-check-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--good);
+  font-weight: 700;
+}
+.self-check-cta {
+  display: inline-block;
+  background: var(--navy);
+  color: #fff;
+  font-size: .9rem;
+  font-weight: 700;
+  padding: .65rem 1.4rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background .2s;
+}
+.self-check-cta:hover { background: var(--navy-mid); }
+.self-check-note {
+  font-size: .74rem;
+  color: var(--muted);
+  margin-top: .75rem;
+  line-height: 1.5;
+}
