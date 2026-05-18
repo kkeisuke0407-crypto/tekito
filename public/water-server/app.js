@@ -17,6 +17,17 @@ const AFFILIATE_LINKS = {
   ocean_banner:   "https://h.accesstrade.net/sp/cc?rk=0100o23o00orwp"
 };
 
+const PROVIDER_META = {
+  oken: { provider: "oken", rank: 1 },
+  every: { provider: "every_frecious", rank: 2 },
+  every_frecious: { provider: "every_frecious", rank: 2 },
+  ocean: { provider: "ocean", rank: 3 },
+  frecious: { provider: "frecious", rank: 4 },
+  water_one: { provider: "water_one", rank: 5 },
+  "water-one": { provider: "water_one", rank: 5 },
+  cosmo: { provider: "cosmo", rank: null }
+};
+
 document.documentElement.classList.add("js-ready");
 
 function track(eventName, params) {
@@ -24,6 +35,64 @@ function track(eventName, params) {
     if (window.dataLayer) window.dataLayer.push({ event: eventName, ...(params || {}) });
     if (typeof gtag === "function") gtag("event", eventName, params || {});
   } catch (_) {}
+}
+
+function lpVariant() {
+  return window.location.pathname.indexOf("/lp1") >= 0 ? "lp1" : "standard";
+}
+
+function normalizeProvider(rawKey) {
+  if (!rawKey) return "";
+  var cleaned = rawKey
+    .replace(/_banner$/, "")
+    .replace(/_gallery_\d+$/, "")
+    .replace(/-/g, "_");
+
+  if (cleaned.indexOf("every") === 0) return "every_frecious";
+  if (cleaned.indexOf("water_one") === 0) return "water_one";
+  if (cleaned.indexOf("waterone") === 0) return "water_one";
+  if (cleaned.indexOf("oken") === 0) return "oken";
+  if (cleaned.indexOf("ocean") === 0) return "ocean";
+  if (cleaned.indexOf("frecious") === 0) return "frecious";
+  if (cleaned.indexOf("cosmo") === 0) return "cosmo";
+  return cleaned;
+}
+
+function sectionFromTrack(trackName, el) {
+  if (!trackName) return "";
+  if (trackName.indexOf("hero") >= 0) return "hero";
+  if (trackName.indexOf("top_pick") >= 0) return "top_pick";
+  if (trackName.indexOf("table") >= 0) return "comparison_table";
+  if (trackName.indexOf("gallery") >= 0) return "gallery";
+  if (trackName.indexOf("card") >= 0) return "provider_card";
+  if (trackName.indexOf("final") >= 0) return "final";
+  if (trackName.indexOf("sticky") >= 0) return "sticky";
+
+  var section = el && el.closest ? el.closest("section[id]") : null;
+  return section ? section.id : "";
+}
+
+function compactText(text) {
+  return (text || "").replace(/\s+/g, " ").trim().slice(0, 80);
+}
+
+function buildClickParams(el, affiliateKey, destination) {
+  var trackName = el.getAttribute("data-track") || "";
+  var provider = normalizeProvider(affiliateKey);
+  var meta = PROVIDER_META[provider] || {};
+
+  return {
+    track_name: trackName,
+    affiliate_key: affiliateKey || "",
+    provider: meta.provider || provider || "",
+    rank: meta.rank || "",
+    section: sectionFromTrack(trackName, el),
+    cta_text: compactText(el.textContent),
+    lp_variant: lpVariant(),
+    page_path: window.location.pathname,
+    link_url: destination || "",
+    transport_type: "beacon"
+  };
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -64,12 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
     el.addEventListener("click", function (event) {
       var affiliateKey = el.getAttribute("data-affiliate") || "";
       var destination = el.getAttribute("href") || "";
-      var params = {
-        track_name: el.getAttribute("data-track") || "",
-        affiliate_key: affiliateKey,
-        link_url: destination,
-        transport_type: "beacon"
-      };
+      var params = buildClickParams(el, affiliateKey, destination);
 
       if (affiliateKey) {
         var isPrimaryClick = !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey && event.button === 0;
@@ -84,18 +148,22 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.href = destination;
           };
 
+          track("water_cta_click", params);
+          if (params.section === "comparison_table") track("water_table_click", params);
+          if (params.section === "sticky") track("water_sticky_click", params);
           track("water_affiliate_click", {
             ...params,
             event_callback: navigate,
             event_timeout: 2000
           });
-          track("water_cta_click", params);
           window.setTimeout(navigate, 2000);
           return;
         }
 
         track("water_affiliate_click", params);
         track("water_cta_click", params);
+        if (params.section === "comparison_table") track("water_table_click", params);
+        if (params.section === "sticky") track("water_sticky_click", params);
       } else {
         track("water_engagement_click", params);
       }
@@ -151,11 +219,14 @@ document.addEventListener("DOMContentLoaded", function () {
   if (AFFILIATE_LINKS[stickyKey]) stickyBtn.setAttribute("href", AFFILIATE_LINKS[stickyKey]);
   stickyBtn.addEventListener("click", function (event) {
     var destination = stickyBtn.getAttribute("href");
+    var params = buildClickParams(stickyBtn, stickyKey, destination);
     if (destination && destination !== "#") {
       event.preventDefault();
       var didNavigate = false;
       var navigate = function () { if (!didNavigate) { didNavigate = true; window.location.href = destination; } };
-      track("water_affiliate_click", { track_name: "sticky_oken_cost", affiliate_key: "oken", link_url: destination, event_callback: navigate, event_timeout: 2000 });
+      track("water_cta_click", params);
+      track("water_sticky_click", params);
+      track("water_affiliate_click", { ...params, event_callback: navigate, event_timeout: 2000 });
       window.setTimeout(navigate, 2000);
     }
   });
@@ -166,7 +237,7 @@ document.addEventListener("DOMContentLoaded", function () {
     bar.classList.remove("visible");
   });
 
-  var heroEl = document.querySelector(".hero");
+  var heroEl = document.querySelector(".hero, .lp1-hero");
   var faqEl  = document.getElementById("faq");
   window.addEventListener("scroll", function () {
     if (dismissed) return;
@@ -178,5 +249,62 @@ document.addEventListener("DOMContentLoaded", function () {
       bar.classList.remove("visible");
     }
   }, { passive: true });
+
+  // ── Scroll depth tracking ─────────────────────────────────────
+  var depthMarks = [25, 50, 75, 90];
+  var sentDepths = {};
+  var depthTimer = null;
+  function checkScrollDepth() {
+    var doc = document.documentElement;
+    var scrollable = Math.max(1, doc.scrollHeight - window.innerHeight);
+    var depth = Math.round((window.scrollY / scrollable) * 100);
+
+    depthMarks.forEach(function (mark) {
+      if (!sentDepths[mark] && depth >= mark) {
+        sentDepths[mark] = true;
+        track("water_scroll_depth", {
+          scroll_percent: mark,
+          lp_variant: lpVariant(),
+          page_path: window.location.pathname
+        });
+      }
+    });
+  }
+  window.addEventListener("scroll", function () {
+    if (depthTimer) return;
+    depthTimer = window.setTimeout(function () {
+      depthTimer = null;
+      checkScrollDepth();
+    }, 250);
+  }, { passive: true });
+  checkScrollDepth();
+
+  // ── Provider card view tracking ───────────────────────────────
+  if ("IntersectionObserver" in window) {
+    var viewedProviders = {};
+    var providerObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var id = entry.target.getAttribute("id") || "";
+        if (!id || viewedProviders[id]) return;
+        viewedProviders[id] = true;
+
+        var provider = normalizeProvider(id);
+        var meta = PROVIDER_META[provider] || {};
+        track("water_provider_view", {
+          provider: meta.provider || provider,
+          rank: meta.rank || "",
+          section: "provider_card",
+          lp_variant: lpVariant(),
+          page_path: window.location.pathname
+        });
+        providerObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.45 });
+
+    document.querySelectorAll(".service-card[id], .lp1-card.service-card[id]").forEach(function (card) {
+      providerObserver.observe(card);
+    });
+  }
 
 });
