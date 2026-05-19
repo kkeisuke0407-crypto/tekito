@@ -28,6 +28,15 @@ const PROVIDER_META = {
   cosmo: { provider: "cosmo", rank: null }
 };
 
+(function(c, l, a, r, i, t, y) {
+  c[a] = c[a] || function() { (c[a].q = c[a].q || []).push(arguments); };
+  t = l.createElement(r);
+  t.async = 1;
+  t.src = "https://www.clarity.ms/tag/" + i;
+  y = l.getElementsByTagName(r)[0];
+  y.parentNode.insertBefore(t, y);
+})(window, document, "clarity", "script", "wt0p3b43o4");
+
 document.documentElement.classList.add("js-ready");
 
 function track(eventName, params) {
