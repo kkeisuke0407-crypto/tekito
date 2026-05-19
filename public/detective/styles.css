@@ -1913,3 +1913,43 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transition: opacity .2s;
 }
 .vernis-cta:hover { opacity: .85; }
+
+/* ── Hero situation selector ─────────────────────── */
+.hero-situation-label {
+  font-size: .82rem;
+  font-weight: 700;
+  color: rgba(255,255,255,.6);
+  margin: 1.5rem 0 .6rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.hero-situations {
+  display: flex;
+  flex-direction: column;
+  gap: .55rem;
+}
+.hero-situation-btn {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: var(--radius);
+  padding: .8rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: .92rem;
+  font-weight: 600;
+  transition: background .18s, border-color .18s;
+}
+.hero-situation-btn:hover {
+  background: rgba(255,255,255,.16);
+  border-color: rgba(255,255,255,.35);
+}
+.situation-icon { font-size: 1.1rem; flex-shrink: 0; }
+.hero-situation-btn > span:nth-child(2) { flex: 1; }
+.situation-arrow {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,.5);
+  flex-shrink: 0;
+}
