@@ -1836,3 +1836,80 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin-top: .75rem;
   line-height: 1.5;
 }
+
+/* ── Vernis box（電話占いヴェルニ） ──────────────── */
+.vernis-box {
+  background: linear-gradient(135deg, #1a0a2e 0%, #2d1054 100%);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  color: #fff;
+}
+.vernis-label {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  font-size: .78rem;
+  font-weight: 700;
+  color: #c4a4ff;
+  margin-bottom: 1rem;
+  letter-spacing: .03em;
+}
+.vernis-label svg { width: 14px; height: 14px; flex-shrink: 0; stroke: #c4a4ff; }
+.vernis-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin-bottom: .5rem;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  flex-wrap: wrap;
+}
+.vernis-badge {
+  font-size: .72rem;
+  font-weight: 700;
+  background: rgba(196,164,255,.2);
+  color: #c4a4ff;
+  border: 1px solid rgba(196,164,255,.35);
+  border-radius: 4px;
+  padding: .15rem .55rem;
+}
+.vernis-desc {
+  font-size: .87rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,.85);
+  margin-bottom: .75rem;
+}
+.vernis-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+.vernis-features li {
+  font-size: .82rem;
+  color: rgba(255,255,255,.75);
+  padding-left: 1.2em;
+  position: relative;
+}
+.vernis-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #c4a4ff;
+  font-weight: 700;
+}
+.vernis-cta {
+  display: inline-block;
+  background: linear-gradient(135deg, #9b59b6, #6c3483);
+  color: #fff;
+  font-size: .9rem;
+  font-weight: 700;
+  padding: .7rem 1.5rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: opacity .2s;
+}
+.vernis-cta:hover { opacity: .85; }
