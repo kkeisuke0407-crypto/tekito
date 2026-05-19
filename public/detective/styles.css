@@ -1916,40 +1916,36 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* ── Hero situation selector ─────────────────────── */
 .hero-situation-label {
-  font-size: .82rem;
-  font-weight: 700;
-  color: rgba(255,255,255,.6);
-  margin: 1.5rem 0 .6rem;
+  font-size: .75rem;
+  font-weight: 600;
+  color: rgba(255,255,255,.45);
+  margin: 1.75rem 0 .5rem;
+  letter-spacing: .08em;
   text-transform: uppercase;
-  letter-spacing: .06em;
 }
 .hero-situations {
   display: flex;
   flex-direction: column;
-  gap: .55rem;
+  gap: .4rem;
 }
 .hero-situation-btn {
   display: flex;
   align-items: center;
-  gap: .75rem;
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.18);
-  border-radius: var(--radius);
-  padding: .8rem 1rem;
-  color: #fff;
+  gap: .65rem;
+  padding: .7rem 0;
+  color: rgba(255,255,255,.8);
   text-decoration: none;
-  font-size: .92rem;
-  font-weight: 600;
-  transition: background .18s, border-color .18s;
+  font-size: .88rem;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  transition: color .15s;
 }
-.hero-situation-btn:hover {
-  background: rgba(255,255,255,.16);
-  border-color: rgba(255,255,255,.35);
-}
-.situation-icon { font-size: 1.1rem; flex-shrink: 0; }
-.hero-situation-btn > span:nth-child(2) { flex: 1; }
-.situation-arrow {
-  font-size: 1.1rem;
-  color: rgba(255,255,255,.5);
+.hero-situation-btn:last-child { border-bottom: none; }
+.hero-situation-btn:hover { color: #fff; }
+.hero-situation-btn svg {
+  width: 15px;
+  height: 15px;
   flex-shrink: 0;
+  opacity: .55;
 }
+.hero-situation-btn span { flex: 1; }
