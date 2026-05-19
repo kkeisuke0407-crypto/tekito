@@ -115,7 +115,7 @@ const campaignLabel = (text: string, index: number) => {
       </div>
     </section>
 
-    <div class="lp3-pr-note">※本ページにはPR・アフィリエイトリンクが含まれます。掲載キャンペーン確認日：2026年5月14日。料金・特典は変更される場合があるため、申し込み前に公式サイトで最新条件をご確認ください。</div>
+    <div class="lp3-pr-note">※本ページにはPR・アフィリエイトリンクが含まれます。掲載情報確認日：2026年5月19日。料金・特典は変更される場合があるため、申し込み前に公式サイトで最新条件をご確認ください。</div>
 
     <section id="top3" class="lp3-section">
       <div class="ws-container">
@@ -139,7 +139,6 @@ const campaignLabel = (text: string, index: number) => {
                 {topThree.map((service) => (
                   <th>
                     <span class="lp3-rank-chip">No.{service.rank}</span>
-                    <img class="lp3-mini-banner" src={service.bannerSrc} alt={service.bannerAlt} loading="lazy" referrerpolicy="no-referrer-when-downgrade" />
                     <strong>{service.name}</strong>
                   </th>
                 ))}
@@ -179,7 +178,7 @@ const campaignLabel = (text: string, index: number) => {
                 <th>公式確認</th>
                 {topThree.map((service) => (
                   <td>
-                    <a class="lp3-table-cta" href={service.link} data-affiliate={service.affiliate} data-track={`lp3_${page.slug}_top3_${service.id}`} rel="nofollow sponsored">
+                    <a class="lp3-table-cta" href={service.link} data-affiliate={service.affiliate} data-track={`lp3_${page.slug}_top3_${service.id}`} rel="nofollow sponsored" referrerpolicy="no-referrer-when-downgrade">
                       公式サイト
                     </a>
                   </td>
@@ -217,7 +216,7 @@ const campaignLabel = (text: string, index: number) => {
                 </div>
               </header>
               <div class="lp3-rank-main">
-                <a class="lp3-rank-visual" href={service.link} data-affiliate={service.affiliate} data-track={`lp3_${page.slug}_banner_${service.id}`} rel="nofollow sponsored">
+                <a class="lp3-rank-visual" href={service.link} data-affiliate={service.affiliate} data-track={`lp3_${page.slug}_banner_${service.id}`} rel="nofollow sponsored" referrerpolicy="no-referrer-when-downgrade">
                   <img src={service.bannerSrc} alt={service.bannerAlt} loading="lazy" referrerpolicy="no-referrer-when-downgrade" />
                 </a>
                 <div class="lp3-rank-content">
@@ -262,7 +261,7 @@ const campaignLabel = (text: string, index: number) => {
                   </div>
                   <div class="lp3-card-actions">
                     <a class="lp3-detail-cta" href="#top3">比較表に戻る</a>
-                    <a class="lp3-official-cta" href={service.link} data-affiliate={service.affiliate} data-track={`lp3_${page.slug}_official_${service.id}`} rel="nofollow sponsored">
+                    <a class="lp3-official-cta" href={service.link} data-affiliate={service.affiliate} data-track={`lp3_${page.slug}_official_${service.id}`} rel="nofollow sponsored" referrerpolicy="no-referrer-when-downgrade">
                       公式サイトはこちら
                     </a>
                   </div>

@@ -1491,12 +1491,15 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .card-body { padding: .95rem 1.2rem; }
 .svc-image-link {
   position: relative;
-  display: block;
+  display: grid;
+  place-items: center;
   overflow: hidden;
   border-radius: 8px;
   border: 1px solid var(--border);
   background: var(--bg);
   margin-bottom: .35rem;
+  min-height: 250px;
+  padding: .25rem;
   text-decoration: none;
   transition: transform .15s, box-shadow .2s;
 }
@@ -1515,8 +1518,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .svc-image-link img {
   position: relative;
   z-index: 1;
-  width: 100%;
-  aspect-ratio: 6 / 5;
+  width: auto;
+  max-width: 100%;
+  height: auto;
   object-fit: contain;
   background: #fff;
   display: block;
@@ -2399,21 +2403,23 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .lp3-rank-main {
   display: grid;
-  grid-template-columns: 260px minmax(0, 1fr);
+  grid-template-columns: 330px minmax(0, 1fr);
   gap: 1rem;
   padding: 1rem;
 }
 .lp3-rank-visual {
   display: grid;
   place-items: center;
-  min-height: 220px;
+  min-height: 280px;
   padding: .75rem;
   border-radius: 10px;
   background: #f5fcff;
   border: 1px solid #dceff5;
 }
 .lp3-rank-visual img {
-  max-height: 220px;
+  width: auto;
+  max-width: 100%;
+  height: auto;
   object-fit: contain;
 }
 .lp3-rank-content h4 {

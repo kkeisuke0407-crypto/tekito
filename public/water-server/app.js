@@ -6,7 +6,7 @@ const AFFILIATE_LINKS = {
   oken:           "https://px.a8.net/svt/ejp?a8mat=4B1XE4+325A0A+1LOO+5Z6WY",
   oken_banner:    "https://px.a8.net/svt/ejp?a8mat=4B1XE4+325A0A+1LOO+6NMJL",
   every_frecious: "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3H144Q+2B8Y+15PEXE",
-  every_banner:   "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3H144Q+2B8Y+15XRUP",
+  every_banner:   "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3H144Q+2B8Y+15Y7A9",
   frecious:       "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3TJ7U2+2B8Y+674EQ",
   frecious_banner: "https://px.a8.net/svt/ejp?a8mat=4B1XE4+3TJ7U2+2B8Y+6N741",
   cosmo:          "https://px.a8.net/svt/ejp?a8mat=4B3G6G+F173ZE+4K9C+NW4IA",
@@ -16,6 +16,48 @@ const AFFILIATE_LINKS = {
   ocean:          "https://h.accesstrade.net/sp/cc?rk=0100o23g00orwp",
   ocean_banner:   "https://h.accesstrade.net/sp/cc?rk=0100o23o00orwp"
 };
+
+function a8PixelFromUrl(url) {
+  if (!url || url.indexOf("a8mat=") === -1) return "";
+  var match = url.match(/[?&]a8mat=([^&]+)/);
+  return match ? "https://www10.a8.net/0.gif?a8mat=" + match[1] : "";
+}
+
+function syncAffiliateLinkAttributes() {
+  var existingPixels = {};
+  document.querySelectorAll('img[src*="a8.net/0.gif"]').forEach(function (img) {
+    var pixel = a8PixelFromUrl(img.getAttribute("src") || "");
+    if (pixel) existingPixels[pixel] = true;
+  });
+
+  var pixels = {};
+  document.querySelectorAll('a[href*="px.a8.net"]').forEach(function (link) {
+    var pixel = a8PixelFromUrl(link.getAttribute("href") || "");
+    if (pixel && !existingPixels[pixel]) pixels[pixel] = true;
+  });
+
+  document.querySelectorAll('a[href*="h.accesstrade.net/sp/cc"]').forEach(function (link) {
+    if (!link.getAttribute("referrerpolicy")) {
+      link.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
+    }
+  });
+
+  var pixelUrls = Object.keys(pixels);
+  if (!pixelUrls.length) return;
+  var holder = document.createElement("div");
+  holder.setAttribute("aria-hidden", "true");
+  holder.style.cssText = "position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);";
+  pixelUrls.forEach(function (src) {
+    var img = document.createElement("img");
+    img.src = src;
+    img.alt = "";
+    img.width = 1;
+    img.height = 1;
+    img.loading = "lazy";
+    holder.appendChild(img);
+  });
+  document.body.appendChild(holder);
+}
 
 const PROVIDER_META = {
   oken: { provider: "oken", rank: 1 },
@@ -135,6 +177,10 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("[data-affiliate]").forEach(function (el) {
     var key = el.getAttribute("data-affiliate");
     if (AFFILIATE_LINKS[key]) el.setAttribute("href", AFFILIATE_LINKS[key]);
+    if (el.tagName === "A") {
+      el.setAttribute("rel", "nofollow sponsored");
+      el.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
+    }
   });
 
   // ── CTA click tracking ─────────────────────────────────────────
@@ -219,7 +265,7 @@ document.addEventListener("DOMContentLoaded", function () {
   bar.className = "sticky-cta-bar";
   bar.innerHTML =
     '<span class="sticky-label">月いくら？迷ったら公式条件へ</span>' +
-    '<a href="' + AFFILIATE_LINKS.oken + '" class="sticky-btn btn-attention" data-affiliate="oken" data-track="sticky_oken_cost" rel="nofollow sponsored">月額条件を見る</a>' +
+    '<a href="' + AFFILIATE_LINKS.oken + '" class="sticky-btn btn-attention" data-affiliate="oken" data-track="sticky_oken_cost" rel="nofollow sponsored" referrerpolicy="no-referrer-when-downgrade">月額条件を見る</a>' +
     '<button class="sticky-close" aria-label="閉じる">✕</button>';
   document.body.appendChild(bar);
 
@@ -315,5 +361,7 @@ document.addEventListener("DOMContentLoaded", function () {
       providerObserver.observe(card);
     });
   }
+
+  syncAffiliateLinkAttributes();
 
 });
