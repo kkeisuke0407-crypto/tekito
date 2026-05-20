@@ -1,0 +1,643 @@
+---
+const PAGE_TITLE  = "退職代行サービス比較ランキング【2025年最新】LINEで即日退職できる4選";
+const PAGE_DESC   = "退職代行サービスを料金・対応速度・保証内容で比較。LINE1本で即日退職できるおすすめ4社をランキング形式で紹介。在職中の無料相談も可能。";
+const CANONICAL   = "https://vpscomparehub.com/lp/taishoku-ranking/";
+const OGP_IMAGE   = "https://vpscomparehub.com/og-default.svg";
+const UPDATED     = "2025年5月";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "退職代行は本当に即日で退職できますか？",
+      acceptedAnswer: { "@type": "Answer",
+        text: "サービスによりますが、多くの退職代行は申し込み当日に会社へ連絡し、翌日以降の出社不要を実現できます。ただし有休消化や退職金の扱いは会社の規程によるため、公式サイトで事前に確認することをおすすめします。" }
+    },
+    {
+      "@type": "Question",
+      name: "退職代行を使うのは「逃げ」ですか？",
+      acceptedAnswer: { "@type": "Answer",
+        text: "退職は労働者の正当な権利です。引き留めや過度なプレッシャーで自分では言い出せない状況での利用は、精神的な健康を守るための現実的な選択肢の一つです。" }
+    },
+    {
+      "@type": "Question",
+      name: "退職代行を使ったことは会社にバレますか？",
+      acceptedAnswer: { "@type": "Answer",
+        text: "退職代行の利用自体は法律上の問題はありませんが、代行業者が会社に連絡した事実は残ります。その後の職場への影響は会社の対応次第です。" }
+    },
+    {
+      "@type": "Question",
+      name: "有給休暇は消化できますか？",
+      acceptedAnswer: { "@type": "Answer",
+        text: "労働組合が運営するサービス（ガーディアン等）や弁護士法人（みやび等）は交渉権限があるため、有給消化を交渉できる場合があります。一般業者では交渉できないため注意が必要です。公式で確認してください。" }
+      },
+    {
+      "@type": "Question",
+      name: "退職代行の料金はいくらですか？",
+      acceptedAnswer: { "@type": "Answer",
+        text: "一般的に1.5万〜5万円程度のサービスが多いです。EXITは2万円台、モームリは後払い可の業界最安水準などさまざまです。最新の料金は各公式サイトでご確認ください。" }
+    },
+    {
+      "@type": "Question",
+      name: "アルバイト・パートでも利用できますか？",
+      acceptedAnswer: { "@type": "Answer",
+        text: "多くのサービスはアルバイト・パート・派遣・契約社員も対象としています。各サービスの公式ページで対象範囲を確認してください。" }
+    }
+  ]
+};
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{PAGE_TITLE}</title>
+  <meta name="description" content={PAGE_DESC} />
+  <link rel="canonical" href={CANONICAL} />
+
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content={PAGE_TITLE} />
+  <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:url"         content={CANONICAL} />
+  <meta property="og:image"       content={OGP_IMAGE} />
+  <meta property="og:locale"      content="ja_JP" />
+
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+
+  <!-- フォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;900&display=swap" rel="stylesheet" />
+
+  <!-- スタイル -->
+  <link rel="stylesheet" href="/lp/soft-pastel.css" />
+
+  <!-- GA4 -->
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2YLF06DC0E');
+  </script>
+
+  <!-- TikTokピクセル（アカウント開設後に差し替え） -->
+  <!-- <script is:inline>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];
+      ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],
+      ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
+      for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
+      ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},
+      ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js";
+      ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};
+      var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=r+"?sdkid="+e+"&lib="+t;
+      var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+      ttq.load('YOUR_TIKTOK_PIXEL_ID'); // ← ピクセルIDに差し替え
+      ttq.page();
+    }(window, document, 'ttq');
+  </script> -->
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     ① FV ヒーロー
+════════════════════════════════════════════════ -->
+<header class="hero">
+  <div class="lp-wrap">
+    <p class="hero__pr">PR・広告記事</p>
+    <h1 class="hero__title">
+      もう、明日<em>会社に行かなくていい</em>。<br>
+      退職代行サービス比較ランキング
+    </h1>
+    <p class="hero__lead">
+      「辞めたいけど言い出せない」——そんな悩みを抱えたまま、
+      何週間も過ごしていませんか？<br>
+      LINE1本で会社と直接やり取りせずに退職できるサービスを、
+      料金・対応・保証で比べました。
+    </p>
+    <div class="text-center">
+      <a href="#ranking" class="btn-cta" data-track="hero_ranking">
+        <span>ランキングを確認する</span>
+        <span class="btn-cta__arrow">↓</span>
+      </a>
+    </div>
+    <p class="hero__meta">最終更新: {UPDATED} ／ 掲載情報は公式サイトでご確認ください</p>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════
+     ② 共感・問題提起
+════════════════════════════════════════════════ -->
+<section>
+  <div class="lp-wrap">
+    <div class="section-head">
+      <span class="section-head__label">こんな状況ではありませんか？</span>
+      <h2 class="section-head__title">
+        日曜の夜、<span>動悸がする</span>人へ
+      </h2>
+    </div>
+
+    <div class="empathy-block">
+      <p>月曜が怖い。上司の顔が頭をよぎって眠れない。<br>
+      「辞めたい」とは思っているのに、<strong>「辞めます」の一言が言えない。</strong></p>
+      <p style="margin-top:12px;">
+        引き留められそう、怒鳴られそう、揉めるのが怖い——
+        そういう理由で何ヶ月も我慢を続けている人は、決して少なくありません。
+      </p>
+    </div>
+
+    <div class="mt-m">
+      <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:12px;">こんな状況が続いていませんか？</p>
+      <ul class="check-list check-list--warn">
+        <li>「もう限界」と思っているのに出社を繰り返している</li>
+        <li>退職を申し出たら、長期間引き止められた経験がある</li>
+        <li>上司が怖くて「辞めたい」と口に出せない</li>
+        <li>有給も使えず、消化できないまま終わりそう</li>
+        <li>体調に出てきているが、相談できる人がいない</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     ③ 体験談
+════════════════════════════════════════════════ -->
+<section style="background:var(--bg-alt);">
+  <div class="lp-wrap">
+    <div class="section-head">
+      <span class="section-head__label">利用者の声</span>
+      <h2 class="section-head__title">「私も同じでした」</h2>
+    </div>
+
+    <div class="testimonial">
+      <p class="testimonial__body">
+        3年間勤めた会社でしたが、パワハラが続いて心療内科にも通うようになって。
+        「辞める」と言ったら「損害賠償する」と脅されて身動きが取れなかったんです。
+        退職代行に相談したら、次の日には「もう出社しなくていい」と言ってもらえて、
+        本当に涙が出ました。
+      </p>
+      <p class="testimonial__meta">20代・女性 / 東京都 / サービス業（個人の体験をもとに作成）</p>
+    </div>
+
+    <div class="testimonial mt-s">
+      <p class="testimonial__body">
+        新卒で入った会社が思っていた環境と全然違って、
+        でも「すぐ辞めるなんて」と周りに言われそうで言い出せずにいました。
+        LINE1本で全部やってもらえると知って、当日申し込んで次の日から解放されました。
+        もっと早く動けばよかったです。
+      </p>
+      <p class="testimonial__meta">20代・男性 / 神奈川県 / 製造業（個人の体験をもとに作成）</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     ④ 原因・解決策
+════════════════════════════════════════════════ -->
+<section>
+  <div class="lp-wrap">
+    <div class="section-head">
+      <span class="section-head__label">なぜ「退職」がこんなに難しいのか</span>
+      <h2 class="section-head__title">
+        「言えない」には<span>理由がある</span>
+      </h2>
+    </div>
+    <p style="font-size:0.95rem;color:var(--text-secondary);line-height:1.9;">
+      退職の意思を伝えるのが難しい理由のひとつは、
+      <strong>直接対面で感情的な圧力をかけられやすい</strong>という構造にあります。
+      引き止め、脅し、感情的な訴え——それらに個人で向き合うのは、精神的に消耗します。
+    </p>
+    <p style="font-size:0.95rem;color:var(--text-secondary);line-height:1.9;margin-top:12px;">
+      退職代行は、<strong>退職の意思を本人の代わりに会社へ伝えるサービス</strong>です。
+      多くは「申し込みから即日対応」「LINE完結」「有休交渉対応（労組・弁護士系）」に対応しています。
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     ⑤ 中間CTA
+════════════════════════════════════════════════ -->
+<section style="background:var(--brand-light);border-top:2px solid var(--brand);border-bottom:2px solid var(--brand);">
+  <div class="lp-wrap text-center">
+    <p style="font-size:1.05rem;font-weight:700;color:var(--brand);margin-bottom:var(--gap-s);">
+      まず「どんなサービスか」を確認してみましょう
+    </p>
+    <a href="#ranking" class="btn-cta btn-cta--sub" data-track="mid_ranking">
+      <span>比較ランキングを見る</span>
+      <span class="btn-cta__arrow">↓</span>
+    </a>
+    <p style="font-size:0.78rem;color:var(--text-muted);margin-top:10px;">
+      相談・見積もりのみで申し込み義務なし（各社公式サイトで確認）
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     ⑥ ランキング
+════════════════════════════════════════════════ -->
+<section id="ranking">
+  <div class="lp-wrap">
+    <div class="section-head">
+      <span class="section-head__label">2025年最新 比較ランキング</span>
+      <h2 class="section-head__title">
+        退職代行<span>おすすめ4選</span>
+      </h2>
+      <p style="font-size:0.82rem;color:var(--text-muted);margin-top:8px;">
+        ※ 掲載情報はASP・公式サイト情報をもとに作成。最新情報は公式でご確認ください。
+        本ページにはアフィリエイトリンクを含みます。
+      </p>
+    </div>
+
+    <!-- ランク1: モームリ -->
+    <div class="rank-card rank-card--featured">
+      <div class="rank-card__header">
+        <div class="rank-badge rank-badge--1">1位</div>
+        <div>
+          <div class="rank-card__name">退職代行モームリ</div>
+          <div style="font-size:0.78rem;color:var(--text-muted);">運営: 株式会社アルバトロス</div>
+        </div>
+        <span class="rank-card__tag">後払い可</span>
+      </div>
+      <div class="rank-card__body">
+        <p class="rank-card__catch">
+          「今すぐ相談したいけどお金が手元にない」に対応。
+          後払い・分割払い対応で、手元資金を気にせず動き出せるのが特徴。
+        </p>
+        <div class="rank-card__specs">
+          <div class="spec-item">
+            <span class="spec-item__label">料金目安（正社員）</span>
+            <span class="spec-item__value spec-item__value--brand">公式で確認</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-item__label">後払い対応</span>
+            <span class="spec-item__value">◎ あり</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-item__label">即日対応</span>
+            <span class="spec-item__value">◎ 対応</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-item__label">転職サポート</span>
+            <span class="spec-item__value">◎ あり</span>
+          </div>
+        </div>
+        <ul class="rank-card__points">
+          <li>後払い・分割払いに対応（手元資金がなくても相談できる）</li>
+          <li>無料相談は LINE / 電話 / メールで24時間対応</li>
+          <li>退職後の転職サポートまで一気通貫</li>
+          <li>全額返金保証あり（詳細は公式で確認）</li>
+        </ul>
+        <div class="rank-card__cta">
+          <a href="#" class="btn-cta" data-affiliate="momuri" data-track="card_momuri">
+            <span>モームリの公式サイトを確認する</span>
+            <span class="btn-cta__arrow">→</span>
+          </a>
+          <p class="rank-card__note">※ 料金・条件は公式サイトで最新情報をご確認ください</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ランク2: EXIT -->
+    <div class="rank-card">
+      <div class="rank-card__header">
+        <div class="rank-badge rank-badge--2">2位</div>
+        <div>
+          <div class="rank-card__name">EXIT（イグジット）</div>
+          <div style="font-size:0.78rem;color:var(--text-muted);">運営: EXIT株式会社</div>
+        </div>
+        <span class="rank-card__tag">業界最大手</span>
+      </div>
+      <div class="rank-card__body">
+        <p class="rank-card__catch">
+          知名度と実績ナンバーワン水準。メディア掲載多数で会社側への交渉実績も豊富。
+          シンプルな料金体系で比較しやすい。
+        </p>
+        <div class="rank-card__specs">
+          <div class="spec-item">
+            <span class="spec-item__label">料金目安</span>
+            <span class="spec-item__value spec-item__value--brand">公式で確認</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-item__label">雇用形態</span>
+            <span class="spec-item__value">正社員・バイト等</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-item__label">即日対応</span>
+            <span class="spec-item__value">◎ 対応</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-item__label">転職サポート</span>
+            <span class="spec-item__value">◎ あり</span>
+          </div>
+        </div>
+        <ul class="rank-card__points">
+          <li>業界内での知名度が高く、会社側も対応に慣れているケースが多い</li>
+          <li>申し込みから最短即日対応が可能</li>
+          <li>正社員・アルバイト・パート・派遣など幅広い雇用形態に対応</li>
+          <li>無料転職サポートがセットになっている</li>
+        </ul>
+        <div class="rank-card__cta">
+          <a href="#" class="btn-cta btn-cta--sub" data-affiliate="exit" data-track="card_exit">
+            <span>EXITの公式サイトを確認する</span>
+            <span class="btn-cta__arrow">→</span>
+          </a>
+          <p class="rank-card__note">※ 料金・条件は公式サイトで最新情報をご確認ください</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ランク3: ガーディアン -->
+    <div class="rank-card">
+      <div class="rank-card__header">
+        <div class="rank-badge rank-badge--3">3位</div>
+        <div>
+          <div class="rank-card__name">退職代行ガーディアン</div>
+          <div style="font-size:0.78rem;color:var(--text-muted);">運営: 東京労働経済組合</div>
+        </div>
+        <span class="rank-card__tag">労組運営・交渉可</span>
+      </div>
+      <div class="rank-card__body">
+        <p class="rank-card__catch">
+          労働組合が直接運営するため、会社との交渉権限を持つ。
+          有給消化や残業代の交渉も対応できる可能性がある（詳細は公式で確認）。
+        </p>
+        <div class="rank-card__specs">
+          <div class="spec-item">
+            <span class="spec-item__label">料金目安</span>
+            <span class="spec-item__value spec-item__value--brand">公式で確認</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-item__label">交渉権限</span>
+            <span class="spec-item__value">◎ 労組として対応</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-item__label">有給交渉</span>
+            <span class="spec-item__value">◎ 相談可</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-item__label">即日対応</span>
+            <span class="spec-item__value">◎ 対応</span>
+          </div>
+        </div>
+        <ul class="rank-card__points">
+          <li>東京労働経済組合運営のため、法的に会社と交渉できる立場</li>
+          <li>有給消化・残業代について交渉できる場合がある</li>
+          <li>一般の退職代行より複雑なケースにも対応しやすい</li>
+          <li>追加費用なしの定額制（公式で最新を確認）</li>
+        </ul>
+        <div class="rank-card__cta">
+          <a href="#" class="btn-cta btn-cta--sub" data-affiliate="guardian" data-track="card_guardian">
+            <span>ガーディアンの公式サイトを確認する</span>
+            <span class="btn-cta__arrow">→</span>
+          </a>
+          <p class="rank-card__note">※ 料金・条件は公式サイトで最新情報をご確認ください</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ランク4: みやび -->
+    <div class="rank-card">
+      <div class="rank-card__header">
+        <div class="rank-badge rank-badge--4">4位</div>
+        <div>
+          <div class="rank-card__name">弁護士法人みやび</div>
+          <div style="font-size:0.78rem;color:var(--text-muted);">運営: 弁護士法人みやび</div>
+        </div>
+        <span class="rank-card__tag">法的トラブル対応</span>
+      </div>
+      <div class="rank-card__body">
+        <p class="rank-card__catch">
+          「損害賠償」「訴訟」などの脅しをかけられているケースや、
+          未払い賃金・残業代の請求を検討している人向け。弁護士が直接対応。
+        </p>
+        <div class="rank-card__specs">
+          <div class="spec-item">
+            <span class="spec-item__label">料金目安</span>
+            <span class="spec-item__value spec-item__value--brand">公式で確認</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-item__label">弁護士対応</span>
+            <span class="spec-item__value">◎ 直接対応</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-item__label">未払い請求</span>
+            <span class="spec-item__value">◎ 対応可</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-item__label">賠償脅しへの対応</span>
+            <span class="spec-item__value">◎ 相談可</span>
+          </div>
+        </div>
+        <ul class="rank-card__points">
+          <li>弁護士法人が直接対応するため法的な交渉・代理が可能</li>
+          <li>「損害賠償請求する」などの会社からの圧力にも対応</li>
+          <li>未払い残業代・退職金などの回収も相談可能</li>
+          <li>ハラスメント事案など複雑ケースを扱った実績</li>
+        </ul>
+        <div class="rank-card__cta">
+          <a href="#" class="btn-cta btn-cta--sub" data-affiliate="miyabi" data-track="card_miyabi">
+            <span>みやびの公式サイトを確認する</span>
+            <span class="btn-cta__arrow">→</span>
+          </a>
+          <p class="rank-card__note">※ 料金・条件は公式サイトで最新情報をご確認ください</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     ⑦ 比較表
+════════════════════════════════════════════════ -->
+<section style="background:var(--bg-alt);">
+  <div class="lp-wrap lp-wrap--wide">
+    <div class="section-head">
+      <span class="section-head__label">一覧比較</span>
+      <h2 class="section-head__title">4社を<span>横並びで確認</span></h2>
+    </div>
+    <div style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>サービス</th>
+            <th>料金</th>
+            <th>即日</th>
+            <th>後払い</th>
+            <th>交渉権限</th>
+            <th>こんな人向け</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="highlight">モームリ</td>
+            <td>公式確認</td>
+            <td class="highlight">◎</td>
+            <td class="highlight">◎ あり</td>
+            <td>△ 一般業者</td>
+            <td>手元資金が少ない・転職も考えている</td>
+          </tr>
+          <tr>
+            <td class="highlight">EXIT</td>
+            <td>公式確認</td>
+            <td class="highlight">◎</td>
+            <td>— なし</td>
+            <td>△ 一般業者</td>
+            <td>知名度重視・とにかく早く辞めたい</td>
+          </tr>
+          <tr>
+            <td class="highlight">ガーディアン</td>
+            <td>公式確認</td>
+            <td class="highlight">◎</td>
+            <td>— なし</td>
+            <td class="highlight">◎ 労組</td>
+            <td>有給消化・残業代を交渉したい</td>
+          </tr>
+          <tr>
+            <td class="highlight">みやび</td>
+            <td>公式確認</td>
+            <td class="highlight">◎</td>
+            <td>— なし</td>
+            <td class="highlight">◎ 弁護士</td>
+            <td>脅されている・法的トラブルがある</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:0.72rem;color:var(--text-muted);margin-top:var(--gap-s);">
+      ※ 上記は調査時点の情報を整理したものです。料金・条件は変更される場合があります。
+      申し込み前に各サービスの公式サイトで最新情報をご確認ください。
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     ⑧ FAQ
+════════════════════════════════════════════════ -->
+<section>
+  <div class="lp-wrap">
+    <div class="section-head">
+      <span class="section-head__label">よくある質問</span>
+      <h2 class="section-head__title">
+        不安を<span>先に解消</span>しておく
+      </h2>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-item__q">本当に即日で退職できますか？</p>
+      <p class="faq-item__a">
+        サービスによりますが、申し込み当日に会社へ連絡し、翌日以降の出社不要を実現できるケースが多いです。
+        ただし有休消化や退職金の扱いは会社の規程によります。各公式サイトで確認してください。
+      </p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-item__q">退職代行を使うのは「逃げ」ですか？</p>
+      <p class="faq-item__a">
+        退職は労働者の正当な権利です。精神的な健康を守るための選択肢の一つとして、
+        多くの人が活用しています。
+      </p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-item__q">有給休暇は消化できますか？</p>
+      <p class="faq-item__a">
+        労働組合運営（ガーディアン等）や弁護士法人（みやび等）は交渉権限を持つため、
+        有給消化を交渉できる場合があります。一般業者では交渉権がないため確認が必要です。
+      </p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-item__q">「損害賠償する」と言われています。どうすればよいですか？</p>
+      <p class="faq-item__a">
+        通常の退職において損害賠償が認められるケースは限られています。
+        脅しに近い言動が続いているなら、弁護士法人（みやびなど）への相談をおすすめします。
+        法的な観点から対応してもらえます。
+      </p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-item__q">アルバイト・パートでも利用できますか？</p>
+      <p class="faq-item__a">
+        多くのサービスはアルバイト・パート・派遣・契約社員も対象としています。
+        各サービスの公式ページで対象範囲を確認してください。
+      </p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-item__q">お金が今すぐないのですが、利用できますか？</p>
+      <p class="faq-item__a">
+        モームリは後払い・分割払いに対応しています（詳細・条件は公式で確認）。
+        「今すぐ動きたいがお金がない」という状況でも選択肢があります。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     ⑨ クロージングCTA
+════════════════════════════════════════════════ -->
+<section style="background:linear-gradient(150deg,#EEF7F4,#FFF8F3);border-top:2px solid var(--brand);">
+  <div class="lp-wrap text-center">
+    <div class="section-head text-center">
+      <span class="section-head__label">あなたへのメッセージ</span>
+      <h2 class="section-head__title" style="text-align:center;">
+        「相談だけ」でも<span>構いません</span>
+      </h2>
+    </div>
+    <p style="font-size:0.95rem;color:var(--text-secondary);line-height:1.9;max-width:500px;margin:0 auto var(--gap-l);">
+      今すぐ決断しなくていいです。<br>
+      まず「どんなサービスか」「自分の状況に使えるか」を確認するだけでも、
+      一歩踏み出せます。各サービスの無料相談は申し込み義務なしです。
+    </p>
+
+    <div style="display:flex;flex-direction:column;align-items:center;gap:var(--gap-s);">
+      <a href="#" class="btn-cta" data-affiliate="momuri" data-track="footer_momuri">
+        <span>モームリの無料相談を確認する（後払い可）</span>
+        <span class="btn-cta__arrow">→</span>
+      </a>
+      <a href="#" class="btn-cta btn-cta--sub" data-affiliate="exit" data-track="footer_exit">
+        <span>EXITを公式サイトで確認する</span>
+        <span class="btn-cta__arrow">→</span>
+      </a>
+    </div>
+
+    <p style="font-size:0.75rem;color:var(--text-muted);margin-top:var(--gap-m);max-width:500px;margin-left:auto;margin-right:auto;">
+      ※ 本ページはアフィリエイト広告を含みます。掲載順は調査時点の情報・条件をもとに構成しています。
+      料金・条件は変更される可能性があります。申し込み前に必ず公式サイトで最新情報をご確認ください。
+    </p>
+
+    <p style="font-size:0.88rem;color:var(--text-secondary);margin-top:var(--gap-l);font-style:italic;">
+      追伸: 「辞めたい」という気持ちは、体のSOSかもしれません。<br>
+      自分を守るための行動を、責めないでください。
+    </p>
+  </div>
+</section>
+
+<!-- ─── フッター ─── -->
+<footer class="lp-footer">
+  <div class="lp-wrap">
+    <div class="lp-footer__links">
+      <a href="/privacy/">プライバシーポリシー</a>
+      <a href="/disclosure/">広告掲載について</a>
+      <a href="/about/">運営者情報</a>
+    </div>
+    <p class="lp-footer__copy">&copy; 2025 vpscomparehub.com</p>
+    <p class="lp-footer__disclaimer">
+      本ページに掲載している情報は、各サービスの公式サイト・ASP掲載情報をもとに作成しています。
+      料金・サービス内容・キャンペーンは予告なく変更される場合があります。
+      申し込みの際は必ず各サービスの公式サイトで最新情報をご確認ください。
+      本ページはアフィリエイト広告を含みます。
+    </p>
+  </div>
+</footer>
+
+<!-- ─── 追従CTAボタン（スマホ） ─── -->
+<div class="sticky-cta">
+  <span class="sticky-cta__label">無料相談・料金確認はこちら</span>
+  <a href="#" class="btn-cta" data-affiliate="momuri" data-track="sticky_momuri">
+    <span>モームリ（後払い可）を確認する</span>
+    <span class="btn-cta__arrow">→</span>
+  </a>
+</div>
+
+<script src="/lp/taishoku.js" is:inline></script>
+</body>
+</html>
