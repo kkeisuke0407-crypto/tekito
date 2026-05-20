@@ -1,0 +1,430 @@
+---
+const SITE_NAME = "生ゴミ乾燥機えらび";
+const PAGE_TITLE = "生ゴミ処理機はいらない？後悔する人・買ってよかった人の違い";
+const FULL_TITLE = `${PAGE_TITLE}｜生ゴミ乾燥機えらび`;
+const PAGE_DESC =
+  "生ゴミ処理機や生ゴミ乾燥機を買う前に、いらない人・向いている人、乾燥式・コンポスト・バイオ式の違い、Loofenの特徴と注意点を確認できます。";
+const SITE_URL = import.meta.env.PUBLIC_LOOFEN_SITE_URL ?? "https://hakobu-family.com";
+const BASE_PATH = "/loofen";
+const CANONICAL = `${SITE_URL}${BASE_PATH}`;
+const OGP_IMAGE = `${SITE_URL}${BASE_PATH}/hero-kitchen-dryer.svg`;
+const AFFILIATE_URL = "https://loofen.jp/";
+const UPDATED_AT = "2026年5月20日";
+
+const comparisonRows = [
+  {
+    type: "乾燥式",
+    fit: "室内で臭い・コバエ・ゴミの重さを減らしたい人",
+    strong: "水分を飛ばして量と臭いの元を減らしやすい",
+    caution: "本体価格、電気代、フィルターなどの消耗品を確認"
+  },
+  {
+    type: "コンポスト",
+    fit: "庭やベランダで堆肥化したい人",
+    strong: "電気代がかかりにくく、土づくりに使える",
+    caution: "設置場所、虫、混ぜる手間、季節差が出やすい"
+  },
+  {
+    type: "バイオ式",
+    fit: "分解処理を任せたい人、処理量が多い家庭",
+    strong: "微生物で分解するため、家庭の運用に合えば便利",
+    caution: "チップ交換、湿度管理、設置場所を事前に確認"
+  },
+  {
+    type: "冷凍・密閉ゴミ箱",
+    fit: "購入費を抑えたい人、まず臭いだけ抑えたい人",
+    strong: "導入しやすく、短期的な臭い対策になる",
+    caution: "ゴミ量は減りにくく、捨てる手間は残りやすい"
+  }
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "生ゴミ処理機はいらない人はどんな人ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ゴミ出し頻度が高く、生ゴミの臭いやコバエに困っていない人、設置スペースや消耗品コストを増やしたくない人は急いで買う必要はありません。まずは密閉ゴミ箱や水切りなどで十分か確認すると判断しやすくなります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "乾燥式の生ゴミ処理機は何が便利ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "生ゴミの水分を乾燥させることで、重さや臭いの元を減らしやすい点が便利です。室内で使いやすい一方、本体価格、電気代、フィルターなどの消耗品は事前に確認してください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Loofenはどんな人に向いていますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "キッチンに置けるサイズ感、乾燥式、活性炭フィルター、5L容量などを重視し、臭い・コバエ・ゴミの重さを減らしたい家庭に向いています。最新の価格、キャンペーン、返品条件、送料は公式サイトで確認してください。"
+      }
+    }
+  ]
+};
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{FULL_TITLE}</title>
+  <meta name="description" content={PAGE_DESC} />
+  <link rel="canonical" href={CANONICAL} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={`${PAGE_TITLE}｜${SITE_NAME}`} />
+  <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:url" content={CANONICAL} />
+  <meta property="og:image" content={OGP_IMAGE} />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content={SITE_NAME} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/loofen/styles.css" />
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-18129603657"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18129603657');
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/loofen" aria-label={SITE_NAME}>
+        <span class="brand-mark">乾</span>
+        <span>{SITE_NAME}</span>
+      </a>
+      <nav class="nav" aria-label="ページ内ナビゲーション">
+        <a href="#need">必要性</a>
+        <a href="#compare">方式比較</a>
+        <a href="#loofen">候補</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">PR｜夏のキッチン監査レポート</p>
+          <div class="mobile-signal" aria-hidden="true">
+            <span class="device-picto"></span>
+            <span>乾燥式を候補にする前の確認</span>
+          </div>
+          <h1>生ゴミ処理機、<br />本当にいらない？</h1>
+          <p class="hero-lead">
+            「便利そうだけど高い」「結局使わないかも」。そう迷っている人向けに、
+            いらないケース、買ってよかったと感じやすいケース、乾燥式を選ぶ理由を先に整理しました。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#need">向き不向きを確認</a>
+            <a class="btn btn-secondary" href="#loofen">乾燥式の候補を見る</a>
+          </div>
+          <p class="microcopy">広告を含む比較・判断支援ページです。最終条件は公式サイトで確認してください。</p>
+          <ul class="hero-points">
+            <li><span>01</span> 臭い・コバエ対策の優先度</li>
+            <li><span>02</span> 乾燥式とコンポストの違い</li>
+            <li><span>03</span> 買って後悔しやすい条件</li>
+            <li><span>04</span> 購入前に見る費用と保証</li>
+          </ul>
+        </div>
+        <div class="hero-art" aria-label="キッチン診断パネル">
+          <div class="audit-card">
+            <span>Kitchen waste audit</span>
+            <strong>水分・臭い・置き場所</strong>
+            <p>3つの負担が重なったら、乾燥式を検討する価値があります。</p>
+          </div>
+          <img src="/loofen/hero-kitchen-dryer.svg" width="1600" height="1000" alt="" decoding="async" fetchpriority="high" />
+          <div class="floating-note">
+            <strong>臭い・重さ・虫</strong>
+            <span>夏のキッチンでつらくなる前に、必要性をチェック</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="notice">
+      <div class="container">
+        <p>このページは広告を含みます。掲載情報は{UPDATED_AT}時点で公式サイト等を確認した内容をもとに作成しています。</p>
+      </div>
+    </div>
+
+    <section id="need">
+      <div class="container split">
+        <div class="section-head">
+          <span class="section-label">AUDIT 01</span>
+          <h2>まず「買わなくていい人」から確認する</h2>
+          <p class="lead">
+            生ゴミ処理機は全員に必要な家電ではありません。先に不要なケースを切り分けると、広告に流されず判断できます。
+          </p>
+        </div>
+        <div class="panel panel-pad">
+          <ul class="check-list">
+            <li>週2回以上のゴミ出しで、生ゴミを長く置かない</li>
+            <li>臭いは密閉ゴミ箱・冷凍・水切りで十分に抑えられている</li>
+            <li>キッチンに幅27cm前後の家電を置く余白がない</li>
+            <li>フィルター交換やバスケットカバーなどの消耗品を増やしたくない</li>
+            <li>堆肥化したい目的が強く、庭や土の管理に抵抗がない</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">AUDIT 02</span>
+          <h2>それでも乾燥式が候補になるのは、悩みが「水分」に寄っているとき</h2>
+          <p class="lead">
+            生ゴミの重さ、臭い、コバエは水分が残るほどつらくなります。乾燥式はそこに直接アプローチする選択肢です。
+          </p>
+        </div>
+        <div class="decision-grid">
+          <div class="decision">
+            <h3>買ってよかったと感じやすい人</h3>
+            <ul>
+              <li>夏場の臭い・コバエが毎年ストレス</li>
+              <li>料理後の生ゴミが重く、ゴミ出しがつらい</li>
+              <li>室内で完結する処理方法を探している</li>
+              <li>コンポストの土管理や虫が苦手</li>
+            </ul>
+          </div>
+          <div class="decision">
+            <h3>後悔しやすい人</h3>
+            <ul>
+              <li>本体価格だけ見て、送料・消耗品を見ていない</li>
+              <li>乾燥にかかる時間や音の感じ方を確認していない</li>
+              <li>設置寸法を測らずに購入する</li>
+              <li>自治体の助成金を調べずに急いで買う</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="compare">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">AUDIT 03</span>
+          <h2>生ゴミ処理の選択肢をざっくり比較</h2>
+          <p class="lead">
+            「おすすめ」だけで決めるより、処理方式ごとの得意・不得意を見る方が失敗しにくいです。
+          </p>
+        </div>
+        <div class="compare-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>方式</th>
+                <th>向いている人</th>
+                <th>強み</th>
+                <th>注意点</th>
+              </tr>
+            </thead>
+            <tbody>
+              {comparisonRows.map((row) => (
+                <tr>
+                  <td><strong>{row.type}</strong></td>
+                  <td>{row.fit}</td>
+                  <td>{row.strong}</td>
+                  <td>{row.caution}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div class="keyword-box">
+          <strong>初期広告で合わせやすい検索意図</strong>
+          <ul>
+            <li>生ゴミ処理機</li>
+            <li>生ゴミ乾燥機</li>
+            <li>生ゴミ処理機 いらない</li>
+            <li>生ゴミ 臭い 対策</li>
+            <li>生ゴミ処理機 比較</li>
+            <li>生ゴミ乾燥機 おすすめ</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">CHECKPOINT</span>
+          <h2>乾燥式を選ぶなら、見るべきポイントは3つ</h2>
+        </div>
+        <div class="three-grid">
+          <article class="reason-card">
+            <span>1</span>
+            <h3>水分をどれだけ減らせるか</h3>
+            <p>生ゴミは水分が残るほど重く、臭いも出やすくなります。削減率や乾燥後の扱いを確認します。</p>
+          </article>
+          <article class="reason-card">
+            <span>2</span>
+            <h3>室内で続けられるか</h3>
+            <p>サイズ、音、電気代、追加投入のしやすさは毎日の使い勝手に直結します。</p>
+          </article>
+          <article class="reason-card">
+            <span>3</span>
+            <h3>購入後コストが読めるか</h3>
+            <p>送料、保証、返金条件、フィルター交換頻度、バスケットカバーの価格まで見ます。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="loofen" class="offer">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">DRYER CANDIDATE</span>
+          <h2>乾燥式で候補に入るLoofen</h2>
+          <p class="lead">
+            Loofenは乾燥式の生ゴミ乾燥機。公式サイトでは、77%削減、5L容量、活性炭フィルター、1日約20円、60日間返金保証などが訴求されています。
+          </p>
+        </div>
+        <article class="offer-card">
+          <div class="offer-visual" aria-hidden="true">
+            <div class="mini-device"></div>
+          </div>
+          <div class="offer-body">
+            <h3>Loofen SLW01を確認する前に見るポイント</h3>
+            <p class="lead">
+              公式のキャンペーンや分割価格は時期で変わる可能性があります。購入前は、価格・送料・保証・返品条件・消耗品をまとめて確認してください。
+            </p>
+            <div class="fact-grid">
+              <div class="fact">
+                <strong>乾燥式</strong>
+                <span>温風空気循環乾燥方式</span>
+              </div>
+              <div class="fact">
+                <strong>5L</strong>
+                <span>公式掲載の容量</span>
+              </div>
+              <div class="fact">
+                <strong>約6kg</strong>
+                <span>公式掲載の本体重量</span>
+              </div>
+              <div class="fact">
+                <strong>幅270mm</strong>
+                <span>本体寸法の目安</span>
+              </div>
+            </div>
+            <p class="note">
+              公式サイトでは、10,000円オフクーポン、WEB限定特典、60日間返金保証、1年間保証などの表示があります。適用条件と最新内容は遷移先で確認してください。
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary js-affiliate" href={AFFILIATE_URL} rel="nofollow sponsored" data-track="loofen_offer_cta">Loofenの最新条件を確認</a>
+              <a class="btn btn-secondary" href="#faq">購入前の疑問を見る</a>
+            </div>
+            <p class="microcopy">このページはLoofen公式サイトではありません。購入や保証の条件は公式サイトの表示が優先されます。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">BEFORE BUYING</span>
+          <h2>購入前の確認はこの順番で十分</h2>
+        </div>
+        <div class="three-grid">
+          <article class="step">
+            <span>1</span>
+            <h3>設置場所を測る</h3>
+            <p>幅・奥行き・高さに加え、フィルター込みの奥行きも確認します。</p>
+          </article>
+          <article class="step">
+            <span>2</span>
+            <h3>自治体助成金を見る</h3>
+            <p>家庭用生ゴミ処理機は助成対象になる自治体があります。購入前に条件を見ます。</p>
+          </article>
+          <article class="step">
+            <span>3</span>
+            <h3>公式条件を確認する</h3>
+            <p>価格、送料、返金保証、消耗品、支払い方法を最後にまとめて確認します。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">FAQ</span>
+          <h2>よくある疑問</h2>
+        </div>
+        <div class="faq-grid">
+          <article class="faq-item">
+            <h3>生ゴミ処理機は本当に必要ですか？</h3>
+            <p>臭い・コバエ・ゴミの重さに困っていないなら急ぐ必要はありません。困りごとが夏場に集中するなら、乾燥式は候補になります。</p>
+          </article>
+          <article class="faq-item">
+            <h3>乾燥後のゴミはどうしますか？</h3>
+            <p>公式FAQでは、自治体ルールに従って可燃ゴミとして捨てる、または土に埋めて堆肥として使えると説明されています。</p>
+          </article>
+          <article class="faq-item">
+            <h3>消耗品はありますか？</h3>
+            <p>活性炭フィルターやバスケットカバーがあります。公式FAQではフィルター交換頻度は使用頻度や処理内容により3〜6か月程度とされています。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container">
+        <h2>「いらない理由」が残らなければ、公式条件を見て判断</h2>
+        <p>
+          価格、送料、キャンペーン、返金保証、消耗品、助成金。ここまで確認して納得できるなら、乾燥式は生ゴミの悩みを減らす現実的な候補になります。
+        </p>
+        <div class="cta-row" style="justify-content:center">
+          <a class="btn btn-primary js-affiliate" href={AFFILIATE_URL} rel="nofollow sponsored" data-track="final_cta">Loofenの最新条件を確認</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="sticky-cta" aria-label="固定CTA">
+    <div class="container sticky-inner">
+      <p>乾燥式が合いそうなら、価格・保証・助成金を確認</p>
+      <a class="btn btn-primary js-affiliate" href={AFFILIATE_URL} rel="nofollow sponsored" data-track="sticky_cta">最新条件を確認</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="/loofen/disclosure">広告掲載について</a>
+        <a href="/loofen/operator">運営者情報</a>
+        <a href="/loofen/privacy">プライバシーポリシー</a>
+      </div>
+      <p>© {new Date().getFullYear()} {SITE_NAME}. 当サイトは公式サイトではありません。最新の販売条件は遷移先でご確認ください。</p>
+    </div>
+  </footer>
+
+  <script is:inline>
+    document.querySelectorAll(".js-affiliate").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (typeof window.gtag === "function") {
+          window.gtag("event", "affiliate_click", {
+            event_category: "loofen",
+            event_label: link.dataset.track || "cta"
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
