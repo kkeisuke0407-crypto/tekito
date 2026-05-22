@@ -27,7 +27,7 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;900&family=Noto+Serif+JP:wght@700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet" />
 
   <!-- Page CSS -->
   <link rel="stylesheet" href="/detective/styles.css?v=20260519b" />
@@ -80,6 +80,22 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
       <h1>「なんか最近、<br/>様子がおかしい<br/><em>気がする…」</em></h1>
       <p class="hero-lead">そのモヤモヤ、ひとりで抱えていませんか？</p>
 
+      <p class="hero-situation-label">今の状況にいちばん近いのは？</p>
+      <div class="hero-situations">
+        <a href="#ranking" class="hero-situation-btn" data-scroll-to="#ranking" data-track="hero_situation_detective">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span>探偵に依頼しようか迷ってる</span>
+        </a>
+        <a href="#self-check" class="hero-situation-btn" data-scroll-to="#self-check" data-track="hero_situation_gps">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>自分で証拠をつかめないか考えてる</span>
+        </a>
+        <a href="#vernis" class="hero-situation-btn" data-scroll-to="#vernis" data-track="hero_situation_vernis">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <span>気持ちの整理ができない</span>
+        </a>
+      </div>
+
       <div class="empathy-checklist">
         <div class="empathy-check-item">帰りが急に遅くなった</div>
         <div class="empathy-check-item">スマホを隠すようになった</div>
@@ -111,22 +127,6 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
           <span class="badge-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
           <span>最短当日</span>
         </div>
-      </div>
-
-      <p class="hero-situation-label">今の状況にいちばん近いのは？</p>
-      <div class="hero-situations">
-        <a href="#ranking" class="hero-situation-btn" data-scroll-to="#ranking" data-track="hero_situation_detective">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <span>探偵に依頼しようか迷ってる</span>
-        </a>
-        <a href="#self-check" class="hero-situation-btn" data-scroll-to="#self-check" data-track="hero_situation_gps">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>自分で証拠をつかめないか考えてる</span>
-        </a>
-        <a href="#vernis" class="hero-situation-btn" data-scroll-to="#vernis" data-track="hero_situation_vernis">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          <span>気持ちの整理ができない</span>
-        </a>
       </div>
       </div>
     </div>
@@ -200,7 +200,7 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
             <p>広告費を抑えて料金を安く維持しているタイプの事務所。業界平均（1万〜1.2万円/時）の約半額で成功報酬プランもある。代表が全国調査業協同組合の理事を務めており、公安委員会届出も確認済み。<em>「成功報酬プランは証拠が取れなかった場合の費用リスクを大幅に抑えられます」</em></p>
           </div>
           <p class="ranking-for">向いている人：費用を抑えたい・失敗が怖い方</p>
-          <a href="https://h.accesstrade.net/sp/cc?rk=0100q30i00orzx" class="ranking-cta" data-affiliate="una" data-track="ranking_una" rel="nofollow sponsored noopener" target="_blank">
+          <a href="https://h.accesstrade.net/sp/cc?rk=0100q30i00orzx" class="ranking-cta" data-affiliate="una" data-track="ranking_una" rel="nofollow sponsored noopener">
             サイトを見てみる →
           </a>
           <p class="ranking-cta-micro">無料・匿名OK・秘密厳守</p>
@@ -315,7 +315,7 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
             <p>45年以上の実績と全国18拠点の自社直営が強み。料金は相場通りで安くはないが、見積もり超えの追加費用ゼロを明示している点が信頼できる。裁判対応の報告書クオリティも確認済み。<em>「まず無料相談で担当者の対応を確認してから契約することを推奨します」</em></p>
           </div>
           <p class="ranking-for">向いている人：実績・安定感を重視する方</p>
-          <a href="https://h.accesstrade.net/sp/cc?rk=0100ken700orzx" class="ranking-cta" data-affiliate="haraichi" data-track="ranking_haraichi" rel="nofollow sponsored noopener" target="_blank">
+          <a href="https://h.accesstrade.net/sp/cc?rk=0100ken700orzx" class="ranking-cta" data-affiliate="haraichi" data-track="ranking_haraichi" rel="nofollow sponsored noopener">
             サイトを見てみる →
           </a>
           <p class="ranking-cta-micro">無料・匿名OK・秘密厳守</p>
@@ -372,7 +372,7 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
             <p>大手の看板より経験とフットワークで選びたい方に。余った調査時間は返金される仕組みがコスト管理しやすくて好印象。<em>「人探しなど長期調査は費用が膨らみやすいため、事前に上限を書面で確認してください」</em></p>
           </div>
           <p class="ranking-for">向いている人：費用を明確にしたい・大手の雰囲気が苦手な方</p>
-          <a href="https://h.accesstrade.net/sp/cc?rk=0100paqn00orzx" class="ranking-cta" data-affiliate="kurol" data-track="ranking_kurol" rel="nofollow sponsored noopener" target="_blank">
+          <a href="https://h.accesstrade.net/sp/cc?rk=0100paqn00orzx" class="ranking-cta" data-affiliate="kurol" data-track="ranking_kurol" rel="nofollow sponsored noopener">
             サイトを見てみる →
           </a>
           <p class="ranking-cta-micro">無料・匿名OK・秘密厳守</p>
@@ -389,7 +389,7 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
         <h3>どの探偵に頼めばいいか<br/>わからない方へ</h3>
         <p>「事務所が多すぎて決められない」「比べてもよくわからない」という方は、まず無料相談を。状況をヒアリングした上で、合いそうな事務所を複数提案してくれます。</p>
       </div>
-      <a href="https://h.accesstrade.net/sp/cc?rk=0100q1y600orzx" class="matching-cta-btn" data-affiliate="matching" data-track="ranking_matching" rel="nofollow sponsored noopener" target="_blank">
+      <a href="https://h.accesstrade.net/sp/cc?rk=0100q1y600orzx" class="matching-cta-btn" data-affiliate="matching" data-track="ranking_matching" rel="nofollow sponsored noopener">
         どこがいいか悩んでいるのはこちらで →
       </a>
     </div>
@@ -411,7 +411,7 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
           <li>Googleマップで位置・ルートを確認</li>
           <li>探偵調査と並行して使うことも可能</li>
         </ul>
-        <a href="https://t.afi-b.com/visit.php?a=19268q-J314580Q&p=U980234L" class="self-check-cta" rel="nofollow noopener" target="_blank" data-track="selfcheck_ichiroku">
+        <a href="https://t.afi-b.com/visit.php?a=19268q-J314580Q&p=U980234L" class="self-check-cta" rel="nofollow noopener" data-track="selfcheck_ichiroku">
           イチロクを見てみる →
         </a>
         <p class="self-check-note">※位置情報の取得は相手の同意が必要な場合があります。利用前に公式サイトで確認してください。</p>
@@ -512,7 +512,7 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
 
     <div class="solution-cta-box">
       <p>この5つの基準をすべてクリアした業者だけを、個人的に厳選しました。<br/>以下の3社は、実際に調査内容・報告書・料金体系を確認して選んでいます。</p>
-      <a href="https://h.accesstrade.net/sp/cc?rk=0100q30i00orzx" class="section-cta-inline" data-affiliate="una" data-track="solution_una" rel="nofollow sponsored noopener" target="_blank">
+      <a href="https://h.accesstrade.net/sp/cc?rk=0100q30i00orzx" class="section-cta-inline" data-affiliate="una" data-track="solution_una" rel="nofollow sponsored noopener">
         ちょっと見てみる ›
       </a>
     </div>
@@ -547,7 +547,7 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
     </div>
     <div class="future-cta-note">
       <p>どの目的でも、<strong>最初の一歩はサイトを見てみること</strong>です。</p>
-      <a href="https://h.accesstrade.net/sp/cc?rk=0100q30i00orzx" class="section-cta-inline red" data-affiliate="una" data-track="future_una" rel="nofollow sponsored noopener" target="_blank">
+      <a href="https://h.accesstrade.net/sp/cc?rk=0100q30i00orzx" class="section-cta-inline red" data-affiliate="una" data-track="future_una" rel="nofollow sponsored noopener">
         ちょっと見てみる →
       </a>
       <p class="cta-micro" style="color:var(--muted);margin-top:.6rem">無料・匿名OK・営業電話なし</p>
@@ -601,7 +601,7 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
     <div class="relief-cta-box">
       <h3>「迷っている段階」が、一番動きやすいタイミングです</h3>
       <p>確信がなくても、まず話すだけでいい。話してから決めればいいだけです。</p>
-      <a href="https://h.accesstrade.net/sp/cc?rk=0100q30i00orzx" class="section-cta-inline red" data-affiliate="una" data-track="relief_una" rel="nofollow sponsored noopener" target="_blank">
+      <a href="https://h.accesstrade.net/sp/cc?rk=0100q30i00orzx" class="section-cta-inline red" data-affiliate="una" data-track="relief_una" rel="nofollow sponsored noopener">
         ちょっと見てみる →
       </a>
     </div>
@@ -620,7 +620,7 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
           <li>匿名OK・通話料無料</li>
           <li>探偵に頼むか迷っている段階でも相談できる</li>
         </ul>
-        <a href="https://afi2.vernis.co.jp/link.php?i=pibhxl1rb51c&m=mid9ruw7m6yy" class="vernis-cta" rel="nofollow noopener" target="_blank" data-track="vernis_relief">
+        <a href="https://afi2.vernis.co.jp/link.php?i=pibhxl1rb51c&m=mid9ruw7m6yy" class="vernis-cta" rel="nofollow noopener" data-track="vernis_relief">
           まず話だけ聞いてみる →
         </a>
       </div>
@@ -852,7 +852,7 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
 <!-- ══ STICKY CTA BAR ═════════════════════════════════════════ -->
 <div class="sticky-cta-bar" id="sticky-cta">
   <span class="sticky-label">まだ迷ってていい。ちょっと見てみるだけ。</span>
-  <a href="https://h.accesstrade.net/sp/cc?rk=0100q30i00orzx" class="sticky-btn" data-affiliate="una" data-track="sticky_una" rel="nofollow sponsored noopener" target="_blank">
+  <a href="https://h.accesstrade.net/sp/cc?rk=0100q30i00orzx" class="sticky-btn" data-affiliate="una" data-track="sticky_una" rel="nofollow sponsored noopener">
     ちょっと見てみる →
   </a>
   <button class="sticky-close" id="sticky-close" aria-label="閉じる">✕</button>
