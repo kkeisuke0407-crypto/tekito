@@ -1927,6 +1927,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: flex;
   flex-direction: column;
   gap: .5rem;
+  margin-bottom: 1.5rem;
 }
 .hero-situation-btn {
   display: flex;
