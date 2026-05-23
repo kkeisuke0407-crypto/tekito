@@ -716,7 +716,7 @@ export const columns = [
   <p>GPSは「アリ」です。ただし<strong>自分名義または共有名義の車に限る</strong>こと。そして位置情報単体ではなく、探偵調査と組み合わせて使うのが現実的だと思います。費用を抑えたい気持ちはわかりますが、条件を守らない設置は逆効果になるので、ここだけは慎重に判断してほしいと思います。</p>
 </div>
 
-<p class="col-cta-lead">「自分のケースでGPSが使えるかどうか」も、無料相談で聞いてみるのが安心です。条件を満たすかどうか、専門家と確認してから動いてみてください。また、<a href="/detective/column/nani-kara-hajimeru/">探偵・GPS・弁護士の選び方比較</a>もあわせてご覧ください。</p>`
+<p class="col-cta-lead">「自分のケースでGPSが使えるかどうか」も、無料相談で聞いてみるのが安心です。<a href="/detective/gps/">GPS機器の選び方・具体的なサービスはこちら</a>でまとめています。また、<a href="/detective/column/nani-kara-hajimeru/">探偵・GPS・弁護士の選び方比較</a>もあわせてご覧ください。</p>`
   },
   {
     slug: 'tantei-souba',
@@ -940,7 +940,7 @@ export const columns = [
   <p>弁護士相談を急ぐ気持ちはわかります。でも、<strong>証拠なしで相談しても、できることは限られます</strong>。順番は「探偵で証拠→弁護士で交渉」。この鉄則を守るだけで、結果が大きく変わってきます。焦らず、整えてから動く——それが結局、一番の近道だと思います。</p>
 </div>
 
-<p class="col-cta-lead">まずは探偵の無料相談で「どんな証拠が必要か」を聞くところから始めてみてください。弁護士相談はその後でも遅くありません。<a href="/detective/column/ishatyou-toreta-torenakatta/">慰謝料を取れた人と取れなかった人の差</a>も、事前に確認しておくと判断の参考になります。</p>`
+<p class="col-cta-lead">まずは探偵の無料相談で「どんな証拠が必要か」を聞くところから始めてみてください。弁護士相談はその後でも遅くありません。<a href="/detective/lawyer/">弁護士相談の準備・費用・タイミングはこちら</a>でまとめています。<a href="/detective/column/ishatyou-toreta-torenakatta/">慰謝料を取れた人と取れなかった人の差</a>も、事前に確認しておくと判断の参考になります。</p>`
   },
   {
     slug: 'iraiku-mae-junbi',
