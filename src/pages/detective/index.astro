@@ -1,6 +1,7 @@
 ---
 import { columns } from '../../data/detective-columns.js';
-const recentColumns = columns.slice(0, 6);
+const pickSlugs = ['jitsumu-bure-pattern','ishatyou-toreta-torenakatta','nani-kara-hajimeru','bengoshi-shouko-ato','tashikameru-kowai','hitori-kakaekomi'];
+const recentColumns = pickSlugs.map(s => columns.find(c => c.slug === s)).filter(Boolean);
 
 const PAGE_TITLE = "中の人ナビ｜浮気・不倫で悩んだときの全選択肢ガイド";
 const PAGE_DESC  = "法律事務所の元事務員が、浮気・不倫で悩む方に「探偵・GPS・弁護士・相談」の全選択肢を正直に解説。インスタ「弁護士の中の人」公式サイト。";
@@ -794,8 +795,8 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
   <div class="dt-container">
     <div class="section-head">
       <span class="kicker">COLUMN</span>
-      <h2 class="section-title">中の人コラム</h2>
-      <p class="section-sub">法律事務所の元事務員が、浮気・不倫で悩む方へ正直に書いています</p>
+      <h2 class="section-title">よく読まれている記事</h2>
+      <p class="section-sub">体験談・選択肢の比較・気持ちのケアまで。状況に合わせて選んでください</p>
     </div>
     <div class="col-preview-grid">
       {recentColumns.map(col => (
