@@ -1,0 +1,301 @@
+---
+const PAGE_TITLE = "どれから始める？｜中の人ナビ";
+const PAGE_DESC  = "浮気・不倫の悩みに、探偵・GPS・弁護士・相談のどれが合うか。状況別に整理しました。";
+const CANONICAL  = "https://lawyer-nakanohito.com/detective/flow/";
+const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{PAGE_TITLE}</title>
+  <meta name="description" content={PAGE_DESC} />
+  <link rel="canonical" href={CANONICAL} />
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content={PAGE_TITLE} />
+  <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:locale"      content="ja_JP" />
+  <meta property="og:site_name"   content="弁護士の中の人" />
+  <meta name="twitter:card"       content="summary" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260523a" />
+
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2YLF06DC0E');
+  </script>
+  <script is:inline type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wt0koam10v");
+  </script>
+  <style>
+    .flow-page { background: var(--beige); min-height: 100vh; }
+    .flow-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      padding: 3rem 1.25rem 2.5rem;
+      text-align: center;
+      color: #fff;
+    }
+    .flow-hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.25rem, 4vw, 1.65rem);
+      font-weight: 700;
+      margin-bottom: .75rem;
+    }
+    .flow-hero p { font-size: .92rem; color: rgba(255,255,255,.75); max-width: 480px; margin: 0 auto; line-height: 1.7; }
+    .flow-body { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+    .flow-intro {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+      font-size: .92rem;
+      color: var(--muted);
+      line-height: 1.75;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+    .flow-card {
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+    .flow-card-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .flow-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.3rem;
+    }
+    .flow-card-icon.detective { background: rgba(201,146,42,.12); }
+    .flow-card-icon.gps       { background: rgba(29,78,216,.1); }
+    .flow-card-icon.lawyer    { background: rgba(22,163,74,.1); }
+    .flow-card-icon.uranai    { background: rgba(196,126,126,.15); }
+    .flow-card h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: .3rem;
+    }
+    .flow-card-sub { font-size: .8rem; color: var(--muted); }
+    .flow-fit {
+      font-size: .85rem;
+      color: var(--text);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+    .flow-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem;
+      margin-bottom: 1rem;
+    }
+    .flow-tag {
+      background: var(--beige-mid);
+      color: var(--navy);
+      font-size: .72rem;
+      font-weight: 700;
+      padding: .25rem .65rem;
+      border-radius: 999px;
+    }
+    .flow-note {
+      font-size: .78rem;
+      color: var(--muted);
+      background: var(--bg-muted);
+      border-radius: 6px;
+      padding: .6rem .85rem;
+      margin-bottom: 1rem;
+    }
+    .flow-btn {
+      display: block;
+      text-align: center;
+      padding: .8rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: .9rem;
+      text-decoration: none;
+      transition: all .18s;
+    }
+    .flow-btn.detective { background: var(--gold); color: #fff; }
+    .flow-btn.detective:hover { background: var(--gold-lt); color: var(--navy); text-decoration: none; }
+    .flow-btn.gps   { background: var(--navy); color: #fff; }
+    .flow-btn.gps:hover { background: var(--navy-mid); text-decoration: none; }
+    .flow-btn.lawyer { background: #16a34a; color: #fff; }
+    .flow-btn.lawyer:hover { background: #15803d; text-decoration: none; }
+    .flow-btn.uranai { background: var(--pink); color: #fff; }
+    .flow-btn.uranai:hover { background: var(--pink-lt); color: var(--navy); text-decoration: none; }
+    .flow-divider { text-align: center; color: var(--muted); font-size: .8rem; margin: .5rem 0; }
+    @media (max-width: 600px) {
+      .flow-card-head { flex-direction: row; }
+    }
+  </style>
+</head>
+<body class="flow-page">
+
+<header class="dt-header">
+  <div class="dt-header-inner">
+    <a href="/detective/" class="dt-logo">
+      <div class="dt-logo-icon">
+        <img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;" />
+      </div>
+      <div class="dt-logo-wrap">
+        <span>弁護士の中の人</span>
+        <span class="dt-logo-sub">公式サイト</span>
+      </div>
+    </a>
+    <a href={INSTAGRAM_URL} class="dt-header-insta" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+      <span>@lawyer.nakanohito</span>
+    </a>
+  </div>
+</header>
+
+<nav class="col-header-nav">
+  <div class="col-header-nav-inner">
+    <a href="/detective/">探偵を選ぶ</a>
+    <span class="col-nav-sep">›</span>
+    <a href="/detective/column/">コラム</a>
+    <span class="col-nav-sep">›</span>
+    <a href="/detective/flow/" style="color:#fff;font-weight:700;">どれから始める？</a>
+  </div>
+</nav>
+
+<div class="flow-hero">
+  <h1>結局、何から始めればいい？</h1>
+  <p>探偵・GPS・弁護士・相談——状況によって「最初の一手」は違います。今の状況に合うものを選んでください。</p>
+</div>
+
+<div class="flow-body">
+
+  <div class="flow-intro">
+    「まず何をすれば…」という相談が、事務所で一番多かった質問です。状況によって適切な選択肢は違うので、今の状況に近いものを選んでみてください。
+  </div>
+
+  <!-- 探偵 -->
+  <div class="flow-card">
+    <div class="flow-card-head">
+      <div class="flow-card-icon detective">🔍</div>
+      <div>
+        <h2>探偵に依頼する</h2>
+        <div class="flow-card-sub">証拠を確実に押さえたい方へ</div>
+      </div>
+    </div>
+    <p class="flow-fit">慰謝料請求・離婚調停を視野に入れているなら、裁判で使える証拠が必要です。それを専門に取るのが探偵です。費用はかかりますが、「確実性」は最も高い選択肢です。</p>
+    <div class="flow-tags">
+      <span class="flow-tag">証拠を確実に欲しい</span>
+      <span class="flow-tag">慰謝料を請求したい</span>
+      <span class="flow-tag">離婚も考えている</span>
+    </div>
+    <a href="/detective/#ranking" class="flow-btn detective" data-track="flow_detective">信頼できる探偵社を比較する</a>
+    <p class="flow-divider" style="margin-top:.75rem;font-size:.72rem;">無料相談あり・秘密厳守</p>
+  </div>
+
+  <!-- GPS -->
+  <div class="flow-card">
+    <div class="flow-card-head">
+      <div class="flow-card-icon gps">📍</div>
+      <div>
+        <h2>GPSで行動を確認する</h2>
+        <div class="flow-card-sub">費用を抑えて自分で動きたい方へ</div>
+      </div>
+    </div>
+    <p class="flow-fit">「探偵は費用が心配…」という方の選択肢の一つです。ただし、設置できるのは<strong>自分名義または共有名義の車のみ</strong>です。位置情報は「行動の把握」に使えますが、それ単体で不貞の証拠になるわけではありません。</p>
+    <div class="flow-tags">
+      <span class="flow-tag">費用を抑えたい</span>
+      <span class="flow-tag">まず行動パターンを把握したい</span>
+      <span class="flow-tag">自分名義の車がある</span>
+    </div>
+    <div class="flow-note">注意：相手名義・社用車・他人の所有物への設置は違法になる可能性があります。</div>
+    <a href="https://h.accesstrade.net/sp/cc?rk=0100r19500orzx" class="flow-btn gps" rel="nofollow sponsored noopener" data-track="flow_gps">GPS機器の詳細を確認する</a>
+  </div>
+
+  <!-- 弁護士 -->
+  <div class="flow-card">
+    <div class="flow-card-head">
+      <div class="flow-card-icon lawyer">⚖️</div>
+      <div>
+        <h2>弁護士に相談する</h2>
+        <div class="flow-card-sub">離婚・慰謝料の手続きを進めたい方へ</div>
+      </div>
+    </div>
+    <p class="flow-fit">証拠を持った上で、離婚調停や慰謝料請求を正式に進めたい段階になったら弁護士が適切です。証拠なしで相談しても「動けない」ことが多いので、証拠を集めてから相談するのが理想的な順番です。</p>
+    <div class="flow-tags">
+      <span class="flow-tag">離婚を決意している</span>
+      <span class="flow-tag">証拠はある</span>
+      <span class="flow-tag">法的に手続きを進めたい</span>
+    </div>
+    <a href="/detective/column/bengoshi-shouko-ato/" class="flow-btn lawyer" data-track="flow_lawyer">弁護士相談のタイミングを詳しく読む</a>
+  </div>
+
+  <!-- 占い・相談 -->
+  <div class="flow-card">
+    <div class="flow-card-head">
+      <div class="flow-card-icon uranai">🌙</div>
+      <div>
+        <h2>まず話を聞いてもらう</h2>
+        <div class="flow-card-sub">気持ちの整理から始めたい方へ</div>
+      </div>
+    </div>
+    <p class="flow-fit">「確信がない」「どうしたいかわからない」「怖くて動けない」——そういう段階なら、まず誰かに話を聞いてもらうことが大切です。24時間匿名で対応してもらえる相談先があります。</p>
+    <div class="flow-tags">
+      <span class="flow-tag">まだ確信が持てない</span>
+      <span class="flow-tag">誰にも言えない</span>
+      <span class="flow-tag">気持ちを整理したい</span>
+    </div>
+    <a href="https://vernis.jp/affiliate/?af=1234" class="flow-btn uranai" rel="nofollow sponsored noopener" data-track="flow_uranai">電話占いヴェルニに相談する</a>
+    <p class="flow-divider" style="margin-top:.75rem;font-size:.72rem;">初回最大4,000円分無料・24時間対応</p>
+  </div>
+
+  <div style="margin-top:2rem;text-align:center;">
+    <a href="/detective/column/" class="col-back-link" style="justify-content:center;">コラムで詳しく読む →</a>
+  </div>
+
+</div>
+
+<footer class="dt-footer">
+  <div class="dt-footer-inner">
+    <div class="dt-footer-logo">
+      <div class="dt-footer-logo-icon" style="padding:0;overflow:hidden;">
+        <img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:8px;" />
+      </div>
+      <span>弁護士の中の人</span>
+    </div>
+    <p class="dt-footer-text">
+      Instagram「弁護士の中の人（@lawyer.nakanohito）」の公式サイト。<br/>
+      法律事務所の元事務員が、浮気・不倫で悩む方へ正直な情報をお届けしています。<br/>
+      <span style="font-size:.75rem;color:rgba(255,255,255,.35)">当サイトは一部にアフィリエイトリンクを含みます。</span>
+    </p>
+    <div class="dt-footer-links">
+      <a href={INSTAGRAM_URL} target="_blank" rel="noopener">Instagram</a>
+      <a href="/detective/privacy/">プライバシーポリシー</a>
+      <a href="/detective/operator/">運営者情報</a>
+    </div>
+    <p class="dt-footer-copy">© 2026 弁護士の中の人</p>
+  </div>
+</footer>
+
+<script src="/detective/app.js" is:inline defer></script>
+</body>
+</html>
