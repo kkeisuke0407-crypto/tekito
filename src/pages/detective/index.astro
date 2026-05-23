@@ -2,8 +2,8 @@
 import { columns } from '../../data/detective-columns.js';
 const recentColumns = columns.slice(0, 6);
 
-const PAGE_TITLE = "弁護士の中の人｜信頼できる探偵だけを厳選紹介";
-const PAGE_DESC  = "探偵業界には悪徳業者が後を絶ちません。証拠が実際に役立つかどうかを軸に、本当に信頼できる探偵事務所だけをピックアップしました。";
+const PAGE_TITLE = "中の人ナビ｜浮気・不倫で悩んだときの全選択肢ガイド";
+const PAGE_DESC  = "法律事務所の元事務員が、浮気・不倫で悩む方に「探偵・GPS・弁護士・相談」の全選択肢を正直に解説。インスタ「弁護士の中の人」公式サイト。";
 const CANONICAL  = "https://lawyer-nakanohito.com/";
 const OGP_IMAGE  = "https://lawyer-nakanohito.com/og-default.jpg";
 const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
@@ -33,7 +33,7 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" />
 
   <!-- Page CSS -->
-  <link rel="stylesheet" href="/detective/styles.css?v=20260522a" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260523b" />
 
   <!-- Google Ads / GA4 -->
   <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
@@ -65,7 +65,7 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
       </div>
       <div class="dt-logo-wrap">
         <span>弁護士の中の人</span>
-        <span class="dt-logo-sub">公式サイト</span>
+        <span class="dt-logo-sub">中の人ナビ</span>
       </div>
     </a>
     <a href={INSTAGRAM_URL} class="dt-header-insta" target="_blank" rel="noopener" data-track="header_instagram">
@@ -74,14 +74,25 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
     </a>
   </div>
 </header>
+<nav class="col-header-nav">
+  <div class="col-header-nav-inner">
+    <a href="/detective/flow/" style="color:#fff;font-weight:700;">どれから始める？</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/column/">コラムを読む</a>
+    <span class="col-nav-sep">|</span>
+    <a href="#ranking">探偵を選ぶ</a>
+    <span class="col-nav-sep">|</span>
+    <a href="#vernis">気持ちの整理</a>
+  </div>
+</nav>
 
 <!-- ══ HERO（共感） ════════════════════════════════════════════ -->
 <section class="hero">
   <div class="dt-container hero-inner">
     <div class="hero-copy">
-      <div class="hero-badge">Instagram「弁護士の中の人」公式サイト</div>
+      <div class="hero-badge">法律事務所の元事務員が教える、浮気・不倫の全選択肢</div>
       <h1>「なんか最近、<br/>様子がおかしい<br/><em>気がする…」</em></h1>
-      <p class="hero-lead">そのモヤモヤ、ひとりで抱えていませんか？</p>
+      <p class="hero-lead">探偵・GPS・弁護士・相談——どれが自分に合うか、一緒に整理しましょう。</p>
 
       <p class="hero-situation-label">今の状況にいちばん近いのは？</p>
       <div class="hero-situations">
@@ -138,6 +149,48 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
     <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#f5f6f8"/>
     </svg>
+  </div>
+</section>
+
+<!-- ══ 選択肢ハブ ══════════════════════════════════════════════ -->
+<section class="options-hub">
+  <div class="dt-container">
+    <p class="options-hub-lead">法律事務所で何百件もの相談を見てきた経験から、正直にお伝えします。</p>
+    <div class="options-hub-grid">
+      <a href="#ranking" class="options-hub-card" data-scroll-to="#ranking" data-track="hub_detective">
+        <div class="options-hub-icon options-hub-icon--detective">🔍</div>
+        <div class="options-hub-body">
+          <strong>探偵に依頼する</strong>
+          <span>証拠を確実に押さえたい・慰謝料を請求したい</span>
+        </div>
+        <svg class="options-hub-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+      <a href="#self-check" class="options-hub-card" data-scroll-to="#self-check" data-track="hub_gps">
+        <div class="options-hub-icon options-hub-icon--gps">📍</div>
+        <div class="options-hub-body">
+          <strong>GPSで行動を確認する</strong>
+          <span>費用を抑えて、まず行動パターンを把握したい</span>
+        </div>
+        <svg class="options-hub-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+      <a href="/detective/column/bengoshi-shouko-ato/" class="options-hub-card" data-track="hub_lawyer">
+        <div class="options-hub-icon options-hub-icon--lawyer">⚖️</div>
+        <div class="options-hub-body">
+          <strong>弁護士に相談する</strong>
+          <span>離婚・慰謝料を法的に進めたい（証拠を持ってから）</span>
+        </div>
+        <svg class="options-hub-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+      <a href="#vernis" class="options-hub-card" data-scroll-to="#vernis" data-track="hub_uranai">
+        <div class="options-hub-icon options-hub-icon--uranai">🌙</div>
+        <div class="options-hub-body">
+          <strong>まず話を聞いてもらう</strong>
+          <span>気持ちが整理できない・誰にも言えない</span>
+        </div>
+        <svg class="options-hub-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </div>
+    <a href="/detective/flow/" class="options-hub-flow-link" data-track="hub_flow">迷っている方はこちら → 状況別に選ぶガイド</a>
   </div>
 </section>
 
