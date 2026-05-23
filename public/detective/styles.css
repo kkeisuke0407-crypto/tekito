@@ -3096,3 +3096,79 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @media (max-width: 520px) {
   .lp-pros-cons { grid-template-columns: 1fr; }
 }
+
+
+/* Reading progress bar */
+.col-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, var(--gold), var(--gold-lt));
+  z-index: 9999;
+  transition: width .1s linear;
+  pointer-events: none;
+  box-shadow: 0 0 6px rgba(201,146,42,.4);
+}
+
+/* Instagram follow CTA */
+.col-insta-cta {
+  background: linear-gradient(135deg, #833AB4 0%, #FD1D1D 50%, #FCB045 100%);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin: 2.5rem 0 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(131,58,180,.25);
+}
+.col-insta-cta-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.col-insta-cta-icon svg { width: 22px; height: 22px; stroke: #fff; }
+.col-insta-cta-body { flex: 1; min-width: 0; }
+.col-insta-cta-body strong { display: block; font-size: .92rem; font-weight: 700; margin-bottom: .2rem; }
+.col-insta-cta-body p { font-size: .8rem; color: rgba(255,255,255,.9); margin: 0; line-height: 1.5; }
+.col-insta-cta-btn {
+  flex-shrink: 0;
+  padding: .55rem 1.1rem;
+  background: #fff;
+  color: #C2185B;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: .82rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform .18s;
+}
+.col-insta-cta-btn:hover { transform: scale(1.05); text-decoration: none; color: #C2185B; }
+
+@media (max-width: 520px) {
+  .col-insta-cta { flex-direction: column; text-align: center; padding: 1.25rem 1rem; }
+  .col-insta-cta-body p { font-size: .78rem; }
+}
+
+/* Tag filter on column list */
+.col-tab-wrap.col-filter-bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(245,246,248,.95);
+  backdrop-filter: blur(6px);
+  padding: .75rem 0;
+  margin: 0 -1.25rem 1.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+.col-card[data-hidden="true"] { display: none; }
+.col-section-head[data-hidden="true"] { display: none; }

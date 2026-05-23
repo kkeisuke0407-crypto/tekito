@@ -20,10 +20,21 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
   <meta property="og:site_name"   content="弁護士の中の人" />
   <meta name="twitter:card"       content="summary" />
 
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "弁護士の中の人",
+    "alternateName": "中の人",
+    "description": "法律事務所の元事務員。約10年の事務員経験から、浮気・不倫で悩む方へ正直な情報を発信。",
+    "url": CANONICAL,
+    "image": "https://lawyer-nakanohito.com/detective/images/logo-icon.png",
+    "sameAs": [INSTAGRAM_URL]
+  })} />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/detective/styles.css?v=20260523d" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260523e" />
 
   <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
   <script is:inline>

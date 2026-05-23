@@ -29,7 +29,7 @@ const mental     = columns.filter(c => c.category === 'mental');
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/detective/styles.css?v=20260523d" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260523e" />
 
   <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
   <script is:inline>
@@ -68,11 +68,11 @@ const mental     = columns.filter(c => c.category === 'mental');
 
 <nav class="col-header-nav">
   <div class="col-header-nav-inner">
-    <a href="/detective/">探偵を選ぶ</a>
-    <span class="col-nav-sep">›</span>
-    <a href="/detective/column/" style="color:#fff;font-weight:700;">コラム</a>
-    <span class="col-nav-sep">›</span>
     <a href="/detective/flow/">どれから始める？</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/column/" style="color:#fff;font-weight:700;">コラム</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/about/">中の人について</a>
   </div>
 </nav>
 
@@ -83,11 +83,18 @@ const mental     = columns.filter(c => c.category === 'mental');
 
 <div class="col-listing-body">
 
-  <div class="col-section-head">
+  <div class="col-tab-wrap col-filter-bar" id="col-filter-bar">
+    <button class="col-tab active" data-filter="all">すべて ({columns.length})</button>
+    <button class="col-tab" data-filter="experience">体験談 ({experience.length})</button>
+    <button class="col-tab" data-filter="comparison">選択肢比較 ({comparison.length})</button>
+    <button class="col-tab" data-filter="mental">メンタル ({mental.length})</button>
+  </div>
+
+  <div class="col-section-head" data-section="experience">
     <span class="col-section-badge experience">体験談</span>
     <h2>事務所で見てきたこと</h2>
   </div>
-  <div class="col-grid">
+  <div class="col-grid" data-section="experience">
     {experience.map(col => (
       <a href={`/detective/column/${col.slug}/`} class="col-card">
         <span class={`col-card-badge ${col.category}`}>{col.categoryLabel}</span>
@@ -104,11 +111,11 @@ const mental     = columns.filter(c => c.category === 'mental');
     ))}
   </div>
 
-  <div class="col-section-head">
+  <div class="col-section-head" data-section="comparison">
     <span class="col-section-badge comparison">選択肢比較</span>
     <h2>探偵・GPS・弁護士、どれを選ぶ？</h2>
   </div>
-  <div class="col-grid">
+  <div class="col-grid" data-section="comparison">
     {comparison.map(col => (
       <a href={`/detective/column/${col.slug}/`} class="col-card">
         <span class={`col-card-badge ${col.category}`}>{col.categoryLabel}</span>
@@ -125,11 +132,11 @@ const mental     = columns.filter(c => c.category === 'mental');
     ))}
   </div>
 
-  <div class="col-section-head">
+  <div class="col-section-head" data-section="mental">
     <span class="col-section-badge mental">メンタル</span>
     <h2>気持ちの整理</h2>
   </div>
-  <div class="col-grid">
+  <div class="col-grid" data-section="mental">
     {mental.map(col => (
       <a href={`/detective/column/${col.slug}/`} class="col-card">
         <span class={`col-card-badge ${col.category}`}>{col.categoryLabel}</span>
@@ -147,6 +154,28 @@ const mental     = columns.filter(c => c.category === 'mental');
   </div>
 
 </div>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    var tabs = document.querySelectorAll('#col-filter-bar .col-tab');
+    var heads = document.querySelectorAll('.col-section-head[data-section]');
+    var grids = document.querySelectorAll('.col-grid[data-section]');
+    tabs.forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        var filter = tab.getAttribute('data-filter');
+        tabs.forEach(function(t) { t.classList.toggle('active', t === tab); });
+        var show = function(el) {
+          var sec = el.getAttribute('data-section');
+          el.setAttribute('data-hidden', (filter !== 'all' && filter !== sec) ? 'true' : 'false');
+        };
+        heads.forEach(show);
+        grids.forEach(show);
+        if (window.dataLayer) window.dataLayer.push({ event: 'column_filter', filter: filter });
+        if (typeof gtag === 'function') gtag('event', 'column_filter', { filter_value: filter });
+      });
+    });
+  });
+</script>
 
 <footer class="dt-footer">
   <div class="dt-footer-inner">
