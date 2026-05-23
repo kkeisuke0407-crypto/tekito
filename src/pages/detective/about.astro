@@ -1,0 +1,337 @@
+---
+const PAGE_TITLE = "中の人について｜中の人ナビ";
+const PAGE_DESC  = "「中の人ナビ」運営者プロフィール。法律事務所の元事務員として、何百件もの浮気・離婚・慰謝料案件を見てきた経験から、悩む方へ正直な情報をお届けしています。";
+const CANONICAL  = "https://lawyer-nakanohito.com/detective/about/";
+const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{PAGE_TITLE}</title>
+  <meta name="description" content={PAGE_DESC} />
+  <link rel="canonical" href={CANONICAL} />
+  <meta property="og:type"        content="profile" />
+  <meta property="og:title"       content={PAGE_TITLE} />
+  <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:url"         content={CANONICAL} />
+  <meta property="og:locale"      content="ja_JP" />
+  <meta property="og:site_name"   content="弁護士の中の人" />
+  <meta name="twitter:card"       content="summary" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260523d" />
+
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2YLF06DC0E');
+  </script>
+  <script is:inline type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wt0koam10v");
+  </script>
+
+  <style>
+    .about-page { background: var(--beige); min-height: 100vh; }
+    .about-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      padding: 3rem 1.25rem 2.5rem;
+      text-align: center;
+      color: #fff;
+    }
+    .about-hero-icon {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      overflow: hidden;
+      border: 3px solid var(--gold);
+      box-shadow: 0 4px 20px rgba(0,0,0,.3);
+    }
+    .about-hero-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .about-hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(1.3rem, 4vw, 1.65rem);
+      font-weight: 700;
+      margin-bottom: .5rem;
+    }
+    .about-hero-sub { font-size: .85rem; color: rgba(255,255,255,.7); margin-bottom: 1rem; }
+    .about-hero-insta {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      padding: .5rem 1rem;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 999px;
+      font-size: .82rem;
+      color: #fff;
+      text-decoration: none;
+      transition: all .18s;
+    }
+    .about-hero-insta:hover { background: rgba(255,255,255,.18); text-decoration: none; }
+
+    .about-body { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+    .about-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.75rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+    .about-card h2 {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 1rem;
+      padding-left: .75rem;
+      border-left: 3px solid var(--gold);
+      line-height: 1.5;
+    }
+    .about-card p { font-size: .92rem; line-height: 1.85; color: var(--text); margin-bottom: 1rem; }
+    .about-card p:last-child { margin-bottom: 0; }
+    .about-card strong { color: var(--navy); }
+
+    .about-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 1.25rem 0;
+    }
+    .about-pillar {
+      background: var(--beige);
+      border: 1px solid var(--beige-mid);
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+    }
+    .about-pillar-icon { font-size: 1.75rem; margin-bottom: .5rem; }
+    .about-pillar strong { display: block; font-size: .85rem; color: var(--navy); margin-bottom: .25rem; }
+    .about-pillar span { font-size: .72rem; color: var(--muted); line-height: 1.4; display: block; }
+
+    .about-disclaimer {
+      background: rgba(201,146,42,.08);
+      border: 1px solid rgba(201,146,42,.25);
+      border-radius: 10px;
+      padding: 1.25rem;
+      font-size: .85rem;
+      line-height: 1.75;
+      color: var(--muted);
+    }
+    .about-disclaimer strong { color: #8A6300; display: block; margin-bottom: .35rem; font-size: .88rem; }
+
+    .about-quote {
+      background: var(--bg-muted);
+      border-left: 3px solid var(--navy);
+      padding: 1rem 1.25rem;
+      margin: 1rem 0;
+      font-size: .92rem;
+      font-style: italic;
+      color: #444;
+      border-radius: 0 6px 6px 0;
+      line-height: 1.8;
+    }
+
+    .about-cta {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      color: #fff;
+      border-radius: 12px;
+      padding: 1.75rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .about-cta h3 { font-family: var(--serif); font-size: 1.1rem; margin-bottom: .5rem; color: var(--gold-lt); }
+    .about-cta p { font-size: .88rem; margin-bottom: 1.25rem; color: rgba(255,255,255,.85); line-height: 1.7; }
+    .about-cta-btns { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; }
+    .about-cta-btn {
+      display: inline-block;
+      padding: .75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: .88rem;
+      text-decoration: none;
+      transition: all .18s;
+    }
+    .about-cta-btn.primary { background: var(--gold); color: #fff; }
+    .about-cta-btn.primary:hover { background: var(--gold-lt); color: var(--navy); text-decoration: none; }
+    .about-cta-btn.ghost { background: rgba(255,255,255,.08); color: #fff; border: 1px solid rgba(255,255,255,.25); }
+    .about-cta-btn.ghost:hover { background: rgba(255,255,255,.15); text-decoration: none; }
+
+    @media (max-width: 520px) {
+      .about-pillars { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="about-page">
+
+<header class="dt-header">
+  <div class="dt-header-inner">
+    <a href="/detective/" class="dt-logo">
+      <div class="dt-logo-icon">
+        <img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;" />
+      </div>
+      <div class="dt-logo-wrap">
+        <span>弁護士の中の人</span>
+        <span class="dt-logo-sub">中の人ナビ</span>
+      </div>
+    </a>
+    <a href={INSTAGRAM_URL} class="dt-header-insta" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+      <span>@lawyer.nakanohito</span>
+    </a>
+  </div>
+</header>
+
+<nav class="col-header-nav">
+  <div class="col-header-nav-inner">
+    <a href="/detective/flow/">どれから始める？</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/column/">コラムを読む</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/about/" style="color:#fff;font-weight:700;">中の人について</a>
+  </div>
+</nav>
+
+<div class="about-hero">
+  <div class="about-hero-icon">
+    <img src="/detective/images/logo-icon.png" alt="弁護士の中の人" />
+  </div>
+  <h1>はじめまして、中の人です。</h1>
+  <p class="about-hero-sub">法律事務所の元事務員 / Instagram「弁護士の中の人」運営</p>
+  <a href={INSTAGRAM_URL} class="about-hero-insta" target="_blank" rel="noopener" data-track="about_instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+    @lawyer.nakanohito をフォロー
+  </a>
+</div>
+
+<div class="about-body">
+
+  <div class="about-card">
+    <h2>このサイトをやっている人</h2>
+    <p>こんにちは。Instagramで<strong>「弁護士の中の人」</strong>として、浮気・不倫・離婚にまつわる情報を発信している、法律事務所の元事務員です。</p>
+    <p>10年近く弁護士事務所で事務員として働き、その間に何百件もの離婚相談・慰謝料請求・浮気調査に関する案件を間近で見てきました。「もう少し早く動いていれば…」「あのとき適切な選択をしていれば…」と後悔される方を、本当にたくさん見てきました。</p>
+    <p>その経験を、いま同じように悩んでいる方の役に立てたいと思い、このサイトを運営しています。</p>
+  </div>
+
+  <div class="about-card">
+    <h2>このサイトでお伝えしていること</h2>
+    <div class="about-pillars">
+      <div class="about-pillar">
+        <div class="about-pillar-icon">📖</div>
+        <strong>事務所での経験</strong>
+        <span>実際に見聞きしてきた事例から、参考になる話を</span>
+      </div>
+      <div class="about-pillar">
+        <div class="about-pillar-icon">⚖️</div>
+        <strong>選択肢の整理</strong>
+        <span>探偵・GPS・弁護士・相談、状況別に正直に解説</span>
+      </div>
+      <div class="about-pillar">
+        <div class="about-pillar-icon">🌙</div>
+        <strong>気持ちのケア</strong>
+        <span>動き出す前の不安や迷いに寄り添う情報を</span>
+      </div>
+    </div>
+    <p>「とにかく探偵に頼みましょう」とか「離婚すべきです」というような、誰かを一方向に追い立てるような情報発信はしません。一人ひとり、状況も気持ちも違うので、<strong>選択肢を整理してお伝えすること</strong>を大切にしています。</p>
+  </div>
+
+  <div class="about-card">
+    <h2>こんな方に読んでほしい</h2>
+    <ul style="list-style:none;padding:0;">
+      <li style="padding:.5rem 0 .5rem 1.5rem;position:relative;font-size:.92rem;line-height:1.7;">
+        <span style="position:absolute;left:0;top:.6rem;width:8px;height:8px;background:var(--gold);border-radius:50%;"></span>
+        「気のせいかも」と思いながら、モヤモヤを抱えている方
+      </li>
+      <li style="padding:.5rem 0 .5rem 1.5rem;position:relative;font-size:.92rem;line-height:1.7;">
+        <span style="position:absolute;left:0;top:.6rem;width:8px;height:8px;background:var(--gold);border-radius:50%;"></span>
+        探偵・GPS・弁護士、どれから動けばいいか迷っている方
+      </li>
+      <li style="padding:.5rem 0 .5rem 1.5rem;position:relative;font-size:.92rem;line-height:1.7;">
+        <span style="position:absolute;left:0;top:.6rem;width:8px;height:8px;background:var(--gold);border-radius:50%;"></span>
+        誰にも言えない悩みを、一人で抱え込んでしまっている方
+      </li>
+      <li style="padding:.5rem 0 .5rem 1.5rem;position:relative;font-size:.92rem;line-height:1.7;">
+        <span style="position:absolute;left:0;top:.6rem;width:8px;height:8px;background:var(--gold);border-radius:50%;"></span>
+        慰謝料・離婚を視野に入れているけれど、何から準備すべきかわからない方
+      </li>
+    </ul>
+    <div class="about-quote">
+      私が事務所で何度も感じたのは、「最初に正しい情報にたどり着けるかどうか」で、その後の結果が大きく変わるということでした。
+    </div>
+  </div>
+
+  <div class="about-card">
+    <h2>大切にしていること</h2>
+    <p><strong>1. 正直であること</strong><br/>都合のいい話だけを並べたり、不安を煽ったりはしません。「やめておけ」と思うことも、見てきた失敗例も含めて、お伝えします。</p>
+    <p><strong>2. 押し付けないこと</strong><br/>探偵に依頼するべき、弁護士に相談すべき、そういう「正解」を押し付けません。最終的に決めるのは、あなた自身です。</p>
+    <p><strong>3. 寄り添うこと</strong><br/>頭での判断と、心の状態は別です。「動かなきゃ」と焦る前に、気持ちの整理が必要なこともあります。両方を大切にしています。</p>
+  </div>
+
+  <div class="about-card">
+    <h2>サイトの構成</h2>
+    <p>大きく分けて3つのコンテンツがあります。</p>
+    <ul style="list-style:none;padding:0;">
+      <li style="padding:.65rem 0;border-bottom:1px dashed var(--border);font-size:.92rem;">
+        <strong style="color:var(--navy);">📖 <a href="/detective/column/" style="color:var(--navy);">コラム</a></strong> — 事務所での経験談、選択肢の比較、気持ちの整理についての記事
+      </li>
+      <li style="padding:.65rem 0;border-bottom:1px dashed var(--border);font-size:.92rem;">
+        <strong style="color:var(--navy);">🧭 <a href="/detective/flow/" style="color:var(--navy);">どれから始める？</a></strong> — 状況別に「最初の一手」を整理したガイド
+      </li>
+      <li style="padding:.65rem 0;font-size:.92rem;">
+        <strong style="color:var(--navy);">🔍 <a href="/detective/#ranking" style="color:var(--navy);">探偵社比較</a></strong> — 信頼できる探偵社の特徴と比較情報
+      </li>
+    </ul>
+  </div>
+
+  <div class="about-disclaimer">
+    <strong>ご注意</strong>
+    私は法律事務所で事務員として働いていた経験はありますが、<strong>弁護士ではありません</strong>。サイト内で発信している内容は、あくまで「事務員として見聞きしてきた一般的な情報」であり、具体的な法律相談にはお答えできません。法的なご相談は、必ず弁護士へお願いいたします。また、当サイトは一部にアフィリエイトリンクを含みます。
+  </div>
+
+  <div class="about-cta">
+    <h3>もしよかったら、つながってください</h3>
+    <p>Instagramでは、もっと身近な話や日々の発信をしています。サイトと合わせて見ていただけると嬉しいです。</p>
+    <div class="about-cta-btns">
+      <a href={INSTAGRAM_URL} class="about-cta-btn primary" target="_blank" rel="noopener" data-track="about_cta_instagram">Instagramを見る</a>
+      <a href="/detective/column/" class="about-cta-btn ghost" data-track="about_cta_column">コラムを読む</a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="dt-footer">
+  <div class="dt-footer-inner">
+    <div class="dt-footer-logo">
+      <div class="dt-footer-logo-icon" style="padding:0;overflow:hidden;">
+        <img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:8px;" />
+      </div>
+      <span>弁護士の中の人</span>
+    </div>
+    <p class="dt-footer-text">
+      Instagram「弁護士の中の人（@lawyer.nakanohito）」の公式サイト。<br/>
+      法律事務所の元事務員が、浮気・不倫で悩む方へ正直な情報をお届けしています。<br/>
+      <span style="font-size:.75rem;color:rgba(255,255,255,.35)">当サイトは一部にアフィリエイトリンクを含みます。</span>
+    </p>
+    <div class="dt-footer-links">
+      <a href={INSTAGRAM_URL} target="_blank" rel="noopener">Instagram</a>
+      <a href="/detective/about/">中の人について</a>
+      <a href="/detective/privacy/">プライバシーポリシー</a>
+      <a href="/detective/operator/">運営者情報</a>
+    </div>
+    <p class="dt-footer-copy">© 2026 弁護士の中の人</p>
+  </div>
+</footer>
+
+</body>
+</html>
