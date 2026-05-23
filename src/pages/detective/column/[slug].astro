@@ -1,0 +1,212 @@
+---
+import { columns, getColumnBySlug, getRelatedColumns } from '../../../data/detective-columns.js';
+
+export function getStaticPaths() {
+  return columns.map(col => ({ params: { slug: col.slug } }));
+}
+
+const { slug } = Astro.params;
+const col = getColumnBySlug(slug);
+const related = getRelatedColumns(slug, 3);
+
+if (!col) return Astro.redirect('/detective/column/');
+
+const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
+const CANONICAL = `https://lawyer-nakanohito.com/detective/column/${col.slug}/`;
+
+const ctaConfig = {
+  detective: {
+    label: '信頼できる探偵社を比較する',
+    href: '/detective/#ranking',
+    cls: 'detective',
+    note: '無料相談あり・秘密厳守'
+  },
+  gps: {
+    label: 'GPS機器の詳細を確認する',
+    href: 'https://h.accesstrade.net/sp/cc?rk=0100r19500orzx',
+    cls: 'gps',
+    note: '公式サイトにて最新情報をご確認ください'
+  },
+  uranai: {
+    label: '電話占いヴェルニに相談する',
+    href: 'https://vernis.jp/affiliate/?af=1234',
+    cls: 'uranai',
+    note: '初回最大4,000円分無料・24時間対応'
+  },
+  all: {
+    label: '自分に合う選択肢を確認する',
+    href: '/detective/flow/',
+    cls: 'detective',
+    note: '探偵・GPS・相談、状況に合わせて選べます'
+  }
+};
+
+const cta = ctaConfig[col.cvType] || ctaConfig.all;
+const isExternal = cta.href.startsWith('http');
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{col.title}｜中の人ナビ</title>
+  <meta name="description" content={col.excerpt} />
+  <link rel="canonical" href={CANONICAL} />
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content={`${col.title}｜中の人ナビ`} />
+  <meta property="og:description" content={col.excerpt} />
+  <meta property="og:url"         content={CANONICAL} />
+  <meta property="og:locale"      content="ja_JP" />
+  <meta property="og:site_name"   content="弁護士の中の人" />
+  <meta name="twitter:card"       content="summary" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260523a" />
+
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2YLF06DC0E');
+  </script>
+  <script is:inline type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wt0koam10v");
+  </script>
+</head>
+<body class="col-article-wrap">
+
+<header class="dt-header">
+  <div class="dt-header-inner">
+    <a href="/detective/" class="dt-logo">
+      <div class="dt-logo-icon">
+        <img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;" />
+      </div>
+      <div class="dt-logo-wrap">
+        <span>弁護士の中の人</span>
+        <span class="dt-logo-sub">公式サイト</span>
+      </div>
+    </a>
+    <a href={INSTAGRAM_URL} class="dt-header-insta" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+      <span>@lawyer.nakanohito</span>
+    </a>
+  </div>
+</header>
+
+<nav class="col-header-nav">
+  <div class="col-header-nav-inner">
+    <a href="/detective/">探偵を選ぶ</a>
+    <span class="col-nav-sep">›</span>
+    <a href="/detective/column/">コラム</a>
+    <span class="col-nav-sep">›</span>
+    <span style="color:rgba(255,255,255,.65)">{col.title.length > 20 ? col.title.slice(0, 20) + '…' : col.title}</span>
+  </div>
+</nav>
+
+<div class="col-article-hero">
+  <div class="col-article-hero-inner">
+    <span class={`col-article-category ${col.category}`}>{col.categoryLabel}</span>
+    <h1>{col.title}</h1>
+    <div class="col-article-meta">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        約{col.readingTime}分で読めます
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        {col.published}
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="col-article-body">
+
+  <nav class="col-breadcrumb">
+    <a href="/detective/">TOP</a>
+    <span>›</span>
+    <a href="/detective/column/">コラム</a>
+    <span>›</span>
+    <span>{col.title}</span>
+  </nav>
+
+  <div class="col-article-author">
+    <div class="col-article-author-icon">
+      <img src="/detective/images/logo-icon.png" alt="中の人" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;" />
+    </div>
+    <div class="col-article-author-info">
+      <strong>弁護士の中の人</strong>
+      <span>法律事務所の元事務員。何百件もの浮気・離婚・慰謝料案件を間近で見てきた経験から、正直な情報をお伝えしています。</span>
+    </div>
+  </div>
+
+  <div class="col-article-content" set:html={col.body} />
+
+  <div class="col-article-cta">
+    <h3>次のステップを考えてみませんか</h3>
+    <p>{col.excerpt}</p>
+    <a
+      href={cta.href}
+      class={`col-article-cta-btn ${cta.cls}`}
+      rel={isExternal ? 'nofollow sponsored noopener' : undefined}
+      data-track={`column_cta_${col.slug}`}
+    >{cta.label}</a>
+    <p class="col-article-cta-note">{cta.note}</p>
+  </div>
+
+  {related.length > 0 && (
+    <div style="margin-top:3rem;">
+      <h2 style="font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:1rem;">関連コラム</h2>
+      <div class="col-grid">
+        {related.map(r => (
+          <a href={`/detective/column/${r.slug}/`} class="col-card">
+            <span class={`col-card-badge ${r.category}`}>{r.categoryLabel}</span>
+            <h3>{r.title}</h3>
+            <p>{r.excerpt}</p>
+            <div class="col-card-meta">
+              <span>{r.readingTime}分</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  )}
+
+  <a href="/detective/column/" class="col-back-link">
+    ← コラム一覧に戻る
+  </a>
+
+</div>
+
+<footer class="dt-footer">
+  <div class="dt-footer-inner">
+    <div class="dt-footer-logo">
+      <div class="dt-footer-logo-icon" style="padding:0;overflow:hidden;">
+        <img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:8px;" />
+      </div>
+      <span>弁護士の中の人</span>
+    </div>
+    <p class="dt-footer-text">
+      Instagram「弁護士の中の人（@lawyer.nakanohito）」の公式サイト。<br/>
+      法律事務所の元事務員が、浮気・不倫で悩む方へ正直な情報をお届けしています。<br/>
+      <span style="font-size:.75rem;color:rgba(255,255,255,.35)">当サイトは一部にアフィリエイトリンクを含みます。</span>
+    </p>
+    <div class="dt-footer-links">
+      <a href={INSTAGRAM_URL} target="_blank" rel="noopener">Instagram</a>
+      <a href="/detective/privacy/">プライバシーポリシー</a>
+      <a href="/detective/operator/">運営者情報</a>
+    </div>
+    <p class="dt-footer-copy">© 2026 弁護士の中の人</p>
+  </div>
+</footer>
+
+<script src="/detective/app.js" is:inline defer></script>
+</body>
+</html>
