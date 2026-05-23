@@ -1,0 +1,113 @@
+---
+const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ページが見つかりません｜中の人ナビ</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260523e" />
+  <style>
+    .nf-wrap {
+      min-height: 100vh;
+      background: var(--beige);
+      display: flex;
+      flex-direction: column;
+    }
+    .nf-body {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.25rem;
+    }
+    .nf-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      max-width: 480px;
+      box-shadow: var(--shadow-md);
+    }
+    .nf-emoji { font-size: 3rem; margin-bottom: 1rem; }
+    .nf-card h1 {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      color: var(--navy);
+      margin-bottom: .75rem;
+    }
+    .nf-card p { font-size: .92rem; color: var(--muted); line-height: 1.8; margin-bottom: 1.5rem; }
+    .nf-links {
+      display: flex;
+      flex-direction: column;
+      gap: .65rem;
+      text-align: left;
+    }
+    .nf-link {
+      background: var(--beige);
+      border: 1px solid var(--beige-mid);
+      border-radius: 10px;
+      padding: .85rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      text-decoration: none;
+      color: var(--text);
+      transition: all .18s;
+    }
+    .nf-link:hover { border-color: var(--gold); background: #fff; text-decoration: none; }
+    .nf-link-icon { font-size: 1.4rem; }
+    .nf-link strong { display: block; font-size: .9rem; color: var(--navy); }
+    .nf-link span { display: block; font-size: .75rem; color: var(--muted); margin-top: .15rem; }
+  </style>
+</head>
+<body>
+
+<header class="dt-header">
+  <div class="dt-header-inner">
+    <a href="/detective/" class="dt-logo">
+      <div class="dt-logo-icon"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;" /></div>
+      <div class="dt-logo-wrap"><span>弁護士の中の人</span><span class="dt-logo-sub">中の人ナビ</span></div>
+    </a>
+    <a href={INSTAGRAM_URL} class="dt-header-insta" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+      <span>@lawyer.nakanohito</span>
+    </a>
+  </div>
+</header>
+
+<div class="nf-wrap">
+  <div class="nf-body">
+    <div class="nf-card">
+      <div class="nf-emoji">🔍</div>
+      <h1>ページが見つかりませんでした</h1>
+      <p>お探しのページは、移動または削除された可能性があります。<br/>下のリンクから目的の情報を探してみてください。</p>
+      <div class="nf-links">
+        <a href="/detective/" class="nf-link">
+          <span class="nf-link-icon">🏠</span>
+          <div><strong>TOPページ</strong><span>サイト全体のはじまり</span></div>
+        </a>
+        <a href="/detective/flow/" class="nf-link">
+          <span class="nf-link-icon">🧭</span>
+          <div><strong>どれから始める？</strong><span>状況別の選択肢ガイド</span></div>
+        </a>
+        <a href="/detective/column/" class="nf-link">
+          <span class="nf-link-icon">📖</span>
+          <div><strong>コラムを読む</strong><span>事務員目線の体験談・選択肢の整理</span></div>
+        </a>
+        <a href="/detective/about/" class="nf-link">
+          <span class="nf-link-icon">👤</span>
+          <div><strong>中の人について</strong><span>運営者プロフィール</span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

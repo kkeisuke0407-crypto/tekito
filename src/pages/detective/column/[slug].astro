@@ -60,10 +60,46 @@ const isExternal = cta.href.startsWith('http');
   <meta property="og:site_name"   content="弁護士の中の人" />
   <meta name="twitter:card"       content="summary" />
 
+  <!-- JSON-LD: Article + Breadcrumb -->
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": col.title,
+    "description": col.excerpt,
+    "author": {
+      "@type": "Person",
+      "name": "弁護士の中の人",
+      "description": "法律事務所の元事務員。Instagram「弁護士の中の人」運営。",
+      "url": "https://lawyer-nakanohito.com/detective/about/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "中の人ナビ",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://lawyer-nakanohito.com/detective/images/logo-icon.png"
+      }
+    },
+    "datePublished": col.published,
+    "dateModified": col.published,
+    "mainEntityOfPage": { "@type": "WebPage", "@id": CANONICAL },
+    "articleSection": col.categoryLabel,
+    "timeRequired": `PT${col.readingTime}M`
+  })} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "TOP", "item": "https://lawyer-nakanohito.com/detective/" },
+      { "@type": "ListItem", "position": 2, "name": "コラム", "item": "https://lawyer-nakanohito.com/detective/column/" },
+      { "@type": "ListItem", "position": 3, "name": col.title }
+    ]
+  })} />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/detective/styles.css?v=20260523d" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260523e" />
 
   <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
   <script is:inline>
@@ -161,6 +197,18 @@ const isExternal = cta.href.startsWith('http');
     <p class="col-article-cta-note">{cta.note}</p>
   </div>
 
+  <!-- インスタフォローCTA -->
+  <div class="col-insta-cta">
+    <div class="col-insta-cta-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+    </div>
+    <div class="col-insta-cta-body">
+      <strong>Instagramでも発信しています</strong>
+      <p>サイトに載せきれない短い投稿や、最新の話題は @lawyer.nakanohito で発信中です。</p>
+    </div>
+    <a href={INSTAGRAM_URL} class="col-insta-cta-btn" target="_blank" rel="noopener" data-track={`column_insta_${col.slug}`}>フォローする</a>
+  </div>
+
   {related.length > 0 && (
     <div style="margin-top:3rem;">
       <h2 style="font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:1rem;">関連コラム</h2>
@@ -184,6 +232,9 @@ const isExternal = cta.href.startsWith('http');
   </a>
 
 </div>
+
+<!-- Reading progress bar -->
+<div class="col-progress-bar" id="col-progress"></div>
 
 <footer class="dt-footer">
   <div class="dt-footer-inner">
@@ -227,21 +278,42 @@ const isExternal = cta.href.startsWith('http');
 
 <script src="/detective/app.js" is:inline defer></script>
 <script is:inline>
-  // Column page sticky: show after scrolling past 60% of article
   document.addEventListener('DOMContentLoaded', function() {
+    // Sticky CTA: show after scrolling past 60% of viewport
     var sticky = document.getElementById('sticky-cta');
+    var progressBar = document.getElementById('col-progress');
     var article = document.querySelector('.col-article-content');
-    if (!sticky || !article || !('IntersectionObserver' in window)) return;
     var dismissed = false;
-    document.getElementById('sticky-close').addEventListener('click', function() {
-      dismissed = true;
-      sticky.classList.remove('visible');
-    });
-    var threshold = window.innerHeight * 0.6;
-    window.addEventListener('scroll', function() {
-      if (dismissed) return;
-      sticky.classList.toggle('visible', window.scrollY > threshold);
-    }, { passive: true });
+    if (sticky) {
+      var closeBtn = document.getElementById('sticky-close');
+      if (closeBtn) closeBtn.addEventListener('click', function() {
+        dismissed = true;
+        sticky.classList.remove('visible');
+      });
+    }
+    // Reading progress bar
+    var milestones = { 25: false, 50: false, 75: false, 100: false };
+    function update() {
+      var doc = document.documentElement;
+      var scrolled = window.scrollY;
+      var maxScroll = (doc.scrollHeight - window.innerHeight);
+      var pct = maxScroll > 0 ? Math.min(100, (scrolled / maxScroll) * 100) : 0;
+      if (progressBar) progressBar.style.width = pct + '%';
+      if (sticky && !dismissed) {
+        sticky.classList.toggle('visible', scrolled > window.innerHeight * 0.6);
+      }
+      // Fire scroll depth events
+      [25,50,75,100].forEach(function(m) {
+        if (!milestones[m] && pct >= m) {
+          milestones[m] = true;
+          if (window.dataLayer) window.dataLayer.push({ event: 'column_scroll_depth', depth: m });
+          if (typeof gtag === 'function') gtag('event', 'column_scroll_depth', { value: m });
+        }
+      });
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update, { passive: true });
+    update();
   });
 </script>
 </body>
