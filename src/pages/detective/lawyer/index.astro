@@ -218,5 +218,26 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
   </div>
 </footer>
 
+<div class="sticky-cta-bar" id="sticky-cta">
+  <span class="sticky-label">まず証拠を集めてから弁護士へ</span>
+  <a href="/detective/#ranking" class="sticky-btn" style="background:linear-gradient(135deg,#16a34a,#15803d);" data-track="sticky_lawyer_lp">探偵社を比較する →</a>
+  <button class="sticky-close" id="sticky-close" aria-label="閉じる">✕</button>
+</div>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    var sticky = document.getElementById('sticky-cta');
+    if (!sticky) return;
+    var dismissed = false;
+    document.getElementById('sticky-close').addEventListener('click', function() {
+      dismissed = true; sticky.classList.remove('visible');
+    });
+    window.addEventListener('scroll', function() {
+      if (dismissed) return;
+      sticky.classList.toggle('visible', window.scrollY > window.innerHeight * 0.6);
+    }, { passive: true });
+  });
+</script>
+
 </body>
 </html>
