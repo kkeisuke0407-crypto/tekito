@@ -1,5 +1,5 @@
 const AFFILIATE_LINKS = {
-  gaia_line: "https://must-link.jp/XXX_GAIA_LINE", // もしもアフィリリンクに差し替え
+  gaia_line: "https://af.moshimo.com/af/c/click?a_id=5573324&p_id=5546&pc_id=15198&pl_id=71551",
 };
 
 document.addEventListener("DOMContentLoaded", () => {

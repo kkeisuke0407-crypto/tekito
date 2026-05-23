@@ -250,15 +250,14 @@ const faqJsonLd = {
     gtag('js', new Date());
     gtag('config', 'G-2YLF06DC0E');
   </script>
-  <!-- TikTokピクセル（ID取得後に有効化）
+  <!-- TikTok Pixel -->
   <script is:inline>
-    !function(w,d,t){w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];
-    ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],
-    ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
-    for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
-    ttq.load('YOUR_PIXEL_ID');ttq.page();
-    }(window,document,'ttq');
-  </script> -->
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+      ttq.load('D88SH4BC77U17CDP3DKG');
+      ttq.page();
+    }(window, document, 'ttq');
+  </script>
 </head>
 <body>
 
@@ -548,6 +547,9 @@ const faqJsonLd = {
     <span>LINEでそっと相談する（無料）</span>
   </a>
 </div>
+
+<!-- もしも 表示計測ピクセル -->
+<img src="//i.moshimo.com/af/i/impression?a_id=5573324&p_id=5546&pc_id=15198&pl_id=71551" width="1" height="1" style="border:none;position:absolute;" loading="lazy" alt="" />
 
 <script src="/lp/taishoku-gaia.js" is:inline></script>
 </body>
