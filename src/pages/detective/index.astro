@@ -54,6 +54,55 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "wt0koam10v");
   </script>
+
+  <!-- JSON-LD: WebSite + FAQPage -->
+  <script is:inline type="application/ld+json">{JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://lawyer-nakanohito.com/#website",
+        "url": "https://lawyer-nakanohito.com/",
+        "name": "中の人ナビ",
+        "description": "法律事務所の元事務員が浮気・不倫で悩む方へ探偵・GPS・弁護士・相談の全選択肢を解説",
+        "publisher": {
+          "@type": "Person",
+          "name": "弁護士の中の人",
+          "url": "https://lawyer-nakanohito.com/detective/about/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "そもそも「中の人」って誰ですか？",
+            "acceptedAnswer": { "@type": "Answer", "text": "弁護士事務所で約10年事務員として働いてきた者です。何百件もの離婚・浮気・慰謝料に関する案件を間近で見てきました。私自身は弁護士ではないため、法的な見解は述べず、事務員として見聞きしてきた経験を中心にお伝えしています。" }
+          },
+          {
+            "@type": "Question",
+            "name": "探偵以外の選択肢（GPSなど）はないのですか？",
+            "acceptedAnswer": { "@type": "Answer", "text": "あります。状況によっては、自分でGPSを使う、まず気持ちを整理する、弁護士に相談する、といった選択肢が適切なケースもあります。状況別に選べるガイドを用意しています。" }
+          },
+          {
+            "@type": "Question",
+            "name": "自分でGPSを使うのは違法ではないですか？",
+            "acceptedAnswer": { "@type": "Answer", "text": "自分名義または夫婦共有名義の車であれば、設置が違法になりにくいとされています。一方で、相手だけの名義の車・社用車・他人の所有物への設置は、不法行為や法律違反になるリスクがあります。" }
+          },
+          {
+            "@type": "Question",
+            "name": "弁護士に相談するのと、探偵に依頼するのは、どちらが先ですか？",
+            "acceptedAnswer": { "@type": "Answer", "text": "慰謝料や離婚を視野に入れている場合、「証拠を集めてから弁護士に相談」が一般的な順番です。弁護士は法的手続きを進める専門家であり、証拠収集の調査は行いません。" }
+          },
+          {
+            "@type": "Question",
+            "name": "家族や職場にバレませんか？",
+            "acceptedAnswer": { "@type": "Answer", "text": "探偵業法により、探偵事務所には守秘義務があります。匿名相談も可能で、連絡方法（電話・LINE・メール）も指定できます。信頼できる業者であれば情報が漏れることはありません。" }
+          }
+        ]
+      }
+    ]
+  })}</script>
 </head>
 <body>
 
