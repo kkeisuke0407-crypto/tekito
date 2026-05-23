@@ -1,0 +1,554 @@
+---
+const PAGE_TITLE  = "弁護士に退職代行を頼む｜弁護士法人ガイア【LINE無料相談・即日対応】";
+const PAGE_DESC   = "会社に一度も連絡せずに退職できます。弁護士法人ガイアの退職代行は有給消化・残業代請求・損害賠償対応まで一気通貫。LINE無料相談・即日対応。";
+const CANONICAL   = "https://vpscomparehub.com/lp/taishoku-gaia/";
+const OGP_IMAGE   = "https://vpscomparehub.com/og-default.svg";
+const UPDATED     = "2025年5月";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "本当に会社に連絡しなくていいですか？",
+      acceptedAnswer: { "@type": "Answer", text: "はい。弁護士が本人の代わりに会社へ連絡します。依頼後は会社への連絡は不要です。" }
+    },
+    {
+      "@type": "Question",
+      name: "民間の退職代行と弁護士の退職代行は何が違いますか？",
+      acceptedAnswer: { "@type": "Answer", text: "弁護士のみが会社と法的に交渉する権限を持ちます。有給消化・残業代請求・損害賠償への対応は弁護士だけが行えます。弁護士資格のない業者がこれらを行うと弁護士法違反となります。" }
+    },
+    {
+      "@type": "Question",
+      name: "公務員・自衛隊でも依頼できますか？",
+      acceptedAnswer: { "@type": "Answer", text: "はい、対応実績があります。公務員・自衛隊・業務委託など雇用形態問わず対応可能です。詳細はLINEでご相談ください。" }
+    },
+    {
+      "@type": "Question",
+      name: "有給休暇が残っています。消化できますか？",
+      acceptedAnswer: { "@type": "Answer", text: "弁護士が会社と交渉します。民間業者と異なり、法的に交渉できる立場なので対応可能なケースが多いです。" }
+    },
+    {
+      "@type": "Question",
+      name: "会社から「損害賠償する」と言われています。",
+      acceptedAnswer: { "@type": "Answer", text: "弁護士法人ガイアは損害賠償請求への対応も行います。まずLINEで状況をご相談ください。" }
+    }
+  ]
+};
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{PAGE_TITLE}</title>
+  <meta name="description" content={PAGE_DESC} />
+  <link rel="canonical" href={CANONICAL} />
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content={PAGE_TITLE} />
+  <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:url"         content={CANONICAL} />
+  <meta property="og:image"       content={OGP_IMAGE} />
+  <meta property="og:locale"      content="ja_JP" />
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/lp/soft-pastel.css" />
+  <style>
+    /* ガイアLP固有スタイル */
+    .gaia-hero {
+      background: linear-gradient(150deg, #F0F7F4 0%, #FFF9F5 100%);
+      padding: 48px 0 36px;
+      border-bottom: 3px solid var(--brand);
+    }
+    .gaia-hero__eyebrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--brand);
+      margin-bottom: 12px;
+    }
+    .gaia-hero__title {
+      font-size: clamp(1.8rem, 6vw, 2.6rem);
+      font-weight: 900;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .gaia-hero__title em {
+      font-style: normal;
+      color: var(--brand);
+      border-bottom: 3px solid var(--brand);
+      padding-bottom: 1px;
+    }
+    .gaia-hero__sub {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin: 16px 0 28px;
+      line-height: 1.8;
+    }
+    .gaia-hero__badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+    .badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--brand-dark);
+      background: var(--brand-light);
+      border: 1px solid var(--brand);
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+    .line-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #06C755;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 18px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(6,199,85,0.35);
+      transition: background 0.2s, transform 0.15s;
+      width: 100%;
+      max-width: 420px;
+    }
+    .line-btn:hover { background: #05b04c; transform: translateY(-1px); }
+    .line-btn__icon { font-size: 1.3em; }
+    .line-btn--sm { font-size: 0.95rem; padding: 14px 20px; }
+    .line-btn__note {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+      text-align: center;
+    }
+
+    /* データセクション */
+    .data-callout {
+      background: #1C1C1C;
+      color: #fff;
+      border-radius: 12px;
+      padding: 24px 20px;
+      margin: 0 0 var(--gap-m);
+    }
+    .data-callout__num {
+      font-size: clamp(2.4rem, 8vw, 3.2rem);
+      font-weight: 900;
+      color: #E07B5A;
+      line-height: 1;
+    }
+    .data-callout__label {
+      font-size: 0.88rem;
+      color: #ccc;
+      margin-top: 4px;
+      line-height: 1.6;
+    }
+    .data-callout__source {
+      font-size: 0.68rem;
+      color: #888;
+      margin-top: 8px;
+    }
+
+    /* できること比較 */
+    .can-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; margin: var(--gap-m) 0; }
+    .can-table th {
+      padding: 10px 8px;
+      background: var(--bg-alt);
+      font-weight: 700;
+      border-bottom: 2px solid var(--border);
+      text-align: center;
+    }
+    .can-table th:first-child { text-align: left; }
+    .can-table td {
+      padding: 10px 8px;
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+      vertical-align: middle;
+    }
+    .can-table td:first-child { text-align: left; font-weight: 600; font-size: 0.8rem; }
+    .can-table .yes { color: var(--brand); font-weight: 700; font-size: 1.1em; }
+    .can-table .no  { color: #bbb; }
+    .can-table .col-gaia { background: rgba(46,125,106,0.06); }
+
+    /* ステップ */
+    .steps { display: flex; flex-direction: column; gap: 0; }
+    .step {
+      display: flex;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px dashed var(--border);
+    }
+    .step:last-child { border-bottom: none; }
+    .step__num {
+      flex-shrink: 0;
+      width: 36px; height: 36px;
+      background: var(--brand);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 0.9rem;
+    }
+    .step__body { flex: 1; }
+    .step__title { font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; }
+    .step__desc { font-size: 0.83rem; color: var(--text-secondary); line-height: 1.7; }
+
+    /* 追従 */
+    .sticky-line {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      padding: 10px 16px 16px;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(8px);
+      border-top: 1px solid var(--border);
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .sticky-line__label { font-size: 0.7rem; color: var(--text-muted); }
+
+    .lp-footer-gaia {
+      background: var(--bg-alt);
+      border-top: 1px solid var(--border);
+      padding: var(--gap-l) 0 calc(var(--gap-l) + 80px);
+      text-align: center;
+    }
+    .lp-footer-gaia__links {
+      display: flex;
+      justify-content: center;
+      gap: var(--gap-m);
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .lp-footer-gaia__links a { font-size: 0.78rem; color: var(--text-muted); text-decoration: none; }
+    .lp-footer-gaia__disc {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      max-width: 540px;
+      margin: 12px auto 0;
+      line-height: 1.7;
+    }
+  </style>
+
+  <!-- GA4 -->
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2YLF06DC0E');
+  </script>
+  <!-- TikTokピクセル（ID取得後に有効化）
+  <script is:inline>
+    !function(w,d,t){w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];
+    ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],
+    ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
+    for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
+    ttq.load('YOUR_PIXEL_ID');ttq.page();
+    }(window,document,'ttq');
+  </script> -->
+</head>
+<body>
+
+<!-- ① FV -->
+<header class="gaia-hero">
+  <div class="lp-wrap">
+    <p class="gaia-hero__eyebrow">PR・広告記事 ／ 弁護士法人ガイア</p>
+    <h1 class="gaia-hero__title">
+      辞めたい。<br>
+      でも、<em>言えない</em>。
+    </h1>
+    <p class="gaia-hero__sub">
+      会社に一度も連絡せず、退職できます。<br>
+      弁護士が、あなたの代わりにすべてやります。
+    </p>
+    <div class="gaia-hero__badges">
+      <span class="badge">弁護士法人</span>
+      <span class="badge">即日対応</span>
+      <span class="badge">LINE24時間</span>
+      <span class="badge">公務員・自衛隊OK</span>
+      <span class="badge">有給消化・残業代請求対応</span>
+    </div>
+    <div class="text-center">
+      <a href="#" class="line-btn" data-affiliate="gaia_line" data-track="hero_gaia">
+        <span class="line-btn__icon">💬</span>
+        <span>LINEでそっと相談する（無料）</span>
+      </a>
+      <p class="line-btn__note">相談だけでOK・無理な勧誘なし・24時間受付</p>
+    </div>
+    <p style="font-size:0.72rem;color:var(--text-muted);margin-top:16px;">
+      最終更新: {UPDATED} ／ 料金・条件は公式サイトでご確認ください
+    </p>
+  </div>
+</header>
+
+<!-- ② 共感 -->
+<section>
+  <div class="lp-wrap">
+    <div class="section-head">
+      <span class="section-head__label">こんな状況ではないですか</span>
+      <h2 class="section-head__title">
+        我慢を続けると、<span>体が先に壊れます</span>
+      </h2>
+    </div>
+    <ul class="check-list check-list--warn">
+      <li>「辞めます」と言ったら、怒鳴られそうで怖い</li>
+      <li>引き止められて、何ヶ月も言い出せていない</li>
+      <li>上司からのLINEを見るだけで動悸がする</li>
+      <li>「損害賠償する」「お前のせいで…」と脅されている</li>
+      <li>有給が残っているのに消化できないまま終わりそう</li>
+    </ul>
+    <p style="font-size:0.95rem;color:var(--text-secondary);margin-top:var(--gap-m);line-height:1.9;">
+      言えない理由は、意志の弱さじゃないです。
+      <strong>「感情的な圧力」に個人で向き合う構造が、そもそも無理</strong>なんです。
+    </p>
+  </div>
+</section>
+
+<!-- ③ 30.4%データ -->
+<section style="background:var(--bg-alt);">
+  <div class="lp-wrap">
+    <div class="section-head">
+      <span class="section-head__label">知っておいてほしいこと</span>
+      <h2 class="section-head__title">
+        業者を<span>間違えると</span>、会社に無視されます
+      </h2>
+    </div>
+    <div class="data-callout">
+      <div class="data-callout__num">30.4<span style="font-size:0.45em">%</span></div>
+      <div class="data-callout__label">
+        の企業が「非弁行為の可能性があるため<br>民間の退職代行業者の連絡を<strong style="color:#fff;">取り合わない</strong>」と回答
+      </div>
+      <div class="data-callout__source">出典: 東京商工リサーチ「退職代行からの連絡、企業の3割取り合わず」2026年4月調査・有効回答6,425社</div>
+    </div>
+    <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.9;">
+      民間の退職代行業者は、会社に「退職の意思を伝える」ことしかできません。
+      有給消化・残業代・損害賠償などを「交渉」する権限は法律上ありません。
+      弁護士資格のない業者がこれらを行うと<strong>弁護士法違反</strong>になります。
+    </p>
+    <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.9;margin-top:12px;">
+      弁護士からの通知は、法的効力があります。
+      <strong>会社は無視できません。</strong>
+    </p>
+  </div>
+</section>
+
+<!-- ④ 弁護士だけができること -->
+<section>
+  <div class="lp-wrap">
+    <div class="section-head">
+      <span class="section-head__label">弁護士法人ガイアを選ぶ理由</span>
+      <h2 class="section-head__title">
+        弁護士だけが<span>できること</span>
+      </h2>
+    </div>
+    <table class="can-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th class="col-gaia">弁護士<br>ガイア</th>
+          <th>労組系</th>
+          <th>民間</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>退職の意思を伝える</td>
+          <td class="yes col-gaia">◎</td>
+          <td class="yes">◎</td>
+          <td class="yes">◎</td>
+        </tr>
+        <tr>
+          <td>即日対応</td>
+          <td class="yes col-gaia">◎</td>
+          <td class="yes">◎</td>
+          <td class="yes">◎</td>
+        </tr>
+        <tr>
+          <td>有給消化の交渉</td>
+          <td class="yes col-gaia">◎</td>
+          <td class="yes">○</td>
+          <td class="no">✕</td>
+        </tr>
+        <tr>
+          <td>未払い残業代の請求</td>
+          <td class="yes col-gaia">◎</td>
+          <td class="no">△</td>
+          <td class="no">✕</td>
+        </tr>
+        <tr>
+          <td>損害賠償への対応</td>
+          <td class="yes col-gaia">◎</td>
+          <td class="no">✕</td>
+          <td class="no">✕</td>
+        </tr>
+        <tr>
+          <td>公務員・自衛隊対応</td>
+          <td class="yes col-gaia">◎</td>
+          <td class="no">△</td>
+          <td class="no">△</td>
+        </tr>
+        <tr>
+          <td>退職後の無期限サポート</td>
+          <td class="yes col-gaia">◎</td>
+          <td class="no">△</td>
+          <td class="no">△</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.7rem;color:var(--text-muted);">
+      ※ 各社の公式情報をもとに作成。詳細は各公式サイトでご確認ください。
+      本ページはアフィリエイト広告を含みます。
+    </p>
+  </div>
+</section>
+
+<!-- ⑤ 中間CTA -->
+<section style="background:var(--brand-light);border-top:2px solid var(--brand);border-bottom:2px solid var(--brand);padding:var(--gap-m) 0;">
+  <div class="lp-wrap text-center">
+    <p style="font-size:1rem;font-weight:700;color:var(--brand);margin-bottom:16px;">
+      まず話だけ聞いてもらうだけでOKです
+    </p>
+    <a href="#" class="line-btn" style="margin:0 auto;" data-affiliate="gaia_line" data-track="mid_gaia">
+      <span class="line-btn__icon">💬</span>
+      <span>LINEで無料相談する</span>
+    </a>
+    <p class="line-btn__note" style="margin-top:8px;">24時間受付・相談だけでも歓迎</p>
+  </div>
+</section>
+
+<!-- ⑥ 依頼の流れ -->
+<section>
+  <div class="lp-wrap">
+    <div class="section-head">
+      <span class="section-head__label">依頼の流れ</span>
+      <h2 class="section-head__title">
+        <span>3ステップ</span>で完了
+      </h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step__num">1</div>
+        <div class="step__body">
+          <div class="step__title">LINEで無料相談</div>
+          <div class="step__desc">状況をLINEで伝えるだけ。24時間受付、今夜でもOK。費用は一切かかりません。</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step__num">2</div>
+        <div class="step__body">
+          <div class="step__title">弁護士がヒアリング・プラン提案</div>
+          <div class="step__desc">有給・残業代・損害賠償など状況に応じてプランを提案。料金も事前に明示。</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step__num">3</div>
+        <div class="step__body">
+          <div class="step__title">弁護士が会社へ連絡 → 退職完了</div>
+          <div class="step__desc">入金後、最短即日で弁護士が会社へ連絡。あなたは会社に一度も連絡しなくてOKです。退職後の書類受け取りまで無期限サポート。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑦ FAQ -->
+<section style="background:var(--bg-alt);">
+  <div class="lp-wrap">
+    <div class="section-head">
+      <span class="section-head__label">よくある質問</span>
+      <h2 class="section-head__title">
+        不安を<span>先に解消</span>しておく
+      </h2>
+    </div>
+    <div class="faq-item">
+      <p class="faq-item__q">本当に会社に連絡しなくていいですか？</p>
+      <p class="faq-item__a">はい。弁護士が本人の代わりに会社へ連絡します。依頼後はすべて弁護士が対応するため、あなたが会社と直接やり取りする必要はありません。</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-item__q">民間の退職代行と何が違うんですか？</p>
+      <p class="faq-item__a">弁護士のみが会社と法的に交渉できます。有給消化・残業代請求・損害賠償への対応は弁護士だけが行える業務です。弁護士資格のない業者がこれを行うと弁護士法違反になります。</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-item__q">公務員・自衛隊でも使えますか？</p>
+      <p class="faq-item__a">はい、対応実績があります。公務員・自衛隊・業務委託など雇用形態問わず対応可能です。詳細はLINEでご相談ください。</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-item__q">「損害賠償する」と脅されています。</p>
+      <p class="faq-item__a">弁護士法人ガイアは損害賠償請求への対応も行っています。まずLINEで状況をお伝えください。</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-item__q">相談だけして、申し込まなくてもいいですか？</p>
+      <p class="faq-item__a">もちろんです。LINEでの相談は無料で、申し込み義務はありません。まず話だけ聞いてもらうことから始めてください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ⑧ 最終CTA -->
+<section style="background:linear-gradient(150deg,#EEF7F4,#FFF8F3);border-top:2px solid var(--brand);">
+  <div class="lp-wrap text-center">
+    <div class="section-head text-center">
+      <span class="section-head__label" style="margin:0 auto;">あなたへ</span>
+      <h2 class="section-head__title" style="text-align:center;margin-top:8px;">
+        迷っている時間が、<span>いちばん苦しい</span>
+      </h2>
+    </div>
+    <p style="font-size:0.95rem;color:var(--text-secondary);line-height:1.9;max-width:480px;margin:0 auto var(--gap-m);">
+      LINEを開いて、一言送るだけです。<br>
+      それだけで、弁護士があとは全部やります。
+    </p>
+    <a href="#" class="line-btn" style="margin:0 auto;" data-affiliate="gaia_line" data-track="footer_gaia">
+      <span class="line-btn__icon">💬</span>
+      <span>今すぐLINEで相談する（無料）</span>
+    </a>
+    <p class="line-btn__note" style="margin-top:8px;">弁護士法人ガイア ／ 24時間受付 ／ 相談のみでOK</p>
+    <p style="font-size:0.78rem;color:var(--text-secondary);margin-top:var(--gap-l);font-style:italic;">
+      追伸: 「辞めたい」は弱さじゃない。<br>自分を守るための、正当な判断です。
+    </p>
+    <p style="font-size:0.68rem;color:var(--text-muted);margin-top:var(--gap-m);max-width:480px;margin-left:auto;margin-right:auto;">
+      ※本ページはアフィリエイト広告を含みます。掲載情報は調査時点のもので変更される場合があります。
+      料金・サービス内容は必ず公式サイトでご確認ください。
+    </p>
+  </div>
+</section>
+
+<!-- フッター -->
+<footer class="lp-footer-gaia">
+  <div class="lp-wrap">
+    <div class="lp-footer-gaia__links">
+      <a href="/privacy/">プライバシーポリシー</a>
+      <a href="/disclosure/">広告掲載について</a>
+      <a href="/about/">運営者情報</a>
+    </div>
+    <p style="font-size:0.75rem;color:var(--text-muted);">&copy; 2025 vpscomparehub.com</p>
+    <p class="lp-footer-gaia__disc">
+      本ページに掲載する情報は、弁護士法人ガイアの公式サイト・ASP掲載情報をもとに作成しています。
+      料金・サービス内容は予告なく変更される場合があります。申し込みの際は必ず公式サイトでご確認ください。
+    </p>
+  </div>
+</footer>
+
+<!-- 追従CTA -->
+<div class="sticky-line">
+  <span class="sticky-line__label">弁護士法人ガイア ／ LINE無料相談</span>
+  <a href="#" class="line-btn line-btn--sm" data-affiliate="gaia_line" data-track="sticky_gaia">
+    <span class="line-btn__icon">💬</span>
+    <span>LINEでそっと相談する（無料）</span>
+  </a>
+</div>
+
+<script src="/lp/taishoku-gaia.js" is:inline></script>
+</body>
+</html>
