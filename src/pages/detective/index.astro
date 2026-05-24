@@ -1,6 +1,7 @@
 ---
 import { columns } from '../../data/detective-columns.js';
-const recentColumns = columns.slice(0, 6);
+const pickSlugs = ['jitsumu-bure-pattern','ishatyou-toreta-torenakatta','nani-kara-hajimeru','bengoshi-shouko-ato','tashikameru-kowai','hitori-kakaekomi'];
+const recentColumns = pickSlugs.map(s => columns.find(c => c.slug === s)).filter(Boolean);
 
 const PAGE_TITLE = "中の人ナビ｜浮気・不倫で悩んだときの全選択肢ガイド";
 const PAGE_DESC  = "法律事務所の元事務員が、浮気・不倫で悩む方に「探偵・GPS・弁護士・相談」の全選択肢を正直に解説。インスタ「弁護士の中の人」公式サイト。";
@@ -53,6 +54,55 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "wt0koam10v");
   </script>
+
+  <!-- JSON-LD: WebSite + FAQPage -->
+  <script is:inline type="application/ld+json">{JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://lawyer-nakanohito.com/#website",
+        "url": "https://lawyer-nakanohito.com/",
+        "name": "中の人ナビ",
+        "description": "法律事務所の元事務員が浮気・不倫で悩む方へ探偵・GPS・弁護士・相談の全選択肢を解説",
+        "publisher": {
+          "@type": "Person",
+          "name": "弁護士の中の人",
+          "url": "https://lawyer-nakanohito.com/detective/about/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "そもそも「中の人」って誰ですか？",
+            "acceptedAnswer": { "@type": "Answer", "text": "弁護士事務所で約10年事務員として働いてきた者です。何百件もの離婚・浮気・慰謝料に関する案件を間近で見てきました。私自身は弁護士ではないため、法的な見解は述べず、事務員として見聞きしてきた経験を中心にお伝えしています。" }
+          },
+          {
+            "@type": "Question",
+            "name": "探偵以外の選択肢（GPSなど）はないのですか？",
+            "acceptedAnswer": { "@type": "Answer", "text": "あります。状況によっては、自分でGPSを使う、まず気持ちを整理する、弁護士に相談する、といった選択肢が適切なケースもあります。状況別に選べるガイドを用意しています。" }
+          },
+          {
+            "@type": "Question",
+            "name": "自分でGPSを使うのは違法ではないですか？",
+            "acceptedAnswer": { "@type": "Answer", "text": "自分名義または夫婦共有名義の車であれば、設置が違法になりにくいとされています。一方で、相手だけの名義の車・社用車・他人の所有物への設置は、不法行為や法律違反になるリスクがあります。" }
+          },
+          {
+            "@type": "Question",
+            "name": "弁護士に相談するのと、探偵に依頼するのは、どちらが先ですか？",
+            "acceptedAnswer": { "@type": "Answer", "text": "慰謝料や離婚を視野に入れている場合、「証拠を集めてから弁護士に相談」が一般的な順番です。弁護士は法的手続きを進める専門家であり、証拠収集の調査は行いません。" }
+          },
+          {
+            "@type": "Question",
+            "name": "家族や職場にバレませんか？",
+            "acceptedAnswer": { "@type": "Answer", "text": "探偵業法により、探偵事務所には守秘義務があります。匿名相談も可能で、連絡方法（電話・LINE・メール）も指定できます。信頼できる業者であれば情報が漏れることはありません。" }
+          }
+        ]
+      }
+    ]
+  })}</script>
 </head>
 <body>
 
@@ -470,7 +520,7 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
         <a href="https://t.afi-b.com/visit.php?a=19268q-J314580Q&p=U980234L" class="self-check-cta" rel="nofollow noopener" data-track="selfcheck_ichiroku">
           イチロクを見てみる →
         </a>
-        <p class="self-check-note">※位置情報の取得は相手の同意が必要な場合があります。利用前に公式サイトで確認してください。</p>
+        <p class="self-check-note">※位置情報の取得は相手の同意が必要な場合があります。<a href="/detective/gps/" style="color:var(--navy);">GPSの法的条件・注意点はこちら</a>でまとめています。</p>
         <div class="self-check-detective-nudge">
           <p>GPSは動きの確認はできますが、<strong>裁判で使える証拠にはなりません。</strong><br/>確実な証拠が必要なら、最初から探偵に依頼する方が結果的にコストを抑えられます。</p>
           <a href="#ranking" class="self-check-detective-btn" data-scroll-to="#ranking" data-track="selfcheck_to_ranking">
@@ -513,7 +563,7 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
     </div>
 
     <div class="urgency-footer">
-      だから、<strong>「正しい業者を選ぶこと」が最初に解決すべき問題</strong>です。
+      だから、<strong>「自分の状況に合った最初の一手を選ぶこと」が、何より大事</strong>です。探偵でなくても、GPS・弁護士相談・電話占いが正解のケースもあります。<a href="/detective/flow/" style="color:var(--gold-lt);text-decoration:underline;">→ 状況別に選ぶガイド</a>
     </div>
   </div>
 </section>
@@ -593,18 +643,22 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
       <div class="future-path fade-up">
         <div class="future-path-icon future-icon-divorce">離婚</div>
         <h3>離婚・慰謝料を請求したい</h3>
-        <p>浮気の慰謝料相場は50〜300万円。裁判で認められるには証拠が必須です。探偵が作成した調査報告書は、法的証拠として認められます。</p>
+        <p>浮気の慰謝料相場は50〜300万円。裁判で認められるには証拠が必須です。探偵の調査報告書は法的証拠として認められます。証拠を取った後は<a href="/detective/lawyer/">弁護士相談</a>に進むのが正しい順番です。</p>
       </div>
       <div class="future-path fade-up">
         <div class="future-path-icon future-icon-truth">確認</div>
         <h3>まず真実だけ知りたい</h3>
-        <p>調査の結果「シロ」とわかるケースも多い。確信が持てれば、今のモヤモヤから解放されます。「確認できた」こと自体が、前に進む力になります。</p>
+        <p>調査の結果「シロ」とわかるケースも多い。確信が持てれば、今のモヤモヤから解放されます。費用を抑えたいなら<a href="/detective/gps/">GPS</a>で行動を確認するという手もあります。</p>
       </div>
     </div>
     <div class="future-cta-note">
-      <p>どの目的でも、<strong>最初の一歩はサイトを見てみること</strong>です。</p>
+      <p>どの目的でも、<strong>まず「今の状況に合う手段」を選ぶこと</strong>が大事です。</p>
+      <a href="/detective/flow/" class="section-cta-inline" data-track="future_flow" style="background:var(--navy);">
+        状況別に手段を選ぶ →
+      </a>
+      <span style="display:inline-block;margin:0 .5rem;color:var(--muted);font-size:.85rem">または</span>
       <a href="https://h.accesstrade.net/sp/cc?rk=0100q30i00orzx" class="section-cta-inline red" data-affiliate="una" data-track="future_una" rel="nofollow sponsored noopener">
-        ちょっと見てみる →
+        探偵社を見てみる →
       </a>
       <p class="cta-micro" style="color:var(--muted);margin-top:.6rem">無料・匿名OK・営業電話なし</p>
     </div>
@@ -679,6 +733,7 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
         <a href="https://afi2.vernis.co.jp/link.php?i=pibhxl1rb51c&m=mid9ruw7m6yy" class="vernis-cta" rel="nofollow noopener" data-track="vernis_relief">
           まず話だけ聞いてみる →
         </a>
+        <p style="font-size:.78rem;color:var(--muted);margin-top:.75rem;text-align:center;"><a href="/detective/uranai/" style="color:var(--navy);">電話占いを使うべき状況・注意点について →</a></p>
       </div>
     </div>
   </div>
@@ -790,8 +845,8 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
   <div class="dt-container">
     <div class="section-head">
       <span class="kicker">COLUMN</span>
-      <h2 class="section-title">中の人コラム</h2>
-      <p class="section-sub">法律事務所の元事務員が、浮気・不倫で悩む方へ正直に書いています</p>
+      <h2 class="section-title">よく読まれている記事</h2>
+      <p class="section-sub">体験談・選択肢の比較・気持ちのケアまで。状況に合わせて選んでください</p>
     </div>
     <div class="col-preview-grid">
       {recentColumns.map(col => (

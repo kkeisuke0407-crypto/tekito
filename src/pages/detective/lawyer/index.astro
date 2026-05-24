@@ -18,7 +18,8 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
   <meta property="og:url" content={CANONICAL} />
   <meta property="og:locale" content="ja_JP" />
   <meta property="og:site_name" content="弁護士の中の人" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image"     content="https://lawyer-nakanohito.com/detective/images/hero.png" />
+  <meta name="twitter:card"     content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -217,6 +218,27 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
     <p class="dt-footer-copy">© 2026 弁護士の中の人</p>
   </div>
 </footer>
+
+<div class="sticky-cta-bar" id="sticky-cta">
+  <span class="sticky-label">まず証拠を集めてから弁護士へ</span>
+  <a href="/detective/#ranking" class="sticky-btn" style="background:linear-gradient(135deg,#16a34a,#15803d);" data-track="sticky_lawyer_lp">探偵社を比較する →</a>
+  <button class="sticky-close" id="sticky-close" aria-label="閉じる">✕</button>
+</div>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    var sticky = document.getElementById('sticky-cta');
+    if (!sticky) return;
+    var dismissed = false;
+    document.getElementById('sticky-close').addEventListener('click', function() {
+      dismissed = true; sticky.classList.remove('visible');
+    });
+    window.addEventListener('scroll', function() {
+      if (dismissed) return;
+      sticky.classList.toggle('visible', window.scrollY > window.innerHeight * 0.6);
+    }, { passive: true });
+  });
+</script>
 
 </body>
 </html>

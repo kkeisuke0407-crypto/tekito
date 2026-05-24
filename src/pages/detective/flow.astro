@@ -17,7 +17,9 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
   <meta property="og:description" content={PAGE_DESC} />
   <meta property="og:locale"      content="ja_JP" />
   <meta property="og:site_name"   content="弁護士の中の人" />
-  <meta name="twitter:card"       content="summary" />
+  <meta property="og:image"       content="https://lawyer-nakanohito.com/detective/images/hero.png" />
+  <meta property="og:url"         content={CANONICAL} />
+  <meta name="twitter:card"       content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -162,7 +164,7 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
       </div>
       <div class="dt-logo-wrap">
         <span>弁護士の中の人</span>
-        <span class="dt-logo-sub">公式サイト</span>
+        <span class="dt-logo-sub">中の人ナビ</span>
       </div>
     </a>
     <a href={INSTAGRAM_URL} class="dt-header-insta" target="_blank" rel="noopener">
@@ -174,11 +176,11 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
 
 <nav class="col-header-nav">
   <div class="col-header-nav-inner">
-    <a href="/detective/">探偵を選ぶ</a>
-    <span class="col-nav-sep">›</span>
-    <a href="/detective/column/">コラム</a>
-    <span class="col-nav-sep">›</span>
     <a href="/detective/flow/" style="color:#fff;font-weight:700;">どれから始める？</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/column/">コラム</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/about/">中の人について</a>
   </div>
 </nav>
 

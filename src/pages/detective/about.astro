@@ -18,7 +18,8 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
   <meta property="og:url"         content={CANONICAL} />
   <meta property="og:locale"      content="ja_JP" />
   <meta property="og:site_name"   content="弁護士の中の人" />
-  <meta name="twitter:card"       content="summary" />
+  <meta property="og:image"       content="https://lawyer-nakanohito.com/detective/images/hero.png" />
+  <meta name="twitter:card"       content="summary_large_image" />
 
   <script is:inline type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
@@ -291,16 +292,25 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
 
   <div class="about-card">
     <h2>サイトの構成</h2>
-    <p>大きく分けて3つのコンテンツがあります。</p>
+    <p>大きく分けて以下のコンテンツがあります。</p>
     <ul style="list-style:none;padding:0;">
       <li style="padding:.65rem 0;border-bottom:1px dashed var(--border);font-size:.92rem;">
-        <strong style="color:var(--navy);">📖 <a href="/detective/column/" style="color:var(--navy);">コラム</a></strong> — 事務所での経験談、選択肢の比較、気持ちの整理についての記事
+        <strong style="color:var(--navy);">📖 <a href="/detective/column/" style="color:var(--navy);">コラム</a></strong> — 事務所での経験談、選択肢の比較、気持ちの整理についての記事（全13本）
       </li>
       <li style="padding:.65rem 0;border-bottom:1px dashed var(--border);font-size:.92rem;">
         <strong style="color:var(--navy);">🧭 <a href="/detective/flow/" style="color:var(--navy);">どれから始める？</a></strong> — 状況別に「最初の一手」を整理したガイド
       </li>
-      <li style="padding:.65rem 0;font-size:.92rem;">
+      <li style="padding:.65rem 0;border-bottom:1px dashed var(--border);font-size:.92rem;">
         <strong style="color:var(--navy);">🔍 <a href="/detective/#ranking" style="color:var(--navy);">探偵社比較</a></strong> — 信頼できる探偵社の特徴と比較情報
+      </li>
+      <li style="padding:.65rem 0;border-bottom:1px dashed var(--border);font-size:.92rem;">
+        <strong style="color:var(--navy);">📍 <a href="/detective/gps/" style="color:var(--navy);">GPS活用ガイド</a></strong> — 費用を抑えて自分で確認したい方向けの法的注意点と使い方
+      </li>
+      <li style="padding:.65rem 0;border-bottom:1px dashed var(--border);font-size:.92rem;">
+        <strong style="color:var(--navy);">⚖️ <a href="/detective/lawyer/" style="color:var(--navy);">弁護士相談ガイド</a></strong> — 相談のタイミング・費用感・準備のポイント
+      </li>
+      <li style="padding:.65rem 0;font-size:.92rem;">
+        <strong style="color:var(--navy);">🌙 <a href="/detective/uranai/" style="color:var(--navy);">電話占い相談ガイド</a></strong> — 気持ちを整理したい・誰かに話を聞いてほしい方向け
       </li>
     </ul>
   </div>
