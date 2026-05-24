@@ -3160,7 +3160,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* Tag filter on column list */
 .col-tab-wrap.col-filter-bar {
   position: sticky;
-  top: 0;
+  top: 52px;
   z-index: 50;
   background: rgba(245,246,248,.95);
   backdrop-filter: blur(6px);
@@ -3170,5 +3170,5 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   padding-right: 1.25rem;
   border-bottom: 1px solid var(--border);
 }
-.col-card[data-hidden="true"] { display: none; }
+.col-grid[data-hidden="true"] { display: none; }
 .col-section-head[data-hidden="true"] { display: none; }
