@@ -3368,7 +3368,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: var(--warm-white);
 }
 .char-speech-avatar img {
-  width: 100%; height: 100%; object-fit: cover; display: block;
+  width: 100%; height: 100%; object-fit: cover; object-position: 60% 25%; display: block;
 }
 .char-speech-bubble {
   position: relative;
@@ -4350,5 +4350,55 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .mag-num { font-size: 1.75rem; }
   .mag-section-head h2 { font-size: 1.15rem; }
   .hero-v2-visual-frame { max-width: 280px; }
+}
+
+/* ── options-hub-icon: 画像対応 ─────────────────────────── */
+.options-hub-icon--img {
+  padding: 0;
+  overflow: hidden;
+  font-size: 0;
+}
+.options-hub-icon--img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── lp-hero: ビジュアル付き2カラム ─────────────────────── */
+.lp-hero--with-visual {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 2rem;
+  align-items: center;
+}
+.lp-hero--with-visual .lp-hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.lp-hero-visual {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -10px rgba(0,0,0,.35);
+  aspect-ratio: 4 / 3;
+  background: rgba(255,255,255,.04);
+}
+.lp-hero-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 900px) {
+  .lp-hero--with-visual {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .lp-hero-visual {
+    max-width: 360px;
+    margin: 0 auto;
+    aspect-ratio: 4 / 3;
+  }
 }
 
