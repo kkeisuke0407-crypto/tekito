@@ -1,0 +1,264 @@
+---
+const PAGE_TITLE = "用語集｜浮気調査・離婚・法律用語をやさしく解説｜中の人ナビ";
+const PAGE_DESC  = "浮気調査・離婚・慰謝料・弁護士相談で出てくる用語を50音順にまとめた用語集。法律事務所の元事務員が、わかりやすい言葉で解説します。";
+const CANONICAL  = "https://lawyer-nakanohito.com/detective/glossary/";
+const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
+const UPDATED = "2026-05-25";
+
+const glossary = [
+  { row: 'あ', term: '慰謝料', reading: 'いしゃりょう',
+    def: '精神的な苦痛を受けたときに、その損害の賠償として請求できるお金。不貞行為による慰謝料は、不貞をした配偶者と相手方の両方に請求できます。相場は50〜300万円程度。' },
+  { row: 'あ', term: 'うな探偵社', reading: 'うなたんていしゃ',
+    def: '当サイトでも紹介している探偵社の一つ。料金体系の明確さと報告書の質に定評があり、初回相談無料。詳細は<a href="/detective/#ranking">探偵社ランキング</a>を参照。' },
+  { row: 'あ', term: 'AccessTrade', reading: 'アクセストレード',
+    def: 'アフィリエイト・サービス・プロバイダ（ASP）の一つ。当サイトでも、探偵社・GPS等の広告で利用しています。' },
+  { row: 'か', term: '家庭裁判所', reading: 'かていさいばんしょ',
+    def: '夫婦・親子・相続などの家族関係のトラブルを扱う裁判所。離婚調停はここで行われます。各都道府県に設置。' },
+  { row: 'か', term: '間接事実', reading: 'かんせつじじつ',
+    def: '不貞行為そのものを直接示すのではなく、不貞があったと推認させる事実。例：複数回のホテル出入り、宿泊を伴う旅行など。直接証拠が取りにくい不貞では重要な役割を果たします。' },
+  { row: 'か', term: '協議離婚', reading: 'きょうぎりこん',
+    def: '夫婦の話し合いで合意して離婚届を提出する形式。日本の離婚の約9割はこの形式。慰謝料・財産分与の取り決めは別途必要です。' },
+  { row: 'か', term: '虚偽DV', reading: 'きょぎディーブイ',
+    def: '事実と異なるDV（家庭内暴力）の主張。離婚調停・親権争いで一方が有利になるために用いられる場合があります。事実無根なら徹底的に反論を。' },
+  { row: 'か', term: '健康保険証コピー', reading: 'けんこうほけんしょうコピー',
+    def: '探偵社の契約時に身分確認のため提示を求められることが多い書類。探偵業法に基づく本人確認義務があります。' },
+  { row: 'か', term: '原一探偵事務所', reading: 'げんいちたんていじむしょ',
+    def: '当サイトでも紹介している大手探偵事務所。テレビ出演実績多数で信頼性が高い。詳細は<a href="/detective/#ranking">探偵社ランキング</a>。' },
+  { row: 'さ', term: '財産分与', reading: 'ざいさんぶんよ',
+    def: '離婚時に、結婚生活で築いた共有財産を夫婦で分け合うこと。原則1/2ずつ。退職金・住宅・預貯金などが対象。' },
+  { row: 'さ', term: '示談', reading: 'じだん',
+    def: '裁判をせずに当事者同士の話し合いで解決すること。弁護士を介した示談が多く、慰謝料も示談で解決するケースが大半。' },
+  { row: 'さ', term: '社用車', reading: 'しゃようしゃ',
+    def: '会社所有の車両。たとえ配偶者が日常的に使っていても所有権は会社にあるため、GPS設置は明確に違法。要注意。' },
+  { row: 'さ', term: '尾行', reading: 'びこう',
+    def: '対象者の後を見つからないようについて行き、行動を確認する調査手法。探偵業務の基本。最低2名体制が原則。' },
+  { row: 'さ', term: '住居侵入罪', reading: 'じゅうきょしんにゅうざい',
+    def: '正当な理由なく他人の住居・建物に侵入する罪。3年以下の拘禁刑または10万円以下の罰金。浮気調査で敷地に踏み込むのはNG。' },
+  { row: 'さ', term: '成功報酬制', reading: 'せいこうほうしゅうせい',
+    def: '探偵料金体系の一つ。着手金＋成功時の報酬で構成。成果が出ない場合の出費を抑えられるが、「成功」の定義を契約書で明確にする必要あり。' },
+  { row: 'さ', term: '総合探偵社クロル', reading: 'そうごうたんていしゃクロル',
+    def: '当サイトでも紹介している探偵社の一つ。詳細は<a href="/detective/#ranking">探偵社ランキング</a>を参照。' },
+  { row: 'た', term: '探偵業届出証明書', reading: 'たんていぎょうとどけでしょうめいしょ',
+    def: '探偵業法に基づき、都道府県公安委員会に届出をした業者に交付される証明書。届出のない業者の調査報告書は裁判で証拠採用されにくいため、契約前に番号を必ず確認。' },
+  { row: 'た', term: '探偵業法', reading: 'たんていぎょうほう',
+    def: '探偵業の業務の適正化に関する法律。2007年施行。届出義務・契約書面交付義務・守秘義務などを定めている。' },
+  { row: 'た', term: '調停', reading: 'ちょうてい',
+    def: '家庭裁判所で、調停委員を間に入れて夫婦が話し合う手続き。離婚調停はまず調停 → 不成立なら審判・裁判へ。' },
+  { row: 'た', term: '直接証拠', reading: 'ちょくせつしょうこ',
+    def: '不貞行為そのものを直接示す証拠。例：性行為を撮影した動画、相手が認めた録音など。間接事実より証拠力が強い。' },
+  { row: 'た', term: '盗聴', reading: 'とうちょう',
+    def: '自分が当事者でない会話を秘密裏に録音すること。違法。証拠としても採用されない。当事者録音とは区別される。' },
+  { row: 'な', term: '内容証明郵便', reading: 'ないようしょうめいゆうびん',
+    def: 'いつ・誰が・誰に・どんな内容の文書を出したかを郵便局が証明してくれる郵便。慰謝料請求の第一歩としてよく使われる。' },
+  { row: 'は', term: '配偶者居住権', reading: 'はいぐうしゃきょじゅうけん',
+    def: '相続時に、遺された配偶者が住まいに継続して住める権利。離婚とは別の制度。' },
+  { row: 'は', term: 'パック制', reading: 'パックせい',
+    def: '探偵の料金体系の一つ。「20時間で35万円」のように調査時間と料金がセット。本格的な調査で割安になりやすい。' },
+  { row: 'は', term: 'ベンナビ離婚', reading: 'ベンナビりこん',
+    def: '株式会社アシロが運営する、離婚問題に強い弁護士検索サービス。地域・取扱分野・無料相談の有無で絞り込める。離婚調停は通いやすさが重要なので、地域弁護士探しに最適。' },
+  { row: 'は', term: '不貞行為', reading: 'ふていこうい',
+    def: '配偶者以外の異性と肉体関係を持つこと。民法770条で離婚事由の一つに挙げられ、慰謝料請求の根拠になる。プラトニックな関係は原則含まれない。' },
+  { row: 'は', term: '不法行為', reading: 'ふほうこうい',
+    def: '故意・過失によって他人の権利を侵害する行為。民法709条が根拠条文。不貞行為もこれに該当し、慰謝料請求の法的根拠となる。' },
+  { row: 'は', term: '弁護士費用', reading: 'べんごしひよう',
+    def: '相談料・着手金・報酬金・実費などの合計。離婚・慰謝料案件では着手金10〜30万円＋報酬金（獲得額の10〜20%）が目安。詳細は<a href="/detective/cost/">費用相場</a>参照。' },
+  { row: 'は', term: '報告書', reading: 'ほうこくしょ',
+    def: '探偵調査の結果をまとめた書類。日時・場所・対象者の行動・写真・動画が含まれる。裁判に提出できる体裁になっているかが重要。' },
+  { row: 'ま', term: '民法709条', reading: 'みんぽうななひゃくきゅうじょう',
+    def: '不法行為による損害賠償の規定。「故意又は過失によって他人の権利又は法律上保護される利益を侵害した者は、これによって生じた損害を賠償する責任を負う」。慰謝料請求の根拠。' },
+  { row: 'ま', term: '民法770条', reading: 'みんぽうななひゃくななじゅうじょう',
+    def: '裁判離婚の事由を定める規定。①不貞行為、②悪意の遺棄、③3年以上の生死不明、④回復見込みのない強度の精神病、⑤婚姻を継続し難い重大な事由、の5つ。' },
+  { row: 'や', term: '有責配偶者', reading: 'ゆうせきはいぐうしゃ',
+    def: '婚姻関係を破綻させる原因を作った側の配偶者。不貞行為をした側など。原則として、有責配偶者からの離婚請求は認められにくい。' },
+  { row: 'ら', term: 'レントラックス', reading: 'レントラックス',
+    def: 'クローズド型のアフィリエイト・サービス・プロバイダ（ASP）。ベンナビ離婚をはじめ法律系・士業系の案件を多く扱う。' },
+  { row: 'わ', term: '和解', reading: 'わかい',
+    def: '裁判の途中で、当事者が互いに譲歩して紛争を解決すること。慰謝料の和解金額で決着するケースは多い。' }
+];
+
+const rows = ['あ','か','さ','た','な','は','ま','や','ら','わ'];
+const groupedByRow = rows.map(row => ({
+  row, items: glossary.filter(g => g.row === row)
+})).filter(g => g.items.length > 0);
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{PAGE_TITLE}</title>
+  <meta name="description" content={PAGE_DESC} />
+  <link rel="canonical" href={CANONICAL} />
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content={PAGE_TITLE} />
+  <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:url"         content={CANONICAL} />
+  <meta property="og:locale"      content="ja_JP" />
+  <meta property="og:site_name"   content="弁護士の中の人" />
+  <meta property="og:image"       content="https://lawyer-nakanohito.com/detective/images/hero.png" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "DefinedTermSet",
+    "name": "中の人ナビ 用語集",
+    "description": PAGE_DESC,
+    "url": CANONICAL,
+    "hasDefinedTerm": glossary.map(g => ({
+      "@type": "DefinedTerm",
+      "name": g.term,
+      "description": g.def.replace(/<[^>]+>/g, ''),
+      "alternateName": g.reading
+    }))
+  })} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "TOP", "item": "https://lawyer-nakanohito.com/detective/" },
+      { "@type": "ListItem", "position": 2, "name": "用語集", "item": CANONICAL }
+    ]
+  })} />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260525r" />
+
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date()); gtag('config', 'G-2YLF06DC0E');
+  </script>
+  <script is:inline type="text/javascript">
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wt0koam10v");
+  </script>
+</head>
+<body class="lp-page lp-page-v2">
+
+<header class="dt-header">
+  <div class="dt-header-inner">
+    <a href="/detective/" class="dt-logo">
+      <div class="dt-logo-icon"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;" /></div>
+      <div class="dt-logo-wrap"><span>弁護士の中の人</span><span class="dt-logo-sub">中の人ナビ</span></div>
+    </a>
+    <a href={INSTAGRAM_URL} class="dt-header-insta" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+      <span>@lawyer.nakanohito</span>
+    </a>
+  </div>
+</header>
+
+<nav class="col-header-nav">
+  <div class="col-header-nav-inner">
+    <a href="/detective/flow/">診断</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cost/">費用相場</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/law/">法律の境界線</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cases/">体験談</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/glossary/" style="color:#fff;font-weight:700;">用語集</a>
+  </div>
+</nav>
+
+<div class="lp-hero">
+  <div class="lp-hero-meta">
+    <span class="updated-meta">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      最終更新 <strong>{UPDATED}</strong>・収録 <strong>{glossary.length}語</strong>
+    </span>
+  </div>
+  <h1>浮気・離婚・法律<br/>用語集</h1>
+  <p class="lp-hero-sub">調べていて出てくる専門用語を、できるだけかみ砕いて解説しました。50音順・キーワード検索どちらでもどうぞ。</p>
+</div>
+
+<div class="lp-body">
+
+  <div class="gloss-search">
+    <input type="search" id="gloss-search-input" placeholder="🔍 用語を検索（例：慰謝料、GPS、ベンナビ）" />
+  </div>
+
+  <div class="gloss-letter-jump">
+    {groupedByRow.map(g => (
+      <a href={`#row-${g.row}`}>{g.row}行</a>
+    ))}
+  </div>
+
+  {groupedByRow.map(g => (
+    <div class="gloss-group" id={`row-${g.row}`} data-row={g.row}>
+      <div class="gloss-group-head">
+        <span class="gloss-letter">{g.row}</span>
+        <h2>{g.row}行</h2>
+      </div>
+      <dl>
+        {g.items.map(item => (
+          <div class="gloss-entry" data-term={item.term} data-reading={item.reading}>
+            <dt>{item.term}<span class="gloss-reading">／{item.reading}</span></dt>
+            <dd set:html={item.def} />
+          </div>
+        ))}
+      </dl>
+    </div>
+  ))}
+
+  <div class="mag-divider"><span class="mag-divider-icon">◆ ◆ ◆</span></div>
+
+  <div class="related-compact">
+    <a href="/detective/cost/"><strong>費用相場</strong>探偵・弁護士費用の合計感</a>
+    <a href="/detective/law/"><strong>法律の境界線</strong>合法/違法の判定早見表</a>
+    <a href="/detective/cases/"><strong>実体験集</strong>事務所で見た実例</a>
+    <a href="/detective/column/"><strong>コラム</strong>テーマ別に深く読む</a>
+  </div>
+
+</div>
+
+<footer class="dt-footer">
+  <div class="dt-footer-inner">
+    <div class="dt-footer-logo">
+      <div class="dt-footer-logo-icon" style="padding:0;overflow:hidden;"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:8px;" /></div>
+      <span>弁護士の中の人</span>
+    </div>
+    <p class="dt-footer-text">
+      Instagram「弁護士の中の人（@lawyer.nakanohito）」の公式サイト。<br/>
+      法律事務所の元事務員が、浮気・不倫で悩む方へ正直な情報をお届けしています。<br/>
+      <span style="font-size:.75rem;color:rgba(255,255,255,.35)">当サイトは一部にアフィリエイトリンクを含みます。</span>
+    </p>
+    <div class="dt-footer-links">
+      <a href={INSTAGRAM_URL} target="_blank" rel="noopener">Instagram</a>
+      <a href="/detective/about/">中の人について</a>
+      <a href="/detective/privacy/">プライバシーポリシー</a>
+      <a href="/detective/operator/">運営者情報</a>
+    </div>
+    <p class="dt-footer-copy">© 2026 弁護士の中の人</p>
+  </div>
+</footer>
+
+<script src="/detective/app.js" is:inline defer></script>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    var input = document.getElementById('gloss-search-input');
+    if (!input) return;
+    var entries = document.querySelectorAll('.gloss-entry');
+    var groups  = document.querySelectorAll('.gloss-group');
+    input.addEventListener('input', function() {
+      var q = input.value.trim().toLowerCase();
+      groups.forEach(function(g) {
+        var visibleCount = 0;
+        g.querySelectorAll('.gloss-entry').forEach(function(e) {
+          var t = (e.getAttribute('data-term') + ' ' + e.getAttribute('data-reading') + ' ' + (e.textContent || '')).toLowerCase();
+          var hit = !q || t.indexOf(q) !== -1;
+          e.setAttribute('data-hidden', hit ? 'false' : 'true');
+          if (hit) visibleCount++;
+        });
+        g.setAttribute('data-hidden', visibleCount === 0 ? 'true' : 'false');
+      });
+      if (window.dataLayer && q) window.dataLayer.push({ event: 'glossary_search', query: q });
+    });
+  });
+</script>
+
+</body>
+</html>

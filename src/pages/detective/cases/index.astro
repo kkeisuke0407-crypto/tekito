@@ -1,0 +1,307 @@
+---
+const PAGE_TITLE = "実体験まとめ｜事務所で見た浮気調査・慰謝料の事例集｜中の人ナビ";
+const PAGE_DESC  = "法律事務所の元事務員が、実際に見てきた浮気・離婚事案のうち、よくあるパターンを匿名化して紹介。証拠が取れた人・取れなかった人・後悔した人、それぞれの事例から学べることをまとめました。";
+const CANONICAL  = "https://lawyer-nakanohito.com/detective/cases/";
+const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
+const UPDATED = "2026-05-25";
+
+const cases = [
+  {
+    id: 1, tag: "30代女性／妻側", outcome: "good",
+    title: "GPSで下見 → 探偵パック → 慰謝料180万円で和解",
+    age: "30代後半", duration: "3か月",
+    body: [
+      "結婚10年・子ども2人。半年ほど前から夫の帰宅が遅くなり、休日の単独外出が増加。スマホは肌身離さず持ち歩くようになり、明らかに『何かある』と感じたが、確証はなし。",
+      "まず夫名義（自分も共有名義）の車にGPSを設置し、2週間記録。特定の曜日に同じホテル街エリアに長時間滞在していることが判明。",
+      "GPSの記録を元に、その曜日だけを狙って探偵にパック20時間の調査を依頼。決定的な写真が3週連続で撮れて、相手女性も特定。"
+    ],
+    result: "弁護士に相談 → 慰謝料180万円で示談成立。GPSによる下見で調査時間を絞れたため、探偵費用は約38万円で済んだ。"
+  },
+  {
+    id: 2, tag: "40代男性／夫側", outcome: "good",
+    title: "成功報酬制で着手金を抑え、慰謝料120万円獲得",
+    age: "40代前半", duration: "2か月",
+    body: [
+      "結婚8年・子どもなし。妻が在宅勤務になってから外出が増え、『友達とランチ』と言って深夜帰宅も。",
+      "あたりはあったが確信はなかったので、成功報酬制の探偵社に依頼。着手金15万円＋成功時の報酬という条件で契約。",
+      "1か月半で同じ男性と複数回ホテルに入る決定的瞬間を撮影。報告書の体裁も裁判提出用で完璧だった。"
+    ],
+    result: "弁護士経由で慰謝料120万円で和解。相手男性からも別途60万円回収。トータル費用は探偵約60万円＋弁護士約25万円。"
+  },
+  {
+    id: 3, tag: "30代女性／妻側", outcome: "bad",
+    title: "スマホのスクショだけで突撃 → 立場が悪くなり泣き寝入り",
+    age: "30代前半", outcome_label: "失敗",
+    body: [
+      "夫がトイレに置き忘れたスマホを開いて、相手女性とのLINEを発見。スクショを大量に保存し、夫を問い詰めた。",
+      "夫は逆ギレし、『勝手にスマホを見たのはプライバシー侵害だ』と主張。さらに『俺の方こそ精神的苦痛で慰謝料請求する』と言い出した。",
+      "弁護士に相談したものの、スクショ自体は証拠として弱く、入手経路を問題視されると不利になると指摘された。"
+    ],
+    result: "結局慰謝料請求はできず、夫婦関係は悪化したまま離婚にもならず膠着状態に。『順番を間違えた』典型例。"
+  },
+  {
+    id: 4, tag: "40代女性／妻側", outcome: "good",
+    title: "占い→気持ち整理→探偵→弁護士という順番がハマったケース",
+    age: "40代後半",
+    body: [
+      "夫の浮気を疑い始めて半年、誰にも言えず一人で抱え込んでいた。動くべきか・このままにすべきか決められなかった。",
+      "電話占いに2〜3回相談して気持ちを整理。『証拠を取って、その上で離婚するかどうか考える』と方針が固まった。",
+      "探偵にパック調査を依頼 → 証拠取得 → 地域の離婚に強い弁護士へ。順序立てて動けたことで、迷いなく進められた。"
+    ],
+    result: "慰謝料200万円＋親権獲得で離婚成立。『感情の整理 → 行動』の順番が結果的に最短だった。"
+  },
+  {
+    id: 5, tag: "30代女性／妻側", outcome: "warn",
+    title: "安すぎ探偵社に依頼 → 追加請求で総額60万円超え",
+    age: "30代前半", outcome_label: "注意",
+    body: [
+      "ネットで『1時間5,000円』の安い探偵社を見つけて依頼。最初の見積もりは20時間で10万円と提示された。",
+      "実際に始まると『撮影機材費』『車両費』『報告書作成費』が次々と追加請求。最終的には60万円超に。",
+      "報告書の質も低く、裁判で使える体裁になっていなかったため、結局別の探偵社に追加依頼することに。"
+    ],
+    result: "費用は最終的に大手パック制の倍以上に。最初から相場感を持って依頼していれば防げた失敗。"
+  },
+  {
+    id: 6, tag: "50代女性／妻側", outcome: "good",
+    title: "退職金が動く前に証拠を押さえて、財産分与で有利に",
+    age: "50代後半",
+    body: [
+      "夫が定年退職を控え、退職金が振り込まれる前後で『離婚を切り出される』感触があった。長年の不貞も薄々感じていた。",
+      "退職金が動く前に証拠を確保するため、探偵にパック40時間で本格調査を依頼。複数回の不貞行為を撮影。",
+      "退職金支給後、夫から離婚を切り出された段階で、すぐに弁護士相談 → 財産分与と慰謝料の交渉に。"
+    ],
+    result: "退職金の半額＋慰謝料250万円を獲得。タイミングを逃さなかったことが大きかった。"
+  },
+  {
+    id: 7, tag: "20代女性／妻側", outcome: "warn",
+    title: "勢いで詰問 → 相手が証拠隠滅 → 取り直しに苦戦",
+    age: "20代後半", outcome_label: "注意",
+    body: [
+      "結婚2年。夫の浮気を疑い、確信が持てない段階で『浮気してるでしょ』と詰問してしまった。",
+      "夫は否定したが、その日以降スマホのパスコードを変更、車のドライブレコーダーも消すなど警戒モードに。",
+      "後から探偵に依頼したが、すでに行動が完全に変わっており、3か月かけても決定的瞬間を撮れず終了。"
+    ],
+    result: "『確信のないうちに動いてしまう』典型的な失敗例。証拠を集めてから動くべきだった。"
+  },
+  {
+    id: 8, tag: "40代女性／妻側", outcome: "good",
+    title: "近所の弁護士に通いやすかったから調停を続けられた",
+    age: "40代前半",
+    body: [
+      "夫の浮気を発端に離婚調停へ。最初は『有名な大手事務所』に依頼したが、片道2時間で通うのが負担に。",
+      "ベンナビ離婚で検索 → 自宅から30分の地域弁護士に切り替え。調停は何度も裁判所に通うため、近さが本当に重要だった。",
+      "親身に対応してもらえて、最終的に親権・慰謝料・養育費とも希望通りの条件で離婚成立。"
+    ],
+    result: "『弁護士は近場』という鉄則を実感。調停は数か月〜1年単位で続くので、自宅近くを選ぶのが現実的。"
+  }
+];
+
+const outcomeColor = (o) => o === 'good' ? '' : (o === 'warn' ? 'warn' : 'bad');
+const outcomeLabel = (o, l) => l || (o === 'good' ? '成功' : (o === 'warn' ? '注意' : '失敗'));
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{PAGE_TITLE}</title>
+  <meta name="description" content={PAGE_DESC} />
+  <link rel="canonical" href={CANONICAL} />
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content={PAGE_TITLE} />
+  <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:url"         content={CANONICAL} />
+  <meta property="og:locale"      content="ja_JP" />
+  <meta property="og:site_name"   content="弁護士の中の人" />
+  <meta property="og:image"       content="https://lawyer-nakanohito.com/detective/images/hero.png" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "事務所で見た浮気・離婚事案の実例集",
+    "description": PAGE_DESC,
+    "datePublished": UPDATED, "dateModified": UPDATED,
+    "author": { "@type": "Person", "name": "弁護士の中の人", "url": "https://lawyer-nakanohito.com/detective/about/" },
+    "publisher": { "@type": "Organization", "name": "中の人ナビ", "logo": { "@type": "ImageObject", "url": "https://lawyer-nakanohito.com/detective/images/logo-icon.png" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": CANONICAL }
+  })} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "TOP", "item": "https://lawyer-nakanohito.com/detective/" },
+      { "@type": "ListItem", "position": 2, "name": "実体験まとめ", "item": CANONICAL }
+    ]
+  })} />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260525r" />
+
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date()); gtag('config', 'G-2YLF06DC0E');
+  </script>
+  <script is:inline type="text/javascript">
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wt0koam10v");
+  </script>
+</head>
+<body class="lp-page lp-page-v2">
+
+<header class="dt-header">
+  <div class="dt-header-inner">
+    <a href="/detective/" class="dt-logo">
+      <div class="dt-logo-icon"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;" /></div>
+      <div class="dt-logo-wrap"><span>弁護士の中の人</span><span class="dt-logo-sub">中の人ナビ</span></div>
+    </a>
+    <a href={INSTAGRAM_URL} class="dt-header-insta" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+      <span>@lawyer.nakanohito</span>
+    </a>
+  </div>
+</header>
+
+<nav class="col-header-nav">
+  <div class="col-header-nav-inner">
+    <a href="/detective/flow/">診断</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cost/">費用相場</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/law/">法律の境界線</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cases/" style="color:#fff;font-weight:700;">体験談</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/column/">コラム</a>
+  </div>
+</nav>
+
+<div class="lp-hero">
+  <div class="lp-hero-meta">
+    <span class="updated-meta">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      最終更新 <strong>{UPDATED}</strong>
+    </span>
+  </div>
+  <h1>事務所で見た<br/>浮気・離婚事案の実例集</h1>
+  <p class="lp-hero-sub">何百件もの相談を見てきたなかで、よくあるパターンを匿名化して紹介。証拠が取れた人・後悔した人、その分かれ目はどこにあったのか。</p>
+</div>
+
+<div class="lp-body">
+
+  <div class="tldr-card">
+    <div class="tldr-title">読む前に</div>
+    <p class="tldr-body">紹介する事例は、事務所で見聞きしてきた<strong>複数の事案を匿名化・合成</strong>したものです。特定の個人を指すものではありません。それぞれの事例で『何が分かれ目だったか』に注目してください。</p>
+    <ul class="tldr-points">
+      <li>うまくいった人の共通点：<strong>順番（情報整理→証拠→法的手続き）を守った</strong></li>
+      <li>失敗した人の共通点：<strong>確信のないうちに動いた／勢いで詰問した</strong></li>
+      <li>費用面で後悔した人：<strong>相場を知らずに安すぎ業者を選んだ</strong></li>
+    </ul>
+  </div>
+
+  <div class="case-grid">
+    {cases.map(c => (
+      <div class="case-card">
+        <div class="case-card-meta">
+          <span class="case-tag">{c.tag}</span>
+          {c.age && <span class="case-tag">{c.age}</span>}
+          {c.duration && <span class="case-tag">期間 {c.duration}</span>}
+        </div>
+        <h3>{c.title}</h3>
+        <div class="case-card-body">
+          {c.body.map(p => <p>{p}</p>)}
+        </div>
+        <div class={`case-card-outcome ${outcomeColor(c.outcome)}`}>
+          <strong>結果（{outcomeLabel(c.outcome, c.outcome_label)}）：</strong>
+          <span>{c.result}</span>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <div class="mag-divider"><span class="mag-divider-icon">◆ ◆ ◆</span></div>
+
+  <section class="mag-section">
+    <div class="mag-section-head">
+      <span class="mag-num">⌘</span>
+      <h2><span class="mag-sub">Takeaways</span>事例から学べる5つの教訓</h2>
+    </div>
+    <ol class="howto-list">
+      <li class="howto-list-item"><div class="howto-list-item-body"><strong>確信のないうちは詰問しない</strong><p>勢いで聞いてしまうと相手が警戒モードになり、証拠が永遠に取れなくなる可能性があります。</p></div></li>
+      <li class="howto-list-item"><div class="howto-list-item-body"><strong>証拠は『順番』が大事</strong><p>勝手にスマホを見るなど入手経路が違法なものは、立場を悪くするだけ。第三者撮影が最強。</p></div></li>
+      <li class="howto-list-item"><div class="howto-list-item-body"><strong>事前にGPSや行動メモで時間を絞る</strong><p>探偵調査の費用は時間で決まる。下調べで数十時間分の費用を節約できる。</p></div></li>
+      <li class="howto-list-item"><div class="howto-list-item-body"><strong>安すぎる業者は追加請求のリスク</strong><p>『1時間5,000円』のような相場外価格は、人員1名・追加請求・低品質報告書のサイン。</p></div></li>
+      <li class="howto-list-item"><div class="howto-list-item-body"><strong>弁護士は『近場』を選ぶ</strong><p>調停は何度も裁判所に通うので、通いやすさが結果を左右します。</p></div></li>
+    </ol>
+  </section>
+
+  <div class="bennavi-hero">
+    <span class="bennavi-hero-tag">推奨</span>
+    <h3>離婚調停を考えるなら<br/><em>近くの離婚に強い弁護士</em>を</h3>
+    <p class="bennavi-lead">体験談からも分かる通り、調停は長期戦。自宅近くで親身に対応してくれる事務所を選ぶことが、結果を左右します。</p>
+    <div class="bennavi-features">
+      <div class="bennavi-feature"><strong>地域検索</strong>通いやすい場所で</div>
+      <div class="bennavi-feature"><strong>離婚特化</strong>不貞・親権・財産分与</div>
+      <div class="bennavi-feature"><strong>無料相談</strong>初回無料の事務所多数</div>
+    </div>
+    <a href="#" data-affiliate="bennavi" rel="nofollow sponsored noopener" data-track="cases_bennavi" class="bennavi-cta">ベンナビ離婚で探す →</a>
+    <p class="bennavi-note">公式サイトで最新情報をご確認ください</p>
+  </div>
+
+  <div class="related-compact">
+    <a href="/detective/cost/"><strong>費用相場</strong>探偵・弁護士の合計感</a>
+    <a href="/detective/flow/"><strong>5問診断</strong>自分はどう動くべき？</a>
+    <a href="/detective/#ranking"><strong>探偵社ランキング</strong>信頼できる3社の比較</a>
+    <a href="/detective/column/"><strong>コラム一覧</strong>もっと深く知りたい人へ</a>
+  </div>
+
+</div>
+
+<footer class="dt-footer">
+  <div class="dt-footer-inner">
+    <div class="dt-footer-logo">
+      <div class="dt-footer-logo-icon" style="padding:0;overflow:hidden;"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:8px;" /></div>
+      <span>弁護士の中の人</span>
+    </div>
+    <p class="dt-footer-text">
+      Instagram「弁護士の中の人（@lawyer.nakanohito）」の公式サイト。<br/>
+      法律事務所の元事務員が、浮気・不倫で悩む方へ正直な情報をお届けしています。<br/>
+      <span style="font-size:.75rem;color:rgba(255,255,255,.35)">当サイトは一部にアフィリエイトリンクを含みます。</span>
+    </p>
+    <div class="dt-footer-links">
+      <a href={INSTAGRAM_URL} target="_blank" rel="noopener">Instagram</a>
+      <a href="/detective/about/">中の人について</a>
+      <a href="/detective/privacy/">プライバシーポリシー</a>
+      <a href="/detective/operator/">運営者情報</a>
+    </div>
+    <p class="dt-footer-copy">© 2026 弁護士の中の人</p>
+  </div>
+</footer>
+
+<div class="sticky-cta-bar" id="sticky-cta">
+  <span class="sticky-label">近くの離婚に強い弁護士を探す</span>
+  <a href="#" data-affiliate="bennavi" rel="nofollow sponsored noopener" class="sticky-btn" style="background:linear-gradient(135deg,#1a4a7e,#0d3057);" data-track="sticky_cases_bennavi">ベンナビ離婚 →</a>
+  <button class="sticky-close" id="sticky-close" aria-label="閉じる">✕</button>
+</div>
+
+<script src="/detective/app.js" is:inline defer></script>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    var sticky = document.getElementById('sticky-cta');
+    if (!sticky) return;
+    var dismissed = false;
+    document.getElementById('sticky-close').addEventListener('click', function() {
+      dismissed = true; sticky.classList.remove('visible');
+    });
+    window.addEventListener('scroll', function() {
+      if (dismissed) return;
+      sticky.classList.toggle('visible', window.scrollY > window.innerHeight * 0.6);
+    }, { passive: true });
+  });
+</script>
+
+</body>
+</html>

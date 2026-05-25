@@ -1,8 +1,9 @@
 ---
 const PAGE_TITLE = "弁護士相談を考えている方へ｜中の人ナビ";
-const PAGE_DESC  = "離婚・慰謝料の手続きを進めるなら弁護士の力が必要です。法律事務所の元事務員が、相談のタイミング・準備・費用感を正直にお伝えします。";
+const PAGE_DESC  = "離婚・慰謝料の手続きを進めるなら弁護士の力が必要です。法律事務所の元事務員が、相談のタイミング・準備・費用感を正直に解説。地域から離婚に強い弁護士を探すならベンナビ離婚。";
 const CANONICAL  = "https://lawyer-nakanohito.com/detective/lawyer/";
 const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
+const UPDATED = "2026-05-25";
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -12,36 +13,64 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
   <title>{PAGE_TITLE}</title>
   <meta name="description" content={PAGE_DESC} />
   <link rel="canonical" href={CANONICAL} />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content={PAGE_TITLE} />
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content={PAGE_TITLE} />
   <meta property="og:description" content={PAGE_DESC} />
-  <meta property="og:url" content={CANONICAL} />
-  <meta property="og:locale" content="ja_JP" />
-  <meta property="og:site_name" content="弁護士の中の人" />
-  <meta property="og:image"     content="https://lawyer-nakanohito.com/detective/images/hero.png" />
-  <meta name="twitter:card"     content="summary_large_image" />
+  <meta property="og:url"         content={CANONICAL} />
+  <meta property="og:locale"      content="ja_JP" />
+  <meta property="og:site_name"   content="弁護士の中の人" />
+  <meta property="og:image"       content="https://lawyer-nakanohito.com/detective/images/hero.png" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "弁護士相談を考えている方へ｜タイミング・準備・費用感",
+    "description": PAGE_DESC,
+    "datePublished": UPDATED, "dateModified": UPDATED,
+    "author": { "@type": "Person", "name": "弁護士の中の人", "url": "https://lawyer-nakanohito.com/detective/about/" },
+    "publisher": { "@type": "Organization", "name": "中の人ナビ", "logo": { "@type": "ImageObject", "url": "https://lawyer-nakanohito.com/detective/images/logo-icon.png" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": CANONICAL }
+  })} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "弁護士に相談するベストなタイミングは？",
+        "acceptedAnswer": { "@type": "Answer", "text": "不貞行為の証拠を持っている段階が最もスムーズです。証拠なしで相談すると、「証拠が必要です」「探偵に依頼してから出直してください」と言われて二度手間になるケースが多いためです。" } },
+      { "@type": "Question", "name": "離婚の弁護士はどう選べばいいですか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "①離婚問題の取扱実績、②自宅から通いやすい立地、③費用体系の明確さ、④初回相談で相性を感じられるか、の4点が重要です。調停は何度も裁判所に通うため、特に立地は軽視できません。" } },
+      { "@type": "Question", "name": "弁護士費用の相場はどれくらいですか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "初回相談は無料〜5,000円、着手金10〜30万円、報酬金は獲得額の10〜20%が一般的です。慰謝料200万円獲得なら、弁護士費用は合計30〜70万円程度が目安。" } },
+      { "@type": "Question", "name": "ベンナビ離婚とはどんなサービスですか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "株式会社アシロが運営する、離婚問題に強い弁護士検索サービスです。地域・取扱分野・無料相談の有無で絞り込めるため、自宅近くの離婚に強い事務所を効率的に探せます。" } }
+    ]
+  })} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "TOP", "item": "https://lawyer-nakanohito.com/detective/" },
+      { "@type": "ListItem", "position": 2, "name": "弁護士相談ガイド", "item": CANONICAL }
+    ]
+  })} />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/detective/styles.css?v=20260523e" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260525r" />
 
   <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-2YLF06DC0E');
+    gtag('js', new Date()); gtag('config', 'G-2YLF06DC0E');
   </script>
   <script is:inline type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wt0koam10v");
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wt0koam10v");
   </script>
 </head>
-<body class="lp-page">
+<body class="lp-page lp-page-v2">
 
 <header class="dt-header">
   <div class="dt-header-inner">
@@ -58,25 +87,61 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
 
 <nav class="col-header-nav">
   <div class="col-header-nav-inner">
-    <a href="/detective/flow/">どれから始める？</a>
+    <a href="/detective/flow/">診断</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cost/">費用相場</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/law/">法律の境界線</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cases/">体験談</a>
     <span class="col-nav-sep">|</span>
     <a href="/detective/column/">コラム</a>
-    <span class="col-nav-sep">|</span>
-    <a href="/detective/about/">中の人について</a>
   </div>
 </nav>
 
-<div class="lp-hero lp-hero--lawyer">
-  <div class="lp-hero-icon">⚖️</div>
-  <h1>弁護士相談を考えている方へ</h1>
-  <p class="lp-hero-sub">離婚・慰謝料・調停を進めるなら、弁護士の力が必要です。相談のタイミングと準備について、事務員目線で正直にお伝えします。</p>
+<div class="lp-hero">
+  <div class="lp-hero-meta">
+    <span class="updated-meta">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      最終更新 <strong>{UPDATED}</strong>
+    </span>
+  </div>
+  <h1>弁護士相談を<br/>考えている方へ</h1>
+  <p class="lp-hero-sub">離婚・慰謝料・調停を進めるなら、弁護士の力が必要です。相談のタイミング・準備・費用感、そして「どこで弁護士を探すか」まで、事務員目線で正直にお伝えします。</p>
 </div>
 
 <div class="lp-body">
 
-  <div class="lp-card">
-    <h2>弁護士に相談すべきタイミング</h2>
-    <p>事務所にいた頃、相談に来られる方の中に「もっと早く動いていれば」「先に証拠を取っておけば」と後悔される方が多くいました。弁護士相談は、<strong>タイミングを間違えると意味がない</strong>ことがあるので、適切な時期を知っておくことが大切です。</p>
+  <div class="tldr-card">
+    <div class="tldr-title">この記事の結論</div>
+    <p class="tldr-body">弁護士相談は<strong>「証拠を集めてから」</strong>が鉄則。費用は着手金10〜30万円＋報酬金（獲得額の10〜20%）が目安。離婚調停は何度も裁判所に通うため、<strong>『近くて離婚に強い弁護士』</strong>を選ぶことが結果を左右します。</p>
+    <ul class="tldr-points">
+      <li>順番：①証拠（探偵） → ②法的手続き（弁護士）</li>
+      <li>選び方：離婚特化＋自宅から通える距離＋費用明確</li>
+      <li>探し方：地域マッチングサービスを使うのが効率的</li>
+    </ul>
+  </div>
+
+  <div class="toc-magazine">
+    <div class="toc-magazine-title">CONTENTS</div>
+    <ol>
+      <li><a href="#timing">弁護士に相談すべきタイミング</a></li>
+      <li><a href="#why-order">「証拠を集めてから」が鉄則な理由</a></li>
+      <li><a href="#capability">弁護士ができること・できないこと</a></li>
+      <li><a href="#how-to-choose">離婚弁護士の選び方</a></li>
+      <li><a href="#bennavi">ベンナビ離婚で探す</a></li>
+      <li><a href="#prepare">相談前に準備しておきたいこと</a></li>
+      <li><a href="#cost">弁護士費用の目安</a></li>
+      <li><a href="#faq">よくある質問</a></li>
+    </ol>
+  </div>
+
+  <section class="mag-section" id="timing">
+    <div class="mag-section-head">
+      <span class="mag-num">01</span>
+      <h2><span class="mag-sub">When</span>弁護士に相談すべきタイミング</h2>
+    </div>
+    <p>事務所にいた頃、相談に来られる方の中に「もっと早く動いていれば」「先に証拠を取っておけば」と後悔される方が多くいました。弁護士相談は<strong>タイミングを間違えると意味がない</strong>ことがあるので、適切な時期を知っておくことが大切です。</p>
     <p>一般的には、以下の状況になってからの相談が「動きやすい」と言われています。</p>
     <ul class="lp-who-list">
       <li>不貞行為の証拠を持っている（写真・動画など）</li>
@@ -84,21 +149,30 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
       <li>慰謝料請求・財産分与の手続きを進めたい</li>
       <li>相手と直接交渉するのが難しい状況にある</li>
     </ul>
-  </div>
+  </section>
 
-  <div class="lp-card">
-    <h2>「証拠を集めてから」が鉄則な理由</h2>
+  <section class="mag-section" id="why-order">
+    <div class="mag-section-head">
+      <span class="mag-num">02</span>
+      <h2><span class="mag-sub">The rule</span>「証拠を集めてから」が鉄則な理由</h2>
+    </div>
     <p>弁護士は法的手続きを代理で進める専門家です。しかし、<strong>証拠を集める「調査」は弁護士の業務範囲外</strong>です。</p>
     <p>そのため、証拠がない状態で相談に行っても「証拠が必要です」「探偵に依頼してから出直してください」となるケースが多く、相談費用だけかかって前に進めない、という方を事務所で何度も見てきました。</p>
-    <div class="lp-warn">
-      <div class="lp-warn-title">事務所での経験から</div>
-      <p>「先に弁護士相談 → 証拠がないと指摘される → 探偵依頼 → 改めて弁護士相談」という二度手間になる方が多かったです。<strong>「証拠 → 弁護士」の順番</strong>が、最もスムーズで費用効率の良い流れです。</p>
+    <div class="char-speech">
+      <div class="char-speech-avatar"><img src="/detective/images/character.png" alt="中の人" /></div>
+      <div class="char-speech-bubble">
+        <div class="char-speech-name">中の人</div>
+        「先に弁護士相談 → 証拠がないと指摘される → 探偵依頼 → 改めて弁護士相談」で二度手間になる方が本当に多かったです。<strong>「証拠 → 弁護士」の順番</strong>がスムーズで費用効率も最高です。
+      </div>
     </div>
     <p>詳しくは<a href="/detective/column/bengoshi-shouko-ato/">「弁護士への相談は『証拠を集めてから』が鉄則な理由」</a>のコラムで解説しています。</p>
-  </div>
+  </section>
 
-  <div class="lp-card">
-    <h2>弁護士ができること・できないこと</h2>
+  <section class="mag-section" id="capability">
+    <div class="mag-section-head">
+      <span class="mag-num">03</span>
+      <h2><span class="mag-sub">Scope</span>弁護士ができること・できないこと</h2>
+    </div>
     <div class="lp-pros-cons">
       <div class="lp-pros">
         <div class="lp-pros-title">できること</div>
@@ -120,80 +194,153 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
         </ul>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="lp-card">
-    <h2>相談前に準備しておきたいこと</h2>
-    <div class="lp-step">
-      <div class="lp-step-num">1</div>
-      <div class="lp-step-body">
-        <strong>証拠を整理する</strong>
-        <span>写真・動画・LINE・メールなど、不貞行為に関する証拠を時系列で整理。</span>
+  <section class="mag-section" id="how-to-choose">
+    <div class="mag-section-head">
+      <span class="mag-num">04</span>
+      <h2><span class="mag-sub">Selection</span>離婚弁護士の選び方</h2>
+    </div>
+    <p>離婚・不貞慰謝料の案件で弁護士を選ぶとき、見るべきポイントは4つあります。</p>
+    <div class="lawyer-check-list">
+      <div class="lawyer-check-item"><div><strong>① 離婚問題の取扱実績</strong><span>離婚・不貞慰謝料・親権を主要分野としているか。総合事務所より、離婚特化の事務所の方が経験値が高い傾向。</span></div></div>
+      <div class="lawyer-check-item"><div><strong>② 自宅から通いやすい立地</strong><span>調停は1か月に1回ペースで何度も家庭裁判所に通います。打ち合わせも頻繁。片道2時間の事務所だと続かない。</span></div></div>
+      <div class="lawyer-check-item"><div><strong>③ 費用体系の明確さ</strong><span>着手金・報酬金・実費・成功報酬の定義が書面で明示されているか。「成功」の意味は必ず確認。</span></div></div>
+      <div class="lawyer-check-item"><div><strong>④ 初回相談での相性</strong><span>離婚は数か月〜1年の長期戦。担当弁護士と腹を割って話せるか、初回相談の感触が大事。</span></div></div>
+    </div>
+    <div class="char-speech">
+      <div class="char-speech-avatar"><img src="/detective/images/character.png" alt="中の人" /></div>
+      <div class="char-speech-bubble">
+        <div class="char-speech-name">中の人</div>
+        事務所で見ていて、特に②の「通いやすさ」を侮ってる方が多かったです。離婚は短期決戦じゃないので、近場で腰を据えて戦える事務所を選んだ方が、結果的にうまくいきます。
       </div>
     </div>
-    <div class="lp-step">
-      <div class="lp-step-num">2</div>
-      <div class="lp-step-body">
-        <strong>希望する結末を明確にする</strong>
-        <span>離婚したい、慰謝料を取りたい、関係修復を望む、など方向性を整理。</span>
-      </div>
-    </div>
-    <div class="lp-step">
-      <div class="lp-step-num">3</div>
-      <div class="lp-step-body">
-        <strong>夫婦の財産・収入を把握</strong>
-        <span>財産分与・養育費の計算に必要。預金・不動産・年収などをメモ。</span>
-      </div>
-    </div>
-    <div class="lp-step">
-      <div class="lp-step-num">4</div>
-      <div class="lp-step-body">
-        <strong>初回相談（無料が多い）</strong>
-        <span>多くの事務所が30分〜1時間の初回無料相談を実施。複数社に相談して合う弁護士を選ぶ。</span>
-      </div>
-    </div>
-  </div>
+  </section>
 
-  <div class="lp-card">
-    <h2>弁護士費用の目安</h2>
+  <section class="mag-section" id="bennavi">
+    <div class="mag-section-head">
+      <span class="mag-num">05</span>
+      <h2><span class="mag-sub">Where to find</span>ベンナビ離婚で探す</h2>
+    </div>
+    <p>『自宅近くで、離婚問題に強い弁護士を効率的に探す』という用途で、もっとも使いやすいのが<strong>ベンナビ離婚</strong>です。株式会社アシロが運営する弁護士検索サービスで、地域・取扱分野・無料相談の有無で絞り込めます。</p>
+
+    <div class="bennavi-hero">
+      <span class="bennavi-hero-tag">推奨マッチングサービス</span>
+      <h3>近くの<em>離婚に強い弁護士</em>を<br/>地域から探せる</h3>
+      <p class="bennavi-lead">全国の離婚問題を扱う弁護士事務所を、お住まいの地域・対応分野・無料相談の有無で絞り込み検索。問い合わせ前に事務所情報を比較できます。</p>
+      <div class="bennavi-features">
+        <div class="bennavi-feature"><strong>地域検索</strong>都道府県・最寄駅</div>
+        <div class="bennavi-feature"><strong>離婚特化</strong>不貞・親権・財産分与</div>
+        <div class="bennavi-feature"><strong>無料相談</strong>初回相談無料が多数</div>
+      </div>
+      <a href="#" data-affiliate="bennavi" rel="nofollow sponsored noopener" data-track="lawyer_bennavi_main" class="bennavi-cta">ベンナビ離婚で弁護士を探す →</a>
+      <p class="bennavi-note">公式サイトで最新情報をご確認ください</p>
+    </div>
+
+    <p style="margin-top:1.25rem;">他の選択肢として、無料の<strong>法テラス</strong>（日本司法支援センター）もあります。収入要件はありますが、初回30分の無料相談が利用可能です。詳細は<a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス公式サイト</a>を確認してください。</p>
+  </section>
+
+  <section class="mag-section" id="prepare">
+    <div class="mag-section-head">
+      <span class="mag-num">06</span>
+      <h2><span class="mag-sub">Preparation</span>相談前に準備しておきたいこと</h2>
+    </div>
+    <ol class="howto-list">
+      <li class="howto-list-item">
+        <div class="howto-list-item-body">
+          <strong>証拠を整理する</strong>
+          <p>写真・動画・LINE・メールなど、不貞行為に関する証拠を時系列で整理。USBやクラウドにバックアップも。</p>
+        </div>
+      </li>
+      <li class="howto-list-item">
+        <div class="howto-list-item-body">
+          <strong>希望する結末を明確にする</strong>
+          <p>離婚したい、慰謝料を取りたい、関係修復を望む、など方向性を整理。優先順位もメモ。</p>
+        </div>
+      </li>
+      <li class="howto-list-item">
+        <div class="howto-list-item-body">
+          <strong>夫婦の財産・収入を把握</strong>
+          <p>財産分与・養育費の計算に必要。預金・不動産・年収・退職金・年金などをメモ。</p>
+        </div>
+      </li>
+      <li class="howto-list-item">
+        <div class="howto-list-item-body">
+          <strong>時系列をまとめておく</strong>
+          <p>結婚日・浮気の発覚日・主要な出来事の時系列を一枚にまとめると、相談時間が有効に使えます。</p>
+        </div>
+      </li>
+      <li class="howto-list-item">
+        <div class="howto-list-item-body">
+          <strong>初回相談（無料が多い）に行く</strong>
+          <p>多くの事務所が30分〜1時間の初回無料相談を実施。複数社相談して合う弁護士を選ぶのが鉄則。</p>
+          <span class="howto-tip">ベンナビ離婚なら、初回無料相談ありの事務所だけで絞り込み検索できます</span>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="mag-section" id="cost">
+    <div class="mag-section-head">
+      <span class="mag-num">07</span>
+      <h2><span class="mag-sub">Lawyer fees</span>弁護士費用の目安</h2>
+    </div>
     <p>具体的な金額は事務所・案件により大きく異なるため、必ず初回相談時に確認してください。一般的には以下の費用項目があります。</p>
-    <ul class="lp-who-list">
-      <li><strong>相談料</strong>：初回無料〜30分5,000円程度（事務所による）</li>
-      <li><strong>着手金</strong>：依頼時に支払う費用。10〜30万円程度</li>
-      <li><strong>報酬金</strong>：解決後に支払う。獲得金額の10〜20%程度</li>
-      <li><strong>実費</strong>：裁判費用・通信費・交通費など</li>
-    </ul>
+    <div class="cost-table-wrap">
+      <table class="cost-table">
+        <thead><tr><th>項目</th><th>目安</th><th>備考</th></tr></thead>
+        <tbody>
+          <tr><td class="cost-item">相談料</td><td class="cost-price">無料〜5,000円</td><td>初回30分〜1時間無料の事務所が多い</td></tr>
+          <tr><td class="cost-item">着手金</td><td class="cost-price">10〜30万円</td><td>依頼時に支払う費用</td></tr>
+          <tr><td class="cost-item">報酬金</td><td class="cost-price">獲得額の10〜20%</td><td>解決後に支払う成功報酬</td></tr>
+          <tr><td class="cost-item">実費</td><td class="cost-price">数万円〜</td><td>裁判費用・通信費・交通費など</td></tr>
+        </tbody>
+      </table>
+      <p class="cost-table-note">※ 詳細な合計感は<a href="/detective/cost/">費用相場ページ</a>でまとめています。</p>
+    </div>
     <div class="lp-warn">
       <div class="lp-warn-title">事前確認のポイント</div>
       <p>「成功報酬制」か「固定費用制」か、着手金の有無、追加費用の発生条件などを<strong>必ず書面で確認</strong>してください。口頭での約束はトラブルのもとです。</p>
     </div>
-  </div>
+  </section>
 
-  <div class="lp-card" style="background:rgba(22,163,74,.04);border-color:rgba(22,163,74,.25);">
-    <h2 style="border-left-color:#16a34a;">これからの予定</h2>
-    <p>このページでは現在、弁護士紹介サービスのご案内をしていませんが、近日中に信頼できる弁護士事務所・弁護士マッチングサービスのご紹介を追加予定です。</p>
-    <p>まずは、証拠を集める段階の方は<a href="/detective/#ranking">探偵社の比較</a>から、状況整理が必要な方は<a href="/detective/flow/">「どれから始める？」ガイド</a>をご覧ください。</p>
-  </div>
-
-  <div class="lp-related">
-    <h3>関連コラム</h3>
-    <div class="col-grid">
-      <a href="/detective/column/bengoshi-shouko-ato/" class="col-card">
-        <span class="col-card-badge comparison">選択肢比較</span>
-        <h3>弁護士への相談は「証拠を集めてから」が鉄則な理由</h3>
-        <p>順番を間違えると二度手間に。理想の流れを解説。</p>
-      </a>
-      <a href="/detective/column/ishatyou-toreta-torenakatta/" class="col-card">
-        <span class="col-card-badge experience">体験談</span>
-        <h3>慰謝料を「取れた人」と「取れなかった人」の決定的な差</h3>
-        <p>証拠の有無と質、タイミング、専門家の活用。</p>
-      </a>
-      <a href="/detective/column/nani-kara-hajimeru/" class="col-card">
-        <span class="col-card-badge comparison">選択肢比較</span>
-        <h3>探偵・GPS・弁護士、結局どれから始めるべき？</h3>
-        <p>状況別フローチャート付き。</p>
-      </a>
+  <section class="mag-section" id="faq">
+    <div class="mag-section-head">
+      <span class="mag-num">08</span>
+      <h2><span class="mag-sub">FAQ</span>よくある質問</h2>
     </div>
+    <div class="lp-card">
+      <h3 style="font-size:.98rem;color:var(--navy);margin-bottom:.4rem;">Q. 弁護士に相談するベストなタイミングは？</h3>
+      <p style="font-size:.9rem;line-height:1.85;">不貞行為の<strong>証拠を持っている段階</strong>が最もスムーズです。証拠なしの相談は「証拠が必要」と言われて二度手間になります。</p>
+    </div>
+    <div class="lp-card">
+      <h3 style="font-size:.98rem;color:var(--navy);margin-bottom:.4rem;">Q. 離婚の弁護士はどう選べばいいですか？</h3>
+      <p style="font-size:.9rem;line-height:1.85;">①離婚問題の取扱実績、②<strong>自宅から通いやすい立地</strong>、③費用体系の明確さ、④初回相談での相性、の4点が重要です。調停は何度も裁判所に通うため、特に立地は軽視できません。</p>
+    </div>
+    <div class="lp-card">
+      <h3 style="font-size:.98rem;color:var(--navy);margin-bottom:.4rem;">Q. 弁護士費用の相場はどれくらいですか？</h3>
+      <p style="font-size:.9rem;line-height:1.85;">初回相談は無料〜5,000円、着手金10〜30万円、報酬金は獲得額の10〜20%が一般的。慰謝料200万円獲得で<strong>合計30〜70万円</strong>程度が目安です。</p>
+    </div>
+    <div class="lp-card">
+      <h3 style="font-size:.98rem;color:var(--navy);margin-bottom:.4rem;">Q. ベンナビ離婚とはどんなサービスですか？</h3>
+      <p style="font-size:.9rem;line-height:1.85;">株式会社アシロ運営の弁護士検索サービス。<strong>地域・取扱分野・無料相談の有無で絞り込める</strong>ため、自宅近くの離婚に強い事務所を効率的に探せます。</p>
+    </div>
+  </section>
+
+  <div class="source-list">
+    <div class="source-list-title">参考情報・出典</div>
+    <ul>
+      <li><a href="https://www.houterasu.or.jp/" target="_blank" rel="noopener">法テラス（日本司法支援センター）公式サイト</a></li>
+      <li><a href="https://www.nichibenren.or.jp/" target="_blank" rel="noopener">日本弁護士連合会</a></li>
+      <li><a href="https://www.courts.go.jp/" target="_blank" rel="noopener">裁判所（家庭裁判所案内）</a></li>
+    </ul>
+  </div>
+
+  <div class="related-compact">
+    <a href="/detective/cost/"><strong>費用相場</strong>探偵・弁護士費用の合計感</a>
+    <a href="/detective/law/"><strong>法律の境界線</strong>合法/違法の判定早見表</a>
+    <a href="/detective/cases/"><strong>体験談</strong>実例から学ぶ</a>
+    <a href="/detective/column/bengoshi-shouko-ato/"><strong>関連コラム</strong>『証拠を集めてから』の理由</a>
   </div>
 
 </div>
@@ -220,11 +367,12 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
 </footer>
 
 <div class="sticky-cta-bar" id="sticky-cta">
-  <span class="sticky-label">まず証拠を集めてから弁護士へ</span>
-  <a href="/detective/#ranking" class="sticky-btn" style="background:linear-gradient(135deg,#16a34a,#15803d);" data-track="sticky_lawyer_lp">探偵社を比較する →</a>
+  <span class="sticky-label">近くの離婚に強い弁護士を探す</span>
+  <a href="#" data-affiliate="bennavi" rel="nofollow sponsored noopener" class="sticky-btn" style="background:linear-gradient(135deg,#1a4a7e,#0d3057);" data-track="sticky_lawyer_bennavi">ベンナビ離婚 →</a>
   <button class="sticky-close" id="sticky-close" aria-label="閉じる">✕</button>
 </div>
 
+<script src="/detective/app.js" is:inline defer></script>
 <script is:inline>
   document.addEventListener('DOMContentLoaded', function() {
     var sticky = document.getElementById('sticky-cta');

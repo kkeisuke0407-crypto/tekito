@@ -3172,3 +3172,1183 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .col-grid[data-hidden="true"] { display: none; }
 .col-section-head[data-hidden="true"] { display: none; }
+
+
+/* ══════════════════════════════════════════════════
+   v2 RENEWAL — AIO / magazine-style components
+   2026-05 大型改修で追加
+   ══════════════════════════════════════════════════ */
+
+:root {
+  --warm-white:    #fdfbf6;
+  --ink:           #14212e;
+  --gold-deep:     #9c7320;
+  --rule:          #1a2f4a;
+  --shadow-soft:   0 1px 3px rgba(10,20,40,.06);
+  --shadow-card:   0 6px 24px rgba(10,20,40,.07);
+  --container-wide: 1080px;
+}
+
+/* ── 共通：更新日バッジ ───────────────────────────── */
+.updated-meta {
+  display: inline-flex; align-items: center; gap: .35rem;
+  font-size: .72rem; color: var(--muted);
+  background: rgba(13,27,46,.05);
+  border: 1px solid var(--border);
+  padding: .2rem .6rem; border-radius: 999px;
+  font-weight: 500;
+}
+.updated-meta svg { width: 12px; height: 12px; }
+.updated-meta strong { color: var(--navy); font-weight: 700; }
+
+/* ── TL;DR ブロック（AIO最重要） ─────────────────── */
+.tldr-card {
+  background: var(--warm-white);
+  border: 1.5px solid var(--gold);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem 1.35rem;
+  margin: 1.5rem 0 2rem;
+  box-shadow: var(--shadow-soft);
+  position: relative;
+}
+.tldr-card::before {
+  content: "TL;DR";
+  position: absolute; top: -.6rem; left: 1rem;
+  background: var(--gold); color: #fff;
+  font-family: "Noto Serif JP", serif;
+  font-size: .72rem; font-weight: 700;
+  letter-spacing: .12em;
+  padding: .15rem .65rem; border-radius: 4px;
+}
+.tldr-card .tldr-title {
+  font-size: .82rem; font-weight: 700; color: var(--gold-deep);
+  margin-bottom: .5rem; letter-spacing: .02em;
+}
+.tldr-card .tldr-body {
+  font-size: .92rem; line-height: 1.85; color: var(--text);
+  margin: 0;
+}
+.tldr-card .tldr-points {
+  margin: .75rem 0 0; padding-left: 0; list-style: none;
+}
+.tldr-card .tldr-points li {
+  position: relative; padding: .25rem 0 .25rem 1.4rem;
+  font-size: .88rem; line-height: 1.7;
+}
+.tldr-card .tldr-points li::before {
+  content: ""; position: absolute; left: 0; top: .65rem;
+  width: 8px; height: 8px; background: var(--gold);
+  transform: rotate(45deg);
+}
+
+/* ── 雑誌風セクション番号（01, 02...） ─────────── */
+.mag-section { margin: 3rem 0 2rem; }
+.mag-section-head {
+  display: flex; align-items: flex-end; gap: 1rem;
+  padding-bottom: .75rem;
+  border-bottom: 2px solid var(--rule);
+  margin-bottom: 1.5rem;
+}
+.mag-num {
+  font-family: "Noto Serif JP", serif;
+  font-size: 2.2rem; font-weight: 700;
+  color: var(--gold);
+  line-height: 1; letter-spacing: -.02em;
+  flex-shrink: 0;
+}
+.mag-section-head h2 {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.35rem; font-weight: 700;
+  color: var(--navy); line-height: 1.4;
+  margin: 0; flex: 1;
+}
+.mag-section-head .mag-sub {
+  display: block;
+  font-family: var(--font);
+  font-size: .72rem; font-weight: 500;
+  color: var(--muted); letter-spacing: .15em;
+  text-transform: uppercase; margin-bottom: .2rem;
+}
+
+/* ── 装飾区切り（雑誌風） ───────────────────────── */
+.mag-divider {
+  display: flex; align-items: center; gap: 1rem;
+  margin: 2.5rem 0; color: var(--gold);
+}
+.mag-divider::before, .mag-divider::after {
+  content: ""; flex: 1; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.mag-divider-icon {
+  font-family: "Noto Serif JP", serif;
+  font-size: .9rem; letter-spacing: .3em;
+  color: var(--gold-deep);
+}
+
+/* ── HowTo ステップリスト（強化版） ───────────────── */
+.howto-list { counter-reset: howto; margin: 1rem 0 2rem; }
+.howto-list-item {
+  display: flex; gap: 1rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px dashed var(--border);
+  counter-increment: howto;
+}
+.howto-list-item:last-child { border-bottom: none; }
+.howto-list-item::before {
+  content: counter(howto, decimal-leading-zero);
+  flex-shrink: 0;
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--navy); color: var(--gold-lt);
+  font-family: "Noto Serif JP", serif;
+  font-size: 1rem; font-weight: 700;
+  border-radius: 50%;
+}
+.howto-list-item-body strong {
+  display: block; font-size: .98rem; font-weight: 700;
+  color: var(--navy); margin-bottom: .35rem;
+}
+.howto-list-item-body p {
+  font-size: .88rem; line-height: 1.75; color: var(--text);
+  margin: 0;
+}
+.howto-list-item-body .howto-tip {
+  display: block; margin-top: .5rem;
+  font-size: .8rem; color: var(--muted);
+  padding: .5rem .75rem;
+  background: var(--bg-muted);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 4px 4px 0;
+}
+
+/* ── 法律条文 引用ブロック ───────────────────────── */
+.law-quote {
+  background: linear-gradient(180deg, var(--warm-white) 0%, #fff 100%);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--navy);
+  border-radius: 0 8px 8px 0;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  position: relative;
+}
+.law-quote-label {
+  display: inline-block;
+  font-family: "Noto Serif JP", serif;
+  font-size: .72rem; font-weight: 700;
+  color: var(--navy); background: rgba(13,27,46,.08);
+  padding: .15rem .6rem; border-radius: 3px;
+  margin-bottom: .65rem; letter-spacing: .08em;
+}
+.law-quote-text {
+  font-family: "Noto Serif JP", serif;
+  font-size: .96rem; line-height: 1.9;
+  color: var(--ink); margin: 0 0 .5rem;
+}
+.law-quote-source {
+  font-size: .76rem; color: var(--muted);
+  text-align: right;
+}
+.law-quote-source a {
+  color: var(--muted); text-decoration: underline;
+}
+.law-quote-source a:hover { color: var(--navy); }
+
+/* ── 中の人 キャラクター吹き出し ─────────────────── */
+.char-speech {
+  display: flex; gap: .85rem;
+  margin: 1.5rem 0;
+  align-items: flex-start;
+}
+.char-speech-avatar {
+  flex-shrink: 0;
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  overflow: hidden;
+  background: var(--warm-white);
+}
+.char-speech-avatar img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.char-speech-bubble {
+  position: relative;
+  background: var(--warm-white);
+  border: 1px solid var(--border);
+  border-radius: 4px 16px 16px 16px;
+  padding: .85rem 1.1rem;
+  font-size: .9rem; line-height: 1.8;
+  color: var(--text);
+  flex: 1;
+}
+.char-speech-bubble::before {
+  content: ""; position: absolute;
+  left: -8px; top: 12px;
+  width: 0; height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid var(--border);
+}
+.char-speech-bubble::after {
+  content: ""; position: absolute;
+  left: -7px; top: 12px;
+  width: 0; height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid var(--warm-white);
+}
+.char-speech-name {
+  font-size: .72rem; font-weight: 700;
+  color: var(--gold-deep);
+  margin-bottom: .25rem;
+}
+
+/* ══ ベンナビ離婚 弁護士アフィリカード ═══════════ */
+.bennavi-hero {
+  background: linear-gradient(135deg, #0d3057 0%, #1a4a7e 100%);
+  border-radius: 14px;
+  padding: 1.75rem 1.5rem;
+  color: #fff;
+  margin: 1.5rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.bennavi-hero::before {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(201,146,42,.12) 0%, transparent 60%);
+}
+.bennavi-hero > * { position: relative; }
+.bennavi-hero-tag {
+  display: inline-block;
+  background: rgba(201,146,42,.2);
+  border: 1px solid rgba(201,146,42,.4);
+  color: var(--gold-lt);
+  font-size: .68rem; font-weight: 700;
+  padding: .2rem .65rem; border-radius: 999px;
+  letter-spacing: .1em;
+  margin-bottom: .75rem;
+}
+.bennavi-hero h3 {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.25rem; font-weight: 700;
+  margin-bottom: .5rem;
+  line-height: 1.5;
+}
+.bennavi-hero h3 em { font-style: normal; color: var(--gold-lt); }
+.bennavi-hero .bennavi-lead {
+  font-size: .88rem; line-height: 1.75;
+  color: rgba(255,255,255,.85);
+  margin-bottom: 1.25rem;
+}
+.bennavi-features {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: .5rem; margin-bottom: 1.25rem;
+}
+.bennavi-feature {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 8px;
+  padding: .6rem .4rem;
+  font-size: .72rem;
+  line-height: 1.4;
+  color: rgba(255,255,255,.95);
+  font-weight: 600;
+}
+.bennavi-feature strong {
+  display: block;
+  color: var(--gold-lt);
+  font-size: .82rem;
+  margin-bottom: .2rem;
+}
+.bennavi-cta {
+  display: inline-block;
+  background: linear-gradient(135deg, #c0392b, #e74c3c);
+  color: #fff; font-weight: 800;
+  padding: .85rem 1.75rem;
+  border-radius: 999px;
+  font-size: .95rem;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(192,57,43,.4);
+  transition: transform .15s;
+}
+.bennavi-cta:hover { transform: translateY(-1px); text-decoration: none; color: #fff; }
+.bennavi-hero .bennavi-note {
+  margin-top: .85rem;
+  font-size: .72rem; color: rgba(255,255,255,.55);
+}
+@media (max-width: 520px) {
+  .bennavi-features { grid-template-columns: repeat(3, 1fr); gap: .35rem; }
+  .bennavi-feature { font-size: .66rem; padding: .5rem .25rem; }
+  .bennavi-feature strong { font-size: .72rem; }
+}
+
+/* ── 弁護士事務所選びチェック ───────────────────── */
+.lawyer-check-list {
+  display: grid; gap: .75rem;
+  margin: 1.25rem 0;
+}
+.lawyer-check-item {
+  display: flex; gap: .75rem; align-items: flex-start;
+  padding: .85rem 1rem;
+  background: var(--warm-white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.lawyer-check-item::before {
+  content: "✓"; flex-shrink: 0;
+  width: 22px; height: 22px;
+  display: flex; align-items: center; justify-content: center;
+  background: #16a34a; color: #fff;
+  border-radius: 50%; font-weight: 700; font-size: .8rem;
+  margin-top: .1rem;
+}
+.lawyer-check-item strong { display: block; color: var(--navy); font-size: .92rem; margin-bottom: .15rem; }
+.lawyer-check-item span { font-size: .82rem; line-height: 1.7; color: var(--text); }
+
+/* ══ 費用早見表 ═══════════════════════════════════ */
+.cost-table-wrap { margin: 1.5rem 0 2rem; overflow-x: auto; }
+.cost-table {
+  width: 100%; border-collapse: collapse;
+  font-size: .88rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px; overflow: hidden;
+}
+.cost-table th, .cost-table td {
+  padding: .75rem .9rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  line-height: 1.6;
+}
+.cost-table thead th {
+  background: var(--navy); color: #fff;
+  font-weight: 700; font-size: .82rem;
+  letter-spacing: .03em;
+}
+.cost-table tbody tr:last-child td { border-bottom: none; }
+.cost-table tbody tr:nth-child(even) { background: var(--warm-white); }
+.cost-table .cost-item { font-weight: 700; color: var(--navy); white-space: nowrap; }
+.cost-table .cost-price { font-family: "Noto Serif JP", serif; font-weight: 700; color: var(--gold-deep); white-space: nowrap; }
+.cost-table-note {
+  font-size: .76rem; color: var(--muted);
+  margin-top: .5rem; padding-left: .5rem;
+}
+
+/* ══ 体験談カード（cases） ═══════════════════════ */
+.case-grid { display: grid; gap: 1rem; margin: 1.5rem 0 2rem; }
+.case-card {
+  background: #fff; border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+  border-radius: 4px 8px 8px 4px;
+  padding: 1.25rem 1.4rem;
+  box-shadow: var(--shadow-soft);
+}
+.case-card-meta {
+  display: flex; gap: .5rem; flex-wrap: wrap;
+  font-size: .72rem; color: var(--muted);
+  margin-bottom: .65rem;
+}
+.case-card-meta .case-tag {
+  background: var(--bg-muted);
+  padding: .15rem .55rem; border-radius: 4px;
+  color: var(--navy); font-weight: 600;
+}
+.case-card h3 {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.05rem; font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 .65rem;
+  line-height: 1.55;
+}
+.case-card-body {
+  font-size: .9rem; line-height: 1.85; color: var(--text);
+  margin: 0;
+}
+.case-card-body p + p { margin-top: .65rem; }
+.case-card-outcome {
+  display: flex; gap: .5rem; align-items: center;
+  margin-top: .85rem; padding-top: .85rem;
+  border-top: 1px dashed var(--border);
+  font-size: .82rem; color: var(--text);
+}
+.case-card-outcome strong { color: var(--good); font-weight: 700; }
+.case-card-outcome.warn strong { color: var(--warn); }
+.case-card-outcome.bad strong { color: var(--red); }
+.case-card-link {
+  display: inline-block; margin-top: .85rem;
+  font-size: .82rem; font-weight: 700;
+  color: var(--navy);
+  text-decoration: underline;
+}
+
+/* ══ 用語集 ═════════════════════════════════════ */
+.gloss-search {
+  position: sticky; top: 52px; z-index: 30;
+  background: rgba(245,246,248,.95);
+  backdrop-filter: blur(6px);
+  padding: .75rem 0 1rem;
+  margin: 0 -1.25rem 1rem;
+  padding-left: 1.25rem; padding-right: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+.gloss-search input {
+  width: 100%;
+  padding: .7rem 1rem;
+  font-size: .9rem; font-family: inherit;
+  border: 1.5px solid var(--border);
+  border-radius: 999px;
+  background: #fff;
+  transition: border-color .15s;
+}
+.gloss-search input:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+.gloss-letter-jump {
+  display: flex; flex-wrap: wrap; gap: .4rem;
+  margin: 1rem 0 2rem;
+}
+.gloss-letter-jump a {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 36px; height: 36px;
+  font-size: .85rem; font-weight: 700;
+  background: #fff; color: var(--navy);
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all .15s;
+}
+.gloss-letter-jump a:hover {
+  background: var(--navy); color: #fff;
+  border-color: var(--navy);
+  text-decoration: none;
+}
+.gloss-group { margin-bottom: 2.5rem; }
+.gloss-group-head {
+  display: flex; align-items: baseline; gap: .75rem;
+  padding-bottom: .5rem;
+  border-bottom: 2px solid var(--gold);
+  margin-bottom: 1rem;
+}
+.gloss-group-head .gloss-letter {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.6rem; font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+.gloss-group-head h2 {
+  font-size: .82rem; color: var(--muted);
+  letter-spacing: .15em;
+  margin: 0;
+}
+.gloss-entry {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.gloss-entry:last-child { border-bottom: none; }
+.gloss-entry dt {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1rem; font-weight: 700;
+  color: var(--navy);
+  margin-bottom: .35rem;
+}
+.gloss-entry .gloss-reading {
+  font-size: .72rem; color: var(--muted);
+  font-weight: 500; margin-left: .5rem;
+  font-family: var(--font);
+}
+.gloss-entry dd {
+  font-size: .9rem; line-height: 1.8;
+  color: var(--text);
+  margin: 0;
+}
+.gloss-entry dd a { color: var(--navy); text-decoration: underline; }
+.gloss-entry[data-hidden="true"] { display: none; }
+.gloss-group[data-hidden="true"] { display: none; }
+
+/* ══ 診断フロー（5問） ══════════════════════════ */
+.diag-wrap {
+  max-width: 680px; margin: 0 auto;
+  padding: 1rem 0;
+}
+.diag-progress {
+  display: flex; align-items: center; gap: .5rem;
+  margin-bottom: 2rem;
+  font-size: .82rem; color: var(--muted);
+}
+.diag-progress-bar {
+  flex: 1; height: 4px;
+  background: var(--border); border-radius: 2px;
+  overflow: hidden;
+}
+.diag-progress-fill {
+  height: 100%; background: var(--gold);
+  transition: width .35s;
+}
+.diag-step {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 1.75rem 1.5rem;
+  box-shadow: var(--shadow-card);
+  display: none;
+}
+.diag-step.active { display: block; animation: diagFadeIn .35s ease; }
+@keyframes diagFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.diag-step-num {
+  display: inline-block;
+  font-family: "Noto Serif JP", serif;
+  font-size: .8rem; font-weight: 700;
+  color: var(--gold-deep);
+  letter-spacing: .15em;
+  margin-bottom: .4rem;
+}
+.diag-step-q {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.2rem; font-weight: 700;
+  color: var(--navy); line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+.diag-options { display: grid; gap: .6rem; }
+.diag-option {
+  display: flex; align-items: center; gap: .75rem;
+  padding: .9rem 1.1rem;
+  background: var(--warm-white);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  font-size: .92rem; font-weight: 600;
+  color: var(--text); text-align: left;
+  cursor: pointer;
+  transition: all .15s;
+  font-family: inherit;
+  width: 100%;
+}
+.diag-option:hover {
+  border-color: var(--gold);
+  background: #fff;
+  transform: translateX(2px);
+}
+.diag-option-mark {
+  flex-shrink: 0;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: #fff;
+  display: flex; align-items: center; justify-content: center;
+}
+.diag-option:hover .diag-option-mark { border-color: var(--gold); }
+.diag-back {
+  display: inline-block; margin-top: 1.25rem;
+  font-size: .82rem; color: var(--muted);
+  background: none; border: none;
+  cursor: pointer; padding: .4rem .8rem;
+  border-radius: 6px;
+}
+.diag-back:hover { color: var(--navy); background: var(--bg-muted); }
+
+.diag-result {
+  background: #fff;
+  border-radius: 14px;
+  padding: 2rem 1.75rem;
+  box-shadow: var(--shadow-card);
+  border: 1.5px solid var(--gold);
+  display: none;
+}
+.diag-result.active { display: block; animation: diagFadeIn .4s ease; }
+.diag-result-tag {
+  display: inline-block;
+  background: var(--gold); color: #fff;
+  font-size: .72rem; font-weight: 700;
+  padding: .2rem .65rem; border-radius: 4px;
+  letter-spacing: .1em;
+  margin-bottom: .85rem;
+}
+.diag-result h2 {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.4rem; font-weight: 700;
+  color: var(--navy); line-height: 1.5;
+  margin-bottom: .85rem;
+}
+.diag-result-body {
+  font-size: .92rem; line-height: 1.85;
+  color: var(--text); margin-bottom: 1.5rem;
+}
+.diag-result-actions {
+  display: grid; gap: .65rem;
+  margin-bottom: 1rem;
+}
+.diag-result-btn {
+  display: block; text-align: center;
+  padding: .9rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 700; font-size: .95rem;
+  text-decoration: none;
+  transition: transform .15s;
+}
+.diag-result-btn:hover { transform: translateY(-1px); text-decoration: none; }
+.diag-result-btn.primary {
+  background: linear-gradient(135deg, #c0392b, #e74c3c);
+  color: #fff; box-shadow: 0 4px 14px rgba(192,57,43,.3);
+}
+.diag-result-btn.primary:hover { color: #fff; }
+.diag-result-btn.secondary {
+  background: var(--navy); color: #fff;
+}
+.diag-result-btn.secondary:hover { color: #fff; }
+.diag-result-btn.ghost {
+  background: #fff; color: var(--navy);
+  border: 1.5px solid var(--navy);
+}
+.diag-result-btn.ghost:hover { background: var(--bg-muted); color: var(--navy); }
+.diag-restart {
+  display: block; margin: .75rem auto 0;
+  background: none; border: none;
+  color: var(--muted); font-size: .8rem;
+  cursor: pointer; padding: .4rem .8rem;
+  text-decoration: underline;
+}
+.diag-restart:hover { color: var(--navy); }
+
+/* ── 5問診断の入口（トップに置く） ──────────── */
+.diag-hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 50%, #1e3a5f 100%);
+  padding: 3rem 1.25rem 2.5rem;
+  text-align: center;
+  color: #fff;
+}
+.diag-hero h1 {
+  font-family: "Noto Serif JP", serif;
+  font-size: clamp(1.4rem, 4vw, 1.85rem);
+  font-weight: 700;
+  margin-bottom: .75rem;
+  line-height: 1.4;
+}
+.diag-hero p {
+  font-size: .92rem; color: rgba(255,255,255,.78);
+  max-width: 520px; margin: 0 auto;
+  line-height: 1.8;
+}
+.diag-body-wrap {
+  background: var(--bg);
+  padding: 2rem 1.25rem 4rem;
+  min-height: 60vh;
+}
+
+/* ══ 新ヒーロー v2（index トップ） ════════════ */
+.hero-v2 {
+  background: linear-gradient(160deg, #0a1628 0%, #0d2342 50%, #1a1a2e 100%);
+  color: #fff;
+  padding: 3rem 1.25rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero-v2::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(201,146,42,.12) 0%, transparent 50%),
+    radial-gradient(circle at 10% 85%, rgba(192,57,43,.06) 0%, transparent 45%);
+}
+.hero-v2-inner {
+  max-width: var(--container-wide);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  position: relative;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .hero-v2-inner { grid-template-columns: 1.15fr 1fr; gap: 3rem; }
+  .hero-v2 { padding: 4rem 1.5rem 3rem; }
+}
+.hero-v2-copy { text-align: left; }
+.hero-v2-badge {
+  display: inline-block;
+  background: rgba(201,146,42,.15);
+  border: 1px solid rgba(201,146,42,.35);
+  color: var(--gold-lt);
+  font-family: "Noto Serif JP", serif;
+  font-size: .72rem; font-weight: 700;
+  padding: .25rem .8rem; border-radius: 999px;
+  margin-bottom: 1rem;
+  letter-spacing: .05em;
+}
+.hero-v2 h1 {
+  font-family: "Noto Serif JP", serif;
+  font-size: clamp(1.7rem, 5vw, 2.45rem);
+  font-weight: 700;
+  line-height: 1.45;
+  margin-bottom: 1rem;
+  letter-spacing: -.01em;
+}
+.hero-v2 h1 em { font-style: normal; color: var(--gold-lt); }
+.hero-v2-lead {
+  font-size: .98rem; line-height: 1.85;
+  color: rgba(255,255,255,.82);
+  margin-bottom: 1.5rem;
+  max-width: 560px;
+}
+.hero-v2-visual {
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+.hero-v2-visual-frame {
+  width: 100%; max-width: 380px;
+  aspect-ratio: 4 / 5;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(201,146,42,.1) 0%, rgba(13,27,46,.4) 100%);
+  border: 1px solid rgba(201,146,42,.2);
+  position: relative;
+  overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.hero-v2-visual-frame img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.hero-v2-visual-frame .hero-v2-placeholder {
+  font-family: "Noto Serif JP", serif;
+  font-size: 3rem; color: rgba(201,146,42,.4);
+}
+.hero-v2-quick-actions {
+  display: grid; grid-template-columns: 1fr; gap: .55rem;
+  margin: 1.5rem 0;
+}
+.hero-v2-quick {
+  display: flex; align-items: center; gap: .65rem;
+  padding: .85rem 1.1rem;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 999px;
+  color: #fff; font-weight: 600; font-size: .9rem;
+  text-decoration: none;
+  transition: all .15s;
+}
+.hero-v2-quick:hover {
+  background: rgba(201,146,42,.18);
+  border-color: var(--gold);
+  color: #fff; text-decoration: none;
+  transform: translateX(4px);
+}
+.hero-v2-quick svg { flex-shrink: 0; width: 18px; height: 18px; color: var(--gold-lt); }
+.hero-v2-quick-arrow { margin-left: auto; color: var(--gold-lt); }
+.hero-v2-trust {
+  display: flex; gap: 1rem; flex-wrap: wrap;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+.hero-v2-trust-item {
+  display: flex; align-items: center; gap: .4rem;
+  font-size: .78rem; color: rgba(255,255,255,.7);
+}
+.hero-v2-trust-item svg { width: 14px; height: 14px; color: var(--gold-lt); }
+
+/* ══ 結論ブロック（ホームのTL;DR下） ═══════════ */
+.conclusion-block {
+  max-width: var(--max);
+  margin: -1.5rem auto 0;
+  padding: 0 1.25rem;
+  position: relative; z-index: 2;
+}
+.conclusion-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem;
+  box-shadow: var(--shadow-card);
+  border-top: 4px solid var(--gold);
+}
+.conclusion-card-title {
+  display: flex; align-items: center; gap: .5rem;
+  font-family: "Noto Serif JP", serif;
+  font-size: .95rem; font-weight: 700;
+  color: var(--navy);
+  margin-bottom: .85rem;
+}
+.conclusion-card-title::before {
+  content: "Q";
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 24px; height: 24px;
+  background: var(--gold); color: #fff;
+  border-radius: 50%;
+  font-size: .85rem; font-weight: 800;
+  font-family: "Noto Serif JP", serif;
+}
+.conclusion-list {
+  display: grid; gap: .85rem;
+  margin: 1rem 0 0;
+}
+.conclusion-item {
+  display: flex; gap: 1rem; align-items: flex-start;
+  padding: .85rem 1rem;
+  background: var(--warm-white);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+.conclusion-item-num {
+  flex-shrink: 0;
+  width: 28px; height: 28px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--navy); color: var(--gold-lt);
+  font-family: "Noto Serif JP", serif;
+  font-weight: 700; font-size: .85rem;
+  border-radius: 50%;
+}
+.conclusion-item-body { flex: 1; font-size: .88rem; line-height: 1.75; }
+.conclusion-item-body strong { color: var(--navy); font-weight: 700; }
+.conclusion-item-body a {
+  color: var(--gold-deep);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* ══ featured ランキング1位（巨大カード） ═══════ */
+.feat-rank-card {
+  background: linear-gradient(180deg, #fff 0%, var(--warm-white) 100%);
+  border: 1.5px solid var(--gold);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin: 1.5rem 0 1rem;
+  box-shadow: var(--shadow-card);
+  position: relative;
+}
+.feat-rank-card-crown {
+  position: absolute; top: -16px; left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex; align-items: center; gap: .35rem;
+  background: linear-gradient(135deg, var(--gold), #e8a838);
+  color: #fff; font-weight: 800;
+  font-size: .82rem;
+  padding: .35rem 1rem;
+  border-radius: 999px;
+  letter-spacing: .08em;
+  box-shadow: 0 4px 12px rgba(201,146,42,.4);
+}
+.feat-rank-head {
+  display: flex; gap: 1rem; align-items: flex-start;
+  margin-top: .25rem;
+  margin-bottom: 1.25rem;
+}
+.feat-rank-logo {
+  flex-shrink: 0;
+  width: 80px; height: 80px;
+  background: var(--navy);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.5rem; font-weight: 700;
+  color: var(--gold-lt);
+}
+.feat-rank-body { flex: 1; min-width: 0; }
+.feat-rank-name {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.25rem; font-weight: 700;
+  color: var(--navy);
+  margin-bottom: .25rem;
+  line-height: 1.4;
+}
+.feat-rank-tagline {
+  font-size: .82rem; color: var(--muted);
+  margin-bottom: .65rem;
+}
+.feat-rank-rating {
+  display: flex; align-items: center; gap: .35rem;
+  font-size: .82rem;
+}
+.feat-rank-rating .stars { color: var(--gold); letter-spacing: .1em; }
+.feat-rank-rating .score { font-weight: 700; color: var(--navy); }
+.feat-rank-points {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: .5rem; margin: 1rem 0 1.25rem;
+}
+.feat-rank-point {
+  background: var(--warm-white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: .65rem .5rem;
+  text-align: center;
+  font-size: .72rem;
+  line-height: 1.4;
+  color: var(--text);
+}
+.feat-rank-point strong {
+  display: block;
+  font-family: "Noto Serif JP", serif;
+  font-size: .92rem; color: var(--gold-deep);
+  margin-bottom: .2rem;
+  font-weight: 700;
+}
+.feat-rank-pitch {
+  font-size: .88rem; line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+  padding: .85rem 1rem;
+  background: rgba(13,27,46,.04);
+  border-radius: 8px;
+  border-left: 3px solid var(--navy);
+}
+.feat-rank-cta {
+  display: block; text-align: center;
+  background: linear-gradient(135deg, #c0392b, #e74c3c);
+  color: #fff; font-weight: 800;
+  padding: 1rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(192,57,43,.35);
+  transition: transform .15s;
+}
+.feat-rank-cta:hover { transform: translateY(-1px); color: #fff; text-decoration: none; }
+.feat-rank-cta-note {
+  text-align: center;
+  font-size: .72rem; color: var(--muted);
+  margin-top: .55rem;
+}
+
+/* ── 2-3位 ランキング行 ───────────────────── */
+.rank-table-rows { display: grid; gap: .65rem; margin-top: 1rem; }
+.rank-table-row {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft);
+  transition: transform .15s, box-shadow .15s;
+}
+.rank-table-row:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card);
+}
+.rank-table-num {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.65rem; font-weight: 700;
+  color: var(--gold);
+  text-align: center;
+  line-height: 1;
+}
+.rank-table-body { min-width: 0; }
+.rank-table-name {
+  font-weight: 700; color: var(--navy);
+  font-size: 1rem;
+  margin-bottom: .15rem;
+}
+.rank-table-meta {
+  font-size: .76rem; color: var(--muted);
+  line-height: 1.5;
+}
+.rank-table-cta {
+  background: var(--navy); color: #fff;
+  padding: .55rem 1rem;
+  border-radius: 999px;
+  font-size: .78rem; font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .15s;
+}
+.rank-table-cta:hover { background: var(--navy-mid); color: #fff; text-decoration: none; }
+@media (max-width: 520px) {
+  .rank-table-row { grid-template-columns: 32px 1fr; }
+  .rank-table-cta { grid-column: 1 / -1; text-align: center; }
+}
+
+/* ══ シンプル比較表 ═══════════════════════ */
+.simple-compare {
+  width: 100%; border-collapse: collapse;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px; overflow: hidden;
+  font-size: .85rem;
+}
+.simple-compare th, .simple-compare td {
+  padding: .65rem .75rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left; line-height: 1.55;
+}
+.simple-compare thead th {
+  background: var(--navy); color: #fff;
+  font-weight: 700; font-size: .78rem;
+}
+.simple-compare tbody tr:last-child td { border-bottom: none; }
+.simple-compare tbody tr:nth-child(even) { background: var(--warm-white); }
+.simple-compare .row-label {
+  font-weight: 700; color: var(--navy);
+  background: var(--bg-muted) !important;
+  white-space: nowrap;
+}
+
+/* ── ホームの大型セクション ───────────────── */
+.home-section { padding: 3rem 1.25rem; }
+.home-section--alt { background: var(--warm-white); }
+.home-section-inner { max-width: var(--max); margin: 0 auto; }
+
+/* ══ 共通：本文中目次（雑誌風） ════════════════ */
+.toc-magazine {
+  background: var(--warm-white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.1rem 1.4rem;
+  margin: 1.5rem 0;
+}
+.toc-magazine-title {
+  font-family: "Noto Serif JP", serif;
+  font-size: .85rem;
+  color: var(--gold-deep);
+  letter-spacing: .1em;
+  margin-bottom: .65rem;
+  font-weight: 700;
+}
+.toc-magazine ol {
+  list-style: none; counter-reset: tocmag;
+  padding: 0; margin: 0;
+}
+.toc-magazine li {
+  counter-increment: tocmag;
+  padding: .35rem 0 .35rem 2.2rem;
+  position: relative;
+  font-size: .88rem; line-height: 1.6;
+}
+.toc-magazine li::before {
+  content: counter(tocmag, decimal-leading-zero);
+  position: absolute; left: 0; top: .35rem;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 700; color: var(--gold);
+  font-size: .82rem;
+}
+.toc-magazine a {
+  color: var(--text); text-decoration: none;
+  border-bottom: 1px dashed transparent;
+}
+.toc-magazine a:hover {
+  color: var(--navy);
+  border-bottom-color: var(--gold);
+  text-decoration: none;
+}
+
+/* ══ 関連リンク3列（compact） ═══════════════ */
+.related-compact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: .75rem;
+  margin-top: 1.25rem;
+}
+.related-compact a {
+  display: block;
+  padding: .85rem 1rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: .85rem; line-height: 1.6;
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color .15s, transform .15s;
+}
+.related-compact a:hover {
+  border-color: var(--gold);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+.related-compact a strong {
+  display: block;
+  font-size: .9rem;
+  color: var(--navy);
+  margin-bottom: .25rem;
+}
+.related-compact a::after {
+  content: "→";
+  display: inline-block;
+  margin-left: .3rem;
+  color: var(--gold);
+}
+
+/* ══ 出典リスト（AIO向け） ═══════════════════ */
+.source-list {
+  margin: 2rem 0;
+  padding: 1.1rem 1.4rem;
+  background: var(--bg-muted);
+  border-radius: 8px;
+  font-size: .82rem;
+}
+.source-list-title {
+  font-weight: 700; color: var(--navy);
+  margin-bottom: .55rem;
+  font-size: .82rem;
+  letter-spacing: .05em;
+}
+.source-list ul {
+  list-style: disc;
+  padding-left: 1.3rem;
+  margin: 0;
+}
+.source-list li {
+  padding: .15rem 0;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.source-list li a { color: var(--navy); text-decoration: underline; }
+
+/* ══ LPページの v2 改善 ═══════════════════════ */
+.lp-page-v2 { background: var(--warm-white); }
+.lp-page-v2 .lp-hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #1e3a5f 100%);
+  padding: 3rem 1.25rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.lp-page-v2 .lp-hero::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(circle at 85% 30%, rgba(201,146,42,.12) 0%, transparent 60%);
+}
+.lp-page-v2 .lp-hero-meta {
+  display: inline-flex; gap: .5rem; margin-bottom: .85rem;
+  position: relative;
+}
+.lp-page-v2 .lp-hero-meta .updated-meta {
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.18);
+  color: rgba(255,255,255,.75);
+}
+.lp-page-v2 .lp-hero-meta .updated-meta strong { color: var(--gold-lt); }
+.lp-page-v2 .lp-hero h1 {
+  position: relative;
+  font-family: "Noto Serif JP", serif;
+  font-size: clamp(1.45rem, 4.5vw, 1.95rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.5;
+  margin-bottom: .85rem;
+  letter-spacing: -.005em;
+}
+.lp-page-v2 .lp-hero-sub {
+  position: relative;
+  color: rgba(255,255,255,.85);
+  font-size: .95rem; line-height: 1.85;
+  max-width: 580px;
+}
+
+/* TL;DR の dark variant（ヒーロー内に置く用） */
+.tldr-card.tldr-dark {
+  background: rgba(13,27,46,.6);
+  border-color: rgba(201,146,42,.4);
+  color: rgba(255,255,255,.9);
+}
+.tldr-card.tldr-dark .tldr-body,
+.tldr-card.tldr-dark .tldr-points li {
+  color: rgba(255,255,255,.9);
+}
+
+@media (max-width: 600px) {
+  .feat-rank-points { grid-template-columns: 1fr 1fr 1fr; gap: .35rem; }
+  .feat-rank-point { padding: .5rem .35rem; }
+  .feat-rank-head { gap: .75rem; }
+  .feat-rank-logo { width: 60px; height: 60px; font-size: 1.2rem; }
+  .feat-rank-name { font-size: 1.1rem; }
+  .mag-num { font-size: 1.75rem; }
+  .mag-section-head h2 { font-size: 1.15rem; }
+  .hero-v2-visual-frame { max-width: 280px; }
+}
+

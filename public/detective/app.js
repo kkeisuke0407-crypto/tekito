@@ -4,10 +4,13 @@
 
 const AFFILIATE_LINKS = {
   una:          "https://h.accesstrade.net/sp/cc?rk=0100q30i00orzx",        // うな探偵社
-  // hal:       "https://example.com/hal-detective",                       // HAL探偵社（控え）
-  haraichi:     "https://h.accesstrade.net/sp/cc?rk=0100ken700orzx",      // 原一探偵事務所
-  kurol:        "https://h.accesstrade.net/sp/cc?rk=0100paqn00orzx",      // 総合探偵社クロル
-  matching:     "https://h.accesstrade.net/sp/cc?rk=0100q1y600orzx",      // 探偵の窓口
+  // hal:       "https://example.com/hal-detective",                        // HAL探偵社（控え）
+  haraichi:     "https://h.accesstrade.net/sp/cc?rk=0100ken700orzx",        // 原一探偵事務所
+  kurol:        "https://h.accesstrade.net/sp/cc?rk=0100paqn00orzx",        // 総合探偵社クロル
+  matching:     "https://h.accesstrade.net/sp/cc?rk=0100q1y600orzx",        // 探偵の窓口
+  // ベンナビ離婚（株式会社アシロ・離婚問題に強い弁護士検索）
+  // ※ASP提携完了後、アフィリURLに差し替えること
+  bennavi:      "https://ricon-pro.com/",
 };
 
 function track(eventName, params) {
