@@ -11,6 +11,7 @@ const AFFILIATE_LINKS = {
   // ベンナビ不倫慰謝料（株式会社アシロ・不倫慰謝料に強い弁護士検索）
   // ※ASP提携完了後、アフィリURLに差し替えること
   bennavi:      "https://furin-isharyou.ricon-pro.com/",
+  alg:          "https://px.a8.net/svt/ejp?a8mat=4B3Y38+CFQ18I+3IKY+61C2P",  // ALG探偵社（A8.net）
 };
 
 function track(eventName, params) {

@@ -526,6 +526,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .rank-1 .rank-num { background: linear-gradient(135deg, #d4a017, #b8860b); }
 .rank-2 .rank-num { background: linear-gradient(135deg, #94a3b8, #64748b); }
 .rank-3 .rank-num { background: linear-gradient(135deg, #cd7f32, #a0522d); }
+.rank-4 .rank-num { background: linear-gradient(135deg, #1e3a5f, #0d2342); }
 .rank-label { font-size: .72rem; color: var(--muted); }
 
 /* PR badge */
@@ -4407,4 +4408,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     aspect-ratio: 4 / 3;
   }
 }
+.ranking-banner-link {
+  display: block;
+  margin: 1rem 0 .5rem;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.08);
+  transition: opacity .2s;
+}
+.ranking-banner-link:hover { opacity: .85; }
+.ranking-banner-img { width: 100%; height: auto; display: block; }
 
