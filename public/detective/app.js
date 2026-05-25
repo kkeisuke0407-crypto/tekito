@@ -9,9 +9,8 @@ const AFFILIATE_LINKS = {
   kurol:        "https://h.accesstrade.net/sp/cc?rk=0100paqn00orzx",        // 総合探偵社クロル
   matching:     "https://h.accesstrade.net/sp/cc?rk=0100q1y600orzx",        // 探偵の窓口
   // ベンナビ離婚（株式会社アシロ・離婚問題に強い弁護士検索）
-  // ※レントラックス等のASP提携完了後、ここに正式アフィリURLを設定すること
-  // 提携完了までは内部の弁護士ガイドへ誘導（壊れリンクを避ける暫定措置）
-  bennavi:      "/detective/lawyer/",
+  // ※ASP提携完了後、アフィリURLに差し替えること
+  bennavi:      "https://ricon-pro.com/",
 };
 
 function track(eventName, params) {
