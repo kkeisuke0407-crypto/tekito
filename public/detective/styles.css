@@ -2453,13 +2453,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .options-hub-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: .75rem;
 }
 .options-hub-card {
   display: flex;
   align-items: center;
   gap: .85rem;
+  min-width: 0;
   background: var(--beige);
   border: 1.5px solid var(--beige-mid);
   border-radius: 10px;
