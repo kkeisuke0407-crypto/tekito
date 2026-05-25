@@ -19,30 +19,41 @@ const ctaConfig = {
     label: '信頼できる探偵社を比較する',
     href: '/detective/#ranking',
     cls: 'detective',
+    affiliate: null,
     note: '無料相談あり・秘密厳守'
   },
   gps: {
     label: 'GPS機器の詳細を確認する',
     href: 'https://h.accesstrade.net/sp/cc?rk=0100r19500orzx',
     cls: 'gps',
+    affiliate: null,
     note: '公式サイトにて最新情報をご確認ください'
+  },
+  lawyer: {
+    label: '近くの離婚に強い弁護士を探す',
+    href: '#',
+    cls: 'lawyer',
+    affiliate: 'bennavi',
+    note: 'ベンナビ離婚で地域・無料相談有無から検索'
   },
   uranai: {
     label: '電話占いヴェルニに相談する',
     href: 'https://vernis.jp/affiliate/?af=1234',
     cls: 'uranai',
+    affiliate: null,
     note: '初回最大4,000円分無料・24時間対応'
   },
   all: {
-    label: '自分に合う選択肢を確認する',
+    label: '自分に合う選択肢を5問診断で確認',
     href: '/detective/flow/',
     cls: 'detective',
-    note: '探偵・GPS・相談、状況に合わせて選べます'
+    affiliate: null,
+    note: '探偵・GPS・弁護士・相談、状況に合わせて選べます'
   }
 };
 
 const cta = ctaConfig[col.cvType] || ctaConfig.all;
-const isExternal = cta.href.startsWith('http');
+const isExternal = cta.href.startsWith('http') || cta.affiliate;
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -100,7 +111,7 @@ const isExternal = cta.href.startsWith('http');
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/detective/styles.css?v=20260523e" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260525r" />
 
   <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
   <script is:inline>
@@ -139,11 +150,15 @@ const isExternal = cta.href.startsWith('http');
 
 <nav class="col-header-nav">
   <div class="col-header-nav-inner">
-    <a href="/detective/flow/">どれから始める？</a>
+    <a href="/detective/flow/">診断</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cost/">費用相場</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/law/">法律の境界線</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cases/">体験談</a>
     <span class="col-nav-sep">|</span>
     <a href="/detective/column/" style="color:#fff;font-weight:700;">コラム</a>
-    <span class="col-nav-sep">|</span>
-    <a href="/detective/about/">中の人について</a>
   </div>
 </nav>
 
@@ -154,11 +169,15 @@ const isExternal = cta.href.startsWith('http');
     <div class="col-article-meta">
       <span>
         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        約{col.readingTime}分で読めます
+        約{col.readingTime}分
       </span>
       <span>
         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        {col.published}
+        公開 {col.published}
+      </span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+        最終更新 {col.published}
       </span>
     </div>
   </div>
@@ -192,6 +211,7 @@ const isExternal = cta.href.startsWith('http');
     <a
       href={cta.href}
       class={`col-article-cta-btn ${cta.cls}`}
+      data-affiliate={cta.affiliate || undefined}
       rel={isExternal ? 'nofollow sponsored noopener' : undefined}
       data-track={`column_cta_${col.slug}`}
     >{cta.label}</a>
@@ -265,12 +285,14 @@ const isExternal = cta.href.startsWith('http');
   <span class="sticky-label">{
     cta.cls === 'detective' ? 'まずは無料で相談してみる' :
     cta.cls === 'gps'       ? '費用を抑えるならGPSも選択肢' :
+    cta.cls === 'lawyer'    ? '近くの離婚に強い弁護士を' :
     cta.cls === 'uranai'    ? '一人で抱えないで、話してみる' :
     '自分に合う選択肢を見つける'
   }</span>
   <a
     href={cta.href}
     class="sticky-btn"
+    data-affiliate={cta.affiliate || undefined}
     rel={isExternal ? 'nofollow sponsored noopener' : undefined}
     data-track={`sticky_column_${col.slug}`}
   >{cta.label} →</a>

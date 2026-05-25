@@ -1,8 +1,9 @@
 ---
-const PAGE_TITLE = "どれから始める？｜中の人ナビ";
-const PAGE_DESC  = "浮気・不倫の悩みに、探偵・GPS・弁護士・相談のどれが合うか。状況別に整理しました。";
+const PAGE_TITLE = "5問診断｜あなたに必要な選択肢が見つかる｜中の人ナビ";
+const PAGE_DESC  = "探偵・GPS・弁護士・電話相談——浮気の悩みに対して、今あなたに合うのはどれ？ 5つの質問で最適な選択肢と次のアクションをご提案します。";
 const CANONICAL  = "https://lawyer-nakanohito.com/detective/flow/";
 const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
+const UPDATED = "2026-05-25";
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -15,160 +16,46 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
   <meta property="og:type"        content="website" />
   <meta property="og:title"       content={PAGE_TITLE} />
   <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:url"         content={CANONICAL} />
   <meta property="og:locale"      content="ja_JP" />
   <meta property="og:site_name"   content="弁護士の中の人" />
   <meta property="og:image"       content="https://lawyer-nakanohito.com/detective/images/hero.png" />
-  <meta property="og:url"         content={CANONICAL} />
   <meta name="twitter:card"       content="summary_large_image" />
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "TOP", "item": "https://lawyer-nakanohito.com/detective/" },
+      { "@type": "ListItem", "position": 2, "name": "5問診断", "item": CANONICAL }
+    ]
+  })} />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/detective/styles.css?v=20260523e" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260525r" />
 
   <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-2YLF06DC0E');
+    gtag('js', new Date()); gtag('config', 'G-2YLF06DC0E');
   </script>
   <script is:inline type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wt0koam10v");
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wt0koam10v");
   </script>
-  <style>
-    .flow-page { background: var(--beige); min-height: 100vh; }
-    .flow-hero {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
-      padding: 3rem 1.25rem 2.5rem;
-      text-align: center;
-      color: #fff;
-    }
-    .flow-hero h1 {
-      font-family: var(--serif);
-      font-size: clamp(1.25rem, 4vw, 1.65rem);
-      font-weight: 700;
-      margin-bottom: .75rem;
-    }
-    .flow-hero p { font-size: .92rem; color: rgba(255,255,255,.75); max-width: 480px; margin: 0 auto; line-height: 1.7; }
-    .flow-body { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
-    .flow-intro {
-      background: #fff;
-      border-radius: 10px;
-      padding: 1.25rem 1.5rem;
-      margin-bottom: 2rem;
-      font-size: .92rem;
-      color: var(--muted);
-      line-height: 1.75;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-    .flow-card {
-      background: #fff;
-      border: 1.5px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 1.25rem;
-      box-shadow: var(--shadow);
-    }
-    .flow-card-head {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-    .flow-card-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-size: 1.3rem;
-    }
-    .flow-card-icon.detective { background: rgba(201,146,42,.12); }
-    .flow-card-icon.gps       { background: rgba(29,78,216,.1); }
-    .flow-card-icon.lawyer    { background: rgba(22,163,74,.1); }
-    .flow-card-icon.uranai    { background: rgba(196,126,126,.15); }
-    .flow-card h2 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: .3rem;
-    }
-    .flow-card-sub { font-size: .8rem; color: var(--muted); }
-    .flow-fit {
-      font-size: .85rem;
-      color: var(--text);
-      line-height: 1.7;
-      margin-bottom: 1rem;
-    }
-    .flow-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .4rem;
-      margin-bottom: 1rem;
-    }
-    .flow-tag {
-      background: var(--beige-mid);
-      color: var(--navy);
-      font-size: .72rem;
-      font-weight: 700;
-      padding: .25rem .65rem;
-      border-radius: 999px;
-    }
-    .flow-note {
-      font-size: .78rem;
-      color: var(--muted);
-      background: var(--bg-muted);
-      border-radius: 6px;
-      padding: .6rem .85rem;
-      margin-bottom: 1rem;
-    }
-    .flow-btn {
-      display: block;
-      text-align: center;
-      padding: .8rem 1.5rem;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: .9rem;
-      text-decoration: none;
-      transition: all .18s;
-    }
-    .flow-btn.detective { background: var(--gold); color: #fff; }
-    .flow-btn.detective:hover { background: var(--gold-lt); color: var(--navy); text-decoration: none; }
-    .flow-btn.gps   { background: var(--navy); color: #fff; }
-    .flow-btn.gps:hover { background: var(--navy-mid); text-decoration: none; }
-    .flow-btn.lawyer { background: #16a34a; color: #fff; }
-    .flow-btn.lawyer:hover { background: #15803d; text-decoration: none; }
-    .flow-btn.uranai { background: var(--pink); color: #fff; }
-    .flow-btn.uranai:hover { background: var(--pink-lt); color: var(--navy); text-decoration: none; }
-    .flow-divider { text-align: center; color: var(--muted); font-size: .8rem; margin: .5rem 0; }
-    @media (max-width: 600px) {
-      .flow-card-head { flex-direction: row; }
-    }
-  </style>
 </head>
-<body class="flow-page">
+<body>
 
 <header class="dt-header">
   <div class="dt-header-inner">
     <a href="/detective/" class="dt-logo">
-      <div class="dt-logo-icon">
-        <img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;" />
-      </div>
-      <div class="dt-logo-wrap">
-        <span>弁護士の中の人</span>
-        <span class="dt-logo-sub">中の人ナビ</span>
-      </div>
+      <div class="dt-logo-icon"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;" /></div>
+      <div class="dt-logo-wrap"><span>弁護士の中の人</span><span class="dt-logo-sub">中の人ナビ</span></div>
     </a>
     <a href={INSTAGRAM_URL} class="dt-header-insta" target="_blank" rel="noopener">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
       <span>@lawyer.nakanohito</span>
     </a>
   </div>
@@ -176,112 +63,159 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
 
 <nav class="col-header-nav">
   <div class="col-header-nav-inner">
-    <a href="/detective/flow/" style="color:#fff;font-weight:700;">どれから始める？</a>
+    <a href="/detective/flow/" style="color:#fff;font-weight:700;">診断</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cost/">費用相場</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/law/">法律の境界線</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cases/">体験談</a>
     <span class="col-nav-sep">|</span>
     <a href="/detective/column/">コラム</a>
-    <span class="col-nav-sep">|</span>
-    <a href="/detective/about/">中の人について</a>
   </div>
 </nav>
 
-<div class="flow-hero">
-  <h1>結局、何から始めればいい？</h1>
-  <p>探偵・GPS・弁護士・相談——状況によって「最初の一手」は違います。今の状況に合うものを選んでください。</p>
+<div class="diag-hero">
+  <h1>あなたに必要な選択肢は？<br/>5問の診断で見つける</h1>
+  <p>探偵・GPS・弁護士・電話相談——状況によって最適な「最初の一手」は違います。5問に答えていただくと、あなたに合った選択肢と次のアクションをご提案します。</p>
 </div>
 
-<div class="flow-body">
+<div class="diag-body-wrap">
+  <div class="diag-wrap" id="diag-app">
 
-  <div class="flow-intro">
-    「まず何をすれば…」という相談が、事務所で一番多かった質問です。状況によって適切な選択肢は違うので、今の状況に近いものを選んでみてください。
-  </div>
+    <div class="diag-progress">
+      <span id="diag-step-label">Q1 / 5</span>
+      <div class="diag-progress-bar"><div class="diag-progress-fill" id="diag-progress-fill" style="width:20%"></div></div>
+    </div>
 
-  <!-- 探偵 -->
-  <div class="flow-card">
-    <div class="flow-card-head">
-      <div class="flow-card-icon detective">🔍</div>
-      <div>
-        <h2>探偵に依頼する</h2>
-        <div class="flow-card-sub">証拠を確実に押さえたい方へ</div>
+    <!-- Q1: 状況 -->
+    <div class="diag-step active" data-step="1">
+      <span class="diag-step-num">QUESTION 01</span>
+      <h2 class="diag-step-q">いまの状況に、いちばん近いのはどれですか？</h2>
+      <div class="diag-options">
+        <button class="diag-option" data-q="situation" data-v="emotion"><span class="diag-option-mark"></span>確証はないけど、なんとなくモヤモヤしている</button>
+        <button class="diag-option" data-q="situation" data-v="action"><span class="diag-option-mark"></span>行動パターンが変わった気がする（帰宅・休日・スマホ）</button>
+        <button class="diag-option" data-q="situation" data-v="seed"><span class="diag-option-mark"></span>怪しい何かを見つけた／第三者から情報を聞いた</button>
+        <button class="diag-option" data-q="situation" data-v="confirmed"><span class="diag-option-mark"></span>すでに不貞の証拠を持っている</button>
       </div>
     </div>
-    <p class="flow-fit">慰謝料請求・離婚調停を視野に入れているなら、裁判で使える証拠が必要です。それを専門に取るのが探偵です。費用はかかりますが、「確実性」は最も高い選択肢です。</p>
-    <div class="flow-tags">
-      <span class="flow-tag">証拠を確実に欲しい</span>
-      <span class="flow-tag">慰謝料を請求したい</span>
-      <span class="flow-tag">離婚も考えている</span>
-    </div>
-    <a href="/detective/#ranking" class="flow-btn detective" data-track="flow_detective">信頼できる探偵社を比較する</a>
-    <p class="flow-divider" style="margin-top:.75rem;font-size:.72rem;">無料相談あり・秘密厳守</p>
-  </div>
 
-  <!-- GPS -->
-  <div class="flow-card">
-    <div class="flow-card-head">
-      <div class="flow-card-icon gps">📍</div>
-      <div>
-        <h2>GPSで行動を確認する</h2>
-        <div class="flow-card-sub">費用を抑えて自分で動きたい方へ</div>
+    <!-- Q2: ゴール -->
+    <div class="diag-step" data-step="2">
+      <span class="diag-step-num">QUESTION 02</span>
+      <h2 class="diag-step-q">最終的にどうしたいですか？</h2>
+      <div class="diag-options">
+        <button class="diag-option" data-q="goal" data-v="divorce"><span class="diag-option-mark"></span>慰謝料を取って離婚したい</button>
+        <button class="diag-option" data-q="goal" data-v="truth"><span class="diag-option-mark"></span>とにかく真実を知りたい（決断はその後）</button>
+        <button class="diag-option" data-q="goal" data-v="repair"><span class="diag-option-mark"></span>関係を修復したい・話し合いたい</button>
+        <button class="diag-option" data-q="goal" data-v="undecided"><span class="diag-option-mark"></span>まだわからない・決められない</button>
       </div>
+      <button class="diag-back" data-back="1">← 前の質問へ</button>
     </div>
-    <p class="flow-fit">「探偵は費用が心配…」という方の選択肢の一つです。ただし、設置できるのは<strong>自分名義または共有名義の車のみ</strong>です。位置情報は「行動の把握」に使えますが、それ単体で不貞の証拠になるわけではありません。</p>
-    <div class="flow-tags">
-      <span class="flow-tag">費用を抑えたい</span>
-      <span class="flow-tag">まず行動パターンを把握したい</span>
-      <span class="flow-tag">自分名義の車がある</span>
-    </div>
-    <div class="flow-note">注意：相手名義・社用車・他人の所有物への設置は違法になる可能性があります。</div>
-    <a href="https://h.accesstrade.net/sp/cc?rk=0100r19500orzx" class="flow-btn gps" rel="nofollow sponsored noopener" data-track="flow_gps">GPS機器の詳細を確認する</a>
-  </div>
 
-  <!-- 弁護士 -->
-  <div class="flow-card">
-    <div class="flow-card-head">
-      <div class="flow-card-icon lawyer">⚖️</div>
-      <div>
-        <h2>弁護士に相談する</h2>
-        <div class="flow-card-sub">離婚・慰謝料の手続きを進めたい方へ</div>
+    <!-- Q3: 予算 -->
+    <div class="diag-step" data-step="3">
+      <span class="diag-step-num">QUESTION 03</span>
+      <h2 class="diag-step-q">いま動かせる予算感はどれくらいですか？</h2>
+      <div class="diag-options">
+        <button class="diag-option" data-q="budget" data-v="low"><span class="diag-option-mark"></span>5万円以内に抑えたい</button>
+        <button class="diag-option" data-q="budget" data-v="mid"><span class="diag-option-mark"></span>5〜30万円までなら</button>
+        <button class="diag-option" data-q="budget" data-v="high"><span class="diag-option-mark"></span>30万円以上もOK（本気で進めたい）</button>
+        <button class="diag-option" data-q="budget" data-v="flex"><span class="diag-option-mark"></span>必要なら工面する／状況次第</button>
       </div>
+      <button class="diag-back" data-back="2">← 前の質問へ</button>
     </div>
-    <p class="flow-fit">証拠を持った上で、離婚調停や慰謝料請求を正式に進めたい段階になったら弁護士が適切です。証拠なしで相談しても「動けない」ことが多いので、証拠を集めてから相談するのが理想的な順番です。</p>
-    <div class="flow-tags">
-      <span class="flow-tag">離婚を決意している</span>
-      <span class="flow-tag">証拠はある</span>
-      <span class="flow-tag">法的に手続きを進めたい</span>
-    </div>
-    <a href="/detective/column/bengoshi-shouko-ato/" class="flow-btn lawyer" data-track="flow_lawyer">弁護士相談のタイミングを詳しく読む</a>
-  </div>
 
-  <!-- 占い・相談 -->
-  <div class="flow-card">
-    <div class="flow-card-head">
-      <div class="flow-card-icon uranai">🌙</div>
-      <div>
-        <h2>まず話を聞いてもらう</h2>
-        <div class="flow-card-sub">気持ちの整理から始めたい方へ</div>
+    <!-- Q4: 車の名義 -->
+    <div class="diag-step" data-step="4">
+      <span class="diag-step-num">QUESTION 04</span>
+      <h2 class="diag-step-q">車の名義について、どれが当てはまりますか？</h2>
+      <div class="diag-options">
+        <button class="diag-option" data-q="car" data-v="own"><span class="diag-option-mark"></span>自分名義／夫婦共有名義の車がある</button>
+        <button class="diag-option" data-q="car" data-v="spouse"><span class="diag-option-mark"></span>配偶者の単独名義の車のみ</button>
+        <button class="diag-option" data-q="car" data-v="none"><span class="diag-option-mark"></span>車を持っていない／使っていない</button>
       </div>
+      <button class="diag-back" data-back="3">← 前の質問へ</button>
     </div>
-    <p class="flow-fit">「確信がない」「どうしたいかわからない」「怖くて動けない」——そういう段階なら、まず誰かに話を聞いてもらうことが大切です。24時間匿名で対応してもらえる相談先があります。</p>
-    <div class="flow-tags">
-      <span class="flow-tag">まだ確信が持てない</span>
-      <span class="flow-tag">誰にも言えない</span>
-      <span class="flow-tag">気持ちを整理したい</span>
+
+    <!-- Q5: 障害 -->
+    <div class="diag-step" data-step="5">
+      <span class="diag-step-num">QUESTION 05</span>
+      <h2 class="diag-step-q">いま、いちばんの障害になっているのは？</h2>
+      <div class="diag-options">
+        <button class="diag-option" data-q="block" data-v="howto"><span class="diag-option-mark"></span>何から始めればいいか分からない</button>
+        <button class="diag-option" data-q="block" data-v="cost"><span class="diag-option-mark"></span>費用面が心配</button>
+        <button class="diag-option" data-q="block" data-v="fear"><span class="diag-option-mark"></span>バレるのが怖い／動くのが怖い</button>
+        <button class="diag-option" data-q="block" data-v="lonely"><span class="diag-option-mark"></span>誰にも相談できない</button>
+        <button class="diag-option" data-q="block" data-v="legal"><span class="diag-option-mark"></span>法律的に何がOKか分からない</button>
+      </div>
+      <button class="diag-back" data-back="4">← 前の質問へ</button>
     </div>
-    <a href="https://vernis.jp/affiliate/?af=1234" class="flow-btn uranai" rel="nofollow sponsored noopener" data-track="flow_uranai">電話占いヴェルニに相談する</a>
-    <p class="flow-divider" style="margin-top:.75rem;font-size:.72rem;">初回最大4,000円分無料・24時間対応</p>
-  </div>
 
-  <div style="margin-top:2rem;text-align:center;">
-    <a href="/detective/column/" class="col-back-link" style="justify-content:center;">コラムで詳しく読む →</a>
-  </div>
+    <!-- 結果カード（動的に1つだけ表示） -->
+    <div class="diag-result" data-result="detective">
+      <span class="diag-result-tag">RECOMMENDED</span>
+      <h2>📷 まずは『信頼できる探偵社』で証拠を</h2>
+      <p class="diag-result-body">あなたの状況なら、<strong>探偵に証拠収集を依頼する</strong>のがいちばん確実な一手です。慰謝料請求や離婚調停を視野に入れているなら、裁判で使える証拠を専門家に取ってもらうことが結果を左右します。費用は20〜80万円が相場。事前にGPSで下調べすれば調査時間を絞れて、数万〜十数万円節約できます。</p>
+      <div class="diag-result-actions">
+        <a href="/detective/#ranking" class="diag-result-btn primary" data-track="diag_result_detective">信頼できる探偵社を比較する</a>
+        <a href="/detective/cost/" class="diag-result-btn ghost" data-track="diag_result_detective_cost">先に費用相場を確認する</a>
+      </div>
+      <button class="diag-restart">もう一度診断する</button>
+    </div>
 
+    <div class="diag-result" data-result="lawyer">
+      <span class="diag-result-tag">RECOMMENDED</span>
+      <h2>⚖️ 次のステップは『地域の弁護士』</h2>
+      <p class="diag-result-body">すでに不貞の証拠をお持ちなら、次の一手は<strong>離婚問題に強い弁護士に相談</strong>することです。離婚調停は1年単位の長期戦になることも多いため、自宅から通いやすい「近場の離婚特化事務所」を選ぶのが鉄則。ベンナビ離婚なら、お住まいの地域・取扱分野・無料相談有無で絞り込んで探せます。</p>
+      <div class="diag-result-actions">
+        <a href="#" data-affiliate="bennavi" rel="nofollow sponsored noopener" class="diag-result-btn primary" data-track="diag_result_bennavi">ベンナビ離婚で弁護士を探す</a>
+        <a href="/detective/lawyer/" class="diag-result-btn ghost" data-track="diag_result_lawyer_guide">弁護士相談ガイドを読む</a>
+      </div>
+      <button class="diag-restart">もう一度診断する</button>
+    </div>
+
+    <div class="diag-result" data-result="gps">
+      <span class="diag-result-tag">RECOMMENDED</span>
+      <h2>📍 まずは『GPS』で行動パターンを把握</h2>
+      <p class="diag-result-body">費用を抑えて、まず行動パターンを把握したいなら<strong>GPS</strong>が選択肢になります。ただし合法的に設置できるのは<strong>自分名義または共有名義の車</strong>のみ。GPSで2週間ほど行動を記録すれば、本格的な調査が必要かどうか・あたりの曜日と時間帯が見えてきます。</p>
+      <div class="diag-result-actions">
+        <a href="/detective/gps/" class="diag-result-btn primary" data-track="diag_result_gps">GPS活用ガイドを読む</a>
+        <a href="/detective/law/" class="diag-result-btn ghost" data-track="diag_result_gps_law">法律の境界線を確認する</a>
+      </div>
+      <button class="diag-restart">もう一度診断する</button>
+    </div>
+
+    <div class="diag-result" data-result="uranai">
+      <span class="diag-result-tag">RECOMMENDED</span>
+      <h2>🌙 まずは『話を聞いてもらう』ところから</h2>
+      <p class="diag-result-body">確信が持てない・誰にも相談できない・動くのが怖い——そんな段階で無理に行動を起こすと、判断を誤りやすくなります。まずは匿名で話を聞いてもらえる電話相談で、気持ちを整理してから動く方が、結果的に近道になることが多いです。<strong>動く前に整える</strong>ことも一つの戦略です。</p>
+      <div class="diag-result-actions">
+        <a href="/detective/uranai/" class="diag-result-btn primary" data-track="diag_result_uranai">電話相談ガイドを読む</a>
+        <a href="/detective/cases/" class="diag-result-btn ghost" data-track="diag_result_uranai_cases">他の人の体験談を読む</a>
+      </div>
+      <button class="diag-restart">もう一度診断する</button>
+    </div>
+
+    <div class="diag-result" data-result="all">
+      <span class="diag-result-tag">RECOMMENDED</span>
+      <h2>🧭 まずは『全体像』を整理しましょう</h2>
+      <p class="diag-result-body">状況が複雑だったり、まだ決められないことが多そうですね。そういうときは、いきなり動くより<strong>選択肢の全体像</strong>を整理することで、自分に合う道が見えてきます。費用感・法律の境界線・他の人の体験談をひと通り確認してから、最初の一手を決めるのがおすすめです。</p>
+      <div class="diag-result-actions">
+        <a href="/detective/cost/" class="diag-result-btn primary" data-track="diag_result_all_cost">まず費用相場を確認する</a>
+        <a href="/detective/cases/" class="diag-result-btn ghost" data-track="diag_result_all_cases">他の人の体験談を読む</a>
+        <a href="/detective/" class="diag-result-btn ghost" data-track="diag_result_all_top">トップで全体を見る</a>
+      </div>
+      <button class="diag-restart">もう一度診断する</button>
+    </div>
+
+  </div>
 </div>
 
 <footer class="dt-footer">
   <div class="dt-footer-inner">
     <div class="dt-footer-logo">
-      <div class="dt-footer-logo-icon" style="padding:0;overflow:hidden;">
-        <img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:8px;" />
-      </div>
+      <div class="dt-footer-logo-icon" style="padding:0;overflow:hidden;"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:8px;" /></div>
       <span>弁護士の中の人</span>
     </div>
     <p class="dt-footer-text">
@@ -300,5 +234,105 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
 </footer>
 
 <script src="/detective/app.js" is:inline defer></script>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    var answers = {};
+    var current = 1;
+    var totalSteps = 5;
+
+    var steps = document.querySelectorAll('.diag-step');
+    var results = document.querySelectorAll('.diag-result');
+    var label = document.getElementById('diag-step-label');
+    var fill  = document.getElementById('diag-progress-fill');
+    var progressWrap = document.querySelector('.diag-progress');
+
+    function showStep(n) {
+      steps.forEach(function(s) { s.classList.toggle('active', parseInt(s.dataset.step, 10) === n); });
+      results.forEach(function(r) { r.classList.remove('active'); });
+      current = n;
+      label.textContent = 'Q' + n + ' / ' + totalSteps;
+      fill.style.width = (n / totalSteps * 100) + '%';
+      progressWrap.style.display = '';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showResult(key) {
+      steps.forEach(function(s) { s.classList.remove('active'); });
+      results.forEach(function(r) { r.classList.toggle('active', r.dataset.result === key); });
+      progressWrap.style.display = 'none';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (window.dataLayer) window.dataLayer.push({ event: 'diag_complete', result: key, answers: answers });
+      if (typeof gtag === 'function') gtag('event', 'diag_complete', { result_type: key });
+    }
+
+    function calcResult() {
+      var s = answers.situation, g = answers.goal, b = answers.budget, c = answers.car, blk = answers.block;
+      var score = { detective: 0, lawyer: 0, gps: 0, uranai: 0, all: 0 };
+
+      if (s === 'emotion')    { score.uranai += 3; score.all += 1; }
+      if (s === 'action')     { score.gps += 2; score.detective += 1; }
+      if (s === 'seed')       { score.detective += 3; score.gps += 1; }
+      if (s === 'confirmed')  { score.lawyer += 4; score.detective += 1; }
+
+      if (g === 'divorce')    { score.detective += 2; score.lawyer += 2; }
+      if (g === 'truth')      { score.detective += 3; score.gps += 1; }
+      if (g === 'repair')     { score.uranai += 2; score.all += 1; }
+      if (g === 'undecided')  { score.uranai += 2; score.all += 2; }
+
+      if (b === 'low')        { score.gps += 2; score.uranai += 2; }
+      if (b === 'mid')        { score.gps += 1; score.detective += 1; }
+      if (b === 'high')       { score.detective += 2; score.lawyer += 1; }
+
+      if (c === 'own')        { score.gps += 2; }
+      if (c === 'spouse')     { score.detective += 1; score.gps -= 2; }
+      if (c === 'none')       { score.gps -= 2; score.detective += 1; }
+
+      if (blk === 'howto')    { score.all += 2; }
+      if (blk === 'cost')     { score.gps += 1; score.all += 1; }
+      if (blk === 'fear')     { score.uranai += 2; }
+      if (blk === 'lonely')   { score.uranai += 3; }
+      if (blk === 'legal')    { score.lawyer += 2; score.all += 1; }
+
+      // すでに証拠があるなら最優先で lawyer
+      if (s === 'confirmed' && blk === 'legal') return 'lawyer';
+      if (s === 'confirmed' && g === 'divorce') return 'lawyer';
+
+      var max = -Infinity, best = 'all';
+      Object.keys(score).forEach(function(k) {
+        if (score[k] > max) { max = score[k]; best = k; }
+      });
+      return best;
+    }
+
+    document.querySelectorAll('.diag-option').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var q = btn.dataset.q;
+        var v = btn.dataset.v;
+        answers[q] = v;
+        if (window.dataLayer) window.dataLayer.push({ event: 'diag_answer', step: current, q: q, v: v });
+        if (current < totalSteps) {
+          showStep(current + 1);
+        } else {
+          showResult(calcResult());
+        }
+      });
+    });
+
+    document.querySelectorAll('.diag-back').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var back = parseInt(btn.dataset.back, 10);
+        showStep(back);
+      });
+    });
+
+    document.querySelectorAll('.diag-restart').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        answers = {};
+        showStep(1);
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
