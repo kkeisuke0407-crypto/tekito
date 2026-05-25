@@ -8,9 +8,9 @@ const AFFILIATE_LINKS = {
   haraichi:     "https://h.accesstrade.net/sp/cc?rk=0100ken700orzx",        // 原一探偵事務所
   kurol:        "https://h.accesstrade.net/sp/cc?rk=0100paqn00orzx",        // 総合探偵社クロル
   matching:     "https://h.accesstrade.net/sp/cc?rk=0100q1y600orzx",        // 探偵の窓口
-  // ベンナビ離婚（株式会社アシロ・離婚問題に強い弁護士検索）
+  // ベンナビ不倫慰謝料（株式会社アシロ・不倫慰謝料に強い弁護士検索）
   // ※ASP提携完了後、アフィリURLに差し替えること
-  bennavi:      "https://ricon-pro.com/",
+  bennavi:      "https://furin-isharyou.ricon-pro.com/",
 };
 
 function track(eventName, params) {
