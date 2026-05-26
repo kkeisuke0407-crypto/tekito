@@ -1,0 +1,182 @@
+[
+  {
+    "topic": "探偵と弁護士どちらに先に相談すべきか？正しい順序と理由",
+    "category": "comparison",
+    "cvType": "lawyer",
+    "used": false
+  },
+  {
+    "topic": "浮気調査の費用相場はいくら？探偵社に払う前に知っておくべきこと",
+    "category": "comparison",
+    "cvType": "detective",
+    "used": false
+  },
+  {
+    "topic": "GPS追跡は違法になるのか？自分でやる場合と探偵に頼む場合の違い",
+    "category": "comparison",
+    "cvType": "gps",
+    "used": false
+  },
+  {
+    "topic": "浮気の証拠として使えるものと使えないもの——弁護士が実際に求める証拠とは",
+    "category": "comparison",
+    "cvType": "lawyer",
+    "used": false
+  },
+  {
+    "topic": "不倫相手への慰謝料請求はいくらが相場か？事務員が見た実態",
+    "category": "comparison",
+    "cvType": "lawyer",
+    "used": false
+  },
+  {
+    "topic": "浮気を疑い始めたとき、スマホを見るべきか見ないべきか？",
+    "category": "mental",
+    "cvType": "uranai",
+    "used": false
+  },
+  {
+    "topic": "探偵社選びで失敗しないための5つのチェックポイント",
+    "category": "comparison",
+    "cvType": "detective",
+    "used": false
+  },
+  {
+    "topic": "離婚するかどうか決められないとき、誰に相談すればいいのか？",
+    "category": "comparison",
+    "cvType": "all",
+    "used": false
+  },
+  {
+    "topic": "浮気調査を依頼した後、結果が黒だったときに取るべき行動の順序",
+    "category": "comparison",
+    "cvType": "lawyer",
+    "used": false
+  },
+  {
+    "topic": "電話占いは浮気問題に役立つのか？気持ちの整理に使える理由",
+    "category": "mental",
+    "cvType": "uranai",
+    "used": false
+  },
+  {
+    "topic": "不倫を証拠なしで弁護士に相談したらどうなるか？",
+    "category": "comparison",
+    "cvType": "lawyer",
+    "used": false
+  },
+  {
+    "topic": "浮気調査の報告書とは何か？裁判で使えるかどうかの基準",
+    "category": "comparison",
+    "cvType": "detective",
+    "used": false
+  },
+  {
+    "topic": "パートナーの行動パターンが変わったとき、浮気のサインかどうかを判断する方法",
+    "category": "experience",
+    "cvType": "all",
+    "used": false
+  },
+  {
+    "topic": "探偵に依頼せず自分で浮気調査する場合のリスクと限界",
+    "category": "comparison",
+    "cvType": "detective",
+    "used": false
+  },
+  {
+    "topic": "慰謝料を請求しないという選択肢——許すことと法的請求の間で迷う人へ",
+    "category": "mental",
+    "cvType": "lawyer",
+    "used": false
+  },
+  {
+    "topic": "不倫調査中に証拠が撮れなかったとき探偵社に返金を求められるか？",
+    "category": "comparison",
+    "cvType": "detective",
+    "used": false
+  },
+  {
+    "topic": "配偶者が突然帰宅時間を変えた——単身赴任・残業との見分け方",
+    "category": "experience",
+    "cvType": "all",
+    "used": false
+  },
+  {
+    "topic": "離婚裁判で証拠が認められるための条件——事務員目線の解説",
+    "category": "comparison",
+    "cvType": "lawyer",
+    "used": false
+  },
+  {
+    "topic": "浮気調査の証拠を集めた後、相手に見せるタイミングはいつが正解か？",
+    "category": "comparison",
+    "cvType": "lawyer",
+    "used": false
+  },
+  {
+    "topic": "子どもがいる場合の離婚——浮気が原因でも親権はどう決まるか？",
+    "category": "comparison",
+    "cvType": "lawyer",
+    "used": false
+  },
+  {
+    "topic": "パートナーに問いただす前にやっておくべき3つのこと",
+    "category": "comparison",
+    "cvType": "all",
+    "used": false
+  },
+  {
+    "topic": "探偵事務所の契約書で絶対確認すべき項目——後悔しないための事前チェック",
+    "category": "comparison",
+    "cvType": "detective",
+    "used": false
+  },
+  {
+    "topic": "浮気が疑われる状況でひとりで抱え込んでしまう人の心理と対処法",
+    "category": "mental",
+    "cvType": "uranai",
+    "used": false
+  },
+  {
+    "topic": "不倫相手が既婚者と知らなかった場合、慰謝料請求はできるのか？",
+    "category": "comparison",
+    "cvType": "lawyer",
+    "used": false
+  },
+  {
+    "topic": "浮気調査にかかる期間はどのくらい？1週間〜3ヶ月の違いを解説",
+    "category": "comparison",
+    "cvType": "detective",
+    "used": false
+  },
+  {
+    "topic": "SNSやLINEの履歴は浮気の証拠になるか？弁護士が実際に使う基準",
+    "category": "comparison",
+    "cvType": "lawyer",
+    "used": false
+  },
+  {
+    "topic": "探偵に依頼したことがバレる可能性はあるか？尾行がばれるケースと対策",
+    "category": "experience",
+    "cvType": "detective",
+    "used": false
+  },
+  {
+    "topic": "浮気問題で精神的に限界を感じたとき、最初にすべきことは何か",
+    "category": "mental",
+    "cvType": "uranai",
+    "used": false
+  },
+  {
+    "topic": "不倫の証拠を掴んでも別れたくない——離婚しない選択をした人の体験談",
+    "category": "experience",
+    "cvType": "all",
+    "used": false
+  },
+  {
+    "topic": "GPS発信機の合法な使い方と違法になる境界線——具体的なケースで解説",
+    "category": "comparison",
+    "cvType": "gps",
+    "used": false
+  }
+]

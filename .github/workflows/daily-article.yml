@@ -1,0 +1,75 @@
+name: Daily AIO Article Generation
+
+on:
+  schedule:
+    - cron: '0 1 * * *'  # 毎日 01:00 UTC = 10:00 JST
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: '記事テーマ（未指定時はtopics.jsonから自動選択）'
+        required: false
+        default: ''
+      category:
+        description: 'カテゴリ (experience / comparison / mental)'
+        required: false
+        default: 'comparison'
+      cv_type:
+        description: 'CV誘導先 (detective / gps / lawyer / uranai / all)'
+        required: false
+        default: 'all'
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Python dependencies
+        run: pip install anthropic
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Generate article
+        id: gen
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -n "${{ github.event.inputs.topic }}" ]; then
+            python scripts/generate-aio-article.py \
+              --topic "${{ github.event.inputs.topic }}" \
+              --category "${{ github.event.inputs.category }}" \
+              --cv-type "${{ github.event.inputs.cv_type }}"
+          else
+            python scripts/generate-aio-article.py
+          fi
+
+      - name: Build check
+        run: ./node_modules/.bin/astro build
+
+      - name: Commit and push
+        run: |
+          git config user.name "tekito-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add src/data/detective-columns.js scripts/topics.json
+          if git diff --cached --quiet; then
+            echo "変更なし（全トピック使用済みの可能性）"
+          else
+            TITLE=$(git diff --cached src/data/detective-columns.js | grep -o "title: '[^']*'" | head -1 | sed "s/title: '//;s/'$//")
+            git commit -m "feat(column): AIO記事を追加 — ${TITLE}"
+            git push origin HEAD
+          fi
