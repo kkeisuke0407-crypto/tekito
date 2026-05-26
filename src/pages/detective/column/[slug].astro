@@ -195,7 +195,7 @@ const isExternal = cta.href.startsWith('http') || cta.affiliate;
   </div>
 </div>
 
-<div class="col-article-body">
+<div class="col-article-body" data-nurture-article data-slug={col.slug} data-title={col.title} data-category={col.category}>
 
   <nav class="col-breadcrumb">
     <a href="/detective/">TOP</a>
@@ -312,6 +312,7 @@ const isExternal = cta.href.startsWith('http') || cta.affiliate;
 </div>
 
 <script src="/detective/app.js" is:inline defer></script>
+<script src="/detective/nurture.js" is:inline defer></script>
 <script is:inline>
   document.addEventListener('DOMContentLoaded', function() {
     // Sticky CTA: show after scrolling past 60% of viewport

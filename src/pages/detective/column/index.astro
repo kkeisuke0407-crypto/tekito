@@ -88,6 +88,8 @@ const mental     = columns.filter(c => c.category === 'mental');
 
 <div class="col-listing-body">
 
+  <div data-nurture-resume-slot></div>
+
   <div class="col-tab-wrap col-filter-bar" id="col-filter-bar">
     <button class="col-tab active" data-filter="all">すべて ({columns.length})</button>
     <button class="col-tab" data-filter="experience">体験談 ({experience.length})</button>
@@ -205,5 +207,6 @@ const mental     = columns.filter(c => c.category === 'mental');
   </div>
 </footer>
 
+<script src="/detective/nurture.js" is:inline defer></script>
 </body>
 </html>
