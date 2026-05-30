@@ -31,7 +31,7 @@ const UPDATED = "2026-05-25";
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/detective/styles.css?v=20260525w" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260530a" />
 
   <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
   <script is:inline>
@@ -77,17 +77,6 @@ const UPDATED = "2026-05-25";
         "url": "https://lawyer-nakanohito.com/",
         "logo": "https://lawyer-nakanohito.com/detective/images/logo-icon.png",
         "sameAs": ["https://www.instagram.com/lawyer.nakanohito/"]
-      },
-      {
-        "@type": "ItemList",
-        "name": "個人的に信頼できる探偵 4社",
-        "itemListOrder": "https://schema.org/ItemListOrderAscending",
-        "numberOfItems": 3,
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "うな探偵社", "url": "https://h.accesstrade.net/sp/cc?rk=0100q30i00orzx" },
-          { "@type": "ListItem", "position": 2, "name": "原一探偵事務所", "url": "https://h.accesstrade.net/sp/cc?rk=0100ken700orzx" },
-          { "@type": "ListItem", "position": 3, "name": "総合探偵社クロル", "url": "https://h.accesstrade.net/sp/cc?rk=0100paqn00orzx" }
-        ]
       },
       {
         "@type": "FAQPage",
@@ -159,14 +148,9 @@ const UPDATED = "2026-05-25";
           <span>5問で診断する：自分に必要なのはどれ？</span>
           <span class="hero-v2-quick-arrow">→</span>
         </a>
-        <a href="#ranking" class="hero-v2-quick" data-scroll-to="#ranking" data-track="hero_ranking">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <span>信頼できる探偵社4社を比較する</span>
-          <span class="hero-v2-quick-arrow">→</span>
-        </a>
-        <a href="#bennavi-section" class="hero-v2-quick" data-scroll-to="#bennavi-section" data-track="hero_lawyer">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg>
-          <span>近くの不倫慰謝料に強い弁護士を探す</span>
+        <a href="#options" class="hero-v2-quick" data-scroll-to="#options" data-track="hero_options">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+          <span>4つの選択肢から、自分に合うものを知る</span>
           <span class="hero-v2-quick-arrow">→</span>
         </a>
       </div>
@@ -205,7 +189,7 @@ const UPDATED = "2026-05-25";
     <div class="conclusion-list">
       <div class="conclusion-item">
         <span class="conclusion-item-num">1</span>
-        <div class="conclusion-item-body"><strong>あたりが付いている人</strong>：探偵に証拠収集を依頼 → 弁護士で慰謝料請求。<a href="#ranking">4社比較を見る</a></div>
+        <div class="conclusion-item-body"><strong>あたりが付いている人</strong>：探偵に証拠収集を依頼 → 弁護士で慰謝料請求。<a href="/detective/tantei/">探偵社の選び方を見る</a></div>
       </div>
       <div class="conclusion-item">
         <span class="conclusion-item-num">2</span>
@@ -213,21 +197,21 @@ const UPDATED = "2026-05-25";
       </div>
       <div class="conclusion-item">
         <span class="conclusion-item-num">3</span>
-        <div class="conclusion-item-body"><strong>すでに証拠を持っている人</strong>：自宅近くの不倫慰謝料に強い弁護士に相談。<a href="#bennavi-section">ベンナビ不倫慰謝料で探す</a></div>
+        <div class="conclusion-item-body"><strong>すでに証拠を持っている人</strong>：自宅近くの不倫慰謝料に強い弁護士に相談。<a href="/detective/lawyer/">弁護士相談ガイドを見る</a></div>
       </div>
     </div>
   </div>
 </div>
 
 <!-- ══ 4選択肢ハブ ════════════════════════════════════════════ -->
-<section class="home-section">
+<section class="home-section" id="options">
   <div class="home-section-inner">
     <div class="mag-section-head">
       <span class="mag-num">01</span>
       <h2><span class="mag-sub">Your options</span>あなたが選べる4つの選択肢</h2>
     </div>
     <div class="options-hub-grid">
-      <a href="#ranking" class="options-hub-card" data-scroll-to="#ranking" data-track="hub_detective">
+      <a href="/detective/tantei/" class="options-hub-card" data-track="hub_detective">
         <div class="options-hub-icon options-hub-icon--detective options-hub-icon--img"><img src="/detective/images/detective.png" alt="探偵" /></div>
         <div class="options-hub-body">
           <strong>探偵に依頼する</strong>
@@ -264,194 +248,23 @@ const UPDATED = "2026-05-25";
   </div>
 </section>
 
-<!-- ══ RANKING ═══════════════════════════════════════════════ -->
-<section class="dt-section ranking-section" id="ranking">
-  <div class="dt-container">
-    <div class="ranking-header">
-      <span class="kicker kicker-white">PERSONALLY SELECTED</span>
-      <h2><span class="heading-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></span> 個人的に信頼できる探偵 4社</h2>
-      <p class="ranking-header-sub">5つの基準をすべてクリアした業者のみ。実際に調査内容・報告書・料金体系を確認して厳選しました。</p>
+<!-- ══ 探偵という選択肢 ══════════════════════════════════════ -->
+<section class="home-section" id="ranking">
+  <div class="home-section-inner">
+    <div class="mag-section-head">
+      <span class="mag-num">02</span>
+      <h2><span class="mag-sub">Hire a detective</span>探偵に証拠集めを依頼する</h2>
     </div>
-
-    <div class="ranking-cards">
-
-      <!-- No.1 うな探偵社 -->
-      <div class="ranking-card rank-1 fade-up">
-        <span class="card-pr-badge">PR</span>
-        <div class="rank-badge">
-          <div class="rank-num">1</div>
-          <div>
-            <div style="font-size:.72rem;font-weight:800;color:#92400e">No.1</div>
-            <div class="rank-label">コスパ重視</div>
-          </div>
-        </div>
-        <div class="ranking-card-body">
-          <a href="https://h.accesstrade.net/sp/cc?rk=0100q30k00orzx" class="ranking-banner-link" rel="nofollow sponsored noopener" target="_blank" data-track="ranking_una_banner"><img src="https://h.accesstrade.net/sp/rr?rk=0100q30k00orzx" alt="うな探偵社" class="ranking-banner-img" loading="lazy" width="300" height="250" /></a>
-          <div class="ranking-name">うな探偵社</div>
-          <div class="ranking-badges">
-            <span class="ranking-badge-tag good">不成立0円プランあり</span>
-            <span class="ranking-badge-tag good">創業26年・実績2万件超</span>
-            <span class="ranking-badge-tag">分割払いOK</span>
-            <span class="ranking-badge-tag">裁判対応報告書</span>
-          </div>
-          <div class="eval-bars">
-            <div class="eval-bar-row"><span class="eval-bar-label">費用の安さ</span><div class="eval-bar-track"><div class="eval-bar-fill" style="width:95%"></div></div></div>
-            <div class="eval-bar-row"><span class="eval-bar-label">実績・信頼</span><div class="eval-bar-track"><div class="eval-bar-fill" style="width:82%"></div></div></div>
-            <div class="eval-bar-row"><span class="eval-bar-label">対応の柔軟性</span><div class="eval-bar-track"><div class="eval-bar-fill" style="width:78%"></div></div></div>
-          </div>
-          <div class="ranking-features">
-            <div class="ranking-feature">成功報酬プランで費用リスクゼロ（証拠なし→0円）</div>
-            <div class="ranking-feature">大手が難しい案件を任せる実力派・全国調査業協同組合理事在籍</div>
-            <div class="ranking-feature">クレカ・PayPay・分割払い対応</div>
-          </div>
-          <div class="ranking-price-row"><div class="ranking-price-label">時間制</div><div class="ranking-price">7,000円/時・1名（税込）</div></div>
-          <div class="ranking-price-row" style="margin-top:.4rem"><div class="ranking-price-label">成功報酬プラン</div><div class="ranking-price">証拠なし→0円</div></div>
-          <div class="ranking-comment">
-            <div class="ranking-comment-label">個人的な推薦コメント</div>
-            <p>創業26年・解決実績2万件超で、大手探偵社から難しい案件を依頼される実力派。業界平均の約半額の料金で成功報酬プランも用意しており、費用と品質を両立したい方に向いている。全国調査業協同組合の理事在籍で業界内での信頼も確認できている。<em>「証拠が取れなかった場合の費用リスクをゼロにできる成功報酬プランは特に安心感があります」</em></p>
-          </div>
-          <p class="ranking-for">向いている人：費用を抑えたい・失敗が怖い・品質も妥協したくない方</p>
-          <a href="https://h.accesstrade.net/sp/cc?rk=0100q30i00orzx" class="ranking-cta" data-affiliate="una" data-track="ranking_una" rel="nofollow sponsored noopener">サイトを見てみる →</a>
-          <p class="ranking-cta-micro">無料・匿名OK・秘密厳守</p>
-        </div>
+    <p>「証拠を確実に押さえたい」「慰謝料を請求したい」なら、探偵への依頼が最短ルートです。ただし<strong>料金体系を理解せずに契約すると後悔しやすい</strong>のも事実。選び方の基準と、実際に調査内容・報告書・料金を確認して推せる4社を、別ページで正直にまとめています。</p>
+    <div class="conclusion-card" style="margin-top:1.25rem;">
+      <div class="conclusion-card-title">探偵社選びで失敗しないために</div>
+      <div class="conclusion-list">
+        <div class="conclusion-item"><span class="conclusion-item-num">1</span><div class="conclusion-item-body"><strong>探偵業の届出</strong>と<strong>料金の明朗さ</strong>を確認する</div></div>
+        <div class="conclusion-item"><span class="conclusion-item-num">2</span><div class="conclusion-item-body"><strong>裁判で使える報告書</strong>の実績があるかを見る</div></div>
+        <div class="conclusion-item"><span class="conclusion-item-num">3</span><div class="conclusion-item-body">依頼前にGPSなどで<strong>行動を絞り込む</strong>と費用が下がる</div></div>
       </div>
-
-      <!-- No.2 原一探偵事務所 -->
-      <div class="ranking-card rank-2 fade-up">
-        <span class="card-pr-badge">PR</span>
-        <div class="rank-badge">
-          <div class="rank-num">2</div>
-          <div>
-            <div style="font-size:.72rem;font-weight:800;color:#64748b">No.2</div>
-            <div class="rank-label">実績・信頼重視</div>
-          </div>
-        </div>
-        <div class="ranking-card-body">
-          <a href="https://h.accesstrade.net/sp/cc?rk=0100o54w00orzx" class="ranking-banner-link" rel="nofollow sponsored noopener" target="_blank" data-track="ranking_haraichi_banner"><img src="https://h.accesstrade.net/sp/rr?rk=0100o54w00orzx" alt="原一探偵事務所" class="ranking-banner-img" loading="lazy" width="300" height="250" /></a>
-          <div class="ranking-name">原一探偵事務所</div>
-          <div class="ranking-badges">
-            <span class="ranking-badge-tag good">探偵業届出あり</span>
-            <span class="ranking-badge-tag">創業46年以上</span>
-            <span class="ranking-badge-tag good">警察OB顧問</span>
-            <span class="ranking-badge-tag">全国18拠点（自社直営）</span>
-          </div>
-          <div class="eval-bars">
-            <div class="eval-bar-row"><span class="eval-bar-label">費用の安さ</span><div class="eval-bar-track"><div class="eval-bar-fill" style="width:55%"></div></div></div>
-            <div class="eval-bar-row"><span class="eval-bar-label">実績・信頼</span><div class="eval-bar-track"><div class="eval-bar-fill" style="width:100%"></div></div></div>
-            <div class="eval-bar-row"><span class="eval-bar-label">対応の柔軟性</span><div class="eval-bar-track"><div class="eval-bar-fill" style="width:70%"></div></div></div>
-          </div>
-          <div class="ranking-features">
-            <div class="ranking-feature">年間相談50,000件以上・テレビ取材協力多数</div>
-            <div class="ranking-feature">自社車両100台・外注ゼロの直営体制</div>
-            <div class="ranking-feature">見積もり超えの追加料金ゼロを保証</div>
-          </div>
-          <div class="ranking-price-row"><div class="ranking-price-label">トライアルプラン</div><div class="ranking-price">55,000円〜（税込）</div></div>
-          <div class="ranking-price-row" style="margin-top:.4rem"><div class="ranking-price-label">標準プラン目安</div><div class="ranking-price">25万円前後（上限40万円ほど）</div></div>
-          <div class="ranking-comment">
-            <div class="ranking-comment-label">個人的な推薦コメント</div>
-            <p>46年以上の実績と全国18拠点・自社直営体制が業界随一。テレビ取材協力多数で一般認知も高く、相談のしやすさがある。料金は相場通りで安くはないが、見積もり超えの追加費用ゼロを明示している点が信頼できる。<em>「まず無料相談で担当者の対応を確認してから契約することを推奨します」</em></p>
-          </div>
-          <p class="ranking-for">向いている人：実績・安定感を最優先する方</p>
-          <a href="https://h.accesstrade.net/sp/cc?rk=0100ken700orzx" class="ranking-cta" data-affiliate="haraichi" data-track="ranking_haraichi" rel="nofollow sponsored noopener">サイトを見てみる →</a>
-          <p class="ranking-cta-micro">無料・匿名OK・秘密厳守</p>
-        </div>
-      </div>
-
-      <!-- No.3 総合探偵社クロル -->
-      <div class="ranking-card rank-3 fade-up">
-        <span class="card-pr-badge">PR</span>
-        <div class="rank-badge">
-          <div class="rank-num">3</div>
-          <div>
-            <div style="font-size:.72rem;font-weight:800;color:#92400e">No.3</div>
-            <div class="rank-label">少数精鋭・柔軟</div>
-          </div>
-        </div>
-        <div class="ranking-card-body">
-          <a href="https://h.accesstrade.net/sp/cc?rk=0100paqr00orzx" class="ranking-banner-link" rel="nofollow sponsored noopener" target="_blank" data-track="ranking_kurol_banner"><img src="https://h.accesstrade.net/sp/rr?rk=0100paqr00orzx" alt="総合探偵社クロル" class="ranking-banner-img" loading="lazy" width="300" height="250" /></a>
-          <div class="ranking-name">総合探偵社クロル</div>
-          <div class="ranking-badges">
-            <span class="ranking-badge-tag good">探偵業届出あり</span>
-            <span class="ranking-badge-tag good">余り時間を返金</span>
-            <span class="ranking-badge-tag">スタッフ全員20年超の経験</span>
-            <span class="ranking-badge-tag">東京・大阪・全国対応</span>
-          </div>
-          <div class="eval-bars">
-            <div class="eval-bar-row"><span class="eval-bar-label">費用の安さ</span><div class="eval-bar-track"><div class="eval-bar-fill" style="width:75%"></div></div></div>
-            <div class="eval-bar-row"><span class="eval-bar-label">実績・信頼</span><div class="eval-bar-track"><div class="eval-bar-fill" style="width:70%"></div></div></div>
-            <div class="eval-bar-row"><span class="eval-bar-label">対応の柔軟性</span><div class="eval-bar-track"><div class="eval-bar-fill" style="width:95%"></div></div></div>
-          </div>
-          <div class="ranking-features">
-            <div class="ranking-feature">スタッフ全員20年以上のキャリアを保有</div>
-            <div class="ranking-feature">調査日を絞って費用を最小化できる独自プラン</div>
-            <div class="ranking-feature">余った調査時間分を返金する制度あり</div>
-          </div>
-          <div class="ranking-price-row"><div class="ranking-price-label">一緒に調査プラン</div><div class="ranking-price">66,000円〜（税込）</div></div>
-          <div class="ranking-price-row" style="margin-top:.4rem"><div class="ranking-price-label">おまかせプラン</div><div class="ranking-price">198,000円〜（税込・諸経費込み）</div></div>
-          <div class="ranking-comment">
-            <div class="ranking-comment-label">個人的な推薦コメント</div>
-            <p>スタッフ全員が20年以上のキャリアを持つ少数精鋭の事務所。大手の下請けで経験を積んだ調査員が直接対応するためブランド料なしで高い調査力が得られる。余った調査時間は返金される仕組みもコスト管理しやすくて好印象。<em>「大手では断られた案件や、依頼日数を自分で調整したい方に特に向いています」</em></p>
-          </div>
-          <p class="ranking-for">向いている人：費用を明確にしたい・大手の雰囲気が苦手な方</p>
-          <a href="https://h.accesstrade.net/sp/cc?rk=0100paqn00orzx" class="ranking-cta" data-affiliate="kurol" data-track="ranking_kurol" rel="nofollow sponsored noopener">サイトを見てみる →</a>
-          <p class="ranking-cta-micro">無料・匿名OK・秘密厳守</p>
-        </div>
-      </div>
-
-      <!-- No.4 ALG探偵社 -->
-      <div class="ranking-card rank-4 fade-up">
-        <span class="card-pr-badge">PR</span>
-        <div class="rank-badge">
-          <div class="rank-num">4</div>
-          <div>
-            <div style="font-size:.72rem;font-weight:800;color:#1e3a5f">No.4</div>
-            <div class="rank-label">弁護士連携</div>
-          </div>
-        </div>
-        <div class="ranking-card-body">
-          <a href="https://px.a8.net/svt/ejp?a8mat=4B3Y38+CFQ18I+3IKY+61C2P" class="ranking-banner-link" rel="nofollow sponsored noopener" target="_blank" data-track="ranking_alg_banner"><img src="https://www24.a8.net/svt/bgt?aid=260524628752&wid=003&eno=01&mid=s00000016405001014000&mc=1" alt="ALG探偵社" class="ranking-banner-img" loading="lazy" width="300" height="250" /></a>
-          <div class="ranking-name">ALG探偵社</div>
-          <div class="ranking-badges">
-            <span class="ranking-badge-tag good">弁護士法人グループ</span>
-            <span class="ranking-badge-tag good">解約手数料0円</span>
-            <span class="ranking-badge-tag">調査員全員正社員</span>
-            <span class="ranking-badge-tag">東京・埼玉・千葉・横浜</span>
-          </div>
-          <div class="eval-bars">
-            <div class="eval-bar-row"><span class="eval-bar-label">費用の安さ</span><div class="eval-bar-track"><div class="eval-bar-fill" style="width:65%"></div></div></div>
-            <div class="eval-bar-row"><span class="eval-bar-label">実績・信頼</span><div class="eval-bar-track"><div class="eval-bar-fill" style="width:88%"></div></div></div>
-            <div class="eval-bar-row"><span class="eval-bar-label">対応の柔軟性</span><div class="eval-bar-track"><div class="eval-bar-fill" style="width:72%"></div></div></div>
-          </div>
-          <div class="ranking-features">
-            <div class="ranking-feature">弁護士法人ALG&Associates（所属弁護士90名以上）のグループ企業</div>
-            <div class="ranking-feature">調査員全員正社員・下請け外注ゼロの直接調査</div>
-            <div class="ranking-feature">解約手数料0円・後払い・カード・分割払いOK</div>
-          </div>
-          <div class="ranking-price-row"><div class="ranking-price-label">調査料金</div><div class="ranking-price">30分単位・最低1時間〜（公式で確認）</div></div>
-          <div class="ranking-comment">
-            <div class="ranking-comment-label">個人的な推薦コメント</div>
-            <p>弁護士法人グループの探偵事務所という業界初の体制が最大の強み。証拠能力はグループ弁護士がお墨付きで、慰謝料請求を見越して探偵と弁護士が一体で動ける。調査員が全員正社員で下請け外注ゼロという点も他社との明確な差別化になっている。<em>「証拠から請求まで一気通貫で進めたい方に特に向いています」</em></p>
-          </div>
-          <p class="ranking-for">向いている人：慰謝料請求まで見据えている方・関東在住の方</p>
-          <a href="#" class="ranking-cta" data-affiliate="alg" data-track="ranking_alg" rel="nofollow sponsored noopener">サイトを見てみる →</a>
-          <p class="ranking-cta-micro">無料・匿名OK・秘密厳守</p>
-        </div>
-      </div>
-
     </div>
-    <p class="ranking-note">※料金は目安です。詳細は各社に確認してください。</p>
-
-    <!-- どの探偵に頼むか迷っている方へ -->
-    <div class="matching-cta-box" id="matching">
-      <div class="matching-cta-body">
-        <div class="matching-cta-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 自分で決められない方へ</div>
-        <h3>どの探偵に頼めばいいか<br/>わからない方へ</h3>
-        <p>「事務所が多すぎて決められない」「比べてもよくわからない」という方は、まず無料相談を。状況をヒアリングした上で、合いそうな事務所を複数提案してくれます。</p>
-      </div>
-      <a href="https://h.accesstrade.net/sp/cc?rk=0100q1y600orzx" class="matching-cta-btn" data-affiliate="matching" data-track="ranking_matching" rel="nofollow sponsored noopener">
-        どこがいいか悩んでいる方はこちら →
-      </a>
-    </div>
+    <p style="text-align:center;margin-top:1.5rem;"><a href="/detective/tantei/" class="lp-cta-block-btn" style="display:inline-block;" data-track="home_tantei_pillar">探偵社の選び方と推せる4社を見る →</a></p>
   </div>
 </section>
 
@@ -484,28 +297,16 @@ const UPDATED = "2026-05-25";
       <span class="mag-num">03</span>
       <h2><span class="mag-sub">DIY check</span>自分でまず確認したい方へ</h2>
     </div>
-    <div class="self-check-box">
-      <div class="self-check-label">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        探偵に頼む前に、まず自分で確かめたい方へ
-      </div>
-      <div class="self-check-body">
-        <div class="self-check-name">GPS追跡レンタル「イチロク」</div>
-        <p class="self-check-desc">小型・完全無音のGPS機器を最短3日からレンタル。車の裏に磁石で設置するだけで、スマホから現在地・移動ルートをリアルタイムで確認できます。「まず自分で動きを確認してから判断したい」という方に。</p>
-        <ul class="self-check-features">
-          <li>3日6,800円〜／30日19,800円〜</li>
-          <li>翌日午前中配送・ポスト返却OK</li>
-          <li>Googleマップで位置・ルートを確認</li>
-          <li>探偵調査と並行して使うことも可能</li>
-        </ul>
-        <a href="https://t.afi-b.com/visit.php?a=19268q-J314580Q&p=U980234L" class="self-check-cta" rel="nofollow noopener" data-track="selfcheck_ichiroku">イチロクを見てみる →</a>
-        <p class="self-check-note">※自分名義・夫婦共有名義の車にのみ設置可能。<a href="/detective/law/" style="color:var(--navy);">合法/違法の境界線はこちら</a>でまとめています。</p>
-        <div class="self-check-detective-nudge">
-          <p>GPSは動きの確認はできますが、<strong>裁判で使える証拠にはなりません。</strong><br/>確実な証拠が必要なら、最初から探偵に依頼する方が結果的にコストを抑えられます。</p>
-          <a href="#ranking" class="self-check-detective-btn" data-scroll-to="#ranking" data-track="selfcheck_to_ranking">信頼できる探偵を見てみる →</a>
-        </div>
+    <p>「探偵に頼むほどじゃない、でもまず行動を把握したい」という方には、GPSでの下調べという選択肢もあります。費用は探偵より大幅に安く、依頼前に行動を絞り込めば調査費用も抑えられます。ただし<strong>設置できるのは自分名義／共有名義の車のみ</strong>で、位置情報単体では裁判の証拠になりません。使える条件・注意点はGPS活用ガイドで正直にまとめています。</p>
+    <div class="conclusion-card" style="margin-top:1.25rem;">
+      <div class="conclusion-card-title">GPSという選択肢のポイント</div>
+      <div class="conclusion-list">
+        <div class="conclusion-item"><span class="conclusion-item-num">○</span><div class="conclusion-item-body">費用を抑えて<strong>行動パターンを把握</strong>できる</div></div>
+        <div class="conclusion-item"><span class="conclusion-item-num">○</span><div class="conclusion-item-body">設置できるのは<strong>自分名義／共有名義の車のみ</strong></div></div>
+        <div class="conclusion-item"><span class="conclusion-item-num">×</span><div class="conclusion-item-body">位置情報単体では<strong>裁判の証拠にならない</strong></div></div>
       </div>
     </div>
+    <p style="text-align:center;margin-top:1.5rem;"><a href="/detective/gps/" class="lp-cta-block-btn" style="display:inline-block;" data-track="home_gps_pillar">GPS活用ガイドを見る →</a></p>
   </div>
 </section>
 
@@ -564,21 +365,16 @@ const UPDATED = "2026-05-25";
       <span class="mag-num">06</span>
       <h2><span class="mag-sub">Find a lawyer</span>近くの不倫慰謝料に強い弁護士を探す</h2>
     </div>
-    <p>不貞の証拠を持っていて慰謝料請求を進めたい段階なら、弁護士の力が必要です。交渉が不調に終わると調停・訴訟へと発展することもあるため、<strong>自宅から通える地域の不倫慰謝料特化事務所</strong>を選ぶことが結果を左右します。</p>
-
-    <div class="bennavi-hero">
-      <span class="bennavi-hero-tag">推奨マッチングサービス</span>
-      <h3>地域から、不倫慰謝料に強い<em>弁護士</em>を探せる<br/>「ベンナビ不倫慰謝料」</h3>
-      <p class="bennavi-lead">株式会社アシロ運営の弁護士検索サービス。お住まいの地域・取扱分野・無料相談有無で絞り込み検索できます。</p>
-      <div class="bennavi-features">
-        <div class="bennavi-feature"><strong>地域検索</strong>都道府県・最寄駅</div>
-        <div class="bennavi-feature"><strong>慰謝料特化</strong>不貞・不倫・示談交渉</div>
-        <div class="bennavi-feature"><strong>無料相談</strong>初回無料の事務所多数</div>
+    <p>不貞の証拠を持っていて慰謝料請求を進めたい段階なら、弁護士の力が必要です。交渉が不調に終わると調停・訴訟へと発展することもあるため、<strong>自宅から通える地域の不倫慰謝料特化事務所</strong>を選ぶことが結果を左右します。弁護士に相談すべきタイミング・探偵との順番・費用の目安は、弁護士相談ガイドで整理しています。</p>
+    <div class="conclusion-card" style="margin-top:1.25rem;">
+      <div class="conclusion-card-title">弁護士相談で押さえること</div>
+      <div class="conclusion-list">
+        <div class="conclusion-item"><span class="conclusion-item-num">1</span><div class="conclusion-item-body">順番は<strong>「証拠（探偵）→ 法的手続き（弁護士）」</strong>が基本</div></div>
+        <div class="conclusion-item"><span class="conclusion-item-num">2</span><div class="conclusion-item-body">通いやすい<strong>地域の不倫慰謝料特化事務所</strong>を選ぶ</div></div>
+        <div class="conclusion-item"><span class="conclusion-item-num">3</span><div class="conclusion-item-body">初回<strong>無料相談</strong>で方針と費用感を確認する</div></div>
       </div>
-      <a href="#" data-affiliate="bennavi" rel="nofollow sponsored noopener" class="bennavi-cta" data-track="home_bennavi_main">ベンナビ不倫慰謝料で弁護士を探す →</a>
-      <p class="bennavi-note">公式サイトで最新情報をご確認ください</p>
     </div>
-    <p style="text-align:center;margin-top:1rem;"><a href="/detective/lawyer/" style="color:var(--navy);font-weight:700;text-decoration:underline;" data-track="home_lawyer_guide">弁護士相談ガイドの詳細はこちら →</a></p>
+    <p style="text-align:center;margin-top:1.5rem;"><a href="/detective/lawyer/" class="lp-cta-block-btn" style="display:inline-block;" data-track="home_lawyer_pillar">弁護士相談ガイドを見る →</a></p>
   </div>
 </section>
 
@@ -589,14 +385,8 @@ const UPDATED = "2026-05-25";
       <span class="mag-num">07</span>
       <h2><span class="mag-sub">Talk first</span>気持ちを整える時間も大切に</h2>
     </div>
-    <p>確信が持てない・誰にも相談できない段階で無理に動くと、判断を誤りやすくなります。<strong>動く前に気持ちを整える</strong>のも、結果的に近道になることがあります。</p>
-    <div class="lp-cta-block uranai">
-      <h3>電話占いヴェルニに相談する</h3>
-      <p>創業20年以上の老舗。在籍占い師多数で、自分に合う相談相手を選べます。匿名・24時間対応。</p>
-      <a href="https://vernis.jp/affiliate/?af=1234" class="lp-cta-block-btn" rel="nofollow sponsored noopener" data-track="home_uranai_cta">公式サイトで詳細を見る →</a>
-      <p class="lp-cta-block-note">初回最大4,000円分無料・24時間対応</p>
-    </div>
-    <p style="text-align:center;margin-top:1rem;"><a href="/detective/uranai/" style="color:var(--navy);font-weight:700;text-decoration:underline;" data-track="home_uranai_guide">電話相談ガイドの詳細はこちら →</a></p>
+    <p>確信が持てない・誰にも相談できない段階で無理に動くと、判断を誤りやすくなります。<strong>動く前に気持ちを整える</strong>のも、結果的に近道になることがあります。「確かめるのが怖い」「誰にも言えない」という方に向けて、匿名で話を聞いてもらえる相談先を電話相談ガイドでまとめています。</p>
+    <p style="text-align:center;margin-top:1.5rem;"><a href="/detective/uranai/" class="lp-cta-block-btn" style="display:inline-block;" data-track="home_uranai_pillar">気持ちの整理から始めたい方へ →</a></p>
   </div>
 </section>
 
@@ -642,7 +432,7 @@ const UPDATED = "2026-05-25";
     </div>
     <div class="lp-card">
       <h3 style="font-size:.98rem;color:var(--navy);margin-bottom:.4rem;">Q. 弁護士はどこで探せばいいですか？</h3>
-      <p style="font-size:.9rem;line-height:1.85;">交渉が調停・訴訟に発展すると何度も動くことになるため、<strong>自宅から通いやすい『地域の不倫慰謝料に強い弁護士』</strong>を選ぶのが鉄則。<a href="#bennavi-section">ベンナビ不倫慰謝料</a>なら地域・取扱分野・無料相談有無で絞り込めます。</p>
+      <p style="font-size:.9rem;line-height:1.85;">交渉が調停・訴訟に発展すると何度も動くことになるため、<strong>自宅から通いやすい『地域の不倫慰謝料に強い弁護士』</strong>を選ぶのが鉄則。選び方は<a href="/detective/lawyer/">弁護士相談ガイド</a>でまとめています。</p>
     </div>
     <div class="lp-card">
       <h3 style="font-size:.98rem;color:var(--navy);margin-bottom:.4rem;">Q. 浮気調査の費用相場は？</h3>
