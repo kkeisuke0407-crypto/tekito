@@ -631,6 +631,21 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin: 0 .8rem;
 }
 
+/* 関東向け：実質1位の地域補足カード */
+.ranking-card--region { border-color: #2563eb; }
+.ranking-region-note {
+  display: flex; align-items: flex-start; gap: .5rem;
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  border: 1px solid #bfdbfe; border-left: 4px solid #2563eb;
+  border-radius: 8px; padding: .6rem .7rem;
+  margin: .75rem 0 .5rem;
+  font-size: .8rem; line-height: 1.65; color: #1e3a5f;
+}
+.ranking-region-note svg {
+  flex-shrink: 0; width: 18px; height: 18px; color: #2563eb; margin-top: .1rem;
+}
+.ranking-region-note strong { color: #1d4ed8; font-weight: 800; }
+
 @media (max-width: 720px) {
   .ranking-hero-card { padding: 1.25rem .9rem 1.1rem; }
   .ranking-hero-grid { grid-template-columns: 1fr; gap: 1rem; }
