@@ -909,6 +909,22 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .risk-grid { grid-template-columns: repeat(2, 1fr); }
   .points-grid { grid-template-columns: 1fr; }
   .points-grid > *:last-child { grid-column: auto; }
+
+  /* Nav bar: prevent horizontal overflow on narrow phones */
+  .col-header-nav-inner {
+    gap: .55rem;
+    font-size: .71rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+    height: auto;
+    min-height: 44px;
+    padding-top: .55rem;
+    padding-bottom: .55rem;
+  }
+  .col-header-nav-inner::-webkit-scrollbar { display: none; }
+  .col-header-nav a, .col-header-nav .col-nav-sep { white-space: nowrap; flex-shrink: 0; }
 }
 
 /* ══════════════════════════════════════════════════
@@ -1228,6 +1244,17 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   box-shadow: var(--shadow-md);
   border: 1px solid var(--border);
 }
+.compare-scroll-hint {
+  display: none;
+  font-size: .72rem;
+  color: var(--muted);
+  text-align: center;
+  padding: .55rem .75rem .3rem;
+  margin: 0;
+  background: #fff;
+  border-radius: 12px 12px 0 0;
+  border-bottom: 1px dashed var(--border);
+}
 .compare-tbl {
   width: 100%;
   border-collapse: collapse;
@@ -1365,6 +1392,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .compare-label { font-size: .76rem; white-space: normal; }
   .reassurance-grid { grid-template-columns: 1fr; }
   .situation-list { grid-template-columns: 1fr; }
+  .compare-scroll-hint { display: block; }
+  .compare-th, .compare-tbl tbody td:not(.compare-label), .compare-good {
+    padding: .6rem .65rem;
+    font-size: .8rem;
+  }
 }
 
 /* ══ LP NEW SECTIONS ═════════════════════════════════
@@ -4423,3 +4455,150 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .ranking-banner-link:hover { opacity: .85; }
 .ranking-banner-img { width: 100%; height: auto; display: block; }
 
+
+
+/* ══════════════════════════════════════════════════
+   ナーチャリング（しおり・プライバシー配慮）
+   ══════════════════════════════════════════════════ */
+
+/* ── 「前回の続き」カード ─────────────────── */
+.nurture-resume {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+  background: linear-gradient(135deg, #fff7e6, #fff);
+  border: 1.5px solid var(--gold-lt);
+  border-radius: 12px;
+  padding: .9rem 1rem;
+  margin: 0 0 1.5rem;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+.nurture-resume-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+.nurture-resume-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+}
+.nurture-resume-label {
+  font-size: .72rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: .04em;
+}
+.nurture-resume-link {
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-decoration: none;
+  line-height: 1.4;
+}
+.nurture-resume-link:hover {
+  color: var(--gold);
+  text-decoration: underline;
+}
+.nurture-resume-close {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: .25rem .4rem;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.nurture-resume-close:hover { background: rgba(0,0,0,.05); }
+
+/* ── プライバシー配慮バナー ───────────────── */
+.nurture-privacy-banner {
+  position: fixed;
+  bottom: -100px;
+  left: 0;
+  right: 0;
+  z-index: 150;
+  background: rgba(13,27,46,.97);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255,255,255,.1);
+  color: #fff;
+  padding: .85rem 1rem;
+  font-size: .8rem;
+  line-height: 1.55;
+  opacity: 0;
+  transition: bottom .35s ease, opacity .35s ease;
+}
+.nurture-privacy-banner.nurture-privacy-show {
+  bottom: 0;
+  opacity: 1;
+}
+.nurture-privacy-banner.nurture-privacy-hide {
+  bottom: -100px;
+  opacity: 0;
+}
+.nurture-privacy-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+.nurture-privacy-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.nurture-privacy-text {
+  flex: 1;
+  color: rgba(255,255,255,.88);
+}
+.nurture-privacy-text strong {
+  color: var(--gold-lt);
+  font-weight: 700;
+}
+.nurture-privacy-close {
+  background: var(--gold);
+  color: #fff;
+  border: none;
+  padding: .4rem .9rem;
+  border-radius: 6px;
+  font-size: .75rem;
+  font-weight: 800;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.nurture-privacy-close:hover { background: var(--gold-lt); color: var(--navy); }
+
+@media (max-width: 480px) {
+  .nurture-privacy-banner { font-size: .74rem; padding: .7rem .85rem; }
+  .nurture-privacy-inner { gap: .55rem; }
+  .nurture-privacy-close { padding: .35rem .75rem; font-size: .72rem; }
+}
+
+/* ── 次におすすめ（記事末関連記事の強調） ── */
+.nurture-next-suggestion {
+  background: linear-gradient(135deg, var(--beige), #fff);
+  border: 1.5px solid var(--beige-mid);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-top: 2.5rem;
+  box-shadow: var(--shadow);
+}
+.nurture-next-suggestion-title {
+  font-size: .75rem;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: .85rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.nurture-next-suggestion-title::before {
+  content: "💡";
+  font-size: 1rem;
+}
