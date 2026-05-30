@@ -1,0 +1,39 @@
+name: Clarity Data Fetch (manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      numOfDays:
+        description: '取得日数 (1, 2, or 3)'
+        required: false
+        default: '3'
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Fetch Clarity data
+        env:
+          CLARITY_TOKEN: ${{ secrets.CLARITY_TOKEN }}
+        run: |
+          chmod +x scripts/fetch-clarity.sh
+          ./scripts/fetch-clarity.sh "${{ github.event.inputs.numOfDays }}"
+
+      - name: Commit and push
+        run: |
+          git config user.name "tekito-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/clarity/
+          if git diff --cached --quiet; then
+            echo "変更なし"
+          else
+            git commit -m "chore(clarity): データ取得 ($(date -u +%Y-%m-%d))"
+            git push origin HEAD
+          fi
