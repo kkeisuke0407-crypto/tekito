@@ -1,0 +1,3120 @@
+{
+  "fetchedAt": "2026-05-30T00:41:47Z",
+  "numOfDays": 3,
+  "queries": [
+{
+  "label": "overall",
+  "data": [
+    {
+      "metricName": "DeadClickCount",
+      "information": [
+        {
+          "sessionsCount": "26",
+          "sessionsWithMetricPercentage": 7.69,
+          "sessionsWithoutMetricPercentage": 92.31,
+          "pagesViews": "2",
+          "subTotal": "2"
+        }
+      ]
+    },
+    {
+      "metricName": "ExcessiveScroll",
+      "information": [
+        {
+          "sessionsCount": "26",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0"
+        }
+      ]
+    },
+    {
+      "metricName": "RageClickCount",
+      "information": [
+        {
+          "sessionsCount": "26",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0"
+        }
+      ]
+    },
+    {
+      "metricName": "QuickbackClick",
+      "information": [
+        {
+          "sessionsCount": "26",
+          "sessionsWithMetricPercentage": 11.54,
+          "sessionsWithoutMetricPercentage": 88.46000000000001,
+          "pagesViews": "7",
+          "subTotal": "7"
+        }
+      ]
+    },
+    {
+      "metricName": "ScriptErrorCount",
+      "information": [
+        {
+          "sessionsCount": "26",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0"
+        }
+      ]
+    },
+    {
+      "metricName": "ErrorClickCount",
+      "information": [
+        {
+          "sessionsCount": "26",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0"
+        }
+      ]
+    },
+    {
+      "metricName": "ScrollDepth",
+      "information": [
+        {
+          "averageScrollDepth": 41.09
+        }
+      ]
+    },
+    {
+      "metricName": "Traffic",
+      "information": [
+        {
+          "totalSessionCount": "26",
+          "totalBotSessionCount": "1",
+          "distinctUserCount": "14",
+          "pagesPerSessionPercentage": 1.7037037037037037
+        }
+      ]
+    },
+    {
+      "metricName": "EngagementTime",
+      "information": [
+        {
+          "totalTime": "69",
+          "activeTime": "34"
+        }
+      ]
+    },
+    {
+      "metricName": "Browser",
+      "information": [
+        {
+          "name": "InstagramApp",
+          "sessionsCount": "24"
+        },
+        {
+          "name": "Chrome",
+          "sessionsCount": "2"
+        }
+      ]
+    },
+    {
+      "metricName": "Device",
+      "information": [
+        {
+          "name": "Mobile",
+          "sessionsCount": "24"
+        },
+        {
+          "name": "PC",
+          "sessionsCount": "2"
+        }
+      ]
+    },
+    {
+      "metricName": "OS",
+      "information": [
+        {
+          "name": "IOS",
+          "sessionsCount": "21"
+        },
+        {
+          "name": "Android",
+          "sessionsCount": "3"
+        },
+        {
+          "name": "Windows",
+          "sessionsCount": "2"
+        }
+      ]
+    },
+    {
+      "metricName": "Country",
+      "information": [
+        {
+          "name": "Japan",
+          "sessionsCount": "26"
+        }
+      ]
+    },
+    {
+      "metricName": "PageTitle",
+      "information": [
+        {
+          "name": "中の人ナビ｜浮気・不倫で悩んだときの全選択肢ガイド",
+          "sessionsCount": "25"
+        },
+        {
+          "name": "実体験まとめ｜事務所で見た浮気調査・慰謝料の事例集｜中の人ナビ",
+          "sessionsCount": "4"
+        },
+        {
+          "name": "浮気調査の費用相場｜中の人ナビ",
+          "sessionsCount": "3"
+        },
+        {
+          "name": "5問診断｜あなたに必要な選択肢が見つかる｜中の人ナビ",
+          "sessionsCount": "3"
+        },
+        {
+          "name": "不倫の慰謝料を請求したい方へ｜中の人ナビ",
+          "sessionsCount": "2"
+        },
+        {
+          "name": "浮気・不倫まわりの『法律の境界線』｜中の人ナビ",
+          "sessionsCount": "2"
+        },
+        {
+          "name": "探偵社選びで失敗しないための5つのチェックポイント【事務員が見た現場】",
+          "sessionsCount": "1"
+        },
+        {
+          "name": "コラム一覧｜中の人ナビ",
+          "sessionsCount": "1"
+        }
+      ]
+    },
+    {
+      "metricName": "ReferrerUrl",
+      "information": [
+        {
+          "name": "https://l.instagram.com/",
+          "sessionsCount": "22"
+        },
+        {
+          "name": "https://vpscomparehub.com/detective/flow/",
+          "sessionsCount": "3"
+        },
+        {
+          "name": "https://vpscomparehub.com/detective/",
+          "sessionsCount": "2"
+        },
+        {
+          "name": "https://vpscomparehub.com/detective/law/",
+          "sessionsCount": "2"
+        },
+        {
+          "name": "https://vpscomparehub.com/detective/cost/",
+          "sessionsCount": "2"
+        },
+        {
+          "name": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnoU8NvPqy7xM3DtOmn0kb_GGBRhlFkGs_q9NbpYn_EgOzTlLs0EJFDlRSO5E_aem_wFMDsep2Xm2-06hZdPhRFQ",
+          "sessionsCount": "1"
+        },
+        {
+          "name": "https://vpscomparehub.com/detective/lawyer/",
+          "sessionsCount": "1"
+        },
+        {
+          "name": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGn0fHPU8zJKb9UuSQz4bixwOGiTr1kuwA9aBYdC0i8S-YbIwPXS4DM9FAp5eg_aem_jYInclHIRpS3TYaDe_IF_g",
+          "sessionsCount": "1"
+        },
+        {
+          "name": "https://vpscomparehub.com/detective/column/",
+          "sessionsCount": "1"
+        },
+        {
+          "name": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnlHAY2Sz5zE_t-HcNrRzK-_sw5U2aeOiytH1imfj_J7kAAZaD1SvosfOp_Tc_aem_o4DpAND4nx3Kj6v3ieVosA",
+          "sessionsCount": "1"
+        }
+      ]
+    },
+    {
+      "metricName": "PopularPages",
+      "information": [
+        {
+          "url": "https://vpscomparehub.com/detective/",
+          "visitsCount": "26"
+        },
+        {
+          "url": "https://vpscomparehub.com/detective/cases/",
+          "visitsCount": "4"
+        },
+        {
+          "url": "https://vpscomparehub.com/detective/flow/",
+          "visitsCount": "3"
+        },
+        {
+          "url": "https://vpscomparehub.com/detective/cost/",
+          "visitsCount": "3"
+        },
+        {
+          "url": "https://vpscomparehub.com/detective/lawyer/",
+          "visitsCount": "2"
+        },
+        {
+          "url": "https://vpscomparehub.com/detective/law/",
+          "visitsCount": "2"
+        },
+        {
+          "url": "https://vpscomparehub.com/detective/column/tantei-shippai-shinai-5check/",
+          "visitsCount": "1"
+        },
+        {
+          "url": "https://vpscomparehub.com/detective/column/",
+          "visitsCount": "1"
+        }
+      ]
+    }
+  ]
+}
+,
+{
+  "label": "byPage",
+  "data": [
+    {
+      "metricName": "DeadClickCount",
+      "information": [
+        {
+          "sessionsCount": "3",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/column/tantei-shippai-shinai-5check/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnt3Ja9fHp7vUmhDKIP1GZrnZ0k1XHHknz5za03tFx-yRjKp7Mv62onVg0rwA_aem_SmFF2YMGfjdiK9AXr21AIw"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnlHAY2Sz5zE_t-HcNrRzK-_sw5U2aeOiytH1imfj_J7kAAZaD1SvosfOp_Tc_aem_o4DpAND4nx3Kj6v3ieVosA"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnmOkU24M-i7dYqdVrufg98597f2KtHxB0nU8_wC03Vut53Kr9akClCKkq2eE_aem_OM9_sqLPOtbYAJTZl9FN9A"
+        },
+        {
+          "sessionsCount": "4",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/cases/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnZOh4rqeE6LQK3RrqANMSJ-LEMCy55AFIHchpVlIWxMsHkOHZovhS0xKNVrI_aem_rQ8Nz1Sz08bjHwyW91hb9g"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnTYpzZLUQkmH8PGEM7D1McZy-cxSwQSM7GV1tqeX47afFpzlwfFCstcdCTGM_aem_JNoo8cs6Bdy-o_JzSNv30g"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGngyfX8vK5cTiifRjNY96-yAljmXanoaBrNvLIsW9hZFB_Fev41qxZ0IGq2o8_aem_9T2Xg7_LC9G6YqkN9MIETQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnCIpDs3oyNOZpct645ej-b_MLAM4t50ZYmzIdYSQTJgtaJv6MKTYbaj_i_98_aem_gDZ30v2DBKajXK6qIrswDw"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnHmaTuw5rO2msE9NcZbjOTvY2C_xa_9wrGZXLPCuUjyDbAoyuUW6BmjOcHxs_aem_kzSRhM7LcBuB9kl_hldJKQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnPh9ry2n5jhFYMloQKmDdz7aWEr_wm29kyX0ZzIXpq2CHYNLskq6Kp0XLeuY_aem_vkJYSsaLOmCzBdjvAQdbgw"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn3rsallPfrI7LBLRRzGo8v8e8PdTdbl9SZjkGOf04PGWCdvwgwEzjEaxvnIY_aem_j3AnV39Ew1RPMoHTCMO67g"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnxa9tydA2xLTllIrhco6nIyw8Iw7VlA9OFSvAEBI21JEbzbKi4vPkrTyMflM_aem_L8K6o4DAC1-nxV1Cfvpacg"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGn0fHPU8zJKb9UuSQz4bixwOGiTr1kuwA9aBYdC0i8S-YbIwPXS4DM9FAp5eg_aem_jYInclHIRpS3TYaDe_IF_g"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 50,
+          "sessionsWithoutMetricPercentage": 50,
+          "pagesViews": "1",
+          "subTotal": "1",
+          "Url": "https://vpscomparehub.com/detective/lawyer/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn1immQjrjvW9_KPHECnBX35l5gGPvWkUgtKHxvZPsqkeDJQ2nxlep0DJO_cA_aem_HUvZnfZcwxTsbOxXR3FJdQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/column/"
+        },
+        {
+          "sessionsCount": "3",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/flow/"
+        },
+        {
+          "sessionsCount": "3",
+          "sessionsWithMetricPercentage": 33.33,
+          "sessionsWithoutMetricPercentage": 66.67,
+          "pagesViews": "1",
+          "subTotal": "1",
+          "Url": "https://vpscomparehub.com/detective/cost/"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/law/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnXSTDgXwu1P2Tyb08dKizISVJ-nfdb8y-WYQxRL-5oypgWJaWR67K4KbjDko_aem_nJq8DEPCS3ogi9gQkMqtSA"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnABQzckD6lwZuHZRFU3HHXDsaQ5r_UPkX7WFnRlMqeA3Trc8sfmutJY6Y8v0_aem_Huyimc_r5lEhnH0znliwtQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnvrbvPmfuWmgRA1WkzYMppPxGTpqI54ZTbHNKik2Qmp81SLvzAzuTYHsMlz8_aem_7AB4ybaR-fkQ0mkg0In1dg"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnn9vX2pYVNeSEdIyi-alA_VBMUU-i06EUObQZWrqNZn3vLIlSFU5ZoiNqgyg_aem_0ii6XxHXi62TzFBCrjMPTQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn9p6b5iD85Y_UO7-KMNxcjKz9Q9oqAa2tCEQ8uy1ckMlhTFyVrRyywx-btW8_aem_edrMIazF37SU6GG4RAWB5w"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnu7b6RRh7dgOvCpFwXUkLMwzkes_lJM-cqyBFKqFlxIHyn-SwF1xUfHMMiTg_aem_spO0XD4sXB8y7I2Ls65pCw"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn0SZiXtjfwIM4-jqZ-ZBRyCoPRoQJhAgWUp522LQgQpz8Se2NlQNOPSNnmQQ_aem_t4dleg4T__QKTVVE8rDh_Q"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnoU8NvPqy7xM3DtOmn0kb_GGBRhlFkGs_q9NbpYn_EgOzTlLs0EJFDlRSO5E_aem_wFMDsep2Xm2-06hZdPhRFQ"
+        }
+      ]
+    },
+    {
+      "metricName": "ExcessiveScroll",
+      "information": [
+        {
+          "sessionsCount": "3",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/column/tantei-shippai-shinai-5check/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnt3Ja9fHp7vUmhDKIP1GZrnZ0k1XHHknz5za03tFx-yRjKp7Mv62onVg0rwA_aem_SmFF2YMGfjdiK9AXr21AIw"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnlHAY2Sz5zE_t-HcNrRzK-_sw5U2aeOiytH1imfj_J7kAAZaD1SvosfOp_Tc_aem_o4DpAND4nx3Kj6v3ieVosA"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnmOkU24M-i7dYqdVrufg98597f2KtHxB0nU8_wC03Vut53Kr9akClCKkq2eE_aem_OM9_sqLPOtbYAJTZl9FN9A"
+        },
+        {
+          "sessionsCount": "4",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/cases/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnZOh4rqeE6LQK3RrqANMSJ-LEMCy55AFIHchpVlIWxMsHkOHZovhS0xKNVrI_aem_rQ8Nz1Sz08bjHwyW91hb9g"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnTYpzZLUQkmH8PGEM7D1McZy-cxSwQSM7GV1tqeX47afFpzlwfFCstcdCTGM_aem_JNoo8cs6Bdy-o_JzSNv30g"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGngyfX8vK5cTiifRjNY96-yAljmXanoaBrNvLIsW9hZFB_Fev41qxZ0IGq2o8_aem_9T2Xg7_LC9G6YqkN9MIETQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnCIpDs3oyNOZpct645ej-b_MLAM4t50ZYmzIdYSQTJgtaJv6MKTYbaj_i_98_aem_gDZ30v2DBKajXK6qIrswDw"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnHmaTuw5rO2msE9NcZbjOTvY2C_xa_9wrGZXLPCuUjyDbAoyuUW6BmjOcHxs_aem_kzSRhM7LcBuB9kl_hldJKQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnPh9ry2n5jhFYMloQKmDdz7aWEr_wm29kyX0ZzIXpq2CHYNLskq6Kp0XLeuY_aem_vkJYSsaLOmCzBdjvAQdbgw"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn3rsallPfrI7LBLRRzGo8v8e8PdTdbl9SZjkGOf04PGWCdvwgwEzjEaxvnIY_aem_j3AnV39Ew1RPMoHTCMO67g"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnxa9tydA2xLTllIrhco6nIyw8Iw7VlA9OFSvAEBI21JEbzbKi4vPkrTyMflM_aem_L8K6o4DAC1-nxV1Cfvpacg"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGn0fHPU8zJKb9UuSQz4bixwOGiTr1kuwA9aBYdC0i8S-YbIwPXS4DM9FAp5eg_aem_jYInclHIRpS3TYaDe_IF_g"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/lawyer/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn1immQjrjvW9_KPHECnBX35l5gGPvWkUgtKHxvZPsqkeDJQ2nxlep0DJO_cA_aem_HUvZnfZcwxTsbOxXR3FJdQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/column/"
+        },
+        {
+          "sessionsCount": "3",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/flow/"
+        },
+        {
+          "sessionsCount": "3",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/cost/"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/law/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnXSTDgXwu1P2Tyb08dKizISVJ-nfdb8y-WYQxRL-5oypgWJaWR67K4KbjDko_aem_nJq8DEPCS3ogi9gQkMqtSA"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnABQzckD6lwZuHZRFU3HHXDsaQ5r_UPkX7WFnRlMqeA3Trc8sfmutJY6Y8v0_aem_Huyimc_r5lEhnH0znliwtQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnvrbvPmfuWmgRA1WkzYMppPxGTpqI54ZTbHNKik2Qmp81SLvzAzuTYHsMlz8_aem_7AB4ybaR-fkQ0mkg0In1dg"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnn9vX2pYVNeSEdIyi-alA_VBMUU-i06EUObQZWrqNZn3vLIlSFU5ZoiNqgyg_aem_0ii6XxHXi62TzFBCrjMPTQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn9p6b5iD85Y_UO7-KMNxcjKz9Q9oqAa2tCEQ8uy1ckMlhTFyVrRyywx-btW8_aem_edrMIazF37SU6GG4RAWB5w"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnu7b6RRh7dgOvCpFwXUkLMwzkes_lJM-cqyBFKqFlxIHyn-SwF1xUfHMMiTg_aem_spO0XD4sXB8y7I2Ls65pCw"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn0SZiXtjfwIM4-jqZ-ZBRyCoPRoQJhAgWUp522LQgQpz8Se2NlQNOPSNnmQQ_aem_t4dleg4T__QKTVVE8rDh_Q"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnoU8NvPqy7xM3DtOmn0kb_GGBRhlFkGs_q9NbpYn_EgOzTlLs0EJFDlRSO5E_aem_wFMDsep2Xm2-06hZdPhRFQ"
+        }
+      ]
+    },
+    {
+      "metricName": "RageClickCount",
+      "information": [
+        {
+          "sessionsCount": "3",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/column/tantei-shippai-shinai-5check/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnt3Ja9fHp7vUmhDKIP1GZrnZ0k1XHHknz5za03tFx-yRjKp7Mv62onVg0rwA_aem_SmFF2YMGfjdiK9AXr21AIw"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnlHAY2Sz5zE_t-HcNrRzK-_sw5U2aeOiytH1imfj_J7kAAZaD1SvosfOp_Tc_aem_o4DpAND4nx3Kj6v3ieVosA"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnmOkU24M-i7dYqdVrufg98597f2KtHxB0nU8_wC03Vut53Kr9akClCKkq2eE_aem_OM9_sqLPOtbYAJTZl9FN9A"
+        },
+        {
+          "sessionsCount": "4",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/cases/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnZOh4rqeE6LQK3RrqANMSJ-LEMCy55AFIHchpVlIWxMsHkOHZovhS0xKNVrI_aem_rQ8Nz1Sz08bjHwyW91hb9g"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnTYpzZLUQkmH8PGEM7D1McZy-cxSwQSM7GV1tqeX47afFpzlwfFCstcdCTGM_aem_JNoo8cs6Bdy-o_JzSNv30g"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGngyfX8vK5cTiifRjNY96-yAljmXanoaBrNvLIsW9hZFB_Fev41qxZ0IGq2o8_aem_9T2Xg7_LC9G6YqkN9MIETQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnCIpDs3oyNOZpct645ej-b_MLAM4t50ZYmzIdYSQTJgtaJv6MKTYbaj_i_98_aem_gDZ30v2DBKajXK6qIrswDw"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnHmaTuw5rO2msE9NcZbjOTvY2C_xa_9wrGZXLPCuUjyDbAoyuUW6BmjOcHxs_aem_kzSRhM7LcBuB9kl_hldJKQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnPh9ry2n5jhFYMloQKmDdz7aWEr_wm29kyX0ZzIXpq2CHYNLskq6Kp0XLeuY_aem_vkJYSsaLOmCzBdjvAQdbgw"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn3rsallPfrI7LBLRRzGo8v8e8PdTdbl9SZjkGOf04PGWCdvwgwEzjEaxvnIY_aem_j3AnV39Ew1RPMoHTCMO67g"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnxa9tydA2xLTllIrhco6nIyw8Iw7VlA9OFSvAEBI21JEbzbKi4vPkrTyMflM_aem_L8K6o4DAC1-nxV1Cfvpacg"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGn0fHPU8zJKb9UuSQz4bixwOGiTr1kuwA9aBYdC0i8S-YbIwPXS4DM9FAp5eg_aem_jYInclHIRpS3TYaDe_IF_g"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/lawyer/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn1immQjrjvW9_KPHECnBX35l5gGPvWkUgtKHxvZPsqkeDJQ2nxlep0DJO_cA_aem_HUvZnfZcwxTsbOxXR3FJdQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/column/"
+        },
+        {
+          "sessionsCount": "3",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/flow/"
+        },
+        {
+          "sessionsCount": "3",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/cost/"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/law/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnXSTDgXwu1P2Tyb08dKizISVJ-nfdb8y-WYQxRL-5oypgWJaWR67K4KbjDko_aem_nJq8DEPCS3ogi9gQkMqtSA"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnABQzckD6lwZuHZRFU3HHXDsaQ5r_UPkX7WFnRlMqeA3Trc8sfmutJY6Y8v0_aem_Huyimc_r5lEhnH0znliwtQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnvrbvPmfuWmgRA1WkzYMppPxGTpqI54ZTbHNKik2Qmp81SLvzAzuTYHsMlz8_aem_7AB4ybaR-fkQ0mkg0In1dg"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnn9vX2pYVNeSEdIyi-alA_VBMUU-i06EUObQZWrqNZn3vLIlSFU5ZoiNqgyg_aem_0ii6XxHXi62TzFBCrjMPTQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn9p6b5iD85Y_UO7-KMNxcjKz9Q9oqAa2tCEQ8uy1ckMlhTFyVrRyywx-btW8_aem_edrMIazF37SU6GG4RAWB5w"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnu7b6RRh7dgOvCpFwXUkLMwzkes_lJM-cqyBFKqFlxIHyn-SwF1xUfHMMiTg_aem_spO0XD4sXB8y7I2Ls65pCw"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn0SZiXtjfwIM4-jqZ-ZBRyCoPRoQJhAgWUp522LQgQpz8Se2NlQNOPSNnmQQ_aem_t4dleg4T__QKTVVE8rDh_Q"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnoU8NvPqy7xM3DtOmn0kb_GGBRhlFkGs_q9NbpYn_EgOzTlLs0EJFDlRSO5E_aem_wFMDsep2Xm2-06hZdPhRFQ"
+        }
+      ]
+    },
+    {
+      "metricName": "QuickbackClick",
+      "information": [
+        {
+          "sessionsCount": "3",
+          "sessionsWithMetricPercentage": 33.33,
+          "sessionsWithoutMetricPercentage": 66.67,
+          "pagesViews": "1",
+          "subTotal": "1",
+          "Url": "https://vpscomparehub.com/detective/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/column/tantei-shippai-shinai-5check/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnt3Ja9fHp7vUmhDKIP1GZrnZ0k1XHHknz5za03tFx-yRjKp7Mv62onVg0rwA_aem_SmFF2YMGfjdiK9AXr21AIw"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnlHAY2Sz5zE_t-HcNrRzK-_sw5U2aeOiytH1imfj_J7kAAZaD1SvosfOp_Tc_aem_o4DpAND4nx3Kj6v3ieVosA"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnmOkU24M-i7dYqdVrufg98597f2KtHxB0nU8_wC03Vut53Kr9akClCKkq2eE_aem_OM9_sqLPOtbYAJTZl9FN9A"
+        },
+        {
+          "sessionsCount": "4",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/cases/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnZOh4rqeE6LQK3RrqANMSJ-LEMCy55AFIHchpVlIWxMsHkOHZovhS0xKNVrI_aem_rQ8Nz1Sz08bjHwyW91hb9g"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnTYpzZLUQkmH8PGEM7D1McZy-cxSwQSM7GV1tqeX47afFpzlwfFCstcdCTGM_aem_JNoo8cs6Bdy-o_JzSNv30g"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 100,
+          "sessionsWithoutMetricPercentage": 0,
+          "pagesViews": "1",
+          "subTotal": "1",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGngyfX8vK5cTiifRjNY96-yAljmXanoaBrNvLIsW9hZFB_Fev41qxZ0IGq2o8_aem_9T2Xg7_LC9G6YqkN9MIETQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnCIpDs3oyNOZpct645ej-b_MLAM4t50ZYmzIdYSQTJgtaJv6MKTYbaj_i_98_aem_gDZ30v2DBKajXK6qIrswDw"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnHmaTuw5rO2msE9NcZbjOTvY2C_xa_9wrGZXLPCuUjyDbAoyuUW6BmjOcHxs_aem_kzSRhM7LcBuB9kl_hldJKQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnPh9ry2n5jhFYMloQKmDdz7aWEr_wm29kyX0ZzIXpq2CHYNLskq6Kp0XLeuY_aem_vkJYSsaLOmCzBdjvAQdbgw"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn3rsallPfrI7LBLRRzGo8v8e8PdTdbl9SZjkGOf04PGWCdvwgwEzjEaxvnIY_aem_j3AnV39Ew1RPMoHTCMO67g"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnxa9tydA2xLTllIrhco6nIyw8Iw7VlA9OFSvAEBI21JEbzbKi4vPkrTyMflM_aem_L8K6o4DAC1-nxV1Cfvpacg"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGn0fHPU8zJKb9UuSQz4bixwOGiTr1kuwA9aBYdC0i8S-YbIwPXS4DM9FAp5eg_aem_jYInclHIRpS3TYaDe_IF_g"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/lawyer/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn1immQjrjvW9_KPHECnBX35l5gGPvWkUgtKHxvZPsqkeDJQ2nxlep0DJO_cA_aem_HUvZnfZcwxTsbOxXR3FJdQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 100,
+          "sessionsWithoutMetricPercentage": 0,
+          "pagesViews": "1",
+          "subTotal": "1",
+          "Url": "https://vpscomparehub.com/detective/column/"
+        },
+        {
+          "sessionsCount": "3",
+          "sessionsWithMetricPercentage": 33.33,
+          "sessionsWithoutMetricPercentage": 66.67,
+          "pagesViews": "1",
+          "subTotal": "1",
+          "Url": "https://vpscomparehub.com/detective/flow/"
+        },
+        {
+          "sessionsCount": "3",
+          "sessionsWithMetricPercentage": 66.67,
+          "sessionsWithoutMetricPercentage": 33.33,
+          "pagesViews": "2",
+          "subTotal": "2",
+          "Url": "https://vpscomparehub.com/detective/cost/"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 50,
+          "sessionsWithoutMetricPercentage": 50,
+          "pagesViews": "1",
+          "subTotal": "1",
+          "Url": "https://vpscomparehub.com/detective/law/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnXSTDgXwu1P2Tyb08dKizISVJ-nfdb8y-WYQxRL-5oypgWJaWR67K4KbjDko_aem_nJq8DEPCS3ogi9gQkMqtSA"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnABQzckD6lwZuHZRFU3HHXDsaQ5r_UPkX7WFnRlMqeA3Trc8sfmutJY6Y8v0_aem_Huyimc_r5lEhnH0znliwtQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnvrbvPmfuWmgRA1WkzYMppPxGTpqI54ZTbHNKik2Qmp81SLvzAzuTYHsMlz8_aem_7AB4ybaR-fkQ0mkg0In1dg"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnn9vX2pYVNeSEdIyi-alA_VBMUU-i06EUObQZWrqNZn3vLIlSFU5ZoiNqgyg_aem_0ii6XxHXi62TzFBCrjMPTQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn9p6b5iD85Y_UO7-KMNxcjKz9Q9oqAa2tCEQ8uy1ckMlhTFyVrRyywx-btW8_aem_edrMIazF37SU6GG4RAWB5w"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnu7b6RRh7dgOvCpFwXUkLMwzkes_lJM-cqyBFKqFlxIHyn-SwF1xUfHMMiTg_aem_spO0XD4sXB8y7I2Ls65pCw"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn0SZiXtjfwIM4-jqZ-ZBRyCoPRoQJhAgWUp522LQgQpz8Se2NlQNOPSNnmQQ_aem_t4dleg4T__QKTVVE8rDh_Q"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnoU8NvPqy7xM3DtOmn0kb_GGBRhlFkGs_q9NbpYn_EgOzTlLs0EJFDlRSO5E_aem_wFMDsep2Xm2-06hZdPhRFQ"
+        }
+      ]
+    },
+    {
+      "metricName": "ScriptErrorCount",
+      "information": [
+        {
+          "sessionsCount": "3",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/column/tantei-shippai-shinai-5check/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnt3Ja9fHp7vUmhDKIP1GZrnZ0k1XHHknz5za03tFx-yRjKp7Mv62onVg0rwA_aem_SmFF2YMGfjdiK9AXr21AIw"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnlHAY2Sz5zE_t-HcNrRzK-_sw5U2aeOiytH1imfj_J7kAAZaD1SvosfOp_Tc_aem_o4DpAND4nx3Kj6v3ieVosA"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnmOkU24M-i7dYqdVrufg98597f2KtHxB0nU8_wC03Vut53Kr9akClCKkq2eE_aem_OM9_sqLPOtbYAJTZl9FN9A"
+        },
+        {
+          "sessionsCount": "4",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/cases/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnZOh4rqeE6LQK3RrqANMSJ-LEMCy55AFIHchpVlIWxMsHkOHZovhS0xKNVrI_aem_rQ8Nz1Sz08bjHwyW91hb9g"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnTYpzZLUQkmH8PGEM7D1McZy-cxSwQSM7GV1tqeX47afFpzlwfFCstcdCTGM_aem_JNoo8cs6Bdy-o_JzSNv30g"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGngyfX8vK5cTiifRjNY96-yAljmXanoaBrNvLIsW9hZFB_Fev41qxZ0IGq2o8_aem_9T2Xg7_LC9G6YqkN9MIETQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnCIpDs3oyNOZpct645ej-b_MLAM4t50ZYmzIdYSQTJgtaJv6MKTYbaj_i_98_aem_gDZ30v2DBKajXK6qIrswDw"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnHmaTuw5rO2msE9NcZbjOTvY2C_xa_9wrGZXLPCuUjyDbAoyuUW6BmjOcHxs_aem_kzSRhM7LcBuB9kl_hldJKQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnPh9ry2n5jhFYMloQKmDdz7aWEr_wm29kyX0ZzIXpq2CHYNLskq6Kp0XLeuY_aem_vkJYSsaLOmCzBdjvAQdbgw"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn3rsallPfrI7LBLRRzGo8v8e8PdTdbl9SZjkGOf04PGWCdvwgwEzjEaxvnIY_aem_j3AnV39Ew1RPMoHTCMO67g"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnxa9tydA2xLTllIrhco6nIyw8Iw7VlA9OFSvAEBI21JEbzbKi4vPkrTyMflM_aem_L8K6o4DAC1-nxV1Cfvpacg"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGn0fHPU8zJKb9UuSQz4bixwOGiTr1kuwA9aBYdC0i8S-YbIwPXS4DM9FAp5eg_aem_jYInclHIRpS3TYaDe_IF_g"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/lawyer/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn1immQjrjvW9_KPHECnBX35l5gGPvWkUgtKHxvZPsqkeDJQ2nxlep0DJO_cA_aem_HUvZnfZcwxTsbOxXR3FJdQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/column/"
+        },
+        {
+          "sessionsCount": "3",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/flow/"
+        },
+        {
+          "sessionsCount": "3",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/cost/"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/law/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnXSTDgXwu1P2Tyb08dKizISVJ-nfdb8y-WYQxRL-5oypgWJaWR67K4KbjDko_aem_nJq8DEPCS3ogi9gQkMqtSA"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnABQzckD6lwZuHZRFU3HHXDsaQ5r_UPkX7WFnRlMqeA3Trc8sfmutJY6Y8v0_aem_Huyimc_r5lEhnH0znliwtQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnvrbvPmfuWmgRA1WkzYMppPxGTpqI54ZTbHNKik2Qmp81SLvzAzuTYHsMlz8_aem_7AB4ybaR-fkQ0mkg0In1dg"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnn9vX2pYVNeSEdIyi-alA_VBMUU-i06EUObQZWrqNZn3vLIlSFU5ZoiNqgyg_aem_0ii6XxHXi62TzFBCrjMPTQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn9p6b5iD85Y_UO7-KMNxcjKz9Q9oqAa2tCEQ8uy1ckMlhTFyVrRyywx-btW8_aem_edrMIazF37SU6GG4RAWB5w"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnu7b6RRh7dgOvCpFwXUkLMwzkes_lJM-cqyBFKqFlxIHyn-SwF1xUfHMMiTg_aem_spO0XD4sXB8y7I2Ls65pCw"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn0SZiXtjfwIM4-jqZ-ZBRyCoPRoQJhAgWUp522LQgQpz8Se2NlQNOPSNnmQQ_aem_t4dleg4T__QKTVVE8rDh_Q"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnoU8NvPqy7xM3DtOmn0kb_GGBRhlFkGs_q9NbpYn_EgOzTlLs0EJFDlRSO5E_aem_wFMDsep2Xm2-06hZdPhRFQ"
+        }
+      ]
+    },
+    {
+      "metricName": "ErrorClickCount",
+      "information": [
+        {
+          "sessionsCount": "3",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/column/tantei-shippai-shinai-5check/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnt3Ja9fHp7vUmhDKIP1GZrnZ0k1XHHknz5za03tFx-yRjKp7Mv62onVg0rwA_aem_SmFF2YMGfjdiK9AXr21AIw"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnlHAY2Sz5zE_t-HcNrRzK-_sw5U2aeOiytH1imfj_J7kAAZaD1SvosfOp_Tc_aem_o4DpAND4nx3Kj6v3ieVosA"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnmOkU24M-i7dYqdVrufg98597f2KtHxB0nU8_wC03Vut53Kr9akClCKkq2eE_aem_OM9_sqLPOtbYAJTZl9FN9A"
+        },
+        {
+          "sessionsCount": "4",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/cases/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnZOh4rqeE6LQK3RrqANMSJ-LEMCy55AFIHchpVlIWxMsHkOHZovhS0xKNVrI_aem_rQ8Nz1Sz08bjHwyW91hb9g"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnTYpzZLUQkmH8PGEM7D1McZy-cxSwQSM7GV1tqeX47afFpzlwfFCstcdCTGM_aem_JNoo8cs6Bdy-o_JzSNv30g"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGngyfX8vK5cTiifRjNY96-yAljmXanoaBrNvLIsW9hZFB_Fev41qxZ0IGq2o8_aem_9T2Xg7_LC9G6YqkN9MIETQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnCIpDs3oyNOZpct645ej-b_MLAM4t50ZYmzIdYSQTJgtaJv6MKTYbaj_i_98_aem_gDZ30v2DBKajXK6qIrswDw"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnHmaTuw5rO2msE9NcZbjOTvY2C_xa_9wrGZXLPCuUjyDbAoyuUW6BmjOcHxs_aem_kzSRhM7LcBuB9kl_hldJKQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnPh9ry2n5jhFYMloQKmDdz7aWEr_wm29kyX0ZzIXpq2CHYNLskq6Kp0XLeuY_aem_vkJYSsaLOmCzBdjvAQdbgw"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn3rsallPfrI7LBLRRzGo8v8e8PdTdbl9SZjkGOf04PGWCdvwgwEzjEaxvnIY_aem_j3AnV39Ew1RPMoHTCMO67g"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnxa9tydA2xLTllIrhco6nIyw8Iw7VlA9OFSvAEBI21JEbzbKi4vPkrTyMflM_aem_L8K6o4DAC1-nxV1Cfvpacg"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGn0fHPU8zJKb9UuSQz4bixwOGiTr1kuwA9aBYdC0i8S-YbIwPXS4DM9FAp5eg_aem_jYInclHIRpS3TYaDe_IF_g"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/lawyer/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn1immQjrjvW9_KPHECnBX35l5gGPvWkUgtKHxvZPsqkeDJQ2nxlep0DJO_cA_aem_HUvZnfZcwxTsbOxXR3FJdQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/column/"
+        },
+        {
+          "sessionsCount": "3",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/flow/"
+        },
+        {
+          "sessionsCount": "3",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/cost/"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/law/"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnXSTDgXwu1P2Tyb08dKizISVJ-nfdb8y-WYQxRL-5oypgWJaWR67K4KbjDko_aem_nJq8DEPCS3ogi9gQkMqtSA"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnABQzckD6lwZuHZRFU3HHXDsaQ5r_UPkX7WFnRlMqeA3Trc8sfmutJY6Y8v0_aem_Huyimc_r5lEhnH0znliwtQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnvrbvPmfuWmgRA1WkzYMppPxGTpqI54ZTbHNKik2Qmp81SLvzAzuTYHsMlz8_aem_7AB4ybaR-fkQ0mkg0In1dg"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnn9vX2pYVNeSEdIyi-alA_VBMUU-i06EUObQZWrqNZn3vLIlSFU5ZoiNqgyg_aem_0ii6XxHXi62TzFBCrjMPTQ"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn9p6b5iD85Y_UO7-KMNxcjKz9Q9oqAa2tCEQ8uy1ckMlhTFyVrRyywx-btW8_aem_edrMIazF37SU6GG4RAWB5w"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnu7b6RRh7dgOvCpFwXUkLMwzkes_lJM-cqyBFKqFlxIHyn-SwF1xUfHMMiTg_aem_spO0XD4sXB8y7I2Ls65pCw"
+        },
+        {
+          "sessionsCount": "1",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn0SZiXtjfwIM4-jqZ-ZBRyCoPRoQJhAgWUp522LQgQpz8Se2NlQNOPSNnmQQ_aem_t4dleg4T__QKTVVE8rDh_Q"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnoU8NvPqy7xM3DtOmn0kb_GGBRhlFkGs_q9NbpYn_EgOzTlLs0EJFDlRSO5E_aem_wFMDsep2Xm2-06hZdPhRFQ"
+        }
+      ]
+    },
+    {
+      "metricName": "ScrollDepth",
+      "information": [
+        {
+          "averageScrollDepth": 4.75,
+          "Url": "https://vpscomparehub.com/detective/"
+        },
+        {
+          "averageScrollDepth": 32,
+          "Url": "https://vpscomparehub.com/detective/column/tantei-shippai-shinai-5check/"
+        },
+        {
+          "averageScrollDepth": 4,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnt3Ja9fHp7vUmhDKIP1GZrnZ0k1XHHknz5za03tFx-yRjKp7Mv62onVg0rwA_aem_SmFF2YMGfjdiK9AXr21AIw"
+        },
+        {
+          "averageScrollDepth": 51.5,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnlHAY2Sz5zE_t-HcNrRzK-_sw5U2aeOiytH1imfj_J7kAAZaD1SvosfOp_Tc_aem_o4DpAND4nx3Kj6v3ieVosA"
+        },
+        {
+          "averageScrollDepth": 100,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnmOkU24M-i7dYqdVrufg98597f2KtHxB0nU8_wC03Vut53Kr9akClCKkq2eE_aem_OM9_sqLPOtbYAJTZl9FN9A"
+        },
+        {
+          "averageScrollDepth": 48.75,
+          "Url": "https://vpscomparehub.com/detective/cases/"
+        },
+        {
+          "averageScrollDepth": 6,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnZOh4rqeE6LQK3RrqANMSJ-LEMCy55AFIHchpVlIWxMsHkOHZovhS0xKNVrI_aem_rQ8Nz1Sz08bjHwyW91hb9g"
+        },
+        {
+          "averageScrollDepth": 4,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnTYpzZLUQkmH8PGEM7D1McZy-cxSwQSM7GV1tqeX47afFpzlwfFCstcdCTGM_aem_JNoo8cs6Bdy-o_JzSNv30g"
+        },
+        {
+          "averageScrollDepth": 17,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGngyfX8vK5cTiifRjNY96-yAljmXanoaBrNvLIsW9hZFB_Fev41qxZ0IGq2o8_aem_9T2Xg7_LC9G6YqkN9MIETQ"
+        },
+        {
+          "averageScrollDepth": 4,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnCIpDs3oyNOZpct645ej-b_MLAM4t50ZYmzIdYSQTJgtaJv6MKTYbaj_i_98_aem_gDZ30v2DBKajXK6qIrswDw"
+        },
+        {
+          "averageScrollDepth": 70,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnHmaTuw5rO2msE9NcZbjOTvY2C_xa_9wrGZXLPCuUjyDbAoyuUW6BmjOcHxs_aem_kzSRhM7LcBuB9kl_hldJKQ"
+        },
+        {
+          "averageScrollDepth": 4,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnPh9ry2n5jhFYMloQKmDdz7aWEr_wm29kyX0ZzIXpq2CHYNLskq6Kp0XLeuY_aem_vkJYSsaLOmCzBdjvAQdbgw"
+        },
+        {
+          "averageScrollDepth": 7,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn3rsallPfrI7LBLRRzGo8v8e8PdTdbl9SZjkGOf04PGWCdvwgwEzjEaxvnIY_aem_j3AnV39Ew1RPMoHTCMO67g"
+        },
+        {
+          "averageScrollDepth": 56,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnxa9tydA2xLTllIrhco6nIyw8Iw7VlA9OFSvAEBI21JEbzbKi4vPkrTyMflM_aem_L8K6o4DAC1-nxV1Cfvpacg"
+        },
+        {
+          "averageScrollDepth": 4,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGn0fHPU8zJKb9UuSQz4bixwOGiTr1kuwA9aBYdC0i8S-YbIwPXS4DM9FAp5eg_aem_jYInclHIRpS3TYaDe_IF_g"
+        },
+        {
+          "averageScrollDepth": 53.5,
+          "Url": "https://vpscomparehub.com/detective/lawyer/"
+        },
+        {
+          "averageScrollDepth": 7,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn1immQjrjvW9_KPHECnBX35l5gGPvWkUgtKHxvZPsqkeDJQ2nxlep0DJO_cA_aem_HUvZnfZcwxTsbOxXR3FJdQ"
+        },
+        {
+          "averageScrollDepth": 65.5,
+          "Url": "https://vpscomparehub.com/detective/column/"
+        },
+        {
+          "averageScrollDepth": 63.33,
+          "Url": "https://vpscomparehub.com/detective/flow/"
+        },
+        {
+          "averageScrollDepth": 94.67,
+          "Url": "https://vpscomparehub.com/detective/cost/"
+        },
+        {
+          "averageScrollDepth": 28,
+          "Url": "https://vpscomparehub.com/detective/law/"
+        },
+        {
+          "averageScrollDepth": 2,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnXSTDgXwu1P2Tyb08dKizISVJ-nfdb8y-WYQxRL-5oypgWJaWR67K4KbjDko_aem_nJq8DEPCS3ogi9gQkMqtSA"
+        },
+        {
+          "averageScrollDepth": 14,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnABQzckD6lwZuHZRFU3HHXDsaQ5r_UPkX7WFnRlMqeA3Trc8sfmutJY6Y8v0_aem_Huyimc_r5lEhnH0znliwtQ"
+        },
+        {
+          "averageScrollDepth": 100,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnvrbvPmfuWmgRA1WkzYMppPxGTpqI54ZTbHNKik2Qmp81SLvzAzuTYHsMlz8_aem_7AB4ybaR-fkQ0mkg0In1dg"
+        },
+        {
+          "averageScrollDepth": 82,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnn9vX2pYVNeSEdIyi-alA_VBMUU-i06EUObQZWrqNZn3vLIlSFU5ZoiNqgyg_aem_0ii6XxHXi62TzFBCrjMPTQ"
+        },
+        {
+          "averageScrollDepth": 7,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn9p6b5iD85Y_UO7-KMNxcjKz9Q9oqAa2tCEQ8uy1ckMlhTFyVrRyywx-btW8_aem_edrMIazF37SU6GG4RAWB5w"
+        },
+        {
+          "averageScrollDepth": 80,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnu7b6RRh7dgOvCpFwXUkLMwzkes_lJM-cqyBFKqFlxIHyn-SwF1xUfHMMiTg_aem_spO0XD4sXB8y7I2Ls65pCw"
+        },
+        {
+          "averageScrollDepth": 39,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn0SZiXtjfwIM4-jqZ-ZBRyCoPRoQJhAgWUp522LQgQpz8Se2NlQNOPSNnmQQ_aem_t4dleg4T__QKTVVE8rDh_Q"
+        },
+        {
+          "averageScrollDepth": 34.5,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnoU8NvPqy7xM3DtOmn0kb_GGBRhlFkGs_q9NbpYn_EgOzTlLs0EJFDlRSO5E_aem_wFMDsep2Xm2-06hZdPhRFQ"
+        }
+      ]
+    },
+    {
+      "metricName": "Traffic",
+      "information": [
+        {
+          "totalSessionCount": "3",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1.3333333333333333,
+          "Url": "https://vpscomparehub.com/detective/"
+        },
+        {
+          "totalSessionCount": "1",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/column/tantei-shippai-shinai-5check/"
+        },
+        {
+          "totalSessionCount": "1",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnt3Ja9fHp7vUmhDKIP1GZrnZ0k1XHHknz5za03tFx-yRjKp7Mv62onVg0rwA_aem_SmFF2YMGfjdiK9AXr21AIw"
+        },
+        {
+          "totalSessionCount": "2",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnlHAY2Sz5zE_t-HcNrRzK-_sw5U2aeOiytH1imfj_J7kAAZaD1SvosfOp_Tc_aem_o4DpAND4nx3Kj6v3ieVosA"
+        },
+        {
+          "totalSessionCount": "1",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnmOkU24M-i7dYqdVrufg98597f2KtHxB0nU8_wC03Vut53Kr9akClCKkq2eE_aem_OM9_sqLPOtbYAJTZl9FN9A"
+        },
+        {
+          "totalSessionCount": "4",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "3",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/cases/"
+        },
+        {
+          "totalSessionCount": "1",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnZOh4rqeE6LQK3RrqANMSJ-LEMCy55AFIHchpVlIWxMsHkOHZovhS0xKNVrI_aem_rQ8Nz1Sz08bjHwyW91hb9g"
+        },
+        {
+          "totalSessionCount": "1",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnTYpzZLUQkmH8PGEM7D1McZy-cxSwQSM7GV1tqeX47afFpzlwfFCstcdCTGM_aem_JNoo8cs6Bdy-o_JzSNv30g"
+        },
+        {
+          "totalSessionCount": "0",
+          "totalBotSessionCount": "1",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEeyG7egC-KWHCO3oJcX9n1U655oPeSPlsMZRDHVXeGZ8dJvT7SoNHnrgi0BQc_aem_5XURAa5H35wiBMon_ZT1PQ"
+        },
+        {
+          "totalSessionCount": "1",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGngyfX8vK5cTiifRjNY96-yAljmXanoaBrNvLIsW9hZFB_Fev41qxZ0IGq2o8_aem_9T2Xg7_LC9G6YqkN9MIETQ"
+        },
+        {
+          "totalSessionCount": "1",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnCIpDs3oyNOZpct645ej-b_MLAM4t50ZYmzIdYSQTJgtaJv6MKTYbaj_i_98_aem_gDZ30v2DBKajXK6qIrswDw"
+        },
+        {
+          "totalSessionCount": "1",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnHmaTuw5rO2msE9NcZbjOTvY2C_xa_9wrGZXLPCuUjyDbAoyuUW6BmjOcHxs_aem_kzSRhM7LcBuB9kl_hldJKQ"
+        },
+        {
+          "totalSessionCount": "1",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnPh9ry2n5jhFYMloQKmDdz7aWEr_wm29kyX0ZzIXpq2CHYNLskq6Kp0XLeuY_aem_vkJYSsaLOmCzBdjvAQdbgw"
+        },
+        {
+          "totalSessionCount": "1",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn3rsallPfrI7LBLRRzGo8v8e8PdTdbl9SZjkGOf04PGWCdvwgwEzjEaxvnIY_aem_j3AnV39Ew1RPMoHTCMO67g"
+        },
+        {
+          "totalSessionCount": "2",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnxa9tydA2xLTllIrhco6nIyw8Iw7VlA9OFSvAEBI21JEbzbKi4vPkrTyMflM_aem_L8K6o4DAC1-nxV1Cfvpacg"
+        },
+        {
+          "totalSessionCount": "1",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGn0fHPU8zJKb9UuSQz4bixwOGiTr1kuwA9aBYdC0i8S-YbIwPXS4DM9FAp5eg_aem_jYInclHIRpS3TYaDe_IF_g"
+        },
+        {
+          "totalSessionCount": "2",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/lawyer/"
+        },
+        {
+          "totalSessionCount": "1",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn1immQjrjvW9_KPHECnBX35l5gGPvWkUgtKHxvZPsqkeDJQ2nxlep0DJO_cA_aem_HUvZnfZcwxTsbOxXR3FJdQ"
+        },
+        {
+          "totalSessionCount": "1",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 2,
+          "Url": "https://vpscomparehub.com/detective/column/"
+        },
+        {
+          "totalSessionCount": "3",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "2",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/flow/"
+        },
+        {
+          "totalSessionCount": "3",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "2",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/cost/"
+        },
+        {
+          "totalSessionCount": "2",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "2",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/law/"
+        },
+        {
+          "totalSessionCount": "1",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnXSTDgXwu1P2Tyb08dKizISVJ-nfdb8y-WYQxRL-5oypgWJaWR67K4KbjDko_aem_nJq8DEPCS3ogi9gQkMqtSA"
+        },
+        {
+          "totalSessionCount": "1",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnABQzckD6lwZuHZRFU3HHXDsaQ5r_UPkX7WFnRlMqeA3Trc8sfmutJY6Y8v0_aem_Huyimc_r5lEhnH0znliwtQ"
+        },
+        {
+          "totalSessionCount": "1",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnvrbvPmfuWmgRA1WkzYMppPxGTpqI54ZTbHNKik2Qmp81SLvzAzuTYHsMlz8_aem_7AB4ybaR-fkQ0mkg0In1dg"
+        },
+        {
+          "totalSessionCount": "1",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnn9vX2pYVNeSEdIyi-alA_VBMUU-i06EUObQZWrqNZn3vLIlSFU5ZoiNqgyg_aem_0ii6XxHXi62TzFBCrjMPTQ"
+        },
+        {
+          "totalSessionCount": "1",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn9p6b5iD85Y_UO7-KMNxcjKz9Q9oqAa2tCEQ8uy1ckMlhTFyVrRyywx-btW8_aem_edrMIazF37SU6GG4RAWB5w"
+        },
+        {
+          "totalSessionCount": "1",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnu7b6RRh7dgOvCpFwXUkLMwzkes_lJM-cqyBFKqFlxIHyn-SwF1xUfHMMiTg_aem_spO0XD4sXB8y7I2Ls65pCw"
+        },
+        {
+          "totalSessionCount": "1",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn0SZiXtjfwIM4-jqZ-ZBRyCoPRoQJhAgWUp522LQgQpz8Se2NlQNOPSNnmQQ_aem_t4dleg4T__QKTVVE8rDh_Q"
+        },
+        {
+          "totalSessionCount": "2",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "2",
+          "pagesPerSessionPercentage": 1,
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnoU8NvPqy7xM3DtOmn0kb_GGBRhlFkGs_q9NbpYn_EgOzTlLs0EJFDlRSO5E_aem_wFMDsep2Xm2-06hZdPhRFQ"
+        }
+      ]
+    },
+    {
+      "metricName": "EngagementTime",
+      "information": [
+        {
+          "totalTime": "20",
+          "activeTime": "3",
+          "Url": "https://vpscomparehub.com/detective/"
+        },
+        {
+          "totalTime": "9",
+          "activeTime": "9",
+          "Url": "https://vpscomparehub.com/detective/column/tantei-shippai-shinai-5check/"
+        },
+        {
+          "totalTime": "1",
+          "activeTime": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnt3Ja9fHp7vUmhDKIP1GZrnZ0k1XHHknz5za03tFx-yRjKp7Mv62onVg0rwA_aem_SmFF2YMGfjdiK9AXr21AIw"
+        },
+        {
+          "totalTime": "24",
+          "activeTime": "21",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnlHAY2Sz5zE_t-HcNrRzK-_sw5U2aeOiytH1imfj_J7kAAZaD1SvosfOp_Tc_aem_o4DpAND4nx3Kj6v3ieVosA"
+        },
+        {
+          "totalTime": "377",
+          "activeTime": "19",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnmOkU24M-i7dYqdVrufg98597f2KtHxB0nU8_wC03Vut53Kr9akClCKkq2eE_aem_OM9_sqLPOtbYAJTZl9FN9A"
+        },
+        {
+          "totalTime": "36",
+          "activeTime": "36",
+          "Url": "https://vpscomparehub.com/detective/cases/"
+        },
+        {
+          "totalTime": "306",
+          "activeTime": "2",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnZOh4rqeE6LQK3RrqANMSJ-LEMCy55AFIHchpVlIWxMsHkOHZovhS0xKNVrI_aem_rQ8Nz1Sz08bjHwyW91hb9g"
+        },
+        {
+          "totalTime": "1",
+          "activeTime": "1",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnTYpzZLUQkmH8PGEM7D1McZy-cxSwQSM7GV1tqeX47afFpzlwfFCstcdCTGM_aem_JNoo8cs6Bdy-o_JzSNv30g"
+        },
+        {
+          "totalTime": "3",
+          "activeTime": "3",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGngyfX8vK5cTiifRjNY96-yAljmXanoaBrNvLIsW9hZFB_Fev41qxZ0IGq2o8_aem_9T2Xg7_LC9G6YqkN9MIETQ"
+        },
+        {
+          "totalTime": "4",
+          "activeTime": "4",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnCIpDs3oyNOZpct645ej-b_MLAM4t50ZYmzIdYSQTJgtaJv6MKTYbaj_i_98_aem_gDZ30v2DBKajXK6qIrswDw"
+        },
+        {
+          "totalTime": "15",
+          "activeTime": "15",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnHmaTuw5rO2msE9NcZbjOTvY2C_xa_9wrGZXLPCuUjyDbAoyuUW6BmjOcHxs_aem_kzSRhM7LcBuB9kl_hldJKQ"
+        },
+        {
+          "totalTime": "2",
+          "activeTime": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnPh9ry2n5jhFYMloQKmDdz7aWEr_wm29kyX0ZzIXpq2CHYNLskq6Kp0XLeuY_aem_vkJYSsaLOmCzBdjvAQdbgw"
+        },
+        {
+          "totalTime": "3",
+          "activeTime": "3",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn3rsallPfrI7LBLRRzGo8v8e8PdTdbl9SZjkGOf04PGWCdvwgwEzjEaxvnIY_aem_j3AnV39Ew1RPMoHTCMO67g"
+        },
+        {
+          "totalTime": "11",
+          "activeTime": "11",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnxa9tydA2xLTllIrhco6nIyw8Iw7VlA9OFSvAEBI21JEbzbKi4vPkrTyMflM_aem_L8K6o4DAC1-nxV1Cfvpacg"
+        },
+        {
+          "totalTime": "4",
+          "activeTime": "4",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGn0fHPU8zJKb9UuSQz4bixwOGiTr1kuwA9aBYdC0i8S-YbIwPXS4DM9FAp5eg_aem_jYInclHIRpS3TYaDe_IF_g"
+        },
+        {
+          "totalTime": "19",
+          "activeTime": "19",
+          "Url": "https://vpscomparehub.com/detective/lawyer/"
+        },
+        {
+          "totalTime": "129",
+          "activeTime": "5",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn1immQjrjvW9_KPHECnBX35l5gGPvWkUgtKHxvZPsqkeDJQ2nxlep0DJO_cA_aem_HUvZnfZcwxTsbOxXR3FJdQ"
+        },
+        {
+          "totalTime": "22",
+          "activeTime": "22",
+          "Url": "https://vpscomparehub.com/detective/column/"
+        },
+        {
+          "totalTime": "14",
+          "activeTime": "14",
+          "Url": "https://vpscomparehub.com/detective/flow/"
+        },
+        {
+          "totalTime": "25",
+          "activeTime": "25",
+          "Url": "https://vpscomparehub.com/detective/cost/"
+        },
+        {
+          "totalTime": "10",
+          "activeTime": "10",
+          "Url": "https://vpscomparehub.com/detective/law/"
+        },
+        {
+          "totalTime": "1",
+          "activeTime": "0",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnXSTDgXwu1P2Tyb08dKizISVJ-nfdb8y-WYQxRL-5oypgWJaWR67K4KbjDko_aem_nJq8DEPCS3ogi9gQkMqtSA"
+        },
+        {
+          "totalTime": "12",
+          "activeTime": "12",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnABQzckD6lwZuHZRFU3HHXDsaQ5r_UPkX7WFnRlMqeA3Trc8sfmutJY6Y8v0_aem_Huyimc_r5lEhnH0znliwtQ"
+        },
+        {
+          "totalTime": "130",
+          "activeTime": "130",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnn9vX2pYVNeSEdIyi-alA_VBMUU-i06EUObQZWrqNZn3vLIlSFU5ZoiNqgyg_aem_0ii6XxHXi62TzFBCrjMPTQ"
+        },
+        {
+          "totalTime": "137",
+          "activeTime": "74",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnvrbvPmfuWmgRA1WkzYMppPxGTpqI54ZTbHNKik2Qmp81SLvzAzuTYHsMlz8_aem_7AB4ybaR-fkQ0mkg0In1dg"
+        },
+        {
+          "totalTime": "4",
+          "activeTime": "2",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn9p6b5iD85Y_UO7-KMNxcjKz9Q9oqAa2tCEQ8uy1ckMlhTFyVrRyywx-btW8_aem_edrMIazF37SU6GG4RAWB5w"
+        },
+        {
+          "totalTime": "104",
+          "activeTime": "104",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnu7b6RRh7dgOvCpFwXUkLMwzkes_lJM-cqyBFKqFlxIHyn-SwF1xUfHMMiTg_aem_spO0XD4sXB8y7I2Ls65pCw"
+        },
+        {
+          "totalTime": "28",
+          "activeTime": "24",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGn0SZiXtjfwIM4-jqZ-ZBRyCoPRoQJhAgWUp522LQgQpz8Se2NlQNOPSNnmQQ_aem_t4dleg4T__QKTVVE8rDh_Q"
+        },
+        {
+          "totalTime": "27",
+          "activeTime": "27",
+          "Url": "https://vpscomparehub.com/detective/?utm_source=instagram&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnoU8NvPqy7xM3DtOmn0kb_GGBRhlFkGs_q9NbpYn_EgOzTlLs0EJFDlRSO5E_aem_wFMDsep2Xm2-06hZdPhRFQ"
+        }
+      ]
+    }
+  ]
+}
+,
+{
+  "label": "byDevice",
+  "data": [
+    {
+      "metricName": "DeadClickCount",
+      "information": [
+        {
+          "sessionsCount": "24",
+          "sessionsWithMetricPercentage": 8.33,
+          "sessionsWithoutMetricPercentage": 91.67,
+          "pagesViews": "2",
+          "subTotal": "2",
+          "Device": "Mobile"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Device": "PC"
+        }
+      ]
+    },
+    {
+      "metricName": "ExcessiveScroll",
+      "information": [
+        {
+          "sessionsCount": "24",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Device": "Mobile"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Device": "PC"
+        }
+      ]
+    },
+    {
+      "metricName": "RageClickCount",
+      "information": [
+        {
+          "sessionsCount": "24",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Device": "Mobile"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Device": "PC"
+        }
+      ]
+    },
+    {
+      "metricName": "QuickbackClick",
+      "information": [
+        {
+          "sessionsCount": "24",
+          "sessionsWithMetricPercentage": 12.5,
+          "sessionsWithoutMetricPercentage": 87.5,
+          "pagesViews": "7",
+          "subTotal": "7",
+          "Device": "Mobile"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Device": "PC"
+        }
+      ]
+    },
+    {
+      "metricName": "ScriptErrorCount",
+      "information": [
+        {
+          "sessionsCount": "24",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Device": "Mobile"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Device": "PC"
+        }
+      ]
+    },
+    {
+      "metricName": "ErrorClickCount",
+      "information": [
+        {
+          "sessionsCount": "24",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Device": "Mobile"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Device": "PC"
+        }
+      ]
+    },
+    {
+      "metricName": "ScrollDepth",
+      "information": [
+        {
+          "averageScrollDepth": 40.53,
+          "Device": "Mobile"
+        },
+        {
+          "averageScrollDepth": 53,
+          "Device": "PC"
+        }
+      ]
+    },
+    {
+      "metricName": "Traffic",
+      "information": [
+        {
+          "totalSessionCount": "24",
+          "totalBotSessionCount": "1",
+          "distinctUserCount": "13",
+          "pagesPerSessionPercentage": 1.76,
+          "Device": "Mobile"
+        },
+        {
+          "totalSessionCount": "2",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Device": "PC"
+        }
+      ]
+    },
+    {
+      "metricName": "EngagementTime",
+      "information": [
+        {
+          "totalTime": "47",
+          "activeTime": "36",
+          "Device": "Mobile"
+        },
+        {
+          "totalTime": "342",
+          "activeTime": "10",
+          "Device": "PC"
+        }
+      ]
+    }
+  ]
+}
+,
+{
+  "label": "byBrowser",
+  "data": [
+    {
+      "metricName": "DeadClickCount",
+      "information": [
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Browser": "Chrome"
+        },
+        {
+          "sessionsCount": "24",
+          "sessionsWithMetricPercentage": 8.33,
+          "sessionsWithoutMetricPercentage": 91.67,
+          "pagesViews": "2",
+          "subTotal": "2",
+          "Browser": "InstagramApp"
+        }
+      ]
+    },
+    {
+      "metricName": "ExcessiveScroll",
+      "information": [
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Browser": "Chrome"
+        },
+        {
+          "sessionsCount": "24",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Browser": "InstagramApp"
+        }
+      ]
+    },
+    {
+      "metricName": "RageClickCount",
+      "information": [
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Browser": "Chrome"
+        },
+        {
+          "sessionsCount": "24",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Browser": "InstagramApp"
+        }
+      ]
+    },
+    {
+      "metricName": "QuickbackClick",
+      "information": [
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Browser": "Chrome"
+        },
+        {
+          "sessionsCount": "24",
+          "sessionsWithMetricPercentage": 12.5,
+          "sessionsWithoutMetricPercentage": 87.5,
+          "pagesViews": "7",
+          "subTotal": "7",
+          "Browser": "InstagramApp"
+        }
+      ]
+    },
+    {
+      "metricName": "ScriptErrorCount",
+      "information": [
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Browser": "Chrome"
+        },
+        {
+          "sessionsCount": "24",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Browser": "InstagramApp"
+        }
+      ]
+    },
+    {
+      "metricName": "ErrorClickCount",
+      "information": [
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Browser": "Chrome"
+        },
+        {
+          "sessionsCount": "24",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Browser": "InstagramApp"
+        }
+      ]
+    },
+    {
+      "metricName": "ScrollDepth",
+      "information": [
+        {
+          "averageScrollDepth": 53,
+          "Browser": "Chrome"
+        },
+        {
+          "averageScrollDepth": 40.53,
+          "Browser": "InstagramApp"
+        }
+      ]
+    },
+    {
+      "metricName": "Traffic",
+      "information": [
+        {
+          "totalSessionCount": "2",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Browser": "Chrome"
+        },
+        {
+          "totalSessionCount": "24",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "12",
+          "pagesPerSessionPercentage": 1.7916666666666667,
+          "Browser": "InstagramApp"
+        },
+        {
+          "totalSessionCount": "0",
+          "totalBotSessionCount": "1",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Browser": "FacebookApp"
+        }
+      ]
+    },
+    {
+      "metricName": "EngagementTime",
+      "information": [
+        {
+          "totalTime": "342",
+          "activeTime": "10",
+          "Browser": "Chrome"
+        },
+        {
+          "totalTime": "47",
+          "activeTime": "36",
+          "Browser": "InstagramApp"
+        }
+      ]
+    }
+  ]
+}
+,
+{
+  "label": "byOS",
+  "data": [
+    {
+      "metricName": "DeadClickCount",
+      "information": [
+        {
+          "sessionsCount": "3",
+          "sessionsWithMetricPercentage": 33.33,
+          "sessionsWithoutMetricPercentage": 66.67,
+          "pagesViews": "1",
+          "subTotal": "1",
+          "OS": "Android"
+        },
+        {
+          "sessionsCount": "21",
+          "sessionsWithMetricPercentage": 4.76,
+          "sessionsWithoutMetricPercentage": 95.24,
+          "pagesViews": "1",
+          "subTotal": "1",
+          "OS": "IOS"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "OS": "Windows"
+        }
+      ]
+    },
+    {
+      "metricName": "ExcessiveScroll",
+      "information": [
+        {
+          "sessionsCount": "3",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "OS": "Android"
+        },
+        {
+          "sessionsCount": "21",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "OS": "IOS"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "OS": "Windows"
+        }
+      ]
+    },
+    {
+      "metricName": "RageClickCount",
+      "information": [
+        {
+          "sessionsCount": "3",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "OS": "Android"
+        },
+        {
+          "sessionsCount": "21",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "OS": "IOS"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "OS": "Windows"
+        }
+      ]
+    },
+    {
+      "metricName": "QuickbackClick",
+      "information": [
+        {
+          "sessionsCount": "3",
+          "sessionsWithMetricPercentage": 33.33,
+          "sessionsWithoutMetricPercentage": 66.67,
+          "pagesViews": "1",
+          "subTotal": "1",
+          "OS": "Android"
+        },
+        {
+          "sessionsCount": "21",
+          "sessionsWithMetricPercentage": 9.52,
+          "sessionsWithoutMetricPercentage": 90.48,
+          "pagesViews": "6",
+          "subTotal": "6",
+          "OS": "IOS"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "OS": "Windows"
+        }
+      ]
+    },
+    {
+      "metricName": "ScriptErrorCount",
+      "information": [
+        {
+          "sessionsCount": "3",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "OS": "Android"
+        },
+        {
+          "sessionsCount": "21",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "OS": "IOS"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "OS": "Windows"
+        }
+      ]
+    },
+    {
+      "metricName": "ErrorClickCount",
+      "information": [
+        {
+          "sessionsCount": "3",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "OS": "Android"
+        },
+        {
+          "sessionsCount": "21",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "OS": "IOS"
+        },
+        {
+          "sessionsCount": "2",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "OS": "Windows"
+        }
+      ]
+    },
+    {
+      "metricName": "ScrollDepth",
+      "information": [
+        {
+          "averageScrollDepth": 50.71,
+          "OS": "Android"
+        },
+        {
+          "averageScrollDepth": 38.56,
+          "OS": "IOS"
+        },
+        {
+          "averageScrollDepth": 53,
+          "OS": "Windows"
+        }
+      ]
+    },
+    {
+      "metricName": "Traffic",
+      "information": [
+        {
+          "totalSessionCount": "3",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "3",
+          "pagesPerSessionPercentage": 2.3333333333333335,
+          "OS": "Android"
+        },
+        {
+          "totalSessionCount": "21",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "9",
+          "pagesPerSessionPercentage": 1.7142857142857142,
+          "OS": "IOS"
+        },
+        {
+          "totalSessionCount": "0",
+          "totalBotSessionCount": "1",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "OS": "Linux"
+        },
+        {
+          "totalSessionCount": "2",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "OS": "Windows"
+        }
+      ]
+    },
+    {
+      "metricName": "EngagementTime",
+      "information": [
+        {
+          "totalTime": "80",
+          "activeTime": "80",
+          "OS": "Android"
+        },
+        {
+          "totalTime": "42",
+          "activeTime": "30",
+          "OS": "IOS"
+        },
+        {
+          "totalTime": "342",
+          "activeTime": "10",
+          "OS": "Windows"
+        }
+      ]
+    }
+  ]
+}
+,
+{
+  "label": "byCountry",
+  "data": [
+    {
+      "metricName": "DeadClickCount",
+      "information": [
+        {
+          "sessionsCount": "26",
+          "sessionsWithMetricPercentage": 7.69,
+          "sessionsWithoutMetricPercentage": 92.31,
+          "pagesViews": "2",
+          "subTotal": "2",
+          "Country": "Japan"
+        }
+      ]
+    },
+    {
+      "metricName": "ExcessiveScroll",
+      "information": [
+        {
+          "sessionsCount": "26",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Country": "Japan"
+        }
+      ]
+    },
+    {
+      "metricName": "RageClickCount",
+      "information": [
+        {
+          "sessionsCount": "26",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Country": "Japan"
+        }
+      ]
+    },
+    {
+      "metricName": "QuickbackClick",
+      "information": [
+        {
+          "sessionsCount": "26",
+          "sessionsWithMetricPercentage": 11.54,
+          "sessionsWithoutMetricPercentage": 88.46000000000001,
+          "pagesViews": "7",
+          "subTotal": "7",
+          "Country": "Japan"
+        }
+      ]
+    },
+    {
+      "metricName": "ScriptErrorCount",
+      "information": [
+        {
+          "sessionsCount": "26",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Country": "Japan"
+        }
+      ]
+    },
+    {
+      "metricName": "ErrorClickCount",
+      "information": [
+        {
+          "sessionsCount": "26",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Country": "Japan"
+        }
+      ]
+    },
+    {
+      "metricName": "ScrollDepth",
+      "information": [
+        {
+          "averageScrollDepth": 41.09,
+          "Country": "Japan"
+        }
+      ]
+    },
+    {
+      "metricName": "Traffic",
+      "information": [
+        {
+          "totalSessionCount": "26",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "13",
+          "pagesPerSessionPercentage": 1.7307692307692308,
+          "Country": "Japan"
+        },
+        {
+          "totalSessionCount": "0",
+          "totalBotSessionCount": "1",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Country": "United States"
+        }
+      ]
+    },
+    {
+      "metricName": "EngagementTime",
+      "information": [
+        {
+          "totalTime": "69",
+          "activeTime": "34",
+          "Country": "Japan"
+        }
+      ]
+    }
+  ]
+}
+,
+{
+  "label": "bySource",
+  "data": [
+    {
+      "metricName": "DeadClickCount",
+      "information": [
+        {
+          "sessionsCount": "22",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Source": "instagram"
+        },
+        {
+          "sessionsCount": "8",
+          "sessionsWithMetricPercentage": 25,
+          "sessionsWithoutMetricPercentage": 75,
+          "pagesViews": "2",
+          "subTotal": "2",
+          "Source": "vpscomparehub.com"
+        }
+      ]
+    },
+    {
+      "metricName": "ExcessiveScroll",
+      "information": [
+        {
+          "sessionsCount": "22",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Source": "instagram"
+        },
+        {
+          "sessionsCount": "8",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Source": "vpscomparehub.com"
+        }
+      ]
+    },
+    {
+      "metricName": "RageClickCount",
+      "information": [
+        {
+          "sessionsCount": "22",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Source": "instagram"
+        },
+        {
+          "sessionsCount": "8",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Source": "vpscomparehub.com"
+        }
+      ]
+    },
+    {
+      "metricName": "QuickbackClick",
+      "information": [
+        {
+          "sessionsCount": "22",
+          "sessionsWithMetricPercentage": 4.55,
+          "sessionsWithoutMetricPercentage": 95.45,
+          "pagesViews": "1",
+          "subTotal": "1",
+          "Source": "instagram"
+        },
+        {
+          "sessionsCount": "8",
+          "sessionsWithMetricPercentage": 25,
+          "sessionsWithoutMetricPercentage": 75,
+          "pagesViews": "6",
+          "subTotal": "6",
+          "Source": "vpscomparehub.com"
+        }
+      ]
+    },
+    {
+      "metricName": "ScriptErrorCount",
+      "information": [
+        {
+          "sessionsCount": "22",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Source": "instagram"
+        },
+        {
+          "sessionsCount": "8",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Source": "vpscomparehub.com"
+        }
+      ]
+    },
+    {
+      "metricName": "ErrorClickCount",
+      "information": [
+        {
+          "sessionsCount": "22",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Source": "instagram"
+        },
+        {
+          "sessionsCount": "8",
+          "sessionsWithMetricPercentage": 0,
+          "sessionsWithoutMetricPercentage": 100,
+          "pagesViews": "0",
+          "subTotal": "0",
+          "Source": "vpscomparehub.com"
+        }
+      ]
+    },
+    {
+      "metricName": "ScrollDepth",
+      "information": [
+        {
+          "averageScrollDepth": 34.79,
+          "Source": "instagram"
+        },
+        {
+          "averageScrollDepth": 48.29,
+          "Source": "vpscomparehub.com"
+        }
+      ]
+    },
+    {
+      "metricName": "Traffic",
+      "information": [
+        {
+          "totalSessionCount": "0",
+          "totalBotSessionCount": "1",
+          "distinctUserCount": "1",
+          "pagesPerSessionPercentage": 1,
+          "Source": "www.facebook.com"
+        },
+        {
+          "totalSessionCount": "22",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "13",
+          "pagesPerSessionPercentage": 1.0909090909090908,
+          "Source": "instagram"
+        },
+        {
+          "totalSessionCount": "8",
+          "totalBotSessionCount": "0",
+          "distinctUserCount": "3",
+          "pagesPerSessionPercentage": 2.625,
+          "Source": "vpscomparehub.com"
+        }
+      ]
+    },
+    {
+      "metricName": "EngagementTime",
+      "information": [
+        {
+          "totalTime": "63",
+          "activeTime": "24",
+          "Source": "instagram"
+        },
+        {
+          "totalTime": "52",
+          "activeTime": "46",
+          "Source": "vpscomparehub.com"
+        }
+      ]
+    }
+  ]
+}
+
+  ]
+}
