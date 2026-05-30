@@ -497,6 +497,148 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   gap: 1.25rem;
   margin-bottom: 1.25rem;
 }
+
+/* ══ BEST 1 ヒーローカード ══ */
+.ranking-hero-card {
+  position: relative;
+  background: linear-gradient(135deg, #fff8e1 0%, #ffffff 55%, #fff8e1 100%);
+  border: 3px solid var(--gold);
+  border-radius: 18px;
+  padding: 1.75rem 1.25rem 1.5rem;
+  margin: 0 0 1.5rem;
+  box-shadow: 0 14px 36px rgba(212,160,23,.22), 0 2px 6px rgba(0,0,0,.06);
+  overflow: hidden;
+}
+.ranking-hero-card::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at top right, rgba(212,160,23,.10), transparent 60%);
+  pointer-events: none;
+}
+.ranking-hero-card .card-pr-badge {
+  position: absolute; top: .6rem; right: .6rem;
+  background: rgba(0,0,0,.32); color: #fff;
+  font-size: .65rem; font-weight: 700; padding: .15rem .5rem;
+  border-radius: 4px; z-index: 2;
+}
+.ranking-hero-crown {
+  display: inline-flex; align-items: center; gap: .5rem;
+  background: linear-gradient(135deg, #d4a017, #b8860b);
+  color: #fff; padding: .45rem .9rem; border-radius: 999px;
+  font-size: .78rem; font-weight: 800; letter-spacing: .04em;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 14px rgba(212,160,23,.45);
+  position: relative; z-index: 1;
+}
+.ranking-hero-crown svg { width: 18px; height: 18px; }
+.ranking-hero-crown strong { font-size: .9rem; margin-left: .15rem; }
+.ranking-hero-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+  position: relative; z-index: 1;
+}
+.ranking-hero-left .ranking-banner-link {
+  display: block; margin: 0 0 .85rem; border-radius: 10px; overflow: hidden;
+  background: #f8fafc;
+}
+.ranking-hero-left .ranking-banner-img {
+  width: 100%; height: auto; display: block;
+}
+.ranking-hero-name {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.6rem; font-weight: 900;
+  color: var(--navy); margin: .25rem 0 .4rem;
+  letter-spacing: .02em;
+}
+.ranking-hero-tagline {
+  font-size: .95rem; line-height: 1.7; color: #4a3a1a;
+  background: rgba(212,160,23,.12);
+  border-left: 4px solid var(--gold);
+  padding: .6rem .8rem; border-radius: 0 8px 8px 0;
+  margin-bottom: .9rem;
+}
+.ranking-hero-tagline strong { color: var(--gold); font-weight: 900; }
+.ranking-hero-payoff {
+  background: #fff; border: 1px solid rgba(212,160,23,.3);
+  border-radius: 12px; padding: 1rem; margin-bottom: .9rem;
+}
+.ranking-hero-payoff-title {
+  font-size: .82rem; font-weight: 800; color: var(--gold);
+  letter-spacing: .04em; margin-bottom: .55rem;
+  display: flex; align-items: center; gap: .4rem;
+}
+.ranking-hero-payoff-title::before {
+  content: "✓"; display: inline-flex; align-items: center; justify-content: center;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: var(--gold); color: #fff; font-size: .68rem;
+}
+.ranking-hero-payoff-list {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column; gap: .55rem;
+}
+.ranking-hero-payoff-list li {
+  font-size: .88rem; line-height: 1.75; color: var(--text);
+  padding-left: 1.2rem; position: relative;
+}
+.ranking-hero-payoff-list li::before {
+  content: ""; position: absolute; left: .15rem; top: .65rem;
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--gold);
+}
+.ranking-hero-payoff-list strong { color: var(--navy); }
+.ranking-hero-price {
+  background: linear-gradient(135deg, #1e3a5f, #0f2540);
+  color: #fff; border-radius: 10px; padding: .75rem 1rem;
+  margin-bottom: .9rem;
+}
+.ranking-hero-price-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: .35rem 0;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+.ranking-hero-price-row:last-child { border-bottom: 0; }
+.ranking-hero-price-row span {
+  font-size: .78rem; color: rgba(255,255,255,.7); font-weight: 700;
+}
+.ranking-hero-price-row strong { font-size: .95rem; color: #fff; font-weight: 800; }
+.ranking-hero-cta {
+  display: flex; align-items: center; justify-content: center; gap: .5rem;
+  width: 100%; padding: 1.1rem 1rem;
+  background: linear-gradient(135deg, #d4a017, #b8860b);
+  color: #fff; font-size: 1.05rem; font-weight: 900;
+  text-decoration: none; border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(212,160,23,.45);
+  transition: transform .2s, box-shadow .2s;
+}
+.ranking-hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(212,160,23,.55);
+}
+.ranking-hero-cta-arrow { font-size: 1.2rem; }
+.ranking-hero-cta-micro {
+  text-align: center; font-size: .75rem; color: #6b5a2a;
+  margin: .55rem 0 0;
+}
+.ranking-other-label {
+  text-align: center; font-size: .85rem; font-weight: 700;
+  color: rgba(255,255,255,.7); letter-spacing: .05em;
+  margin: 1.75rem 0 1rem;
+  position: relative;
+}
+.ranking-other-label::before,
+.ranking-other-label::after {
+  content: ""; display: inline-block; width: 32px; height: 1px;
+  background: rgba(255,255,255,.25); vertical-align: middle;
+  margin: 0 .8rem;
+}
+
+@media (max-width: 720px) {
+  .ranking-hero-card { padding: 1.25rem .9rem 1.1rem; }
+  .ranking-hero-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .ranking-hero-name { font-size: 1.4rem; }
+  .ranking-hero-tagline { font-size: .88rem; }
+  .ranking-hero-cta { font-size: .95rem; padding: .95rem .8rem; }
+}
+
 .ranking-card {
   background: #fff;
   border: 1px solid var(--border);
