@@ -78,6 +78,8 @@ const UPDATED = "2026-05-25";
 </head>
 <body class="lp-page lp-page-v2">
 
+<div class="col-progress-bar" id="col-progress"></div>
+
 <header class="dt-header">
   <div class="dt-header-inner">
     <a href="/detective/" class="dt-logo">
@@ -424,5 +426,27 @@ const UPDATED = "2026-05-25";
   });
 </script>
 
+<script is:inline data-tag="reading-progress-bar">
+  document.addEventListener('DOMContentLoaded', function () {
+    var bar = document.getElementById('col-progress');
+    if (!bar) return;
+    var milestones = { 25: false, 50: false, 75: false, 100: false };
+    function update() {
+      var doc = document.documentElement;
+      var max = doc.scrollHeight - window.innerHeight;
+      var pct = max > 0 ? Math.min(100, (window.scrollY / max) * 100) : 0;
+      bar.style.width = pct + '%';
+      [25,50,75,100].forEach(function (m) {
+        if (!milestones[m] && pct >= m) {
+          milestones[m] = true;
+          if (typeof gtag === 'function') gtag('event', 'scroll_depth', { percent: m, page: location.pathname });
+          if (window.dataLayer) window.dataLayer.push({ event: 'scroll_depth', percent: m, page: location.pathname });
+        }
+      });
+    }
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+  });
+</script>
 </body>
 </html>
