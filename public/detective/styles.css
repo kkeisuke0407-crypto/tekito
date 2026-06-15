@@ -4759,3 +4759,60 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   content: "💡";
   font-size: 1rem;
 }
+
+/* ══ 自分でできる vs プロに頼む 対比ボックス ══ */
+.diy-pro-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+.diy-pro-col {
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border);
+}
+.diy-pro-col--diy { background: #f8fafc; }
+.diy-pro-col--pro {
+  background: linear-gradient(135deg, #fff8e1, #fffdf5);
+  border-color: var(--gold);
+}
+.diy-pro-col-head {
+  display: flex; align-items: center; gap: .45rem;
+  font-weight: 800; font-size: .95rem;
+  margin-bottom: .6rem; padding-bottom: .5rem;
+  border-bottom: 2px solid;
+}
+.diy-pro-col--diy .diy-pro-col-head { color: #475569; border-color: #cbd5e1; }
+.diy-pro-col--pro .diy-pro-col-head { color: var(--gold-deep); border-color: var(--gold); }
+.diy-pro-col-head svg { width: 20px; height: 20px; flex-shrink: 0; }
+.diy-pro-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: .5rem; }
+.diy-pro-list li { font-size: .85rem; line-height: 1.7; padding-left: 1.3rem; position: relative; color: var(--text); }
+.diy-pro-col--diy .diy-pro-list li::before { content: "○"; position: absolute; left: 0; color: #64748b; font-weight: 700; }
+.diy-pro-col--pro .diy-pro-list li::before { content: "◎"; position: absolute; left: 0; color: var(--gold-deep); font-weight: 700; }
+.diy-pro-verdict {
+  margin: 1rem 0 0; padding: .85rem 1rem;
+  background: var(--navy); color: #fff; border-radius: 10px;
+  font-size: .88rem; line-height: 1.75;
+}
+.diy-pro-verdict strong { color: var(--gold-lt); }
+@media (max-width: 720px) {
+  .diy-pro-compare { grid-template-columns: 1fr; }
+}
+
+/* ══ START ガイド：段階ステップ ══ */
+.start-stage {
+  border: 1px solid var(--border); border-left: 4px solid var(--navy);
+  border-radius: 0 12px 12px 0; padding: 1rem 1.1rem; margin: .85rem 0;
+  background: #fff;
+}
+.start-stage-label {
+  display: inline-block; font-size: .72rem; font-weight: 800; letter-spacing: .04em;
+  color: #fff; background: var(--navy); padding: .2rem .6rem; border-radius: 999px; margin-bottom: .5rem;
+}
+.start-stage h3 { font-size: 1rem; color: var(--navy); margin: 0 0 .4rem; }
+.start-stage p { font-size: .88rem; line-height: 1.8; margin: 0 0 .5rem; color: var(--text); }
+.start-stage-next {
+  font-size: .82rem; color: var(--gold-deep); font-weight: 700;
+}
+.start-stage-next a { color: var(--gold-deep); text-decoration: underline; }
