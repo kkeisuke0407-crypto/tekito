@@ -1,0 +1,278 @@
+---
+const PAGE_TITLE = "浮気の証拠、使える？使えない？タイプ別判定ガイド｜中の人ナビ";
+const PAGE_DESC  = "LINE・写真・動画・GPS履歴・レシート・録音・SNS——浮気の証拠として「裁判で使えるか」「集め方は合法か」をタイプ別に判定。法律事務所の元事務員が、証拠の強さと注意点を正直に整理しました。";
+const CANONICAL  = "https://lawyer-nakanohito.com/detective/shouko/";
+const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
+const UPDATED = "2026-06-15";
+
+const evidences = [
+  {
+    name: "ラブホテルの出入り写真・動画",
+    badge: "good", badgeLabel: "証拠力 高",
+    power: 95, legal: 70,
+    desc: "二人がラブホテルに一緒に出入りする様子は、不貞行為を強く推認させる代表的な証拠。日時・場所が特定でき、複数回あればさらに強力です。",
+    tip: "公道など誰でも撮影できる場所からの撮影は合法。ただし敷地内への無断侵入や、気づかれて警戒されるリスクがあるため、<strong>撮影は探偵に任せるのが確実</strong>です。"
+  },
+  {
+    name: "探偵の調査報告書",
+    badge: "good", badgeLabel: "証拠力 高",
+    power: 98, legal: 95,
+    desc: "日時・場所・行動・写真が時系列で整理された報告書は、裁判で最も通用しやすい証拠。弁護士も「これがあると進めやすい」と評価します。",
+    tip: "探偵業の届出をした業者が作成したものが前提。<strong>裁判を見据えるなら最初から探偵に依頼</strong>するのが、結果的に最短ルートになります。"
+  },
+  {
+    name: "性的な内容のLINE・メール",
+    badge: "mid", badgeLabel: "証拠力 中〜高",
+    power: 75, legal: 50,
+    desc: "肉体関係をうかがわせるやり取りは有力な証拠になりえます。ただし「会いたい」程度では不貞の立証には弱く、内容次第で評価が分かれます。",
+    tip: "<strong>勝手にスマホを見て取得すると、不正アクセス等で違法・証拠として弱くなる</strong>恐れがあります。画面を見られる状況での撮影など、入手経路に注意。"
+  },
+  {
+    name: "クレジット明細・レシート",
+    badge: "mid", badgeLabel: "証拠力 中",
+    power: 50, legal: 85,
+    desc: "ホテル・贈り物・二人分の飲食など、不貞を間接的に裏づける材料。単体では弱いですが、他の証拠と組み合わせると効果的です。",
+    tip: "家計として共有している明細なら入手は問題になりにくい。<strong>「間接事実」を積み重ねる補強材料</strong>として保管しておきましょう。"
+  },
+  {
+    name: "GPSの位置情報履歴",
+    badge: "mid", badgeLabel: "証拠力 中（補助）",
+    power: 45, legal: 55,
+    desc: "「いつ・どこにいたか」を示せますが、位置情報だけでは「誰と何をしていたか」までは証明できず、単体では不貞の証拠になりにくい。",
+    tip: "設置できるのは<strong>自分名義／共有名義の車のみ</strong>。下調べで行動を絞り込み、決定的な場面の撮影は探偵に、が王道です。<a href=\"/detective/gps/\">GPS活用ガイド</a>へ。"
+  },
+  {
+    name: "会話の録音",
+    badge: "mid", badgeLabel: "証拠力 中",
+    power: 55, legal: 60,
+    desc: "本人が不貞を認める発言の録音は有力。自分が当事者として参加した会話の録音は、相手の同意がなくても証拠として認められる傾向です。",
+    tip: "<strong>第三者間の会話を盗聴するのは違法</strong>で証拠にもなりません。自分が会話に加わっている録音にとどめてください。"
+  },
+  {
+    name: "SNS・写真共有アプリの投稿",
+    badge: "bad", badgeLabel: "証拠力 低〜中",
+    power: 35, legal: 60,
+    desc: "ペアの投稿や位置情報がヒントになることはありますが、公開情報は加工・削除されやすく、それ単体で不貞を立証するのは困難です。",
+    tip: "スクショで<strong>日時がわかる形で保存</strong>しておくと補助材料に。ただし鍵アカウントへの不正ログインは違法なので絶対に避けてください。"
+  },
+  {
+    name: "勝手に見たスマホのスクショ",
+    badge: "bad", badgeLabel: "要注意",
+    power: 40, legal: 15,
+    desc: "内容自体は決定的でも、<strong>入手経路が問題視されると証拠価値が大きく下がり</strong>、逆にプライバシー侵害で自分が責められることもあります。",
+    tip: "事務所でも「これで突撃して立場が悪化した」例が最多。<strong>見つけても問い詰めず</strong>、正規の方法で証拠を固め直すのが鉄則です。"
+  }
+];
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{PAGE_TITLE}</title>
+  <meta name="description" content={PAGE_DESC} />
+  <link rel="canonical" href={CANONICAL} />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={PAGE_TITLE} />
+  <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:url" content={CANONICAL} />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content="弁護士の中の人" />
+  <meta property="og:image"     content="https://lawyer-nakanohito.com/detective/images/hero.png" />
+  <meta name="twitter:card"     content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260615c" />
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "浮気の証拠、使える？使えない？タイプ別判定ガイド",
+    "description": PAGE_DESC,
+    "datePublished": UPDATED, "dateModified": UPDATED,
+    "author": { "@type": "Person", "name": "弁護士の中の人", "url": "https://lawyer-nakanohito.com/detective/about/" },
+    "publisher": { "@type": "Organization", "name": "中の人ナビ", "logo": { "@type": "ImageObject", "url": "https://lawyer-nakanohito.com/detective/images/logo-icon.png" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": CANONICAL }
+  })} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "TOP", "item": "https://lawyer-nakanohito.com/detective/" },
+      { "@type": "ListItem", "position": 2, "name": "証拠タイプ別 判定ガイド", "item": CANONICAL }
+    ]
+  })} />
+
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2YLF06DC0E');
+  </script>
+  <script is:inline type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wt0koam10v");
+  </script>
+</head>
+<body class="lp-page lp-page-v2">
+
+<header class="dt-header">
+  <div class="dt-header-inner">
+    <a href="/detective/" class="dt-logo">
+      <div class="dt-logo-icon"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;" /></div>
+      <div class="dt-logo-wrap"><span>弁護士の中の人</span><span class="dt-logo-sub">中の人ナビ</span></div>
+    </a>
+    <a href={INSTAGRAM_URL} class="dt-header-insta" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+      <span>@lawyer.nakanohito</span>
+    </a>
+  </div>
+</header>
+
+<nav class="col-header-nav">
+  <div class="col-header-nav-inner">
+    <a href="/detective/start/">最初に</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/flow/">診断</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cost/">費用相場</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/law/">法律の境界線</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cases/">体験談</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/column/">コラム</a>
+  </div>
+</nav>
+
+<div class="lp-hero">
+  <div class="lp-hero-meta">
+    <span class="updated-meta">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      最終更新 <strong>{UPDATED}</strong>
+    </span>
+  </div>
+  <h1>その証拠、<br/>裁判で使える？</h1>
+  <p class="lp-hero-sub">手元にある「怪しい証拠」、本当に役に立つのか不安ですよね。LINE・写真・GPS・録音など<strong>タイプ別に「証拠力」と「集め方の合法性」を判定</strong>しました。今あるものが使えるか、確認してみてください。</p>
+</div>
+
+<div class="lp-body">
+
+  <nav class="lp-breadcrumb" aria-label="パンくず">
+    <a href="/detective/">TOP</a>
+    <span class="sep">›</span>
+    <strong>証拠タイプ別 判定ガイド</strong>
+  </nav>
+
+  <div class="tldr-card">
+    <div class="tldr-title">このページの結論</div>
+    <p class="tldr-body">慰謝料請求や離婚調停で勝つには、<strong>「不貞行為があった」と裁判官に推認させられる証拠</strong>が必要です。最強なのは<strong>ラブホテルの出入り写真や探偵の調査報告書</strong>。LINEやレシートは単体では弱く、組み合わせて使います。そして<strong>勝手にスマホを見て得た証拠は、逆に自分が不利になる</strong >ことも。集め方を間違えないことが何より大切です。</p>
+    <ul class="tldr-points">
+      <li>強い：ラブホ出入りの写真・動画／探偵の報告書</li>
+      <li>補助：LINE・レシート・録音・GPS（組み合わせて使う）</li>
+      <li>危険：勝手に見たスマホのスクショ（違法・逆効果）</li>
+    </ul>
+  </div>
+
+  <div class="lp-card">
+    <h2>証拠タイプ別・判定一覧</h2>
+    <p>「証拠力（裁判でどれだけ通用するか）」と「集め方の合法性（自分で安全に入手できるか）」の2軸で整理しました。手元のものや、これから集めようとしているものを確認してください。</p>
+    {evidences.map(ev => (
+      <div class="ev-card">
+        <div class="ev-card-head">
+          <span class="ev-card-name">{ev.name}</span>
+          <span class={`ev-badge ev-badge--${ev.badge}`}>{ev.badgeLabel}</span>
+        </div>
+        <div class="ev-meters">
+          <div class="ev-meter-row"><span class="ev-meter-label">証拠力</span><div class="ev-meter-track"><div class="ev-meter-fill" style={`width:${ev.power}%`}></div></div></div>
+          <div class="ev-meter-row"><span class="ev-meter-label">入手の安全性</span><div class="ev-meter-track"><div class="ev-meter-fill" style={`width:${ev.legal}%`}></div></div></div>
+        </div>
+        <p class="ev-card-desc" set:html={ev.desc}></p>
+        <p class="ev-card-tip" set:html={'💡 ' + ev.tip}></p>
+      </div>
+    ))}
+  </div>
+
+  <div class="lp-card">
+    <h2>「自分で集める」の限界と、確実な方法</h2>
+    <p>ここまで見て気づいた方も多いと思いますが、<strong>証拠力が高いものほど、自分で安全に集めるのが難しい</strong>という関係があります。LINEやレシートは自分でも集められますが、それだけでは決め手に欠けがち。逆に決定的な「ラブホ出入りの瞬間」は、撮影技術・尾行・気づかれない立ち回りが必要で、素人が狙うと警戒されて終わります。</p>
+    <div class="lp-warn">
+      <div class="lp-warn-title">事務所で最も多かった後悔</div>
+      <p>「自分で確かめようとして問い詰めた」「スマホを見たのがバレた」——こうして<strong>相手に警戒されると、その後プロが入っても証拠が取れなくなります</strong>。手元の補助証拠を保管しつつ、決定的な一枚はプロに任せるのが、結局いちばん確実です。</p>
+    </div>
+    <p style="text-align:center;margin-top:1.25rem;"><a href="/detective/tantei/" class="lp-cta-block-btn" style="display:inline-block;" data-track="shouko_to_tantei">信頼できる探偵社の選び方を見る →</a></p>
+  </div>
+
+  <div class="lp-card">
+    <h2>証拠が集まったら、次は弁護士へ</h2>
+    <p>裁判で使える証拠が揃えば、慰謝料請求や離婚交渉の段階です。証拠の評価から交渉・調停まで、弁護士に相談するのが確実。どんな証拠がどれだけ効くかは、最終的に弁護士が判断します。</p>
+    <p style="text-align:center;margin-top:1rem;"><a href="/detective/lawyer/" style="color:var(--gold-deep);font-weight:700;text-decoration:underline;" data-track="shouko_to_lawyer">弁護士相談ガイドを見る →</a>　／　<a href="/detective/isharyo-sim/" style="color:var(--gold-deep);font-weight:700;text-decoration:underline;" data-track="shouko_to_sim">慰謝料の目安を試算する →</a></p>
+  </div>
+
+  <div class="lp-related">
+    <h3>あわせて読みたい</h3>
+    <div class="col-grid">
+      <a href="/detective/law/" class="col-card">
+        <span class="col-card-badge comparison">法律</span>
+        <h3>合法・違法の境界線</h3>
+        <p>証拠集めで「やっていいこと」の線引き。</p>
+      </a>
+      <a href="/detective/tantei/" class="col-card">
+        <span class="col-card-badge comparison">探偵</span>
+        <h3>信頼できる探偵社の選び方</h3>
+        <p>裁判で使える報告書を作れる業者の見極め方。</p>
+      </a>
+      <a href="/detective/start/" class="col-card">
+        <span class="col-card-badge experience">ガイド</span>
+        <h3>最初にやること完全ガイド</h3>
+        <p>証拠集めの前に知っておきたい順序。</p>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="dt-footer">
+  <div class="dt-footer-inner">
+    <div class="dt-footer-logo">
+      <div class="dt-footer-logo-icon" style="padding:0;overflow:hidden;"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:8px;" /></div>
+      <span>弁護士の中の人</span>
+    </div>
+    <p class="dt-footer-text">
+      Instagram「弁護士の中の人（@lawyer.nakanohito）」の公式サイト。<br/>
+      法律事務所の元事務員が、浮気・不倫で悩む方へ正直な情報をお届けしています。<br/>
+      <span style="font-size:.75rem;color:rgba(255,255,255,.35)">当サイトは一部にアフィリエイトリンクを含みます。法的判断は弁護士にご確認ください。</span>
+    </p>
+    <div class="dt-footer-links">
+      <a href={INSTAGRAM_URL} target="_blank" rel="noopener">Instagram</a>
+      <a href="/detective/start/">最初にやること</a>
+      <a href="/detective/flow/">5問診断</a>
+      <a href="/detective/cost/">費用相場</a>
+      <a href="/detective/law/">法律の境界線</a>
+      <a href="/detective/cases/">体験談</a>
+      <a href="/detective/glossary/">用語集</a>
+      <a href="/detective/column/">コラム</a>
+      <a href="/detective/about/">中の人について</a>
+      <a href="/detective/privacy/">プライバシーポリシー</a>
+      <a href="/detective/operator/">運営者情報</a>
+    </div>
+    <p class="dt-footer-copy">© 2026 弁護士の中の人</p>
+  </div>
+</footer>
+
+<div class="sticky-cta-bar" id="sticky-cta">
+  <span class="sticky-label">確実な証拠は、プロに</span>
+  <a href="/detective/tantei/" class="sticky-btn" data-track="sticky_shouko_tantei">信頼できる探偵社を見る →</a>
+  <button class="sticky-close" id="sticky-close" aria-label="閉じる">✕</button>
+</div>
+
+<script src="/detective/app.js" is:inline defer></script>
+
+</body>
+</html>
