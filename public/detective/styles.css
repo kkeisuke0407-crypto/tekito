@@ -4926,3 +4926,36 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: #fff8e1; border-left: 3px solid var(--gold);
   padding: .75rem .9rem; border-radius: 0 8px 8px 0; margin: 1rem 0 0;
 }
+
+/* ══ 証拠タイプ別 判定ガイド ══ */
+.ev-card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.1rem 1.2rem;
+  margin: .85rem 0;
+  background: #fff;
+}
+.ev-card-head {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: .75rem; margin-bottom: .6rem;
+}
+.ev-card-name { font-size: 1rem; font-weight: 800; color: var(--navy); }
+.ev-badge {
+  flex-shrink: 0; font-size: .72rem; font-weight: 800;
+  padding: .28rem .7rem; border-radius: 999px; white-space: nowrap;
+}
+.ev-badge--good { background: #dcfce7; color: #15803d; }
+.ev-badge--mid  { background: #fef9c3; color: #a16207; }
+.ev-badge--bad  { background: #fee2e2; color: #b91c1c; }
+.ev-meters { display: flex; flex-direction: column; gap: .4rem; margin: .6rem 0; }
+.ev-meter-row { display: flex; align-items: center; gap: .6rem; font-size: .78rem; }
+.ev-meter-label { flex-shrink: 0; width: 6.5em; color: var(--muted); font-weight: 700; }
+.ev-meter-track { flex: 1; height: 7px; background: var(--beige-mid, #eee); border-radius: 4px; overflow: hidden; }
+.ev-meter-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #d4a017, #b8860b); }
+.ev-card-desc { font-size: .85rem; line-height: 1.75; color: var(--text); margin: .5rem 0 0; }
+.ev-card-tip {
+  font-size: .8rem; line-height: 1.7; color: #4a3a1a;
+  background: rgba(212,160,23,.1); border-radius: 8px;
+  padding: .55rem .75rem; margin: .6rem 0 0;
+}
+.ev-card-tip strong { color: var(--gold-deep); }
