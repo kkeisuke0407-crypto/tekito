@@ -1,0 +1,306 @@
+---
+const PAGE_TITLE = "探偵に依頼する前の準備チェックリスト｜中の人ナビ";
+const PAGE_DESC  = "探偵に依頼する前にやっておくべき準備をチェック形式で確認。準備度パーセンテージが出るので、足りない部分を埋めてから依頼するか・先にプロに相談するか判断できます。法律事務所の元事務員が監修。";
+const CANONICAL  = "https://lawyer-nakanohito.com/detective/checklist/";
+const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
+const UPDATED = "2026-06-15";
+
+const sections = [
+  {
+    title: "気持ち・態度の準備",
+    icon: "heart",
+    items: [
+      { strong: "問い詰めず・気づかれないよう振る舞えている", note: "警戒されると証拠が取れなくなるため最重要" },
+      { strong: "感情的に動かず、冷静さを保てている", note: "突発的な行動は後の交渉で不利になる" },
+      { strong: "離婚・修復のどちらを望むか、おおまかな方向性を持っている", note: "弁護士相談の前段階で整理できていると話が早い" }
+    ]
+  },
+  {
+    title: "情報の整理",
+    icon: "list",
+    items: [
+      { strong: "怪しい曜日・時間帯をメモしている", note: "残業の日・休日外出・宿泊出張など" },
+      { strong: "車・スマホ・服装などの行動パターンを把握している", note: "尾行調査の精度を上げる材料に" },
+      { strong: "相手の女性／男性の手がかりを集めている", note: "勤務先・名前・顔写真・SNSなど" },
+      { strong: "レシート・領収書・SNS投稿のスクショを保管している", note: "間接事実の積み重ねに使える" }
+    ]
+  },
+  {
+    title: "費用・依頼の準備",
+    icon: "wallet",
+    items: [
+      { strong: "費用相場（20〜80万円）を把握している", note: "予算オーバーを防ぐため" },
+      { strong: "成功報酬制／時間制／パック制の違いを理解している", note: "どの体系が自分のケースに合うか" },
+      { strong: "分割払い・後払いに対応する事務所を確認している", note: "一括が難しい場合の選択肢" },
+      { strong: "複数社に無料相談して比較する予定がある", note: "1社決め打ちは避けるのが鉄則" }
+    ]
+  },
+  {
+    title: "法律・証拠の準備",
+    icon: "shield",
+    items: [
+      { strong: "自分でやって良いこと／違法になることの境界を理解している", note: "スマホ盗み見、GPSの設置範囲など" },
+      { strong: "「裁判で使える証拠」の条件を知っている", note: "ラブホ出入り・宿泊を伴う行動など" },
+      { strong: "慰謝料請求の手順（探偵→弁護士）を理解している", note: "順番を間違えると損する" }
+    ]
+  }
+];
+const totalItems = sections.reduce((s, sec) => s + sec.items.length, 0);
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{PAGE_TITLE}</title>
+  <meta name="description" content={PAGE_DESC} />
+  <link rel="canonical" href={CANONICAL} />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={PAGE_TITLE} />
+  <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:url" content={CANONICAL} />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content="弁護士の中の人" />
+  <meta property="og:image"     content="https://lawyer-nakanohito.com/detective/images/hero.png" />
+  <meta name="twitter:card"     content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260615f" />
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "TOP", "item": "https://lawyer-nakanohito.com/detective/" },
+      { "@type": "ListItem", "position": 2, "name": "依頼前 準備チェックリスト", "item": CANONICAL }
+    ]
+  })} />
+
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2YLF06DC0E');
+  </script>
+  <script is:inline type="text/javascript">
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wt0koam10v");
+  </script>
+</head>
+<body class="lp-page lp-page-v2">
+
+<header class="dt-header">
+  <div class="dt-header-inner">
+    <a href="/detective/" class="dt-logo">
+      <div class="dt-logo-icon"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;" /></div>
+      <div class="dt-logo-wrap"><span>弁護士の中の人</span><span class="dt-logo-sub">中の人ナビ</span></div>
+    </a>
+    <a href={INSTAGRAM_URL} class="dt-header-insta" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+      <span>@lawyer.nakanohito</span>
+    </a>
+  </div>
+</header>
+
+<nav class="col-header-nav">
+  <div class="col-header-nav-inner">
+    <a href="/detective/start/">最初に</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/flow/">診断</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cost/">費用相場</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/law/">法律の境界線</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cases/">体験談</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/column/">コラム</a>
+  </div>
+</nav>
+
+<div class="lp-hero">
+  <div class="lp-hero-meta">
+    <span class="updated-meta">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      最終更新 <strong>{UPDATED}</strong>
+    </span>
+  </div>
+  <h1>依頼前の<br/>準備チェックリスト</h1>
+  <p class="lp-hero-sub">あなたは今、どれだけ準備できていますか？ <strong>{totalItems}項目</strong>のチェックで「準備度パーセント」が表示されます。不足しているところを埋めてから依頼すれば、調査時間も費用も大きく抑えられます。</p>
+</div>
+
+<div class="lp-body">
+
+  <nav class="lp-breadcrumb" aria-label="パンくず">
+    <a href="/detective/">TOP</a>
+    <span class="sep">›</span>
+    <strong>依頼前 準備チェックリスト</strong>
+  </nav>
+
+  <div class="tldr-card">
+    <div class="tldr-title">このページの使い方</div>
+    <p class="tldr-body">当てはまる項目にチェックを入れるだけ。上部の進捗バーがリアルタイムで埋まり、全部終わると「あなたの準備度◯%」と次の一手が表示されます。<strong>入力はどこにも送信されません</strong>（端末内で計算）。</p>
+  </div>
+
+  <div class="cl-progress" id="cl-progress">
+    <div class="cl-progress-row">
+      <span>あなたの準備度</span>
+      <span id="cl-progress-text">0 / {totalItems}</span>
+    </div>
+    <div class="cl-progress-bar"><div class="cl-progress-fill" id="cl-progress-fill"></div></div>
+  </div>
+
+  <form id="cl-form" onsubmit="return false;">
+    {sections.map(sec => (
+      <div class="cl-section">
+        <div class="cl-section-title">
+          {sec.icon === 'heart' && <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>}
+          {sec.icon === 'list' && <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>}
+          {sec.icon === 'wallet' && <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12V8H6a2 2 0 0 1 0-4h12v4"/><path d="M4 6v12a2 2 0 0 0 2 2h14v-4"/><path d="M18 12a2 2 0 0 0 0 4h4v-4z"/></svg>}
+          {sec.icon === 'shield' && <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>}
+          {sec.title}
+        </div>
+        {sec.items.map(item => (
+          <label class="cl-item">
+            <input type="checkbox" class="cl-check" />
+            <span class="cl-checkbox"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span class="cl-text"><strong>{item.strong}</strong><small>{item.note}</small></span>
+          </label>
+        ))}
+      </div>
+    ))}
+  </form>
+
+  <div class="cl-result" id="cl-result">
+    <div class="cl-result-head">あなたの準備度</div>
+    <div class="cl-result-percent"><span id="cl-result-count">0</span> / {totalItems} <span>項目</span></div>
+    <div class="cl-result-msg" id="cl-result-msg"></div>
+    <a class="cl-result-cta" id="cl-result-cta" href="/detective/tantei/" data-track="checklist_cta">次の一歩を見る →</a>
+  </div>
+
+  <div class="lp-card">
+    <h2>なぜ「準備」で結果が変わるのか</h2>
+    <p>探偵に依頼する費用は、ほぼ<strong>「調査にかかった時間」</strong>で決まります。事前準備が整っていれば、調査時間を絞り込めて<strong>数十万円単位で費用が変わる</strong>のが現実です。</p>
+    <p>事務所にいた頃も、準備せずに依頼して「思ったより高くついた」と後悔する方を何人も見てきました。逆に、上のチェックリストを満たして依頼した方は、最短ルートで証拠を押さえて、慰謝料請求まで進めていました。</p>
+    <p style="text-align:center;margin-top:1.25rem;"><a href="/detective/start/" class="lp-cta-block-btn" style="display:inline-block;" data-track="checklist_to_start">「最初にやること」ガイドを見る →</a></p>
+  </div>
+
+  <div class="lp-related">
+    <h3>あわせて読みたい</h3>
+    <div class="col-grid">
+      <a href="/detective/shouko/" class="col-card">
+        <span class="col-card-badge comparison">証拠</span>
+        <h3>証拠タイプ別 判定ガイド</h3>
+        <p>手元の証拠が「使えるか」を判定。</p>
+      </a>
+      <a href="/detective/cost/" class="col-card">
+        <span class="col-card-badge comparison">費用</span>
+        <h3>浮気調査の費用相場</h3>
+        <p>料金体系の違いと費用を抑えるコツ。</p>
+      </a>
+      <a href="/detective/isharyo-sim/" class="col-card">
+        <span class="col-card-badge comparison">慰謝料</span>
+        <h3>慰謝料の目安シミュレーター</h3>
+        <p>あなたのケースの参考額を試算。</p>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="dt-footer">
+  <div class="dt-footer-inner">
+    <div class="dt-footer-logo">
+      <div class="dt-footer-logo-icon" style="padding:0;overflow:hidden;"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:8px;" /></div>
+      <span>弁護士の中の人</span>
+    </div>
+    <p class="dt-footer-text">
+      Instagram「弁護士の中の人（@lawyer.nakanohito）」の公式サイト。<br/>
+      法律事務所の元事務員が、浮気・不倫で悩む方へ正直な情報をお届けしています。<br/>
+      <span style="font-size:.75rem;color:rgba(255,255,255,.35)">当サイトは一部にアフィリエイトリンクを含みます。</span>
+    </p>
+    <div class="dt-footer-links">
+      <a href={INSTAGRAM_URL} target="_blank" rel="noopener">Instagram</a>
+      <a href="/detective/start/">最初にやること</a>
+      <a href="/detective/flow/">5問診断</a>
+      <a href="/detective/cost/">費用相場</a>
+      <a href="/detective/law/">法律の境界線</a>
+      <a href="/detective/cases/">体験談</a>
+      <a href="/detective/glossary/">用語集</a>
+      <a href="/detective/column/">コラム</a>
+      <a href="/detective/about/">中の人について</a>
+      <a href="/detective/privacy/">プライバシーポリシー</a>
+      <a href="/detective/operator/">運営者情報</a>
+    </div>
+    <p class="dt-footer-copy">© 2026 弁護士の中の人</p>
+  </div>
+</footer>
+
+<div class="sticky-cta-bar" id="sticky-cta">
+  <span class="sticky-label">準備ができたら次へ</span>
+  <a href="/detective/tantei/" class="sticky-btn" data-track="sticky_checklist_tantei">信頼できる探偵社を見る →</a>
+  <button class="sticky-close" id="sticky-close" aria-label="閉じる">✕</button>
+</div>
+
+<script src="/detective/app.js" is:inline defer></script>
+<script is:inline define:vars={{ totalItems }}>
+  document.addEventListener('DOMContentLoaded', function () {
+    var checks = document.querySelectorAll('.cl-check');
+    var fill   = document.getElementById('cl-progress-fill');
+    var txt    = document.getElementById('cl-progress-text');
+    var result = document.getElementById('cl-result');
+    var rCount = document.getElementById('cl-result-count');
+    var rMsg   = document.getElementById('cl-result-msg');
+    var rCta   = document.getElementById('cl-result-cta');
+    if (!checks.length) return;
+
+    function update() {
+      var n = 0;
+      checks.forEach(function (c) { if (c.checked) n++; });
+      var pct = Math.round((n / totalItems) * 100);
+      fill.style.width = pct + '%';
+      txt.textContent = n + ' / ' + totalItems;
+      if (n === 0) {
+        result.classList.remove('visible');
+        return;
+      }
+      rCount.textContent = n;
+      var msg, cta_label, cta_href, cta_track;
+      if (pct < 40) {
+        msg = '<strong>まだ準備の最初の段階です。</strong>焦って依頼すると調査時間が伸びて費用がかさみやすい状態。「最初にやること」ガイドで全体像を整理してから動くのがおすすめです。';
+        cta_label = '「最初にやること」ガイドを読む →';
+        cta_href  = '/detective/start/';
+        cta_track = 'checklist_result_start';
+      } else if (pct < 75) {
+        msg = '<strong>準備は半分以上できています。</strong>あとは費用相場や証拠の理解を埋めれば、効率よく依頼できる段階に近づきます。並行して<strong>無料相談で複数社を比較</strong>するのが現実的な次の一歩です。';
+        cta_label = '信頼できる探偵社を比較する →';
+        cta_href  = '/detective/tantei/';
+        cta_track = 'checklist_result_tantei';
+      } else {
+        msg = '<strong>かなり準備が整っています。</strong>このまま<strong>複数社の無料相談</strong>で見積もり比較に進めば、調査時間を絞って費用を最小化しやすい状態。証拠が揃ったら弁護士相談も視野に。';
+        cta_label = '中の人イチオシの探偵社を見る →';
+        cta_href  = '/detective/tantei/';
+        cta_track = 'checklist_result_tantei_ready';
+      }
+      rMsg.innerHTML = msg;
+      rCta.textContent = cta_label;
+      rCta.href = cta_href;
+      rCta.setAttribute('data-track', cta_track);
+      result.classList.add('visible');
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'checklist_progress', { checked: n, total: totalItems, percent: pct });
+      }
+      if (window.dataLayer) {
+        window.dataLayer.push({ event: 'checklist_progress', checked: n, total: totalItems, percent: pct });
+      }
+    }
+
+    checks.forEach(function (c) { c.addEventListener('change', update); });
+  });
+</script>
+
+</body>
+</html>
