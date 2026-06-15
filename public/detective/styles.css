@@ -4816,3 +4816,53 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: .82rem; color: var(--gold-deep); font-weight: 700;
 }
 .start-stage-next a { color: var(--gold-deep); text-decoration: underline; }
+
+/* ══ 柱ページ用 パンくず ══ */
+.lp-breadcrumb {
+  font-size: .78rem;
+  color: var(--muted);
+  margin: 0 auto .85rem;
+  padding: 0 1rem;
+  max-width: 760px;
+  display: flex; align-items: center; gap: .35rem;
+  flex-wrap: wrap;
+}
+.lp-breadcrumb a { color: var(--muted); text-decoration: none; }
+.lp-breadcrumb a:hover { color: var(--navy); text-decoration: underline; }
+.lp-breadcrumb span.sep { color: var(--border); }
+.lp-breadcrumb strong { color: var(--navy); font-weight: 700; }
+
+/* ══ 目次（TOC） ══ */
+.lp-toc {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 12px 12px 0;
+  padding: 1rem 1.1rem;
+  margin: 1.25rem 0;
+}
+.lp-toc-title {
+  display: flex; align-items: center; gap: .4rem;
+  font-size: .85rem; font-weight: 800; color: var(--navy);
+  margin: 0 0 .6rem;
+  letter-spacing: .03em;
+}
+.lp-toc-title svg { width: 18px; height: 18px; color: var(--gold-deep); }
+.lp-toc ol {
+  list-style: none; padding: 0; margin: 0;
+  counter-reset: toc-counter;
+  display: flex; flex-direction: column; gap: .35rem;
+}
+.lp-toc li {
+  counter-increment: toc-counter;
+  font-size: .85rem; line-height: 1.65;
+  padding-left: 1.7rem; position: relative;
+}
+.lp-toc li::before {
+  content: counter(toc-counter, decimal-leading-zero);
+  position: absolute; left: 0; top: 0;
+  font-size: .7rem; font-weight: 800; color: var(--gold-deep);
+  font-variant-numeric: tabular-nums;
+}
+.lp-toc a { color: var(--text); text-decoration: none; }
+.lp-toc a:hover { color: var(--gold-deep); text-decoration: underline; }
