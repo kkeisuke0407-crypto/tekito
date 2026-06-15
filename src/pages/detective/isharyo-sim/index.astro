@@ -1,0 +1,333 @@
+---
+const PAGE_TITLE = "不倫の慰謝料はいくら？目安シミュレーター｜中の人ナビ";
+const PAGE_DESC  = "婚姻年数・子供の有無・不貞の状況から、不倫慰謝料の目安レンジを試算できる簡易シミュレーター。法律事務所の元事務員が、過去の判例傾向をもとに参考値を整理しました。正確な金額は弁護士にご相談ください。";
+const CANONICAL  = "https://lawyer-nakanohito.com/detective/isharyo-sim/";
+const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
+const UPDATED = "2026-06-15";
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{PAGE_TITLE}</title>
+  <meta name="description" content={PAGE_DESC} />
+  <link rel="canonical" href={CANONICAL} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={PAGE_TITLE} />
+  <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:url" content={CANONICAL} />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content="弁護士の中の人" />
+  <meta property="og:image"     content="https://lawyer-nakanohito.com/detective/images/hero.png" />
+  <meta name="twitter:card"     content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260615c" />
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "不倫の慰謝料の相場はいくらですか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "一般的な相場は50〜300万円程度です。婚姻期間の長さ、未成年の子供の有無、不貞の期間・回数、離婚に至るかどうかなどで金額が変動します。実際の金額は個別事情で大きく変わるため、弁護士への相談をおすすめします。" } },
+      { "@type": "Question", "name": "慰謝料が高くなるのはどんなケースですか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "婚姻期間が長い、未成年の子供がいる、不貞が長期間・常習的、不貞が原因で離婚や別居に至った、といった事情があると慰謝料は高くなる傾向があります。" } }
+    ]
+  })} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "TOP", "item": "https://lawyer-nakanohito.com/detective/" },
+      { "@type": "ListItem", "position": 2, "name": "慰謝料の目安シミュレーター", "item": CANONICAL }
+    ]
+  })} />
+
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2YLF06DC0E');
+  </script>
+  <script is:inline type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wt0koam10v");
+  </script>
+</head>
+<body class="lp-page lp-page-v2">
+
+<header class="dt-header">
+  <div class="dt-header-inner">
+    <a href="/detective/" class="dt-logo">
+      <div class="dt-logo-icon"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;" /></div>
+      <div class="dt-logo-wrap"><span>弁護士の中の人</span><span class="dt-logo-sub">中の人ナビ</span></div>
+    </a>
+    <a href={INSTAGRAM_URL} class="dt-header-insta" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+      <span>@lawyer.nakanohito</span>
+    </a>
+  </div>
+</header>
+
+<nav class="col-header-nav">
+  <div class="col-header-nav-inner">
+    <a href="/detective/start/">最初に</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/flow/">診断</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cost/">費用相場</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/law/">法律の境界線</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cases/">体験談</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/column/">コラム</a>
+  </div>
+</nav>
+
+<div class="lp-hero">
+  <div class="lp-hero-meta">
+    <span class="updated-meta">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      最終更新 <strong>{UPDATED}</strong>
+    </span>
+  </div>
+  <h1>不倫の慰謝料、<br/>いくらが目安？</h1>
+  <p class="lp-hero-sub">5つの質問に答えるだけで、過去の判例傾向にもとづく<strong>慰謝料の目安レンジ</strong>がわかります。匿名・無料・30秒。まずは「だいたいの金額感」をつかむところから。</p>
+</div>
+
+<div class="lp-body">
+
+  <nav class="lp-breadcrumb" aria-label="パンくず">
+    <a href="/detective/">TOP</a>
+    <span class="sep">›</span>
+    <strong>慰謝料の目安シミュレーター</strong>
+  </nav>
+
+  <div class="sim-disclaimer">
+    ⚠️ このシミュレーターは、過去の判例傾向をもとにした<strong>「目安・参考値」</strong>です。実際の慰謝料は、証拠の強さ・双方の事情・交渉や裁判の経緯によって大きく変わります。<strong>正確な見通しは弁護士にご相談ください。</strong>当サイトは金額を保証するものではありません。
+  </div>
+
+  <div class="sim-card">
+    <div class="sim-card-head">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      慰謝料の目安を計算する
+    </div>
+    <p class="sim-card-sub">当てはまるものを選んで「目安を計算する」を押してください。入力内容はどこにも送信されません（すべてお使いの端末内で計算します）。</p>
+
+    <div class="sim-form">
+      <div class="sim-field">
+        <label for="sim-dir">1. いま考えている方向性は？</label>
+        <select id="sim-dir">
+          <option value="">選択してください</option>
+          <option value="divorce">不貞が原因で離婚したい</option>
+          <option value="separate">別居中／別居を考えている</option>
+          <option value="claim">離婚せず、慰謝料だけ請求したい</option>
+          <option value="undecided">まだ決めていない</option>
+        </select>
+      </div>
+      <div class="sim-field">
+        <label for="sim-years">2. 婚姻年数は？</label>
+        <select id="sim-years">
+          <option value="">選択してください</option>
+          <option value="y1">3年未満</option>
+          <option value="y2">3〜10年</option>
+          <option value="y3">10〜20年</option>
+          <option value="y4">20年以上</option>
+        </select>
+      </div>
+      <div class="sim-field">
+        <label for="sim-kids">3. 未成年の子供はいますか？</label>
+        <select id="sim-kids">
+          <option value="">選択してください</option>
+          <option value="yes">いる</option>
+          <option value="no">いない</option>
+        </select>
+      </div>
+      <div class="sim-field">
+        <label for="sim-deg">4. 不貞の状況に近いのは？</label>
+        <select id="sim-deg">
+          <option value="">選択してください</option>
+          <option value="once">一度きり・短期間</option>
+          <option value="mid">半年以上続いている</option>
+          <option value="habit">長期・常習的（同棲・妊娠等を含む）</option>
+        </select>
+      </div>
+      <div class="sim-field">
+        <label for="sim-evidence">5. 証拠の状況は？</label>
+        <select id="sim-evidence">
+          <option value="">選択してください</option>
+          <option value="strong">写真・動画など決定的な証拠がある</option>
+          <option value="some">LINEやメールなど一部の証拠がある</option>
+          <option value="none">まだ証拠はない</option>
+        </select>
+      </div>
+      <button type="button" class="sim-calc-btn" id="sim-calc" data-track="sim_calc">目安を計算する</button>
+    </div>
+
+    <div class="sim-result" id="sim-result">
+      <p class="sim-result-label">あなたのケースの慰謝料の目安は</p>
+      <p class="sim-result-amount" id="sim-amount">—</p>
+      <div class="sim-result-note" id="sim-note"></div>
+      <a href="/detective/lawyer/" class="sim-result-cta" data-track="sim_to_lawyer">正確な見通しを弁護士に相談する →</a>
+    </div>
+  </div>
+
+  <div class="lp-card">
+    <h2>慰謝料を左右する5つの要素</h2>
+    <p>不倫の慰謝料は「一律いくら」ではなく、いくつかの事情の組み合わせで決まります。事務所で見てきた範囲でも、同じ「不倫」でも金額に大きな幅がありました。</p>
+    <div class="lp-step">
+      <div class="lp-step-num">1</div>
+      <div class="lp-step-body"><strong>婚姻期間の長さ</strong><span>長く連れ添った夫婦ほど、関係を壊された精神的損害が大きいと評価されやすい。</span></div>
+    </div>
+    <div class="lp-step">
+      <div class="lp-step-num">2</div>
+      <div class="lp-step-body"><strong>未成年の子供の有無</strong><span>子供がいる家庭の不貞は、家族への影響が重く見られる傾向があります。</span></div>
+    </div>
+    <div class="lp-step">
+      <div class="lp-step-num">3</div>
+      <div class="lp-step-body"><strong>不貞の期間・回数</strong><span>一度きりより、長期間・常習的なほうが高額になりやすい。同棲や妊娠が絡むとさらに。</span></div>
+    </div>
+    <div class="lp-step">
+      <div class="lp-step-num">4</div>
+      <div class="lp-step-body"><strong>離婚・別居に至ったか</strong><span>不貞が原因で離婚・別居した場合は、婚姻関係を継続するケースより高額になる傾向。</span></div>
+    </div>
+    <div class="lp-step">
+      <div class="lp-step-num">5</div>
+      <div class="lp-step-body"><strong>証拠の強さ</strong><span>これが最重要。決定的な証拠があるほど交渉を有利に進められ、結果として獲得額も上がりやすい。</span></div>
+    </div>
+    <div class="lp-warn">
+      <div class="lp-warn-title">いちばん大事なこと</div>
+      <p>どれだけ事情が揃っていても、<strong>証拠がなければ請求は通りません</strong>。「相手が認めない」「証拠が弱い」と、目安どおりの金額は取れないのが現実です。だからこそ、<a href="/detective/tantei/">裁判で使える証拠を押さえること</a>が、慰謝料の最初の一歩になります。</p>
+    </div>
+  </div>
+
+  <div class="lp-cta-block">
+    <h3>目安より「実際にいくら取れるか」を知りたい方へ</h3>
+    <p>シミュレーターはあくまで参考値です。あなたのケースで現実的にいくら請求できるか・どう進めればいいかは、不倫慰謝料に強い弁護士に聞くのが確実です。初回無料相談の事務所も多くあります。</p>
+    <a href="/detective/lawyer/" class="lp-cta-block-btn" data-track="sim_lawyer_guide">弁護士相談ガイドを見る →</a>
+    <p class="lp-cta-block-note">相談のタイミング・準備・費用感をまとめています</p>
+  </div>
+
+  <div class="lp-related">
+    <h3>あわせて読みたい</h3>
+    <div class="col-grid">
+      <a href="/detective/tantei/" class="col-card">
+        <span class="col-card-badge comparison">探偵</span>
+        <h3>信頼できる探偵社の選び方</h3>
+        <p>慰謝料請求の土台になる「証拠」の集め方。</p>
+      </a>
+      <a href="/detective/cost/" class="col-card">
+        <span class="col-card-badge comparison">費用</span>
+        <h3>探偵・弁護士費用の合計感</h3>
+        <p>慰謝料からどれだけ手元に残るかの目安。</p>
+      </a>
+      <a href="/detective/cases/" class="col-card">
+        <span class="col-card-badge experience">体験談</span>
+        <h3>事務所で見た実例</h3>
+        <p>実際に慰謝料を取れた人・取れなかった人。</p>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="dt-footer">
+  <div class="dt-footer-inner">
+    <div class="dt-footer-logo">
+      <div class="dt-footer-logo-icon" style="padding:0;overflow:hidden;"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:8px;" /></div>
+      <span>弁護士の中の人</span>
+    </div>
+    <p class="dt-footer-text">
+      Instagram「弁護士の中の人（@lawyer.nakanohito）」の公式サイト。<br/>
+      法律事務所の元事務員が、浮気・不倫で悩む方へ正直な情報をお届けしています。<br/>
+      <span style="font-size:.75rem;color:rgba(255,255,255,.35)">当サイトは一部にアフィリエイトリンクを含みます。掲載の金額は目安であり、効果や結果を保証するものではありません。</span>
+    </p>
+    <div class="dt-footer-links">
+      <a href={INSTAGRAM_URL} target="_blank" rel="noopener">Instagram</a>
+      <a href="/detective/start/">最初にやること</a>
+      <a href="/detective/flow/">5問診断</a>
+      <a href="/detective/cost/">費用相場</a>
+      <a href="/detective/law/">法律の境界線</a>
+      <a href="/detective/cases/">体験談</a>
+      <a href="/detective/glossary/">用語集</a>
+      <a href="/detective/column/">コラム</a>
+      <a href="/detective/about/">中の人について</a>
+      <a href="/detective/privacy/">プライバシーポリシー</a>
+      <a href="/detective/operator/">運営者情報</a>
+    </div>
+    <p class="dt-footer-copy">© 2026 弁護士の中の人</p>
+  </div>
+</footer>
+
+<div class="sticky-cta-bar" id="sticky-cta">
+  <span class="sticky-label">実際の金額は弁護士に</span>
+  <a href="/detective/lawyer/" class="sticky-btn" data-track="sticky_sim_lawyer">弁護士相談ガイドを見る →</a>
+  <button class="sticky-close" id="sticky-close" aria-label="閉じる">✕</button>
+</div>
+
+<script src="/detective/app.js" is:inline defer></script>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    var btn = document.getElementById('sim-calc');
+    if (!btn) return;
+    var BASE = { divorce: 200, separate: 150, claim: 90, undecided: 130 };
+    var YEAR = { y1: 0.7, y2: 1.0, y3: 1.2, y4: 1.4 };
+    var DEG  = { once: 0.75, mid: 1.1, habit: 1.35 };
+    var EVID = { strong: 1.1, some: 1.0, none: 0.85 };
+
+    btn.addEventListener('click', function () {
+      var dir = document.getElementById('sim-dir').value;
+      var yr  = document.getElementById('sim-years').value;
+      var kid = document.getElementById('sim-kids').value;
+      var deg = document.getElementById('sim-deg').value;
+      var ev  = document.getElementById('sim-evidence').value;
+
+      if (!dir || !yr || !kid || !deg || !ev) {
+        alert('すべての質問にお答えください。');
+        return;
+      }
+
+      var raw = BASE[dir] * YEAR[yr] * (kid === 'yes' ? 1.15 : 1.0) * DEG[deg] * EVID[ev];
+      var low  = Math.max(30, Math.round((raw * 0.7) / 10) * 10);
+      var high = Math.min(400, Math.round((raw * 1.15) / 10) * 10);
+      if (high <= low) high = low + 30;
+
+      var amount = document.getElementById('sim-amount');
+      amount.innerHTML = 'およそ <span></span>' + low + '〜' + high + '<span></span>万円';
+
+      var note = document.getElementById('sim-note');
+      var msgs = [];
+      if (ev === 'none') {
+        msgs.push('現時点では<strong>証拠がない</strong>ため、このままでは請求が難しい可能性があります。まずは証拠を固めることが最優先です。');
+      } else if (ev === 'some') {
+        msgs.push('一部の証拠はありますが、<strong>不貞を立証できる決定的な証拠</strong>があると交渉を有利に進めやすくなります。');
+      } else {
+        msgs.push('決定的な証拠をお持ちなら、慰謝料請求を進める土台は整っています。次は弁護士への相談が現実的な一歩です。');
+      }
+      msgs.push('※これは過去の判例傾向にもとづく<strong>目安</strong>です。実際の金額は個別事情で変わります。');
+      note.innerHTML = msgs.join('<br/>');
+
+      var result = document.getElementById('sim-result');
+      result.classList.add('visible');
+      result.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'sim_calc_done', { direction: dir, evidence: ev });
+      }
+      if (window.dataLayer) {
+        window.dataLayer.push({ event: 'sim_calc_done', direction: dir, evidence: ev });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

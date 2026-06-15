@@ -4866,3 +4866,63 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .lp-toc a { color: var(--text); text-decoration: none; }
 .lp-toc a:hover { color: var(--gold-deep); text-decoration: underline; }
+
+/* ══ 慰謝料シミュレーター ══ */
+.sim-card {
+  background: linear-gradient(135deg, #f8fafc, #fff);
+  border: 2px solid var(--navy);
+  border-radius: 16px;
+  padding: 1.5rem 1.25rem;
+  margin: 1.5rem 0;
+}
+.sim-card-head {
+  display: flex; align-items: center; gap: .5rem;
+  font-family: var(--serif); font-size: 1.15rem; font-weight: 700;
+  color: var(--navy); margin-bottom: .35rem;
+}
+.sim-card-head svg { width: 24px; height: 24px; color: var(--gold-deep); }
+.sim-card-sub { font-size: .82rem; color: var(--muted); margin: 0 0 1.25rem; line-height: 1.7; }
+.sim-form { display: flex; flex-direction: column; gap: 1rem; }
+.sim-field label { display: block; font-size: .85rem; font-weight: 800; color: var(--navy); margin-bottom: .4rem; }
+.sim-field select {
+  width: 100%; padding: .8rem .9rem; font-size: .95rem;
+  border: 1px solid var(--border); border-radius: 10px;
+  background: #fff; color: var(--text);
+  font-family: inherit; appearance: none; -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%231e3a5f' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 1rem center;
+}
+.sim-calc-btn {
+  width: 100%; padding: 1.05rem; margin-top: .25rem;
+  background: linear-gradient(135deg, #1e3a5f, #0f2540);
+  color: #fff; font-size: 1.05rem; font-weight: 900;
+  border: none; border-radius: 12px; cursor: pointer;
+  transition: transform .18s, box-shadow .18s;
+}
+.sim-calc-btn:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(30,58,95,.3); }
+.sim-result { display: none; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px dashed var(--border); }
+.sim-result.visible { display: block; animation: simFade .4s ease; }
+@keyframes simFade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.sim-result-label { font-size: .82rem; font-weight: 700; color: var(--muted); text-align: center; margin: 0 0 .3rem; }
+.sim-result-amount {
+  font-family: var(--serif); font-size: 2.1rem; font-weight: 900;
+  color: var(--gold-deep); text-align: center; line-height: 1.2; margin: 0;
+}
+.sim-result-amount span { font-size: 1.1rem; }
+.sim-result-note {
+  background: rgba(212,160,23,.1); border-radius: 10px;
+  padding: .8rem 1rem; margin: 1rem 0 0;
+  font-size: .8rem; line-height: 1.75; color: #4a3a1a;
+}
+.sim-result-cta {
+  display: block; width: 100%; box-sizing: border-box; text-align: center;
+  margin-top: 1rem; padding: 1rem;
+  background: linear-gradient(135deg, #d4a017, #b8860b);
+  color: #fff; font-weight: 800; font-size: 1rem;
+  border-radius: 12px; text-decoration: none;
+}
+.sim-disclaimer {
+  font-size: .78rem; line-height: 1.75; color: var(--muted);
+  background: #fff8e1; border-left: 3px solid var(--gold);
+  padding: .75rem .9rem; border-radius: 0 8px 8px 0; margin: 1rem 0 0;
+}
