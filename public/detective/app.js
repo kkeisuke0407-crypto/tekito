@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var target = fill.style.width || '0%';
     fill.setAttribute('data-bar-target', target);
     fill.style.width = '0';
-    var card = fill.closest('.ranking-card');
+    var card = fill.closest('.ranking-card, .ranking-hero-card');
     if (!card || !('IntersectionObserver' in window)) return;
     var barIO = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
