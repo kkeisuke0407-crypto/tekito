@@ -1,0 +1,19 @@
+{
+  "name": "中の人ナビ｜浮気・不倫で悩んだときの選択肢",
+  "short_name": "中の人ナビ",
+  "description": "法律事務所の元事務員が、浮気・不倫で悩む方へ、探偵・GPS・弁護士・相談の選び方を正直に案内します。",
+  "start_url": "/detective/",
+  "scope": "/detective/",
+  "display": "standalone",
+  "background_color": "#f5f0e8",
+  "theme_color": "#1e3a5f",
+  "lang": "ja",
+  "icons": [
+    {
+      "src": "/detective/images/logo-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
