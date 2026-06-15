@@ -4978,3 +4978,73 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .read-later svg { flex-shrink: 0; width: 18px; height: 18px; color: var(--gold-deep); }
 .read-later strong { color: var(--navy); }
+
+/* ══ 探偵4社 横並び比較表 ══ */
+.compare-table-wrap {
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+.compare-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  font-size: .82rem;
+}
+.compare-table thead th {
+  background: var(--navy); color: #fff;
+  font-weight: 800; font-size: .82rem;
+  padding: .85rem .65rem; text-align: center;
+  border-right: 1px solid rgba(255,255,255,.15);
+  position: sticky; top: 0;
+}
+.compare-table thead th:first-child { text-align: left; padding-left: 1rem; background: #0f2540; }
+.compare-table thead th.is-best {
+  background: linear-gradient(135deg, #d4a017, #b8860b);
+  position: relative;
+}
+.compare-table thead th.is-best::before {
+  content: "★ BEST 1"; display: block;
+  font-size: .62rem; letter-spacing: .08em;
+  color: #fff8e1; margin-bottom: .1rem;
+}
+.compare-table tbody td {
+  padding: .7rem .65rem; text-align: center;
+  border-bottom: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  line-height: 1.5; vertical-align: middle;
+}
+.compare-table tbody td:first-child {
+  text-align: left; padding-left: 1rem;
+  font-weight: 700; color: var(--navy);
+  background: #f8fafc; white-space: nowrap;
+}
+.compare-table tbody tr.is-best-row td {
+  background: rgba(212,160,23,.06);
+}
+.compare-table tbody tr.is-best-row td:first-child {
+  background: rgba(212,160,23,.15);
+}
+.compare-table tbody tr:last-child td { border-bottom: none; }
+.cmp-yes { color: #15803d; font-weight: 800; }
+.cmp-no  { color: #b91c1c; font-weight: 800; }
+.cmp-mid { color: #a16207; font-weight: 700; }
+.compare-table .cmp-cta {
+  display: inline-block; padding: .45rem .85rem;
+  background: var(--navy); color: #fff;
+  border-radius: 999px; font-size: .75rem; font-weight: 800;
+  text-decoration: none; white-space: nowrap;
+}
+.compare-table tr.is-best-row .cmp-cta {
+  background: linear-gradient(135deg, #d4a017, #b8860b);
+}
+.compare-hint {
+  font-size: .75rem; color: var(--muted);
+  margin: -0.5rem 0 1rem; text-align: center;
+}
+@media (max-width: 680px) {
+  .compare-hint::before { content: "← 横にスクロール → "; color: var(--gold-deep); font-weight: 700; }
+}
