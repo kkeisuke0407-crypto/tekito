@@ -1,6 +1,7 @@
 ---
-const title = "債務整理の相談先を比較｜無料相談・費用・全国対応で選ぶ";
-const description = "債務整理の相談先を相談料・費用・全国対応・分割払い・家族や職場への配慮で比較。気になる事務所がある方も、相談前に他の候補と比べておくと安心です。";
+const title = "債務整理に強い相談先おすすめ3選｜無料相談・費用・全国対応で比較";
+const description = "債務整理の相談先を相談料・費用・全国対応・分割払い・家族や職場への配慮で比較。任意整理・個人再生・自己破産の違いや選び方、督促が止まる仕組みもわかりやすく整理しました。";
+const pageUrl = "https://vpscomparehub.com/money/";
 
 /* ───────────────────────────────────────────────
    アフィリエイトリンク（差し替えはここだけ）
@@ -15,6 +16,7 @@ const LINK_LOTUS  = "https://h.accesstrade.net/sp/cc?rk=0100jqb500orwh";
 const firms = [
   {
     key: "hibari",
+    rank: 1,
     accent: "#3F74D6", accentSoft: "#E6EDFB",
     emblem: "ひ", type: "弁護士法人",
     name: "弁護士法人ひばり法律事務所",
@@ -37,6 +39,7 @@ const firms = [
   },
   {
     key: "lotus",
+    rank: 2,
     accent: "#2FA471", accentSoft: "#E1F2EA",
     emblem: "ロ", type: "弁護士法人",
     name: "弁護士法人東京ロータス法律事務所",
@@ -59,6 +62,7 @@ const firms = [
   },
   {
     key: "earth",
+    rank: 3,
     accent: "#E0641F", accentSoft: "#FCE7D7",
     emblem: "ア", type: "司法書士法人",
     name: "アース司法書士事務所",
@@ -73,13 +77,19 @@ const firms = [
     ],
     feeCheck: "1社あたりの費用・成功報酬の有無を確認しましょう",
     forWho: "任意整理を中心に相談したい人・費用を重視する人",
-    caution: "司法書士は1社あたり140万円を超える案件は対応できません",
+    caution: "司法書士が代理できるのは1社あたり140万円以下の案件です（自己破産・個人再生は申立ての代理ができません）",
     link: LINK_EARTH,
     bannerHref: "https://h.accesstrade.net/sp/cc?rk=0100p36600orwh",
     bannerSrc:  "https://h.accesstrade.net/sp/rr?rk=0100p36600orwh",
     bannerAlt:  "アース司法書士事務所",
   },
 ];
+
+const rankMeta = {
+  1: { label: "1位", ribbon: "イチオシ", color: "#E0A100", bg: "#FFF6DD" },
+  2: { label: "2位", ribbon: "",        color: "#9AA0A6", bg: "#F2F3F4" },
+  3: { label: "3位", ribbon: "",        color: "#C08552", bg: "#F6ECE2" },
+};
 
 const compareRows = [
   { label: "相談料",            vals: ["無料", "無料", "無料"] },
@@ -91,24 +101,96 @@ const compareRows = [
   { label: "向いている人",      vals: ["初めて相談する人", "費用を抑えたい人", "任意整理中心の人"] },
 ];
 
-const purposes = [
-  { icon: "💰", title: "費用を比較したい",               desc: "相談料・分割払いの可否で選ぶ" },
-  { icon: "🤫", title: "家族に知られにくく相談したい",   desc: "連絡方法・郵送物の配慮を確認" },
-  { icon: "📵", title: "督促の不安を早めに相談したい",   desc: "受任で督促が止まる仕組みを相談" },
-  { icon: "📝", title: "任意整理を中心に相談したい",     desc: "任意整理に対応する事務所を確認" },
-  { icon: "🗾", title: "全国対応の事務所に相談したい",   desc: "地方在住でも相談できる事務所" },
-  { icon: "⚖️", title: "弁護士に相談したい",             desc: "金額制限なく対応する弁護士法人" },
-  { icon: "📋", title: "司法書士に相談したい",           desc: "費用を抑えやすい司法書士事務所" },
+// 2. 悩み共感
+const pains = [
+  "毎月の返済で、生活費がほとんど残らない",
+  "貸金業者からの督促や電話が止まらず落ち着かない",
+  "複数の会社から借りていて、総額が把握できていない",
+  "リボ払いの残高がなかなか減らない",
+  "家族や職場に知られず、こっそり相談したい",
+  "相談したいけれど、費用が払えるか不安",
 ];
 
-const faqs = [
-  { q: "複数の事務所に無料相談してもいい？", a: "問題ありません。相談料が無料の事務所であれば、複数に相談して費用や対応方針を比較したうえで依頼先を選べます。" },
-  { q: "家族や職場に知られにくく相談できる？", a: "弁護士・司法書士には守秘義務があり、本人の同意なく家族や職場へ連絡することはありません。連絡方法や郵送物の配慮については相談時に確認しましょう。" },
-  { q: "相談したら督促は止まる？", a: "依頼して受任通知が各債権者へ送られると、原則として督促や取り立ての連絡は止まります。止まるタイミングは事務所に確認してください。" },
-  { q: "費用が払えない場合も相談できる？", a: "相談料が無料の事務所が多く、費用の分割払いに対応している場合もあります。支払い方法は相談時に確認しましょう。" },
-  { q: "司法書士と弁護士は何が違う？", a: "司法書士は1社あたり140万円以下の案件が対象で費用を抑えやすい一方、弁護士は金額の制限がなく訴訟対応も可能です。借入額や状況に応じて選びましょう。" },
-  { q: "相談だけで契約しなくてもいい？", a: "相談だけで依頼しないことも可能です。話を聞いて比較したうえで、納得できる相談先を選んでください。" },
+// 6. 解決できる悩み
+const solvable = [
+  { icon: "💸", title: "毎月の返済がきつい",       desc: "将来利息のカットや返済計画の見直しを相談できます" },
+  { icon: "📵", title: "督促・取り立てが怖い",     desc: "受任通知が届くと、原則として直接の督促は止まります" },
+  { icon: "🧾", title: "複数社からの借入",         desc: "借入全体を整理し、返済を一本化できる場合があります" },
+  { icon: "🔁", title: "リボ・将来利息を減らしたい", desc: "条件によっては利息や総返済額を抑えられます" },
+  { icon: "💰", title: "過払い金が気になる",       desc: "過去の取引内容によっては返還を請求できる場合があります" },
+  { icon: "🤫", title: "家族に知られたくない",     desc: "連絡方法や郵送物への配慮を相談できる事務所もあります" },
 ];
+
+// 8. 債務整理の種類
+const debtTypes = [
+  {
+    name: "任意整理", tag: "もっとも利用しやすい", color: "#2FB67E", soft: "#E1F2EA",
+    summary: "貸金業者と直接交渉し、将来利息のカットなどで返済しやすくする方法。",
+    merit: "財産を手放さずに済みやすく、手続きが比較的かんたん。家族に知られにくい。",
+    demerit: "元本そのものは原則として減らない。信用情報に一定期間登録される。",
+  },
+  {
+    name: "個人再生", tag: "住宅を残したい人向け", color: "#3F74D6", soft: "#E6EDFB",
+    summary: "裁判所を通じて借金を大きく圧縮し、原則3〜5年で返済していく方法。",
+    merit: "住宅ローン特則を使えば、家を残せる可能性がある。借金を大幅に減らせる場合がある。",
+    demerit: "手続きが複雑で、官報に掲載される。信用情報に一定期間登録される。",
+  },
+  {
+    name: "自己破産", tag: "返済が難しい人向け", color: "#E0641F", soft: "#FCE7D7",
+    summary: "裁判所に申し立て、免責が認められると返済義務が免除される方法。",
+    merit: "返済義務が原則なくなり、生活の立て直しを図りやすい。",
+    demerit: "一定以上の財産は処分対象になる。一部資格の制限・官報掲載・信用情報への登録がある。",
+  },
+];
+
+// 9. 選び方
+const chooseChecks = [
+  { title: "費用が明確か",             desc: "相談料・着手金・報酬・分割払いの可否を、契約前にはっきり説明してくれるか" },
+  { title: "債務整理の対応範囲",       desc: "任意整理だけか、個人再生・自己破産まで対応できるか。借入額や状況に合うか" },
+  { title: "説明が丁寧か",             desc: "メリットだけでなく、デメリットやリスクまで説明してくれるか" },
+  { title: "連絡方法・秘密への配慮",   desc: "家族や職場に知られにくいよう、連絡方法や郵送物を相談できるか" },
+  { title: "相談のしやすさ",           desc: "無料相談・全国対応・予約のしやすさなど、続けて相談しやすいか" },
+];
+
+// 11. FAQ
+const faqs = [
+  { q: "家族に知られずに相談できる？", a: "弁護士・司法書士には守秘義務があり、本人の同意なく家族へ連絡することはありません。郵送物や電話の方法を相談できる事務所もあります。ただし状況によっては完全に知られないとは限らないため、心配な点は相談時に確認しましょう。" },
+  { q: "職場に借金がバレる？", a: "任意整理では、原則として職場に連絡が行くことはありません。手続きの種類や状況により異なる場合があるため、不安な点は相談時に確認してください。" },
+  { q: "相談したら督促は止まる？", a: "依頼して受任通知が各債権者に送られると、貸金業法により、貸金業者からの直接の督促や取り立ては原則として止まります。止まるタイミングや対象は事務所に確認しましょう。" },
+  { q: "費用が払えなくても相談できる？", a: "相談料が無料の事務所が多く、費用の分割払いに対応している場合もあります。収入などの条件を満たせば、法テラス（日本司法支援センター）の費用立替制度を利用できることもあります。支払い方法は相談時に確認しましょう。" },
+  { q: "ブラックリストに載る？", a: "債務整理を行うと、信用情報機関に事故情報として一定期間登録され、その間は新たな借入やクレジットカードの作成が難しくなります。登録される期間は手続きや機関により異なります。" },
+  { q: "司法書士と弁護士は何が違う？", a: "認定司法書士が代理できるのは1社あたり140万円以下の案件で、費用を抑えやすい一方、自己破産・個人再生の申立て代理はできません。弁護士は金額の制限がなく、すべての手続きや訴訟に対応できます。借入額や状況に応じて選びましょう。" },
+  { q: "相談だけで契約しなくてもいい？", a: "相談だけで依頼しないことも可能です。費用や方針を聞いて比較したうえで、納得できる相談先を選んでください。" },
+  { q: "複数の事務所に無料相談してもいい？", a: "問題ありません。相談料が無料であれば、複数に相談して費用や対応方針を比べたうえで依頼先を決められます。" },
+];
+
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://vpscomparehub.com/" },
+    { "@type": "ListItem", "position": 2, "name": "債務整理", "item": pageUrl },
+    { "@type": "ListItem", "position": 3, "name": "債務整理に強い相談先おすすめ3選", "item": pageUrl },
+  ],
+};
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((f) => ({
+    "@type": "Question", "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a },
+  })),
+};
+const articleLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "mainEntityOfPage": pageUrl,
+  "dateModified": "2026-06-15",
+  "author": { "@type": "Organization", "name": "借金スッキリnavi 編集部" },
+  "publisher": { "@type": "Organization", "name": "借金スッキリnavi" },
+};
 ---
 
 <!DOCTYPE html>
@@ -118,6 +200,10 @@ const faqs = [
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
+  <link rel="canonical" href={pageUrl} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(articleLd)} />
   <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
   <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-18129603657"></script>
   <script is:inline>
@@ -202,7 +288,7 @@ const faqs = [
     .hero-blob { position: absolute; top: -40px; right: -40px; width: 160px; height: 160px; border-radius: 50%; background: radial-gradient(circle, rgba(255,180,71,0.4), transparent 70%); filter: blur(8px); pointer-events: none; }
     .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: #fff; border-radius: 999px; padding: 5px 12px 5px 8px; font-size: 11px; font-weight: 700; color: var(--primary-dark); box-shadow: 0 4px 10px rgba(255,107,53,0.18); position: relative; z-index: 1; }
     .hero-badge-dot { width: 18px; height: 18px; border-radius: 50%; background: var(--primary); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; }
-    .hero h1 { margin: 14px 0 8px; font-family: var(--zen); font-weight: 900; font-size: 28px; line-height: 1.3; letter-spacing: -0.02em; color: var(--ink); position: relative; z-index: 1; }
+    .hero h1 { margin: 14px 0 8px; font-family: var(--zen); font-weight: 900; font-size: 27px; line-height: 1.32; letter-spacing: -0.02em; color: var(--ink); position: relative; z-index: 1; }
     .hero h1 .mark { background: linear-gradient(180deg, transparent 60%, #FFD480 60%); padding: 0 4px; }
     .hero-lead { margin: 8px 0 4px; font-size: 13px; color: var(--ink-soft); line-height: 1.8; position: relative; z-index: 1; }
     .hero-note { margin: 8px 0 16px; font-size: 12px; color: var(--primary-dark); font-weight: 700; line-height: 1.7; position: relative; z-index: 1; }
@@ -222,6 +308,34 @@ const faqs = [
     .sec-kicker { display: inline-block; font-family: var(--round); font-size: 11px; font-weight: 800; letter-spacing: 0.16em; color: var(--primary); background: var(--primary-soft); padding: 4px 12px; border-radius: 999px; }
     .sec-head h2 { margin: 10px 0 4px; font-family: var(--zen); font-weight: 900; font-size: 21px; color: var(--ink); line-height: 1.35; }
     .sec-head p { margin: 0; font-size: 12px; color: var(--ink-soft); }
+
+    /* Pain section */
+    .pain-wrap { padding: 12px 16px 4px; }
+    .pain-card { background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 18px 16px; box-shadow: 0 4px 12px rgba(196,110,60,0.06); }
+    .pain-item { display: flex; gap: 10px; align-items: flex-start; padding: 10px 0; border-bottom: 1px dashed var(--border); font-size: 13px; color: var(--ink); line-height: 1.55; }
+    .pain-item:last-child { border-bottom: none; }
+    .pain-check { width: 20px; height: 20px; border-radius: 6px; border: 2px solid var(--primary); flex-shrink: 0; margin-top: 1px; position: relative; }
+    .pain-check::after { content: '✓'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--primary); font-weight: 900; font-size: 13px; }
+    .pain-foot { margin-top: 14px; font-size: 12px; color: var(--primary-dark); font-weight: 700; text-align: center; line-height: 1.7; }
+
+    /* Ranking */
+    .rank-wrap { padding: 12px 16px 4px; display: flex; flex-direction: column; gap: 18px; }
+    .rank-card { position: relative; background: #fff; border-radius: 20px; border: 1px solid var(--border); padding: 22px 16px 16px; box-shadow: 0 6px 16px rgba(196,110,60,0.08); }
+    .rank-card.is-top { border: 2px solid #F2C200; box-shadow: 0 10px 26px rgba(224,161,0,0.18); }
+    .rank-medal { position: absolute; top: -14px; left: 16px; display: inline-flex; align-items: center; gap: 6px; font-family: var(--zen); font-weight: 900; font-size: 13px; color: #fff; padding: 5px 13px; border-radius: 999px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+    .rank-ribbon { position: absolute; top: -12px; right: 14px; background: var(--primary); color: #fff; font-family: var(--zen); font-weight: 900; font-size: 10px; padding: 5px 11px; border-radius: 999px; }
+    .rank-head { display: flex; gap: 12px; align-items: center; margin-top: 4px; }
+    .rank-banner-img { width: 92px; height: auto; border-radius: 10px; display: block; flex-shrink: 0; }
+    .rank-type { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-bottom: 4px; }
+    .rank-name { font-family: var(--zen); font-weight: 800; font-size: 15px; line-height: 1.3; color: var(--ink); }
+    .rank-catch { margin-top: 12px; padding: 9px 12px; border-radius: 10px; font-size: 12px; font-weight: 700; line-height: 1.5; }
+    .rank-points { margin-top: 12px; display: flex; flex-direction: column; gap: 6px; }
+    .rank-point { display: flex; gap: 7px; align-items: flex-start; font-size: 12.5px; color: var(--ink); line-height: 1.55; }
+    .rank-point::before { content: '✓'; color: var(--green); font-weight: 900; flex-shrink: 0; }
+    .rank-mini { margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap; }
+    .rank-tag { font-size: 10.5px; font-weight: 700; color: var(--ink-soft); background: #FBF5EE; border: 1px solid var(--border); border-radius: 999px; padding: 4px 9px; }
+    .rank-cta { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 14px; color: #fff; font-family: var(--round); font-weight: 800; font-size: 14px; padding: 13px 8px; border-radius: 13px; box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
+    .rank-cta-note { margin-top: 7px; text-align: center; font-size: 10px; color: var(--ink-soft); }
 
     /* Compare table (desktop) */
     .compare-wrap { padding: 12px 16px 4px; }
@@ -262,7 +376,7 @@ const faqs = [
     .firm-list { padding: 14px 16px 4px; display: flex; flex-direction: column; gap: 18px; }
     .firm-card { position: relative; background: #fff; border-radius: 20px; padding: 20px 18px 18px; border: 1px solid var(--border); box-shadow: 0 6px 16px rgba(196,110,60,0.08); }
     .firm-badge-top { position: absolute; top: -11px; left: 16px; color: #fff; font-family: var(--zen); font-weight: 900; font-size: 11px; padding: 5px 12px; border-radius: 999px; }
-    .firm-head { display: flex; gap: 12px; align-items: flex-start; }
+    .firm-head { display: flex; gap: 12px; align-items: center; }
     .firm-banner-img { width: 90px; height: auto; border-radius: 10px; display: block; flex-shrink: 0; }
     .firm-type { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-bottom: 4px; }
     .firm-name { font-family: var(--zen); font-weight: 800; font-size: 15px; line-height: 1.3; color: var(--ink); }
@@ -278,14 +392,43 @@ const faqs = [
     .firm-cta { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 14px; color: #fff; font-family: var(--round); font-weight: 800; font-size: 14px; padding: 14px 8px; border-radius: 14px; box-shadow: 0 6px 16px rgba(0,0,0,0.12); }
     .firm-cta-note { margin-top: 7px; text-align: center; font-size: 10px; color: var(--ink-soft); }
 
-    /* Purpose grid */
-    .purpose-wrap { padding: 12px 16px 4px; }
-    .purpose-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    .purpose-card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 14px; display: flex; flex-direction: column; gap: 4px; transition: transform .15s, box-shadow .15s; }
-    .purpose-card:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(196,110,60,0.12); }
-    .purpose-icon { font-size: 22px; line-height: 1; }
-    .purpose-title { font-family: var(--zen); font-weight: 800; font-size: 13px; color: var(--ink); line-height: 1.4; margin-top: 4px; }
-    .purpose-desc { font-size: 11px; color: var(--ink-soft); line-height: 1.5; }
+    /* Solvable problems grid */
+    .solve-wrap { padding: 12px 16px 4px; }
+    .solve-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .solve-card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 14px; display: flex; flex-direction: column; gap: 4px; transition: transform .15s, box-shadow .15s; }
+    .solve-card:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(196,110,60,0.12); }
+    .solve-icon { font-size: 22px; line-height: 1; }
+    .solve-title { font-family: var(--zen); font-weight: 800; font-size: 13px; color: var(--ink); line-height: 1.4; margin-top: 4px; }
+    .solve-desc { font-size: 11px; color: var(--ink-soft); line-height: 1.55; }
+
+    /* Debt types */
+    .types-wrap { padding: 12px 16px 4px; display: flex; flex-direction: column; gap: 14px; }
+    .type-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 16px; box-shadow: 0 4px 12px rgba(196,110,60,0.06); }
+    .type-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .type-name { font-family: var(--zen); font-weight: 900; font-size: 16px; color: var(--ink); }
+    .type-tag { font-size: 10.5px; font-weight: 700; padding: 3px 10px; border-radius: 999px; }
+    .type-summary { margin-top: 10px; font-size: 12.5px; color: var(--ink); line-height: 1.7; }
+    .type-md { margin-top: 10px; display: grid; grid-template-columns: 1fr; gap: 8px; }
+    .type-row { display: flex; gap: 8px; align-items: flex-start; font-size: 12px; line-height: 1.6; }
+    .type-row .lab { flex-shrink: 0; font-weight: 800; font-size: 10.5px; padding: 2px 7px; border-radius: 5px; margin-top: 1px; }
+    .type-row.merit .lab { color: var(--green); background: #E1F2EA; }
+    .type-row.demerit .lab { color: var(--primary-dark); background: var(--primary-soft); }
+
+    /* How to choose */
+    .choose-wrap { padding: 12px 16px 4px; }
+    .choose-card { background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 8px 16px; box-shadow: 0 4px 12px rgba(196,110,60,0.06); }
+    .choose-item { display: flex; gap: 12px; align-items: flex-start; padding: 13px 0; border-bottom: 1px dashed var(--border); }
+    .choose-item:last-child { border-bottom: none; }
+    .choose-num { width: 26px; height: 26px; border-radius: 50%; background: var(--primary); color: #fff; font-family: var(--zen); font-weight: 900; font-size: 13px; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .choose-title { font-family: var(--zen); font-weight: 800; font-size: 13.5px; color: var(--ink); line-height: 1.4; }
+    .choose-desc { font-size: 11.5px; color: var(--ink-soft); line-height: 1.6; margin-top: 3px; }
+
+    /* Reviews note */
+    .review-wrap { padding: 12px 16px 4px; }
+    .review-card { background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 18px 16px; box-shadow: 0 4px 12px rgba(196,110,60,0.06); }
+    .review-card p { font-size: 12.5px; color: var(--ink-soft); line-height: 1.85; }
+    .review-card p + p { margin-top: 10px; }
+    .review-card strong { color: var(--ink); }
 
     /* FAQ */
     .faq-list { padding: 12px 16px 4px; display: flex; flex-direction: column; gap: 8px; }
@@ -297,9 +440,18 @@ const faqs = [
     .faq-chevron { padding-top: 3px; transition: transform .2s; color: var(--ink-soft); }
     .faq-item.open .faq-chevron { transform: rotate(180deg); }
     .faq-a { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
-    .faq-item.open .faq-a { max-height: 320px; }
+    .faq-item.open .faq-a { max-height: 420px; }
     .faq-a-inner { padding: 0 14px 14px 46px; }
     .faq-a-text { font-size: 12px; line-height: 1.8; color: var(--ink-soft); }
+
+    /* Public references */
+    .ref-wrap { padding: 12px 16px 4px; }
+    .ref-card { background: #FBF5EE; border: 1px solid var(--border); border-radius: 14px; padding: 16px; }
+    .ref-card h4 { font-family: var(--zen); font-weight: 800; font-size: 13px; color: var(--ink); margin-bottom: 8px; }
+    .ref-card p { font-size: 11.5px; color: var(--ink-soft); line-height: 1.75; margin-bottom: 8px; }
+    .ref-links { display: flex; flex-direction: column; gap: 6px; }
+    .ref-links a { font-size: 11.5px; color: var(--primary-dark); font-weight: 700; }
+    .ref-links a::before { content: '🔗 '; }
 
     /* Final CTA */
     .final-cta { margin: 24px 16px 16px; padding: 24px 20px; border-radius: 22px; color: #fff; position: relative; overflow: hidden;
@@ -329,19 +481,26 @@ const faqs = [
     /* ── Desktop ── */
     @media (min-width: 920px) {
       .hero { padding: 44px 44px 40px; }
-      .hero h1 { font-size: 38px; }
+      .hero h1 { font-size: 37px; }
       .hero-lead { font-size: 15px; }
       .hero-note { font-size: 13px; }
       .hero .btn-primary { max-width: 460px; }
       .sec-head { padding: 40px 28px 8px; }
       .sec-head h2 { font-size: 26px; }
+      .pain-wrap { padding: 16px 28px 4px; }
+      .rank-wrap { padding: 16px 28px 4px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start; }
+      .rank-card.is-top { grid-row: span 1; }
       .compare-wrap { padding: 16px 28px 4px; }
       .compare-table { display: block; }
       .compare-cards { display: none; }
       .firm-list { padding: 16px 28px 4px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start; }
-      .purpose-wrap { padding: 16px 28px 4px; }
-      .purpose-grid { grid-template-columns: repeat(4, 1fr); }
+      .solve-wrap { padding: 16px 28px 4px; }
+      .solve-grid { grid-template-columns: repeat(3, 1fr); }
+      .types-wrap { padding: 16px 28px 4px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
+      .choose-wrap { padding: 16px 28px 4px; }
+      .review-wrap { padding: 16px 28px 4px; }
       .faq-list { padding: 12px 28px 4px; }
+      .ref-wrap { padding: 16px 28px 4px; }
       .final-cta { margin: 28px 28px 16px; }
       .legal { margin: 8px 28px 0; }
       /* hide sticky on desktop */
@@ -371,7 +530,7 @@ const faqs = [
   <section class="hero">
     <div class="hero-blob"></div>
     <div class="hero-badge"><span class="hero-badge-dot">★</span>相談先を選ぶ前に比較</div>
-    <h1>債務整理の<br/><span class="mark">相談先</span>を比較</h1>
+    <h1>債務整理に強い<br/><span class="mark">相談先</span>おすすめ3選</h1>
     <p class="hero-lead">無料相談・費用・全国対応・分割払い・家族や職場への配慮を、まとめて確認できます。</p>
     <p class="hero-note">気になる事務所がある方も、相談前に他の候補と比べておくと安心です。</p>
     <div class="hero-chips">
@@ -381,13 +540,68 @@ const faqs = [
       <span class="hero-chip">家族/職場への配慮</span>
       <span class="hero-chip">任意整理/個人再生/自己破産対応</span>
     </div>
-    <button class="btn-primary" onclick="scrollToId('compare')">無料相談できる事務所を比較する →</button>
+    <button class="btn-primary" onclick="scrollToId('ranking')">無料相談できる事務所を比較する →</button>
   </section>
 
-  <!-- 2. 3社比較表 -->
+  <!-- 2. 悩み共感 -->
+  <div class="sec-head">
+    <span class="sec-kicker">CHECK</span>
+    <h2>こんな不安はありませんか？</h2>
+    <p>1つでも当てはまるなら、早めの相談で選択肢が残りやすくなります</p>
+  </div>
+  <div class="pain-wrap">
+    <div class="pain-card">
+      {pains.map((p) => (
+        <div class="pain-item"><span class="pain-check"></span><span>{p}</span></div>
+      ))}
+      <div class="pain-foot">借金の悩みは、早く相談するほど取れる手段が多くなります。<br/>まずは無料相談で、今できることを確認しましょう。</div>
+    </div>
+  </div>
+  <div class="center-cta">
+    <button class="btn-primary" onclick="scrollToId('ranking')">今の状況に近い相談先を見る →</button>
+  </div>
+
+  <!-- 3. おすすめ3選（ランキング） -->
+  <div class="sec-head" id="ranking">
+    <span class="sec-kicker">RANKING</span>
+    <h2>債務整理に強い相談先おすすめ3選</h2>
+    <p>無料相談・費用・対応範囲・秘密配慮で選びました</p>
+  </div>
+  <div class="rank-wrap">
+    {firms.map((f) => {
+      const m = rankMeta[f.rank];
+      return (
+        <div class={`rank-card${f.rank === 1 ? ' is-top' : ''}`}>
+          <span class="rank-medal" style={`background:${m.color}`}>👑 {m.label}</span>
+          {m.ribbon && <span class="rank-ribbon">{m.ribbon}</span>}
+          <div class="rank-head">
+            <a href={f.bannerHref} rel="nofollow" referrerpolicy="no-referrer-when-downgrade" onclick={`return gtagSendEvent('${f.bannerHref}')`}>
+              <img class="rank-banner-img" src={f.bannerSrc} alt={f.bannerAlt} width="300" height="250" loading="lazy" />
+            </a>
+            <div style="flex:1;min-width:0">
+              <span class="rank-type" style={`color:${f.accent};background:${f.accentSoft}`}>{f.type}</span>
+              <div class="rank-name">{f.name}</div>
+            </div>
+          </div>
+          <div class="rank-catch" style={`background:${f.accentSoft};color:${f.accent}`}>{f.catch}</div>
+          <div class="rank-points">
+            {f.points.map((p) => <div class="rank-point">{p}</div>)}
+          </div>
+          <div class="rank-mini">
+            <span class="rank-tag">相談料 {f.fee}</span>
+            <span class="rank-tag">{f.area}</span>
+          </div>
+          <a href={f.link} rel="nofollow" referrerpolicy="no-referrer-when-downgrade" class="rank-cta" style={`background:${f.accent}`} onclick={`return gtagSendEvent('${f.link}')`}>無料相談を確認する →</a>
+          <div class="rank-cta-note">相談料0円・まずは話を聞くだけでもOK</div>
+        </div>
+      );
+    })}
+  </div>
+
+  <!-- 4. 3社比較表 -->
   <div class="sec-head" id="compare">
     <span class="sec-kicker">COMPARE</span>
-    <h2>まずは相談しやすい3社を比較</h2>
+    <h2>まずは3社をまとめて比較</h2>
     <p>相談料・対応手続き・配慮の有無で見比べてみましょう</p>
   </div>
   <div class="compare-wrap">
@@ -415,7 +629,7 @@ const faqs = [
         <div class="ct-key">無料相談</div>
         {firms.map((f) => (
           <div class="ct-val">
-            <a href={f.link} rel="nofollow" class="ct-mini-cta" style={`background:${f.accent}`} onclick={`return gtagSendEvent('${f.link}')`}>無料相談を確認</a>
+            <a href={f.link} rel="nofollow" referrerpolicy="no-referrer-when-downgrade" class="ct-mini-cta" style={`background:${f.accent}`} onclick={`return gtagSendEvent('${f.link}')`}>無料相談を確認</a>
           </div>
         ))}
       </div>
@@ -438,20 +652,20 @@ const faqs = [
               <div class="cc-r"><span class="cc-r-k">{row.label}</span><span class="cc-r-v">{row.vals[fi]}</span></div>
             ))}
           </div>
-          <a href={f.link} rel="nofollow" class="cc-cta" style={`background:${f.accent}`} onclick={`return gtagSendEvent('${f.link}')`}>無料相談を確認 →</a>
+          <a href={f.link} rel="nofollow" referrerpolicy="no-referrer-when-downgrade" class="cc-cta" style={`background:${f.accent}`} onclick={`return gtagSendEvent('${f.link}')`}>無料相談を確認 →</a>
         </div>
       ))}
     </div>
   </div>
   <div class="center-cta">
-    <button class="btn-primary" onclick="scrollToId('firms')">3社を比較して相談先を選ぶ →</button>
+    <button class="btn-primary" onclick="scrollToId('firms')">3社の詳細を見て相談先を選ぶ →</button>
   </div>
 
-  <!-- 3. おすすめ候補の詳細 -->
+  <!-- 5. 各社の詳細 -->
   <div class="sec-head" id="firms">
     <span class="sec-kicker">DETAILS</span>
     <h2>迷ったら比較しておきたい相談先</h2>
-    <p>それぞれの強みと確認ポイントをチェック</p>
+    <p>それぞれの強み・向いている人・確認ポイントをチェック</p>
   </div>
   <div class="firm-list">
     {firms.map((f) => (
@@ -484,28 +698,86 @@ const faqs = [
     ))}
   </div>
 
-  <!-- 4. 目的別に選ぶ -->
+  <!-- 6. 解決できる悩み -->
   <div class="sec-head">
-    <span class="sec-kicker">BY PURPOSE</span>
-    <h2>悩みに合わせて相談先を選ぶ</h2>
-    <p>あなたの状況に近いものから比較を始めましょう</p>
+    <span class="sec-kicker">SOLVE</span>
+    <h2>債務整理で相談できる主な悩み</h2>
+    <p>あなたの状況に近いものから相談を始めましょう</p>
   </div>
-  <div class="purpose-wrap">
-    <div class="purpose-grid">
-      {purposes.map((p) => (
-        <a class="purpose-card" href="#compare" onclick="return scrollToId('compare')">
-          <span class="purpose-icon">{p.icon}</span>
-          <span class="purpose-title">{p.title}</span>
-          <span class="purpose-desc">{p.desc}</span>
+  <div class="solve-wrap">
+    <div class="solve-grid">
+      {solvable.map((s) => (
+        <a class="solve-card" href="#ranking" onclick="return scrollToId('ranking')">
+          <span class="solve-icon">{s.icon}</span>
+          <span class="solve-title">{s.title}</span>
+          <span class="solve-desc">{s.desc}</span>
         </a>
       ))}
     </div>
   </div>
   <div class="center-cta">
-    <button class="btn-primary" onclick="scrollToId('compare')">自分に合う相談先を探す →</button>
+    <button class="btn-primary" onclick="scrollToId('ranking')">自分に合う相談先を探す →</button>
   </div>
 
-  <!-- 5. 相談前の不安FAQ -->
+  <!-- 7. 債務整理の種類 -->
+  <div class="sec-head">
+    <span class="sec-kicker">TYPES</span>
+    <h2>任意整理・個人再生・自己破産の違い</h2>
+    <p>返済を続けられるか・住宅を残したいか・借入額で適した方法は異なります</p>
+  </div>
+  <div class="types-wrap">
+    {debtTypes.map((t) => (
+      <div class="type-card">
+        <div class="type-top">
+          <span class="type-name">{t.name}</span>
+          <span class="type-tag" style={`color:${t.color};background:${t.soft}`}>{t.tag}</span>
+        </div>
+        <p class="type-summary">{t.summary}</p>
+        <div class="type-md">
+          <div class="type-row merit"><span class="lab">メリット</span><span>{t.merit}</span></div>
+          <div class="type-row demerit"><span class="lab">注意点</span><span>{t.demerit}</span></div>
+        </div>
+      </div>
+    ))}
+  </div>
+  <div class="center-cta">
+    <button class="btn-primary" onclick="scrollToId('ranking')">どの手続きが合うか相談する →</button>
+  </div>
+
+  <!-- 8. 選び方 -->
+  <div class="sec-head">
+    <span class="sec-kicker">HOW TO CHOOSE</span>
+    <h2>失敗しない相談先の選び方</h2>
+    <p>料金や口コミだけでなく、次の5つを確認しましょう</p>
+  </div>
+  <div class="choose-wrap">
+    <div class="choose-card">
+      {chooseChecks.map((c, i) => (
+        <div class="choose-item">
+          <span class="choose-num">{i + 1}</span>
+          <div>
+            <div class="choose-title">{c.title}</div>
+            <div class="choose-desc">{c.desc}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- 9. 口コミの見方 -->
+  <div class="sec-head">
+    <span class="sec-kicker">REVIEWS</span>
+    <h2>口コミを見るときの注意点</h2>
+    <p>口コミはあくまで参考。最終判断は無料相談で</p>
+  </div>
+  <div class="review-wrap">
+    <div class="review-card">
+      <p>インターネット上の口コミや評判は、感じ方に個人差があり、状況によって結果も異なります。<strong>「必ず減額できた」「絶対バレない」といった断定的な口コミは鵜呑みにしない</strong>ようにしましょう。</p>
+      <p>大切なのは、実際に無料相談で<strong>費用の説明・対応範囲・デメリットの説明</strong>を自分の目で確認すること。気になる事務所が複数あれば、相談して比べたうえで依頼先を選ぶのがおすすめです。</p>
+    </div>
+  </div>
+
+  <!-- 10. FAQ -->
   <div class="sec-head">
     <span class="sec-kicker">FAQ</span>
     <h2>相談前によくある不安</h2>
@@ -519,23 +791,38 @@ const faqs = [
       </div>
     ))}
   </div>
-  <div class="center-cta">
-    <button class="btn-primary" onclick="scrollToId('compare')">不安を相談できる事務所を比較する →</button>
+
+  <!-- 11. 公的な相談窓口・参考情報 -->
+  <div class="sec-head">
+    <span class="sec-kicker">PUBLIC INFO</span>
+    <h2>公的な相談窓口・参考情報</h2>
+    <p>民間の事務所以外にも、公的な相談先があります</p>
+  </div>
+  <div class="ref-wrap">
+    <div class="ref-card">
+      <h4>費用が心配な場合は法テラスも選択肢</h4>
+      <p>収入などの条件を満たせば、法テラス（日本司法支援センター）の無料法律相談や、弁護士・司法書士費用の立替制度を利用できる場合があります。利用には資力要件や審査があり、原則として予約制です。最新の条件は公式サイトでご確認ください。</p>
+      <div class="ref-links">
+        <a href="https://www.houterasu.or.jp/site/soudan-tatekae/seirihiyou.html" target="_blank" rel="noopener nofollow">法テラス｜債務整理の費用の目安</a>
+        <a href="https://www.fsa.go.jp/soudan/" target="_blank" rel="noopener nofollow">金融庁｜多重債務についての相談窓口</a>
+      </div>
+    </div>
   </div>
 
-  <!-- 6. 最終CTA -->
+  <!-- 12. 最終CTA -->
   <section class="final-cta">
     <div class="final-cta-deco"></div>
     <h3>相談先は、<br/>比較してから決めましょう。</h3>
     <p>債務整理は、費用・対応範囲・相談方法が事務所によって異なります。まずは無料相談できる候補を比較し、納得できる相談先を選びましょう。</p>
-    <button class="btn-light" onclick="scrollToId('compare')">無料相談できる事務所を比較する →</button>
+    <button class="btn-light" onclick="scrollToId('ranking')">無料相談できる事務所を比較する →</button>
   </section>
 
   <!-- 固定の注意書き -->
   <div class="legal">
-    <p>※本ページはPR・広告を含みます。掲載は提携に基づくものです。</p>
-    <p>※本ページは法律相談・法的助言ではありません。一般的な情報提供を目的としています。</p>
+    <p>※本ページはPR・広告を含みます。掲載は提携に基づくものです。掲載順は当サイトの基準によるもので、品質や優劣を保証するものではありません。</p>
+    <p>※本ページは法律相談・法的助言ではなく、一般的な情報提供を目的としています。</p>
     <p>※相談料・費用・対応可否・対応エリア・分割払いの可否などは変更される場合があります。最新かつ正確な内容は、必ず各事務所に直接ご確認ください。</p>
+    <p>※債務整理を行うと信用情報に一定期間登録されるなどの影響があります。手続きの効果やリスクは個別の状況により異なります。</p>
   </div>
 
   <footer class="site-footer">
@@ -554,7 +841,7 @@ const faqs = [
 
 <!-- スマホ下部固定CTA -->
 <div class="sticky-cta">
-  <button onclick="scrollToId('compare')">無料相談先を比較 →</button>
+  <button onclick="scrollToId('ranking')">無料相談先を比較 →</button>
 </div>
 
 </body>
