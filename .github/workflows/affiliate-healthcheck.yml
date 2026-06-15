@@ -1,0 +1,58 @@
+name: Affiliate Link Healthcheck
+
+# 探偵LP（中の人ナビ）のアフィリエイトリンク死活監視。
+# 1位（うな探偵社）など主要案件が停止・URL変更された場合に気づけるようにする。
+# 異常検知時は Actions が失敗し、リポジトリ通知で気づける。
+# 対象URLを変更したら、本ファイルの urls 配列を更新すること。
+
+on:
+  schedule:
+    - cron: '0 23 * * 0'   # 毎週月曜 08:00 JST（日曜23:00 UTC）
+  workflow_dispatch: {}      # 手動実行も可能
+
+jobs:
+  healthcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check affiliate / CV links
+        run: |
+          # key|URL の形式（keyはログ用ラベル）
+          entries=(
+            "una(No.1 CV)|https://h.accesstrade.net/sp/cc?rk=0100q30i00orzx"
+            "una(banner)|https://h.accesstrade.net/sp/cc?rk=0100q30k00orzx"
+            "haraichi(CV)|https://h.accesstrade.net/sp/cc?rk=0100ken700orzx"
+            "haraichi(banner)|https://h.accesstrade.net/sp/cc?rk=0100o54w00orzx"
+            "kurol(CV)|https://h.accesstrade.net/sp/cc?rk=0100paqn00orzx"
+            "kurol(banner)|https://h.accesstrade.net/sp/cc?rk=0100paqr00orzx"
+            "matching|https://h.accesstrade.net/sp/cc?rk=0100q1y600orzx"
+            "gps(ichiroku)|https://h.accesstrade.net/sp/cc?rk=0100r19500orzx"
+            "alg(a8)|https://px.a8.net/svt/ejp?a8mat=4B3Y38+CFQ18I+3IKY+61C2P"
+            "bennavi|https://furin-isharyou.ricon-pro.com/"
+            "vernis|https://vernis.jp/affiliate/?af=1234"
+          )
+          fail=0
+          warn=0
+          echo "=== Affiliate Link Healthcheck ($(date -u)) ==="
+          printf "%-7s %-18s %s\n" "STATUS" "KEY" "URL"
+          for e in "${entries[@]}"; do
+            key="${e%%|*}"
+            url="${e#*|}"
+            code=$(curl -sS -o /dev/null -w "%{http_code}" -L --max-time 25 \
+                   -A "Mozilla/5.0 (compatible; NakanohitoNaviHealthcheck/1.0)" \
+                   "$url" 2>/dev/null || echo "000")
+            printf "%-7s %-18s %s\n" "$code" "$key" "$url"
+            # 000=到達不可 / 5xx=サーバエラー → 異常
+            if [ "$code" = "000" ] || [ "${code:0:1}" = "5" ]; then
+              echo "::error::[$key] が応答しません (HTTP $code): $url"
+              fail=1
+            # 4xx → 提携切れ/URL変更の可能性。警告として記録
+            elif [ "${code:0:1}" = "4" ]; then
+              echo "::warning::[$key] が $code を返しました（提携切れ・URL変更の可能性）: $url"
+              warn=1
+            fi
+          done
+          echo "=== 結果: 異常=$fail 警告=$warn ==="
+          if [ "$fail" = "1" ]; then
+            echo "主要アフィリンクに到達不可があります。停止していないか確認し、必要なら順位の入れ替え（1位→他社）を検討してください。"
+            exit 1
+          fi
