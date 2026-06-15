@@ -1,0 +1,301 @@
+---
+const PAGE_TITLE = "浮気を疑ったら｜最初にやること完全ガイド｜中の人ナビ";
+const PAGE_DESC  = "「様子がおかしい、でも確信が持てない」——そんなときに最初にやるべきこと・やってはいけないことを、法律事務所の元事務員が順を追って解説します。自分でできる範囲と、プロに頼むべき一線まで正直にお伝えします。";
+const CANONICAL  = "https://lawyer-nakanohito.com/detective/start/";
+const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
+const UPDATED = "2026-06-15";
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{PAGE_TITLE}</title>
+  <meta name="description" content={PAGE_DESC} />
+  <link rel="canonical" href={CANONICAL} />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={PAGE_TITLE} />
+  <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:url" content={CANONICAL} />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content="弁護士の中の人" />
+  <meta property="og:image"     content="https://lawyer-nakanohito.com/detective/images/hero.png" />
+  <meta name="twitter:card"     content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260615a" />
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "浮気を疑ったときに最初にやること",
+    "description": "様子がおかしいと感じてから、証拠を固めて次の一手を決めるまでの正しい順序。",
+    "step": [
+      { "@type": "HowToStep", "name": "まず落ち着く", "text": "問い詰める・スマホを盗み見るなど、感情的に動く前に一度立ち止まる。" },
+      { "@type": "HowToStep", "name": "自分の状況を整理する", "text": "いまどの段階か（確信がない／怪しい／ほぼ確信／証拠あり）を見極める。" },
+      { "@type": "HowToStep", "name": "合法な範囲で下調べする", "text": "行動メモやレシート整理など、自分でできる安全な確認を行う。" },
+      { "@type": "HowToStep", "name": "証拠が必要なら専門家へ", "text": "裁判で使える証拠は探偵に、慰謝料・離婚は弁護士に相談する。" }
+    ]
+  })} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "TOP", "item": "https://lawyer-nakanohito.com/detective/" },
+      { "@type": "ListItem", "position": 2, "name": "最初にやること完全ガイド", "item": CANONICAL }
+    ]
+  })} />
+
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2YLF06DC0E');
+  </script>
+  <script is:inline type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wt0koam10v");
+  </script>
+</head>
+<body class="lp-page lp-page-v2">
+
+<header class="dt-header">
+  <div class="dt-header-inner">
+    <a href="/detective/" class="dt-logo">
+      <div class="dt-logo-icon"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;" /></div>
+      <div class="dt-logo-wrap"><span>弁護士の中の人</span><span class="dt-logo-sub">中の人ナビ</span></div>
+    </a>
+    <a href={INSTAGRAM_URL} class="dt-header-insta" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+      <span>@lawyer.nakanohito</span>
+    </a>
+  </div>
+</header>
+
+<nav class="col-header-nav">
+  <div class="col-header-nav-inner">
+    <a href="/detective/flow/">診断</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cost/">費用相場</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/law/">法律の境界線</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cases/">体験談</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/column/">コラム</a>
+  </div>
+</nav>
+
+<div class="lp-hero">
+  <div class="lp-hero-meta">
+    <span class="updated-meta">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      最終更新 <strong>{UPDATED}</strong>
+    </span>
+  </div>
+  <h1>浮気を疑ったら、<br/>最初にやること</h1>
+  <p class="lp-hero-sub">「なんか様子がおかしい。でも確信が持てない、誰にも言えない」——そんなあなたへ。何百件もの相談を見てきた事務員が、<strong>最初の一歩を間違えないため</strong>の順序を、正直にお伝えします。</p>
+</div>
+
+<div class="lp-body">
+
+  <div class="tldr-card">
+    <div class="tldr-title">このページの結論</div>
+    <p class="tldr-body">浮気対応で失敗する人のほとんどは、<strong>順番を間違えています</strong>。焦って問い詰めたり、スマホを盗み見たりすると、証拠を隠され、警戒され、かえって不利になります。正しい順序は「<strong>① 落ち着く → ② 状況を整理 → ③ 合法な範囲で下調べ → ④ 証拠が必要ならプロへ</strong>」。まずは深呼吸して、自分が今どの段階にいるかを見極めることから始めましょう。</p>
+    <ul class="tldr-points">
+      <li>やってはいけない：問い詰める・スマホ盗み見・感情的に動く</li>
+      <li>自分でできる：行動メモ・レシート整理・合法な範囲の確認</li>
+      <li>プロの領域：裁判で使える証拠・慰謝料請求・離婚手続き</li>
+    </ul>
+  </div>
+
+  <div class="lp-card">
+    <h2>まず深呼吸。やってはいけない3つ</h2>
+    <p>気持ちが揺れているときほど、人は「すぐ確かめたい」と動いてしまいます。でも事務所では、その一手で<strong>立場が悪くなった</strong>方を何人も見てきました。まずは、これだけはやめてください。</p>
+    <div class="lp-step">
+      <div class="lp-step-num">×</div>
+      <div class="lp-step-body">
+        <strong>本人を問い詰める</strong>
+        <span>証拠がない状態で問い詰めると、相手は警戒し、証拠を隠し、口裏を合わせます。「気のせいだった」で終わらされ、次に動きにくくなります。</span>
+      </div>
+    </div>
+    <div class="lp-step">
+      <div class="lp-step-num">×</div>
+      <div class="lp-step-body">
+        <strong>スマホやLINEを勝手に見る</strong>
+        <span>不正アクセス禁止法などに触れる可能性があり、<strong>そうやって得た情報は裁判で使えない</strong>ことが多いです。見たことが相手に伝わると、一気に警戒されます。</span>
+      </div>
+    </div>
+    <div class="lp-step">
+      <div class="lp-step-num">×</div>
+      <div class="lp-step-body">
+        <strong>感情のまま動く</strong>
+        <span>泣きながら責める、実家や相手の職場に連絡する——気持ちは分かりますが、冷静さを欠いた行動は、後の交渉や調停であなたが不利になる材料にされることがあります。</span>
+      </div>
+    </div>
+    <div class="lp-warn">
+      <div class="lp-warn-title">覚えておいてほしいこと</div>
+      <p>浮気・不倫の問題は、<strong>「証拠を持っている側」が圧倒的に有利</strong>です。だからこそ、相手に気づかれる前に、静かに準備を進めることが何より大切。焦りは禁物です。</p>
+    </div>
+  </div>
+
+  <div class="lp-card">
+    <h2>あなたは今、どの段階にいますか？</h2>
+    <p>「最初の一手」は、いまの確信度によって変わります。当てはまる段階から読んでみてください。</p>
+
+    <div class="start-stage">
+      <span class="start-stage-label">STAGE 1</span>
+      <h3>まだ確信がない（なんとなく様子がおかしい）</h3>
+      <p>帰りが遅くなった、スマホを手放さなくなった、急に身だしなみに気を使い出した——違和感はあるけれど、確信はない段階。ここで焦って動くと失敗します。まずは<strong>気持ちと事実を切り分けて整理</strong>しましょう。</p>
+      <p class="start-stage-next">→ <a href="/detective/flow/">5問診断</a>で自分の状況を整理する／<a href="/detective/uranai/">誰かに話を聞いてほしい方へ</a></p>
+    </div>
+
+    <div class="start-stage">
+      <span class="start-stage-label">STAGE 2</span>
+      <h3>怪しい点が増えてきた（自分で確かめたい）</h3>
+      <p>怪しい曜日や時間帯が見えてきた段階。ここでは<strong>自分でできる合法な範囲</strong>で、行動パターンの「あたり」をつけます。ただし、何が合法で何が違法かを知らずに動くのは危険です。</p>
+      <p class="start-stage-next">→ <a href="/detective/gps/">GPS活用ガイド</a>／<a href="/detective/law/">合法・違法の境界線</a>を確認する</p>
+    </div>
+
+    <div class="start-stage">
+      <span class="start-stage-label">STAGE 3</span>
+      <h3>ほぼ確信、証拠が欲しい（探偵を検討）</h3>
+      <p>慰謝料請求や離婚を少しでも視野に入れているなら、<strong>裁判で使える証拠</strong>が必要です。これは自力では難しく、撮影技術・尾行・法的に有効な報告書づくりはプロの領域。失敗しない探偵社の選び方を整理しています。</p>
+      <p class="start-stage-next">→ <a href="/detective/tantei/">探偵社の選び方を見る</a>／<a href="/detective/cost/">費用相場を確認する</a></p>
+    </div>
+
+    <div class="start-stage">
+      <span class="start-stage-label">STAGE 4</span>
+      <h3>証拠がある、次に進みたい（弁護士へ）</h3>
+      <p>不貞の証拠を持っているなら、次は<strong>慰謝料請求・離婚の手続き</strong>。交渉が調停・訴訟に発展することもあるため、自宅から通いやすい「不倫慰謝料に強い地域の弁護士」を選ぶのが鉄則です。</p>
+      <p class="start-stage-next">→ <a href="/detective/lawyer/">弁護士相談ガイドを見る</a></p>
+    </div>
+  </div>
+
+  <div class="lp-card">
+    <h2>「自分でやる」と「プロに頼む」の境界線</h2>
+    <p>費用を抑えたい気持ちはよく分かります。実際、自分でできることもあります。でも、<strong>ここを越えると逆効果になる</strong>という一線があります。事務所での経験から、その境界を整理しました。</p>
+    <div class="diy-pro-compare">
+      <div class="diy-pro-col diy-pro-col--diy">
+        <div class="diy-pro-col-head">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          自分でできること
+        </div>
+        <ul class="diy-pro-list">
+          <li>怪しい曜日・時間帯を記録する</li>
+          <li>レシート・領収書・SNSの手がかりを整理</li>
+          <li>自分名義／共有名義の車にGPSで下調べ</li>
+          <li>公道での撮影（プライバシーに配慮した範囲）</li>
+          <li>気持ちを整理し、今後の方針を考える</li>
+        </ul>
+      </div>
+      <div class="diy-pro-col diy-pro-col--pro">
+        <div class="diy-pro-col-head">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.1L12 17.8 6.5 19.3l1-6.1L3 8.9 9 8z"/></svg>
+          プロに頼むべきこと
+        </div>
+        <ul class="diy-pro-list">
+          <li>裁判で証拠採用される写真・動画の撮影</li>
+          <li>気づかれずに行う尾行・張り込み</li>
+          <li>不貞の事実を立証する調査報告書の作成</li>
+          <li>慰謝料請求・示談交渉・離婚手続き</li>
+          <li>相手方や代理人との法的なやり取り</li>
+        </ul>
+      </div>
+    </div>
+    <div class="diy-pro-verdict">
+      自分でできるのは、あくまで<strong>「あたりをつける」ところまで</strong>。決定的な瞬間を、気づかれずに、裁判で通用する形で押さえるのは、訓練を受けたプロにしかできません。<strong>自力調査で警戒されてしまうと、その後プロが入っても証拠が取れなくなる</strong>——これが事務所でいちばん多かった後悔です。下調べで時間を絞り、肝心なところはプロに任せるのが、結局いちばん確実で費用も抑えられます。
+    </div>
+  </div>
+
+  <div class="lp-card">
+    <h2>順番を間違えた人・間違えなかった人</h2>
+    <p>同じ「浮気を疑った」でも、最初の一手で結果は大きく変わります。事務所で見た典型を、匿名化して2つだけ紹介します。</p>
+    <div class="case-grid" style="grid-template-columns:1fr 1fr;">
+      <div class="case-card" style="margin-bottom:0;">
+        <div class="case-card-meta"><span class="case-tag">30代女性</span></div>
+        <h3>GPS下調べ → 探偵 → 慰謝料180万円で和解</h3>
+        <p class="case-card-body" style="font-size:.85rem;">自分で曜日を絞ってから探偵に依頼。調査時間が短く済み、費用は38万円。順番が結果を作った好例。</p>
+      </div>
+      <div class="case-card" style="margin-bottom:0;">
+        <div class="case-card-meta"><span class="case-tag">30代女性</span></div>
+        <h3 style="color:var(--red);">スマホのスクショで突撃 → 立場が悪化</h3>
+        <p class="case-card-body" style="font-size:.85rem;">入手経路を問題視され、証拠が無効に。警戒され、その後の調査も難航した失敗例。</p>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:1.5rem;"><a href="/detective/cases/" class="lp-cta-block-btn" style="display:inline-block;" data-track="start_cases_more">他の体験談も読む →</a></p>
+  </div>
+
+  <div class="lp-cta-block">
+    <h3>まず、自分に必要な選択肢を知る</h3>
+    <p>「結局、自分は何から始めればいいの？」——5問の質問に答えるだけで、いまのあなたに合った進め方が分かります。匿名・無料・1分で終わります。</p>
+    <a href="/detective/flow/" class="lp-cta-block-btn" data-track="start_flow_cta">5問診断を受ける →</a>
+    <p class="lp-cta-block-note">あなたの状況に合わせて、次の一手を案内します</p>
+  </div>
+
+  <div class="lp-related">
+    <h3>状況が決まったら、次のページへ</h3>
+    <div class="col-grid">
+      <a href="/detective/tantei/" class="col-card">
+        <span class="col-card-badge comparison">探偵</span>
+        <h3>信頼できる探偵社の選び方</h3>
+        <p>失敗しない5基準と、推せる4社の比較。</p>
+      </a>
+      <a href="/detective/gps/" class="col-card">
+        <span class="col-card-badge comparison">GPS</span>
+        <h3>GPSで行動を確認したい方へ</h3>
+        <p>自分でできる下調べと、使える条件・限界。</p>
+      </a>
+      <a href="/detective/lawyer/" class="col-card">
+        <span class="col-card-badge comparison">弁護士</span>
+        <h3>弁護士相談ガイド</h3>
+        <p>相談のタイミング・準備・費用の目安。</p>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="dt-footer">
+  <div class="dt-footer-inner">
+    <div class="dt-footer-logo">
+      <div class="dt-footer-logo-icon" style="padding:0;overflow:hidden;"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:8px;" /></div>
+      <span>弁護士の中の人</span>
+    </div>
+    <p class="dt-footer-text">
+      Instagram「弁護士の中の人（@lawyer.nakanohito）」の公式サイト。<br/>
+      法律事務所の元事務員が、浮気・不倫で悩む方へ正直な情報をお届けしています。<br/>
+      <span style="font-size:.75rem;color:rgba(255,255,255,.35)">当サイトは一部にアフィリエイトリンクを含みます。</span>
+    </p>
+    <div class="dt-footer-links">
+      <a href={INSTAGRAM_URL} target="_blank" rel="noopener">Instagram</a>
+      <a href="/detective/flow/">5問診断</a>
+      <a href="/detective/cost/">費用相場</a>
+      <a href="/detective/law/">法律の境界線</a>
+      <a href="/detective/cases/">体験談</a>
+      <a href="/detective/glossary/">用語集</a>
+      <a href="/detective/column/">コラム</a>
+      <a href="/detective/about/">中の人について</a>
+      <a href="/detective/privacy/">プライバシーポリシー</a>
+      <a href="/detective/operator/">運営者情報</a>
+    </div>
+    <p class="dt-footer-copy">© 2026 弁護士の中の人</p>
+  </div>
+</footer>
+
+<div class="sticky-cta-bar" id="sticky-cta">
+  <span class="sticky-label">何から始めるか迷ったら</span>
+  <a href="/detective/flow/" class="sticky-btn" data-track="sticky_start_flow">5問診断で次の一歩を見つける →</a>
+  <button class="sticky-close" id="sticky-close" aria-label="閉じる">✕</button>
+</div>
+
+<script src="/detective/app.js" is:inline defer></script>
+
+</body>
+</html>
