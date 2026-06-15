@@ -612,6 +612,7 @@ const articleLd = {
             <a href={f.bannerHref} rel="nofollow" referrerpolicy="no-referrer-when-downgrade" onclick={`return gtagSendEvent('${f.bannerHref}')`}>
               <img class="ct-banner-img" src={f.bannerSrc} alt={f.bannerAlt} width="300" height="250" loading="lazy" />
             </a>
+            <div class="ct-firm-name">{f.name.replace('弁護士法人','').replace('司法書士事務所','').replace('法律事務所','')}</div>
             <div class="ct-firm-type">{f.type}</div>
           </div>
         ))}
