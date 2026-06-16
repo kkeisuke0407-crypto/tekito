@@ -11,15 +11,43 @@
 src/pages/money/          # 債務整理LP（借金スッキリnavi）
 src/pages/shindan/        # 診断ページ
 src/pages/water-server/   # ウォーターサーバー比較LP（水代見直しナビ）
+src/pages/detective/      # 中の人ナビ（浮気・不倫相談、Instagram連動）
 public/money/             # 債務整理LP用静的ファイル
 public/water-server/      # ウォーターサーバーLP用静的ファイル
   ├── styles.css          # ウォーターサーバーLP スタイル
   └── app.js              # アフィリエイトリンク・トラッキング管理
+public/detective/         # 中の人ナビ用静的ファイル
+docs/instagram/           # Instagram「@lawyer.nakanohito」運用資料
 ```
 
 **Codex 担当領域（原則編集しない）:**
 `src/pages/providers/`, `src/pages/compare/`, `src/pages/by-spec/`,
 `src/pages/by-region/`, `src/pages/blog/`, `data/`, `scripts/`
+
+---
+
+## Instagram 運用（@lawyer.nakanohito / 中の人ナビ）
+
+リール台本作成・数値分析・新企画起案は `docs/instagram/` で完結させる。
+**作業開始前に必ず以下を読むこと**：
+
+1. `docs/instagram/HANDOFF.md` — アカウント全前提（バズの法則・効かないパターン・過去ミス・運営者の判断スタイル）
+2. `docs/instagram/README.md` — 運用ルール（台本作成の必須手順・ファイル構造）
+3. `docs/instagram/analytics/posts-log.md` — 被り・連続出演チェック用
+
+### 台本作成の必須手順（要約）
+1. HANDOFF.md と posts-log.md を読む
+2. シリーズ物は過去弾の全リストと被りチェック
+3. テンプレ（`docs/instagram/templates/`）に沿って書く
+4. Web検索で一次情報（判例・統計・法改正）を確認
+5. 末尾に画像生成プロンプト統一テンプレを必ず含める
+6. 完成台本は `docs/instagram/scripts/YYYYMMDD-slug.md` に保存
+
+### 効かないパターン（やってはいけない）
+- 「弁護士」ワードを前面に出すテーマ
+- モラハラ・離婚単体など不倫から外れたテーマ
+- 手順・テクニック・チェックリスト系
+- いいね/コメントで意思表示させる行動強制設計
 
 ---
 
@@ -104,4 +132,4 @@ Codex のブランチ（`codex/` プレフィックス）は原則 push・編集
 ---
 
 **共通ルールの詳細は `AGENTS.md` を参照してください。**
-**更新日:** 2026-05-01
+**更新日:** 2026-06-16
