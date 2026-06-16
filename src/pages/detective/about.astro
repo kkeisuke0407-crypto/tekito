@@ -25,11 +25,37 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "弁護士の中の人",
-    "alternateName": "中の人",
-    "description": "法律事務所の元事務員。約10年の事務員経験から、浮気・不倫で悩む方へ正直な情報を発信。",
+    "alternateName": ["中の人", "中の人ナビ", "lawyer.nakanohito"],
+    "description": "法律事務所で約10年勤務した元事務員。浮気・不倫・離婚・慰謝料の案件を何百件も間近で見てきた経験から、悩む方へ正直な情報を発信している。",
+    "jobTitle": "元法律事務員 / ウェブ運営者",
+    "knowsAbout": [
+      "浮気・不倫の証拠の集め方",
+      "探偵調査の費用相場",
+      "慰謝料請求の流れ",
+      "離婚と親権の実務",
+      "弁護士相談のタイミング",
+      "違法・合法の境界線（プライバシー・不正アクセス）"
+    ],
     "url": CANONICAL,
     "image": "https://vpscomparehub.com/detective/images/logo-icon.png",
     "sameAs": [INSTAGRAM_URL]
+  })} />
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "「弁護士の中の人」とは誰ですか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "法律事務所で約10年、事務員として勤務した経験のある運営者です。在職中に何百件もの離婚・浮気・慰謝料に関する案件を間近で見てきました。Instagram「@lawyer.nakanohito」と本サイト「中の人ナビ」を運営しています。" } },
+      { "@type": "Question", "name": "中の人は弁護士ですか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "いいえ、弁護士ではありません。法律事務所の元事務員です。サイト内の情報は「事務員として見聞きしてきた一般的な情報」であり、具体的な法律相談には弁護士へお問い合わせください。" } },
+      { "@type": "Question", "name": "「中の人ナビ」はどんなサイトですか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "浮気・不倫で悩む方に対して、探偵・GPS・弁護士・電話相談などの全選択肢を、法律事務所の元事務員の視点から正直に解説するサイトです。費用相場、法律の境界線、慰謝料シミュレーター、立場別ガイドなどを提供しています。" } },
+      { "@type": "Question", "name": "中の人ナビの情報は信頼できますか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "事務所で実際に見てきた事例にもとづいて執筆していますが、最終的な法的判断は弁護士に確認することを推奨しています。また、当サイトの一部はアフィリエイトリンクを含むため、掲載基準と広告表記を運営者情報ページで明示しています。" } },
+      { "@type": "Question", "name": "中の人に相談できますか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "個別の法律相談は受け付けていません（弁護士法に関わるため）。一般的なお問い合わせや感想は Instagram DM（@lawyer.nakanohito）で受け付けています。具体的な相談は弁護士・探偵社の無料相談をご利用ください。" } }
+    ]
   })} />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -228,6 +254,12 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
 </div>
 
 <div class="about-body">
+
+  <div class="about-card" style="background:rgba(201,146,42,.06);border:1px solid rgba(201,146,42,.25);">
+    <h2 style="border-left-color:var(--gold);">中の人ナビ・運営者プロフィール（一言で）</h2>
+    <p><strong>「中の人ナビ」</strong>は、Instagram「<strong>@lawyer.nakanohito（弁護士の中の人）</strong>」の公式サイトです。運営者は<strong>法律事務所で約10年勤務した元事務員</strong>で、在職中に何百件もの離婚・浮気・慰謝料案件を間近で見てきた経験から、浮気・不倫で悩む方へ「探偵・GPS・弁護士・電話相談」の全選択肢を正直に解説しています。</p>
+    <p style="margin-bottom:0;font-size:.82rem;color:var(--muted);"><strong>※</strong> 弁護士ではないため、個別の法律相談はお受けできません。具体的な法的判断は弁護士へご相談ください。</p>
+  </div>
 
   <div class="about-card">
     <h2>このサイトをやっている人</h2>

@@ -1,6 +1,9 @@
 ---
-const title = "運営者情報｜弁護士の中の人";
+const title = "運営者情報｜中の人ナビ（弁護士の中の人）";
+const description = "「中の人ナビ」（弁護士の中の人）の運営者情報。サイト概要、運営目的、お問い合わせ先、掲載基準・広告表記をまとめています。";
 const SITE_URL = "https://vpscomparehub.com/detective/";
+const CANONICAL = "https://vpscomparehub.com/detective/operator/";
+const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -8,7 +11,41 @@ const SITE_URL = "https://vpscomparehub.com/detective/";
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{title}</title>
-  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content={description} />
+  <link rel="canonical" href={CANONICAL} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={CANONICAL} />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content="弁護士の中の人" />
+  <meta property="og:image" content="https://vpscomparehub.com/detective/images/hero.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "運営者情報｜中の人ナビ",
+    "url": CANONICAL,
+    "description": description,
+    "publisher": {
+      "@type": "Organization",
+      "name": "中の人ナビ",
+      "url": SITE_URL,
+      "logo": "https://vpscomparehub.com/detective/images/logo-icon.png",
+      "sameAs": [INSTAGRAM_URL]
+    }
+  })} />
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "TOP", "item": SITE_URL },
+      { "@type": "ListItem", "position": 2, "name": "運営者情報", "item": CANONICAL }
+    ]
+  })} />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;900&display=swap" rel="stylesheet" />
@@ -112,23 +149,35 @@ const SITE_URL = "https://vpscomparehub.com/detective/";
         <tbody>
           <tr>
             <th>サイト名</th>
-            <td>弁護士の中の人</td>
+            <td>中の人ナビ（弁護士の中の人）</td>
           </tr>
           <tr>
             <th>URL</th>
-            <td>{SITE_URL}</td>
+            <td><a href={SITE_URL} style="color:#1d4ed8;text-decoration:none;">{SITE_URL}</a></td>
           </tr>
           <tr>
-            <th>Instagram</th>
-            <td>@lawyer.nakanohito</td>
+            <th>運営者</th>
+            <td>「弁護士の中の人」（法律事務所で約10年勤務した元事務員）</td>
+          </tr>
+          <tr>
+            <th>運営開始</th>
+            <td>2025年</td>
           </tr>
           <tr>
             <th>運営目的</th>
-            <td>不倫・浮気問題に関する情報提供および探偵事務所の紹介</td>
+            <td>浮気・不倫で悩む方への正直な情報提供（探偵・GPS・弁護士・電話相談の全選択肢を整理）</td>
+          </tr>
+          <tr>
+            <th>Instagram</th>
+            <td><a href={INSTAGRAM_URL} target="_blank" rel="noopener" style="color:#1d4ed8;text-decoration:none;">@lawyer.nakanohito</a></td>
+          </tr>
+          <tr>
+            <th>お問い合わせ</th>
+            <td>Instagram DM（<a href={INSTAGRAM_URL} target="_blank" rel="noopener" style="color:#1d4ed8;text-decoration:none;">@lawyer.nakanohito</a>）にてお受けしています。<br/><span style="font-size:.8rem;color:#64748b;">※ 個別の法律相談には対応できません。弁護士へご相談ください。</span></td>
           </tr>
           <tr>
             <th>最終更新</th>
-            <td>2026年5月</td>
+            <td>2026年6月</td>
           </tr>
         </tbody>
       </table>
@@ -146,6 +195,10 @@ const SITE_URL = "https://vpscomparehub.com/detective/";
     <div class="section">
       <p class="section-title">関連ページ</p>
       <div class="nav-list">
+        <a href="/detective/about/" class="nav-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/></svg>
+          中の人について（運営者プロフィール）
+        </a>
         <a href="/detective/privacy/" class="nav-link">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           プライバシーポリシー
