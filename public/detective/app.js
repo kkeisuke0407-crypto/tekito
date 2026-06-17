@@ -12,6 +12,7 @@ const AFFILIATE_LINKS = {
   // ※ASP提携完了後、アフィリURLに差し替えること
   bennavi:      "https://furin-isharyou.ricon-pro.com/",
   alg:          "https://px.a8.net/svt/ejp?a8mat=4B3Y38+CFQ18I+3IKY+61C2P",  // ALG探偵社（A8.net）
+  kimochi:      "https://px.a8.net/svt/ejp?a8mat=4B3TF6+84BXW2+5OI8+60H7L",  // Kimochi（公認心理師オンラインカウンセリング・A8.net）
 };
 
 function track(eventName, params) {
