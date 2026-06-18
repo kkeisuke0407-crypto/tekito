@@ -1,0 +1,77 @@
+name: Daily note article publish
+
+on:
+  workflow_dispatch:
+  schedule:
+    # JST 11:00, 14:00, 16:00, 18:00, 21:00
+    - cron: '0 2 * * *'
+    - cron: '0 5 * * *'
+    - cron: '0 7 * * *'
+    - cron: '0 9 * * *'
+    - cron: '0 12 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: note-auto-publish
+  cancel-in-progress: false
+
+jobs:
+  note:
+    runs-on: ubuntu-latest
+    if: ${{ vars.ENABLE_NOTE_AUTOMATION == 'true' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Generate and publish note article
+        env:
+          AI_PROVIDER: ${{ vars.AI_PROVIDER }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
+          NOTE_KEYWORD_SELECTION: ${{ vars.NOTE_KEYWORD_SELECTION || 'google' }}
+          RAKKO_API_KEY: ${{ secrets.RAKKO_API_KEY }}
+          RAKKO_USE_EXPANSION: ${{ vars.RAKKO_USE_EXPANSION || 'true' }}
+          RAKKO_USE_OTHER_KEYWORDS: ${{ vars.RAKKO_USE_OTHER_KEYWORDS || 'false' }}
+          RAKKO_EXPAND_LIMIT: ${{ vars.RAKKO_EXPAND_LIMIT || '50' }}
+          RAKKO_BROWSER_HEADLESS: ${{ vars.RAKKO_BROWSER_HEADLESS || 'true' }}
+          RAKKO_BROWSER_MAX_TARGETS: ${{ vars.RAKKO_BROWSER_MAX_TARGETS || '15' }}
+          RAKKO_BROWSER_MODES: ${{ vars.RAKKO_BROWSER_MODES || 'suggestKeywords,relatedKeywords' }}
+          RAKKO_BROWSER_USE_SHORT_NAMES: ${{ vars.RAKKO_BROWSER_USE_SHORT_NAMES || 'false' }}
+          GOOGLE_BROWSER_HEADLESS: ${{ vars.GOOGLE_BROWSER_HEADLESS || 'true' }}
+          GOOGLE_BROWSER_MAX_TARGETS: ${{ vars.GOOGLE_BROWSER_MAX_TARGETS || '1' }}
+          GOOGLE_BROWSER_USE_SHORT_NAMES: ${{ vars.GOOGLE_BROWSER_USE_SHORT_NAMES || 'false' }}
+          GOOGLE_SUGGESTION_PROBES: ${{ vars.GOOGLE_SUGGESTION_PROBES || '10' }}
+          RAKKO_MAX_TARGETS: ${{ vars.RAKKO_MAX_TARGETS || '30' }}
+          RAKKO_MIN_VOLUME: ${{ vars.RAKKO_MIN_VOLUME || '0' }}
+          RAKKO_MAX_VOLUME: ${{ vars.RAKKO_MAX_VOLUME || '1000' }}
+          RAKKO_MAX_SEO_DIFFICULTY: ${{ vars.RAKKO_MAX_SEO_DIFFICULTY || '45' }}
+          NOTE_COMPARISON_URL: ${{ vars.NOTE_COMPARISON_URL }}
+          NOTE_STORAGE_STATE_JSON: ${{ secrets.NOTE_STORAGE_STATE_JSON }}
+          NOTE_EMAIL: ${{ secrets.NOTE_EMAIL }}
+          NOTE_PASSWORD: ${{ secrets.NOTE_PASSWORD }}
+          NOTE_PUBLISH_MODE: ${{ vars.NOTE_PUBLISH_MODE || 'publish' }}
+        run: |
+          npm run note:check-config
+          npm run note:daily
+      - name: Commit generated article and state
+        run: |
+          git config user.name "tekito-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if [[ -n "$(git status --porcelain note_articles/)" ]]; then
+            git add note_articles/
+            git commit -m "chore(note): daily article pipeline $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "No note article changes."
+          fi

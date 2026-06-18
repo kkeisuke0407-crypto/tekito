@@ -12,7 +12,20 @@
     "fetch:hetzner": "tsx scripts/fetch-hetzner.ts",
     "fetch:digitalocean": "tsx scripts/fetch-digitalocean.ts",
     "fetch:linode": "tsx scripts/fetch-linode.ts",
-    "generate:articles": "tsx scripts/generate-articles.ts"
+    "generate:articles": "tsx scripts/generate-articles.ts",
+    "note:select-keywords": "tsx scripts/note/select-rakko-keywords.ts",
+    "note:select-keywords:browser": "tsx scripts/note/select-rakko-keywords-browser.ts",
+    "note:select-keywords:google": "tsx scripts/note/select-google-keywords-browser.ts",
+    "note:check-config": "tsx scripts/note/check-note-config.ts",
+    "note:generate": "tsx scripts/note/generate-note-article.ts",
+    "note:generate:template": "tsx scripts/note/generate-template-note-articles.ts",
+    "note:quality": "tsx scripts/note/check-note-quality.ts",
+    "note:auth": "tsx scripts/note/save-note-auth.ts",
+    "note:cta": "tsx scripts/note/create-cta-image.ts",
+    "note:publish": "tsx scripts/note/publish-note.ts",
+    "note:update": "tsx scripts/note/update-note.ts",
+    "note:daily": "tsx scripts/note/daily-note-pipeline.ts",
+    "note:auto": "tsx scripts/note/daily-note-pipeline.ts"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.1",
@@ -21,6 +34,7 @@
   "devDependencies": {
     "@anthropic-ai/sdk": "^0.32.1",
     "@types/node": "^22.10.5",
+    "playwright": "^1.61.0",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2"
   }
