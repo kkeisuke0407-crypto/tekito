@@ -60,8 +60,8 @@ jobs:
           RAKKO_MIN_VOLUME: ${{ vars.RAKKO_MIN_VOLUME || '0' }}
           RAKKO_MAX_VOLUME: ${{ vars.RAKKO_MAX_VOLUME || '1000' }}
           RAKKO_MAX_SEO_DIFFICULTY: ${{ vars.RAKKO_MAX_SEO_DIFFICULTY || '45' }}
-          NOTE_COMPARISON_URL: ${{ vars.NOTE_COMPARISON_URL }}
-          NOTE_STORAGE_STATE_JSON: ${{ secrets.NOTE_STORAGE_STATE_JSON }}
+          NOTE_COMPARISON_URL: ${{ vars.NOTE_COMPARISON_URL || 'https://vpscomparehub.com/money/' }}
+          NOTE_STORAGE_STATE_JSON: ${{ secrets.NOTE_STORAGE_STATE_JSON || vars.NOTE_STORAGE_STATE_JSON }}
           NOTE_EMAIL: ${{ secrets.NOTE_EMAIL }}
           NOTE_PASSWORD: ${{ secrets.NOTE_PASSWORD }}
           NOTE_PUBLISH_MODE: ${{ vars.NOTE_PUBLISH_MODE || 'publish' }}
