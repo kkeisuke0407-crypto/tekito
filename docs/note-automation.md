@@ -16,7 +16,7 @@
 
 | Name | Example | Required |
 |---|---|---|
-| `ENABLE_NOTE_AUTOMATION` | `true` | yes |
+| `ENABLE_NOTE_AUTOMATION` | `true` / `false` | no |
 | `AI_PROVIDER` | `openai` or `anthropic` | no |
 | `OPENAI_MODEL` | `gpt-4.1-mini` | no |
 | `ANTHROPIC_MODEL` | `claude-3-5-haiku-latest` | no |

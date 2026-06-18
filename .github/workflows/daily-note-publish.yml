@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
+      - '.github/workflows/daily-note-publish.yml'
       - 'note_articles/run-now.txt'
   schedule:
     # JST 11:00, 14:00, 16:00, 18:00, 21:00
@@ -23,7 +24,7 @@ concurrency:
 jobs:
   note:
     runs-on: ubuntu-latest
-    if: ${{ vars.ENABLE_NOTE_AUTOMATION == 'true' }}
+    if: ${{ vars.ENABLE_NOTE_AUTOMATION != 'false' }}
     steps:
       - uses: actions/checkout@v4
         with:
