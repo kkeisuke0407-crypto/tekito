@@ -98,7 +98,22 @@ function assertSeoReadyForPublish(articlePath: string, title: string, body: stri
   if (textLength(body) < 2400) {
     errors.push('body is too short for an SEO article');
   }
-  if (!hasAny(body, [/検索意図/, /先出し回答/, /結論/, /まず確認/])) {
+  if (
+    !hasAny(body, [
+      /検索意図/,
+      /先出し回答/,
+      /結論/,
+      /まず確認/,
+      /口コミを見る前/,
+      /評判を見る前/,
+      /相談前に確認/,
+      /依頼前に確認/,
+      /判断する前/,
+      /確認したいこと/,
+      /押さえたいポイント/,
+      /見積もりで詳細を確認/,
+    ])
+  ) {
     errors.push('missing search-intent answer section');
   }
   if (!hasAny(body, [/比較/, /他の候補/, /他事務所/])) {
