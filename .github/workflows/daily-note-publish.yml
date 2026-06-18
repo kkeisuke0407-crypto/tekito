@@ -44,7 +44,8 @@ jobs:
         run: node scripts/note/should-run-scheduled-note.mjs
       - name: Skip outside publish slot
         if: ${{ steps.note_slot.outputs.should_run != 'true' }}
-        run: echo "Skipping note publish: ${{ steps.note_slot.outputs.reason }} (${{ steps.note_slot.outputs.slot_key }})"
+        run: |
+          echo "Skipping note publish: ${{ steps.note_slot.outputs.reason }} (${{ steps.note_slot.outputs.slot_key }})"
       - if: ${{ steps.note_slot.outputs.should_run == 'true' }}
         run: npm ci
       - name: Install Playwright Chromium
