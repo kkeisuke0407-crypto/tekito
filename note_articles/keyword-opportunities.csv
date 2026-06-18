@@ -1,0 +1,12 @@
+priority,score,officeName,keyword,intent,commercialIntent,winability,searchVolume,seoDifficulty,cpc,competition,slug,source,reason
+★★★★☆,77,アース法律事務所,アース法律事務所 費用,費用,強,Googleサジェスト由来,,,,,earth-law-review,google-suggest,"source=google-suggest, intent=費用, commercialIntent=強, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
+★★★★☆,74,アース法律事務所,アース法律事務所 任意整理,任意整理,強,Googleサジェスト由来,,,,,earth-law-review,google-suggest,"source=google-suggest, intent=任意整理, commercialIntent=強, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
+★★★★☆,72,アース法律事務所,アース法律事務所 口コミ,口コミ,中,Googleサジェスト由来,,,,,earth-law-review,google-suggest,"source=google-suggest, intent=口コミ, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
+★★★★☆,72,アース法律事務所,アース法律事務所 クチコミ,クチコミ,中,Googleサジェスト由来,,,,,earth-law-review,google-suggest,"source=google-suggest, intent=クチコミ, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
+★★★★☆,70,アース法律事務所,アース法律事務所 評判,評判,中,Googleサジェスト由来,,,,,earth-law-review,google-suggest,"source=google-suggest, intent=評判, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
+★★★★☆,70,アース法律事務所,アース法律事務所 債務整理,債務整理,強,Googleサジェスト由来,,,,,earth-law-review,google-suggest,"source=google-suggest, intent=債務整理, commercialIntent=強, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
+★★★★☆,68,アース法律事務所,アース法律事務所 自己破産,自己破産,強,Googleサジェスト由来,,,,,earth-law-review,google-suggest,"source=google-suggest, intent=自己破産, commercialIntent=強, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
+★★★★☆,68,アース法律事務所,アース法律事務所 自己破産 費用,自己破産,強,Googleサジェスト由来,,,,,earth-law-review,google-suggest,"source=google-suggest, intent=自己破産, commercialIntent=強, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
+★★★☆☆,65,アース法律事務所,アース 法律 事務 所 口コミ,口コミ,中,Googleサジェスト由来,,,,,earth-law-review,google-suggest,"source=google-suggest, intent=口コミ, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
+★★★☆☆,63,アース法律事務所,アース 法律 事務 所 評判,評判,中,Googleサジェスト由来,,,,,earth-law-review,google-suggest,"source=google-suggest, intent=評判, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
+★★★☆☆,60,アース法律事務所,アース法律事務所 電話番号,電話番号,中,Googleサジェスト由来,,,,,earth-law-review,google-suggest,"source=google-suggest, intent=電話番号, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
