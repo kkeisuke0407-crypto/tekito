@@ -1,10 +1,30 @@
 [
   {
-    "slug": "augusta-law-review",
-    "officeName": "弁護士法人オーガスタ",
+    "slug": "kubota-law-review",
+    "officeName": "窪田総合法律事務所",
     "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "オーガスタ法律事務所 口コミ",
+    "area": "東京",
+    "keyword": "窪田総合法律事務所 費用",
+    "source": "google-suggest",
+    "metrics": {
+      "seoDifficulty": null,
+      "searchVolume": null,
+      "cpc": null,
+      "competition": null
+    },
+    "score": 77,
+    "priority": "★★★★☆",
+    "intent": "費用",
+    "winability": "Googleサジェスト由来",
+    "commercialIntent": "強",
+    "reason": "source=google-suggest, intent=費用, commercialIntent=強, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
+  },
+  {
+    "slug": "kubota-law-review",
+    "officeName": "窪田総合法律事務所",
+    "officeType": "法律事務所",
+    "area": "東京",
+    "keyword": "窪田総合法律事務所 口コミ",
     "source": "google-suggest",
     "metrics": {
       "seoDifficulty": null,
@@ -20,11 +40,11 @@
     "reason": "source=google-suggest, intent=口コミ, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
   },
   {
-    "slug": "augusta-law-review",
-    "officeName": "弁護士法人オーガスタ",
+    "slug": "kubota-law-review",
+    "officeName": "窪田総合法律事務所",
     "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "弁護士法人オーガスタ 費用",
+    "area": "東京",
+    "keyword": "窪田総合法律事務所 クチコミ",
     "source": "google-suggest",
     "metrics": {
       "seoDifficulty": null,
@@ -32,119 +52,19 @@
       "cpc": null,
       "competition": null
     },
-    "score": 70,
+    "score": 72,
     "priority": "★★★★☆",
-    "intent": "費用",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "強",
-    "reason": "source=google-suggest, intent=費用, commercialIntent=強, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "augusta-law-review",
-    "officeName": "弁護士法人オーガスタ",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "弁護士法人オーガスタ 料金",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 70,
-    "priority": "★★★★☆",
-    "intent": "料金",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "強",
-    "reason": "source=google-suggest, intent=料金, commercialIntent=強, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "augusta-law-review",
-    "officeName": "弁護士法人オーガスタ",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "オーガスタ 費用",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 70,
-    "priority": "★★★★☆",
-    "intent": "費用",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "強",
-    "reason": "source=google-suggest, intent=費用, commercialIntent=強, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "augusta-law-review",
-    "officeName": "弁護士法人オーガスタ",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "弁護士法人オーガスタ 任意整理",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 67,
-    "priority": "★★★★☆",
-    "intent": "任意整理",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "強",
-    "reason": "source=google-suggest, intent=任意整理, commercialIntent=強, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "augusta-law-review",
-    "officeName": "弁護士法人オーガスタ",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "弁護士法人オーガスタ 口コミ",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 65,
-    "priority": "★★★☆☆",
-    "intent": "口コミ",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "中",
-    "reason": "source=google-suggest, intent=口コミ, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "augusta-law-review",
-    "officeName": "弁護士法人オーガスタ",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "弁護士法人オーガスタ クチコミ",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 65,
-    "priority": "★★★☆☆",
     "intent": "クチコミ",
     "winability": "Googleサジェスト由来",
     "commercialIntent": "中",
     "reason": "source=google-suggest, intent=クチコミ, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
   },
   {
-    "slug": "augusta-law-review",
-    "officeName": "弁護士法人オーガスタ",
+    "slug": "kubota-law-review",
+    "officeName": "窪田総合法律事務所",
     "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "弁護士 法人オーガスタ 口コミ",
+    "area": "東京",
+    "keyword": "窪田総合法律事務所 評判",
     "source": "google-suggest",
     "metrics": {
       "seoDifficulty": null,
@@ -152,191 +72,11 @@
       "cpc": null,
       "competition": null
     },
-    "score": 65,
-    "priority": "★★★☆☆",
-    "intent": "口コミ",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "中",
-    "reason": "source=google-suggest, intent=口コミ, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "augusta-law-review",
-    "officeName": "弁護士法人オーガスタ",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "弁護士 オーガスタ 口コミ",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 65,
-    "priority": "★★★☆☆",
-    "intent": "口コミ",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "中",
-    "reason": "source=google-suggest, intent=口コミ, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "augusta-law-review",
-    "officeName": "弁護士法人オーガスタ",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "弁護士法人オーガスタ 評判",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 63,
-    "priority": "★★★☆☆",
+    "score": 70,
+    "priority": "★★★★☆",
     "intent": "評判",
     "winability": "Googleサジェスト由来",
     "commercialIntent": "中",
     "reason": "source=google-suggest, intent=評判, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "augusta-law-review",
-    "officeName": "弁護士法人オーガスタ",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "弁護士法人オーガスタ 債務整理",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 63,
-    "priority": "★★★☆☆",
-    "intent": "債務整理",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "強",
-    "reason": "source=google-suggest, intent=債務整理, commercialIntent=強, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "augusta-law-review",
-    "officeName": "弁護士法人オーガスタ",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "弁護士法人オーガスタ 怪しい",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 58,
-    "priority": "★★★☆☆",
-    "intent": "怪しい",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "中",
-    "reason": "source=google-suggest, intent=怪しい, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "augusta-law-review",
-    "officeName": "弁護士法人オーガスタ",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "弁護士 法人 オーガスタ 怪しい",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 58,
-    "priority": "★★★☆☆",
-    "intent": "怪しい",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "中",
-    "reason": "source=google-suggest, intent=怪しい, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "augusta-law-review",
-    "officeName": "弁護士法人オーガスタ",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "弁護士 法人オーガスタ 電話 しつこい",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 54,
-    "priority": "★★★☆☆",
-    "intent": "しつこい",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "中",
-    "reason": "source=google-suggest, intent=しつこい, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "augusta-law-review",
-    "officeName": "弁護士法人オーガスタ",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "弁護士法人オーガスタ 電話番号",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 53,
-    "priority": "★★★☆☆",
-    "intent": "電話番号",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "中",
-    "reason": "source=google-suggest, intent=電話番号, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "augusta-law-review",
-    "officeName": "弁護士法人オーガスタ",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "弁護士法人オーガスタ 電話",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 52,
-    "priority": "★★★☆☆",
-    "intent": "電話",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "中",
-    "reason": "source=google-suggest, intent=電話, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "augusta-law-review",
-    "officeName": "弁護士法人オーガスタ",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "弁護士法人オーガスタの連絡先は",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 40,
-    "priority": "★★☆☆☆",
-    "intent": "連絡",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "弱",
-    "reason": "source=google-suggest, intent=連絡, commercialIntent=弱, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
   }
 ]
