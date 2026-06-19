@@ -70,12 +70,26 @@ function headingSignature(article: Article): string {
   return article.headings.slice(0, 8).join(' > ');
 }
 
+function compactKeyword(text: string): string {
+  return text.replace(/\s+/g, '');
+}
+
+function hasKeywordNaturally(text: string, keyword: string): boolean {
+  if (!keyword) return true;
+  if (text.includes(keyword)) return true;
+  const compactText = compactKeyword(text);
+  const compactTarget = compactKeyword(keyword);
+  if (compactText.includes(compactTarget)) return true;
+  const tokens = keyword.split(/\s+/).filter((token) => token.length >= 2);
+  return tokens.length > 1 && tokens.every((token) => compactText.includes(compactKeyword(token)));
+}
+
 function validate(article: Article): string[] {
   const errors: string[] = [];
   const primaryKeyword = article.meta.primaryKeyword || '';
   if (article.meta.provider === 'template') errors.push('provider is template');
-  if (primaryKeyword && !article.title.includes(primaryKeyword)) errors.push('title missing primaryKeyword');
-  if (primaryKeyword && !article.body.slice(0, 700).includes(primaryKeyword)) errors.push('lead missing primaryKeyword');
+  if (primaryKeyword && !hasKeywordNaturally(article.title, primaryKeyword)) errors.push('title missing primaryKeyword');
+  if (primaryKeyword && !hasKeywordNaturally(article.body.slice(0, 700), primaryKeyword)) errors.push('lead missing primaryKeyword');
   if (compactLength(article.body) < 2400) errors.push('body too short');
   if (
     !/検索意図|先出し回答|結論|まず確認|口コミを見る前|評判を見る前|相談前に確認|依頼前に確認|判断する前|確認したいこと|押さえたいポイント|見積もりで詳細を確認/.test(

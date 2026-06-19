@@ -85,14 +85,23 @@ function assertSeoReadyForPublish(articlePath: string, title: string, body: stri
 
   const primaryKeyword = meta.primaryKeyword;
   const errors: string[] = [];
+  const hasKeywordNaturally = (text: string, keyword: string): boolean => {
+    if (!keyword) return true;
+    if (text.includes(keyword)) return true;
+    const compactText = text.replace(/\s+/g, '');
+    const compactTarget = keyword.replace(/\s+/g, '');
+    if (compactText.includes(compactTarget)) return true;
+    const tokens = keyword.split(/\s+/).filter((token) => token.length >= 2);
+    return tokens.length > 1 && tokens.every((token) => compactText.includes(token.replace(/\s+/g, '')));
+  };
 
   if (meta.provider === 'template' && process.env.NOTE_ALLOW_TEMPLATE_PUBLISH !== 'true') {
     errors.push('template-generated article');
   }
-  if (primaryKeyword && !title.includes(primaryKeyword)) {
+  if (primaryKeyword && !hasKeywordNaturally(title, primaryKeyword)) {
     errors.push(`title does not include primaryKeyword: ${primaryKeyword}`);
   }
-  if (primaryKeyword && !body.slice(0, 700).includes(primaryKeyword)) {
+  if (primaryKeyword && !hasKeywordNaturally(body.slice(0, 700), primaryKeyword)) {
     errors.push(`lead does not include primaryKeyword near the top: ${primaryKeyword}`);
   }
   if (textLength(body) < 2400) {

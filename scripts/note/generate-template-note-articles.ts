@@ -62,14 +62,26 @@ function pickOpportunity(target: Target, opportunities: KeywordOpportunity[]): K
   return opportunities.find((item) => item.slug === target.slug);
 }
 
+function naturalizeKeyword(keyword: string): string {
+  return keyword
+    .replace(/借金\s+裁判\s+差し押さえの流れ/g, '借金で裁判になると差し押さえ？流れ')
+    .replace(/借金\s+差し押さえ\s+無職/g, '無職で借金の差し押さえが不安な時')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function titleFor(target: Target, keyword: string): string {
+  const titleKeyword = naturalizeKeyword(keyword);
+  if (/借金|裁判|差し押さえ|自己破産|生活保護/.test(keyword) && !/口コミ|評判|費用|怪しい|しつこい|電話/.test(keyword)) {
+    return `${titleKeyword}と相談前の対処法`;
+  }
   if (/費用|料金|報酬|着手金/.test(keyword)) {
-    return `${keyword}は？口コミ・評判と相談前の確認ポイントを整理`;
+    return `${titleKeyword}は？口コミ・評判と相談前の確認ポイントを整理`;
   }
   if (/怪しい|しつこい|迷惑電話|電話/.test(keyword)) {
-    return `${keyword}と検索される理由は？口コミ・評判と相談前の注意点`;
+    return `${titleKeyword}と検索される理由は？口コミ・評判と相談前の注意点`;
   }
-  return `${keyword}は？口コミ・評判と費用の確認ポイントを調査`;
+  return `${titleKeyword}は？口コミ・評判と費用の確認ポイントを調査`;
 }
 
 function article(target: Target, opportunity?: KeywordOpportunity): string {
