@@ -9,7 +9,6 @@ const SLOT_LIST = process.env.NOTE_SCHEDULE_SLOTS_JST || '11:13,14:27,16:41,18:1
 const WINDOW_MINUTES = Number(process.env.NOTE_SCHEDULE_WINDOW_MINUTES || 50);
 const now = process.env.NOTE_SCHEDULE_NOW ? new Date(process.env.NOTE_SCHEDULE_NOW) : new Date();
 const DEFAULT_CRON_SLOT_MAP = {
-  '10,15 3 * * *': '12:00',
   '13,23,33,43,53 2 * * *': '11:13',
   '27,37,47,57 5 * * *': '14:27',
   '7 6 * * *': '14:27',
