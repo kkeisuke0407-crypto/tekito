@@ -1,110 +1,10 @@
 [
   {
-    "slug": "amata-law-review",
-    "officeName": "弁護士法人あまた法律事務所",
+    "slug": "kawabata-law-review",
+    "officeName": "弁護士法人川端総合法律事務所",
     "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "あまた法律事務所 費用",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 77,
-    "priority": "★★★★☆",
-    "intent": "費用",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "強",
-    "reason": "source=google-suggest, intent=費用, commercialIntent=強, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "amata-law-review",
-    "officeName": "弁護士法人あまた法律事務所",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "あまた法律事務所 交通事故 費用",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 77,
-    "priority": "★★★★☆",
-    "intent": "費用",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "強",
-    "reason": "source=google-suggest, intent=費用, commercialIntent=強, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "amata-law-review",
-    "officeName": "弁護士法人あまた法律事務所",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "あまた法律事務所 料金",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 77,
-    "priority": "★★★★☆",
-    "intent": "料金",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "強",
-    "reason": "source=google-suggest, intent=料金, commercialIntent=強, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "amata-law-review",
-    "officeName": "弁護士法人あまた法律事務所",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "あまた法律事務所 任意整理 費用",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 74,
-    "priority": "★★★★☆",
-    "intent": "任意整理",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "強",
-    "reason": "source=google-suggest, intent=任意整理, commercialIntent=強, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "amata-law-review",
-    "officeName": "弁護士法人あまた法律事務所",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "あまた法律事務所 任意整理",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 74,
-    "priority": "★★★★☆",
-    "intent": "任意整理",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "強",
-    "reason": "source=google-suggest, intent=任意整理, commercialIntent=強, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "amata-law-review",
-    "officeName": "弁護士法人あまた法律事務所",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "弁護士法人あまた法律事務所 クチコミ",
+    "area": "大阪",
+    "keyword": "弁護士法人川端総合法律事務所 クチコミ",
     "source": "google-suggest",
     "metrics": {
       "seoDifficulty": null,
@@ -120,11 +20,11 @@
     "reason": "source=google-suggest, intent=クチコミ, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
   },
   {
-    "slug": "amata-law-review",
-    "officeName": "弁護士法人あまた法律事務所",
+    "slug": "kawabata-law-review",
+    "officeName": "弁護士法人川端総合法律事務所",
     "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "弁護士法人あまた法律事務所 口コミ",
+    "area": "大阪",
+    "keyword": "川端総合法律事務所 口コミ",
     "source": "google-suggest",
     "metrics": {
       "seoDifficulty": null,
@@ -140,11 +40,11 @@
     "reason": "source=google-suggest, intent=口コミ, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
   },
   {
-    "slug": "amata-law-review",
-    "officeName": "弁護士法人あまた法律事務所",
+    "slug": "kawabata-law-review",
+    "officeName": "弁護士法人川端総合法律事務所",
     "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "弁護士 法人あまた法律事務所 クチコミ",
+    "area": "大阪",
+    "keyword": "川端総合法律事務所 クチコミ",
     "source": "google-suggest",
     "metrics": {
       "seoDifficulty": null,
@@ -160,51 +60,11 @@
     "reason": "source=google-suggest, intent=クチコミ, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
   },
   {
-    "slug": "amata-law-review",
-    "officeName": "弁護士法人あまた法律事務所",
+    "slug": "kawabata-law-review",
+    "officeName": "弁護士法人川端総合法律事務所",
     "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "あまた法律事務所 口コミ",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 72,
-    "priority": "★★★★☆",
-    "intent": "口コミ",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "中",
-    "reason": "source=google-suggest, intent=口コミ, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "amata-law-review",
-    "officeName": "弁護士法人あまた法律事務所",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "あまた法律事務所 クチコミ",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 72,
-    "priority": "★★★★☆",
-    "intent": "クチコミ",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "中",
-    "reason": "source=google-suggest, intent=クチコミ, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "amata-law-review",
-    "officeName": "弁護士法人あまた法律事務所",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "弁護士法人あまた法律事務所 評判",
+    "area": "大阪",
+    "keyword": "弁護士法人川端総合法律事務所 評判",
     "source": "google-suggest",
     "metrics": {
       "seoDifficulty": null,
@@ -218,245 +78,5 @@
     "winability": "Googleサジェスト由来",
     "commercialIntent": "中",
     "reason": "source=google-suggest, intent=評判, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "amata-law-review",
-    "officeName": "弁護士法人あまた法律事務所",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "あまた法律事務所 高い",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 70,
-    "priority": "★★★★☆",
-    "intent": "高い",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "強",
-    "reason": "source=google-suggest, intent=高い, commercialIntent=強, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "amata-law-review",
-    "officeName": "弁護士法人あまた法律事務所",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "あまた法律事務所 評判",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 70,
-    "priority": "★★★★☆",
-    "intent": "評判",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "中",
-    "reason": "source=google-suggest, intent=評判, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "amata-law-review",
-    "officeName": "弁護士法人あまた法律事務所",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "あまた法律事務所 評判 転職",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 70,
-    "priority": "★★★★☆",
-    "intent": "評判",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "中",
-    "reason": "source=google-suggest, intent=評判, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "amata-law-review",
-    "officeName": "弁護士法人あまた法律事務所",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "あまた法律事務所 債務整理",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 70,
-    "priority": "★★★★☆",
-    "intent": "債務整理",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "強",
-    "reason": "source=google-suggest, intent=債務整理, commercialIntent=強, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "amata-law-review",
-    "officeName": "弁護士法人あまた法律事務所",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "あまた法律事務所 自己破産 費用",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 68,
-    "priority": "★★★★☆",
-    "intent": "自己破産",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "強",
-    "reason": "source=google-suggest, intent=自己破産, commercialIntent=強, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "amata-law-review",
-    "officeName": "弁護士法人あまた法律事務所",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "あまた法律事務所 自己破産",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 68,
-    "priority": "★★★★☆",
-    "intent": "自己破産",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "強",
-    "reason": "source=google-suggest, intent=自己破産, commercialIntent=強, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "amata-law-review",
-    "officeName": "弁護士法人あまた法律事務所",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "あまた法律事務所 個人再生 費用",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 68,
-    "priority": "★★★★☆",
-    "intent": "個人再生",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "強",
-    "reason": "source=google-suggest, intent=個人再生, commercialIntent=強, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "amata-law-review",
-    "officeName": "弁護士法人あまた法律事務所",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "あまた法律事務所 怪しい",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 65,
-    "priority": "★★★☆☆",
-    "intent": "怪しい",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "中",
-    "reason": "source=google-suggest, intent=怪しい, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "amata-law-review",
-    "officeName": "弁護士法人あまた法律事務所",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "弁護士 法人 あまた 法律 事務 所 評判",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 63,
-    "priority": "★★★☆☆",
-    "intent": "評判",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "中",
-    "reason": "source=google-suggest, intent=評判, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "amata-law-review",
-    "officeName": "弁護士法人あまた法律事務所",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "あまた法律事務所 しつこい",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 61,
-    "priority": "★★★☆☆",
-    "intent": "しつこい",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "中",
-    "reason": "source=google-suggest, intent=しつこい, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "amata-law-review",
-    "officeName": "弁護士法人あまた法律事務所",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "弁護士法人あまた法律事務所 電話番号",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 60,
-    "priority": "★★★☆☆",
-    "intent": "電話番号",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "中",
-    "reason": "source=google-suggest, intent=電話番号, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
-  },
-  {
-    "slug": "amata-law-review",
-    "officeName": "弁護士法人あまた法律事務所",
-    "officeType": "法律事務所",
-    "area": "東京・全国",
-    "keyword": "あまた法律事務所 電話",
-    "source": "google-suggest",
-    "metrics": {
-      "seoDifficulty": null,
-      "searchVolume": null,
-      "cpc": null,
-      "competition": null
-    },
-    "score": 59,
-    "priority": "★★★☆☆",
-    "intent": "電話",
-    "winability": "Googleサジェスト由来",
-    "commercialIntent": "中",
-    "reason": "source=google-suggest, intent=電話, commercialIntent=中, noteWinability=Googleサジェスト由来, volume=unknown, difficulty=unknown"
   }
 ]
