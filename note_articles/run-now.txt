@@ -1,1 +1,1 @@
-external scheduled trigger 2026-06-19T14:30:00+09:00
+github app trigger smoke test 2026-06-19T14:55:00+09:00
