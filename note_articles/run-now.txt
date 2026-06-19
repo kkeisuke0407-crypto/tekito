@@ -1,1 +1,1 @@
-manual trigger for missed scheduled note generation 2026-06-19T10:30:00+09:00
+manual retry after quality gate fix 2026-06-19T10:36:00+09:00
