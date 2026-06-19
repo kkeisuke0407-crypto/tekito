@@ -92,7 +92,7 @@ function validate(article: Article): string[] {
   if (primaryKeyword && !hasKeywordNaturally(article.body.slice(0, 700), primaryKeyword)) errors.push('lead missing primaryKeyword');
   if (compactLength(article.body) < 2400) errors.push('body too short');
   if (
-    !/検索意図|先出し回答|結論|まず確認|口コミを見る前|評判を見る前|相談前に確認|依頼前に確認|判断する前|確認したいこと|押さえたいポイント|見積もりで詳細を確認/.test(
+    !/検索意図|先出し回答|結論|まず確認|まず見る|口コミを見る前|評判を見る前|相談前に確認|相談前に見る|依頼前に確認|判断する前|確認したいこと|押さえたいポイント|比較ポイント|確認ポイント|見積もりで詳細を確認|この記事では|不安な方|気になる方/.test(
       article.body,
     )
   ) {

@@ -116,11 +116,17 @@ function assertSeoReadyForPublish(articlePath: string, title: string, body: stri
       /口コミを見る前/,
       /評判を見る前/,
       /相談前に確認/,
+      /相談前に見る/,
       /依頼前に確認/,
       /判断する前/,
       /確認したいこと/,
       /押さえたいポイント/,
+      /比較ポイント/,
+      /確認ポイント/,
       /見積もりで詳細を確認/,
+      /この記事では/,
+      /不安な方/,
+      /気になる方/,
     ])
   ) {
     errors.push('missing search-intent answer section');
