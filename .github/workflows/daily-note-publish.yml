@@ -6,8 +6,8 @@ on:
     paths:
       - 'note_articles/run-now.txt'
   schedule:
-    # Temporary schedule smoke test for 2026-06-19 JST 11:50/11:55.
-    - cron: '50,55 2 * * *'
+    # Temporary schedule smoke test for 2026-06-19 JST 12:10/12:15.
+    - cron: '10,15 3 * * *'
     # Fallback windows for JST 11:13, 14:27, 16:41, 18:18, 21:52.
     # GitHub may delay or drop individual schedule events, so each slot has retries.
     - cron: '13,23,33,43,53 2 * * *'
