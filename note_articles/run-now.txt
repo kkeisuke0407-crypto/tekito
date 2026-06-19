@@ -1,1 +1,1 @@
-github app trigger smoke test 2026-06-19T14:55:00+09:00
+manual recovery trigger 2026-06-19T15:05:00+09:00
