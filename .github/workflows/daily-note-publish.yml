@@ -32,17 +32,30 @@ jobs:
         with:
           node-version: '22'
           cache: npm
+      - name: Calculate publish count
+        id: publish_count
+        env:
+          NOTE_DAILY_TARGET: ${{ vars.NOTE_DAILY_TARGET || '5' }}
+          NOTE_CATCH_UP_CRON: '52 12 * * *'
+          NOTE_EVENT_SCHEDULE: ${{ github.event.schedule }}
+          NOTE_PUBLISH_QUEUE_MAX: ${{ vars.NOTE_PUBLISH_QUEUE_MAX || '1' }}
+        run: node scripts/note/calculate-note-publish-max.mjs
       - run: npm ci
       - name: Install Playwright Chromium
         run: npx playwright install --with-deps chromium
-      - name: Publish one queued note article
+      - name: Publish queued note articles
         env:
           NOTE_COMPARISON_URL: ${{ vars.NOTE_COMPARISON_URL || 'https://vpscomparehub.com/money/' }}
           NOTE_STORAGE_STATE_JSON: ${{ secrets.NOTE_STORAGE_STATE_JSON }}
           NOTE_PUBLISH_MODE: ${{ vars.NOTE_PUBLISH_MODE || 'publish' }}
-          NOTE_PUBLISH_QUEUE_MAX: ${{ vars.NOTE_PUBLISH_QUEUE_MAX || '1' }}
+          NOTE_PUBLISH_QUEUE_MAX: ${{ steps.publish_count.outputs.max }}
           NOTE_HEADLESS: 'true'
         run: |
+          echo "publish_count=${NOTE_PUBLISH_QUEUE_MAX}"
+          if [ "$NOTE_PUBLISH_QUEUE_MAX" = "0" ]; then
+            echo "Daily target already met. Skipping publish."
+            exit 0
+          fi
           test -n "$NOTE_STORAGE_STATE_JSON"
           npm run note:publish:queue
       - name: Commit queue state
