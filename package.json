@@ -26,7 +26,8 @@
     "note:update": "tsx scripts/note/update-note.ts",
     "note:daily": "tsx scripts/note/daily-note-pipeline.ts",
     "note:auto": "tsx scripts/note/daily-note-pipeline.ts",
-    "note:local-scheduled": "node scripts/note/local-scheduled-note.mjs"
+    "note:local-scheduled": "node scripts/note/local-scheduled-note.mjs",
+    "note:publish:queue": "node scripts/note/publish-note-queue.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.1",
