@@ -1,10 +1,17 @@
-name: Daily note article publish
+name: Daily note queue publish
 
 on:
   workflow_dispatch:
   push:
     paths:
       - 'note_articles/run-now.txt'
+  schedule:
+    # JST 11:13, 14:27, 16:41, 18:18, 21:52
+    - cron: '13 2 * * *'
+    - cron: '27 5 * * *'
+    - cron: '41 7 * * *'
+    - cron: '18 9 * * *'
+    - cron: '52 12 * * *'
 
 permissions:
   contents: write
@@ -25,62 +32,26 @@ jobs:
         with:
           node-version: '22'
           cache: npm
-      - name: Check scheduled publish slot
-        id: note_slot
-        env:
-          NOTE_SCHEDULE_SLOTS_JST: ${{ vars.NOTE_SCHEDULE_SLOTS_JST || '11:13,14:27,16:41,18:18,21:52' }}
-          NOTE_SCHEDULE_WINDOW_MINUTES: ${{ vars.NOTE_SCHEDULE_WINDOW_MINUTES || '50' }}
-        run: node scripts/note/should-run-scheduled-note.mjs
-      - name: Skip outside publish slot
-        if: ${{ steps.note_slot.outputs.should_run != 'true' }}
-        run: |
-          echo "Skipping note publish: ${{ steps.note_slot.outputs.reason }} (${{ steps.note_slot.outputs.slot_key }})"
-      - if: ${{ steps.note_slot.outputs.should_run == 'true' }}
-        run: npm ci
+      - run: npm ci
       - name: Install Playwright Chromium
-        if: ${{ steps.note_slot.outputs.should_run == 'true' }}
         run: npx playwright install --with-deps chromium
-      - name: Generate and publish note article
-        if: ${{ steps.note_slot.outputs.should_run == 'true' }}
+      - name: Publish one queued note article
         env:
-          AI_PROVIDER: ${{ vars.AI_PROVIDER }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
-          NOTE_KEYWORD_SELECTION: ${{ vars.NOTE_KEYWORD_SELECTION || 'google' }}
-          RAKKO_API_KEY: ${{ secrets.RAKKO_API_KEY }}
-          RAKKO_USE_EXPANSION: ${{ vars.RAKKO_USE_EXPANSION || 'true' }}
-          RAKKO_USE_OTHER_KEYWORDS: ${{ vars.RAKKO_USE_OTHER_KEYWORDS || 'false' }}
-          RAKKO_EXPAND_LIMIT: ${{ vars.RAKKO_EXPAND_LIMIT || '50' }}
-          RAKKO_BROWSER_HEADLESS: ${{ vars.RAKKO_BROWSER_HEADLESS || 'true' }}
-          RAKKO_BROWSER_MAX_TARGETS: ${{ vars.RAKKO_BROWSER_MAX_TARGETS || '15' }}
-          RAKKO_BROWSER_MODES: ${{ vars.RAKKO_BROWSER_MODES || 'suggestKeywords,relatedKeywords' }}
-          RAKKO_BROWSER_USE_SHORT_NAMES: ${{ vars.RAKKO_BROWSER_USE_SHORT_NAMES || 'false' }}
-          GOOGLE_BROWSER_HEADLESS: ${{ vars.GOOGLE_BROWSER_HEADLESS || 'true' }}
-          GOOGLE_BROWSER_MAX_TARGETS: ${{ vars.GOOGLE_BROWSER_MAX_TARGETS || '1' }}
-          GOOGLE_BROWSER_USE_SHORT_NAMES: ${{ vars.GOOGLE_BROWSER_USE_SHORT_NAMES || 'false' }}
-          GOOGLE_SUGGESTION_PROBES: ${{ vars.GOOGLE_SUGGESTION_PROBES || '10' }}
-          RAKKO_MAX_TARGETS: ${{ vars.RAKKO_MAX_TARGETS || '30' }}
-          RAKKO_MIN_VOLUME: ${{ vars.RAKKO_MIN_VOLUME || '0' }}
-          RAKKO_MAX_VOLUME: ${{ vars.RAKKO_MAX_VOLUME || '1000' }}
-          RAKKO_MAX_SEO_DIFFICULTY: ${{ vars.RAKKO_MAX_SEO_DIFFICULTY || '45' }}
           NOTE_COMPARISON_URL: ${{ vars.NOTE_COMPARISON_URL || 'https://vpscomparehub.com/money/' }}
-          NOTE_STORAGE_STATE_JSON: ${{ secrets.NOTE_STORAGE_STATE_JSON || vars.NOTE_STORAGE_STATE_JSON }}
-          NOTE_EMAIL: ${{ secrets.NOTE_EMAIL }}
-          NOTE_PASSWORD: ${{ secrets.NOTE_PASSWORD }}
+          NOTE_STORAGE_STATE_JSON: ${{ secrets.NOTE_STORAGE_STATE_JSON }}
           NOTE_PUBLISH_MODE: ${{ vars.NOTE_PUBLISH_MODE || 'publish' }}
+          NOTE_PUBLISH_QUEUE_MAX: ${{ vars.NOTE_PUBLISH_QUEUE_MAX || '1' }}
+          NOTE_HEADLESS: 'true'
         run: |
-          npm run note:check-config
-          npm run note:daily
-      - name: Commit generated article and state
-        if: ${{ steps.note_slot.outputs.should_run == 'true' }}
+          test -n "$NOTE_STORAGE_STATE_JSON"
+          npm run note:publish:queue
+      - name: Commit queue state
         run: |
           git config user.name "tekito-bot"
           git config user.email "actions@users.noreply.github.com"
           if [[ -n "$(git status --porcelain note_articles/)" ]]; then
             git add note_articles/
-            git commit -m "chore(note): daily article pipeline $(date -u +%Y-%m-%d)"
+            git commit -m "chore(note): publish queued article $(date -u +%Y-%m-%dT%H:%M:%SZ)"
             git push
           else
             echo "No note article changes."
