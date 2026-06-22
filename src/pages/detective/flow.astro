@@ -34,7 +34,7 @@ const UPDATED = "2026-05-25";
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/detective/styles.css?v=20260525s" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260622a" />
 
   <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
   <script is:inline>
@@ -78,13 +78,24 @@ const UPDATED = "2026-05-25";
 <div class="diag-hero">
   <h1>あなたに必要な選択肢は？<br/>5問の診断で見つける</h1>
   <p>探偵・GPS・弁護士・電話占い・カウンセリング——状況によって最適な「最初の一手」は違います。5問に答えていただくと、あなたに合った選択肢と次のアクションをご提案します。</p>
+  <div class="diag-result-preview">
+    <span class="diag-result-preview-label">診断結果ではこの中から提案します</span>
+    <ul class="diag-result-preview-icons">
+      <li><span class="dpi-em">🔍</span><span class="dpi-tx">探偵</span></li>
+      <li><span class="dpi-em">📍</span><span class="dpi-tx">GPS</span></li>
+      <li><span class="dpi-em">⚖️</span><span class="dpi-tx">弁護士</span></li>
+      <li><span class="dpi-em">🌙</span><span class="dpi-tx">電話占い・<br/>カウンセリング</span></li>
+      <li><span class="dpi-em">🧭</span><span class="dpi-tx">まず<br/>状況整理</span></li>
+    </ul>
+  </div>
 </div>
 
 <div class="diag-body-wrap">
   <div class="diag-wrap" id="diag-app">
 
     <div class="diag-progress">
-      <span id="diag-step-label">Q1 / 5</span>
+      <span id="diag-step-label" class="diag-step-label">Q1 / 5</span>
+      <span id="diag-step-remaining" class="diag-step-remaining">あと4問で結果</span>
       <div class="diag-progress-bar"><div class="diag-progress-fill" id="diag-progress-fill" style="width:20%"></div></div>
     </div>
 
@@ -243,6 +254,7 @@ const UPDATED = "2026-05-25";
     var steps = document.querySelectorAll('.diag-step');
     var results = document.querySelectorAll('.diag-result');
     var label = document.getElementById('diag-step-label');
+    var remaining = document.getElementById('diag-step-remaining');
     var fill  = document.getElementById('diag-progress-fill');
     var progressWrap = document.querySelector('.diag-progress');
 
@@ -251,6 +263,19 @@ const UPDATED = "2026-05-25";
       results.forEach(function(r) { r.classList.remove('active'); });
       current = n;
       label.textContent = 'Q' + n + ' / ' + totalSteps;
+      var left = totalSteps - n;
+      if (remaining) {
+        if (left === 0) {
+          remaining.textContent = '最後の質問！';
+          remaining.classList.add('is-last');
+        } else if (left === 1) {
+          remaining.textContent = 'あと1問で結果';
+          remaining.classList.remove('is-last');
+        } else {
+          remaining.textContent = 'あと' + left + '問で結果';
+          remaining.classList.remove('is-last');
+        }
+      }
       fill.style.width = (n / totalSteps * 100) + '%';
       progressWrap.style.display = '';
       window.scrollTo({ top: 0, behavior: 'smooth' });
