@@ -3866,18 +3866,93 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   padding: 1rem 0;
 }
 .diag-progress {
-  display: flex; align-items: center; gap: .5rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: .75rem;
   margin-bottom: 2rem;
-  font-size: .82rem; color: var(--muted);
+  padding: .85rem 1rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
+}
+.diag-step-label {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: .02em;
+}
+.diag-step-remaining {
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--gold-deep);
+  white-space: nowrap;
+  order: 3;
+}
+.diag-step-remaining.is-last {
+  color: #c8362a;
+  animation: diagBlink 1.4s ease-in-out infinite;
+}
+@keyframes diagBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .55; }
 }
 .diag-progress-bar {
-  flex: 1; height: 4px;
-  background: var(--border); border-radius: 2px;
+  grid-column: 1 / -1;
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
   overflow: hidden;
 }
 .diag-progress-fill {
-  height: 100%; background: var(--gold);
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold), var(--gold-deep));
   transition: width .35s;
+}
+.diag-result-preview {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 12px;
+  text-align: center;
+}
+.diag-result-preview-label {
+  display: block;
+  font-size: .78rem;
+  color: rgba(255,255,255,.7);
+  margin-bottom: .55rem;
+  letter-spacing: .04em;
+}
+.diag-result-preview-icons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: .35rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: rgba(255,255,255,.85);
+}
+.diag-result-preview-icons li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .25rem;
+  text-align: center;
+}
+.diag-result-preview-icons .dpi-em {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+.diag-result-preview-icons .dpi-tx {
+  font-size: .68rem;
+  line-height: 1.3;
+  color: rgba(255,255,255,.85);
+}
+@media (max-width: 520px) {
+  .diag-result-preview-icons .dpi-tx { font-size: .62rem; }
+  .diag-result-preview-icons .dpi-em { font-size: 1.2rem; }
 }
 .diag-step {
   background: #fff;
