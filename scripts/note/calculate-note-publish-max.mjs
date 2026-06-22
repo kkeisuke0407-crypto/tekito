@@ -5,8 +5,11 @@ import { fileURLToPath } from 'node:url';
 const ROOT = fileURLToPath(new URL('../..', import.meta.url));
 const STATE_PATH = process.env.NOTE_STATE_PATH || join(ROOT, 'note_articles', 'publish-state.json');
 const DAILY_TARGET = Number(process.env.NOTE_DAILY_TARGET || 5);
-const CATCH_UP_CRON = process.env.NOTE_CATCH_UP_CRON || '52 12 * * *';
-const DEFAULT_MAX = Number(process.env.NOTE_PUBLISH_QUEUE_MAX || 1);
+const SLOTS_JST = (process.env.NOTE_SCHEDULE_SLOTS_JST || '11:13,14:27,16:41,18:18,21:52')
+  .split(',')
+  .map((slot) => slot.trim())
+  .filter(Boolean);
+const now = process.env.NOTE_SCHEDULE_NOW ? new Date(process.env.NOTE_SCHEDULE_NOW) : new Date();
 
 function output(key, value) {
   console.log(`${key}=${value}`);
@@ -15,46 +18,54 @@ function output(key, value) {
   }
 }
 
-function jstDateKey(date) {
-  return new Intl.DateTimeFormat('en-CA', {
+function jstParts(date) {
+  const parts = new Intl.DateTimeFormat('en-CA', {
     timeZone: 'Asia/Tokyo',
     year: 'numeric',
     month: '2-digit',
     day: '2-digit',
-  }).format(date);
+    hour: '2-digit',
+    minute: '2-digit',
+    hourCycle: 'h23',
+  }).formatToParts(date);
+  const byType = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  return {
+    dateKey: `${byType.year}-${byType.month}-${byType.day}`,
+    minutes: Number(byType.hour) * 60 + Number(byType.minute),
+  };
 }
 
-function eventSchedule() {
-  if (process.env.NOTE_EVENT_SCHEDULE) return process.env.NOTE_EVENT_SCHEDULE;
-  const eventPath = process.env.GITHUB_EVENT_PATH;
-  if (!eventPath || !existsSync(eventPath)) return '';
-  try {
-    const event = JSON.parse(readFileSync(eventPath, 'utf-8'));
-    return typeof event.schedule === 'string' ? event.schedule : '';
-  } catch {
-    return '';
-  }
+function slotMinutes(slot) {
+  const [hour, minute] = slot.split(':').map(Number);
+  if (!Number.isFinite(hour) || !Number.isFinite(minute)) return undefined;
+  return hour * 60 + minute;
 }
 
-function publishedToday() {
+function publishedOnDate(dateKey) {
   if (!existsSync(STATE_PATH)) return 0;
   const state = JSON.parse(readFileSync(STATE_PATH, 'utf-8'));
-  const today = jstDateKey(new Date());
   return Object.values(state.published || {}).filter((entry) => {
     if (entry?.mode && entry.mode !== 'publish') return false;
     if (!entry?.publishedAt) return false;
     const publishedAt = new Date(entry.publishedAt);
     if (Number.isNaN(publishedAt.getTime())) return false;
-    return jstDateKey(publishedAt) === today;
+    return jstParts(publishedAt).dateKey === dateKey;
   }).length;
 }
 
-const schedule = eventSchedule().trim();
-const isCatchUp = schedule === CATCH_UP_CRON;
-const already = publishedToday();
-const remaining = Math.max(0, DAILY_TARGET - already);
-const max = isCatchUp ? remaining : DEFAULT_MAX;
-const reason = isCatchUp ? `catch_up:${already}/${DAILY_TARGET}` : `regular:${DEFAULT_MAX}`;
+const current = jstParts(now);
+const dueSlots = SLOTS_JST.map(slotMinutes).filter((minutes) => minutes != null && minutes <= current.minutes).length;
+const desiredByNow = Math.min(DAILY_TARGET, dueSlots);
+const already = publishedOnDate(current.dateKey);
+const remaining = Math.max(0, desiredByNow - already);
+const max = remaining;
+const reason = remaining > 0
+  ? `due:${current.dateKey}:${already}/${desiredByNow}`
+  : `not_due_or_met:${current.dateKey}:${already}/${desiredByNow}`;
 
 output('max', String(max));
 output('reason', reason);
+output('target_date', current.dateKey);
+output('due_slots', String(dueSlots));
+output('already_published', String(already));
+

@@ -6,12 +6,8 @@ on:
     paths:
       - 'note_articles/run-now.txt'
   schedule:
-    # JST 11:13, 14:27, 16:41, 18:18, 21:52
-    - cron: '13 2 * * *'
-    - cron: '27 5 * * *'
-    - cron: '41 7 * * *'
-    - cron: '18 9 * * *'
-    - cron: '52 12 * * *'
+    # Every 15 minutes from JST 11:00 to 23:45. The script decides whether a post is actually due.
+    - cron: '*/15 2-14 * * *'
 
 permissions:
   contents: write
@@ -36,9 +32,7 @@ jobs:
         id: publish_count
         env:
           NOTE_DAILY_TARGET: ${{ vars.NOTE_DAILY_TARGET || '5' }}
-          NOTE_CATCH_UP_CRON: '52 12 * * *'
-          NOTE_EVENT_SCHEDULE: ${{ github.event.schedule }}
-          NOTE_PUBLISH_QUEUE_MAX: ${{ vars.NOTE_PUBLISH_QUEUE_MAX || '1' }}
+          NOTE_SCHEDULE_SLOTS_JST: ${{ vars.NOTE_SCHEDULE_SLOTS_JST || '11:13,14:27,16:41,18:18,21:52' }}
         run: node scripts/note/calculate-note-publish-max.mjs
       - run: npm ci
       - name: Install Playwright Chromium
@@ -53,7 +47,7 @@ jobs:
         run: |
           echo "publish_count=${NOTE_PUBLISH_QUEUE_MAX}"
           if [ "$NOTE_PUBLISH_QUEUE_MAX" = "0" ]; then
-            echo "Daily target already met. Skipping publish."
+            echo "No queued note publish is due for this JST slot."
             exit 0
           fi
           test -n "$NOTE_STORAGE_STATE_JSON"
