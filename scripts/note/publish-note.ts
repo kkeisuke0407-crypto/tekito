@@ -17,6 +17,9 @@ type EditorStats = {
   images: number;
   moneyLinks: number;
   hasImageUnderTitleCta: boolean;
+  hasMarkdownHeading: boolean;
+  headingCount: number;
+  longCaptionCount: number;
 };
 
 const ROOT = fileURLToPath(new URL('../..', import.meta.url));
@@ -372,6 +375,9 @@ async function getEditorStats(page: any): Promise<EditorStats> {
       images: editor?.querySelectorAll('img').length || 0,
       moneyLinks: editor?.querySelectorAll('a[href*="vpscomparehub.com/money"]').length || 0,
       hasImageUnderTitleCta: text.includes('相談先を選ぶ前に、他の候補と比較しておく'),
+      hasMarkdownHeading: /^#{2,4}\s+/m.test(text),
+      headingCount: editor?.querySelectorAll('h2,h3').length || 0,
+      longCaptionCount: [...(editor?.querySelectorAll('figcaption') || [])].filter((caption) => (caption.textContent || '').length > 120).length,
     };
   });
 }
@@ -425,6 +431,15 @@ async function assertPublishReady(page: any): Promise<void> {
   }
   if (!stats.hasImageUnderTitleCta) {
     throw new Error('Image-under-title CTA block is missing. Aborting before publish.');
+  }
+  if (stats.hasMarkdownHeading) {
+    throw new Error('Markdown headings were pasted as plain text. Aborting before publish.');
+  }
+  if (stats.headingCount < 1) {
+    throw new Error('Formatted headings are missing. Aborting before publish.');
+  }
+  if (stats.longCaptionCount > 0) {
+    throw new Error('Article body was inserted into an image caption. Aborting before publish.');
   }
   if (stats.moneyLinks < 1) {
     throw new Error('Comparison LP CTA link is missing. Aborting before publish.');

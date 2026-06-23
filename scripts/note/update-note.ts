@@ -20,6 +20,7 @@ const STORAGE_PATH = process.env.NOTE_STORAGE_STATE_PATH || join(ROOT, '.auth', 
 const CTA_IMAGE_PATH = process.env.NOTE_CTA_IMAGE_PATH || join(ROOT, 'note_articles', 'assets', 'cta-saimu-compare.png');
 const CTA_IMAGE_URL =
   process.env.NOTE_CTA_IMAGE_URL || 'https://assets.st-note.com/img/1781615773-X3nNeslxyFdOLIkoPbVjSugH.png';
+const INSERT_BODY_CTA_IMAGE = process.env.NOTE_INSERT_BODY_CTA_IMAGE === 'true';
 const HEADLESS = process.env.NOTE_HEADLESS !== 'false';
 const BROWSER_CHANNEL = process.env.NOTE_BROWSER_CHANNEL;
 const USER_AGENT =
@@ -206,7 +207,7 @@ async function fillTitle(page: any, title: string): Promise<void> {
 async function fillBody(page: any, body: string): Promise<void> {
   const editor = page.locator('.ProseMirror[contenteditable="true"], [role="textbox"][contenteditable="true"], [contenteditable="true"]').first();
   await editor.waitFor({ state: 'visible', timeout: 45000 });
-  const html = `${ctaImageHtml()}\n${markdownToHtml(body)}`;
+  const html = INSERT_BODY_CTA_IMAGE ? `${ctaImageHtml()}\n${markdownToHtml(body)}` : markdownToHtml(body);
   await editor.evaluate((node: HTMLElement) => {
     node.focus();
     const range = document.createRange();
@@ -215,15 +216,22 @@ async function fillBody(page: any, body: string): Promise<void> {
     selection?.removeAllRanges();
     selection?.addRange(range);
   });
-  await page.evaluate(async (payload: { text: string; html: string }) => {
-    await navigator.clipboard.write([
-      new ClipboardItem({
-        'text/html': new Blob([payload.html], { type: 'text/html' }),
-        'text/plain': new Blob([payload.text], { type: 'text/plain' }),
-      }),
-    ]);
-  }, { text: body, html });
-  await page.keyboard.press(process.platform === 'darwin' ? 'Meta+V' : 'Control+V');
+  await editor.evaluate(
+    (node: HTMLElement, payload: { text: string; html: string }) => {
+      node.focus();
+      const data = new DataTransfer();
+      data.setData('text/html', payload.html);
+      data.setData('text/plain', payload.text);
+      node.dispatchEvent(
+        new ClipboardEvent('paste', {
+          bubbles: true,
+          cancelable: true,
+          clipboardData: data,
+        }),
+      );
+    },
+    { text: body.replace(/^#{2,4}\s+/gm, '').replace(/\[(.+?)\]\((https?:\/\/[^)\s]+)\)/g, '$1'), html },
+  );
   await page.waitForTimeout(2500);
   const expected = body
     .replace(/\[(.+?)\]\([^)]+\)/g, '$1')
@@ -244,16 +252,21 @@ async function assertEditorReady(page: any): Promise<void> {
       images: editor?.querySelectorAll('img').length || 0,
       links: editor?.querySelectorAll('a[href*="vpscomparehub.com/money"]').length || 0,
       hasImageUnderTitleCta: text.includes('相談先を選ぶ前に、他の候補と比較しておく'),
+      hasMarkdownHeading: /^#{2,4}\s+/m.test(text),
+      headingCount: editor?.querySelectorAll('h2,h3').length || 0,
+      longCaptionCount: [...(editor?.querySelectorAll('figcaption') || [])].filter((caption) => (caption.textContent || '').length > 120).length,
       hasComparisonCtaText:
         text.includes('債務整理に強い相談先を比較する') ||
         text.includes('債務整理の相談先を比較する') ||
         text.includes('債務整理おすすめ3選はこちら'),
     };
   });
-  if (stats.images < 1) throw new Error('CTA image was not inserted');
+  if (INSERT_BODY_CTA_IMAGE && stats.images < 1) throw new Error('CTA image was not inserted');
+  if (stats.hasMarkdownHeading) throw new Error('markdown headings were pasted as plain text');
+  if (stats.headingCount < 1) throw new Error('formatted headings are missing');
+  if (stats.longCaptionCount > 0) throw new Error('article body was inserted into an image caption');
   if (stats.links < 1 && !stats.hasComparisonCtaText) throw new Error('comparison LP link is missing');
-  if (!stats.hasImageUnderTitleCta) throw new Error('image-under-title CTA is missing');
-}
+  }
 
 async function clickIfExists(page: any, name: RegExp): Promise<boolean> {
   const button = page.getByRole('button', { name }).first();
@@ -373,6 +386,11 @@ main().catch((err) => {
   console.error('[note:update] failed:', err);
   process.exit(1);
 });
+
+
+
+
+
 
 
 
