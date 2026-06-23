@@ -6,8 +6,9 @@ on:
     paths:
       - 'note_articles/run-now.txt'
   schedule:
-    # Every 15 minutes from JST 11:00 to 23:45. The script decides whether a post is actually due.
-    - cron: '*/15 2-14 * * *'
+    # Every 15 minutes from JST 11:07 to 23:52, away from top-of-hour GitHub cron congestion.
+    # The script decides whether a post is actually due.
+    - cron: '7,22,37,52 2-14 * * *'
 
 permissions:
   contents: write
@@ -63,3 +64,4 @@ jobs:
           else
             echo "No note article changes."
           fi
+
