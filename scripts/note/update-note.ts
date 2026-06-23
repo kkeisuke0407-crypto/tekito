@@ -244,7 +244,10 @@ async function assertEditorReady(page: any): Promise<void> {
       images: editor?.querySelectorAll('img').length || 0,
       links: editor?.querySelectorAll('a[href*="vpscomparehub.com/money"]').length || 0,
       hasImageUnderTitleCta: text.includes('相談先を選ぶ前に、他の候補と比較しておく'),
-      hasComparisonCtaText: text.includes('債務整理に強い相談先を比較する') || text.includes('債務整理の相談先を比較する'),
+      hasComparisonCtaText:
+        text.includes('債務整理に強い相談先を比較する') ||
+        text.includes('債務整理の相談先を比較する') ||
+        text.includes('債務整理おすすめ3選はこちら'),
     };
   });
   if (stats.images < 1) throw new Error('CTA image was not inserted');
@@ -370,5 +373,6 @@ main().catch((err) => {
   console.error('[note:update] failed:', err);
   process.exit(1);
 });
+
 
 
