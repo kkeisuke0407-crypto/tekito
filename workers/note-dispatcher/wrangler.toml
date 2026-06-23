@@ -1,0 +1,14 @@
+name = "note-dispatcher"
+main = "worker.js"
+compatibility_date = "2026-06-23"
+
+# Cloudflare cron is UTC. These are JST 11:07 to 23:52, every 15 minutes.
+# The GitHub Action still decides whether a note article is actually due.
+[triggers]
+crons = ["7,22,37,52 2-14 * * *"]
+
+[vars]
+GITHUB_OWNER = "kkeisuke0407-crypto"
+GITHUB_REPO = "tekito"
+GITHUB_WORKFLOW_FILE = "daily-note-publish.yml"
+GITHUB_REF = "main"
