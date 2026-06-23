@@ -45,6 +45,13 @@ function listArticlePaths(state: PublishState): string[] {
     .map((file) => join(OUTPUT_DIR, file));
 }
 
+function stripCtaImageMarkdown(text: string): string {
+  return text
+    .replace(/^\s*!\[債務整理おすすめ3選\]\((?:\.\.\/)+assets\/cta-saimu-compare\.png\)\s*$/gm, '')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+}
+
 function parseArticle(path: string): ParsedArticle {
   const file = readFileSync(path, 'utf-8');
   const metaBlock = file.match(/^<!--([\s\S]*?)-->\s*/)?.[1] || '';
@@ -60,7 +67,7 @@ function parseArticle(path: string): ParsedArticle {
   );
   const raw = file.replace(/^<!--[\s\S]*?-->\s*/, '').trim();
   const title = raw.match(/^#\s+(.+)$/m)?.[1]?.trim() || '債務整理の相談先を比較';
-  const body = raw.replace(/^#\s+.+\n?/, '').trim();
+  const body = stripCtaImageMarkdown(raw.replace(/^#\s+.+\n?/, '').trim());
   return { title, body, meta };
 }
 
@@ -363,3 +370,5 @@ main().catch((err) => {
   console.error('[note:update] failed:', err);
   process.exit(1);
 });
+
+
