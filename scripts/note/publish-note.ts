@@ -337,15 +337,9 @@ async function fillEditable(page: any, label: 'title' | 'body', text: string): P
         await el.evaluate(
           (node: HTMLElement, payload: { text: string; html: string }) => {
             node.focus();
-            const data = new DataTransfer();
-            data.setData('text/plain', payload.text);
-            data.setData('text/html', payload.html);
-            const event = new ClipboardEvent('paste', {
-              bubbles: true,
-              cancelable: true,
-              clipboardData: data,
-            });
-            node.dispatchEvent(event);
+            node.innerHTML = payload.html;
+            node.dispatchEvent(new InputEvent('input', { bubbles: true, inputType: 'insertFromPaste', data: payload.text }));
+            node.dispatchEvent(new Event('change', { bubbles: true }));
           },
           { text, html },
         );
@@ -535,6 +529,4 @@ main().catch((err) => {
   console.error('[note:publish] failed:', err);
   process.exit(1);
 });
-
-
 
