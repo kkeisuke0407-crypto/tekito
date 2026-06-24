@@ -219,16 +219,9 @@ async function fillBody(page: any, body: string): Promise<void> {
   await editor.evaluate(
     (node: HTMLElement, payload: { text: string; html: string }) => {
       node.focus();
-      const data = new DataTransfer();
-      data.setData('text/html', payload.html);
-      data.setData('text/plain', payload.text);
-      node.dispatchEvent(
-        new ClipboardEvent('paste', {
-          bubbles: true,
-          cancelable: true,
-          clipboardData: data,
-        }),
-      );
+      node.innerHTML = payload.html;
+      node.dispatchEvent(new InputEvent('input', { bubbles: true, inputType: 'insertFromPaste', data: payload.text }));
+      node.dispatchEvent(new Event('change', { bubbles: true }));
     },
     { text: body.replace(/^#{2,4}\s+/gm, '').replace(/\[(.+?)\]\((https?:\/\/[^)\s]+)\)/g, '$1'), html },
   );
@@ -254,6 +247,8 @@ async function assertEditorReady(page: any): Promise<void> {
       hasImageUnderTitleCta: text.includes('相談先を選ぶ前に、他の候補と比較しておく'),
       hasMarkdownHeading: /^#{2,4}\s+/m.test(text),
       headingCount: editor?.querySelectorAll('h2,h3').length || 0,
+      htmlHead: (editor?.innerHTML || '').slice(0, 500),
+      textHead: text.slice(0, 500),
       longCaptionCount: [...(editor?.querySelectorAll('figcaption') || [])].filter((caption) => (caption.textContent || '').length > 120).length,
       hasComparisonCtaText:
         text.includes('債務整理に強い相談先を比較する') ||
@@ -263,7 +258,7 @@ async function assertEditorReady(page: any): Promise<void> {
   });
   if (INSERT_BODY_CTA_IMAGE && stats.images < 1) throw new Error('CTA image was not inserted');
   if (stats.hasMarkdownHeading) throw new Error('markdown headings were pasted as plain text');
-  if (stats.headingCount < 1) throw new Error('formatted headings are missing');
+  if (stats.headingCount < 1) throw new Error('formatted headings are missing: ' + JSON.stringify(stats));
   if (stats.longCaptionCount > 0) throw new Error('article body was inserted into an image caption');
   if (stats.links < 1 && !stats.hasComparisonCtaText) throw new Error('comparison LP link is missing');
   }
@@ -386,11 +381,4 @@ main().catch((err) => {
   console.error('[note:update] failed:', err);
   process.exit(1);
 });
-
-
-
-
-
-
-
 
