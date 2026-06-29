@@ -1,6 +1,8 @@
 name: Daily data refresh
 
 on:
+  schedule:
+    - cron: '0 6 * * *'   # 毎日 06:00 UTC = 15:00 JST（価格データ自動更新）
   workflow_dispatch:
 
 permissions:
