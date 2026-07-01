@@ -136,22 +136,6 @@
       "category": "dedicated"
     },
     {
-      "id": "g8-dedicated-4-2",
-      "name": "G8 Dedicated 4x2",
-      "vcpu": 2,
-      "memoryGB": 4,
-      "storageGB": 41,
-      "storageType": "SSD",
-      "bandwidthTB": 0,
-      "monthlyPrice": 45,
-      "hourlyPrice": 0.07,
-      "currency": "USD",
-      "regions": [
-        "all"
-      ],
-      "category": "dedicated"
-    },
-    {
       "id": "g6-standard-4",
       "name": "Linode 8GB",
       "vcpu": 4,
@@ -182,22 +166,6 @@
         "all"
       ],
       "category": "highmem"
-    },
-    {
-      "id": "g8-dedicated-8-2",
-      "name": "G8 Dedicated 8x2",
-      "vcpu": 2,
-      "memoryGB": 8,
-      "storageGB": 82,
-      "storageType": "SSD",
-      "bandwidthTB": 0,
-      "monthlyPrice": 70,
-      "hourlyPrice": 0.11,
-      "currency": "USD",
-      "regions": [
-        "all"
-      ],
-      "category": "dedicated"
     },
     {
       "id": "g6-dedicated-4",
@@ -232,15 +200,47 @@
       "category": "dedicated"
     },
     {
-      "id": "g8-dedicated-8-4",
-      "name": "G8 Dedicated 8x4",
-      "vcpu": 4,
-      "memoryGB": 8,
-      "storageGB": 82,
+      "id": "g6-standard-6",
+      "name": "Linode 16GB",
+      "vcpu": 6,
+      "memoryGB": 16,
+      "storageGB": 320,
       "storageType": "SSD",
-      "bandwidthTB": 0,
-      "monthlyPrice": 90,
-      "hourlyPrice": 0.14,
+      "bandwidthTB": 8,
+      "monthlyPrice": 96,
+      "hourlyPrice": 0.144,
+      "currency": "USD",
+      "regions": [
+        "all"
+      ],
+      "category": "shared"
+    },
+    {
+      "id": "g7-highmem-2",
+      "name": "Linode 48GB",
+      "vcpu": 2,
+      "memoryGB": 48,
+      "storageGB": 40,
+      "storageType": "SSD",
+      "bandwidthTB": 6,
+      "monthlyPrice": 120,
+      "hourlyPrice": 0.18,
+      "currency": "USD",
+      "regions": [
+        "all"
+      ],
+      "category": "highmem"
+    },
+    {
+      "id": "g6-dedicated-8",
+      "name": "Dedicated 16GB",
+      "vcpu": 8,
+      "memoryGB": 16,
+      "storageGB": 320,
+      "storageType": "SSD",
+      "bandwidthTB": 6,
+      "monthlyPrice": 144,
+      "hourlyPrice": 0.216,
       "currency": "USD",
       "regions": [
         "all"
@@ -248,6 +248,6 @@
       "category": "dedicated"
     }
   ],
-  "lastUpdated": "2026-06-30T09:38:05.960Z",
+  "lastUpdated": "2026-07-01T09:49:38.091Z",
   "source": "api"
 }
