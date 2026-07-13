@@ -5321,3 +5321,49 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   }
   .sim-result-breakdown .ms-row strong { text-align: left; }
 }
+
+/* ─────────── 内容証明ジェネレーター ─────────── */
+.ns-input {
+  width: 100%;
+  padding: .7rem .85rem;
+  font-size: .95rem;
+  font-family: inherit;
+  color: var(--navy);
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+.ns-input:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+.ns-output {
+  margin: .75rem 0;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: "Noto Serif JP", serif;
+  font-size: .82rem;
+  line-height: 1.9;
+  color: var(--text);
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 420px;
+  overflow-y: auto;
+}
+.ns-copy-btn {
+  display: block;
+  width: 100%;
+  padding: .8rem 1rem;
+  font-size: .92rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--navy);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: filter .15s;
+}
+.ns-copy-btn:hover { filter: brightness(1.12); }
