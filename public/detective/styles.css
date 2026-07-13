@@ -5367,3 +5367,42 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transition: filter .15s;
 }
 .ns-copy-btn:hover { filter: brightness(1.12); }
+
+/* ─────────── コラム カテゴリページ ─────────── */
+.col-cat-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: 1rem 0 1.5rem;
+}
+.col-cat-chip {
+  display: inline-block;
+  padding: .4rem .9rem;
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--navy);
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all .15s;
+}
+.col-cat-chip:hover { border-color: var(--gold); text-decoration: none; }
+.col-cat-chip.active {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
+
+.col-cat-links {
+  font-size: .82rem;
+  color: var(--muted);
+  margin: 0 0 1.5rem;
+  text-align: center;
+}
+.col-cat-links a {
+  color: var(--gold-deep);
+  font-weight: 700;
+  text-decoration: none;
+}
+.col-cat-links a:hover { text-decoration: underline; }
