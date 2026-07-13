@@ -1,0 +1,305 @@
+---
+const PAGE_TITLE = "浮気の証拠保全チェックリスト｜今日からできる証拠の残し方｜中の人ナビ";
+const PAGE_DESC  = "浮気を疑ったら、証拠は消される前に残すのが鉄則。今日からスマホでできる証拠保全と、合法・違法の境界をチェック形式で確認できます。法律事務所の元事務員が監修。";
+const CANONICAL  = "https://vpscomparehub.com/detective/shouko-hozen/";
+const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
+const UPDATED = "2026-06-22";
+
+const sections = [
+  {
+    title: "今日すぐ残すべきもの（消される前に）",
+    icon: "list",
+    items: [
+      { strong: "怪しいLINE・メールを日付が写る形で撮影・保存した", note: "本人が消す前に、別端末やクラウドに複製しておく" },
+      { strong: "レシート・領収書・クレジット明細を写真で保存した", note: "ホテル・レストラン・プレゼントなど間接事実の証拠" },
+      { strong: "SNS投稿・位置情報つき写真をスクショした", note: "相手が非公開・削除する前に保全する" },
+      { strong: "怪しい日時・行き先をカレンダーやメモに記録し始めた", note: "時系列の記録は後で強力な状況証拠になる" }
+    ]
+  },
+  {
+    title: "行動パターンの記録",
+    icon: "list",
+    items: [
+      { strong: "帰宅時間・外泊・出張の変化をメモしている", note: "残業と言って早く出る日／泊まりが増える時期をパターン化" },
+      { strong: "車の走行距離・給油の変化に気づいている", note: "行き先が説明と合わないときの手がかり" },
+      { strong: "服装・香水・身だしなみの変化を記録している", note: "急な変化は行動の変化のサイン" }
+    ]
+  },
+  {
+    title: "合法ラインの確認（違法にしないため）",
+    icon: "shield",
+    items: [
+      { strong: "スマホのパスコードを勝手に解除していない", note: "不正アクセス禁止法に触れる可能性。ロック画面の通知表示はセーフ" },
+      { strong: "GPSを設置するなら自分名義・夫婦共有名義の車に限っている", note: "相手単独名義・社用車への設置はストーカー規制法の対象に" },
+      { strong: "盗聴器の設置や第三者の通信の傍受をしていない", note: "違法収集の証拠は裁判で評価が下がる・自分が罪に問われる" },
+      { strong: "録音は自分が会話の当事者である範囲にとどめている", note: "当事者間の録音は原則合法、無関係な他人同士の会話はNG" }
+    ]
+  },
+  {
+    title: "次のステップの準備",
+    icon: "heart",
+    items: [
+      { strong: "決定的証拠（ラブホ出入り・宿泊）が自力で難しいと理解している", note: "尾行・張り込みはプロの領域。無理をすると警戒されて失敗する" },
+      { strong: "証拠が固まったら弁護士に相談する順序を理解している", note: "探偵で証拠 → 弁護士で請求、が基本の流れ" }
+    ]
+  }
+];
+const totalItems = sections.reduce((s, sec) => s + sec.items.length, 0);
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{PAGE_TITLE}</title>
+  <meta name="description" content={PAGE_DESC} />
+  <link rel="canonical" href={CANONICAL} />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={PAGE_TITLE} />
+  <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:url" content={CANONICAL} />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content="弁護士の中の人" />
+  <meta property="og:image"     content="https://vpscomparehub.com/detective/images/hero.png" />
+  <meta name="twitter:card"     content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260615f" />
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "TOP", "item": "https://vpscomparehub.com/detective/" },
+      { "@type": "ListItem", "position": 2, "name": "証拠保全チェックリスト", "item": CANONICAL }
+    ]
+  })} />
+
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2YLF06DC0E');
+  </script>
+  <script is:inline type="text/javascript">
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wt0koam10v");
+  </script>
+</head>
+<body class="lp-page lp-page-v2">
+
+<header class="dt-header">
+  <div class="dt-header-inner">
+    <a href="/detective/" class="dt-logo">
+      <div class="dt-logo-icon"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;" /></div>
+      <div class="dt-logo-wrap"><span>弁護士の中の人</span><span class="dt-logo-sub">中の人ナビ</span></div>
+    </a>
+    <a href={INSTAGRAM_URL} class="dt-header-insta" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+      <span>@lawyer.nakanohito</span>
+    </a>
+  </div>
+</header>
+
+<nav class="col-header-nav">
+  <div class="col-header-nav-inner">
+    <a href="/detective/start/">最初に</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/flow/">診断</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cost/">費用相場</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/law/">法律の境界線</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cases/">体験談</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/column/">コラム</a>
+  </div>
+</nav>
+
+<div class="lp-hero">
+  <div class="lp-hero-meta">
+    <span class="updated-meta">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      最終更新 <strong>{UPDATED}</strong>
+    </span>
+  </div>
+  <h1>証拠は消される前に。<br/>証拠保全チェックリスト</h1>
+  <p class="lp-hero-sub">浮気を疑ったら、証拠は<strong>相手が消す前に残す</strong>のが鉄則です。<strong>{totalItems}項目</strong>のチェックで「証拠保全度パーセント」が表示されます。今日からできることを、合法の範囲で確認しましょう。</p>
+</div>
+
+<div class="lp-body">
+
+  <nav class="lp-breadcrumb" aria-label="パンくず">
+    <a href="/detective/">TOP</a>
+    <span class="sep">›</span>
+    <strong>証拠保全チェックリスト</strong>
+  </nav>
+
+  <div class="tldr-card">
+    <div class="tldr-title">このページの使い方</div>
+    <p class="tldr-body">当てはまる項目にチェックを入れるだけ。上部の進捗バーがリアルタイムで埋まり、全部終わると「あなたの証拠保全度◯%」と次の一手が表示されます。<strong>入力はどこにも送信されません</strong>（端末内で計算）。</p>
+  </div>
+
+  <div class="cl-progress" id="cl-progress">
+    <div class="cl-progress-row">
+      <span>あなたの証拠保全度</span>
+      <span id="cl-progress-text">0 / {totalItems}</span>
+    </div>
+    <div class="cl-progress-bar"><div class="cl-progress-fill" id="cl-progress-fill"></div></div>
+  </div>
+
+  <form id="cl-form" onsubmit="return false;">
+    {sections.map(sec => (
+      <div class="cl-section">
+        <div class="cl-section-title">
+          {sec.icon === 'heart' && <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>}
+          {sec.icon === 'list' && <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>}
+          {sec.icon === 'wallet' && <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12V8H6a2 2 0 0 1 0-4h12v4"/><path d="M4 6v12a2 2 0 0 0 2 2h14v-4"/><path d="M18 12a2 2 0 0 0 0 4h4v-4z"/></svg>}
+          {sec.icon === 'shield' && <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>}
+          {sec.title}
+        </div>
+        {sec.items.map(item => (
+          <label class="cl-item">
+            <input type="checkbox" class="cl-check" />
+            <span class="cl-checkbox"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span class="cl-text"><strong>{item.strong}</strong><small>{item.note}</small></span>
+          </label>
+        ))}
+      </div>
+    ))}
+  </form>
+
+  <div class="cl-result" id="cl-result">
+    <div class="cl-result-head">あなたの証拠保全度</div>
+    <div class="cl-result-percent"><span id="cl-result-count">0</span> / {totalItems} <span>項目</span></div>
+    <div class="cl-result-msg" id="cl-result-msg"></div>
+    <a class="cl-result-cta" id="cl-result-cta" href="/detective/shouko/" data-track="shokohozen_cta">次の一歩を見る →</a>
+  </div>
+
+  <div class="lp-card">
+    <h2>なぜ「今日」保全するのが大事なのか</h2>
+    <p>浮気を疑ったとき、いちばんやってはいけないのが<strong>「問い詰める」</strong>ことです。証拠がないまま問い詰めると、相手は警戒してLINEを消し、行動を隠し、証拠が一気に取れなくなります。</p>
+    <p>事務所にいた頃も、「感情的に問い詰めてしまって、そこから証拠が何も出なくなった」と後悔する方を何人も見てきました。逆に、<strong>気づかれないうちに手元の証拠を静かに保全</strong>できていた方は、その後の慰謝料請求までスムーズに進めていました。まずは消される前に、残せるものを残す。それが最初の一歩です。</p>
+    <p style="text-align:center;margin-top:1.25rem;"><a href="/detective/start/" class="lp-cta-block-btn" style="display:inline-block;" data-track="shokohozen_to_start">「最初にやること」ガイドを見る →</a></p>
+  </div>
+
+  <div class="lp-related">
+    <h3>あわせて読みたい</h3>
+    <div class="col-grid">
+      <a href="/detective/shouko/" class="col-card">
+        <span class="col-card-badge comparison">証拠</span>
+        <h3>証拠タイプ別 判定ガイド</h3>
+        <p>保全した証拠が「使えるか」を判定。</p>
+      </a>
+      <a href="/detective/law/" class="col-card">
+        <span class="col-card-badge comparison">法律</span>
+        <h3>合法・違法の境界線</h3>
+        <p>証拠集めで「やっていいこと」の線引き。</p>
+      </a>
+      <a href="/detective/tantei/" class="col-card">
+        <span class="col-card-badge comparison">探偵</span>
+        <h3>信頼できる探偵社の選び方</h3>
+        <p>決定的証拠は自力では難しい。プロの見極め方。</p>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="dt-footer">
+  <div class="dt-footer-inner">
+    <div class="dt-footer-logo">
+      <div class="dt-footer-logo-icon" style="padding:0;overflow:hidden;"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:8px;" /></div>
+      <span>弁護士の中の人</span>
+    </div>
+    <p class="dt-footer-text">
+      Instagram「弁護士の中の人（@lawyer.nakanohito）」の公式サイト。<br/>
+      法律事務所の元事務員が、浮気・不倫で悩む方へ正直な情報をお届けしています。<br/>
+      <span style="font-size:.75rem;color:rgba(255,255,255,.35)">当サイトは一部にアフィリエイトリンクを含みます。</span>
+    </p>
+    <div class="dt-footer-links">
+      <a href={INSTAGRAM_URL} target="_blank" rel="noopener">Instagram</a>
+      <a href="/detective/start/">最初にやること</a>
+      <a href="/detective/flow/">5問診断</a>
+      <a href="/detective/cost/">費用相場</a>
+      <a href="/detective/law/">法律の境界線</a>
+      <a href="/detective/cases/">体験談</a>
+      <a href="/detective/glossary/">用語集</a>
+      <a href="/detective/column/">コラム</a>
+      <a href="/detective/about/">中の人について</a>
+      <a href="/detective/privacy/">プライバシーポリシー</a>
+      <a href="/detective/operator/">運営者情報</a>
+    </div>
+    <p class="dt-footer-copy">© 2026 弁護士の中の人</p>
+  </div>
+</footer>
+
+<div class="sticky-cta-bar" id="sticky-cta">
+  <span class="sticky-label">証拠が固まったら次へ</span>
+  <a href="/detective/tantei/" class="sticky-btn" data-track="sticky_shokohozen_tantei">信頼できる探偵社を見る →</a>
+  <button class="sticky-close" id="sticky-close" aria-label="閉じる">✕</button>
+</div>
+
+<script src="/detective/app.js" is:inline defer></script>
+<script is:inline define:vars={{ totalItems }}>
+  document.addEventListener('DOMContentLoaded', function () {
+    var checks = document.querySelectorAll('.cl-check');
+    var fill   = document.getElementById('cl-progress-fill');
+    var txt    = document.getElementById('cl-progress-text');
+    var result = document.getElementById('cl-result');
+    var rCount = document.getElementById('cl-result-count');
+    var rMsg   = document.getElementById('cl-result-msg');
+    var rCta   = document.getElementById('cl-result-cta');
+    if (!checks.length) return;
+
+    function update() {
+      var n = 0;
+      checks.forEach(function (c) { if (c.checked) n++; });
+      var pct = Math.round((n / totalItems) * 100);
+      fill.style.width = pct + '%';
+      txt.textContent = n + ' / ' + totalItems;
+      if (n === 0) {
+        result.classList.remove('visible');
+        return;
+      }
+      rCount.textContent = n;
+      var msg, cta_label, cta_href, cta_track;
+      if (pct < 40) {
+        msg = '<strong>まだ保全できている証拠が少ない段階です。</strong>まずは消される前に、手元のLINE・レシート・SNSを日付が写る形で残しましょう。合法の範囲で今日できることから始めるのがおすすめです。';
+        cta_label = '「最初にやること」ガイドを読む →';
+        cta_href  = '/detective/start/';
+        cta_track = 'shokohozen_result_start';
+      } else if (pct < 75) {
+        msg = '<strong>証拠保全は半分以上できています。</strong>あとは合法ラインを確認しつつ、手元の間接証拠を固めていきましょう。決定的証拠（ラブホ出入り・宿泊）が必要なら、無理せずプロに相談するのが現実的です。';
+        cta_label = '手元の証拠が使えるか判定する →';
+        cta_href  = '/detective/shouko/';
+        cta_track = 'shokohozen_result_shouko';
+      } else {
+        msg = '<strong>かなり証拠保全が進んでいます。</strong>ここまで揃ったら、次は<strong>決定的証拠</strong>を押さえる段階。尾行・張り込みは自力では難しいため、信頼できる探偵社への無料相談が現実的な次の一歩です。証拠が揃ったら弁護士相談へ。';
+        cta_label = '信頼できる探偵社を見る →';
+        cta_href  = '/detective/tantei/';
+        cta_track = 'shokohozen_result_tantei';
+      }
+      rMsg.innerHTML = msg;
+      rCta.textContent = cta_label;
+      rCta.href = cta_href;
+      rCta.setAttribute('data-track', cta_track);
+      result.classList.add('visible');
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'shokohozen_progress', { checked: n, total: totalItems, percent: pct });
+      }
+      if (window.dataLayer) {
+        window.dataLayer.push({ event: 'shokohozen_progress', checked: n, total: totalItems, percent: pct });
+      }
+    }
+
+    checks.forEach(function (c) { c.addEventListener('change', update); });
+  });
+</script>
+
+</body>
+</html>
