@@ -150,7 +150,7 @@ const UPDATED = "2026-06-15";
   <div class="lp-related">
     <h3>他の立場の方向けガイド</h3>
     <div class="col-grid">
-      {Object.entries(situations).filter(([s]) => s !== slug).map(([s, item]) => (
+      {Object.entries(situations).filter(([s]) => s !== slug).slice(0, 3).map(([s, item]) => (
         <a href={`/detective/situation/${s}/`} class="col-card">
           <span class="col-card-badge comparison">{item.badge}</span>
           <h3>{item.label}を疑ったときに</h3>
