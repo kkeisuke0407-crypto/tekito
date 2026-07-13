@@ -2291,6 +2291,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .col-section-badge.experience { background: var(--gold); color: #fff; }
 .col-section-badge.comparison { background: #1d4ed8; color: #fff; }
 .col-section-badge.mental     { background: var(--pink); color: #fff; }
+.col-section-badge.popular    { background: #c8362a; color: #fff; }
 
 .col-grid {
   display: grid;
