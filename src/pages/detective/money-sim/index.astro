@@ -1,0 +1,368 @@
+---
+const PAGE_TITLE = "離婚後にもらえるお金シミュレーター｜児童扶養手当・養育費・年金分割｜中の人ナビ";
+const PAGE_DESC  = "離婚後に受け取れる児童扶養手当・養育費・年金分割の目安を試算できる簡易シミュレーター。2026年最新の制度（養育費法改正・児童扶養手当）にもとづき、法律事務所の元事務員が整理しました。正確な金額は自治体・弁護士にご確認ください。";
+const CANONICAL  = "https://vpscomparehub.com/detective/money-sim/";
+const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
+const UPDATED = "2026-06-22";
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{PAGE_TITLE}</title>
+  <meta name="description" content={PAGE_DESC} />
+  <link rel="canonical" href={CANONICAL} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={PAGE_TITLE} />
+  <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:url" content={CANONICAL} />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content="弁護士の中の人" />
+  <meta property="og:image"     content="https://vpscomparehub.com/detective/images/hero.png" />
+  <meta name="twitter:card"     content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260622b" />
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "離婚後、児童扶養手当はいくらもらえますか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "2026年度の児童扶養手当は、子1人の全部支給で月48,050円、一部支給で月11,340〜48,040円です。第2子以降は最大月11,350円が加算されます。前年の所得により全部支給・一部支給・支給停止が決まり、2024年11月の改正で所得制限が緩和されました（子1人・全部支給の所得限度が160万→190万に）。" } },
+      { "@type": "Question", "name": "養育費はいつまで、いくらもらえますか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "養育費は原則として子が成人または大学卒業（22歳前後）まで支払われます。金額は最高裁の養育費算定表にもとづき、義務者と権利者の年収・子の人数と年齢で決まります。2026年4月の改正民法で、公正証書がなくても父母間の合意書で差し押さえが可能になり、取り決めがない場合でも月2万円の法定養育費を請求できる制度ができました。" } },
+      { "@type": "Question", "name": "年金分割の請求期限はいつまでですか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "年金分割の請求期限は、2026年3月31日までに離婚した場合は離婚の翌日から2年以内、2026年4月1日以降の離婚は5年以内に延長されました。3号分割（専業主婦・主夫だった方）は相手の同意なしに請求できます。期限を過ぎると請求できなくなるため、離婚後すぐの手続きが重要です。" } }
+    ]
+  })} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "TOP", "item": "https://vpscomparehub.com/detective/" },
+      { "@type": "ListItem", "position": 2, "name": "離婚後にもらえるお金シミュレーター", "item": CANONICAL }
+    ]
+  })} />
+
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2YLF06DC0E');
+  </script>
+  <script is:inline type="text/javascript">
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wt0koam10v");
+  </script>
+</head>
+<body class="lp-page lp-page-v2">
+
+<header class="dt-header">
+  <div class="dt-header-inner">
+    <a href="/detective/" class="dt-logo">
+      <div class="dt-logo-icon"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;" /></div>
+      <div class="dt-logo-wrap"><span>弁護士の中の人</span><span class="dt-logo-sub">中の人ナビ</span></div>
+    </a>
+    <a href={INSTAGRAM_URL} class="dt-header-insta" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+      <span>@lawyer.nakanohito</span>
+    </a>
+  </div>
+</header>
+
+<nav class="col-header-nav">
+  <div class="col-header-nav-inner">
+    <a href="/detective/start/">最初に</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/flow/">診断</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cost/">費用相場</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/law/">法律の境界線</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cases/">体験談</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/column/">コラム</a>
+  </div>
+</nav>
+
+<div class="lp-hero">
+  <div class="lp-hero-meta">
+    <span class="updated-meta">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      最終更新 <strong>{UPDATED}</strong>
+    </span>
+  </div>
+  <h1>離婚後、<br/>もらえるお金はいくら？</h1>
+  <p class="lp-hero-sub">日本の支援は<strong>「申請しないともらえない」</strong>のが原則。児童扶養手当・養育費・年金分割の目安を、2026年最新制度にもとづいて試算します。匿名・無料・30秒。</p>
+</div>
+
+<div class="lp-body">
+
+  <nav class="lp-breadcrumb" aria-label="パンくず">
+    <a href="/detective/">TOP</a>
+    <span class="sep">›</span>
+    <strong>離婚後にもらえるお金シミュレーター</strong>
+  </nav>
+
+  <div class="sim-disclaimer">
+    ⚠️ このシミュレーターは、2026年時点の制度にもとづく<strong>「目安・概算」</strong>です。実際の支給額は、あなたの所得・自治体・個別事情によって変わります。<strong>正確な金額は、お住まいの自治体窓口・年金事務所・弁護士にご確認ください。</strong>当サイトは金額を保証するものではありません。
+  </div>
+
+  <div class="sim-card">
+    <div class="sim-card-head">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      もらえるお金の目安を計算する
+    </div>
+    <p class="sim-card-sub">当てはまるものを選んで「目安を計算する」を押してください。入力内容はどこにも送信されません（すべてお使いの端末内で計算します）。</p>
+
+    <div class="sim-form">
+      <div class="sim-field">
+        <label for="ms-kids">1. 一緒に暮らす未成年の子供の人数は？</label>
+        <select id="ms-kids">
+          <option value="">選択してください</option>
+          <option value="0">いない</option>
+          <option value="1">1人</option>
+          <option value="2">2人</option>
+          <option value="3">3人以上</option>
+        </select>
+      </div>
+      <div class="sim-field">
+        <label for="ms-age">2. いちばん下の子の年齢は？</label>
+        <select id="ms-age">
+          <option value="">選択してください</option>
+          <option value="0">0〜5歳</option>
+          <option value="6">6〜14歳</option>
+          <option value="15">15〜17歳</option>
+          <option value="18">18歳以上／子供なし</option>
+        </select>
+      </div>
+      <div class="sim-field">
+        <label for="ms-income">3. あなた（引き取る側）の年収は？</label>
+        <select id="ms-income">
+          <option value="">選択してください</option>
+          <option value="low">160万円未満</option>
+          <option value="mid">160〜365万円</option>
+          <option value="high">365万円以上</option>
+        </select>
+      </div>
+      <div class="sim-field">
+        <label for="ms-ex">4. 相手（払う側）の年収の目安は？</label>
+        <select id="ms-ex">
+          <option value="">選択してください</option>
+          <option value="e300">〜300万円</option>
+          <option value="e500">300〜500万円</option>
+          <option value="e700">500〜700万円</option>
+          <option value="e900">700万円以上</option>
+        </select>
+      </div>
+      <div class="sim-field">
+        <label for="ms-marriage">5. 婚姻年数は？（年金分割の目安に使います）</label>
+        <select id="ms-marriage">
+          <option value="">選択してください</option>
+          <option value="m5">5年未満</option>
+          <option value="m15">5〜15年</option>
+          <option value="m25">15〜25年</option>
+          <option value="m30">25年以上</option>
+        </select>
+      </div>
+      <button type="button" class="sim-calc-btn" id="ms-calc" data-track="moneysim_calc">目安を計算する</button>
+    </div>
+
+    <div class="sim-result" id="ms-result">
+      <p class="sim-result-label">離婚後にもらえるお金の目安（合計）</p>
+      <p class="sim-result-amount" id="ms-amount">—</p>
+      <div class="sim-result-breakdown" id="ms-breakdown"></div>
+      <div class="sim-result-note" id="ms-note"></div>
+      <a href="/detective/lawyer/" class="sim-result-cta" data-track="moneysim_to_lawyer">養育費・慰謝料を確実に取る方法を相談する →</a>
+    </div>
+  </div>
+
+  <div class="lp-card">
+    <h2>離婚後にもらえる主なお金・制度</h2>
+    <p>離婚後のお金は「申請しないともらえない」ものがほとんどです。制度を知らずに損をしないよう、代表的なものを整理しました。</p>
+    <div class="lp-step">
+      <div class="lp-step-num">1</div>
+      <div class="lp-step-body"><strong>児童扶養手当（2026年度）</strong><span>子1人・全部支給で月48,050円、第2子以降は最大月11,350円加算。前年所得で支給額が決まる。2024年11月に所得制限が緩和されました。</span></div>
+    </div>
+    <div class="lp-step">
+      <div class="lp-step-num">2</div>
+      <div class="lp-step-body"><strong>養育費（2026年4月 大改正）</strong><span>算定表で月額が決まり、原則22歳前後まで。改正で公正証書がなくても合意書で差し押さえ可能に。取り決めなしでも月2万円の法定養育費を請求できる制度も。</span></div>
+    </div>
+    <div class="lp-step">
+      <div class="lp-step-num">3</div>
+      <div class="lp-step-body"><strong>年金分割</strong><span>婚姻中の配偶者の厚生年金を分けてもらえる。3号分割は相手の同意不要。請求期限は2026年3月までの離婚は2年、以降は5年に延長。</span></div>
+    </div>
+    <div class="lp-step">
+      <div class="lp-step-num">4</div>
+      <div class="lp-step-body"><strong>ひとり親医療費助成・住宅支援・ひとり親控除</strong><span>医療費の自己負担軽減、家賃の貸付（上限月7万円×12ヶ月・条件で返済免除）、税金の控除など。内容は自治体で異なります。</span></div>
+    </div>
+    <div class="lp-warn">
+      <div class="lp-warn-title">いちばん大事なこと</div>
+      <p>養育費は<strong>「取り決めても払われない」</strong>のが最大の問題でした。2026年の法改正で差し押さえがしやすくなりましたが、<strong>公正証書や合意書で金額を明確にしておく</strong>ことが、確実に受け取る第一歩です。不倫が原因の離婚なら、これに<a href="/detective/isharyo-sim/">慰謝料</a>も加わります。</p>
+    </div>
+  </div>
+
+  <div class="lp-cta-block">
+    <h3>養育費・慰謝料を「確実に」取りたい方へ</h3>
+    <p>このシミュレーターは参考値です。あなたのケースで実際にいくら取れるか・どう取り決めれば払い続けてもらえるかは、離婚・不倫慰謝料に強い弁護士に聞くのが確実です。初回無料相談の事務所も多くあります。</p>
+    <a href="/detective/lawyer/" class="lp-cta-block-btn" data-track="moneysim_lawyer_guide">弁護士相談ガイドを見る →</a>
+    <p class="lp-cta-block-note">相談のタイミング・準備・費用感をまとめています</p>
+  </div>
+
+  <div class="lp-related">
+    <h3>あわせて読みたい</h3>
+    <div class="col-grid">
+      <a href="/detective/isharyo-sim/" class="col-card">
+        <span class="col-card-badge comparison">慰謝料</span>
+        <h3>慰謝料の目安シミュレーター</h3>
+        <p>不倫が原因なら慰謝料も上乗せできます。</p>
+      </a>
+      <a href="/detective/lawyer/" class="col-card">
+        <span class="col-card-badge comparison">弁護士</span>
+        <h3>弁護士相談ガイド</h3>
+        <p>養育費・慰謝料を確実に取り決める方法。</p>
+      </a>
+      <a href="/detective/cases/" class="col-card">
+        <span class="col-card-badge experience">体験談</span>
+        <h3>事務所で見た実例</h3>
+        <p>お金の取り決めで後悔した人・しなかった人。</p>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="dt-footer">
+  <div class="dt-footer-inner">
+    <div class="dt-footer-logo">
+      <div class="dt-footer-logo-icon" style="padding:0;overflow:hidden;"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:8px;" /></div>
+      <span>弁護士の中の人</span>
+    </div>
+    <p class="dt-footer-text">
+      Instagram「弁護士の中の人（@lawyer.nakanohito）」の公式サイト。<br/>
+      法律事務所の元事務員が、浮気・不倫で悩む方へ正直な情報をお届けしています。<br/>
+      <span style="font-size:.75rem;color:rgba(255,255,255,.35)">当サイトは一部にアフィリエイトリンクを含みます。掲載の金額は目安であり、効果や結果を保証するものではありません。</span>
+    </p>
+    <div class="dt-footer-links">
+      <a href={INSTAGRAM_URL} target="_blank" rel="noopener">Instagram</a>
+      <a href="/detective/start/">最初にやること</a>
+      <a href="/detective/flow/">5問診断</a>
+      <a href="/detective/cost/">費用相場</a>
+      <a href="/detective/law/">法律の境界線</a>
+      <a href="/detective/cases/">体験談</a>
+      <a href="/detective/glossary/">用語集</a>
+      <a href="/detective/column/">コラム</a>
+      <a href="/detective/about/">中の人について</a>
+      <a href="/detective/privacy/">プライバシーポリシー</a>
+      <a href="/detective/operator/">運営者情報</a>
+    </div>
+    <p class="dt-footer-copy">© 2026 弁護士の中の人</p>
+  </div>
+</footer>
+
+<div class="sticky-cta-bar" id="sticky-cta">
+  <span class="sticky-label">確実に取るなら弁護士へ</span>
+  <a href="/detective/lawyer/" class="sticky-btn" data-track="sticky_moneysim_lawyer">弁護士相談ガイドを見る →</a>
+  <button class="sticky-close" id="sticky-close" aria-label="閉じる">✕</button>
+</div>
+
+<script src="/detective/app.js" is:inline defer></script>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    var btn = document.getElementById('ms-calc');
+    if (!btn) return;
+
+    // 児童扶養手当：子供人数と所得区分から年額目安（2026年度）
+    // 全部支給48,050円/月・第2子以降11,350円/月、一部支給・停止を所得で概算
+    function childAllowance(kids, income) {
+      if (kids === 0) return 0;
+      var firstMonthly, addMonthly;
+      if (income === 'low')      { firstMonthly = 48050; addMonthly = 11350; } // 全部支給
+      else if (income === 'mid') { firstMonthly = 27000; addMonthly = 7000; }  // 一部支給の中間概算
+      else                       { firstMonthly = 0;     addMonthly = 0; }      // 支給停止
+      var extra = Math.max(0, kids - 1);
+      return (firstMonthly + addMonthly * extra) * 12;
+    }
+
+    // 養育費：算定表を大まかに反映した月額目安 × 22歳までの残年数 × 子供人数係数
+    function childSupport(kids, age, ex) {
+      if (kids === 0) return 0;
+      var perChild = { e300: 30000, e500: 50000, e700: 70000, e900: 90000 }[ex] || 0;
+      // 子供が増えると1人あたりは逓減
+      var kidFactor = { 1: 1, 2: 1.7, 3: 2.2 }[kids] || 1;
+      var monthly = perChild * kidFactor;
+      var years = Math.max(0, 22 - parseInt(age, 10)); // 末子が22歳になるまでの概算
+      return monthly * 12 * years;
+    }
+
+    // 年金分割：婚姻期間から老後の受給増の超概算（幅で提示）
+    function pensionSplit(marriage) {
+      return { m5: '数万〜十数万円', m15: '十数万〜30万円', m25: '30万〜60万円', m30: '50万円以上' }[marriage] || '—';
+    }
+
+    function yen(n) { return n.toLocaleString('ja-JP'); }
+
+    btn.addEventListener('click', function () {
+      var kids  = document.getElementById('ms-kids').value;
+      var age   = document.getElementById('ms-age').value;
+      var income = document.getElementById('ms-income').value;
+      var ex    = document.getElementById('ms-ex').value;
+      var marriage = document.getElementById('ms-marriage').value;
+
+      if (kids === '' || age === '' || income === '' || ex === '' || marriage === '') {
+        alert('すべての質問にお答えください。');
+        return;
+      }
+      var kidsN = parseInt(kids, 10);
+
+      var allowanceYear = childAllowance(kidsN, income);
+      var supportTotal  = childSupport(kidsN, age, ex);
+      var pension = pensionSplit(marriage);
+
+      // 合計の目安（児童扶養手当は「年額」、養育費は「総額」）
+      var breakdown = document.getElementById('ms-breakdown');
+      var rows = [];
+      rows.push('<div class="ms-row"><span>児童扶養手当</span><strong>' + (allowanceYear > 0 ? '年 約' + yen(allowanceYear) + '円' : '対象外・支給停止') + '</strong></div>');
+      rows.push('<div class="ms-row"><span>養育費（22歳までの総額目安）</span><strong>' + (supportTotal > 0 ? '約' + yen(supportTotal) + '円' : '子供なし') + '</strong></div>');
+      rows.push('<div class="ms-row"><span>年金分割（老後の受給増・目安）</span><strong>年 ' + pension + '</strong></div>');
+      breakdown.innerHTML = rows.join('');
+
+      var amount = document.getElementById('ms-amount');
+      if (supportTotal > 0) {
+        amount.innerHTML = '養育費だけで<br/>約 ' + yen(supportTotal) + ' 円';
+      } else if (allowanceYear > 0) {
+        amount.innerHTML = '児童扶養手当<br/>年 約' + yen(allowanceYear) + ' 円';
+      } else {
+        amount.innerHTML = '年金分割が中心';
+      }
+
+      var note = document.getElementById('ms-note');
+      var msgs = [];
+      if (income === 'high') {
+        msgs.push('あなたの年収では<strong>児童扶養手当は支給停止の可能性</strong>があります。所得制限は毎年変わるため、自治体窓口で必ず確認を。');
+      } else if (income === 'mid') {
+        msgs.push('児童扶養手当は<strong>一部支給</strong>の可能性が高いです。実額は前年所得で細かく決まります。');
+      }
+      if (supportTotal > 0) {
+        msgs.push('養育費は<strong>「取り決めても払われない」</strong>のが最大の壁。公正証書や合意書で金額を明確にし、2026年改正の差し押さえ制度に備えましょう。');
+      }
+      msgs.push('※これは2026年時点の制度にもとづく<strong>概算</strong>です。実額は所得・自治体・個別事情で変わります。自治体・年金事務所・弁護士にご確認ください。');
+      note.innerHTML = msgs.join('<br/>');
+
+      var result = document.getElementById('ms-result');
+      result.classList.add('visible');
+      result.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      if (typeof gtag === 'function') gtag('event', 'moneysim_calc_done', { kids: kids, income: income });
+      if (window.dataLayer) window.dataLayer.push({ event: 'moneysim_calc_done', kids: kids, income: income });
+    });
+  });
+</script>
+
+</body>
+</html>
