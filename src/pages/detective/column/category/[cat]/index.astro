@@ -1,0 +1,197 @@
+---
+import { columns } from '../../../../../data/detective-columns.js';
+
+const CATEGORIES = {
+  experience: {
+    label: '体験談',
+    h1: '体験談コラム',
+    lead: '法律事務所の元事務員が、実際に見てきた浮気・不倫・離婚のケースをまとめたコラムです。「バレた瞬間」「取れた／取れなかった」など、リアルな事例から学べます。',
+    desc: '法律事務所の元事務員が事務所で見てきた浮気・不倫・離婚の実例をまとめた体験談コラム一覧。',
+  },
+  comparison: {
+    label: '選択肢比較',
+    h1: '選択肢比較コラム',
+    lead: '探偵・GPS・弁護士・電話相談——浮気の悩みに対して、どの選択肢が自分に合うのか。費用・進め方・順序を比較して整理したコラムです。',
+    desc: '探偵・GPS・弁護士など、浮気・不倫の悩みへの選択肢を比較・整理したコラム一覧。費用や進め方の違いを解説。',
+  },
+  mental: {
+    label: 'メンタル',
+    h1: 'メンタルケアコラム',
+    lead: '確かめるのが怖い、誰にも言えない、心が壊れそう——浮気を疑ったときの気持ちのケアに寄り添うコラムです。一人で抱え込まないために。',
+    desc: '浮気を疑ったときの不安・つらさに寄り添うメンタルケアコラム一覧。気持ちの整理と回復のヒント。',
+  },
+};
+
+export function getStaticPaths() {
+  return ['experience', 'comparison', 'mental'].map(cat => ({ params: { cat } }));
+}
+
+const { cat } = Astro.params;
+const meta = CATEGORIES[cat];
+if (!meta) throw new Error(`Unknown category: ${cat}`);
+
+const posts = columns.filter(c => c.category === cat);
+const PAGE_TITLE = `${meta.h1}｜中の人ナビ`;
+const PAGE_DESC  = meta.desc;
+const CANONICAL  = `https://vpscomparehub.com/detective/column/category/${cat}/`;
+const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{PAGE_TITLE}</title>
+  <meta name="description" content={PAGE_DESC} />
+  <link rel="canonical" href={CANONICAL} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={PAGE_TITLE} />
+  <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:url" content={CANONICAL} />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content="弁護士の中の人" />
+  <meta property="og:image"     content="https://vpscomparehub.com/detective/images/hero.png" />
+  <meta name="twitter:card"     content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260622e" />
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "TOP", "item": "https://vpscomparehub.com/detective/" },
+      { "@type": "ListItem", "position": 2, "name": "コラム", "item": "https://vpscomparehub.com/detective/column/" },
+      { "@type": "ListItem", "position": 3, "name": meta.label, "item": CANONICAL }
+    ]
+  })} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": PAGE_TITLE,
+    "url": CANONICAL,
+    "description": PAGE_DESC,
+    "hasPart": posts.map(p => ({
+      "@type": "Article",
+      "headline": p.title,
+      "url": `https://vpscomparehub.com/detective/column/${p.slug}/`
+    }))
+  })} />
+
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2YLF06DC0E');
+  </script>
+  <script is:inline type="text/javascript">
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wt0koam10v");
+  </script>
+</head>
+<body class="lp-page lp-page-v2">
+
+<header class="dt-header">
+  <div class="dt-header-inner">
+    <a href="/detective/" class="dt-logo">
+      <div class="dt-logo-icon"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;" /></div>
+      <div class="dt-logo-wrap"><span>弁護士の中の人</span><span class="dt-logo-sub">中の人ナビ</span></div>
+    </a>
+    <a href={INSTAGRAM_URL} class="dt-header-insta" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+      <span>@lawyer.nakanohito</span>
+    </a>
+  </div>
+</header>
+
+<nav class="col-header-nav">
+  <div class="col-header-nav-inner">
+    <a href="/detective/start/">最初に</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/flow/">診断</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cost/">費用相場</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/law/">法律の境界線</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cases/">体験談</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/column/" style="color:#fff;font-weight:700;">コラム</a>
+  </div>
+</nav>
+
+<div class="col-listing-hero">
+  <h1>{meta.h1}</h1>
+  <p>{meta.lead}</p>
+</div>
+
+<div class="col-listing-body">
+
+  <nav class="lp-breadcrumb" aria-label="パンくず">
+    <a href="/detective/">TOP</a>
+    <span class="sep">›</span>
+    <a href="/detective/column/">コラム</a>
+    <span class="sep">›</span>
+    <strong>{meta.label}</strong>
+  </nav>
+
+  <div class="col-cat-nav">
+    <a href="/detective/column/" class="col-cat-chip">すべて</a>
+    <a href="/detective/column/category/experience/" class={cat === 'experience' ? 'col-cat-chip active' : 'col-cat-chip'}>体験談</a>
+    <a href="/detective/column/category/comparison/" class={cat === 'comparison' ? 'col-cat-chip active' : 'col-cat-chip'}>選択肢比較</a>
+    <a href="/detective/column/category/mental/" class={cat === 'mental' ? 'col-cat-chip active' : 'col-cat-chip'}>メンタル</a>
+  </div>
+
+  <div class="col-grid">
+    {posts.map(col => (
+      <a href={`/detective/column/${col.slug}/`} class="col-card">
+        <span class={`col-card-badge ${col.category}`}>{col.categoryLabel}</span>
+        <h3>{col.title}</h3>
+        <p>{col.excerpt}</p>
+        <div class="col-card-meta">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            {col.readingTime}分
+          </span>
+          <span>{col.published}</span>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <p style="text-align:center;margin-top:2rem;"><a href="/detective/column/" style="color:var(--gold-deep);font-weight:700;text-decoration:underline;" data-track={`catpage_${cat}_all`}>← すべてのコラムを見る</a></p>
+
+</div>
+
+<footer class="dt-footer">
+  <div class="dt-footer-inner">
+    <div class="dt-footer-logo">
+      <div class="dt-footer-logo-icon" style="padding:0;overflow:hidden;"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:8px;" /></div>
+      <span>弁護士の中の人</span>
+    </div>
+    <p class="dt-footer-text">
+      Instagram「弁護士の中の人（@lawyer.nakanohito）」の公式サイト。<br/>
+      法律事務所の元事務員が、浮気・不倫で悩む方へ正直な情報をお届けしています。<br/>
+      <span style="font-size:.75rem;color:rgba(255,255,255,.35)">当サイトは一部にアフィリエイトリンクを含みます。</span>
+    </p>
+    <div class="dt-footer-links">
+      <a href={INSTAGRAM_URL} target="_blank" rel="noopener">Instagram</a>
+      <a href="/detective/start/">最初にやること</a>
+      <a href="/detective/flow/">5問診断</a>
+      <a href="/detective/cost/">費用相場</a>
+      <a href="/detective/law/">法律の境界線</a>
+      <a href="/detective/cases/">体験談</a>
+      <a href="/detective/glossary/">用語集</a>
+      <a href="/detective/column/">コラム</a>
+      <a href="/detective/about/">中の人について</a>
+      <a href="/detective/privacy/">プライバシーポリシー</a>
+      <a href="/detective/operator/">運営者情報</a>
+    </div>
+    <p class="dt-footer-copy">© 2026 弁護士の中の人</p>
+  </div>
+</footer>
+
+</body>
+</html>
