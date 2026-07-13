@@ -9,6 +9,10 @@ const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
 const experience = columns.filter(c => c.category === 'experience');
 const comparison = columns.filter(c => c.category === 'comparison');
 const mental     = columns.filter(c => c.category === 'mental');
+
+// よく読まれている記事（アクセス上位＋編集部おすすめを手動選定）
+const popularSlugs = ['ishatyou-toreta-torenakatta','sumaho-miru-mizu','tantei-souba','nani-kara-hajimeru','bengoshi-shouko-ato','tashikameru-kowai'];
+const popular = popularSlugs.map(s => columns.find(c => c.slug === s)).filter(Boolean);
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -104,6 +108,27 @@ const mental     = columns.filter(c => c.category === 'mental');
     <a href="/detective/column/category/comparison/">選択肢比較</a>・
     <a href="/detective/column/category/mental/">メンタル</a>
   </p>
+
+  <div class="col-section-head">
+    <span class="col-section-badge popular">人気</span>
+    <h2>よく読まれている記事</h2>
+  </div>
+  <div class="col-grid">
+    {popular.map(col => (
+      <a href={`/detective/column/${col.slug}/`} class="col-card" data-track="popular_column">
+        <span class={`col-card-badge ${col.category}`}>{col.categoryLabel}</span>
+        <h3>{col.title}</h3>
+        <p>{col.excerpt}</p>
+        <div class="col-card-meta">
+          <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            {col.readingTime}分
+          </span>
+          <span>{col.published}</span>
+        </div>
+      </a>
+    ))}
+  </div>
 
   <div class="col-section-head" data-section="experience">
     <span class="col-section-badge experience">体験談</span>
