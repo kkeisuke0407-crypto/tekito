@@ -5285,3 +5285,39 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @media (max-width: 720px) {
   .kokoro-choice-grid { grid-template-columns: 1fr; }
 }
+
+/* ─────────── 離婚後お金シミュレーター：結果内訳 ─────────── */
+.sim-result-breakdown {
+  margin: 1rem 0 .5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.sim-result-breakdown .ms-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: .75rem;
+  padding: .6rem .85rem;
+  background: rgba(255,255,255,.55);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: .86rem;
+}
+.sim-result-breakdown .ms-row span {
+  color: var(--muted);
+  flex: 1;
+}
+.sim-result-breakdown .ms-row strong {
+  color: var(--navy);
+  font-size: .92rem;
+  text-align: right;
+  white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .sim-result-breakdown .ms-row {
+    flex-direction: column;
+    gap: .2rem;
+  }
+  .sim-result-breakdown .ms-row strong { text-align: left; }
+}
