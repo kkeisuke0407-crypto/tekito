@@ -5407,3 +5407,54 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   text-decoration: none;
 }
 .col-cat-links a:hover { text-decoration: underline; }
+
+/* ─────────── 探偵社 個別詳細ページ（E1） ─────────── */
+.cd-info-table { width: 100%; border-collapse: collapse; margin-top: .5rem; }
+.cd-info-table th, .cd-info-table td {
+  text-align: left; padding: .7rem .5rem;
+  border-bottom: 1px solid var(--border); font-size: .88rem; vertical-align: top;
+}
+.cd-info-table th { width: 40%; color: var(--muted); font-weight: 700; }
+.cd-info-table td { color: var(--navy); font-weight: 700; }
+.cd-evals { margin-top: 1.1rem; display: flex; flex-direction: column; gap: .6rem; }
+.cd-eval-row { display: flex; align-items: center; gap: .6rem; }
+.cd-eval-label { font-size: .8rem; color: var(--muted); width: 6.5em; flex-shrink: 0; }
+.cd-eval-track { flex: 1; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+.cd-eval-fill { height: 100%; background: linear-gradient(90deg, var(--gold), var(--gold-deep)); border-radius: 4px; }
+.cd-list { list-style: none; padding: 0; margin: .5rem 0 0; display: flex; flex-direction: column; gap: .6rem; }
+.cd-list li { position: relative; padding-left: 1.6rem; font-size: .9rem; line-height: 1.7; color: var(--text); }
+.cd-list li::before { content: "・"; position: absolute; left: .3rem; color: var(--muted); font-weight: 900; }
+.cd-list-good li::before { content: "✓"; color: #1a7f4b; }
+.cd-list-bad li::before { content: "△"; color: #c98a2a; }
+.cd-comment {
+  background: var(--bg-muted); border-left: 3px solid var(--gold);
+  padding: 1rem 1.15rem; border-radius: 0 8px 8px 0;
+}
+.cd-comment p { font-size: .92rem; line-height: 1.9; color: #444; margin: 0; }
+.ranking-detail-link { text-align: center; margin: .5rem 0 0; }
+.ranking-detail-link a {
+  font-size: .82rem; font-weight: 700; color: var(--gold-deep); text-decoration: underline;
+}
+
+/* ─────────── 横断FAQページ（E4・details/summary） ─────────── */
+.faq-acc-list { display: flex; flex-direction: column; gap: .6rem; margin-top: .5rem; }
+.faq-acc {
+  border: 1px solid var(--border); border-radius: 10px;
+  background: #fff; overflow: hidden;
+}
+.faq-acc-q {
+  list-style: none; cursor: pointer;
+  padding: .9rem 2.4rem .9rem 1rem; position: relative;
+  font-size: .92rem; font-weight: 700; color: var(--navy); line-height: 1.6;
+}
+.faq-acc-q::-webkit-details-marker { display: none; }
+.faq-acc-q::after {
+  content: "+"; position: absolute; right: 1rem; top: 50%;
+  transform: translateY(-50%); font-size: 1.3rem; font-weight: 400;
+  color: var(--gold-deep); transition: transform .2s;
+}
+.faq-acc[open] .faq-acc-q::after { content: "−"; }
+.faq-acc-a {
+  padding: 0 1rem 1rem; font-size: .88rem; line-height: 1.85; color: var(--text);
+}
+.faq-acc-a a { color: var(--gold-deep); font-weight: 700; }

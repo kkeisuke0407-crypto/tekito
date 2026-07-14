@@ -1,0 +1,203 @@
+---
+const PAGE_TITLE = "浮気・不倫の悩みQ&A｜よくある質問まとめ｜中の人ナビ";
+const PAGE_DESC  = "浮気・不倫で悩む方からよくある質問を、法律事務所の元事務員がまとめて回答。気持ちの整理・証拠・費用・探偵・弁護士・慰謝料・法律まで、知りたいことがすぐ見つかるQ&A集です。";
+const CANONICAL  = "https://vpscomparehub.com/detective/faq/";
+const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
+const UPDATED = "2026-06-22";
+
+const groups = [
+  {
+    title: "気持ち・最初の一歩",
+    items: [
+      { q: "浮気を疑ったら、まず何をすればいいですか？", a: 'まず落ち着くことが最優先です。焦って問い詰めると証拠を隠され、警戒されて不利になります。正しい順序は「①落ち着く → ②状況を整理 → ③合法な範囲で下調べ → ④証拠が必要ならプロへ」。<a href="/detective/start/">最初にやること完全ガイド</a>で全体像を確認できます。' },
+      { q: "確かめるのが怖くて動けません。", a: 'その気持ちは自然なものです。無理に動く必要はありません。まず気持ちを整理してから動いた方が、冷静な判断ができて後悔が少ない、というのが事務所での経験です。つらくて眠れないときは<a href="/detective/mental-care/">心のセルフケア</a>を、誰かに話したいときは<a href="/detective/uranai/">電話占い・カウンセリング</a>を頼ってください。' },
+      { q: "自分に合う進め方がわかりません。", a: '5つの質問に答えるだけで、いまのあなたに合った選択肢がわかる<a href="/detective/flow/">5問診断</a>があります。探偵・GPS・弁護士・気持ちの整理など、状況別におすすめの一手を提案します。' },
+    ]
+  },
+  {
+    title: "証拠の集め方",
+    items: [
+      { q: "裁判で使える浮気の証拠は何ですか？", a: 'もっとも強いのは「ラブホテルへの出入りの写真・動画」「宿泊を伴う交際の写真」「探偵の調査報告書」です。LINE・レシート・GPSの記録は単体では弱く、これらの決定的証拠と組み合わせて使います。詳しくは<a href="/detective/shouko/">証拠タイプ別の判定ガイド</a>へ。' },
+      { q: "勝手にスマホを見て撮った証拠は使えますか？", a: 'パスコードを勝手に解除して見る行為は不正アクセス禁止法に触れる可能性があり、そのスクショは違法収集証拠として評価が下がることがあります。かえって自分が不利になるため避けましょう。ロック画面の通知表示を見る程度は問題になりにくいとされています。<a href="/detective/law/">合法・違法の境界線</a>で詳しく解説しています。' },
+      { q: "証拠は今すぐ何をすればいいですか？", a: '相手が消す前に、手元のLINE・レシート・SNS投稿を日付が写る形で保全するのが第一歩です。<a href="/detective/shouko-hozen/">証拠保全チェックリスト</a>で、今日からできることと合法ラインを確認できます。' },
+    ]
+  },
+  {
+    title: "費用・探偵",
+    items: [
+      { q: "浮気調査の費用相場はいくらですか？", a: '一般的に20〜80万円です。料金は「調査員2名 × 時間 × 日数」でおおよそ決まり、時間単価は1名1時間7,000〜10,000円が目安。事前に行動パターンを絞れば費用を大きく抑えられます。<a href="/detective/tantei-sim/">費用シミュレーター</a>で目安を試算できます。' },
+      { q: "信頼できる探偵社の選び方は？", a: '「探偵業の届出があるか」「料金体系が明朗か」「裁判で使える報告書を作れるか」「調査体制が直営か」を確認しましょう。<a href="/detective/tantei/">探偵社の選び方</a>で、実際に確認した4社を正直に比較しています。' },
+      { q: "家族や職場に探偵の依頼がバレませんか？", a: '探偵業法により探偵事務所には守秘義務があります。匿名相談も可能で、連絡方法（電話・LINE・メール）も指定できます。信頼できる業者であれば情報が漏れることはありません。' },
+    ]
+  },
+  {
+    title: "慰謝料・弁護士",
+    items: [
+      { q: "不倫の慰謝料の相場はいくらですか？", a: '一般的な相場は50〜300万円程度です。婚姻期間が長い、未成年の子供がいる、不貞が長期・常習的、離婚や別居に至った、といった事情で金額が上がります。<a href="/detective/isharyo-sim/">慰謝料の目安シミュレーター</a>で参考額を試算できます。' },
+      { q: "弁護士と探偵、どちらに先に相談すべきですか？", a: '慰謝料や離婚を視野に入れているなら「証拠を集めてから弁護士に相談」が一般的な順番です。弁護士は法的手続きの専門家で、証拠収集の調査は行いません。<a href="/detective/lawyer/">弁護士相談ガイド</a>で相談のタイミングを解説しています。' },
+      { q: "逆に慰謝料を請求されました。どうすれば？", a: '無視も即払いも危険です。請求額は相場より高いことが多く、証拠の強さ・時効などで減額できるケースがあります。<a href="/detective/seikyu-sareta/">慰謝料を請求されたら</a>で、減額できるケースと対応を整理しています。' },
+      { q: "離婚後にもらえるお金はありますか？", a: '児童扶養手当・養育費・年金分割・ひとり親医療費助成など、申請すれば受け取れる制度があります。日本の支援は「申請しないともらえない」のが原則です。<a href="/detective/money-sim/">離婚後にもらえるお金シミュレーター</a>で目安を確認できます。' },
+    ]
+  },
+  {
+    title: "法律・自分でできること",
+    items: [
+      { q: "自分でGPSを使うのは違法ではないですか？", a: '自分名義または夫婦共有名義の車であれば、設置が違法になりにくいとされています。相手だけの名義の車・社用車・他人の所有物への設置は、ストーカー規制法の対象になる可能性があります。<a href="/detective/gps/">GPS活用ガイド</a>で合法ラインを解説しています。' },
+      { q: "W不倫（お互い既婚）の慰謝料はどうなりますか？", a: 'W不倫でも慰謝料は請求できますが、双方の家庭が被害を受けるため互いの請求が相殺され、実質的な金額が下がることがあります。<a href="/detective/double-furin/">W不倫の慰謝料</a>で詳しく解説しています。' },
+    ]
+  },
+];
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{PAGE_TITLE}</title>
+  <meta name="description" content={PAGE_DESC} />
+  <link rel="canonical" href={CANONICAL} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={PAGE_TITLE} />
+  <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:url" content={CANONICAL} />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content="弁護士の中の人" />
+  <meta property="og:image"     content="https://vpscomparehub.com/detective/images/hero.png" />
+  <meta name="twitter:card"     content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260622g" />
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": groups.flatMap(g => g.items).map(it => ({
+      "@type": "Question",
+      "name": it.q,
+      "acceptedAnswer": { "@type": "Answer", "text": it.a.replace(/<[^>]+>/g, '') }
+    }))
+  })} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "TOP", "item": "https://vpscomparehub.com/detective/" },
+      { "@type": "ListItem", "position": 2, "name": "よくある質問", "item": CANONICAL }
+    ]
+  })} />
+
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2YLF06DC0E');
+  </script>
+  <script is:inline type="text/javascript">
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wt0koam10v");
+  </script>
+</head>
+<body class="lp-page lp-page-v2">
+
+<header class="dt-header">
+  <div class="dt-header-inner">
+    <a href="/detective/" class="dt-logo">
+      <div class="dt-logo-icon"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;" /></div>
+      <div class="dt-logo-wrap"><span>弁護士の中の人</span><span class="dt-logo-sub">中の人ナビ</span></div>
+    </a>
+    <a href={INSTAGRAM_URL} class="dt-header-insta" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+      <span>@lawyer.nakanohito</span>
+    </a>
+  </div>
+</header>
+
+<nav class="col-header-nav">
+  <div class="col-header-nav-inner">
+    <a href="/detective/start/">最初に</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/flow/">診断</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cost/">費用相場</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/law/">法律の境界線</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cases/">体験談</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/column/">コラム</a>
+  </div>
+</nav>
+
+<div class="lp-hero">
+  <div class="lp-hero-meta">
+    <span class="updated-meta">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      最終更新 <strong>{UPDATED}</strong>
+    </span>
+  </div>
+  <h1>浮気・不倫の<br/>よくある質問</h1>
+  <p class="lp-hero-sub">気持ちの整理から証拠・費用・慰謝料まで、悩む方からよく聞かれる質問に、法律事務所の元事務員がまとめてお答えします。知りたいところから読んでください。</p>
+</div>
+
+<div class="lp-body">
+
+  <nav class="lp-breadcrumb" aria-label="パンくず">
+    <a href="/detective/">TOP</a>
+    <span class="sep">›</span>
+    <strong>よくある質問</strong>
+  </nav>
+
+  {groups.map(g => (
+    <div class="lp-card">
+      <h2>{g.title}</h2>
+      <div class="faq-acc-list">
+        {g.items.map(it => (
+          <details class="faq-acc">
+            <summary class="faq-acc-q">{it.q}</summary>
+            <div class="faq-acc-a" set:html={it.a}></div>
+          </details>
+        ))}
+      </div>
+    </div>
+  ))}
+
+  <div class="lp-cta-block">
+    <h3>自分のケースに合った進め方を知りたい方へ</h3>
+    <p>質問で解決しきらないときは、5問の診断で「いまのあなたに合った選択肢」を確認できます。匿名・無料・1分です。</p>
+    <a href="/detective/flow/" class="lp-cta-block-btn" data-track="faq_to_flow">5問診断で進め方を見つける →</a>
+    <p class="lp-cta-block-note">探偵・GPS・弁護士・気持ちの整理から提案します</p>
+  </div>
+
+</div>
+
+<footer class="dt-footer">
+  <div class="dt-footer-inner">
+    <div class="dt-footer-logo">
+      <div class="dt-footer-logo-icon" style="padding:0;overflow:hidden;"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:8px;" /></div>
+      <span>弁護士の中の人</span>
+    </div>
+    <p class="dt-footer-text">
+      Instagram「弁護士の中の人（@lawyer.nakanohito）」の公式サイト。<br/>
+      法律事務所の元事務員が、浮気・不倫で悩む方へ正直な情報をお届けしています。<br/>
+      <span style="font-size:.75rem;color:rgba(255,255,255,.35)">当サイトは一部にアフィリエイトリンクを含みます。掲載内容は一般的な情報であり、個別の法的助言ではありません。</span>
+    </p>
+    <div class="dt-footer-links">
+      <a href={INSTAGRAM_URL} target="_blank" rel="noopener">Instagram</a>
+      <a href="/detective/start/">最初にやること</a>
+      <a href="/detective/flow/">5問診断</a>
+      <a href="/detective/cost/">費用相場</a>
+      <a href="/detective/tantei/">探偵社の選び方</a>
+      <a href="/detective/lawyer/">弁護士相談</a>
+      <a href="/detective/column/">コラム</a>
+      <a href="/detective/about/">中の人について</a>
+      <a href="/detective/privacy/">プライバシーポリシー</a>
+      <a href="/detective/operator/">運営者情報</a>
+    </div>
+    <p class="dt-footer-copy">© 2026 弁護士の中の人</p>
+  </div>
+</footer>
+
+</body>
+</html>
