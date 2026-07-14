@@ -1,0 +1,316 @@
+---
+const PAGE_TITLE = "浮気・不倫チェック診断｜相手は浮気してる？20の兆候で無料セルフチェック｜中の人ナビ";
+const PAGE_DESC  = "パートナーは浮気しているかも？ 行動・スマホ・お金・態度の20の兆候で、浮気の可能性をセルフチェック。当てはまる数から「疑わしさ度」を判定し、次にやるべきことを提案します。法律事務所の元事務員が監修。";
+const CANONICAL  = "https://vpscomparehub.com/detective/check/";
+const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
+const UPDATED = "2026-06-22";
+
+const sections = [
+  {
+    title: "行動・生活リズムの変化",
+    icon: "list",
+    items: [
+      { strong: "残業・出張・休日出勤が急に増えた", note: "「仕事」を口実にした外出は最も多いパターン" },
+      { strong: "帰宅時間が読めなくなった／朝帰りがある", note: "金曜夜・週末に不在が偏るのは要注意" },
+      { strong: "急に身だしなみ・服装・香りに気を使い出した", note: "新しい下着・香水・ダイエットなど" },
+      { strong: "「最近何か始めた」（ジム・ゴルフ・習い事）", note: "配偶者の監視が届かない場が出会いの起点に" },
+      { strong: "外食・飲み会の頻度が不自然に増えた", note: "レシート・カード明細の変化も手がかり" },
+    ]
+  },
+  {
+    title: "スマホ・連絡の変化",
+    icon: "list",
+    items: [
+      { strong: "スマホを肌身離さず持つ・伏せて置くようになった", note: "画面を見せない行動は典型的なサイン" },
+      { strong: "ロック（パスコード・指紋）を新たに設定・変更した", note: "急なセキュリティ強化は心当たりのサイン" },
+      { strong: "通知をオフ・非表示にした／通知音を消した", note: "特定アプリだけ通知を切るケースも" },
+      { strong: "トイレやお風呂にもスマホを持ち込む", note: "常に連絡を取りたい・隠したい心理" },
+      { strong: "SNS・連絡先に見慣れない相手が増えた", note: "「知り合いかも」に浮気相手が出ることも" },
+    ]
+  },
+  {
+    title: "お金の変化",
+    icon: "wallet",
+    items: [
+      { strong: "現金の引き出し・不明な支出が増えた", note: "証拠を残さないため現金を使う傾向" },
+      { strong: "クレジット明細を見せなくなった／別カードを作った", note: "支出を隠す動きは分かりやすい兆候" },
+      { strong: "プレゼント・ホテル・レストランの痕跡がある", note: "身に覚えのない領収書・包装紙など" },
+      { strong: "お小遣いの使い道が説明できない", note: "急な節約や借入も裏で費用が発生しているサイン" },
+    ]
+  },
+  {
+    title: "態度・気持ちの変化",
+    icon: "heart",
+    items: [
+      { strong: "会話・スキンシップ・関心が明らかに減った", note: "気持ちが外に向いているサインのことがある" },
+      { strong: "逆に急に優しくなった・機嫌がいい", note: "罪悪感の裏返し、というケースも" },
+      { strong: "こちらの予定を細かく聞くようになった", note: "自分が動ける時間を確保したい心理" },
+      { strong: "些細なことで怒る・話を避ける", note: "問い詰められる前の防衛反応" },
+      { strong: "「離婚」「一人の時間」などの発言が増えた", note: "気持ちの距離が言葉に出ることがある" },
+      { strong: "指輪を外す・写真を隠すことがある", note: "相手の前で既婚を隠している可能性" },
+    ]
+  }
+];
+const totalItems = sections.reduce((s, sec) => s + sec.items.length, 0);
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{PAGE_TITLE}</title>
+  <meta name="description" content={PAGE_DESC} />
+  <link rel="canonical" href={CANONICAL} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={PAGE_TITLE} />
+  <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:url" content={CANONICAL} />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content="弁護士の中の人" />
+  <meta property="og:image"     content="https://vpscomparehub.com/detective/images/hero.png" />
+  <meta name="twitter:card"     content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260622g" />
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "浮気の兆候はいくつ当てはまると危険ですか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "一般的な目安として、当てはまる項目が5個以下なら過度な心配は不要、6〜10個なら注意して様子を見る、11個以上なら浮気の可能性が高めと考えられます。ただし、これはあくまでセルフチェックの目安です。1つ2つの兆候だけでは判断できず、逆に多く当てはまっても事情がある場合もあります。確信を得るには、合法な範囲での証拠の保全や、必要に応じた探偵調査が有効です。" } },
+      { "@type": "Question", "name": "浮気を疑ったとき、まず何をすればいいですか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "焦って問い詰めるのは避けてください。証拠がないまま問い詰めると、相手が警戒してLINEを消し、証拠が取れなくなります。まずは怪しい曜日・時間帯を記録し、手元のレシートやメッセージを日付が写る形で保全することから始めましょう。慰謝料や離婚を視野に入れるなら、証拠を固めてから弁護士に相談するのが基本の順番です。" } }
+    ]
+  })} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "TOP", "item": "https://vpscomparehub.com/detective/" },
+      { "@type": "ListItem", "position": 2, "name": "浮気・不倫チェック診断", "item": CANONICAL }
+    ]
+  })} />
+
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2YLF06DC0E');
+  </script>
+  <script is:inline type="text/javascript">
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wt0koam10v");
+  </script>
+</head>
+<body class="lp-page lp-page-v2">
+
+<header class="dt-header">
+  <div class="dt-header-inner">
+    <a href="/detective/" class="dt-logo">
+      <div class="dt-logo-icon"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;" /></div>
+      <div class="dt-logo-wrap"><span>弁護士の中の人</span><span class="dt-logo-sub">中の人ナビ</span></div>
+    </a>
+    <a href={INSTAGRAM_URL} class="dt-header-insta" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+      <span>@lawyer.nakanohito</span>
+    </a>
+  </div>
+</header>
+
+<nav class="col-header-nav">
+  <div class="col-header-nav-inner">
+    <a href="/detective/start/">最初に</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/flow/">診断</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cost/">費用相場</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/law/">法律の境界線</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cases/">体験談</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/column/">コラム</a>
+  </div>
+</nav>
+
+<div class="lp-hero">
+  <div class="lp-hero-meta">
+    <span class="updated-meta">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      最終更新 <strong>{UPDATED}</strong>
+    </span>
+  </div>
+  <h1>相手は浮気してる？<br/>20の兆候でセルフチェック</h1>
+  <p class="lp-hero-sub">「気のせいかな」を、いったん整理しましょう。行動・スマホ・お金・態度の<strong>{totalItems}項目</strong>で、当てはまる数から「疑わしさ度」を判定します。匿名・無料・1分。<strong>入力はどこにも送信されません。</strong></p>
+</div>
+
+<div class="lp-body">
+
+  <nav class="lp-breadcrumb" aria-label="パンくず">
+    <a href="/detective/">TOP</a>
+    <span class="sep">›</span>
+    <strong>浮気・不倫チェック診断</strong>
+  </nav>
+
+  <div class="tldr-card">
+    <div class="tldr-title">このページの使い方</div>
+    <p class="tldr-body">当てはまる項目にチェックを入れるだけ。上部のバーがリアルタイムで進み、最後に「あなたの疑わしさ度」と<strong>次にやるべきこと</strong>が表示されます。あくまで目安ですが、モヤモヤを言語化する第一歩になります。<strong>すべて端末内で計算</strong>し、どこにも送信しません。</p>
+  </div>
+
+  <div class="cl-progress" id="cl-progress">
+    <div class="cl-progress-row">
+      <span>チェックした数</span>
+      <span id="cl-progress-text">0 / {totalItems}</span>
+    </div>
+    <div class="cl-progress-bar"><div class="cl-progress-fill" id="cl-progress-fill"></div></div>
+  </div>
+
+  <form id="cl-form" onsubmit="return false;">
+    {sections.map(sec => (
+      <div class="cl-section">
+        <div class="cl-section-title">
+          {sec.icon === 'heart' && <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>}
+          {sec.icon === 'list' && <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>}
+          {sec.icon === 'wallet' && <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12V8H6a2 2 0 0 1 0-4h12v4"/><path d="M4 6v12a2 2 0 0 0 2 2h14v-4"/><path d="M18 12a2 2 0 0 0 0 4h4v-4z"/></svg>}
+          {sec.title}
+        </div>
+        {sec.items.map(item => (
+          <label class="cl-item">
+            <input type="checkbox" class="cl-check" />
+            <span class="cl-checkbox"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span class="cl-text"><strong>{item.strong}</strong><small>{item.note}</small></span>
+          </label>
+        ))}
+      </div>
+    ))}
+  </form>
+
+  <div class="cl-result" id="cl-result">
+    <div class="cl-result-head">あなたの疑わしさ度</div>
+    <div class="cl-result-percent"><span id="cl-result-count">0</span> / {totalItems} <span>項目</span></div>
+    <div class="cl-result-msg" id="cl-result-msg"></div>
+    <a class="cl-result-cta" id="cl-result-cta" href="/detective/start/" data-track="check_cta">次の一歩を見る →</a>
+  </div>
+
+  <div class="lp-card">
+    <h2>兆候が当てはまっても、いきなり問い詰めないで</h2>
+    <p>チェックが多くても、それだけで不倫が確定するわけではありません。そして<strong>いちばんやってはいけないのが「問い詰めること」</strong>。証拠がないまま問い詰めると、相手は警戒してLINEを消し、行動を隠し、その後の証拠が取れなくなります。</p>
+    <p>疑わしさが高いと感じたら、まずは<strong>怪しい曜日・時間帯の記録</strong>と、<strong>手元の証拠の保全</strong>から。冷静に順序立てて動くことが、結果的にいちばん損をしない方法です。</p>
+    <div class="lp-warn">
+      <div class="lp-warn-title">次の一歩の目安</div>
+      <p>・気持ちが揺れてつらい → <a href="/detective/mental-care/">心のセルフケア</a>／<a href="/detective/uranai/">話せる相談先</a><br/>・自分でできることから → <a href="/detective/shouko-hozen/">証拠保全チェック</a>／<a href="/detective/gps/">GPS活用ガイド</a><br/>・確実な証拠を取りたい → <a href="/detective/tantei/">探偵社の選び方</a>／<a href="/detective/tantei-sim/">費用シミュレーター</a></p>
+    </div>
+  </div>
+
+  <div class="lp-related">
+    <h3>あわせて読みたい</h3>
+    <div class="col-grid">
+      <a href="/detective/flow/" class="col-card">
+        <span class="col-card-badge comparison">診断</span>
+        <h3>5問診断で進め方を見つける</h3>
+        <p>あなたに合う「次の一手」を提案。</p>
+      </a>
+      <a href="/detective/shouko-hozen/" class="col-card">
+        <span class="col-card-badge comparison">証拠</span>
+        <h3>証拠保全チェックリスト</h3>
+        <p>消される前に、今日できること。</p>
+      </a>
+      <a href="/detective/start/" class="col-card">
+        <span class="col-card-badge experience">ガイド</span>
+        <h3>最初にやること完全ガイド</h3>
+        <p>疑ったときの正しい順序。</p>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="dt-footer">
+  <div class="dt-footer-inner">
+    <div class="dt-footer-logo">
+      <div class="dt-footer-logo-icon" style="padding:0;overflow:hidden;"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:8px;" /></div>
+      <span>弁護士の中の人</span>
+    </div>
+    <p class="dt-footer-text">
+      Instagram「弁護士の中の人（@lawyer.nakanohito）」の公式サイト。<br/>
+      法律事務所の元事務員が、浮気・不倫で悩む方へ正直な情報をお届けしています。<br/>
+      <span style="font-size:.75rem;color:rgba(255,255,255,.35)">当サイトは一部にアフィリエイトリンクを含みます。診断結果は目安であり、事実を保証するものではありません。</span>
+    </p>
+    <div class="dt-footer-links">
+      <a href={INSTAGRAM_URL} target="_blank" rel="noopener">Instagram</a>
+      <a href="/detective/start/">最初にやること</a>
+      <a href="/detective/flow/">5問診断</a>
+      <a href="/detective/shouko-hozen/">証拠保全</a>
+      <a href="/detective/tantei/">探偵社の選び方</a>
+      <a href="/detective/faq/">よくある質問</a>
+      <a href="/detective/column/">コラム</a>
+      <a href="/detective/about/">中の人について</a>
+      <a href="/detective/privacy/">プライバシーポリシー</a>
+      <a href="/detective/operator/">運営者情報</a>
+    </div>
+    <p class="dt-footer-copy">© 2026 弁護士の中の人</p>
+  </div>
+</footer>
+
+<div class="sticky-cta-bar" id="sticky-cta">
+  <span class="sticky-label">結果が出たら次へ</span>
+  <a href="/detective/start/" class="sticky-btn" data-track="sticky_check_start">「最初にやること」を読む →</a>
+  <button class="sticky-close" id="sticky-close" aria-label="閉じる">✕</button>
+</div>
+
+<script src="/detective/app.js" is:inline defer></script>
+<script is:inline define:vars={{ totalItems }}>
+  document.addEventListener('DOMContentLoaded', function () {
+    var checks = document.querySelectorAll('.cl-check');
+    var fill   = document.getElementById('cl-progress-fill');
+    var txt    = document.getElementById('cl-progress-text');
+    var result = document.getElementById('cl-result');
+    var rCount = document.getElementById('cl-result-count');
+    var rMsg   = document.getElementById('cl-result-msg');
+    var rCta   = document.getElementById('cl-result-cta');
+    if (!checks.length) return;
+
+    function update() {
+      var n = 0;
+      checks.forEach(function (c) { if (c.checked) n++; });
+      var pct = Math.round((n / totalItems) * 100);
+      fill.style.width = pct + '%';
+      txt.textContent = n + ' / ' + totalItems;
+      if (n === 0) { result.classList.remove('visible'); return; }
+      rCount.textContent = n;
+
+      var msg, label, href, track;
+      if (n <= 5) {
+        msg = '<strong>現時点では、過度に心配する必要はなさそうです。</strong>兆候が少なく、思い過ごしの範囲かもしれません。ただ、モヤモヤが続くなら、まず気持ちを整理するところから。違和感の記録だけは残しておくと安心です。';
+        label = '気持ちの整理・最初の一歩を見る →';
+        href  = '/detective/start/';
+        track = 'check_result_low';
+      } else if (n <= 10) {
+        msg = '<strong>いくつか気になる兆候があります。</strong>断定はできませんが、注意して様子を見る段階です。問い詰めるのは避け、怪しい曜日・時間帯の記録と、手元の証拠の保全から始めましょう。自分でできる範囲を確認してみてください。';
+        label = '証拠保全チェックを見る →';
+        href  = '/detective/shouko-hozen/';
+        track = 'check_result_mid';
+      } else {
+        msg = '<strong>浮気の可能性が高めと考えられる状態です。</strong>ただし、ここで感情的に動くと証拠を隠されて不利になります。確実な証拠を取りたいなら、まず費用感をつかんでから探偵の無料相談へ。慰謝料・離婚を視野に入れるなら弁護士相談も選択肢です。';
+        label = '信頼できる探偵社を見る →';
+        href  = '/detective/tantei/';
+        track = 'check_result_high';
+      }
+      rMsg.innerHTML = msg;
+      rCta.textContent = label;
+      rCta.href = href;
+      rCta.setAttribute('data-track', track);
+      result.classList.add('visible');
+
+      if (typeof gtag === 'function') gtag('event', 'check_progress', { checked: n, total: totalItems, percent: pct });
+      if (window.dataLayer) window.dataLayer.push({ event: 'check_progress', checked: n, total: totalItems, percent: pct });
+    }
+    checks.forEach(function (c) { c.addEventListener('change', update); });
+  });
+</script>
+
+</body>
+</html>

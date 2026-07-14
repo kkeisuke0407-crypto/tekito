@@ -5458,3 +5458,23 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   padding: 0 1rem 1rem; font-size: .88rem; line-height: 1.85; color: var(--text);
 }
 .faq-acc-a a { color: var(--gold-deep); font-weight: 700; }
+
+/* ─────────── ロードマップ（F4） ─────────── */
+.rm-step { position: relative; }
+.rm-phase {
+  display: inline-block;
+  font-family: "Noto Serif JP", serif;
+  font-size: .78rem; font-weight: 700; letter-spacing: .12em;
+  color: #fff; background: linear-gradient(90deg, var(--gold), var(--gold-deep));
+  padding: .25rem .7rem; border-radius: 999px; margin-bottom: .6rem;
+}
+.rm-links { display: flex; flex-direction: column; gap: .5rem; margin-top: 1rem; }
+.rm-link {
+  display: flex; align-items: center; justify-content: space-between; gap: .6rem;
+  padding: .75rem .9rem; background: var(--bg-muted, #f7f4ee);
+  border: 1px solid var(--border); border-radius: 10px;
+  font-size: .9rem; font-weight: 700; color: var(--navy); text-decoration: none;
+  transition: all .15s;
+}
+.rm-link:hover { border-color: var(--gold); background: #fff; text-decoration: none; transform: translateX(2px); }
+.rm-link svg { width: 18px; height: 18px; color: var(--gold-deep); flex-shrink: 0; }
