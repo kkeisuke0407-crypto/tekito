@@ -3254,6 +3254,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   text-align: center;
   margin-top: 2rem;
   color: #fff;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
 }
 .lp-cta-block.lawyer { background: linear-gradient(135deg, #1e5b3a 0%, #2a7c4f 100%); }
 .lp-cta-block.gps    { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); }
