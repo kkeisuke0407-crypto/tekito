@@ -1,0 +1,248 @@
+---
+const PAGE_TITLE = "今のあなたはどこ？浮気・不倫の状況別スタートナビ｜中の人ナビ";
+const PAGE_DESC  = "「これからどうしたらいいんだろう」——浮気・不倫で悩むあなたが、今の気持ち・状況からたった1タップで次の一歩にたどり着けるスタートナビ。確かめたい／証拠を取りたい／離婚したい／別れたくない／請求された／つらい、の6つから選ぶだけ。";
+const CANONICAL  = "https://vpscomparehub.com/detective/navi/";
+const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
+const UPDATED = "2026-06-22";
+
+const doors = [
+  {
+    key: "check",
+    emoji: "🔍",
+    feel: "浮気されてるかも。まず確かめたい",
+    lead: "確信はないけど、様子がおかしい。その違和感、まず整理するところから。",
+    href: "/detective/check/",
+    btn: "浮気のサイン20チェックへ",
+    subs: [
+      { href: "/detective/start/", label: "最初にやること完全ガイド" },
+      { href: "/detective/flow/", label: "5問診断で状況を整理" },
+    ],
+    track: "navi_check",
+  },
+  {
+    key: "shouko",
+    emoji: "📸",
+    feel: "クロだと思う。証拠を押さえたい",
+    lead: "裁判や慰謝料で使える証拠は、集め方を間違えると無駄になることも。安全な取り方から。",
+    href: "/detective/tantei/",
+    btn: "探偵社の選び方（4社比較）へ",
+    subs: [
+      { href: "/detective/gps/", label: "自分でできるGPS活用の範囲" },
+      { href: "/detective/law/", label: "合法・違法の境界線" },
+    ],
+    track: "navi_shouko",
+  },
+  {
+    key: "rikon",
+    emoji: "⚖️",
+    feel: "証拠はある。慰謝料・離婚を進めたい",
+    lead: "何から手をつければいいか。請求・別居・親権・お金まで、順番に道案内します。",
+    href: "/detective/roadmap/",
+    btn: "解決までの全ロードマップへ",
+    subs: [
+      { href: "/detective/isharyo-sim/", label: "慰謝料の目安シミュレーター" },
+      { href: "/detective/lawyer/", label: "弁護士相談ガイド" },
+    ],
+    track: "navi_rikon",
+  },
+  {
+    key: "shufuku",
+    emoji: "🕊️",
+    feel: "別れたくない。やり直したい",
+    lead: "許せない気持ちと、失いたくない気持ち。両方あっていい。修復という選択肢も整理します。",
+    href: "/detective/shufuku/",
+    btn: "夫婦関係の修復ガイドへ",
+    subs: [
+      { href: "/detective/mental-care/", label: "揺れる心のセルフケア" },
+      { href: "/detective/uranai/", label: "気持ちを整理する（占い・カウンセリング）" },
+    ],
+    track: "navi_shufuku",
+  },
+  {
+    key: "seikyu",
+    emoji: "📩",
+    feel: "私が慰謝料を請求された・責められてる",
+    lead: "いきなり書面が届いて、頭が真っ白。慌てて払う前に、減額できる余地を確認して。",
+    href: "/detective/seikyu-sareta/",
+    btn: "請求された側の対応ガイドへ",
+    subs: [
+      { href: "/detective/jikou/", label: "時効（3年・20年）で消えていないか" },
+      { href: "/detective/isharyo-sim/", label: "請求額が相場より高くないか" },
+    ],
+    track: "navi_seikyu",
+  },
+  {
+    key: "kokoro",
+    emoji: "🌱",
+    feel: "気持ちがぐちゃぐちゃ。まず落ち着きたい",
+    lead: "眠れない、涙が止まらない。手続きの前に、あなた自身を守ることが最優先です。",
+    href: "/detective/mental-care/",
+    btn: "心のセルフケアへ",
+    subs: [
+      { href: "/detective/uranai/", label: "誰かに話して整理する" },
+      { href: "/detective/moraha-dv/", label: "モラハラ・DVもあるなら（緊急窓口）" },
+    ],
+    track: "navi_kokoro",
+  },
+];
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{PAGE_TITLE}</title>
+  <meta name="description" content={PAGE_DESC} />
+  <link rel="canonical" href={CANONICAL} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={PAGE_TITLE} />
+  <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:url" content={CANONICAL} />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content="弁護士の中の人" />
+  <meta property="og:image"     content="https://vpscomparehub.com/detective/images/hero.png" />
+  <meta name="twitter:card"     content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260622g" />
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "TOP", "item": "https://vpscomparehub.com/detective/" },
+      { "@type": "ListItem", "position": 2, "name": "状況別スタートナビ", "item": CANONICAL }
+    ]
+  })} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": PAGE_TITLE,
+    "description": PAGE_DESC,
+    "url": CANONICAL,
+    "inLanguage": "ja"
+  })} />
+
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2YLF06DC0E');
+  </script>
+  <script is:inline type="text/javascript">
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wt0koam10v");
+  </script>
+
+  <style>
+    .navi-hero { text-align:center; padding:2.2rem 1.1rem 1.4rem; }
+    .navi-hero h1 { font-size:1.5rem; line-height:1.5; margin:0 0 .7rem; font-weight:900; }
+    .navi-hero h1 em { color:#c8362a; font-style:normal; }
+    .navi-hero p { font-size:.92rem; line-height:1.9; color:var(--text,#333); margin:0 auto; max-width:34rem; }
+    .navi-wrap { max-width:40rem; margin:0 auto; padding:0 1rem 2.5rem; }
+    .navi-grid { display:grid; grid-template-columns:1fr; gap:.95rem; margin-top:1.3rem; }
+    .navi-card {
+      display:block; background:#fff; border:1.5px solid rgba(0,0,0,.09); border-radius:16px;
+      padding:1.15rem 1.15rem 1.05rem; text-decoration:none; color:inherit;
+      box-shadow:0 2px 10px rgba(0,0,0,.04); transition:border-color .15s, box-shadow .15s, transform .1s;
+    }
+    .navi-card:active { transform:scale(.99); }
+    .navi-card:hover { border-color:rgba(200,54,42,.5); box-shadow:0 6px 20px rgba(0,0,0,.09); }
+    .navi-card-feel { display:flex; align-items:flex-start; gap:.6rem; font-size:1.06rem; font-weight:900; line-height:1.55; color:var(--navy,#1a2b4a); }
+    .navi-card-emoji { font-size:1.4rem; line-height:1.3; flex:0 0 auto; }
+    .navi-card-lead { font-size:.85rem; line-height:1.8; color:rgba(0,0,0,.62); margin:.55rem 0 .9rem; }
+    .navi-card-btn {
+      display:flex; align-items:center; justify-content:space-between; gap:.5rem;
+      background:#c8362a; color:#fff; font-weight:800; font-size:.92rem;
+      padding:.75rem 1rem; border-radius:11px;
+    }
+    .navi-card-btn span:last-child { font-size:1.1rem; }
+    .navi-card-subs { margin:.75rem 0 0; padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:.4rem .7rem; }
+    .navi-card-subs a { font-size:.78rem; color:var(--navy,#1a2b4a); text-decoration:underline; text-underline-offset:2px; }
+    .navi-note { text-align:center; font-size:.82rem; line-height:1.9; color:rgba(0,0,0,.55); margin:1.6rem auto 0; max-width:32rem; }
+    .navi-note a { color:var(--navy,#1a2b4a); font-weight:700; }
+    @media (min-width:560px){
+      .navi-hero h1 { font-size:1.75rem; }
+      .navi-grid { grid-template-columns:1fr 1fr; }
+    }
+  </style>
+</head>
+<body class="lp-page lp-page-v2">
+
+<header class="dt-header">
+  <div class="dt-header-inner">
+    <a href="/detective/" class="dt-logo">
+      <div class="dt-logo-icon"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;" /></div>
+      <div class="dt-logo-wrap"><span>弁護士の中の人</span><span class="dt-logo-sub">中の人ナビ</span></div>
+    </a>
+    <a href={INSTAGRAM_URL} class="dt-header-insta" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+      <span>@lawyer.nakanohito</span>
+    </a>
+  </div>
+</header>
+
+<div class="navi-hero">
+  <h1>今のあなたは、<br/><em>どこ</em>にいますか？</h1>
+  <p>「これから、どうしたらいいんだろう」——その気持ちのまま選んでOK。近いものをひとつタップすれば、<strong>あなたが今読むべき1ページ</strong>にご案内します。あちこち探さなくて大丈夫です。</p>
+</div>
+
+<div class="navi-wrap">
+
+  <nav class="lp-breadcrumb" aria-label="パンくず" style="margin-bottom:.4rem;">
+    <a href="/detective/">TOP</a>
+    <span class="sep">›</span>
+    <strong>状況別スタートナビ</strong>
+  </nav>
+
+  <div class="navi-grid">
+    {doors.map(d => (
+      <a class="navi-card" href={d.href} data-track={d.track}>
+        <div class="navi-card-feel"><span class="navi-card-emoji">{d.emoji}</span><span>{d.feel}</span></div>
+        <p class="navi-card-lead">{d.lead}</p>
+        <div class="navi-card-btn"><span>{d.btn}</span><span>→</span></div>
+        <ul class="navi-card-subs">
+          {d.subs.map(s => (<li><a href={s.href}>{s.label}</a></li>))}
+        </ul>
+      </a>
+    ))}
+  </div>
+
+  <p class="navi-note">
+    どれもピンと来ない、話を聞いてほしい——そんなときは<a href="/detective/start/">「最初にやること」ガイド</a>から。<br/>
+    緊急で身の危険を感じるときは、迷わず<strong>警察（110番）</strong>や<a href="/detective/moraha-dv/">DV相談窓口</a>へ。
+  </p>
+
+</div>
+
+<footer class="dt-footer">
+  <div class="dt-footer-inner">
+    <div class="dt-footer-logo">
+      <div class="dt-footer-logo-icon" style="padding:0;overflow:hidden;"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:8px;" /></div>
+      <span>弁護士の中の人</span>
+    </div>
+    <p class="dt-footer-text">
+      Instagram「弁護士の中の人（@lawyer.nakanohito）」の公式サイト。<br/>
+      法律事務所の元事務員が、浮気・不倫で悩む方へ正直な情報をお届けしています。<br/>
+      <span style="font-size:.75rem;color:rgba(255,255,255,.35)">当サイトは一部にアフィリエイトリンクを含みます。緊急時・危険を感じる場合は、まず警察・公的相談窓口へご連絡ください。</span>
+    </p>
+    <div class="dt-footer-links">
+      <a href={INSTAGRAM_URL} target="_blank" rel="noopener">Instagram</a>
+      <a href="/detective/start/">最初にやること</a>
+      <a href="/detective/roadmap/">解決ロードマップ</a>
+      <a href="/detective/lawyer/">弁護士相談</a>
+      <a href="/detective/faq/">よくある質問</a>
+      <a href="/detective/column/">コラム</a>
+      <a href="/detective/about/">中の人について</a>
+      <a href="/detective/operator/">運営者情報</a>
+    </div>
+    <p class="dt-footer-copy">© 2026 弁護士の中の人</p>
+  </div>
+</footer>
+
+<script src="/detective/app.js" is:inline defer></script>
+
+</body>
+</html>
