@@ -1,0 +1,331 @@
+---
+const PAGE_TITLE = "浮気・不倫の無料相談窓口まとめ｜弁護士に頼む前に使える公的サービス｜中の人ナビ";
+const PAGE_DESC  = "「弁護士に頼むお金がない」「まず誰かに話したい」——そんなときに無料で使える相談窓口を、法律（法テラス・自治体・弁護士会）と気持ち・DV・緊急（よりそいホットライン・DV相談＋など）に分けて、法律事務所の元事務員が整理しました。匿名で使える窓口も多数。";
+const CANONICAL  = "https://vpscomparehub.com/detective/soudan/";
+const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
+const UPDATED = "2026-06-22";
+
+const telHref = (t) => (/[＃#]/.test(t) ? 'tel:%23' : 'tel:') + t.replace(/[^0-9]/g, '');
+
+const houritsu = [
+  {
+    name: "法テラス（日本司法支援センター）",
+    tel: "0570-078374",
+    telnote: "サポートダイヤル／平日9:00〜21:00・土9:00〜17:00",
+    body: "国が設立した法的トラブルの総合案内所。収入・資産が一定基準以下なら、同じ問題で3回まで無料の法律相談が受けられ、弁護士費用の立替（分割で返済）も利用できます。まず電話で「使えるか」を確認できます。",
+    note: "無料相談・費用立替には資力要件あり（目安：地方在住3人家族で夫婦の月収合算27万円台以下など）。離婚など配偶者と対立する事件では配偶者の収入は合算しません。最新の基準は公式で確認を。",
+  },
+  {
+    name: "自治体の無料法律相談",
+    tel: null,
+    telnote: "お住まいの市区役所・町村役場へ",
+    body: "多くの市区町村が、住民向けに弁護士による無料法律相談（1回30分程度・予約制）を定期開催しています。費用は無料で、資力要件がないことが多いのが利点。「◯◯市 無料法律相談」で検索するか、市役所の市民相談窓口へ。",
+    note: "1人1回・時間制限あり、予約が埋まりやすい点に注意。まず全体像をつかむのに向いています。",
+  },
+  {
+    name: "弁護士会の法律相談センター",
+    tel: null,
+    telnote: "各都道府県の弁護士会",
+    body: "各地の弁護士会が運営する相談窓口。離婚・不倫問題に対応する相談枠があり、初回は無料〜有料（30分5,000円程度）。有料でも「不倫慰謝料に強い弁護士」に直接つながりやすいのが強みです。",
+    note: "料金は地域・相談内容で異なります。予約時に無料枠の有無を確認してください。",
+  },
+  {
+    name: "初回無料の法律事務所",
+    tel: null,
+    telnote: "民間の法律事務所",
+    body: "不倫慰謝料・離婚を扱う事務所の多くが「初回相談無料」を掲げています。いきなり依頼しなくてOK。見積もりと方針を聞くだけでも、次の一手がはっきりします。複数に相談して比べるのも自由です。",
+    note: "無料なのは「相談」まで。依頼時の費用体系（着手金・報酬）は必ず事前確認を。",
+    ctaHref: "/detective/lawyer/",
+    ctaLabel: "弁護士相談ガイドを見る →",
+  },
+];
+
+const kokoro = [
+  {
+    name: "よりそいホットライン",
+    tel: "0120-279-338",
+    telnote: "24時間365日・通話無料・匿名OK",
+    body: "「誰かに話したい」「この先どうしたらいいか分からない」——どんな内容でも受け止めてくれる総合相談。DV・性暴力・つらい気持ちなど専門のつなぎ先もあります。",
+  },
+  {
+    name: "DV相談＋（プラス）",
+    tel: "0120-279-889",
+    telnote: "24時間・電話／メール／チャット・通話無料",
+    body: "配偶者からの暴力・モラハラの相談専用。24時間つながり、必要に応じて避難や支援機関へつないでくれます。身の危険があるときの心強い窓口。",
+  },
+  {
+    name: "DV相談ナビ",
+    tel: "＃8008",
+    telnote: "最寄りの相談機関へ自動転送",
+    body: "「はれれば（＃8008）」で覚えられる番号。かけると、お住まいの地域の配偶者暴力相談支援センターなど最寄りの窓口につながります。",
+  },
+  {
+    name: "女性の人権ホットライン",
+    tel: "0570-070-810",
+    telnote: "法務省・平日8:30〜17:15",
+    body: "女性をめぐる人権問題（配偶者からの暴力、ストーカー、セクハラ等）の相談。法務局の職員・人権擁護委員が対応します。",
+  },
+  {
+    name: "警察相談専用電話",
+    tel: "＃9110",
+    telnote: "緊急でない相談用（緊急は110番）",
+    body: "つきまとい・脅し・不安があるが事件かどうか迷う——そんなときの相談窓口。今まさに危険が迫っているときは、迷わず110番へ。",
+  },
+];
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{PAGE_TITLE}</title>
+  <meta name="description" content={PAGE_DESC} />
+  <link rel="canonical" href={CANONICAL} />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={PAGE_TITLE} />
+  <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:url" content={CANONICAL} />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content="弁護士の中の人" />
+  <meta property="og:image"     content="https://vpscomparehub.com/detective/images/hero.png" />
+  <meta name="twitter:card"     content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260622g" />
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "浮気・不倫のことを無料で相談できる窓口はありますか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "あります。法律面では、法テラス（収入要件を満たせば3回まで無料）、自治体の無料法律相談、弁護士会の相談センター、初回無料の法律事務所などが使えます。気持ちやDVの相談なら、よりそいホットライン（0120-279-338・24時間・匿名OK）、DV相談＋（0120-279-889）などが無料で利用できます。まず無料の窓口で全体像をつかんでから、必要に応じて弁護士に依頼するのがおすすめです。" } },
+      { "@type": "Question", "name": "法テラスは本当に無料で相談できますか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "収入・資産が一定の基準以下であれば、同じ問題について3回まで無料で法律相談を受けられます。弁護士費用を立て替えてもらい、分割で返済する制度もあります。離婚のように配偶者と対立する事件では、配偶者の収入は合算されません。基準額は変わることがあるため、まず法テラス・サポートダイヤル（0570-078374）で自分が使えるか確認するのが確実です。" } },
+      { "@type": "Question", "name": "匿名で相談できる窓口はありますか？",
+        "acceptedAnswer": { "@type": "Answer", "text": "あります。よりそいホットラインやDV相談＋などの電話・チャット相談は、名前を告げずに匿名で相談できます。まず気持ちを整理したい、誰かに聞いてほしいという段階なら、これらの無料・匿名の窓口から始めるのが安心です。身の危険が差し迫っているときは、匿名にこだわらず110番へ連絡してください。" } }
+    ]
+  })} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "TOP", "item": "https://vpscomparehub.com/detective/" },
+      { "@type": "ListItem", "position": 2, "name": "無料相談窓口まとめ", "item": CANONICAL }
+    ]
+  })} />
+
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2YLF06DC0E');
+  </script>
+  <script is:inline type="text/javascript">
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wt0koam10v");
+  </script>
+
+  <style>
+    .md-list { display:grid; grid-template-columns:1fr; gap:.85rem; margin:1rem 0 0; }
+    .md-card { border:1.5px solid rgba(0,0,0,.09); border-radius:14px; padding:1rem 1.05rem; background:#fff; }
+    .md-card-name { font-size:1.02rem; font-weight:900; line-height:1.5; color:var(--navy,#1a2b4a); margin:0 0 .35rem; }
+    .md-tel { display:inline-flex; align-items:center; gap:.4rem; background:#c8362a; color:#fff; font-weight:900; font-size:1.05rem; letter-spacing:.02em; padding:.5rem .85rem; border-radius:10px; text-decoration:none; margin:.15rem 0 .5rem; }
+    .md-tel svg { width:1em; height:1em; }
+    .md-telnote { display:block; font-size:.76rem; color:rgba(0,0,0,.55); margin:.1rem 0 .55rem; }
+    .md-body { font-size:.87rem; line-height:1.85; margin:0; color:var(--text,#333); }
+    .md-note { font-size:.78rem; line-height:1.8; color:rgba(0,0,0,.55); margin:.6rem 0 0; padding:.55rem .7rem; background:rgba(0,0,0,.035); border-radius:8px; }
+    .md-cta { display:inline-block; margin-top:.7rem; font-size:.85rem; font-weight:800; color:var(--navy,#1a2b4a); text-decoration:underline; }
+  </style>
+</head>
+<body class="lp-page lp-page-v2">
+
+<header class="dt-header">
+  <div class="dt-header-inner">
+    <a href="/detective/" class="dt-logo">
+      <div class="dt-logo-icon"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;" /></div>
+      <div class="dt-logo-wrap"><span>弁護士の中の人</span><span class="dt-logo-sub">中の人ナビ</span></div>
+    </a>
+    <a href={INSTAGRAM_URL} class="dt-header-insta" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+      <span>@lawyer.nakanohito</span>
+    </a>
+  </div>
+</header>
+
+<nav class="col-header-nav">
+  <div class="col-header-nav-inner">
+    <a href="/detective/navi/">状況ナビ</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/start/">最初に</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/flow/">診断</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/lawyer/">弁護士相談</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cases/">体験談</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/column/">コラム</a>
+  </div>
+</nav>
+
+<div class="lp-hero">
+  <div class="lp-hero-meta">
+    <span class="updated-meta">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      最終更新 <strong>{UPDATED}</strong>
+    </span>
+  </div>
+  <h1>お金がなくても、<br/>相談できる場所はある</h1>
+  <p class="lp-hero-sub">「弁護士に頼むお金がない」「まず誰かに話を聞いてほしい」——大丈夫です。<strong>無料で相談できる公的な窓口</strong>を、法律の相談と、気持ち・DVの相談に分けて整理しました。匿名で使える窓口もたくさんあります。</p>
+</div>
+
+<div class="lp-body">
+
+  <nav class="lp-breadcrumb" aria-label="パンくず">
+    <a href="/detective/">TOP</a>
+    <span class="sep">›</span>
+    <strong>無料相談窓口まとめ</strong>
+  </nav>
+
+  <div class="lp-warn" style="background:rgba(200,54,42,.08);border-color:rgba(200,54,42,.3);margin-bottom:1.25rem;">
+    <div class="lp-warn-title" style="color:#c8362a;">今すぐ身の危険があるときは</div>
+    <p>暴力・脅迫など<strong>差し迫った危険</strong>があるときは、この先を読むより先に<strong>110番</strong>へ。DVの相談は<strong>DV相談＋：0120-279-889（24時間）</strong>、または<strong>DV相談ナビ：＃8008</strong>へ。あなたの安全がいちばんです。</p>
+  </div>
+
+  <div class="tldr-card">
+    <div class="tldr-title">このページの結論</div>
+    <p class="tldr-body">浮気・不倫の悩みは、<strong>いきなり有料の弁護士に頼まなくても、無料で相談できる場所がたくさんあります</strong>。法律のことは「法テラス・自治体の無料相談・弁護士会」、つらい気持ちやDVは「よりそいホットライン・DV相談＋」など。まず無料の窓口で全体像と方針をつかみ、<strong>本当に必要になったら弁護士に依頼</strong>する——これがいちばんムダのない順番です。一人で抱え込まないでください。</p>
+    <ul class="tldr-points">
+      <li>法律相談：法テラス（要件あり・3回無料）／自治体（無料）／弁護士会</li>
+      <li>気持ち・DV：よりそいホットライン／DV相談＋（匿名・無料）</li>
+      <li>まず無料で相談 → 必要なら弁護士、が最短ルート</li>
+    </ul>
+  </div>
+
+  <div class="lp-card">
+    <h2>① 法律のことを相談したい（無料〜低額）</h2>
+    <p>「慰謝料はいくら？」「離婚できる？」——法律の疑問は、まず無料・低額の窓口へ。いきなり依頼しなくて大丈夫です。</p>
+    <div class="md-list">
+      {houritsu.map(w => (
+        <div class="md-card">
+          <p class="md-card-name">{w.name}</p>
+          {w.tel && <a class="md-tel" href={telHref(w.tel)} data-track="soudan_tel"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>{w.tel}</a>}
+          <span class="md-telnote">{w.telnote}</span>
+          <p class="md-body">{w.body}</p>
+          <p class="md-note">{w.note}</p>
+          {w.ctaHref && <a class="md-cta" href={w.ctaHref} data-track="soudan_lawyer">{w.ctaLabel}</a>}
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div class="lp-card">
+    <h2>② 気持ち・DV・緊急を相談したい（無料・匿名OK）</h2>
+    <p>手続きの前に、まず心を守ることも同じくらい大切です。名前を言わずに相談できる窓口もあります。</p>
+    <div class="md-list">
+      {kokoro.map(w => (
+        <div class="md-card">
+          <p class="md-card-name">{w.name}</p>
+          <a class="md-tel" href={telHref(w.tel)} data-track="soudan_tel"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>{w.tel}</a>
+          <span class="md-telnote">{w.telnote}</span>
+          <p class="md-body">{w.body}</p>
+        </div>
+      ))}
+    </div>
+    <div class="lp-warn">
+      <div class="lp-warn-title">電話番号は変わることがあります</div>
+      <p>掲載の番号・受付時間は本ページ更新時点の公表情報です。つながらないときは、各窓口の公式サイトや、お住まいの自治体・配偶者暴力相談支援センターで最新情報をご確認ください。</p>
+    </div>
+  </div>
+
+  <div class="lp-card">
+    <h2>どこに相談すればいい？迷ったら</h2>
+    <ul class="cd-list">
+      <li><strong>まず気持ちを整理したい・誰かに聞いてほしい</strong> → よりそいホットライン／<a href="/detective/mental-care/">心のセルフケア</a></li>
+      <li><strong>暴力・モラハラがある</strong> → DV相談＋・＃8008／<a href="/detective/moraha-dv/">モラハラ・DVガイド</a></li>
+      <li><strong>慰謝料や離婚の見通しを知りたい</strong> → 法テラス・自治体の無料相談／<a href="/detective/isharyo-sim/">慰謝料シミュレーター</a></li>
+      <li><strong>本気で請求・離婚を進めたい</strong> → 初回無料の法律事務所・弁護士会／<a href="/detective/lawyer/">弁護士相談ガイド</a></li>
+    </ul>
+  </div>
+
+  <div class="lp-cta-block">
+    <h3>無料で方針が見えたら、次の一歩へ</h3>
+    <p>無料相談で「自分のケースはこう進めればいい」と分かったら、そこからが本番です。慰謝料請求や離婚を本格的に進めるなら、不倫問題に強い弁護士に依頼するのが確実。多くの事務所が初回相談無料です。</p>
+    <a href="/detective/lawyer/" class="lp-cta-block-btn" data-track="soudan_lawyer_cta">弁護士相談ガイドを見る →</a>
+    <p class="lp-cta-block-note">どこから手をつけるか迷ったら <a href="/detective/navi/" style="color:inherit;text-decoration:underline;">状況スタートナビ</a> へ</p>
+  </div>
+
+  <div class="lp-related">
+    <h3>あわせて読みたい</h3>
+    <div class="col-grid">
+      <a href="/detective/lawyer/" class="col-card">
+        <span class="col-card-badge comparison">弁護士</span>
+        <h3>弁護士相談ガイド</h3>
+        <p>初回無料の使い方・選び方。</p>
+      </a>
+      <a href="/detective/moraha-dv/" class="col-card">
+        <span class="col-card-badge mental">DV</span>
+        <h3>モラハラ・DVが重なったら</h3>
+        <p>緊急窓口と身の守り方。</p>
+      </a>
+      <a href="/detective/mental-care/" class="col-card">
+        <span class="col-card-badge mental">セルフケア</span>
+        <h3>心を壊さないために</h3>
+        <p>傷ついた心を守るヒント。</p>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="dt-footer">
+  <div class="dt-footer-inner">
+    <div class="dt-footer-logo">
+      <div class="dt-footer-logo-icon" style="padding:0;overflow:hidden;"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:8px;" /></div>
+      <span>弁護士の中の人</span>
+    </div>
+    <p class="dt-footer-text">
+      Instagram「弁護士の中の人（@lawyer.nakanohito）」の公式サイト。<br/>
+      法律事務所の元事務員が、浮気・不倫で悩む方へ正直な情報をお届けしています。<br/>
+      <span style="font-size:.75rem;color:rgba(255,255,255,.35)">当サイトは一部にアフィリエイトリンクを含みます。相談窓口の番号・受付時間は変わる場合があるため、公式でご確認ください。緊急時はまず警察・公的相談窓口へ。</span>
+    </p>
+    <div class="dt-footer-links">
+      <a href={INSTAGRAM_URL} target="_blank" rel="noopener">Instagram</a>
+      <a href="/detective/navi/">状況ナビ</a>
+      <a href="/detective/lawyer/">弁護士相談</a>
+      <a href="/detective/moraha-dv/">モラハラ・DV</a>
+      <a href="/detective/faq/">よくある質問</a>
+      <a href="/detective/column/">コラム</a>
+      <a href="/detective/about/">中の人について</a>
+      <a href="/detective/operator/">運営者情報</a>
+    </div>
+    <p class="dt-footer-copy">© 2026 弁護士の中の人</p>
+  </div>
+</footer>
+
+<div class="sticky-cta-bar" id="sticky-cta">
+  <span class="sticky-label">迷ったら</span>
+  <a href="/detective/navi/" class="sticky-btn" data-track="sticky_soudan_navi">状況スタートナビへ →</a>
+  <button class="sticky-close" id="sticky-close" aria-label="閉じる">✕</button>
+</div>
+
+<script src="/detective/app.js" is:inline defer></script>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    var sticky = document.getElementById('sticky-cta');
+    if (!sticky) return;
+    var dismissed = false;
+    document.getElementById('sticky-close').addEventListener('click', function() {
+      dismissed = true; sticky.classList.remove('visible');
+    });
+    window.addEventListener('scroll', function() {
+      if (dismissed) return;
+      sticky.classList.toggle('visible', window.scrollY > window.innerHeight * 0.6);
+    }, { passive: true });
+  });
+</script>
+
+</body>
+</html>
