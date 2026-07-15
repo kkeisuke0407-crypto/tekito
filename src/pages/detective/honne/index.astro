@@ -1,0 +1,326 @@
+---
+const PAGE_TITLE = "弁護士事務所の元事務員が明かす、浮気・不倫の本音10｜誰も教えてくれない話｜中の人ナビ";
+const PAGE_DESC  = "慰謝料の相場、探偵の選び方、弁護士との付き合い方——ネットには「きれいごと」があふれています。法律事務所で約10年、何百件もの案件を間近で見てきた元事務員が、表では言われない“本音”を10個だけ、正直に打ち明けます。";
+const CANONICAL  = "https://vpscomparehub.com/detective/honne/";
+const INSTAGRAM_URL = "https://www.instagram.com/lawyer.nakanohito/";
+const UPDATED = "2026-06-22";
+
+const groups = [
+  {
+    label: "お金・慰謝料の本音",
+    items: [
+      {
+        title: "「相場◯◯万円」は、ほとんど当てになりません",
+        body: "どのサイトも「不倫慰謝料の相場は50〜300万円」と書きます。でも事務所で見てきた現実は、同じような不倫でも、100万で終わる人もいれば300万取れる人もいた。差を生むのは相場ではなく、<strong>証拠の強さ・相手の資力・交渉のうまさ</strong>の3つ。相場を鵜呑みにして「これくらいか」と諦めるのが、いちばんもったいないです。",
+        take: "まず自分のケースの目安を出し、相場ではなく“交渉材料”で考える。",
+        cta: { href: "/detective/isharyo-sim/", label: "慰謝料の目安を試算する →", track: "honne_isharyosim" },
+      },
+      {
+        title: "「一括で満額」取れる人は、実は少数派",
+        body: "請求書に書く金額と、実際に振り込まれる金額は別物です。相手が「そんな大金ない」と言えば、現実は分割・減額の攻防になります。だからこそ、<strong>最初の請求額の設定と、それを支える証拠</strong>が効いてくる。弱気な請求額を出すと、そこからさらに値切られます。",
+        take: "最初の請求は、証拠に見合う“強気の適正額”から入るのが定石。",
+        cta: { href: "/detective/naiyo-shomei/", label: "内容証明の作り方を見る →", track: "honne_naiyo" },
+      },
+    ],
+  },
+  {
+    label: "証拠・探偵の本音",
+    items: [
+      {
+        title: "自分で撮った証拠、9割は「使えない」で終わります",
+        body: "「決定的な写真が撮れた！」と持ってくる方、多いです。でも入手方法が違法だったり、決定力が足りなかったりで、裁判では使えないことがほとんど。しかも一度自分で動いて相手に警戒されると、<strong>その後プロが入っても証拠が取れなくなる</strong>。これが事務所でいちばん多かった“後悔”でした。",
+        take: "下調べは自分で、決定的な瞬間はプロに。順番を逆にしない。",
+        cta: { href: "/detective/tantei/", label: "失敗しない探偵の選び方 →", track: "honne_tantei" },
+      },
+      {
+        title: "探偵に足元を見られるのは「焦っている人」",
+        body: "同じ調査でも、請求額に大きな差が出ます。高くなりがちなのは、相場を知らず、日程も絞れず、「とにかく早く」と焦っている人。逆に、<strong>怪しい曜日・時間帯を自分で絞ってから依頼する人</strong>は、調査時間が短く済んで費用も抑えられます。探偵は“動く時間”で料金が決まるからです。",
+        take: "依頼前に行動パターンの“あたり”をつける。それだけで数十万変わることも。",
+        cta: { href: "/detective/tantei-sim/", label: "調査費用の目安を試算する →", track: "honne_tanteisim" },
+      },
+      {
+        title: "良い探偵かどうかは「報告書」を見ればわかる",
+        body: "事務所には色々な探偵事務所の報告書が届きました。裁判で通用するのは、日時・場所・状況が客観的に、写真つきで整理されたもの。逆に“使えない”報告書もありました。見分け方はシンプルで、<strong>契約前に報告書のサンプルを見せてもらえるか</strong>。渋る業者は避けたほうが無難です。",
+        take: "契約前に「報告書のサンプルを見せて」と必ず聞く。",
+        cta: { href: "/detective/checklist/", label: "依頼前チェックリスト →", track: "honne_checklist" },
+      },
+    ],
+  },
+  {
+    label: "弁護士・手続きの本音",
+    items: [
+      {
+        title: "弁護士が“本気を出す”依頼者には、共通点があります",
+        body: "同じ弁護士でも、依頼者によって動きの本気度が変わる——そう感じることがありました。スイッチが入りやすいのは、<strong>証拠と「どうしたいか」が整理されている人</strong>。逆に全部丸投げだと、弁護士も方針を立てにくく、時間もかかります。弁護士は“素材”があるほど力を出せるんです。",
+        take: "相談前に「証拠」と「希望のゴール」をメモにまとめておく。",
+        cta: { href: "/detective/start/", label: "最初にやること完全ガイド →", track: "honne_start" },
+      },
+      {
+        title: "無料相談を“使い倒す人”と“消化する人”の差",
+        body: "初回無料相談は30分〜1時間。ここで差が出ます。活かす人は、<strong>聞きたいことを紙に書いて持ってくる</strong>。時間内に全部聞いて、方針まで持ち帰る。なんとなく話して終わる人は、また振り出しです。無料の枠は、準備した人ほど得をするようにできています。",
+        take: "質問リストを紙に。優先度の高い順に並べて持参する。",
+        cta: { href: "/detective/soudan/", label: "無料相談できる窓口まとめ →", track: "honne_soudan" },
+      },
+      {
+        title: "調停で損をするのは「感情的に責める人」",
+        body: "調停は“勝ち負けを競う場”ではなく、間に入る調停委員が話をまとめる場です。ここで相手を感情的に責め立てる人は、実は不利になりがち。調停委員が信頼するのは、<strong>冷静に事実と証拠を並べられる人</strong>。「かわいそうな人」より「筋が通っている人」に味方が集まります。",
+        take: "言いたいことは、感情ではなく“事実の時系列”で整理して伝える。",
+        cta: { href: "/detective/rikon-nagare/", label: "離婚の進め方 完全ガイド →", track: "honne_rikonnagare" },
+      },
+    ],
+  },
+  {
+    label: "気持ち・その後の本音",
+    items: [
+      {
+        title: "「早く動いた人」と「1年迷った人」、いちばん差が出るのは“心”",
+        body: "結果を分けるのはお金や証拠だけではありません。いちばん大きく変わるのは、<strong>心の回復の早さ</strong>です。証拠は時間とともに消え、気持ちは宙ぶらりんの期間が長いほど削られていく。動くと決めた人は、たとえ結果が同じでも、前を向くのが早かった。迷う時間そのものが、いちばんのコストなんです。",
+        take: "「今すぐ決断」ではなく「今、順番だけ知る」。それだけで前に進める。",
+        cta: { href: "/detective/mental-care/", label: "心のセルフケア →", track: "honne_mentalcare" },
+      },
+      {
+        title: "やり直せた夫婦が、水面下でやっていたこと",
+        body: "修復して続いた夫婦もたくさん見てきました。共通していたのは、責め続けることではなく——<strong>「二度目はない」という線引きと、これからの条件をきちんと決めた</strong>こと。曖昧なまま「許す」だけだと、また同じことが起きがちでした。感情の整理と、現実的なルール決め。その両輪でした。",
+        take: "許すか別れるかの前に、「線引き」と「条件」を言葉にしてみる。",
+        cta: { href: "/detective/shufuku/", label: "夫婦関係の修復ガイド →", track: "honne_shufuku" },
+      },
+    ],
+  },
+];
+let n = 0;
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{PAGE_TITLE}</title>
+  <meta name="description" content={PAGE_DESC} />
+  <link rel="canonical" href={CANONICAL} />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={PAGE_TITLE} />
+  <meta property="og:description" content={PAGE_DESC} />
+  <meta property="og:url" content={CANONICAL} />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content="弁護士の中の人" />
+  <meta property="og:image"     content="https://vpscomparehub.com/detective/images/hero.png" />
+  <meta name="twitter:card"     content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/detective/styles.css?v=20260622g" />
+
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "弁護士事務所の元事務員が明かす、浮気・不倫の本音10",
+    "description": PAGE_DESC,
+    "author": { "@type": "Person", "name": "弁護士の中の人（法律事務所 元事務員）" },
+    "publisher": { "@type": "Organization", "name": "中の人ナビ" },
+    "inLanguage": "ja",
+    "mainEntityOfPage": CANONICAL,
+    "url": CANONICAL
+  })} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "TOP", "item": "https://vpscomparehub.com/detective/" },
+      { "@type": "ListItem", "position": 2, "name": "中の人の本音", "item": CANONICAL }
+    ]
+  })} />
+
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2YLF06DC0E"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2YLF06DC0E');
+  </script>
+  <script is:inline type="text/javascript">
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wt0koam10v");
+  </script>
+
+  <style>
+    .honne-intro { font-size:.95rem; line-height:1.95; margin:0 0 .5rem; }
+    .honne-group-label {
+      display:inline-block; font-size:.8rem; font-weight:900; letter-spacing:.04em;
+      color:#c8362a; background:rgba(200,54,42,.08); border:1px solid rgba(200,54,42,.2);
+      padding:.3rem .7rem; border-radius:999px; margin:2rem 0 .3rem;
+    }
+    .honne-card {
+      position:relative; background:#fff; border:1px solid rgba(0,0,0,.08);
+      border-left:4px solid #c8362a; border-radius:12px;
+      padding:1.15rem 1.15rem 1.1rem; margin:1rem 0;
+      box-shadow:0 2px 12px rgba(0,0,0,.05);
+    }
+    .honne-num {
+      display:inline-block; font-family:"Noto Serif JP",serif; font-size:.82rem; font-weight:700;
+      color:#c8362a; letter-spacing:.06em; margin-bottom:.35rem;
+    }
+    .honne-card h3 { font-size:1.08rem; line-height:1.55; font-weight:900; color:var(--navy,#1a2b4a); margin:0 0 .6rem; }
+    .honne-card p { font-size:.9rem; line-height:1.95; margin:0; color:var(--text,#333); }
+    .honne-take {
+      display:flex; gap:.5rem; align-items:flex-start;
+      margin-top:.85rem; padding:.7rem .85rem; background:#fbf7ee;
+      border:1px dashed rgba(180,140,40,.4); border-radius:9px;
+      font-size:.86rem; line-height:1.8; font-weight:700; color:#7a5a10;
+    }
+    .honne-take .honne-take-key { flex:0 0 auto; }
+    .honne-cta {
+      display:inline-block; margin-top:.75rem; font-size:.86rem; font-weight:800;
+      color:#c8362a; text-decoration:none; border-bottom:1.5px solid rgba(200,54,42,.35); padding-bottom:1px;
+    }
+    .honne-cta:hover { border-bottom-color:#c8362a; }
+    .honne-close { background:linear-gradient(135deg,#1a2b4a,#0d1b2e); color:#fff; border-radius:14px; padding:1.4rem 1.25rem; margin:2rem 0 0; }
+    .honne-close h3 { color:#fff; font-size:1.1rem; margin:0 0 .6rem; }
+    .honne-close p { font-size:.9rem; line-height:1.9; color:rgba(255,255,255,.85); margin:0 0 .5rem; }
+    .honne-close a { color:#ffd76a; font-weight:800; }
+  </style>
+</head>
+<body class="lp-page lp-page-v2">
+
+<header class="dt-header">
+  <div class="dt-header-inner">
+    <a href="/detective/" class="dt-logo">
+      <div class="dt-logo-icon"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;" /></div>
+      <div class="dt-logo-wrap"><span>弁護士の中の人</span><span class="dt-logo-sub">中の人ナビ</span></div>
+    </a>
+    <a href={INSTAGRAM_URL} class="dt-header-insta" target="_blank" rel="noopener">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+      <span>@lawyer.nakanohito</span>
+    </a>
+  </div>
+</header>
+
+<nav class="col-header-nav">
+  <div class="col-header-nav-inner">
+    <a href="/detective/navi/">状況ナビ</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/start/">最初に</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/tantei/">探偵の選び方</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/lawyer/">弁護士相談</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/cases/">体験談</a>
+    <span class="col-nav-sep">|</span>
+    <a href="/detective/column/">コラム</a>
+  </div>
+</nav>
+
+<div class="lp-hero">
+  <div class="lp-hero-meta">
+    <span class="updated-meta">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      最終更新 <strong>{UPDATED}</strong>
+    </span>
+  </div>
+  <h1>事務所の中から見ていた、<br/>誰も教えてくれない本音</h1>
+  <p class="lp-hero-sub">ネットは「きれいごと」であふれています。法律事務所で約10年、何百件もの案件を間近で見てきた元事務員が、<strong>表では言われない本音を10だけ</strong>、正直にお話しします。</p>
+</div>
+
+<div class="lp-body">
+
+  <nav class="lp-breadcrumb" aria-label="パンくず">
+    <a href="/detective/">TOP</a>
+    <span class="sep">›</span>
+    <strong>中の人の本音</strong>
+  </nav>
+
+  <p class="honne-intro">私は弁護士ではありません。だから法律論はしません。でも、<strong>依頼者と弁護士と探偵の“あいだ”に立って、何百件も見てきた</strong>からこそ分かることがあります。「早く言ってよ」と思われそうな話を、ここにまとめました。ひとつでも、あなたの遠回りを減らせたら嬉しいです。</p>
+
+  {groups.map(g => (
+    <>
+      <div class="honne-group-label">{g.label}</div>
+      {g.items.map(it => { n++; return (
+        <div class="honne-card">
+          <span class="honne-num">本音 #{String(n).padStart(2,'0')}</span>
+          <h3>{it.title}</h3>
+          <p set:html={it.body} />
+          <div class="honne-take"><span class="honne-take-key">👉 だから、</span><span>{it.take}</span></div>
+          <a class="honne-cta" href={it.cta.href} data-track={it.cta.track}>{it.cta.label}</a>
+        </div>
+      );})}
+    </>
+  ))}
+
+  <div class="honne-close">
+    <h3>いちばんの本音は、これです</h3>
+    <p>「もっと早く動いていれば」と後悔する人を、本当にたくさん見てきました。逆に言えば、<strong style="color:#fff;">順番を知って、一歩踏み出した人から、確実に前へ進んでいた</strong>ということ。今すぐ決断する必要はありません。まずは、自分がどこにいるかを知るところから。</p>
+    <p>👉 迷ったら <a href="/detective/navi/" data-track="honne_navi">今のあなたはどこ？状況スタートナビ</a> へ。<br/>👉 何から始めるか知りたいなら <a href="/detective/start/" data-track="honne_start2">最初にやることガイド</a> から。</p>
+  </div>
+
+  <div class="lp-related">
+    <h3>あわせて読みたい</h3>
+    <div class="col-grid">
+      <a href="/detective/cases/" class="col-card">
+        <span class="col-card-badge experience">体験談</span>
+        <h3>事務所で見た実例</h3>
+        <p>順番を間違えた人・間違えなかった人。</p>
+      </a>
+      <a href="/detective/start/" class="col-card">
+        <span class="col-card-badge experience">ガイド</span>
+        <h3>最初にやること完全ガイド</h3>
+        <p>後悔しないための正しい順序。</p>
+      </a>
+      <a href="/detective/navi/" class="col-card">
+        <span class="col-card-badge comparison">ナビ</span>
+        <h3>状況スタートナビ</h3>
+        <p>今のあなたに合う入口へ。</p>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="dt-footer">
+  <div class="dt-footer-inner">
+    <div class="dt-footer-logo">
+      <div class="dt-footer-logo-icon" style="padding:0;overflow:hidden;"><img src="/detective/images/logo-icon.png" alt="弁護士の中の人" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:8px;" /></div>
+      <span>弁護士の中の人</span>
+    </div>
+    <p class="dt-footer-text">
+      Instagram「弁護士の中の人（@lawyer.nakanohito）」の公式サイト。<br/>
+      法律事務所の元事務員が、浮気・不倫で悩む方へ正直な情報をお届けしています。<br/>
+      <span style="font-size:.75rem;color:rgba(255,255,255,.35)">本ページは元事務員としての経験にもとづく私見です。法的判断は弁護士など専門家にご確認ください。当サイトは一部にアフィリエイトリンクを含みます。</span>
+    </p>
+    <div class="dt-footer-links">
+      <a href={INSTAGRAM_URL} target="_blank" rel="noopener">Instagram</a>
+      <a href="/detective/navi/">状況ナビ</a>
+      <a href="/detective/start/">最初にやること</a>
+      <a href="/detective/cases/">体験談</a>
+      <a href="/detective/lawyer/">弁護士相談</a>
+      <a href="/detective/column/">コラム</a>
+      <a href="/detective/about/">中の人について</a>
+      <a href="/detective/operator/">運営者情報</a>
+    </div>
+    <p class="dt-footer-copy">© 2026 弁護士の中の人</p>
+  </div>
+</footer>
+
+<div class="sticky-cta-bar" id="sticky-cta">
+  <span class="sticky-label">迷ったら</span>
+  <a href="/detective/navi/" class="sticky-btn" data-track="sticky_honne_navi">状況スタートナビへ →</a>
+  <button class="sticky-close" id="sticky-close" aria-label="閉じる">✕</button>
+</div>
+
+<script src="/detective/app.js" is:inline defer></script>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    var sticky = document.getElementById('sticky-cta');
+    if (!sticky) return;
+    var dismissed = false;
+    document.getElementById('sticky-close').addEventListener('click', function() {
+      dismissed = true; sticky.classList.remove('visible');
+    });
+    window.addEventListener('scroll', function() {
+      if (dismissed) return;
+      sticky.classList.toggle('visible', window.scrollY > window.innerHeight * 0.6);
+    }, { passive: true });
+  });
+</script>
+
+</body>
+</html>
