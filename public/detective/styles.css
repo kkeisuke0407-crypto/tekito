@@ -4110,7 +4110,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* ══ 新ヒーロー v2（index トップ） ════════════ */
 .hero-v2 {
-  background: url('/detective/images/hero.png') center / cover no-repeat;
+  background: url('/detective/images/hero.webp') center / cover no-repeat;
   color: #fff;
   padding: 5rem 1.25rem 4.5rem;
   position: relative;
