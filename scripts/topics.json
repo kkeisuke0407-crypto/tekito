@@ -189,19 +189,19 @@
     "topic": "探偵の見積書の読み方——「一式」表記と追加料金の落とし穴",
     "category": "comparison",
     "cvType": "detective",
-    "used": false
+    "used": true
   },
   {
     "topic": "浮気の証拠を自分で撮った場合、裁判での証拠能力はどう変わるか",
     "category": "comparison",
     "cvType": "lawyer",
-    "used": false
+    "used": true
   },
   {
     "topic": "配偶者のスマホを勝手に見る・ロック解除するのは違法になるのか",
     "category": "comparison",
     "cvType": "lawyer",
-    "used": false
+    "used": true
   },
   {
     "topic": "浮気相手を特定する正しい方法と、やると違法になる特定方法",
@@ -219,7 +219,7 @@
     "topic": "探偵の成功報酬型と時間制、結局どちらが損をしないのか",
     "category": "comparison",
     "cvType": "detective",
-    "used": false
+    "used": true
   },
   {
     "topic": "問いただしたら「証拠は?」と開き直られた——次に取るべき一手",
@@ -231,7 +231,7 @@
     "topic": "復縁するか離婚するかで迷うとき、事務員が見た「決め手」になったもの",
     "category": "mental",
     "cvType": "uranai",
-    "used": false
+    "used": true
   },
   {
     "topic": "浮気が原因でうつになった——診断書は慰謝料の増額につながるか",
@@ -273,7 +273,7 @@
     "topic": "違法な探偵業者を避ける方法——探偵業届出証明書の確認ポイント",
     "category": "comparison",
     "cvType": "detective",
-    "used": false
+    "used": true
   },
   {
     "topic": "浮気を疑って眠れない夜に、気持ちを落ち着かせるための考え方",
