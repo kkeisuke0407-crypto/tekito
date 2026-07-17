@@ -178,5 +178,125 @@
     "category": "comparison",
     "cvType": "gps",
     "used": true
+  },
+  {
+    "topic": "浮気調査を配偶者や職場にバレずに進めるための時間・お金の作り方",
+    "category": "experience",
+    "cvType": "detective",
+    "used": false
+  },
+  {
+    "topic": "探偵の見積書の読み方——「一式」表記と追加料金の落とし穴",
+    "category": "comparison",
+    "cvType": "detective",
+    "used": false
+  },
+  {
+    "topic": "浮気の証拠を自分で撮った場合、裁判での証拠能力はどう変わるか",
+    "category": "comparison",
+    "cvType": "lawyer",
+    "used": false
+  },
+  {
+    "topic": "配偶者のスマホを勝手に見る・ロック解除するのは違法になるのか",
+    "category": "comparison",
+    "cvType": "lawyer",
+    "used": false
+  },
+  {
+    "topic": "浮気相手を特定する正しい方法と、やると違法になる特定方法",
+    "category": "comparison",
+    "cvType": "detective",
+    "used": false
+  },
+  {
+    "topic": "婚約者に浮気された——婚約破棄の慰謝料と証拠の集め方",
+    "category": "comparison",
+    "cvType": "lawyer",
+    "used": false
+  },
+  {
+    "topic": "探偵の成功報酬型と時間制、結局どちらが損をしないのか",
+    "category": "comparison",
+    "cvType": "detective",
+    "used": false
+  },
+  {
+    "topic": "問いただしたら「証拠は?」と開き直られた——次に取るべき一手",
+    "category": "experience",
+    "cvType": "all",
+    "used": false
+  },
+  {
+    "topic": "復縁するか離婚するかで迷うとき、事務員が見た「決め手」になったもの",
+    "category": "mental",
+    "cvType": "uranai",
+    "used": false
+  },
+  {
+    "topic": "浮気が原因でうつになった——診断書は慰謝料の増額につながるか",
+    "category": "comparison",
+    "cvType": "lawyer",
+    "used": false
+  },
+  {
+    "topic": "相手が浮気を認めない・証拠を隠す——調査に切り替えるべきサイン",
+    "category": "comparison",
+    "cvType": "detective",
+    "used": false
+  },
+  {
+    "topic": "探偵に依頼して「シロ」だったとき、払った費用は無駄になるのか",
+    "category": "experience",
+    "cvType": "detective",
+    "used": false
+  },
+  {
+    "topic": "浮気調査の張り込みは何日必要か——空振りを減らす依頼のコツ",
+    "category": "comparison",
+    "cvType": "detective",
+    "used": false
+  },
+  {
+    "topic": "妊娠中・産後に夫の浮気を疑ったら——法的に不利にならない動き方",
+    "category": "experience",
+    "cvType": "all",
+    "used": false
+  },
+  {
+    "topic": "浮気の慰謝料を「分割でしか払えない」と言われたときの現実的な対応",
+    "category": "comparison",
+    "cvType": "lawyer",
+    "used": false
+  },
+  {
+    "topic": "違法な探偵業者を避ける方法——探偵業届出証明書の確認ポイント",
+    "category": "comparison",
+    "cvType": "detective",
+    "used": false
+  },
+  {
+    "topic": "浮気を疑って眠れない夜に、気持ちを落ち着かせるための考え方",
+    "category": "mental",
+    "cvType": "uranai",
+    "used": false
+  },
+  {
+    "topic": "浮気の示談書・誓約書は自分で作れるか——弁護士に頼む線引き",
+    "category": "comparison",
+    "cvType": "lawyer",
+    "used": false
+  },
+  {
+    "topic": "探偵の調査報告書を受け取った後、弁護士に渡すまでの流れ",
+    "category": "comparison",
+    "cvType": "lawyer",
+    "used": false
+  },
+  {
+    "topic": "浮気を許すと決めた後、同じことを繰り返させないための向き合い方",
+    "category": "experience",
+    "cvType": "all",
+    "used": false
   }
 ]
