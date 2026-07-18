@@ -207,7 +207,7 @@
     "topic": "浮気相手を特定する正しい方法と、やると違法になる特定方法",
     "category": "comparison",
     "cvType": "detective",
-    "used": false
+    "used": true
   },
   {
     "topic": "婚約者に浮気された——婚約破棄の慰謝料と証拠の集め方",
@@ -243,19 +243,19 @@
     "topic": "相手が浮気を認めない・証拠を隠す——調査に切り替えるべきサイン",
     "category": "comparison",
     "cvType": "detective",
-    "used": false
+    "used": true
   },
   {
     "topic": "探偵に依頼して「シロ」だったとき、払った費用は無駄になるのか",
     "category": "experience",
     "cvType": "detective",
-    "used": false
+    "used": true
   },
   {
     "topic": "浮気調査の張り込みは何日必要か——空振りを減らす依頼のコツ",
     "category": "comparison",
     "cvType": "detective",
-    "used": false
+    "used": true
   },
   {
     "topic": "妊娠中・産後に夫の浮気を疑ったら——法的に不利にならない動き方",
@@ -267,7 +267,7 @@
     "topic": "浮気の慰謝料を「分割でしか払えない」と言われたときの現実的な対応",
     "category": "comparison",
     "cvType": "lawyer",
-    "used": false
+    "used": true
   },
   {
     "topic": "違法な探偵業者を避ける方法——探偵業届出証明書の確認ポイント",
@@ -285,18 +285,18 @@
     "topic": "浮気の示談書・誓約書は自分で作れるか——弁護士に頼む線引き",
     "category": "comparison",
     "cvType": "lawyer",
-    "used": false
+    "used": true
   },
   {
     "topic": "探偵の調査報告書を受け取った後、弁護士に渡すまでの流れ",
     "category": "comparison",
     "cvType": "lawyer",
-    "used": false
+    "used": true
   },
   {
     "topic": "浮気を許すと決めた後、同じことを繰り返させないための向き合い方",
     "category": "experience",
     "cvType": "all",
-    "used": false
+    "used": true
   }
 ]
