@@ -183,7 +183,7 @@
     "topic": "浮気調査を配偶者や職場にバレずに進めるための時間・お金の作り方",
     "category": "experience",
     "cvType": "detective",
-    "used": false
+    "used": true
   },
   {
     "topic": "探偵の見積書の読み方——「一式」表記と追加料金の落とし穴",
@@ -213,7 +213,7 @@
     "topic": "婚約者に浮気された——婚約破棄の慰謝料と証拠の集め方",
     "category": "comparison",
     "cvType": "lawyer",
-    "used": false
+    "used": true
   },
   {
     "topic": "探偵の成功報酬型と時間制、結局どちらが損をしないのか",
@@ -225,7 +225,7 @@
     "topic": "問いただしたら「証拠は?」と開き直られた——次に取るべき一手",
     "category": "experience",
     "cvType": "all",
-    "used": false
+    "used": true
   },
   {
     "topic": "復縁するか離婚するかで迷うとき、事務員が見た「決め手」になったもの",
@@ -237,7 +237,7 @@
     "topic": "浮気が原因でうつになった——診断書は慰謝料の増額につながるか",
     "category": "comparison",
     "cvType": "lawyer",
-    "used": false
+    "used": true
   },
   {
     "topic": "相手が浮気を認めない・証拠を隠す——調査に切り替えるべきサイン",
@@ -261,7 +261,7 @@
     "topic": "妊娠中・産後に夫の浮気を疑ったら——法的に不利にならない動き方",
     "category": "experience",
     "cvType": "all",
-    "used": false
+    "used": true
   },
   {
     "topic": "浮気の慰謝料を「分割でしか払えない」と言われたときの現実的な対応",
@@ -279,7 +279,7 @@
     "topic": "浮気を疑って眠れない夜に、気持ちを落ち着かせるための考え方",
     "category": "mental",
     "cvType": "uranai",
-    "used": false
+    "used": true
   },
   {
     "topic": "浮気の示談書・誓約書は自分で作れるか——弁護士に頼む線引き",
