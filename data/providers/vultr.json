@@ -156,7 +156,8 @@
         "blr",
         "del",
         "scl",
-        "itm"
+        "itm",
+        "man"
       ],
       "category": "shared"
     },
@@ -201,7 +202,8 @@
         "blr",
         "del",
         "scl",
-        "itm"
+        "itm",
+        "man"
       ],
       "category": "highcpu"
     },
@@ -246,7 +248,8 @@
         "blr",
         "del",
         "scl",
-        "itm"
+        "itm",
+        "man"
       ],
       "category": "dedicated"
     },
@@ -292,7 +295,8 @@
         "blr",
         "del",
         "scl",
-        "itm"
+        "itm",
+        "man"
       ],
       "category": "dedicated"
     },
@@ -337,7 +341,8 @@
         "blr",
         "del",
         "scl",
-        "itm"
+        "itm",
+        "man"
       ],
       "category": "shared"
     },
@@ -382,7 +387,8 @@
         "blr",
         "del",
         "scl",
-        "itm"
+        "itm",
+        "man"
       ],
       "category": "highcpu"
     },
@@ -427,11 +433,12 @@
         "blr",
         "del",
         "scl",
-        "itm"
+        "itm",
+        "man"
       ],
       "category": "dedicated"
     }
   ],
-  "lastUpdated": "2026-07-22T08:30:42.300Z",
+  "lastUpdated": "2026-07-23T08:31:38.985Z",
   "source": "api"
 }
