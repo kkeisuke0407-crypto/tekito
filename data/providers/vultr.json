@@ -235,6 +235,7 @@
         "nrt",
         "waw",
         "mad",
+        "mxp",
         "icn",
         "mia",
         "sgp",
@@ -246,6 +247,7 @@
         "jnb",
         "tlv",
         "blr",
+        "del",
         "scl",
         "itm",
         "man"
@@ -337,6 +339,7 @@
         "bom",
         "jnb",
         "tlv",
+        "blr",
         "del",
         "scl",
         "itm",
@@ -429,6 +432,7 @@
         "jnb",
         "tlv",
         "blr",
+        "del",
         "scl",
         "itm",
         "man"
@@ -436,6 +440,6 @@
       "category": "dedicated"
     }
   ],
-  "lastUpdated": "2026-07-24T08:28:31.463Z",
+  "lastUpdated": "2026-07-25T08:07:20.742Z",
   "source": "api"
 }
