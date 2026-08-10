@@ -156,7 +156,6 @@
         "blr",
         "del",
         "scl",
-        "itm",
         "man"
       ],
       "category": "shared"
@@ -235,6 +234,7 @@
         "nrt",
         "waw",
         "mad",
+        "mxp",
         "icn",
         "mia",
         "sgp",
@@ -439,6 +439,6 @@
       "category": "dedicated"
     }
   ],
-  "lastUpdated": "2026-08-09T06:57:24.426Z",
+  "lastUpdated": "2026-08-10T07:42:29.700Z",
   "source": "api"
 }
