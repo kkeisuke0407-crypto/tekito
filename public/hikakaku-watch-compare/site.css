@@ -182,15 +182,13 @@ table { width: 100%; border-collapse: collapse; }
 
 @media (min-width: 980px) {
   .watch-compare { display: block; max-width: 1440px; margin-inline: auto; box-shadow: 0 0 32px var(--hwc-shadow); }
-  .two-column-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.13fr); align-items: start; }
-  .page-rail { display: block; min-width: 0; }
-  .page-rail--left { border-right: 1px solid var(--hwc-line); }
+  .two-column-layout, .page-rail { display: contents; }
   .pr-bar { text-align: left; padding-left: calc((100% - 1280px) / 2 + 20px); }
-  .hero { grid-column: auto; grid-row: auto; min-height: 655px; background-position: 93% 52%; background-size: auto 88%; border-right: 0; border-bottom: 0; }
-  .hero__inner, .section .content, .final-cta .content { max-width: 700px; }
-  .hero__inner { margin-left: auto; padding: 50px 42px 35px; }
-  .hero h1 { max-width: 430px; font-size: 51px; }
-  .hero__lead { max-width: 350px; }
+  .hero { grid-column: auto; grid-row: auto; min-height: 650px; background-position: 94% 52%; background-size: auto 92%; border-right: 0; border-bottom: 3px solid var(--hwc-navy); }
+  .hero__inner, .section .content, .final-cta .content { max-width: 1080px; }
+  .hero__inner { width: min(100%, 1080px); margin-inline: auto; padding: 50px 420px 45px 42px; }
+  .hero h1 { max-width: 560px; font-size: 51px; }
+  .hero__lead { max-width: 510px; }
   .section { grid-column: auto; grid-row: auto; padding: 28px 0; }
   .section--reason, .section--factor { border-right: 0; }
   .final-cta { grid-column: auto; grid-row: auto; padding: 26px 0; }
@@ -198,8 +196,8 @@ table { width: 100%; border-collapse: collapse; }
   .medal { width: 95px; height: 95px; }
   .footer { grid-column: auto; grid-row: auto; }
   .footer .content { max-width: 1280px; }
-  .section .content { padding: 0 25px; }
-  .section--reason .content, .section--factor .content { margin-left: auto; }
+  .section .content { padding: 0 42px; }
+  .section--reason .content, .section--factor .content { margin-inline: auto; }
   .case-grid { gap: 7px; }
   .case-card { grid-template-columns: 63px 1fr; min-height: 154px; }
   .case-card > img { width: 69px; }
