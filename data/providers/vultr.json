@@ -150,13 +150,10 @@
         "mex",
         "sao",
         "mel",
-        "bom",
         "jnb",
         "tlv",
-        "blr",
         "del",
         "scl",
-        "itm",
         "man"
       ],
       "category": "shared"
@@ -199,8 +196,6 @@
         "bom",
         "jnb",
         "tlv",
-        "blr",
-        "del",
         "scl",
         "itm",
         "man"
@@ -290,10 +285,8 @@
         "sao",
         "mel",
         "hnl",
-        "bom",
         "jnb",
         "tlv",
-        "blr",
         "del",
         "scl",
         "itm",
@@ -336,10 +329,8 @@
         "mex",
         "sao",
         "mel",
-        "bom",
         "jnb",
         "tlv",
-        "blr",
         "del",
         "scl",
         "itm",
@@ -385,8 +376,6 @@
         "bom",
         "jnb",
         "tlv",
-        "blr",
-        "del",
         "scl",
         "itm",
         "man"
@@ -441,6 +430,6 @@
       "category": "dedicated"
     }
   ],
-  "lastUpdated": "2026-08-13T07:27:29.023Z",
+  "lastUpdated": "2026-08-14T07:25:15.453Z",
   "source": "api"
 }
