@@ -736,3 +736,63 @@ table { width: 100%; border-collapse: collapse; }
   .flow-list { gap: 9px; }
   .flow-list li { min-height: 148px; }
 }
+
+/* Reference-image correction: appraisal comments use watch cutouts, and the
+   two appraisal entrances keep their illustration on the left of the copy. */
+.comment-list blockquote {
+  min-height: 98px;
+  padding: 14px 14px 12px 104px;
+}
+.comment-list blockquote::before {
+  top: 10px;
+  left: 12px;
+  width: 80px;
+  height: 80px;
+  border: 0;
+  border-radius: 0;
+  background-image: url("/hikakaku-watch-compare/reference-assets/comparison-watches.png");
+  background-repeat: no-repeat;
+  background-size: 200% auto;
+}
+.comment-list blockquote:nth-child(1)::before { background-position: 0% 0%; }
+.comment-list blockquote:nth-child(2)::before { background-position: 100% 0%; }
+.comment-list blockquote:nth-child(3)::before { background-position: 0% 100%; }
+.comment-list blockquote:nth-child(4)::before { background-position: 100% 100%; }
+
+.entrance-grid article {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  column-gap: 12px;
+  align-items: center;
+  min-height: 108px;
+  padding: 14px;
+  text-align: left;
+}
+.entrance-grid > article > .entrance-visual {
+  grid-row: 1 / span 2;
+  width: 80px;
+  height: 68px;
+  margin: 0;
+  background-size: 224% auto;
+}
+.entrance-grid article:first-child > .entrance-visual { background-size: 224% auto; }
+.entrance-grid h3 { grid-column: 2; font-size: 15px; line-height: 1.42; }
+.entrance-grid h3 b { font-size: 18px; }
+.entrance-grid p { grid-column: 2; margin: 4px 0 0; font-size: 11px; line-height: 1.62; text-align: left; }
+
+@media (min-width: 600px) {
+  .entrance-grid article { grid-template-columns: 96px minmax(0, 1fr); min-height: 128px; padding: 16px; }
+  .entrance-grid > article > .entrance-visual { width: 88px; height: 74px; background-size: 224% auto; }
+  .entrance-grid h3 { font-size: 16px; }
+  .entrance-grid h3 b { font-size: 20px; }
+  .entrance-grid p { font-size: 12px; }
+}
+
+@media (min-width: 980px) {
+  .comment-list blockquote { min-height: 118px; }
+  .entrance-grid article { grid-template-columns: 108px minmax(0, 1fr); min-height: 142px; padding: 18px; }
+  .entrance-grid > article > .entrance-visual { width: 96px; height: 81px; }
+  .entrance-grid h3 { font-size: 17px; }
+  .entrance-grid h3 b { font-size: 21px; }
+  .entrance-grid p { font-size: 12px; line-height: 1.7; }
+}
