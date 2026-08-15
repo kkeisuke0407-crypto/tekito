@@ -97,11 +97,9 @@ const recordTable = (rows: string[][]) => rows;
   <body>
     <main class="watch-compare">
       <div class="pr-bar">当サイトは提携広告を含む比較・案内メディアです</div>
-      <div class="two-column-layout">
-        <div class="page-rail page-rail--left">
+      <div class="single-column-layout">
       <section class="hero" aria-labelledby="page-title">
         <div class="hero__inner content">
-          <p class="hero__eyebrow">腕時計の売却を考え始めた方へ</p>
           <h1 id="page-title">その時計、<br /><strong>1社だけの査定額</strong>で<br />決めていませんか</h1>
           <p class="hero__lead">同じモデルでも、買取業者によって査定額に差が出ます。<br />ヒカカク！なら最大20社にまとめて査定を依頼して、比較したうえで売却先を決められます。</p>
           <a class="cta cta--hero" href={affiliateUrl} target="_blank" rel="sponsored noreferrer">無料で査定額を比べる <span aria-hidden="true">›</span></a>
@@ -111,7 +109,6 @@ const recordTable = (rows: string[][]) => rows;
 
       <section class="section section--reason" id="reason" aria-labelledby="reason-title">
         <div class="content">
-          <p class="section-kicker"><b>B1</b> 比較の理由</p>
           <h2 id="reason-title">同じ時計でも、査定額はここまで違います</h2>
           <p class="section-lead">時計の買取価格は、どこに出すかで大きく変わります。下は、同じモデルを複数の業者が査定した場合の金額差です。</p>
           <div class="case-grid">
@@ -135,7 +132,6 @@ const recordTable = (rows: string[][]) => rows;
 
       <section class="section section--factor" id="factor" aria-labelledby="factor-title">
         <div class="content">
-          <p class="section-kicker"><b>B2</b> 査定の見方</p>
           <h2 id="factor-title">査定額を左右する4つの要素</h2>
           <div class="factor-list">
             {appraisalFactors.map((item) => <article><span class="factor-icon" aria-hidden="true"></span><div><h3><small>{item.no}</small>{item.title}</h3><p>{item.body}</p></div></article>)}
@@ -148,11 +144,8 @@ const recordTable = (rows: string[][]) => rows;
         </div>
       </section>
 
-        </div>
-        <div class="page-rail page-rail--right">
       <section class="section section--compare" id="compare" aria-labelledby="compare-title">
         <div class="content">
-          <p class="section-kicker"><b>B3</b> 売り方の比較</p>
           <h2 id="compare-title">時計を売る4つの方法を比べる</h2>
           <p class="section-lead">時計を売る手段は一括査定だけではありません。それぞれに向き不向きがあるので、自分の状況に合うものを選んでください。</p>
           <div class="table-scroll"><table class="method-table"><thead><tr><th></th><th class="method-table__bulk"><span class="method-icon" aria-hidden="true"></span>一括査定</th><th><span class="method-icon" aria-hidden="true"></span>買取専門店に持込</th><th><span class="method-icon" aria-hidden="true"></span>フリマアプリ</th><th><span class="method-icon" aria-hidden="true"></span>質屋</th></tr></thead><tbody><tr><th>手間</th><td>入力のみ</td><td>来店が必要</td><td>撮影・梱包・発送</td><td>来店が必要</td></tr><tr><th>スピード</th><td>数日</td><td>即日</td><td>売れるまで不定</td><td>即日</td></tr><tr><th>価格</th><td>複数社を比較して判断できる</td><td>1社の提示のみ</td><td>高くなる可能性／手数料あり</td><td>低めになりやすい</td></tr><tr><th>リスク</th><td>低い</td><td>相場が分からない</td><td>返品・トラブル</td><td>期限管理が必要</td></tr><tr><th>向いている人</th><td>損を避けたい／急いでいない</td><td>今日中に現金化したい</td><td>手間をかけられる</td><td>一時的に借りたい</td></tr></tbody></table></div>
@@ -163,7 +156,6 @@ const recordTable = (rows: string[][]) => rows;
 
       <section class="section section--model" id="model" aria-labelledby="model-title">
         <div class="content">
-          <p class="section-kicker"><b>B4</b> 型番別の実績</p>
           <h2 id="model-title">型番別の査定実績</h2>
           <p class="section-lead">実際にいくらで査定されたのか、型番・状態・査定日つきの実績です。同じモデルでも状態や付属品の有無で金額が変わります。</p>
           <details class="record-details" open><summary>ロレックス <small>（2025年の実績）</small></summary><div class="table-scroll"><table class="record-table"><thead><tr><th>モデル・型番</th><th>状態</th><th>査定額</th><th>査定日</th><th>査定した業者</th></tr></thead><tbody>{recordTable(rolex2025).map((row) => <tr>{row.map((cell) => <td>{cell}</td>)}</tr>)}</tbody></table></div></details>
@@ -178,7 +170,6 @@ const recordTable = (rows: string[][]) => rows;
 
       <section class="section section--condition" id="condition" aria-labelledby="condition-title">
         <div class="content">
-          <p class="section-kicker"><b>B5</b> 状態別の扱い</p>
           <h2 id="condition-title">動かない・付属品がない時計も査定できます</h2>
           <p class="section-lead">「壊れているから売れない」と思って、引き出しにしまったままの時計はありませんか。状態が悪くても、買取の対象になることがあります。</p>
           <div class="condition-grid"><article><h3>動作品・美品</h3><span class="condition-icon" aria-hidden="true"></span><p>きちんと動く時計は、状態を確認しながら査定できます。</p></article><article><h3>キズ・使用感あり</h3><span class="condition-icon" aria-hidden="true"></span><p>キズや使用感があっても、買取可能です。</p></article><article><h3>不動・故障</h3><span class="condition-icon" aria-hidden="true"></span><p>動かない時計でも、買取対象です。</p></article><article><h3>付属品なし</h3><span class="condition-icon" aria-hidden="true"></span><p>箱や保証書がなくても、査定できます。</p></article></div>
@@ -189,7 +180,6 @@ const recordTable = (rows: string[][]) => rows;
 
       <section class="section section--howto" id="howto" aria-labelledby="howto-title">
         <div class="content">
-          <p class="section-kicker"><b>B6</b> 使い方</p>
           <h2 id="howto-title">2つの入口から査定を依頼できます</h2>
           <div class="entrance-grid"><article><span class="entrance-visual entrance-visual--form" aria-hidden="true"></span><h3>型番が分かっている方<br /><b>入力して査定</b></h3><p>型番・ブランド・状態を入力するだけで、査定を依頼できます。型番は時計の裏蓋や保証書に記載されています。</p></article><article><span class="entrance-visual entrance-visual--photo" aria-hidden="true"></span><h3>モデルが分からない方<br /><b>写真でAI査定</b></h3><p>スマートフォンで写真を撮ると、AIがブランドを検出します。「もらったものでブランドが分からない」「遺品で詳細が不明」という場合はこちらから。</p></article></div>
           <h3 class="flow-title">申込〜査定の流れ（4ステップ）</h3>
@@ -200,16 +190,12 @@ const recordTable = (rows: string[][]) => rows;
 
       <section class="section section--faq" id="faq" aria-labelledby="faq-title">
         <div class="content">
-          <p class="section-kicker"><b>B7</b> よくある質問</p>
           <h2 id="faq-title">よくある質問</h2>
           <div class="faq-list">{faqs.map((item) => <details><summary><span>Q</span>{item.q}</summary><div><b>A.</b><p>{item.a}</p></div></details>)}</div>
           <a class="cta" href={affiliateUrl} target="_blank" rel="sponsored noreferrer">無料査定を依頼する <span aria-hidden="true">›</span></a>
         </div>
       </section>
 
-      <section class="final-cta" aria-labelledby="final-title"><div class="content"><p class="section-kicker"><b>B8</b> 最終CTA</p><div class="final-cta__card"><div class="medal"><img src="/hikakaku-watch-compare/reference-assets/final-medallion.png" alt="" loading="lazy" /></div><div><p>売る前に、いくらになるか知っておく</p><h2 id="final-title">無料で査定額を比べる</h2><p class="final-cta__body">1社だけの査定では、その金額が妥当かどうか判断できません。まとめて査定を依頼して、比較したうえで決めてください。</p><a class="cta cta--final" href={affiliateUrl} target="_blank" rel="sponsored noreferrer">無料で査定額を比べる <span aria-hidden="true">›</span></a><ul class="trust-list"><li>利用無料</li><li>査定だけでもOK</li><li>最大20社に一括依頼</li></ul></div></div></div></section>
-
-        </div>
       </div>
       <footer class="footer"><div class="content"><p class="footer__name">時計査定ナビ <b>PR</b></p><p>当サイトはアフィリエイトプログラムを利用した第三者メディアです。掲載内容は株式会社じげん（ZIGExN Co., Ltd.）の公式サイト掲載情報をもとに作成しています。実際の条件は各社公式サイトでご確認ください。</p></div></footer>
     </main>
