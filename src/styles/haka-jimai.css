@@ -161,7 +161,8 @@
 .cta--large {
   width: 100%;
   min-height: 68px;
-  font-size: var(--haka-text-xl);
+  font-size: var(--haka-text-lg);
+  white-space: nowrap;
 }
 
 .cta-note {
@@ -383,4 +384,3 @@
 @media (prefers-reduced-motion: reduce) {
   .cta { transition-duration: 0ms; }
 }
-
