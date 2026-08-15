@@ -22,6 +22,7 @@ const ctaRel = 'nofollow sponsored noopener';
         <p class="haka-promote">本ページはプロモーションを含みます。</p>
 
         <section class="hero" aria-labelledby="hero-title">
+          <span class="hero__no" aria-hidden="true">1</span>
           <img class="hero__image" src="/haka-jimai/images/hero-cemetery.png" alt="明るい朝の光が差す、山あいの静かな墓地" />
           <div class="hero__content">
             <p class="hero__eyebrow">墓じまいの費用と手続きガイド</p>
@@ -67,24 +68,28 @@ const ctaRel = 'nofollow sponsored noopener';
               <h3>費用差が最も出る項目です</h3>
               <span class="cost-card__price">目安：1㎡あたり10万〜15万円</span>
               <p>面積だけでなく、山の上・階段の先・道幅が狭いなど、重機が入れない立地では人力作業が増えます。</p>
+              <img class="cost-card__image" src="/haka-jimai/images/cost-excavator.png" alt="墓石を撤去する重機のイラスト" loading="lazy" />
             </article>
             <article class="cost-card">
               <span class="cost-card__num">② 閉眼供養</span>
               <h3>魂抜きのお布施</h3>
               <span class="cost-card__price">目安：3万〜10万円</span>
               <p>遺骨を取り出す前に行う法要です。菩提寺の住職にお願いするのが一般的です。</p>
+              <img class="cost-card__image" src="/haka-jimai/images/cost-priest.png" alt="手を合わせる僧侶のイラスト" loading="lazy" />
             </article>
             <article class="cost-card">
               <span class="cost-card__num">③ 離檀料</span>
               <h3>寺院墓地の場合のみ</h3>
               <span class="cost-card__price">目安：10万〜30万円</span>
               <p>墓地使用契約や寺院の規則に定めがない限り、法的な支払い義務はありません。ただし基準がないため、事前の相談が大切です。</p>
+              <img class="cost-card__image" src="/haka-jimai/images/cost-cash.png" alt="費用を表す紙幣と硬貨のイラスト" loading="lazy" />
             </article>
             <article class="cost-card">
               <span class="cost-card__num">④ 行政手続き</span>
               <h3>改葬許可証の取得</h3>
               <span class="cost-card__price">目安：数百円〜</span>
               <p>役所に申請して取得します。ご自分で動けば、費用はほとんどかかりません。</p>
+              <img class="cost-card__image" src="/haka-jimai/images/cost-document.png" alt="改葬許可の手続き書類のイラスト" loading="lazy" />
             </article>
             <article class="cost-card">
               <span class="cost-card__num">⑤ 新しい供養先</span>
@@ -133,10 +138,13 @@ const ctaRel = 'nofollow sponsored noopener';
             <h2 class="section__title" id="section-5-title">「見積りを取ったら、断りにくいのでは？」</h2>
           </div>
           <p class="section__lead">墓じまいはまだ決めていない。家族とも話していない。その段階で業者に連絡したら、断れなくなるのではないか——。いちばん多いご不安がこれです。</p>
-          <div class="assurance-grid">
-            <article class="assurance"><span class="assurance__line" aria-hidden="true"></span><h3>契約する義務はありません</h3><p>見積りは、あくまで金額を知るための手続きです。比べてから決められます。</p></article>
-            <article class="assurance"><span class="assurance__line" aria-hidden="true"></span><h3>しつこい営業はありません</h3><p>提携している石材店は、この点を確認したうえでご紹介しています。</p></article>
-            <article class="assurance"><span class="assurance__line" aria-hidden="true"></span><h3>お断りは、無料で代行します</h3><p>気に入る見積りがなければ、石材店への連絡は運営が代わりに行います。</p></article>
+          <div class="assurance-layout">
+            <div class="assurance-grid">
+              <article class="assurance"><span class="assurance__icon assurance__icon--shield" aria-hidden="true"></span><h3>契約する義務はありません</h3><p>見積りは、あくまで金額を知るための手続きです。比べてから決められます。</p></article>
+              <article class="assurance"><span class="assurance__icon assurance__icon--phone" aria-hidden="true"></span><h3>しつこい営業はありません</h3><p>提携している石材店は、この点を確認したうえでご紹介しています。</p></article>
+              <article class="assurance"><span class="assurance__icon assurance__icon--support" aria-hidden="true"></span><h3>お断りは、無料で代行します</h3><p>気に入る見積りがなければ、石材店への連絡は運営が代わりに行います。</p></article>
+            </div>
+            <img class="assurance-layout__senior" src="/haka-jimai/images/senior-worried.png" alt="見積りについて考える高齢の男性" loading="lazy" />
           </div>
           <p class="alert-box">「まだ検討中です」で構いません。むしろ、決める前に数字を知っておくほうが、あとの話し合いがずっと楽になります。</p>
         </section>
@@ -147,7 +155,7 @@ const ctaRel = 'nofollow sponsored noopener';
             <h2 class="section__title" id="section-6-title">見積書は、契約するための書類ではありません。</h2>
           </div>
           <div class="idea-grid">
-            <img src="/haka-jimai/images/family-conversation.png" alt="家族が資料を見ながら、落ち着いて話し合う様子" loading="lazy" />
+            <img src="/haka-jimai/images/family-estimate-discussion.png" alt="家族が資料を見ながら、落ち着いて話し合う様子" loading="lazy" />
             <div>
               <p>墓じまいで最も多いトラブルは、費用でも業者でもありません。<strong>「相談せずに進めたこと」</strong>です。</p>
               <p>けれど、数字と計画があれば、反対していたご家族とも、住職とも、現実の相談ごととして話し合えます。</p>
@@ -165,11 +173,11 @@ const ctaRel = 'nofollow sponsored noopener';
             <h2 class="section__title" id="section-7-title">墓じまいは、5つのステップで進みます。</h2>
           </div>
           <div class="steps">
-            <article class="step"><h3>ご家族・菩提寺に相談する</h3><p>最初にここを飛ばさないことが、いちばん大切です。</p></article>
-            <article class="step"><h3>新しい供養先を決める</h3><p>決まると「受入証明書」が発行されます。</p></article>
-            <article class="step"><h3>役所で改葬許可証を取得</h3><p>必要書類を現在のお墓がある市区町村へ提出します。</p></article>
-            <article class="step"><h3>閉眼供養と遺骨の取り出し</h3><p>住職に法要をお願いし、遺骨を取り出します。</p></article>
-            <article class="step"><h3>墓石の解体・撤去、墓地の返還</h3><p>更地に戻して管理者へお返しし、完了です。</p></article>
+            <article class="step"><h3>ご家族・菩提寺に相談する</h3><p>最初にここを飛ばさないことが、いちばん大切です。</p><img class="step__image" src="/haka-jimai/images/cost-priest.png" alt="相談と供養のイメージ" loading="lazy" /></article>
+            <article class="step"><h3>新しい供養先を決める</h3><p>決まると「受入証明書」が発行されます。</p><img class="step__image" src="/haka-jimai/images/step-laptop.png" alt="供養先を調べるパソコンのイラスト" loading="lazy" /></article>
+            <article class="step"><h3>役所で改葬許可証を取得</h3><p>必要書類を現在のお墓がある市区町村へ提出します。</p><img class="step__image" src="/haka-jimai/images/step-permit.png" alt="申請書類と虫眼鏡のイラスト" loading="lazy" /></article>
+            <article class="step"><h3>閉眼供養と遺骨の取り出し</h3><p>住職に法要をお願いし、遺骨を取り出します。</p><img class="step__image" src="/haka-jimai/images/step-family-consult.png" alt="家族で相談するイラスト" loading="lazy" /></article>
+            <article class="step"><h3>墓石の解体・撤去、墓地の返還</h3><p>更地に戻して管理者へお返しし、完了です。</p><img class="step__image" src="/haka-jimai/images/cost-excavator.png" alt="解体工事の重機のイラスト" loading="lazy" /></article>
           </div>
           <p class="steps-note">この中で石材店に依頼するのはSTEP 5（と、STEP 4の立ち会い）です。</p>
         </section>
