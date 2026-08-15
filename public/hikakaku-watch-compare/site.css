@@ -286,4 +286,21 @@ table { width: 100%; border-collapse: collapse; }
   .medal img { width: 74px; height: 74px; }
 }
 
+/* Preserve the native aspect ratio of the generated icon strips. */
+.factor-icon, .condition-icon { background-size: 400% auto; }
+
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.section--howto .content { padding-top: 0; }
+.generated-section-image { display: block; width: 100%; height: auto; margin: 0 auto; border: 1px solid var(--hwc-line); border-radius: var(--hwc-radius-small); background: var(--hwc-ivory); box-shadow: 0 4px 13px var(--hwc-shadow); }
+.generated-section-image--flow { margin-top: 16px; }
+.final-cta { padding-block: 16px; }
+.final-cta .content { display: block; width: min(100%, var(--hwc-max)); padding: 0 16px; }
+.generated-final-cta { display: block; width: 100%; border-radius: var(--hwc-radius-small); overflow: hidden; box-shadow: 0 6px 16px var(--hwc-shadow-deep); }
+.generated-final-cta img { display: block; width: 100%; height: auto; }
+
+@media (min-width: 980px) {
+  .section--howto .content, .final-cta .content { width: min(100%, 1080px); max-width: none; }
+  .final-cta .content { padding-inline: 42px; }
+}
+
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .cta { transition: none; } }
