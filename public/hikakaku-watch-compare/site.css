@@ -549,3 +549,190 @@ table { width: 100%; border-collapse: collapse; }
   .case-card { grid-template-columns: 108px minmax(0, 1fr); }
   .case-watch { width: 100px; height: 100px; margin-bottom: 24px; }
 }
+
+/* --------------------------------------------------------------------------
+   Final visual-rhythm pass
+   Each reading section shares one measure, predictable card proportions,
+   and text sizes that remain comfortable without relying on tiny type.
+   -------------------------------------------------------------------------- */
+.section { padding-block: 36px; }
+.section .content { padding-inline: 20px; }
+.section h2 { font-size: 26px; line-height: 1.42; }
+.section-lead, .reason-lead { margin-top: 11px; font-size: 13px; line-height: 1.8; }
+.subsection-head { margin-top: 30px; padding-bottom: 10px; }
+.subsection-head h3, .quote-title, .flow-title { font-size: 19px; }
+
+/* Comparison cards intentionally switch to a vertical list on phones: the
+   model names and prices stay legible instead of being squeezed into columns. */
+.case-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; margin-top: 18px; }
+.case-card { grid-template-columns: 112px minmax(0, 1fr); min-height: 154px; border-radius: 10px; }
+.case-watch { width: 104px; height: 104px; margin: 8px auto 24px; }
+.case-card__text { padding: 13px 12px 30px 0; }
+.case-card__text > b { font-size: 12px; }
+.case-card h3 { font-size: 12px; line-height: 1.45; }
+.case-card dl { margin-top: 8px; font-size: 12px; line-height: 1.5; }
+.case-card__gap { padding: 5px; font-size: 11px; }
+.case-card__gap strong { font-size: 14px; }
+
+.reason-list, .factor-list { margin-top: 15px; border-radius: 10px; }
+.reason-list article, .factor-list article { grid-template-columns: 48px minmax(0, 1fr); gap: 12px; padding: 14px; }
+.reason-list article > .reason-icon, .factor-icon { width: 44px; height: 44px; min-width: 44px; min-height: 44px; }
+.reason-list h3, .factor-list h3 { font-size: 15px; }
+.reason-list p, .factor-list p { margin-top: 5px; font-size: 12px; line-height: 1.72; }
+.prepare-box { margin-top: 20px; padding: 16px; border-radius: 10px; }
+.prepare-box h3 { font-size: 16px; }
+.prepare-box li { padding-block: 9px; font-size: 12px; line-height: 1.65; }
+
+.quote-heading { margin-top: 28px; }
+.comment-list { gap: 10px; margin-top: 14px; }
+.comment-list blockquote { min-height: 78px; padding: 13px 13px 11px 72px; border-radius: 10px; font-size: 12px; line-height: 1.7; }
+.comment-list blockquote::before {
+  top: 13px;
+  left: 13px;
+  width: 45px;
+  height: 45px;
+  border: 1px solid var(--hwc-gold);
+  border-radius: 50%;
+  background-image: url("/hikakaku-watch-compare/ai/comment-person-mark.png");
+  background-position: 50% 20%;
+  background-size: cover;
+}
+.comment-list blockquote:nth-child(n)::before { background-position: 50% 20%; }
+.comment-list cite { font-size: 10px; line-height: 1.55; }
+
+.table-scroll { margin-top: 16px; border-radius: 10px; }
+.compare-guides { gap: 14px; margin-top: 17px; }
+.compare-guides h3 { padding: 10px 12px; font-size: 15px; }
+.compare-guides ul { padding: 13px 16px 14px 31px; font-size: 12px; line-height: 1.7; }
+.record-details { margin-top: 11px; border-radius: 10px; }
+.record-details summary { min-height: 48px; padding: 12px 14px; font-size: 15px; }
+
+.condition-grid { gap: 12px; margin-top: 17px; }
+.condition-grid article { min-height: 282px; padding: 13px; border-radius: 10px; }
+.condition-grid h3 { min-height: 38px; font-size: 14px; }
+.condition-icon {
+  width: 84px;
+  height: 134px;
+  margin: 10px auto 12px;
+  border-radius: 7px;
+  /* Four portrait panels: sizing them as 4 × 1 keeps every watch and its
+     accessories intact instead of clipping the strap or case. */
+  background-size: 400% 100%;
+}
+.condition-grid p { font-size: 11px; line-height: 1.65; }
+
+.entrance-grid { gap: 14px; margin-top: 17px; }
+.entrance-grid article { padding: 16px 16px 18px; border-radius: 10px; }
+.entrance-grid > article > .entrance-visual {
+  width: 110px;
+  height: 155px;
+  margin-bottom: 10px;
+  /* The source contains two portrait panels side by side. */
+  background-size: 200% 100%;
+}
+.entrance-grid article:first-child > .entrance-visual { background-size: 200% 100%; }
+.entrance-grid h3 { font-size: 16px; line-height: 1.5; }
+.entrance-grid h3 b { font-size: 20px; }
+.entrance-grid p { margin-top: 8px; font-size: 12px; line-height: 1.72; }
+.flow-title { margin-top: 30px; }
+.flow-list { gap: 12px; margin-top: 13px; }
+.flow-list li { min-height: 154px; padding: 12px 7px; border-radius: 10px; }
+.flow-icon { width: 46px; height: 68px; margin-bottom: 5px; }
+.flow-list b { width: 23px; height: 23px; margin-bottom: 5px; font-size: 11px; }
+.flow-list span { font-size: 11px; line-height: 1.5; }
+.method-icon { width: 44px; height: 44px; background-size: 400% auto; }
+
+.faq-list { gap: 9px; margin-top: 16px; }
+.faq-list details { border-radius: 10px; }
+.faq-list summary { min-height: 50px; padding: 13px; font-size: 13px; }
+.faq-list details > div { padding: 13px; }
+.faq-list details p { font-size: 12px; line-height: 1.78; }
+.section .cta { min-height: 56px; margin-top: 24px; font-size: 16px; }
+.section--compare .cta, .section--condition .cta { white-space: normal; }
+.footer { padding-block: 25px; }
+.footer .content { padding-inline: 20px; }
+.footer p { font-size: 11px; }
+
+@media (min-width: 600px) {
+  .section .content, .footer .content { padding-inline: 28px; }
+  .case-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .case-card { grid-template-columns: 104px minmax(0, 1fr); min-height: 166px; }
+  .case-watch { width: 98px; height: 98px; }
+  .condition-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 720px) {
+  .section { padding-block: 44px; }
+  .section .content, .footer .content { width: min(calc(100% - 56px), 760px); padding-inline: 0; }
+  .section h2 { font-size: 30px; }
+  .section-lead, .reason-lead { font-size: 14px; }
+  .case-grid { gap: 16px; }
+  .case-card { grid-template-columns: 120px minmax(0, 1fr); min-height: 180px; }
+  .case-watch { width: 112px; height: 112px; }
+  .case-card__text > b, .case-card h3, .case-card dl { font-size: 13px; }
+  .reason-list article, .factor-list article { grid-template-columns: 56px minmax(0, 1fr); padding: 17px; }
+  .reason-list article > .reason-icon, .factor-icon { width: 52px; height: 52px; min-width: 52px; min-height: 52px; }
+  .reason-list h3, .factor-list h3 { font-size: 16px; }
+  .reason-list p, .factor-list p { font-size: 13px; }
+  .condition-grid article { min-height: 288px; padding: 16px; }
+  .condition-icon { width: 90px; height: 144px; }
+  .entrance-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .entrance-grid > article > .entrance-visual { width: 116px; height: 164px; }
+  .flow-list { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .flow-list li { min-height: 164px; }
+}
+
+@media (min-width: 980px) {
+  .section { padding-block: 52px; }
+  .section .content, .footer .content { width: min(calc(100% - 80px), 1120px); padding-inline: 0; }
+  .section h2 { font-size: 34px; line-height: 1.35; }
+  .section-lead, .reason-lead { max-width: 930px; font-size: 15px; }
+  .notice, .source-note { max-width: 980px; font-size: 11px; }
+  .case-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+  .case-card { grid-template-columns: 112px minmax(0, 1fr); min-height: 178px; }
+  .case-watch { width: 106px; height: 106px; margin-bottom: 27px; }
+  .case-card__text { padding-top: 14px; }
+  .case-card__text > b, .case-card h3, .case-card dl { font-size: 12px; }
+  .reason-list, .factor-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .reason-list article, .factor-list article { grid-template-columns: 60px minmax(0, 1fr); min-height: 154px; padding: 19px; }
+  .reason-list article > .reason-icon, .factor-icon { width: 56px; height: 56px; min-width: 56px; min-height: 56px; }
+  .reason-list h3, .factor-list h3 { font-size: 17px; }
+  .reason-list p, .factor-list p { font-size: 13px; }
+  .prepare-box { padding: 20px 24px; }
+  .comment-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .comment-list blockquote { min-height: 132px; }
+  .method-table { font-size: 13px; }
+  .method-table th, .method-table td { padding: 12px 10px; }
+  .compare-guides { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .record-table { font-size: 11px; }
+  .record-table th, .record-table td { padding: 8px; }
+  .condition-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+  .condition-grid article { min-height: 300px; padding: 17px; }
+  .condition-icon { width: 94px; height: 150px; }
+  .entrance-grid { gap: 18px; }
+  .entrance-grid article { min-height: 305px; padding: 18px 22px 20px; }
+  .entrance-grid > article > .entrance-visual { width: 124px; height: 175px; }
+  .entrance-grid h3 { font-size: 17px; }
+  .entrance-grid h3 b { font-size: 22px; }
+  .entrance-grid p { font-size: 13px; }
+  .flow-list { gap: 18px; }
+  .flow-list li { min-height: 170px; }
+  .method-icon { width: 52px; height: 52px; }
+  .flow-list span { font-size: 12px; }
+  .faq-list summary { font-size: 14px; }
+  .faq-list details p { font-size: 13px; }
+}
+
+@media (max-width: 374px) {
+  .section { padding-block: 32px; }
+  .section .content, .footer .content { padding-inline: 16px; }
+  .section h2 { font-size: 24px; }
+  .case-card { grid-template-columns: 102px minmax(0, 1fr); }
+  .case-watch { width: 94px; height: 94px; }
+  .case-card__text > b, .case-card h3, .case-card dl { font-size: 11px; }
+  .condition-grid { grid-template-columns: minmax(0, 1fr); }
+  .condition-grid article { min-height: 276px; }
+  .condition-icon { width: 82px; height: 131px; }
+  .flow-list { gap: 9px; }
+  .flow-list li { min-height: 148px; }
+}
