@@ -14,7 +14,7 @@ ul, ol { padding: 0; }
 .two-column-layout, .page-rail { display: contents; }
 .pr-bar { padding: 7px 16px; color: var(--hwc-paper); background: var(--hwc-navy); text-align: center; font-size: 11px; font-weight: 700; letter-spacing: .03em; }
 
-.hero { position: relative; isolation: isolate; min-height: 548px; color: var(--hwc-ink); background: linear-gradient(90deg, var(--hwc-paper) 0%, var(--hwc-ivory) 46%, var(--hwc-clear) 75%), url("/hikakaku-watch-compare/hero-watches-original.png") 70% 52% / auto 100% no-repeat; border-bottom: 3px solid var(--hwc-navy); }
+.hero { position: relative; isolation: isolate; min-height: 548px; color: var(--hwc-ink); background: linear-gradient(90deg, var(--hwc-paper) 0%, var(--hwc-ivory) 46%, var(--hwc-clear) 75%), url("/hikakaku-watch-compare/reference-assets/hero-watches.png") 70% 52% / auto 100% no-repeat; border-bottom: 3px solid var(--hwc-navy); }
 .hero__inner { padding-top: 30px; padding-bottom: 24px; }
 .hero__eyebrow { display: inline-block; margin-bottom: 14px; padding: 5px 10px; color: var(--hwc-paper); background: var(--hwc-navy); font-size: 12px; font-weight: 800; }
 .hero h1 { position: relative; z-index: 1; max-width: 290px; font-family: var(--hwc-font-serif); font-size: clamp(32px, 9.4vw, 49px); line-height: 1.32; letter-spacing: .015em; }
@@ -230,7 +230,7 @@ table { width: 100%; border-collapse: collapse; }
 
 /* AI-generated visual assets for the appraisal sections */
 .factor-list article { grid-template-columns: 48px 1fr; }
-.factor-icon { width: 42px; height: 42px; border: 0; border-radius: 50%; background-image: url("/hikakaku-watch-compare/ai/appraisal-factors-strip.png"); background-repeat: no-repeat; background-size: 400% 100%; box-shadow: 0 2px 6px var(--hwc-shadow); }
+.factor-icon { width: 42px; height: 42px; border: 0; border-radius: 50%; background-image: url("/hikakaku-watch-compare/reference-assets/b1-b2-icons.png"); background-repeat: no-repeat; background-size: 400% 200%; box-shadow: 0 2px 6px var(--hwc-shadow); }
 .factor-list article:nth-child(1) .factor-icon { background-position: 0% 50%; }
 .factor-list article:nth-child(2) .factor-icon { background-position: 33.333% 50%; }
 .factor-list article:nth-child(3) .factor-icon { background-position: 66.667% 50%; }
@@ -240,7 +240,7 @@ table { width: 100%; border-collapse: collapse; }
 .quote-heading .quote-title { margin-top: 0; }
 .quote-heading img { width: 30px; height: 30px; border: 1px solid var(--hwc-gold); border-radius: 50%; object-fit: cover; object-position: 50% 24%; background: var(--hwc-ivory); }
 
-.condition-icon { width: 76px; height: 76px; margin: 8px auto 10px; border: 0 !important; border-radius: 50%; background-image: url("/hikakaku-watch-compare/ai/condition-icons-strip.png"); background-repeat: no-repeat; background-size: 400% 100%; box-shadow: 0 3px 8px var(--hwc-shadow); }
+.condition-icon { width: 76px; height: 76px; margin: 8px auto 10px; border: 0 !important; border-radius: 50%; background-image: url("/hikakaku-watch-compare/reference-assets/condition-assets.png"); background-repeat: no-repeat; background-size: 400% auto; box-shadow: 0 3px 8px var(--hwc-shadow); }
 .condition-grid article:nth-child(1) .condition-icon { background-position: 0% 50%; }
 .condition-grid article:nth-child(2) .condition-icon { background-position: 33.333% 50%; }
 .condition-grid article:nth-child(3) .condition-icon { background-position: 66.667% 50%; }
@@ -301,6 +301,136 @@ table { width: 100%; border-collapse: collapse; }
 @media (min-width: 980px) {
   .section--howto .content, .final-cta .content { width: min(100%, 1080px); max-width: none; }
   .final-cta .content { padding-inline: 42px; }
+}
+
+/* --------------------------------------------------------------------------
+   Finished reference treatment: generated visual material + HTML text/layout
+   -------------------------------------------------------------------------- */
+.hero { background-image: linear-gradient(90deg, var(--hwc-paper) 0%, var(--hwc-ivory) 46%, var(--hwc-clear) 75%), url("/hikakaku-watch-compare/reference-assets/hero-watches.png"); }
+
+.case-watch { align-self: end; display: block; width: 70px; height: 108px; margin: 8px -8px 12px 0; background-image: url("/hikakaku-watch-compare/reference-assets/comparison-watches.png"); background-repeat: no-repeat; background-size: 200% 200%; filter: drop-shadow(2px 3px 2px var(--hwc-shadow)); }
+.case-card:nth-child(1) .case-watch { background-position: 0% 0%; }
+.case-card:nth-child(2) .case-watch { background-position: 100% 0%; }
+.case-card:nth-child(3) .case-watch { background-position: 0% 100%; }
+.case-card:nth-child(4) .case-watch { background-position: 100% 100%; }
+.reason-list h3 small { margin-right: 7px; color: var(--hwc-gold-dark); font-family: var(--hwc-font-serif); }
+.reason-list article > .reason-icon { display: block; width: 34px; height: 34px; border: 0; border-radius: 50%; background-color: transparent; background-image: url("/hikakaku-watch-compare/reference-assets/b1-b2-icons.png"); background-repeat: no-repeat; background-size: 400% 200%; box-shadow: none; }
+.reason-list article:nth-child(1) .reason-icon { background-position: 0% 0%; }
+.reason-list article:nth-child(2) .reason-icon { background-position: 33.333% 0%; }
+.reason-list article:nth-child(3) .reason-icon { background-position: 66.667% 0%; }
+.reason-list article:nth-child(4) .reason-icon { background-position: 100% 0%; }
+.factor-icon { width: 42px; height: 42px; border-radius: 5px; background-image: url("/hikakaku-watch-compare/reference-assets/b1-b2-icons.png"); background-size: 400% 200%; box-shadow: none; }
+.factor-list article:nth-child(1) .factor-icon { background-position: 0% 100%; }
+.factor-list article:nth-child(2) .factor-icon { background-position: 33.333% 100%; }
+.factor-list article:nth-child(3) .factor-icon { background-position: 66.667% 100%; }
+.factor-list article:nth-child(4) .factor-icon { background-position: 100% 100%; }
+
+.comment-list blockquote { position: relative; min-height: 66px; padding-left: 62px; }
+.comment-list blockquote::before { position: absolute; top: 9px; left: 7px; width: 46px; height: 50px; background-image: url("/hikakaku-watch-compare/reference-assets/comparison-watches.png"); background-repeat: no-repeat; background-size: 200% 200%; content: ""; }
+.comment-list blockquote:nth-child(1)::before { background-position: 0% 0%; }
+.comment-list blockquote:nth-child(2)::before { background-position: 100% 0%; }
+.comment-list blockquote:nth-child(3)::before { background-position: 0% 100%; }
+.comment-list blockquote:nth-child(4)::before { background-position: 100% 100%; }
+
+.method-table thead th { min-width: 98px; padding: 7px 4px 8px; vertical-align: top; }
+.method-icon { display: block; width: 39px; height: 31px; margin: 5px auto 3px; background-image: url("/hikakaku-watch-compare/reference-assets/selling-method-icons.png"); background-repeat: no-repeat; background-size: 400% auto; }
+.method-table thead th:nth-child(2) .method-icon { background-position: 0% 50%; }
+.method-table thead th:nth-child(3) .method-icon { background-position: 33.333% 50%; }
+.method-table thead th:nth-child(4) .method-icon { background-position: 66.667% 50%; }
+.method-table thead th:nth-child(5) .method-icon { background-position: 100% 50%; }
+.method-table thead th:nth-child(3) { background: #4b9cd3; }
+.method-table thead th:nth-child(4) { background: #4f965c; }
+.method-table thead th:nth-child(5) { background: #786b9c; }
+
+.condition-icon { width: 82px; height: 82px; border-radius: 4px; background-image: url("/hikakaku-watch-compare/reference-assets/condition-assets.png"); background-size: 400% auto; box-shadow: none; }
+.condition-grid article:nth-child(1) .condition-icon { background-position: 0% 50%; }
+.condition-grid article:nth-child(2) .condition-icon { background-position: 33.333% 50%; }
+.condition-grid article:nth-child(3) .condition-icon { background-position: 66.667% 50%; }
+.condition-grid article:nth-child(4) .condition-icon { background-position: 100% 50%; }
+
+.entrance-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+.entrance-grid article { min-height: 0; padding: 10px 10px 12px; border-color: #bfd9eb; text-align: center; }
+.entrance-grid article:first-child { border-color: #b8d7ed; background: #f1f9ff; }
+.entrance-grid > article > .entrance-visual { position: static; display: block; width: 100%; height: 76px; margin: 0 auto 6px; border: 0; border-radius: 0; background-image: url("/hikakaku-watch-compare/reference-assets/entrance-assets.png"); background-repeat: no-repeat; background-size: 200% auto; }
+.entrance-grid > article > .entrance-visual--form { background-position: 0% 50%; }
+.entrance-grid > article > .entrance-visual--photo { background-position: 100% 50%; }
+.entrance-grid article:first-child > .entrance-visual { background-color: transparent; background-image: url("/hikakaku-watch-compare/reference-assets/entrance-assets.png"); background-repeat: no-repeat; background-size: 200% auto; background-position: 0% 50%; }
+.entrance-grid h3 { font-size: 12px; line-height: 1.45; }
+.entrance-grid h3 b { font-size: 15px; }
+.entrance-grid p { font-size: 10px; line-height: 1.55; text-align: left; }
+.flow-title { margin-top: 19px; font-size: 15px; }
+.flow-list { gap: 7px; }
+.flow-list li { min-height: 112px; padding: 6px 3px 8px; }
+.flow-icon { display: block; width: 35px; height: 30px; margin: 0 auto 2px; background-image: url("/hikakaku-watch-compare/reference-assets/flow-icons.png"); background-repeat: no-repeat; background-size: 400% auto; }
+.flow-list li:nth-child(1) .flow-icon { background-position: 0% 50%; }
+.flow-list li:nth-child(2) .flow-icon { background-position: 33.333% 50%; }
+.flow-list li:nth-child(3) .flow-icon { background-position: 66.667% 50%; }
+.flow-list li:nth-child(4) .flow-icon { background-position: 100% 50%; }
+.flow-list b { width: 21px; height: 21px; margin-bottom: 3px; background: var(--hwc-navy); font-size: 10px; }
+.flow-list span { font-size: 9px; }
+
+.final-cta { padding: 18px 0 25px; color: var(--hwc-ink); background: var(--hwc-ivory); }
+.final-cta .section-kicker { margin-bottom: 8px; }
+.final-cta__card { display: grid; grid-template-columns: 88px minmax(0, 1fr); align-items: center; gap: 8px; padding: 10px; border: 1px solid var(--hwc-red-dark); border-radius: 12px; color: var(--hwc-paper); background: linear-gradient(135deg, #ef301f, #cb0906 65%, #ae0807); box-shadow: 0 4px 0 #a60908, 0 9px 16px var(--hwc-shadow); }
+.final-cta .medal { display: block; width: 82px; height: 82px; border: 0; border-radius: 50%; background: transparent; box-shadow: none; overflow: hidden; }
+.final-cta .medal img { width: 100%; height: 100%; object-fit: cover; }
+.final-cta p { font-size: 10px; line-height: 1.45; }
+.final-cta h2 { margin-top: 2px; color: var(--hwc-paper); font-size: 23px; }
+.final-cta__body { display: none; }
+.final-cta .cta--final { min-height: 40px; margin-top: 7px; border-color: var(--hwc-paper); background: linear-gradient(180deg, #f83b2a, #c60907); box-shadow: 0 2px 0 #960605; font-size: 13px; }
+.final-cta .trust-list { gap: 4px; margin-top: 7px; }
+.final-cta .trust-list li { padding: 3px 5px; border-color: #f5c262; color: #7b2504; background: #fff9df; box-shadow: none; font-size: 8px; }
+
+@media (min-width: 720px) {
+  .page-rail--left .case-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .case-watch { width: 74px; height: 115px; }
+}
+
+@media (min-width: 980px) {
+  .two-column-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.13fr); align-items: start; }
+  .page-rail { display: block; min-width: 0; }
+  .page-rail--left { border-right: 1px solid var(--hwc-line); }
+  .hero { min-height: 655px; background-position: 93% 52%; background-size: auto 88%; border-bottom: 0; }
+  .hero__inner, .section .content, .final-cta .content { width: auto; max-width: 700px; }
+  .hero__inner { margin-left: auto; padding: 50px 42px 35px; }
+  .hero h1 { max-width: 430px; font-size: 51px; }
+  .hero__lead { max-width: 350px; }
+  .section .content { padding-inline: 25px; }
+  .page-rail--left .section .content { margin-left: auto; }
+  .page-rail--left .factor-list { display: block; }
+  .page-rail--left .factor-list article:nth-child(odd) { border-right: 0; }
+  .page-rail--left .factor-list article:nth-last-child(-n + 2) { border-bottom: 1px solid var(--hwc-line); }
+  .page-rail--left .factor-list article:last-child { border-bottom: 0; }
+  .case-card { grid-template-columns: 63px 1fr; min-height: 154px; }
+  .case-watch { width: 69px; height: 107px; }
+  .condition-grid article { min-height: 247px; }
+  .condition-icon { width: 72px; height: 72px; }
+  .entrance-grid article { min-height: 181px; }
+  .entrance-grid > article > .entrance-visual { height: 92px; }
+  .flow-list li { min-height: 113px; }
+  .final-cta .content { padding-inline: 25px; }
+  .final-cta__card { grid-template-columns: 102px minmax(0, 1fr); }
+  .final-cta .medal { width: 96px; height: 96px; }
+  .final-cta h2 { font-size: 28px; }
+}
+
+@media (max-width: 374px) {
+  .entrance-grid { grid-template-columns: 1fr; }
+  .flow-list { grid-template-columns: repeat(2, 1fr); }
+  .flow-list li:nth-child(2)::after { content: none; }
+  .final-cta__card { grid-template-columns: 70px minmax(0, 1fr); padding: 8px; }
+  .final-cta .medal { width: 66px; height: 66px; }
+  .final-cta h2 { font-size: 19px; }
+}
+
+@media (max-width: 719px) {
+  .hero { min-height: 562px; background-image: linear-gradient(90deg, rgba(255,255,255,.99) 0%, rgba(255,255,255,.98) 72%, rgba(255,252,242,.78) 88%, rgba(255,252,242,.15) 100%), url("/hikakaku-watch-compare/reference-assets/hero-watches.png"); background-position: 128% 100%; background-size: auto 68%; }
+  .hero h1 { max-width: 330px; font-size: 32px; }
+  .hero__lead { max-width: 256px; }
+}
+
+@media (min-width: 720px) and (max-width: 979px) {
+  .hero { background-image: linear-gradient(90deg, rgba(255,255,255,.99) 0%, rgba(255,255,255,.98) 58%, rgba(255,252,242,.74) 76%, rgba(255,252,242,.15) 100%), url("/hikakaku-watch-compare/reference-assets/hero-watches.png"); background-position: 112% 52%; background-size: auto 94%; }
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .cta { transition: none; } }
