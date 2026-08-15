@@ -334,12 +334,12 @@
 .faq h3::before { display: inline-grid; width: 1.35em; height: 1.35em; margin-right: var(--haka-space-xs); place-items: center; border-radius: var(--haka-radius-pill); background: var(--haka-navy); color: var(--haka-paper); content: "Q"; font-family: var(--haka-font-body); font-size: var(--haka-text-sm); }
 .faq p { margin: 0; color: var(--haka-ink-soft); font-size: var(--haka-text-sm); line-height: 1.7; }
 
-.final-cta { padding: var(--haka-space-2xl) var(--haka-space-xl); background: var(--haka-blue-pale); }
-.final-cta__title { margin: 0 0 var(--haka-space-sm); color: var(--haka-navy); font-size: clamp(var(--haka-text-xl), 3.4vw, var(--haka-text-2xl)); font-weight: 800; line-height: 1.5; text-align: center; }
-.final-cta__lead { margin: 0 auto var(--haka-space-xl); color: var(--haka-ink-soft); font-weight: 700; text-align: center; }
+.final-cta { padding: var(--haka-space-lg) var(--haka-space-xl); background: var(--haka-blue-pale); }
+.final-cta__title { margin: 0 0 var(--haka-space-2xs); color: var(--haka-navy); font-size: clamp(var(--haka-text-lg), 2.4vw, 1.75rem); font-weight: 800; line-height: 1.35; text-align: center; }
+.final-cta__lead { margin: 0 auto var(--haka-space-md); color: var(--haka-ink-soft); font-size: var(--haka-text-sm); font-weight: 700; text-align: center; }
 .final-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--haka-space-xl); align-items: center; }
 .form-guide { margin: 0; overflow: hidden; border: var(--haka-rule-thin) solid var(--haka-rule-strong); border-radius: var(--haka-radius-md); background: var(--haka-paper); box-shadow: 0 var(--haka-space-md) var(--haka-space-xl) var(--haka-shadow-soft); }
-.form-guide__image { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: center; }
+.form-guide__image { width: 100%; aspect-ratio: 3 / 2; object-fit: contain; object-position: center; }
 .final-caution { padding: var(--haka-space-lg); border: var(--haka-rule-bold) solid var(--haka-gold-deep); border-radius: var(--haka-radius-md); background: var(--haka-gold-pale); color: var(--haka-ink); font-weight: 800; line-height: 1.65; }
 .final-caution strong { color: var(--haka-red); }
 
