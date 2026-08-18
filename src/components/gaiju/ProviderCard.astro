@@ -13,12 +13,16 @@ interface Props {
 }
 const { provider, animal, ctaLabel, reason, points } = Astro.props as Props;
 const bullets = points && points.length > 0 ? points : provider.strengths;
+/** 提携済み（affiliateUrl設定済み）または1位の主案件のみCTAを出す */
+const showCta = provider.rank === 1;
 ---
 <article class={`gj-provider${provider.rank === 1 ? ' gj-provider--featured' : ''}`}>
   <header class="gj-provider-head">
     <span class="gj-rank-badge">{provider.rank}位</span>
     <h3>{provider.name}</h3>
   </header>
+
+  {provider.company && <p class="gj-provider-company">運営: {provider.company}</p>}
 
   {reason && (
     <div class="gj-provider-reason">
@@ -32,7 +36,13 @@ const bullets = points && points.length > 0 ? points : provider.strengths;
     {bullets.map((b) => <li>{b}</li>)}
   </ul>
 
-  <Cta label={ctaLabel} position="rank1" animal={animal} providerSlug={provider.slug} />
+  {showCta ? (
+    <Cta label={ctaLabel} position="rank1" animal={animal} providerSlug={provider.slug} />
+  ) : (
+    <p class="gj-provider-refnote">
+      料金・保証などの最新条件は{provider.name}の公式サイトでご確認ください。
+    </p>
+  )}
 
   {provider.notes.length > 0 && (
     <ul class="gj-provider-notes">

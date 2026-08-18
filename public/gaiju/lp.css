@@ -533,6 +533,22 @@ a {
   padding-top: 12px;
 }
 
+.gj-provider-company {
+  font-size: 13px;
+  color: var(--gj-text-sub);
+  margin-bottom: 10px !important;
+}
+
+.gj-provider-refnote {
+  margin-top: 12px !important;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--gj-gray);
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--gj-text-sub);
+}
+
 .gj-provider-notes {
   list-style: none;
   font-size: 12px;
