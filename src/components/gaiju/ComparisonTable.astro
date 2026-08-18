@@ -1,6 +1,6 @@
 ---
 import {
-  activeProviders,
+  activeProvidersFor,
   comparisonItems,
   comparisonValue,
 } from '@/data/gaiju-providers';
@@ -11,7 +11,9 @@ interface Props {
   ctaLabel: string;
 }
 const { animal, ctaLabel } = Astro.props as Props;
+const listed = activeProvidersFor(animal);
 const primaryItems = comparisonItems.filter((i) => i.primary);
+const verifiedAt = listed.map((p) => p.verifiedAt).sort().slice(-1)[0] ?? '';
 ---
 <section class="gj-section gj-section--gray" id="comparison" aria-labelledby="comparison-heading">
   <h2 id="comparison-heading">比較表</h2>
@@ -19,7 +21,7 @@ const primaryItems = comparisonItems.filter((i) => i.primary);
   <!-- 1. 重要5項目の簡易比較（スマホ最優先） -->
   <h3 class="gj-sub-heading">まず見たい5項目</h3>
   <div class="gj-summary-cards">
-    {activeProviders.map((provider) => (
+    {listed.map((provider) => (
       <div class="gj-summary-card">
         <p class="gj-summary-card-name"><span class="gj-rank-badge gj-rank-badge--sm">{provider.rank}位</span>{provider.name}</p>
         <dl class="gj-summary-dl">
@@ -38,7 +40,7 @@ const primaryItems = comparisonItems.filter((i) => i.primary);
   <h3 class="gj-sub-heading">全{comparisonItems.length}項目の詳細比較</h3>
 
   <div class="gj-detail-cards">
-    {activeProviders.map((provider) => (
+    {listed.map((provider) => (
       <div class="gj-detail-card">
         <p class="gj-detail-card-name"><span class="gj-rank-badge gj-rank-badge--sm">{provider.rank}位</span>{provider.name}</p>
         <dl class="gj-detail-dl">
@@ -59,7 +61,7 @@ const primaryItems = comparisonItems.filter((i) => i.primary);
       <thead>
         <tr>
           <th scope="col">比較項目</th>
-          {activeProviders.map((provider) => (
+          {listed.map((provider) => (
             <th scope="col">{provider.rank}位 {provider.name}</th>
           ))}
         </tr>
@@ -68,14 +70,17 @@ const primaryItems = comparisonItems.filter((i) => i.primary);
         {comparisonItems.map((item) => (
           <tr>
             <th scope="row">{item.label}</th>
-            {activeProviders.map((provider) => <td>{comparisonValue(provider, item)}</td>)}
+            {listed.map((provider) => <td>{comparisonValue(provider, item)}</td>)}
           </tr>
         ))}
       </tbody>
     </table>
   </div>
 
-  <p class="gj-note">※各項目は公式サイトの案内をもとに記載しています。適用条件・最新情報は各社公式サイトでご確認ください。</p>
+  <p class="gj-note">
+    ※各項目は各社が公開している情報をもとに{verifiedAt}時点で記載しています。
+    条件は変更される場合があります。適用条件・最新情報は必ず各社公式サイトでご確認ください。
+  </p>
 
   <Cta label={ctaLabel} position="comparison" animal={animal} />
 </section>

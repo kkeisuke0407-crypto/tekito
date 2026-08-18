@@ -1,5 +1,5 @@
 ---
-import { activeProviders, comparisonTitle, rankingCriteria } from '@/data/gaiju-providers';
+import { activeProvidersFor, comparisonTitleFor, rankingCriteria } from '@/data/gaiju-providers';
 import ProviderCard from './ProviderCard.astro';
 
 interface Props {
@@ -9,9 +9,11 @@ interface Props {
   rank1Points?: string[];
 }
 const { animal, ctaLabel, rank1Reason, rank1Points } = Astro.props as Props;
+const listed = activeProvidersFor(animal);
+const heading = comparisonTitleFor(animal);
 ---
 <section class="gj-section" id="ranking" aria-labelledby="ranking-heading">
-  <h2 id="ranking-heading">{comparisonTitle}</h2>
+  <h2 id="ranking-heading">{heading}</h2>
 
   <div class="gj-criteria-box">
     <h3>順位の評価基準</h3>
@@ -21,7 +23,7 @@ const { animal, ctaLabel, rank1Reason, rank1Points } = Astro.props as Props;
     </ol>
   </div>
 
-  {activeProviders.map((provider) => (
+  {listed.map((provider) => (
     <ProviderCard
       provider={provider}
       animal={animal}
