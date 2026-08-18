@@ -1,0 +1,23 @@
+---
+import CtaButton from './CtaButton.astro';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  text: string[];
+  label: string;
+  position: string;
+  animal: string;
+  sub: string;
+  final?: boolean;
+}
+const { eyebrow, title, text, label, position, animal, sub, final = false } =
+  Astro.props as Props;
+---
+<aside class={final ? 'cta-box cta-box--final' : 'cta-box'}>
+  <p class="cta-box__eyebrow">{eyebrow}</p>
+  <h2 class="cta-box__title">{title}</h2>
+  {text.map((t) => <p class="cta-box__text">{t}</p>)}
+  <CtaButton label={label} position={position} animal={animal} />
+  <p class="cta-box__sub">{sub}</p>
+</aside>

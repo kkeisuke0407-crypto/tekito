@@ -1,0 +1,69 @@
+---
+import {
+  activeProvidersFor,
+  comparisonItems,
+  comparisonValue,
+} from '@/data/gaiju-providers';
+
+interface Props {
+  animal: string;
+}
+const { animal } = Astro.props as Props;
+const listed = activeProvidersFor(animal);
+const verifiedAt = listed.map((p) => p.verifiedAt).sort().slice(-1)[0] ?? '';
+---
+<!-- スマホ: 縦カード（横スクロールに依存させない） -->
+<div class="compare-cards">
+  {listed.map((provider) => (
+    <div class={provider.rank === 1 ? 'compare-card compare-card--top' : 'compare-card'}>
+      <p class="compare-card__name">
+        <span class="compare-card__rank">{provider.rank}位</span>
+        {provider.name}
+      </p>
+      <dl class="compare-card__dl">
+        {comparisonItems.map((item) => (
+          <div class="compare-card__row">
+            <dt>{item.label}</dt>
+            <dd>{comparisonValue(provider, item)}</dd>
+          </div>
+        ))}
+      </dl>
+      {provider.notes.length > 0 && (
+        <p class="compare-card__note">{provider.notes.map((n) => `※${n}`).join(' ')}</p>
+      )}
+    </div>
+  ))}
+</div>
+
+<!-- PC: 表 -->
+<div class="table-scroll" role="region" aria-label="害獣駆除サービス比較表" tabindex="0">
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th>比較項目</th>
+        {listed.map((provider) => (
+          <th class={provider.rank === 1 ? 'is-recommended' : undefined}>
+            {provider.rank}位 {provider.name}
+          </th>
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+      {comparisonItems.map((item) => (
+        <tr>
+          <th>{item.label}</th>
+          {listed.map((provider) => (
+            <td class={provider.rank === 1 ? 'is-recommended' : undefined}>
+              {comparisonValue(provider, item)}
+            </td>
+          ))}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
+<p class="caption">
+  ※各項目は各社が公開している情報をもとに{verifiedAt}時点で記載しています。
+  条件は変更される場合があります。適用条件・最新情報は必ず各社公式サイトでご確認ください。
+</p>

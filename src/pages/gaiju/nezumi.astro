@@ -1,269 +1,647 @@
 ---
 /**
- * ネズミ駆除比較記事LP（PPC専用）
+ * ネズミ駆除比較記事LP（Google検索広告専用）
  * URL: /gaiju/nezumi/
- * 検索意図: 天井・壁・床下から音がして、ネズミがいるのではないかと不安。原因や侵入口を調べたい。
- * 台本: 03_LP_NEZUMI.md
+ * 台本: HOUSEGUARD_NEZUMI_FINAL_V3.md
+ * テンプレート: cocoon_like_article_lp_template（記事型・白背景／FVのみダーク）
+ *
+ * 対象KW: ネズミ 天井 カリカリ / ネズミ 天井裏 / ネズミ 壁の中 /
+ *         ネズミ 屋根裏 音 / ネズミ 床下 / ネズミ 侵入口 わからない
  */
-import GaijuLp from '@/layouts/GaijuLp.astro';
-import Cta from '@/components/gaiju/Cta.astro';
-import ImagePlaceholder from '@/components/gaiju/ImagePlaceholder.astro';
-import SymptomChecklist from '@/components/gaiju/SymptomChecklist.astro';
-import SelectionCriteria from '@/components/gaiju/SelectionCriteria.astro';
-import RankingSection from '@/components/gaiju/RankingSection.astro';
-import ComparisonTable from '@/components/gaiju/ComparisonTable.astro';
-import ServiceFlow from '@/components/gaiju/ServiceFlow.astro';
-import Faq from '@/components/gaiju/Faq.astro';
-import FinalCta from '@/components/gaiju/FinalCta.astro';
+import GaijuArticleLp from '@/layouts/GaijuArticleLp.astro';
+import CtaButton from '@/components/gaiju/article/CtaButton.astro';
+import CtaBox from '@/components/gaiju/article/CtaBox.astro';
+import ImageSlot from '@/components/gaiju/article/ImageSlot.astro';
+import Comparison from '@/components/gaiju/article/Comparison.astro';
+import { comparisonTitleFor } from '@/data/gaiju-providers';
 
 const ANIMAL = 'nezumi';
-
-const heroBullets = [
-  '現地調査 0円',
-  'お見積り 0円',
-  '関東7県対応',
-  '24時間365日受付',
-  '最短30分・即日対応',
-  '施工箇所の永年保証制度',
-];
-
-const symptoms = [
-  '夜になると天井からカリカリ音がする',
-  '壁の中からゴソゴソ音が聞こえる',
-  '屋根裏で走り回るような音がする',
-  '床下から物音がする',
-  '食品の袋などがかじられている',
-  '家の中で小さな糞を見つけた',
-  '一度対策したのにまた音がする',
-  'どこから入っているのかわからない',
-];
-
-const criteria = [
-  '現地調査の費用',
-  '見積もりの費用',
-  'ネズミへの対応',
-  '侵入口への対策',
-  '再発対策',
-  '保証',
-  '対応エリア',
-  '相談しやすさ・受付体制',
-];
-
-const rank1Points = [
-  'ネズミ対応',
-  '現地調査 0円',
-  'お見積り 0円',
-  '関東7県対応',
-  '24時間365日受付',
-  '最短30分・即日対応',
-  '侵入口の調査・封鎖を含む施工例',
-  '施工箇所の永年保証制度',
-];
-
-const flowSteps = [
-  { title: 'WEBから相談', body: '現在の症状や連絡先などを入力します。' },
-  { title: '現地調査', body: '家の中・外周などを確認し、害獣の種類・被害状況・侵入口などを調査します。' },
-  { title: '見積もり', body: '必要な対策と費用を確認します。' },
-  { title: '内容に納得したら施工', body: '状況に応じて追い出しや侵入口対策等を実施します。' },
-  { title: 'アフター対応', body: '施工内容・保証条件に応じて対応します。' },
-];
-
-const faqItems = [
-  {
-    q: '本当にネズミなのかわかりません',
-    a: [
-      '音だけでは別の害獣の可能性もあります。',
-      'ハウスガード24は複数の害獣へ対応しているため、まず現地調査から相談できます。',
-    ],
-  },
-  {
-    q: '調査や見積もりは有料ですか？',
-    a: [
-      '公式サイトでは、お見積り・調査費0円と案内されています。',
-      '最新条件は公式ページで確認してください。',
-    ],
-  },
-  { q: '夜でも相談できますか？', a: ['公式サイトでは24時間365日対応と案内されています。'] },
-  { q: '対応地域は？', a: ['東京都・千葉県・埼玉県・神奈川県・群馬県・茨城県・栃木県です。'] },
-  {
-    q: '一度対策したあと再発したら？',
-    a: [
-      '施工箇所について永年保証制度が案内されています。',
-      '保証の適用条件や対象範囲は公式ページで確認してください。',
-    ],
-  },
-];
+const comparisonHeading = comparisonTitleFor(ANIMAL);
 ---
 
-<GaijuLp
-  title="天井のカリカリ音はネズミ？侵入口から調べる害獣駆除の比較｜現地調査・見積もり0円"
-  description="天井裏・壁の中・床下からのネズミらしい物音でお困りの方へ。今いる個体だけでなく侵入口まで確認できるかで害獣駆除サービスを比較しました。現地調査・見積もり0円、関東7県対応、24時間365日受付のハウスガード24を当サイト1位として紹介しています。"
+<GaijuArticleLp
+  title="天井から「カリカリ…」その音はネズミ？侵入口から調べる害獣駆除の選び方｜現地調査・見積もり0円"
+  description="天井裏・壁の中・床下からのカリカリ音でネズミを疑っている方へ。本当にネズミなのか、どこから入ったのか、再発対策までしてもらえるか。業者選びの8つの基準で害獣駆除サービスを比較しました。現地調査・見積もり0円のハウスガード24を当サイト1位として紹介しています。"
   animal={ANIMAL}
   path="/gaiju/nezumi/"
-  stickyLabel="無料で現地調査を相談する"
-  stickyCaption="現地調査0円・お見積り0円／関東7県・24時間365日受付"
+  stickyLabel="WEBから無料相談する"
+  stickyNote="現地調査0円・見積もり0円／関東7県・24時間365日受付"
 >
-  <!-- ══ FV ══════════════════════════════════════════════ -->
-  <section class="gj-hero" aria-labelledby="hero-heading">
-    <p class="gj-hero-eyebrow">夜になると家の中から音がする方へ</p>
-    <h1 id="hero-heading">
-      <span class="gj-hero-line">天井から<em>「カリカリ…」</em></span>
-      <span class="gj-hero-line">壁の中から<em>「ゴソゴソ…」</em></span>
-    </h1>
-    <p class="gj-hero-sub">家の中にネズミが入り込んでいるかもしれません。</p>
-    <p>
-      姿が見えなくても、天井裏・壁の中・床下など、普段見えない場所に入り込んでいることがあります。
-    </p>
-    <ul class="gj-hero-questions">
-      <li>どこから入った？</li>
-      <li>本当にネズミ？</li>
-      <li>どこに頼めばいい？</li>
-    </ul>
-    <p>
-      そんなときは、いきなり施工を決めるのではなく、<strong>まず現地で何が起きているか確認する</strong>という方法があります。
-    </p>
+  <!-- ═══════════════════════════════════════════════════
+       FV（ここだけダーク）
+       ═══════════════════════════════════════════════════ -->
+  <section class="fv" slot="fv" aria-labelledby="fv-title">
+    <div class="fv__inner">
+      <p class="fv__eyebrow">夜になると家の中から音がする方へ</p>
 
-    <div class="gj-rank1-box">
-      <p class="gj-rank1-label">当サイトおすすめ1位</p>
-      <p class="gj-rank1-name">ハウスガード24</p>
-      <ul class="gj-check-bullets">
-        {heroBullets.map((b) => <li>{b}</li>)}
+      <h1 class="fv__title" id="fv-title">
+        <span>天井から<span class="fv__onomatope">「カリカリ…」</span></span>
+        <span>壁の中から<span class="fv__onomatope">「ゴソゴソ…」</span></span>
+      </h1>
+
+      <p class="fv__sub">
+        その音、<br />
+        ネズミが入り込んでいるサインかもしれません。
+      </p>
+
+      <p>
+        姿が見えなくても、天井裏・壁の中・床下など、
+        普段見えない場所へ入り込んでいることがあります。
+      </p>
+
+      <ul class="fv__questions">
+        <li>どこから入った？</li>
+        <li>本当にネズミ？</li>
+        <li>業者を呼ぶほど？</li>
       </ul>
-      <Cta
-        label="無料で現地調査を相談する"
-        position="hero"
-        animal={ANIMAL}
-        note="※サービス内容・保証には条件があります。最新条件は公式サイトでご確認ください。"
+
+      <p>
+        そんな状態なら、
+        <span class="fv__lead-strong"
+          >いきなり施工を決めるのではなく、まず「何がいるのか・どこから入ったのか」を確認する</span
+        >
+        という方法があります。
+      </p>
+
+      <div class="fv-card">
+        <p class="fv-card__eyebrow">当サイトおすすめ1位</p>
+        <p class="fv-card__name">ハウスガード24</p>
+
+        <div class="fv-card__highlights">
+          <span class="fv-card__highlight">現地調査 0円</span>
+          <span class="fv-card__highlight">見積もり 0円</span>
+          <span class="fv-card__highlight">関東7県対応</span>
+        </div>
+
+        <ul class="fv-card__notes">
+          <li>24時間365日受付</li>
+          <li>最短30分対応</li>
+          <li>ネズミを含む複数害獣へ対応</li>
+          <li>施工箇所の永年保証制度</li>
+        </ul>
+
+        <CtaButton label="WEBから無料で現地調査を相談する" position="hero" animal={ANIMAL} />
+
+        <p class="caption">
+          ※サービス内容・対応・保証等には条件があります。最新情報は公式サイトをご確認ください。
+        </p>
+      </div>
+
+      <ImageSlot
+        slotId="NEZUMI_HERO_01"
+        purpose="住宅断面をベースに、天井裏・壁内・床下など「見えない場所にネズミがいる可能性」が直感的に伝わる画像。不快な表現は使わない。"
       />
     </div>
-
-    <ImagePlaceholder
-      slotId="NEZUMI_HERO_01"
-      purpose="住宅の天井裏・壁内にネズミが入り込んでいることが直感的に分かる安心感のある住宅断面イメージ"
-    />
   </section>
 
-  <!-- ══ 症状チェック ═════════════════════════════════════ -->
-  <SymptomChecklist
-    title="こんな症状、ありませんか？"
-    lead="ひとつでも心当たりがあれば、家の見えない場所にネズミなどの害獣が入り込んでいる可能性を考えます。"
-    items={symptoms}
-  >
-    <h3>大事なのは「姿を見たか」だけではありません</h3>
-    <p>
-      ネズミは人目につかない場所へ入り込むため、姿を見ていなくても、音・糞・かじられた跡などから気付くことがあります。
-    </p>
-    <p>「ネズミだと思うけど確信がない」という段階でも、現地調査で状況を確認できます。</p>
-    <Cta label="今の症状をWEBから相談する" position="body" animal={ANIMAL} />
-  </SymptomChecklist>
-
-  <!-- ══ 問題提起 ═════════════════════════════════════════ -->
-  <section class="gj-section" aria-labelledby="problem-heading">
-    <h2 id="problem-heading">ネズミは「追い出せば終わり」とは限りません</h2>
-    <p>ネズミ対策というと、</p>
-    <ul class="gj-check-bullets">
-      <li>粘着シート</li>
-      <li>毒餌</li>
-      <li>忌避剤</li>
-    </ul>
-    <p>などを思い浮かべる人も多いと思います。</p>
-    <p>もちろん自分でできる対策もあります。</p>
-    <p>ただし家の中への侵入が続いている場合、「今いるネズミ」だけでなく、</p>
-    <p class="gj-emphasis">どこから家へ入り込んでいるのか</p>
-    <p>まで確認しないと、また同じ場所から侵入する可能性があります。</p>
-
-    <ImagePlaceholder
-      slotId="NEZUMI_ENTRY_ROUTE_02"
-      purpose="屋根・軒下・配管・基礎・壁の隙間等から屋内へ侵入する経路を示す図"
-    />
-  </section>
-
-  <!-- ══ 自力対策 vs プロ ════════════════════════════════ -->
-  <section class="gj-section gj-section--gray" aria-labelledby="diy-heading">
-    <h2 id="diy-heading">自分で対策する場合と、業者へ相談する場合</h2>
-    <div class="gj-two-col">
-      <div class="gj-case-card">
-        <h3>自分で対策しやすいケース</h3>
-        <ul>
-          <li>被害がごく軽い</li>
-          <li>侵入口が自分で確認できる</li>
-          <li>安全に作業できる範囲</li>
-          <li>状況が明確</li>
-        </ul>
-      </div>
-      <div class="gj-case-card gj-case-card--pro">
-        <h3>一度プロへ相談したいケース</h3>
-        <ul>
-          <li>天井裏や壁の中など自分では確認しにくい</li>
-          <li>どこから入っているかわからない</li>
-          <li>一度対策しても再発している</li>
-          <li>糞尿や臭いがある</li>
-          <li>夜間の物音が続いている</li>
-          <li>本当にネズミなのかわからない</li>
-        </ul>
-      </div>
+  <!-- ═══════════════════════════════════════════════════
+       記事ヘッダー
+       ═══════════════════════════════════════════════════ -->
+  <header class="article-header">
+    <div class="article-meta">
+      <span class="article-category">ネズミ・害獣駆除</span>
+      <time datetime="2026-08-18">2026.08.18</time>
     </div>
 
-    <ImagePlaceholder
-      slotId="NEZUMI_DIY_VS_PRO_03"
-      purpose="「自分で対策」対「現地調査→侵入口確認→対策」の違いをシンプルに見せる図"
-    />
+    <p class="article-lead">
+      天井裏や壁の中から物音がすると、「毒餌を買うべきか」「業者を呼ぶべきか」と迷います。
+      ただ、その前に確認しておきたいことが3つあります。
+      この記事では、本当にネズミなのかの見極め方、侵入口を確認する重要性、
+      自分でできる範囲とプロへ相談する判断ライン、そして業者選びの基準までを順番に整理しました。
+    </p>
+
+    <div class="article-author">
+      <div class="article-author__avatar" aria-hidden="true">編</div>
+      <div>
+        <p class="article-author__name">編集部</p>
+        <p class="article-author__text">各社の公式サイト・公開情報をもとに編集しています。</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════
+       導入 / 結論
+       ═══════════════════════════════════════════════════ -->
+  <section class="section">
+    <p>
+      天井からカリカリ音がすると、
+      「毒餌を置けばいい？」「粘着シートを買えばいい？」「業者を呼んだ方がいい？」
+      と迷うと思います。
+    </p>
+
+    <div class="speech speech--left">
+      <div class="speech__icon">読</div>
+      <div class="speech__bubble">とりあえず駆除グッズを買えばいいのかな？</div>
+    </div>
+
+    <p>
+      ですが、最初に確認したいのは、駆除方法ではありません。
+      <span class="marker"
+        ><strong>何がいるのか、どこから入ったのか、を先に確認する</strong></span
+      >
+      ほうが、結果的に遠回りになりにくいからです。
+    </p>
+
+    <div class="summary-box">
+      <p class="summary-box__title">この記事の結論</p>
+      <ul class="check-list">
+        <li>天井・壁・床下の音は、必ずしもネズミとは限らない</li>
+        <li>今いる個体より、侵入口が残っているかどうかが重要</li>
+        <li>「捕まえた」で終わらず、再発対策まで確認する</li>
+        <li>まずは現地調査・見積もりが無料の業者で状態を確認する</li>
+      </ul>
+    </div>
   </section>
 
-  <!-- ══ 比較の観点 ══════════════════════════════════════ -->
-  <SelectionCriteria
-    title="ネズミ駆除業者はこの8点で比較"
-    items={criteria}
-    summary="<strong>「今いる個体をどうするか」だけでなく、家への侵入原因まで確認しやすいか</strong>を重視します。"
+  <!-- ═══════════════════════════════════════════════════
+       目次
+       ═══════════════════════════════════════════════════ -->
+  <nav class="toc" aria-label="目次">
+    <p class="toc__title">この記事の内容</p>
+    <ol>
+      <li><a href="#check3">いきなり駆除を頼む前に3つ確認</a></li>
+      <li><a href="#symptom">こんな症状ありませんか？</a></li>
+      <li><a href="#not-only-rat">「カリカリ音＝ネズミ」とは限らない</a></li>
+      <li><a href="#entry">なぜ侵入口が重要なのか</a></li>
+      <li><a href="#diy">自分でできること／プロへ相談する判断ライン</a></li>
+      <li><a href="#criteria">失敗しにくい業者選び 8つの基準</a></li>
+      <li><a href="#compare">{comparisonHeading}</a></li>
+      <li><a href="#rank1">1位 ハウスガード24を詳しく見る</a></li>
+      <li><a href="#flow">WEB相談から施工までの流れ</a></li>
+      <li><a href="#faq">よくある質問</a></li>
+    </ol>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════
+       4. 3つ確認
+       ═══════════════════════════════════════════════════ -->
+  <section class="section" id="check3">
+    <h2>その音、いきなり駆除を頼む前に3つ確認してください</h2>
+
+    <p>
+      駆除グッズを買うのも、業者へ電話するのも、どちらもこの3つを確認してからで遅くありません。
+    </p>
+
+    <div class="point-grid">
+      <div class="point-card">
+        <span class="point-card__number">01</span>
+        <h3>本当にネズミなのか</h3>
+        <p>
+          天井・壁・床下から音がしても、原因が必ずネズミとは限りません。
+          動物の種類によって必要な対策も変わります。
+        </p>
+      </div>
+
+      <div class="point-card">
+        <span class="point-card__number">02</span>
+        <h3>どこから家へ入ったのか</h3>
+        <p>
+          今いる個体だけが見えなくなっても、侵入口が残っていれば再び入り込む可能性があります。
+        </p>
+      </div>
+
+      <div class="point-card">
+        <span class="point-card__number">03</span>
+        <h3>再発対策までしてくれるか</h3>
+        <p>
+          「捕まえた」「追い出した」で終わるのではなく、
+          <strong>家へ入り込む経路まで確認する</strong>ことが大切です。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       5. 症状チェック
+       ═══════════════════════════════════════════════════ -->
+  <section class="section" id="symptom">
+    <h2>こんな症状ありませんか？</h2>
+
+    <p>ひとつでも心当たりがあれば、家の見えない場所に何かが入り込んでいる可能性を考えます。</p>
+
+    <ul class="check-list">
+      <li>夜になると天井からカリカリ音がする</li>
+      <li>壁の中からゴソゴソ音が聞こえる</li>
+      <li>屋根裏を走り回るような音がする</li>
+      <li>床下から物音がする</li>
+      <li>食品の袋がかじられている</li>
+      <li>小さな糞を見つけた</li>
+      <li>一度対策したのにまた音がする</li>
+      <li>どこから入っているのかわからない</li>
+    </ul>
+
+    <h3>「姿は見ていないけれど、音だけする」段階でも構いません</h3>
+
+    <p>
+      ネズミは人目につきにくい場所へ入り込むことがあるため、
+      <span class="marker"><strong>「姿は見ていないけれど、音だけする」</strong></span>
+      という段階でも異変に気付くことがあります。
+    </p>
+
+    <p>
+      ハウスガード24の公式ページでも、屋根裏・床下の物音、糞、壁や天井のシミ、
+      駆除後に同じ症状が出たケースなどが相談例として案内されています。
+    </p>
+  </section>
+
+  <!-- 中間CTA① 読者が「相談してよい状態」だと理解した直後 -->
+  <CtaBox
+    eyebrow="まだ依頼を決めていない段階でも大丈夫です"
+    title="今の症状を伝えて、まず何がいるのか確認してもらう"
+    text={[
+      '「ネズミを駆除してください」と決めてから連絡する必要はありません。現地調査と見積もりが0円のため、状態を確認したうえで、依頼するかどうかを判断できます。',
+    ]}
+    label="今の症状をWEBから相談する"
+    position="body"
+    animal={ANIMAL}
+    sub="現地調査0円 / 見積もり0円 / 関東7県 / 24時間365日受付"
   />
 
-  <!-- ══ ランキング ══════════════════════════════════════ -->
-  <RankingSection
-    animal={ANIMAL}
-    ctaLabel="ハウスガード24へWEB相談する"
-    rank1Reason={{
-      title: '今回の検索者と相性がいい理由',
-      paragraphs: [
-        '「天井から音がする」「壁の中に何かいる」「侵入口がわからない」という人にとって、最初から施工を決めるのではなく、現地調査・見積もりから相談できる点が使いやすいと評価しました。',
-      ],
-    }}
-    rank1Points={rank1Points}
-  >
-    <div slot="rank1-extra" class="gj-guarantee">
-      <h4>保証について</h4>
-      <p>
-        一度施工した箇所で再度害獣被害が発生した場合について、保証期間を設けず無償で再施工する永年保証制度が公式サイトで案内されています。
-      </p>
-      <p class="gj-note">※適用条件・対象範囲は必ず公式サイトで確認してください。</p>
+  <!-- ═══════════════════════════════════════════════════
+       6. ネズミとは限らない
+       ═══════════════════════════════════════════════════ -->
+  <section class="section" id="not-only-rat">
+    <h2>でも「カリカリ音＝ネズミ」とは限りません</h2>
+
+    <h3>ネズミだと思っていたら、別の害獣という可能性もあります</h3>
+
+    <p>家に入り込む可能性があるのは、ネズミだけではありません。</p>
+
+    <p>ハウスガード24は、</p>
+
+    <ul>
+      <li>ネズミ</li>
+      <li>コウモリ</li>
+      <li>イタチ</li>
+      <li>ハクビシン</li>
+      <li>アライグマ</li>
+    </ul>
+
+    <p>等へ対応しています。</p>
+
+    <div class="note-box">
+      <strong>ポイント：</strong>
+      「ネズミを駆除してください」ではなく、
+      <strong>「天井から音がするので、何がいるのか調べてほしい」</strong>
+      という相談から始めても構いません。
     </div>
-  </RankingSection>
 
-  <!-- ══ 比較表 ══════════════════════════════════════════ -->
-  <ComparisonTable animal={ANIMAL} ctaLabel="1位の詳細・無料相談を見る" />
+    <p>これが、今回の比較で「現地調査」を重視する理由です。</p>
+  </section>
 
-  <!-- ══ 1位の詳細 ═══════════════════════════════════════ -->
-  <section class="gj-section" aria-labelledby="rank1-detail-heading">
-    <h2 id="rank1-detail-heading">ハウスガード24を詳しく見る</h2>
+  <!-- ═══════════════════════════════════════════════════
+       7. 侵入口
+       ═══════════════════════════════════════════════════ -->
+  <section class="section" id="entry">
+    <h2>なぜ侵入口が重要なのか</h2>
 
-    <h3>まず状況確認から始められる</h3>
-    <p>害獣トラブルで困るのが、「何がいるのかわからない」という状態です。</p>
+    <h3>ネズミがいなくなっても、「入口」が残っていれば終わらない可能性があります</h3>
+
+    <p>侵入口候補として考えられるのは、</p>
+
+    <ul>
+      <li>屋根・軒下まわり</li>
+      <li>外壁の隙間</li>
+      <li>配管周辺</li>
+      <li>換気口</li>
+      <li>床下</li>
+      <li>基礎付近</li>
+      <li>建物の劣化箇所</li>
+    </ul>
+
+    <p>など。家の構造によって異なるため、自分では判断しにくい場所もあります。</p>
+
+    <ImageSlot
+      slotId="NEZUMI_ENTRY_ROUTE_02"
+      purpose="家の外側から、屋根／軒下／配管／換気口／床下／壁の隙間などの侵入口候補を示す住宅イラスト"
+    />
+
+    <h3>「捕まえる」だけではなく、家全体を見る</h3>
+
+    <p>粘着シートや毒餌などで、目の前のネズミへ対策する方法もあります。</p>
+
+    <p>ただ、</p>
+
+    <ul>
+      <li>侵入口がわからない</li>
+      <li>天井裏へ入れない</li>
+      <li>壁の中で音がする</li>
+      <li>一度対策したのに再発</li>
+      <li>糞尿や臭いがある</li>
+    </ul>
+
     <p>
-      ハウスガード24では、ネズミだけでなく、コウモリ・イタチ・ハクビシン・アライグマなどにも対応しています。
+      という場合には、
+      <span class="marker"><strong>「今いるネズミ」ではなく、家全体の状態を確認する</strong></span>
+      という考え方が必要になります。
     </p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       9. 放置した場合
+       ═══════════════════════════════════════════════════ -->
+  <section class="section">
+    <h2>放置した場合に気になること</h2>
+
+    <p>考えられる問題として、次のようなものがあります。</p>
+
+    <ul>
+      <li>糞尿</li>
+      <li>臭い</li>
+      <li>食品や家具等へのかじり</li>
+      <li>建物内部の汚れ</li>
+      <li>ノミ・ダニ等</li>
+      <li>再侵入</li>
+    </ul>
+
+    <div class="note-box">
+      重要なのは、<strong>怖がることではなく、被害がどこまで広がっているか確認すること</strong>です。
+      現在の状態が分かれば、必要な対策の範囲も判断しやすくなります。
+    </div>
+
+    <ImageSlot
+      slotId="NEZUMI_DAMAGE_03"
+      purpose="糞尿・臭い・かじり跡・建物内部の汚れなど、確認しておきたい被害箇所を落ち着いたトーンで示す図"
+    />
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       10-11. 自分でできること / プロへ相談
+       ═══════════════════════════════════════════════════ -->
+  <section class="section" id="diy">
+    <h2>自分でできることもあります</h2>
+
+    <p>いきなり業者へ依頼する必要がないケースもあります。自分でできる対策例としては、</p>
+
+    <ul class="good-list">
+      <li>食品を密閉する</li>
+      <li>生ゴミを放置しない</li>
+      <li>巣材になりそうな紙・布を整理する</li>
+      <li>安全に確認できる範囲で隙間を見る</li>
+      <li>被害場所を記録する</li>
+    </ul>
+
+    <p>などがあります。</p>
+
+    <h3>自分で様子を見やすいケース</h3>
+
+    <ul class="good-list">
+      <li>被害が軽い</li>
+      <li>安全な場所だけで確認できる</li>
+      <li>侵入口が明確</li>
+      <li>再発していない</li>
+    </ul>
+
+    <h3>一度プロへ相談したいケース</h3>
+
+    <ul class="bad-list">
+      <li>天井裏や壁の中で確認できない</li>
+      <li>侵入口が見つからない</li>
+      <li>一度対策したが再発</li>
+      <li>糞尿・臭いがある</li>
+      <li>夜間の音が続いている</li>
+      <li>ネズミかどうか確信がない</li>
+    </ul>
+
+    <ImageSlot
+      slotId="NEZUMI_DIY_VS_PRO_04"
+      purpose="左に「自分でできる範囲の対策」、右に「現地調査→侵入口確認→封鎖→再発対策」を並べた比較図"
+    />
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       12-13. 業者選び
+       ═══════════════════════════════════════════════════ -->
+  <section class="section" id="criteria">
+    <h2>害獣駆除業者は「料金」だけで選ばない</h2>
+
+    <h3>「○○円〜」だけでは、自分の家でいくらかかるかはわかりません</h3>
+
+    <p>害獣駆除は、</p>
+
+    <ul>
+      <li>被害場所</li>
+      <li>建物構造</li>
+      <li>侵入口</li>
+      <li>必要な施工</li>
+    </ul>
+
+    <p>によって内容が変わります。そのため、最低価格だけでは比較しにくいジャンルです。</p>
+
     <p>
-      そのため、音はするけれど動物の種類が判断できない場合でも、現地調査から相談しやすいのが特徴です。
+      まず現地で状態を確認し、
+      <strong>必要な施工と費用を説明してもらえるか</strong>を見ます。
     </p>
 
-    <h3>侵入口まで確認</h3>
-    <p>ネズミ施工例では、侵入口を調査し、穴を封鎖する対応が案内されています。</p>
-    <p>一時的に追い出すだけでなく、再び入り込む経路への対策も業者選びでは確認したいポイントです。</p>
+    <h3>失敗しにくい業者選び 8つの基準</h3>
 
-    <h3>調査・見積もり0円</h3>
-    <p>実際の状態と必要な対策を確認してから、依頼するか検討できます。</p>
+    <div class="point-grid">
+      <div class="point-card">
+        <span class="point-card__number">01</span>
+        <h3>現地調査</h3>
+        <p>本当にネズミなのか、被害場所を確認できるか。</p>
+      </div>
+      <div class="point-card">
+        <span class="point-card__number">02</span>
+        <h3>見積もり</h3>
+        <p>施工前に費用を確認できるか。</p>
+      </div>
+      <div class="point-card">
+        <span class="point-card__number">03</span>
+        <h3>対応害獣</h3>
+        <p>ネズミ以外の可能性も確認できるか。</p>
+      </div>
+      <div class="point-card">
+        <span class="point-card__number">04</span>
+        <h3>侵入口調査</h3>
+        <p>どこから入ったか確認できるか。</p>
+      </div>
+      <div class="point-card">
+        <span class="point-card__number">05</span>
+        <h3>侵入口対策</h3>
+        <p>穴や隙間への施工に対応しているか。</p>
+      </div>
+      <div class="point-card">
+        <span class="point-card__number">06</span>
+        <h3>再発対策</h3>
+        <p>追い出して終わりではないか。</p>
+      </div>
+      <div class="point-card">
+        <span class="point-card__number">07</span>
+        <h3>保証</h3>
+        <p>施工後の保証条件があるか。</p>
+      </div>
+      <div class="point-card">
+        <span class="point-card__number">08</span>
+        <h3>対応地域・受付体制</h3>
+        <p>自宅へ対応でき、相談しやすい時間帯か。</p>
+      </div>
+    </div>
+  </section>
 
-    <h3>関東7県</h3>
-    <p>対応地域:</p>
-    <ul class="gj-check-bullets">
+  <!-- ═══════════════════════════════════════════════════
+       14-15. 比較
+       ═══════════════════════════════════════════════════ -->
+  <section class="section" id="compare">
+    <h2>{comparisonHeading}</h2>
+
+    <p>当サイトでは、次の8条件を中心に確認し、総合的に順位を決めています。</p>
+
+    <ul>
+      <li>現地調査</li>
+      <li>見積もり</li>
+      <li>対応害獣</li>
+      <li>侵入口対策</li>
+      <li>再発対策</li>
+      <li>保証</li>
+      <li>対応地域</li>
+      <li>受付体制</li>
+    </ul>
+
+    <div class="warning-box">
+      <p class="warning-box__title">順位の付け方について</p>
+      <p>
+        当サイトはアフィリエイト広告を利用していますが、
+        <strong>成果報酬額だけで順位を決めていません。</strong>
+        上記の条件を確認したうえで、今回の検索意図（天井・壁の音／侵入口が分からない）に
+        合いやすい順に掲載しています。
+      </p>
+    </div>
+
+    <Comparison animal={ANIMAL} />
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       16-21. 1位の詳細
+       ═══════════════════════════════════════════════════ -->
+  <section class="section" id="rank1">
+    <h2>1位 ハウスガード24｜なぜ今回1位なのか？</h2>
+
+    <p>今回の検索者が抱えている問題は、次の3つです。</p>
+
+    <div class="summary-box">
+      <p class="summary-box__title">この記事を読んでいる人の状況</p>
+      <ul class="check-list">
+        <li>何がいるかわからない</li>
+        <li>どこから入ったかわからない</li>
+        <li>また出たら困る</li>
+      </ul>
+    </div>
+
+    <p>ハウスガード24は、この流れとサービス内容が噛み合っています。</p>
+
+    <h3>理由①「ネズミかわからない」状態から相談できる</h3>
+
+    <p>ネズミだけでなく、コウモリ・イタチ・ハクビシン・アライグマ等にも対応しています。</p>
+
+    <p>音だけで動物を断定できない場合でも、現地調査から相談できます。</p>
+
+    <h3>理由② 侵入口対策を含む施工例</h3>
+
+    <p>ハウスガード24のネズミ施工例では、</p>
+
+    <ol>
+      <li>追い出し用薬剤</li>
+      <li>侵入口調査</li>
+      <li>侵入口封鎖</li>
+      <li>消臭</li>
+      <li>ノミ・ダニ対策</li>
+      <li>消毒</li>
+    </ol>
+
+    <p>
+      等が案内されています。今回のキーワードが「ネズミ 侵入口 わからない」を含むため、
+      <span class="marker"><strong>この部分を強く評価しました</strong></span>。
+    </p>
+
+    <h3>理由③ 現地調査・見積もり0円</h3>
+
+    <p>施工を決める前に、現在の被害状況と必要な対策を確認できます。</p>
+
+    <p>
+      いきなり契約を前提にするのではなく、<strong>まず家の状態を確認する</strong>
+      という使い方ができます。
+    </p>
+
+    <h3>理由④ 24時間365日受付</h3>
+
+    <p>ネズミの物音は、夜に気付くケースもあります。</p>
+
+    <p>ハウスガード24は24時間365日受付を案内しています。</p>
+
+    <h3>理由⑤ 施工箇所の永年保証制度</h3>
+
+    <p>
+      一度施工した箇所で、再度害獣被害が発生した場合について、
+      保証期間を設けず無償で再施工する永年保証制度が案内されています。
+    </p>
+
+    <p class="caption">※適用条件・対象範囲は必ず公式サイトでご確認ください。</p>
+  </section>
+
+  <!-- 中間CTA② サービス紹介直後 -->
+  <CtaBox
+    eyebrow="施工を決める前に状態だけ確認できます"
+    title="ハウスガード24へ、無料で現地調査を相談する"
+    text={[
+      '調査費・見積もりが0円のため、「何がいるのか」「どこから入ったのか」を確認してから、依頼するかどうかを判断できます。関東7県が対象で、受付は24時間365日です。',
+    ]}
+    label="無料で現地調査を相談する"
+    position="rank1"
+    animal={ANIMAL}
+    sub="※サービス内容・保証には条件があります。最新条件は公式サイトでご確認ください。"
+  />
+
+  <!-- ═══════════════════════════════════════════════════
+       22. 公式掲載のネズミ利用例
+       ═══════════════════════════════════════════════════ -->
+  <section class="section">
+    <h2>公式サイトに掲載されているネズミの利用例</h2>
+
+    <p>ここでは、ハウスガード24の公式サイトに掲載されている利用例を要約して紹介します。</p>
+
+    <div class="case-box">
+      <p class="case-box__label">公式サイト掲載例の要約（45歳男性／対応害獣：ネズミ）</p>
+      <dl>
+        <dt>最初の異変</dt>
+        <dd>2階天井や1階リビングの壁から音。</dd>
+
+        <dt>その後</dt>
+        <dd>床に糞。食品袋がかじられる。</dd>
+
+        <dt>現地調査</dt>
+        <dd>ネズミと判明。</dd>
+
+        <dt>対応</dt>
+        <dd>家の穴を封鎖。</dd>
+      </dl>
+    </div>
+
+    <h3>この記事との共通点</h3>
+
+    <p>
+      最初のきっかけが、<strong>「ネズミを見た」ではなく「音」</strong>だったことです。
+    </p>
+
+    <p>今回の「天井 カリカリ」「壁の中」と非常に近い相談例だといえます。</p>
+
+    <ImageSlot
+      slotId="NEZUMI_CASE_01"
+      purpose="天井の音 → 糞・かじり跡 → 現地調査 → 穴の封鎖、という利用例の流れを示す図"
+    />
+
+    <p class="caption">
+      ※上記は公式サイト掲載例を当サイトで要約したものです。利用者本人の発言として記載したものではありません。
+    </p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       23. 対応地域
+       ═══════════════════════════════════════════════════ -->
+  <section class="section">
+    <h2>対応地域は関東7県</h2>
+
+    <ul>
       <li>東京都</li>
       <li>千葉県</li>
       <li>埼玉県</li>
@@ -273,31 +651,171 @@ const faqItems = [
       <li>栃木県</li>
     </ul>
 
-    <h3>24時間365日受付</h3>
-    <p>夜になって物音に気付いた場合などにも、相談窓口が用意されています。</p>
-
-    <Cta label="無料で現地調査を相談する" position="rank1" animal={ANIMAL} />
+    <ImageSlot
+      slotId="KANTO_AREA_01"
+      purpose="関東7県（東京・千葉・埼玉・神奈川・群馬・茨城・栃木）を色分けした対応エリア地図"
+      ratio="4 / 3"
+    />
   </section>
 
-  <!-- ══ 施工フロー ══════════════════════════════════════ -->
-  <ServiceFlow steps={flowSteps}>
-    <ImagePlaceholder
-      slotId="NEZUMI_FLOW_04"
+  <!-- ═══════════════════════════════════════════════════
+       24. 流れ
+       ═══════════════════════════════════════════════════ -->
+  <section class="section" id="flow">
+    <h2>WEB相談から施工までの流れ</h2>
+
+    <ol class="step-list">
+      <li class="step-item">
+        <span class="step-item__num">STEP 1</span>
+        <div>
+          <h3>WEB相談</h3>
+          <p>気になる音や場所などを入力します。</p>
+        </div>
+      </li>
+      <li class="step-item">
+        <span class="step-item__num">STEP 2</span>
+        <div>
+          <h3>現地調査</h3>
+          <p>害獣の種類、被害状況、侵入口等を確認します。</p>
+        </div>
+      </li>
+      <li class="step-item">
+        <span class="step-item__num">STEP 3</span>
+        <div>
+          <h3>見積もり</h3>
+          <p>必要な対策・費用を説明してもらいます。</p>
+        </div>
+      </li>
+      <li class="step-item">
+        <span class="step-item__num">STEP 4</span>
+        <div>
+          <h3>内容を確認して施工</h3>
+          <p>状況に応じた施工を行います。</p>
+        </div>
+      </li>
+      <li class="step-item">
+        <span class="step-item__num">STEP 5</span>
+        <div>
+          <h3>アフター対応</h3>
+          <p>保証条件等に応じて対応します。</p>
+        </div>
+      </li>
+    </ol>
+
+    <ImageSlot
+      slotId="NEZUMI_FLOW_05"
       purpose="WEB相談→現地調査→見積もり→施工→アフター対応の5ステップ図"
       ratio="16 / 9"
     />
-  </ServiceFlow>
+  </section>
 
-  <!-- ══ FAQ ═════════════════════════════════════════════ -->
-  <Faq animal={ANIMAL} items={faqItems} ctaLabel="FAQを確認したうえでWEBから相談する" />
+  <!-- ═══════════════════════════════════════════════════
+       25. FAQ
+       ═══════════════════════════════════════════════════ -->
+  <section class="section" id="faq">
+    <h2>よくある質問</h2>
 
-  <!-- ══ 最終CTA ═════════════════════════════════════════ -->
-  <FinalCta
+    <div class="faq-list">
+      <details class="faq-item" data-gj-faq>
+        <summary>ネズミかどうかわかりません</summary>
+        <div class="faq-item__answer">
+          <p>音だけでネズミと断定できないこともあります。</p>
+          <p>
+            ハウスガード24は複数害獣へ対応しているため、まず何がいるのか現地調査から相談できます。
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item" data-gj-faq>
+        <summary>自分で粘着シートを置いてもいい？</summary>
+        <div class="faq-item__answer">
+          <p>軽いケースなら、自分で対策する方法もあります。</p>
+          <p>
+            ただし、侵入口不明・壁や天井の内部・再発・糞尿や臭いなどがある場合には、
+            家全体を確認してもらう選択肢もあります。
+          </p>
+        </div>
+      </details>
+
+      <details class="faq-item" data-gj-faq>
+        <summary>調査や見積もりは有料ですか？</summary>
+        <div class="faq-item__answer">
+          <p>公式サイトでは、調査費・見積もり0円と案内されています。</p>
+          <p>最新条件は公式ページで確認してください。</p>
+        </div>
+      </details>
+
+      <details class="faq-item" data-gj-faq>
+        <summary>夜でも相談できますか？</summary>
+        <div class="faq-item__answer">
+          <p>公式サイトでは、24時間365日受付と案内されています。</p>
+        </div>
+      </details>
+
+      <details class="faq-item" data-gj-faq>
+        <summary>対応地域は？</summary>
+        <div class="faq-item__answer">
+          <p>東京都・千葉県・埼玉県・神奈川県・群馬県・茨城県・栃木県です。</p>
+        </div>
+      </details>
+
+      <details class="faq-item" data-gj-faq>
+        <summary>再発した場合は？</summary>
+        <div class="faq-item__answer">
+          <p>施工箇所について永年保証制度が案内されています。</p>
+          <p>保証条件・対象範囲は公式サイトで確認してください。</p>
+        </div>
+      </details>
+
+      <details class="faq-item" data-gj-faq>
+        <summary>すぐ施工を決めないといけませんか？</summary>
+        <div class="faq-item__answer">
+          <p>
+            まず現地調査・見積もりで、現在の状態や必要な施工を確認し、
+            内容を確認してから判断する流れです。
+          </p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       26. 最終訴求
+       ═══════════════════════════════════════════════════ -->
+  <section class="section">
+    <h2>天井の「カリカリ…」、壁の中の「ゴソゴソ…」</h2>
+
+    <p>「ネズミなのかな」と考え続けるより、</p>
+
+    <p>
+      <span class="marker"
+        ><strong>まず何がいるのか。どこから入ったのか。</strong></span
+      >
+      を確認するところから始められます。
+    </p>
+
+    <div class="summary-box">
+      <p class="summary-box__title">当サイトおすすめ1位 ハウスガード24</p>
+      <ul class="check-list">
+        <li>現地調査 0円</li>
+        <li>見積もり 0円</li>
+        <li>関東7県対応</li>
+        <li>24時間365日受付</li>
+        <li>施工箇所の永年保証制度</li>
+      </ul>
+    </div>
+  </section>
+
+  <CtaBox
+    eyebrow="相談は無料"
+    title="WEBから無料で現地調査を相談する"
+    text={[
+      '入力後、現地で状態を確認し、必要な対策と費用の見積もりを確認してから、依頼するかどうかを判断できます。',
+    ]}
+    label="WEBから無料で現地調査を相談する"
+    position="final"
     animal={ANIMAL}
-    headingLines={['天井の「カリカリ…」', '壁の中の「ゴソゴソ…」']}
-    lead={['気になった状態のまま生活するより、まず何が起きているのか確認してみる。']}
-    providerName="ハウスガード24"
-    bullets={['現地調査 0円', 'お見積り 0円', '関東7県対応', '24時間365日受付']}
-    ctaLabel="WEBから無料相談する"
+    sub="※サービス内容・料金・対応・保証条件等の最新情報は公式サイトをご確認ください。"
+    final={true}
   />
-</GaijuLp>
+</GaijuArticleLp>

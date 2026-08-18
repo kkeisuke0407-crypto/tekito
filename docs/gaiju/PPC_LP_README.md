@@ -8,7 +8,22 @@
 | `/gaiju/koumori/` | AG02 コウモリ・侵入 | `src/pages/gaiju/koumori.astro` |
 | `/gaiju/hakubishin/` | AG03 ハクビシン・屋根裏症状 | `src/pages/gaiju/hakubishin.astro` |
 
-既存の `/gaiju/`（SEO記事）とは独立。CSS/JSも別ファイル（`public/gaiju/lp.css` / `public/gaiju/lp.js`）。
+既存の `/gaiju/`（SEO記事）とは独立。CSS/JSも別ファイル。
+
+## ページごとのテンプレート
+
+| ページ | レイアウト | CSS |
+|---|---|---|
+| `/gaiju/nezumi/` | `src/layouts/GaijuArticleLp.astro`（Cocoon風 記事LPテンプレート／FVのみダーク） | `public/gaiju/article-lp.css` |
+| `/gaiju/koumori/` `/gaiju/hakubishin/` | `src/layouts/GaijuLp.astro` | `public/gaiju/lp.css` |
+
+ネズミは `HOUSEGUARD_NEZUMI_FINAL_V3.md` の台本にもとづき、
+`cocoon_like_article_lp_template` のクラス構造（`section` / `point-card` / `summary-box` /
+`warning-box` / `note-box` / `speech` / `marker` / `check-list` / `good-list` / `bad-list` /
+`step-list` / `faq-item` / `compare-table` / `cta-box`）をそのまま使って記事型に組み直している。
+コウモリ・ハクビシンを同じ形にする場合は nezumi.astro を雛形にする。
+
+計測スクリプトは3ページ共通で `public/gaiju/lp.js`。
 
 ---
 
@@ -46,7 +61,12 @@
 - 電話CTAは実装しない（ASPの成果地点が「WEB申込完了」のため。電話CVの可否はASPへ確認中）
 
 CTA設置箇所（`position` の値）:
-`hero` / `body` / `rank1`（ランキングカード・1位詳細の2箇所） / `comparison` / `faq` / `final` / `sticky`
+
+- `/gaiju/nezumi/`（記事LP）: `hero`（FV内1位カード） / `body`（症状セクション直後） /
+  `rank1`（1位の詳細直後） / `final`（記事末尾） / `sticky`（固定バー）
+  ※テンプレートの「本文中のCTAは原則3箇所まで」に合わせ、比較表直下のCTAは置いていない。
+  必要なら `<CtaBox position="comparison" ... />` を比較セクション末尾に追加する。
+- `/gaiju/koumori/` `/gaiju/hakubishin/`: `hero` / `body` / `rank1`×2 / `comparison` / `faq` / `final` / `sticky`
 
 ## 3. 計測
 

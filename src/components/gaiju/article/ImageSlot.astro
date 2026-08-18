@@ -1,0 +1,24 @@
+---
+/**
+ * 後入れ画像スロット。
+ * 差し替え時はこのコンポーネントを <img>/<picture> に置き換え、altを設定する。
+ * aspect-ratio はCLS対策で維持すること。
+ */
+interface Props {
+  slotId: string;
+  purpose: string;
+  ratio?: string;
+}
+const { slotId, purpose, ratio = '16 / 10' } = Astro.props as Props;
+---
+<figure
+  class="image-placeholder"
+  data-image-slot={slotId}
+  style={`--slot-ratio: ${ratio};`}
+  role="img"
+  aria-label={`画像予定エリア: ${purpose}`}
+>
+  <strong>■ IMAGE_SLOT: {slotId}</strong>
+  <span>後から画像を挿入</span>
+  <small>{purpose}</small>
+</figure>

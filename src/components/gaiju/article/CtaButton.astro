@@ -1,0 +1,50 @@
+---
+/**
+ * 記事LP用CTAボタン。
+ * affiliateUrlが未設定のproviderでは <button> として描画し、遷移させない（架空URLへ送らない）。
+ * クリック計測は /gaiju/lp.js が data-gj-cta を拾って affiliate_click を発火する。
+ */
+import { getProvider } from '@/data/gaiju-providers';
+
+interface Props {
+  label: string;
+  /** hero / body / comparison / rank1 / case / faq / final / sticky */
+  position: string;
+  animal: string;
+  providerSlug?: string;
+  compact?: boolean;
+}
+const { label, position, animal, providerSlug = 'houseguard24', compact = false } =
+  Astro.props as Props;
+
+const provider = getProvider(providerSlug);
+const href = provider?.affiliateUrl ?? '';
+const cls = compact ? 'cta-button cta-button--compact' : 'cta-button';
+---
+{href ? (
+  <a
+    class={cls}
+    href={href}
+    rel="nofollow sponsored noopener"
+    data-gj-cta
+    data-animal={animal}
+    data-position={position}
+    data-provider={providerSlug}
+  >
+    {label}
+    <span aria-hidden="true">›</span>
+  </a>
+) : (
+  <button
+    type="button"
+    class={cls}
+    data-gj-cta
+    data-cta-unset="true"
+    data-animal={animal}
+    data-position={position}
+    data-provider={providerSlug}
+  >
+    {label}
+    <span aria-hidden="true">›</span>
+  </button>
+)}
