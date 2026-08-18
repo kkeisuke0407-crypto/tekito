@@ -1,0 +1,81 @@
+---
+import PrDisclosure from '@/components/gaiju/PrDisclosure.astro';
+import StickyCta from '@/components/gaiju/StickyCta.astro';
+import SiteFooter from '@/components/gaiju/SiteFooter.astro';
+import { gaijuLpConfig } from '@/data/gaiju-lp-config';
+import { activeProviders } from '@/data/gaiju-providers';
+
+interface Props {
+  title: string;
+  description: string;
+  /** nezumi / koumori / hakubishin */
+  animal: string;
+  path: string;
+  stickyLabel: string;
+  stickyCaption: string;
+}
+const { title, description, animal, path, stickyLabel, stickyCaption } = Astro.props as Props;
+const canonical = `${gaijuLpConfig.siteUrl}${path}`;
+const ogImage = `${gaijuLpConfig.siteUrl}/og-default.svg`;
+/** 開発時のみ、アフィリエイトURL未設定を警告する（本番ビルドには出力されない） */
+const unsetProviders = activeProviders.filter((p) => !p.affiliateUrl);
+---
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:site_name" content={gaijuLpConfig.siteName} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/gaiju/lp.css" />
+    <!--
+      GA4 / Google Ads の測定IDは未提供のため埋め込んでいない。
+      GTM または gtag のスニペットをここへ追加すれば、dataLayer 経由でイベントを受け取れる。
+    -->
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+    </script>
+    <script is:inline define:vars={{ animal }}>
+      window.GAIJU_LP = { animal };
+    </script>
+    <script is:inline defer src="/gaiju/lp.js"></script>
+  </head>
+  <body class="gj-body">
+    {import.meta.env.DEV && unsetProviders.length > 0 && (
+      <div class="gj-dev-banner">
+        [開発表示] アフィリエイトURL未設定:{' '}
+        {unsetProviders.map((p) => p.name).join(' / ')} — src/data/gaiju-providers.ts の affiliateUrl
+        を設定するまで本番公開しないでください。
+      </div>
+    )}
+
+    <header class="gj-topbar">
+      <p class="gj-topbar-name">{gaijuLpConfig.siteName}</p>
+    </header>
+
+    <PrDisclosure />
+
+    <main class="gj-main">
+      <slot />
+    </main>
+
+    <SiteFooter />
+    <StickyCta animal={animal} label={stickyLabel} caption={stickyCaption} />
+  </body>
+</html>

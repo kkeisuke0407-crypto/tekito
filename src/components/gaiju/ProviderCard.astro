@@ -1,0 +1,44 @@
+---
+import type { Provider } from '@/data/gaiju-providers';
+import Cta from './Cta.astro';
+
+interface Props {
+  provider: Provider;
+  animal: string;
+  ctaLabel: string;
+  /** 1位のみ: 今回の検索意図と相性がいい理由 */
+  reason?: { title: string; paragraphs: string[] };
+  /** 1位のみ: 主な確認ポイント（動物ごとに差し替え） */
+  points?: string[];
+}
+const { provider, animal, ctaLabel, reason, points } = Astro.props as Props;
+const bullets = points && points.length > 0 ? points : provider.strengths;
+---
+<article class={`gj-provider${provider.rank === 1 ? ' gj-provider--featured' : ''}`}>
+  <header class="gj-provider-head">
+    <span class="gj-rank-badge">{provider.rank}位</span>
+    <h3>{provider.name}</h3>
+  </header>
+
+  {reason && (
+    <div class="gj-provider-reason">
+      <h4>{reason.title}</h4>
+      {reason.paragraphs.map((p) => <p set:html={p} />)}
+    </div>
+  )}
+
+  <h4 class="gj-provider-subhead">主な確認ポイント</h4>
+  <ul class="gj-check-bullets">
+    {bullets.map((b) => <li>{b}</li>)}
+  </ul>
+
+  <Cta label={ctaLabel} position="rank1" animal={animal} providerSlug={provider.slug} />
+
+  {provider.notes.length > 0 && (
+    <ul class="gj-provider-notes">
+      {provider.notes.map((n) => <li>※{n}</li>)}
+    </ul>
+  )}
+
+  <slot />
+</article>

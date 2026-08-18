@@ -1,0 +1,35 @@
+---
+import { activeProviders, comparisonTitle, rankingCriteria } from '@/data/gaiju-providers';
+import ProviderCard from './ProviderCard.astro';
+
+interface Props {
+  animal: string;
+  ctaLabel: string;
+  rank1Reason?: { title: string; paragraphs: string[] };
+  rank1Points?: string[];
+}
+const { animal, ctaLabel, rank1Reason, rank1Points } = Astro.props as Props;
+---
+<section class="gj-section" id="ranking" aria-labelledby="ranking-heading">
+  <h2 id="ranking-heading">{comparisonTitle}</h2>
+
+  <div class="gj-criteria-box">
+    <h3>順位の評価基準</h3>
+    <p>当サイトでは、以下をもとに総合評価しています。成果報酬額は順位の根拠にしていません。</p>
+    <ol class="gj-criteria-list">
+      {rankingCriteria.map((c) => <li>{c}</li>)}
+    </ol>
+  </div>
+
+  {activeProviders.map((provider) => (
+    <ProviderCard
+      provider={provider}
+      animal={animal}
+      ctaLabel={ctaLabel}
+      reason={provider.rank === 1 ? rank1Reason : undefined}
+      points={provider.rank === 1 ? rank1Points : undefined}
+    >
+      {provider.rank === 1 && <slot name="rank1-extra" />}
+    </ProviderCard>
+  ))}
+</section>

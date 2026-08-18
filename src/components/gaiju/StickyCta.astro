@@ -1,0 +1,14 @@
+---
+import Cta from './Cta.astro';
+
+interface Props {
+  animal: string;
+  label: string;
+  caption: string;
+}
+const { animal, label, caption } = Astro.props as Props;
+---
+<div class="gj-sticky" data-gj-sticky>
+  <p class="gj-sticky-caption">{caption}</p>
+  <Cta label={label} position="sticky" animal={animal} variant="primary" />
+</div>

@@ -1,0 +1,30 @@
+---
+import Cta from './Cta.astro';
+
+interface Props {
+  animal: string;
+  headingLines: string[];
+  lead: string[];
+  providerName: string;
+  bullets: string[];
+  ctaLabel: string;
+}
+const { animal, headingLines, lead, providerName, bullets, ctaLabel } = Astro.props as Props;
+---
+<section class="gj-section gj-final" id="final" aria-labelledby="final-heading">
+  <h2 id="final-heading">
+    {headingLines.map((line) => <span class="gj-final-line">{line}</span>)}
+  </h2>
+  {lead.map((p) => <p class="gj-final-lead">{p}</p>)}
+
+  <div class="gj-final-card">
+    <p class="gj-final-rank">当サイトおすすめ1位</p>
+    <p class="gj-final-name">{providerName}</p>
+    <ul class="gj-check-bullets">
+      {bullets.map((b) => <li>{b}</li>)}
+    </ul>
+    <Cta label={ctaLabel} position="final" animal={animal} />
+  </div>
+
+  <p class="gj-note">※サービス内容・料金・保証等の最新情報は遷移先の公式サイトをご確認ください。</p>
+</section>

@@ -1,0 +1,251 @@
+---
+/**
+ * ハクビシン駆除比較記事LP（PPC専用）
+ * URL: /gaiju/hakubishin/
+ * 検索意図: 屋根裏の大きな物音、糞尿、天井のシミなどからハクビシンを疑っている。被害と侵入口を確認したい。
+ * 台本: 05_LP_HAKUBISHIN.md
+ */
+import GaijuLp from '@/layouts/GaijuLp.astro';
+import Cta from '@/components/gaiju/Cta.astro';
+import ImagePlaceholder from '@/components/gaiju/ImagePlaceholder.astro';
+import SymptomChecklist from '@/components/gaiju/SymptomChecklist.astro';
+import SelectionCriteria from '@/components/gaiju/SelectionCriteria.astro';
+import RankingSection from '@/components/gaiju/RankingSection.astro';
+import ComparisonTable from '@/components/gaiju/ComparisonTable.astro';
+import ServiceFlow from '@/components/gaiju/ServiceFlow.astro';
+import Faq from '@/components/gaiju/Faq.astro';
+import FinalCta from '@/components/gaiju/FinalCta.astro';
+
+const ANIMAL = 'hakubishin';
+
+const heroBullets = [
+  '現地調査 0円',
+  'お見積り 0円',
+  '関東7県',
+  '24時間365日受付',
+  '最短30分・即日対応',
+  'ハクビシン対応',
+  '施工箇所の永年保証制度',
+];
+
+const symptoms = [
+  '夜になると屋根裏からドタドタ音がする',
+  '天井裏から動物が歩くような音がする',
+  '天井に見覚えのないシミが出た',
+  '屋根裏から臭いがする',
+  '大きめの糞らしきものがある',
+  '軒天や屋根付近に隙間がある',
+  '一度追い出したのにまた音がする',
+  '何の動物なのか判断できない',
+];
+
+const criteria = [
+  '現地調査の費用',
+  '見積もりの費用',
+  'ハクビシン対応',
+  '屋根裏・侵入口への対応',
+  '糞尿・臭い等への対応例',
+  '再発対策と保証',
+  '対応地域',
+  '受付・相談体制',
+];
+
+const rank1Points = [
+  'ハクビシン対応',
+  '現地調査 0円',
+  'お見積り 0円',
+  '関東7県',
+  '24時間365日',
+  '最短30分・即日対応',
+  '屋根裏の侵入口封鎖を含む施工例',
+  '施工箇所の永年保証制度',
+];
+
+const flowSteps = [
+  { title: 'WEB相談', body: '現在の物音・シミ・臭い等を伝えます。' },
+  { title: '現地調査', body: '屋根裏・外周等を確認します。' },
+  { title: '見積もり', body: '必要な対策・費用を確認します。' },
+  { title: '内容を確認して施工', body: '害獣・建物の状態に応じた対策を行います。' },
+  { title: 'アフター対応', body: '施工・保証条件に応じて対応します。' },
+];
+
+const faqItems = [
+  {
+    q: 'ハクビシンかどうかわかりません',
+    a: [
+      '物音だけで種類を断定するのは難しいことがあります。',
+      'ハウスガード24は複数害獣へ対応しているため、現地調査から相談できます。',
+    ],
+  },
+  {
+    q: '天井にシミがあります',
+    a: [
+      '原因は害獣だけとは限りません。',
+      'ただし公式サイトには、ハクビシンの糞尿が天井へ影響していた利用者例が掲載されています。',
+      '状況を確認してもらう方法があります。',
+    ],
+  },
+  { q: '対応地域は？', a: ['東京・千葉・埼玉・神奈川・群馬・茨城・栃木です。'] },
+  {
+    q: '調査費用は？',
+    a: ['公式サイトでは調査・見積もり0円と案内されています。', '最新条件を確認してください。'],
+  },
+  {
+    q: '再発時は？',
+    a: [
+      '施工箇所について永年保証制度が案内されています。',
+      '適用条件・対象範囲は公式サイトをご確認ください。',
+    ],
+  },
+];
+---
+
+<GaijuLp
+  title="屋根裏の物音・天井のシミはハクビシン？侵入口から調べる害獣駆除の比較｜現地調査0円"
+  description="屋根裏のドタドタ音、天井のシミ、糞尿の臭いからハクビシンを疑っている方へ。追い出しだけでなく侵入口・糞尿・再侵入対策まで確認できるかで害獣駆除サービスを比較。現地調査・見積もり0円、関東7県対応、24時間365日受付のハウスガード24を当サイト1位として紹介しています。"
+  animal={ANIMAL}
+  path="/gaiju/hakubishin/"
+  stickyLabel="無料で現地調査を相談する"
+  stickyCaption="現地調査0円・お見積り0円／関東7県・24時間365日受付"
+>
+  <!-- ══ FV ══════════════════════════════════════════════ -->
+  <section class="gj-hero" aria-labelledby="hero-heading">
+    <p class="gj-hero-eyebrow">屋根裏から大きな物音がする方へ</p>
+    <h1 id="hero-heading">
+      <span class="gj-hero-line">屋根裏から<em>「ドタドタ…」</em></span>
+      <span class="gj-hero-line">天井には<em>見覚えのないシミ。</em></span>
+    </h1>
+    <p class="gj-hero-sub">ハクビシンなどの害獣が入り込んでいる可能性があります。</p>
+    <p>
+      姿を見ていなくても、屋根裏の物音や糞尿による臭い・天井のシミなどから異変に気付くケースがあります。
+    </p>
+    <p>放置する前に、</p>
+    <ul class="gj-hero-questions">
+      <li>何がいるのか</li>
+      <li>どこから入ったのか</li>
+      <li>どの程度被害が出ているのか</li>
+    </ul>
+    <p>を確認することが大切です。</p>
+
+    <div class="gj-rank1-box">
+      <p class="gj-rank1-label">当サイトおすすめ1位</p>
+      <p class="gj-rank1-name">ハウスガード24</p>
+      <ul class="gj-check-bullets">
+        {heroBullets.map((b) => <li>{b}</li>)}
+      </ul>
+      <Cta
+        label="無料で現地調査を相談する"
+        position="hero"
+        animal={ANIMAL}
+        note="※サービス内容・保証には条件があります。最新条件は公式サイトでご確認ください。"
+      />
+    </div>
+
+    <ImagePlaceholder
+      slotId="HAKUBISHIN_HERO_01"
+      purpose="屋根裏にハクビシンが潜み、天井側にシミが出ている住宅断面イメージ"
+    />
+  </section>
+
+  <!-- ══ 症状チェック ═════════════════════════════════════ -->
+  <SymptomChecklist title="こんな症状、ありませんか？" items={symptoms}>
+    <p>
+      ハウスガード24の公式サイトには、ハクビシン被害の利用者例として、天井裏の物音を放置した後、糞尿が原因で天井に被害が出ていたケースが掲載されています。
+    </p>
+    <Cta label="今の症状をWEBから相談する" position="body" animal={ANIMAL} />
+  </SymptomChecklist>
+
+  <!-- ══ 問題提起 ═════════════════════════════════════════ -->
+  <section class="gj-section" aria-labelledby="problem-heading">
+    <h2 id="problem-heading">屋根裏の被害は「動物を追い出すだけ」で終わらないことも</h2>
+    <p>ハクビシン等が屋根裏へ入り込んでいる場合、確認したいのは動物だけではありません。</p>
+    <ul class="gj-check-bullets">
+      <li>侵入口</li>
+      <li>糞尿</li>
+      <li>臭い</li>
+      <li>天井や建材への影響</li>
+      <li>ノミ・ダニ等</li>
+      <li>再侵入の可能性</li>
+    </ul>
+    <p>など、住宅側の状態も確認する必要があります。</p>
+
+    <ImagePlaceholder
+      slotId="HAKUBISHIN_DAMAGE_02"
+      purpose="屋根裏侵入→糞尿→臭い・天井シミ→建材への影響、という被害の流れを示す図"
+    />
+  </section>
+
+  <!-- ══ 侵入口 ══════════════════════════════════════════ -->
+  <section class="gj-section gj-section--gray" aria-labelledby="entry-heading">
+    <h2 id="entry-heading">侵入口を確認する</h2>
+    <p>公式施工例では、軒天の劣化や破損でできた穴、屋根まわりの穴を封鎖した事例が紹介されています。</p>
+    <p>そのため業者選びでは、</p>
+    <p class="gj-emphasis">追い出しだけでなく、侵入口や再侵入への対策を確認できるか</p>
+    <p>も比較します。</p>
+
+    <ImagePlaceholder
+      slotId="HAKUBISHIN_ENTRY_ROUTE_03"
+      purpose="軒天・屋根まわりなど屋根裏へ入る侵入口候補を住宅外観で示す図"
+    />
+  </section>
+
+  <!-- ══ 比較の観点 ══════════════════════════════════════ -->
+  <SelectionCriteria title="ハクビシン駆除業者はこの8点で比較" items={criteria} />
+
+  <!-- ══ ランキング ══════════════════════════════════════ -->
+  <RankingSection
+    animal={ANIMAL}
+    ctaLabel="ハウスガード24へWEB相談する"
+    rank1Reason={{
+      title: '今回1位にした理由',
+      paragraphs: [
+        'ハウスガード24の公式サイトでは、ハクビシンを含む害獣への対応と、屋根裏の侵入口封鎖、消臭等を含む施工例が紹介されています。',
+      ],
+    }}
+    rank1Points={rank1Points}
+  />
+
+  <!-- ══ 比較表 ══════════════════════════════════════════ -->
+  <ComparisonTable animal={ANIMAL} ctaLabel="1位の詳細・無料相談を見る" />
+
+  <!-- ══ 1位の詳細 ═══════════════════════════════════════ -->
+  <section class="gj-section" aria-labelledby="rank1-detail-heading">
+    <h2 id="rank1-detail-heading">ハウスガード24を詳しく見る</h2>
+
+    <h3>ハクビシン等の屋根裏害獣へ対応</h3>
+    <p>ネズミ・コウモリ・イタチ・ハクビシン・アライグマ等に対応しています。</p>
+
+    <h3>侵入口を確認する施工例</h3>
+    <p>屋根・軒天周辺の穴を封鎖する施工例が掲載されています。</p>
+
+    <h3>糞尿や臭いへの施工例</h3>
+    <p>消臭・ノミダニ対策・消毒等を含む施工例があります。</p>
+
+    <h3>現地調査・見積もり0円</h3>
+    <p>「ハクビシンかわからない」という段階でも、まず家の状態を調査してから判断できます。</p>
+
+    <Cta label="無料で現地調査を相談する" position="rank1" animal={ANIMAL} />
+  </section>
+
+  <!-- ══ 施工フロー ══════════════════════════════════════ -->
+  <ServiceFlow steps={flowSteps}>
+    <ImagePlaceholder
+      slotId="HAKUBISHIN_FLOW_04"
+      purpose="WEB相談→屋根裏調査→侵入口確認→見積→施工・アフターの流れ"
+      ratio="16 / 9"
+    />
+  </ServiceFlow>
+
+  <!-- ══ FAQ ═════════════════════════════════════════════ -->
+  <Faq animal={ANIMAL} items={faqItems} ctaLabel="今の状態をWEBから相談する" />
+
+  <!-- ══ 最終CTA ═════════════════════════════════════════ -->
+  <FinalCta
+    animal={ANIMAL}
+    headingLines={['屋根裏の物音。', '天井のシミ。']}
+    lead={['放置する前に、まず何が起きているか確認するところから。']}
+    providerName="ハウスガード24"
+    bullets={['現地調査 0円', 'お見積り 0円', '関東7県', '24時間365日受付']}
+    ctaLabel="WEBから無料相談する"
+  />
+</GaijuLp>

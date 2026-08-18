@@ -1,0 +1,16 @@
+---
+interface Props {
+  title: string;
+  items: string[];
+  summary?: string;
+}
+const { title, items, summary } = Astro.props as Props;
+---
+<section class="gj-section" aria-labelledby="criteria-heading">
+  <h2 id="criteria-heading">{title}</h2>
+  <p class="gj-lead">当サイトでは、単純な「安さ」だけで順位を決めていません。</p>
+  <ol class="gj-numbered">
+    {items.map((item) => <li>{item}</li>)}
+  </ol>
+  {summary && <p class="gj-emphasis" set:html={summary} />}
+</section>

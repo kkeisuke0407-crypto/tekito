@@ -1,0 +1,273 @@
+---
+/**
+ * コウモリ駆除比較記事LP（PPC専用）
+ * URL: /gaiju/koumori/
+ * 検索意図: 換気口・シャッター・ベランダ・屋根裏などにコウモリが入り込んでいそう。糞や音もあり、侵入口ごと確認したい。
+ * 台本: 04_LP_KOUMORI.md
+ */
+import GaijuLp from '@/layouts/GaijuLp.astro';
+import Cta from '@/components/gaiju/Cta.astro';
+import ImagePlaceholder from '@/components/gaiju/ImagePlaceholder.astro';
+import SymptomChecklist from '@/components/gaiju/SymptomChecklist.astro';
+import SelectionCriteria from '@/components/gaiju/SelectionCriteria.astro';
+import RankingSection from '@/components/gaiju/RankingSection.astro';
+import ComparisonTable from '@/components/gaiju/ComparisonTable.astro';
+import ServiceFlow from '@/components/gaiju/ServiceFlow.astro';
+import Faq from '@/components/gaiju/Faq.astro';
+import FinalCta from '@/components/gaiju/FinalCta.astro';
+
+const ANIMAL = 'koumori';
+
+const heroBullets = [
+  '現地調査 0円',
+  'お見積り 0円',
+  '関東7県対応',
+  '24時間365日受付',
+  '最短30分・即日対応',
+  'コウモリの侵入口封鎖を含む施工例',
+  '施工箇所の永年保証制度',
+];
+
+const symptoms = [
+  '換気口の近くに黒い糞が落ちている',
+  'シャッター周辺で物音がする',
+  'ベランダに同じような糞が何度も落ちる',
+  '夜になると屋根裏から音がする',
+  '軒下にコウモリらしい影を見る',
+  '換気扇周辺が気になる',
+  '追い払ってもまた戻ってくる',
+  'どの隙間から入っているかわからない',
+];
+
+const criteria = [
+  '現地調査の費用',
+  '見積もりの費用',
+  'コウモリ対応',
+  '高所・侵入口への対応',
+  '再侵入対策',
+  '保証',
+  '対応エリア',
+  '受付・相談体制',
+];
+
+const rank1Points = [
+  'コウモリ対応',
+  '現地調査 0円',
+  'お見積り 0円',
+  '関東7県',
+  '24時間365日',
+  '最短30分・即日対応',
+  '侵入口封鎖を含む施工例',
+  '施工箇所の永年保証制度',
+];
+
+const flowSteps = [
+  { title: 'WEBから相談', body: '現在の症状や連絡先などを入力します。' },
+  { title: '現地調査', body: '建物の外周や屋根まわりなどを確認し、被害状況と侵入口を調査します。' },
+  { title: '見積もり', body: '必要な対策と費用を確認します。' },
+  { title: '内容に納得したら施工', body: '状況に応じて追い出しや隙間の封鎖等を実施します。' },
+  { title: 'アフター対応', body: '施工内容・保証条件に応じて対応します。' },
+];
+
+const faqItems = [
+  {
+    q: 'ベランダに糞があるだけでも相談できますか？',
+    a: [
+      'コウモリかどうかを自分で断定できない場合もあります。',
+      '繰り返し糞が落ちる、夜に出入りがある等が気になる場合は、状況を相談して確認してもらう方法があります。',
+    ],
+  },
+  {
+    q: 'シャッターの中にいるかもしれません',
+    a: ['ハウスガード24の公式サイトには、シャッターボックスの隙間から侵入していた施工例があります。'],
+  },
+  {
+    q: '調査・見積もりは？',
+    a: ['公式サイトでは0円と案内されています。', '最新条件を公式ページで確認してください。'],
+  },
+  { q: '対応地域は？', a: ['東京・千葉・埼玉・神奈川・群馬・茨城・栃木。'] },
+  {
+    q: '再発が不安です',
+    a: [
+      '施工箇所について永年保証制度が案内されています。',
+      '適用条件は公式サイトで確認してください。',
+    ],
+  },
+];
+---
+
+<GaijuLp
+  title="換気口・シャッターのコウモリ？侵入口から調べる害獣駆除の比較｜現地調査・見積もり0円"
+  description="換気口まわりの黒い糞、シャッターや屋根裏の物音でコウモリを疑っている方へ。追い出しだけでなく建物内部へつながる隙間まで確認できるかで害獣駆除サービスを比較。現地調査・見積もり0円、関東7県対応、24時間365日受付のハウスガード24を当サイト1位として紹介しています。"
+  animal={ANIMAL}
+  path="/gaiju/koumori/"
+  stickyLabel="無料で現地調査を相談する"
+  stickyCaption="現地調査0円・お見積り0円／関東7県・24時間365日受付"
+>
+  <!-- ══ FV ══════════════════════════════════════════════ -->
+  <section class="gj-hero" aria-labelledby="hero-heading">
+    <p class="gj-hero-eyebrow">換気口・シャッター・屋根裏が気になる方へ</p>
+    <h1 id="hero-heading">
+      <span class="gj-hero-line">換気口のまわりに<em>黒いフン。</em></span>
+      <span class="gj-hero-line">シャッターや屋根裏から<em>物音。</em></span>
+    </h1>
+    <p class="gj-hero-sub">家にコウモリが入り込んでいる可能性があります。</p>
+    <p>
+      コウモリは小さな隙間から建物内部へ入り込むことがあり、「姿は見ていないけれど、糞や音が気になる」というケースもあります。
+    </p>
+    <p>重要なのは、単にその場から追い出すだけでなく、</p>
+    <p class="gj-emphasis">どこから家へ入り込んでいるのか</p>
+    <p>まで確認することです。</p>
+
+    <div class="gj-rank1-box">
+      <p class="gj-rank1-label">当サイトおすすめ1位</p>
+      <p class="gj-rank1-name">ハウスガード24</p>
+      <ul class="gj-check-bullets">
+        {heroBullets.map((b) => <li>{b}</li>)}
+      </ul>
+      <Cta
+        label="無料で現地調査を相談する"
+        position="hero"
+        animal={ANIMAL}
+        note="※サービス内容・保証には条件があります。最新条件は公式サイトでご確認ください。"
+      />
+    </div>
+
+    <ImagePlaceholder
+      slotId="KOUMORI_HERO_01"
+      purpose="換気口・シャッターボックス・屋根付近にコウモリが侵入している住宅イメージ"
+    />
+  </section>
+
+  <!-- ══ 症状チェック ═════════════════════════════════════ -->
+  <SymptomChecklist title="こんな症状、ありませんか？" items={symptoms}>
+    <h3>コウモリは「どこから入ったか」が重要</h3>
+    <p>
+      建物には、屋根まわり・瓦の隙間・換気口・シャッターボックスなど、外から見るだけでは判断しづらい場所があります。
+    </p>
+    <p>
+      ハウスガード24の公式施工例でも、瓦やシャッターボックスの隙間から侵入していた事例が紹介されています。
+    </p>
+    <Cta label="今の症状をWEBから相談する" position="body" animal={ANIMAL} />
+  </SymptomChecklist>
+
+  <!-- ══ 問題提起 ═════════════════════════════════════════ -->
+  <section class="gj-section" aria-labelledby="problem-heading">
+    <h2 id="problem-heading">追い出すだけでは再び戻る可能性も</h2>
+    <p>「コウモリを見かけたから追い払った」</p>
+    <p>
+      それで一時的に姿が見えなくなっても、建物内部につながる隙間が残っていれば、再び侵入する可能性があります。
+    </p>
+    <p>業者へ相談する場合は、</p>
+    <ul class="gj-check-bullets">
+      <li>どこにいるか</li>
+      <li>どこから入っているか</li>
+      <li>糞尿などの被害</li>
+      <li>建物内部へつながる隙間</li>
+      <li>再侵入への対策</li>
+    </ul>
+    <p>まで確認できるかを見ます。</p>
+
+    <ImagePlaceholder
+      slotId="KOUMORI_ENTRY_ROUTE_02"
+      purpose="換気口・瓦・軒下・シャッターボックスなどコウモリの侵入口候補を示す住宅外観図"
+    />
+  </section>
+
+  <!-- ══ 自力対策 vs プロ ════════════════════════════════ -->
+  <section class="gj-section gj-section--gray" aria-labelledby="diy-heading">
+    <h2 id="diy-heading">自分で対策する場合と、業者へ相談する場合</h2>
+    <div class="gj-two-col">
+      <div class="gj-case-card">
+        <h3>自分で状況確認しやすいケース</h3>
+        <ul>
+          <li>建物外部から安全に確認できる</li>
+          <li>被害範囲が小さい</li>
+          <li>建物内部へ侵入していないことが明確</li>
+        </ul>
+      </div>
+      <div class="gj-case-card gj-case-card--pro">
+        <h3>一度プロへ相談したいケース</h3>
+        <ul>
+          <li>屋根裏や壁内に入り込んでいそう</li>
+          <li>高所で自分では確認できない</li>
+          <li>換気口やシャッター内部が気になる</li>
+          <li>糞が繰り返し落ちている</li>
+          <li>何度追い払っても戻ってくる</li>
+          <li>侵入口がわからない</li>
+        </ul>
+      </div>
+    </div>
+
+    <ImagePlaceholder
+      slotId="KOUMORI_DIY_VS_PRO_03"
+      purpose="「見える個体だけ追い払う」対「侵入口調査・封鎖まで確認」の違い"
+    />
+  </section>
+
+  <!-- ══ 比較の観点 ══════════════════════════════════════ -->
+  <SelectionCriteria
+    title="コウモリ駆除業者はこの8点で比較"
+    items={criteria}
+    summary="「追い出し」だけではなく、<strong>家のどこから入り込んでいるかまで見てもらえるか</strong>を重視します。"
+  />
+
+  <!-- ══ ランキング ══════════════════════════════════════ -->
+  <RankingSection
+    animal={ANIMAL}
+    ctaLabel="ハウスガード24へWEB相談する"
+    rank1Reason={{
+      title: '今回1位にした理由',
+      paragraphs: [
+        '今回1位にした理由は、コウモリ施工例として、瓦の隙間やシャッターボックスの隙間を確認し、建物内部へつながる隙間を封鎖した例が公式サイトに掲載されているためです。',
+      ],
+    }}
+    rank1Points={rank1Points}
+  />
+
+  <!-- ══ 比較表 ══════════════════════════════════════════ -->
+  <ComparisonTable animal={ANIMAL} ctaLabel="1位の詳細・無料相談を見る" />
+
+  <!-- ══ 1位の詳細 ═══════════════════════════════════════ -->
+  <section class="gj-section" aria-labelledby="rank1-detail-heading">
+    <h2 id="rank1-detail-heading">ハウスガード24を詳しく見る</h2>
+
+    <h3>コウモリを含む複数害獣へ対応</h3>
+    <p>コウモリ以外にも、ネズミ・イタチ・ハクビシン・アライグマ等へ対応しています。</p>
+
+    <h3>建物の隙間への施工例</h3>
+    <p>
+      公式施工例では、瓦の隙間とシャッターボックスから家の内部へ侵入していたケースで、屋根まわりやシャッターを利用できるよう加工しながら隙間を封鎖しています。
+    </p>
+
+    <h3>糞尿等への対応例</h3>
+    <p>消臭・ノミやダニへの薬剤・消毒等を含む施工例も案内されています。</p>
+
+    <h3>調査・見積もり0円</h3>
+    <p>まず現在の被害状況を確認してから、必要な対策を検討できます。</p>
+
+    <Cta label="無料で現地調査を相談する" position="rank1" animal={ANIMAL} />
+  </section>
+
+  <!-- ══ 施工フロー ══════════════════════════════════════ -->
+  <ServiceFlow steps={flowSteps}>
+    <ImagePlaceholder
+      slotId="KOUMORI_FLOW_04"
+      purpose="WEB相談→調査→侵入口特定→見積→施工・アフターの流れ"
+      ratio="16 / 9"
+    />
+  </ServiceFlow>
+
+  <!-- ══ FAQ ═════════════════════════════════════════════ -->
+  <Faq animal={ANIMAL} items={faqItems} ctaLabel="今の状況をWEBから相談する" />
+
+  <!-- ══ 最終CTA ═════════════════════════════════════════ -->
+  <FinalCta
+    animal={ANIMAL}
+    headingLines={['換気口・シャッター・屋根裏。', '「どこから入った？」を確認するところから。']}
+    lead={[]}
+    providerName="ハウスガード24"
+    bullets={['現地調査 0円', 'お見積り 0円', '関東7県', '24時間365日受付']}
+    ctaLabel="WEBから無料相談する"
+  />
+</GaijuLp>
