@@ -1,0 +1,25 @@
+---
+/**
+ * 後入れ画像スロット。
+ * 画像を差し替えるときは、このコンポーネントを <img>/<picture> に置き換え、
+ * 10_IMAGE_SLOTS.md に記載の alt を設定する。aspect-ratio はCLS対策で維持する。
+ * ※propは slotId。`slot` はAstroの予約属性なので使わない。
+ */
+interface Props {
+  slotId: string;
+  purpose: string;
+  ratio?: string;
+}
+const { slotId, purpose, ratio = '16 / 10' } = Astro.props as Props;
+---
+<figure
+  class="gj-image-slot"
+  data-image-slot={slotId}
+  style={`--gj-slot-ratio: ${ratio};`}
+  role="img"
+  aria-label={`画像予定エリア: ${purpose}`}
+>
+  <strong>■ IMAGE_SLOT: {slotId}</strong>
+  <span class="gj-image-slot-note">後から画像を挿入</span>
+  <figcaption>{purpose}</figcaption>
+</figure>

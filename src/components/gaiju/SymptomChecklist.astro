@@ -1,0 +1,16 @@
+---
+interface Props {
+  title: string;
+  lead?: string;
+  items: string[];
+}
+const { title, lead, items } = Astro.props as Props;
+---
+<section class="gj-section gj-section--beige" aria-labelledby="symptom-heading">
+  <h2 id="symptom-heading">{title}</h2>
+  {lead && <p class="gj-lead">{lead}</p>}
+  <ul class="gj-checklist">
+    {items.map((item) => <li>{item}</li>)}
+  </ul>
+  <slot />
+</section>

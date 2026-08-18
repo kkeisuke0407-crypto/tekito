@@ -1,0 +1,24 @@
+---
+import Cta from './Cta.astro';
+
+interface Props {
+  animal: string;
+  items: { q: string; a: string[] }[];
+  ctaLabel: string;
+}
+const { animal, items, ctaLabel } = Astro.props as Props;
+---
+<section class="gj-section gj-section--beige" id="faq" aria-labelledby="faq-heading">
+  <h2 id="faq-heading">よくある質問</h2>
+  <div class="gj-faq">
+    {items.map((item) => (
+      <details class="gj-faq-item" data-gj-faq>
+        <summary><span class="gj-faq-q">Q.</span>{item.q}</summary>
+        <div class="gj-faq-a">
+          {item.a.map((p) => <p>{p}</p>)}
+        </div>
+      </details>
+    ))}
+  </div>
+  <Cta label={ctaLabel} position="faq" animal={animal} />
+</section>

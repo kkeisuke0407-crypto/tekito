@@ -12,17 +12,37 @@ src/pages/money/          # 債務整理LP（借金スッキリnavi）
 src/pages/shindan/        # 診断ページ
 src/pages/water-server/   # ウォーターサーバー比較LP（水代見直しナビ）
 src/pages/detective/      # 中の人ナビ（浮気・不倫相談、Instagram連動）
+src/pages/gaiju/          # 害獣駆除（SEO記事 + PPC比較記事LP 3本）
 public/money/             # 債務整理LP用静的ファイル
 public/water-server/      # ウォーターサーバーLP用静的ファイル
   ├── styles.css          # ウォーターサーバーLP スタイル
   └── app.js              # アフィリエイトリンク・トラッキング管理
 public/detective/         # 中の人ナビ用静的ファイル
+public/gaiju/             # 害獣駆除用静的ファイル
+  ├── styles.css          # SEO記事 /gaiju/ 用
+  ├── app.js              # SEO記事 /gaiju/ 用
+  ├── lp.css              # PPC比較記事LP用
+  └── lp.js               # PPC比較記事LP用（affiliate_click計測・UTM保持）
 docs/instagram/           # Instagram「@lawyer.nakanohito」運用資料
 ```
 
 **Codex 担当領域（原則編集しない）:**
 `src/pages/providers/`, `src/pages/compare/`, `src/pages/by-spec/`,
 `src/pages/by-region/`, `src/pages/blog/`, `data/`, `scripts/`
+
+---
+
+## 害獣駆除LP（ハウスガード24 / PPC）
+
+`/gaiju/nezumi/`・`/gaiju/koumori/`・`/gaiju/hakubishin/` はGoogle検索広告専用の比較記事LP。
+実装ルール・provider追加手順・画像差し替え手順は `docs/gaiju/PPC_LP_README.md` を参照。
+
+**特に守ること:**
+- provider情報は `src/data/gaiju-providers.ts` に集約。ページへハードコードしない
+- `active=false` のproviderは画面に出さない（「準備中」「未定」等の表示も禁止）
+- 架空のアフィリエイトURL・GA4測定IDを入れない
+- 電話CTAは実装しない（成果地点がWEB申込完了のため）
+- 公式情報を超えた断定表現を書かない（最安・必ず・No.1 等）
 
 ---
 
@@ -132,4 +152,4 @@ Codex のブランチ（`codex/` プレフィックス）は原則 push・編集
 ---
 
 **共通ルールの詳細は `AGENTS.md` を参照してください。**
-**更新日:** 2026-06-16
+**更新日:** 2026-08-18

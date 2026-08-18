@@ -1,0 +1,22 @@
+---
+interface Props {
+  title?: string;
+  steps: { title: string; body: string }[];
+}
+const { title = '相談から施工まで', steps } = Astro.props as Props;
+---
+<section class="gj-section" aria-labelledby="flow-heading">
+  <h2 id="flow-heading">{title}</h2>
+  <ol class="gj-flow">
+    {steps.map((step, index) => (
+      <li class="gj-flow-step">
+        <span class="gj-flow-num">STEP{index + 1}</span>
+        <div>
+          <h3>{step.title}</h3>
+          <p>{step.body}</p>
+        </div>
+      </li>
+    ))}
+  </ol>
+  <slot />
+</section>

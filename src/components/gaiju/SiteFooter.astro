@@ -1,0 +1,18 @@
+---
+import { gaijuLpConfig } from '@/data/gaiju-lp-config';
+const links = gaijuLpConfig.footerLinks.filter((l) => l.href);
+const year = new Date().getFullYear();
+---
+<footer class="gj-footer">
+  <p class="gj-footer-name">{gaijuLpConfig.siteName}</p>
+  <p class="gj-footer-text">
+    当サイトはアフィリエイトプログラムに基づく広告リンクを掲載しています。
+    掲載内容は各社公式サイトの案内をもとに作成しています。依頼前には必ず公式サイトで最新情報をご確認ください。
+  </p>
+  <ul class="gj-footer-links">
+    {links.map((link) => (
+      <li><a href={link.href}>{link.label}</a></li>
+    ))}
+  </ul>
+  <p class="gj-footer-copy">© {year} {gaijuLpConfig.siteName}</p>
+</footer>

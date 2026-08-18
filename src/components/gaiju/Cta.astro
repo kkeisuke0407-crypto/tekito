@@ -1,0 +1,65 @@
+---
+/**
+ * 共通CTA（アフィリエイト遷移用）
+ * - affiliateUrlが未設定のproviderでは <button> として描画し、遷移させない（架空URLへ送らない）。
+ * - クリック計測は /gaiju/lp.js が data-gj-cta を拾って affiliate_click を発火する。
+ */
+import { getProvider } from '@/data/gaiju-providers';
+
+interface Props {
+  label: string;
+  /** hero / body / comparison / rank1 / faq / sticky / final */
+  position: string;
+  /** nezumi / koumori / hakubishin */
+  animal: string;
+  providerSlug?: string;
+  variant?: 'primary' | 'secondary';
+  note?: string;
+  id?: string;
+}
+
+const {
+  label,
+  position,
+  animal,
+  providerSlug = 'houseguard24',
+  variant = 'primary',
+  note,
+  id,
+} = Astro.props as Props;
+
+const provider = getProvider(providerSlug);
+const href = provider?.affiliateUrl ?? '';
+const hasHref = href.length > 0;
+const cls = `gj-cta gj-cta--${variant}`;
+---
+<div class="gj-cta-wrap" id={id}>
+  {hasHref ? (
+    <a
+      class={cls}
+      href={href}
+      rel="nofollow sponsored noopener"
+      data-gj-cta
+      data-animal={animal}
+      data-position={position}
+      data-provider={providerSlug}
+    >
+      <span class="gj-cta-label">{label}</span>
+      <span class="gj-cta-arrow" aria-hidden="true">›</span>
+    </a>
+  ) : (
+    <button
+      type="button"
+      class={cls}
+      data-gj-cta
+      data-cta-unset="true"
+      data-animal={animal}
+      data-position={position}
+      data-provider={providerSlug}
+    >
+      <span class="gj-cta-label">{label}</span>
+      <span class="gj-cta-arrow" aria-hidden="true">›</span>
+    </button>
+  )}
+  {note && <p class="gj-cta-note">{note}</p>}
+</div>
