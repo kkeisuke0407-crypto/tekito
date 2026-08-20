@@ -178,6 +178,7 @@
         "dfw",
         "sea",
         "lax",
+        "atl",
         "ams",
         "lhr",
         "fra",
@@ -234,7 +235,6 @@
         "nrt",
         "waw",
         "mad",
-        "mxp",
         "icn",
         "mia",
         "sgp",
@@ -439,6 +439,6 @@
       "category": "dedicated"
     }
   ],
-  "lastUpdated": "2026-08-19T06:43:14.078Z",
+  "lastUpdated": "2026-08-20T06:46:00.959Z",
   "source": "api"
 }
