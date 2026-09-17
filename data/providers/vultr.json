@@ -150,11 +150,8 @@
         "mex",
         "sao",
         "mel",
-        "bom",
         "jnb",
         "tlv",
-        "blr",
-        "del",
         "scl",
         "itm",
         "man"
@@ -196,11 +193,8 @@
         "mex",
         "sao",
         "mel",
-        "bom",
         "jnb",
         "tlv",
-        "blr",
-        "del",
         "scl",
         "itm",
         "man"
@@ -235,6 +229,7 @@
         "nrt",
         "waw",
         "mad",
+        "mxp",
         "icn",
         "mia",
         "sgp",
@@ -242,11 +237,8 @@
         "mex",
         "sao",
         "mel",
-        "bom",
         "jnb",
         "tlv",
-        "blr",
-        "del",
         "scl",
         "itm",
         "man"
@@ -286,13 +278,11 @@
         "sgp",
         "sto",
         "mex",
+        "sao",
         "mel",
         "hnl",
-        "bom",
         "jnb",
         "tlv",
-        "blr",
-        "del",
         "scl",
         "itm",
         "man"
@@ -334,11 +324,8 @@
         "mex",
         "sao",
         "mel",
-        "bom",
         "jnb",
         "tlv",
-        "blr",
-        "del",
         "scl",
         "itm",
         "man"
@@ -380,11 +367,8 @@
         "mex",
         "sao",
         "mel",
-        "bom",
         "jnb",
         "tlv",
-        "blr",
-        "del",
         "scl",
         "itm",
         "man"
@@ -426,11 +410,8 @@
         "mex",
         "sao",
         "mel",
-        "bom",
         "jnb",
         "tlv",
-        "blr",
-        "del",
         "scl",
         "itm",
         "man"
@@ -438,6 +419,6 @@
       "category": "dedicated"
     }
   ],
-  "lastUpdated": "2026-09-16T10:57:58.363Z",
+  "lastUpdated": "2026-09-17T11:08:23.595Z",
   "source": "api"
 }
