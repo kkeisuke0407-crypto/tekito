@@ -148,7 +148,6 @@
         "sgp",
         "sto",
         "mex",
-        "sao",
         "mel",
         "bom",
         "jnb",
@@ -286,7 +285,6 @@
         "sgp",
         "sto",
         "mex",
-        "sao",
         "mel",
         "hnl",
         "bom",
@@ -439,6 +437,6 @@
       "category": "dedicated"
     }
   ],
-  "lastUpdated": "2026-10-12T14:38:25.006Z",
+  "lastUpdated": "2026-10-13T13:42:44.361Z",
   "source": "api"
 }
