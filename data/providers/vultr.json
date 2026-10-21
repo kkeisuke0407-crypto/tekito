@@ -235,6 +235,7 @@
         "nrt",
         "waw",
         "mad",
+        "mxp",
         "icn",
         "mia",
         "sgp",
@@ -286,6 +287,7 @@
         "sgp",
         "sto",
         "mex",
+        "sao",
         "mel",
         "hnl",
         "bom",
@@ -438,6 +440,6 @@
       "category": "dedicated"
     }
   ],
-  "lastUpdated": "2026-10-20T11:01:46.701Z",
+  "lastUpdated": "2026-10-21T11:18:33.484Z",
   "source": "api"
 }
