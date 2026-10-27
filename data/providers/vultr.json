@@ -201,7 +201,6 @@
         "tlv",
         "blr",
         "del",
-        "scl",
         "itm",
         "man"
       ],
@@ -439,6 +438,6 @@
       "category": "dedicated"
     }
   ],
-  "lastUpdated": "2026-10-26T12:24:03.088Z",
+  "lastUpdated": "2026-10-27T11:43:03.364Z",
   "source": "api"
 }
