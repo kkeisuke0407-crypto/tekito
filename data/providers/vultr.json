@@ -286,7 +286,6 @@
         "sgp",
         "sto",
         "mex",
-        "sao",
         "mel",
         "hnl",
         "bom",
@@ -439,6 +438,6 @@
       "category": "dedicated"
     }
   ],
-  "lastUpdated": "2026-10-30T12:16:43.668Z",
+  "lastUpdated": "2026-10-31T11:48:10.094Z",
   "source": "api"
 }
