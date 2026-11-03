@@ -178,7 +178,6 @@
         "dfw",
         "sea",
         "lax",
-        "atl",
         "ams",
         "lhr",
         "fra",
@@ -439,6 +438,6 @@
       "category": "dedicated"
     }
   ],
-  "lastUpdated": "2026-11-02T14:56:47.144Z",
+  "lastUpdated": "2026-11-03T13:44:36.637Z",
   "source": "api"
 }
