@@ -178,6 +178,7 @@
         "dfw",
         "sea",
         "lax",
+        "atl",
         "ams",
         "lhr",
         "fra",
@@ -285,7 +286,6 @@
         "sgp",
         "sto",
         "mex",
-        "sao",
         "mel",
         "hnl",
         "bom",
@@ -438,6 +438,6 @@
       "category": "dedicated"
     }
   ],
-  "lastUpdated": "2026-11-03T13:44:36.637Z",
+  "lastUpdated": "2026-11-04T13:53:15.716Z",
   "source": "api"
 }
