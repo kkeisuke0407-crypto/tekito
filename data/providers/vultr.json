@@ -135,7 +135,6 @@
         "atl",
         "ams",
         "lhr",
-        "fra",
         "sjc",
         "syd",
         "yto",
@@ -235,6 +234,7 @@
         "nrt",
         "waw",
         "mad",
+        "mxp",
         "icn",
         "mia",
         "sgp",
@@ -439,6 +439,6 @@
       "category": "dedicated"
     }
   ],
-  "lastUpdated": "2026-11-21T14:20:13.071Z",
+  "lastUpdated": "2026-11-22T14:11:31.553Z",
   "source": "api"
 }
