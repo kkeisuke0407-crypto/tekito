@@ -135,6 +135,7 @@
         "atl",
         "ams",
         "lhr",
+        "fra",
         "sjc",
         "syd",
         "yto",
@@ -285,6 +286,7 @@
         "sgp",
         "sto",
         "mex",
+        "sao",
         "mel",
         "hnl",
         "bom",
@@ -437,6 +439,6 @@
       "category": "dedicated"
     }
   ],
-  "lastUpdated": "2026-11-24T17:04:09.544Z",
+  "lastUpdated": "2026-11-25T16:53:51.071Z",
   "source": "api"
 }
