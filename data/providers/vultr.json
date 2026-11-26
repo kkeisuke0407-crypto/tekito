@@ -135,7 +135,6 @@
         "atl",
         "ams",
         "lhr",
-        "fra",
         "sjc",
         "syd",
         "yto",
@@ -439,6 +438,6 @@
       "category": "dedicated"
     }
   ],
-  "lastUpdated": "2026-11-25T16:53:51.071Z",
+  "lastUpdated": "2026-11-26T16:31:00.719Z",
   "source": "api"
 }
